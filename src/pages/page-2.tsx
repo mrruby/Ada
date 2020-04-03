@@ -4,10 +4,22 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+type BlogPost = {
+  node: {
+    frontmatter: {
+      title: string
+    }
+  }
+}
+
+type BlogPosts = {
+  allMarkdownRemark: { edges: BlogPost[] }
+}
+
 const SecondPage = () => {
   const {
     allMarkdownRemark: { edges },
-  } = useStaticQuery(graphql`
+  }: BlogPosts = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
         edges {
@@ -29,7 +41,7 @@ const SecondPage = () => {
       <SEO title="Page two" />
       <h1>Hi from the second page</h1>
       {edges.map(({ node: { frontmatter: { title } } }) => (
-        <p>{title}</p>
+        <p key={title}>{title}</p>
       ))}
       <Link to="/">Go back to the homepage</Link>
     </Layout>
