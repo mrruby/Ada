@@ -9,11 +9,10 @@ type Props = {
 const Menu = ({ open }: Props) => {
   return (
     <StyledMenu open={open} aria-hidden={!open}>
-      <Link to="/">About</Link>
-      <Link to="/">Products</Link>
+      <Link to="/">O mnie</Link>
+      <Link to="/">Podcast</Link>
       <Link to="/">Blog</Link>
-      <Link to="/">Contact</Link>
-      <Link to="/">Form Examples</Link>
+      <Link to="/">Kontakt</Link>
     </StyledMenu>
   )
 }

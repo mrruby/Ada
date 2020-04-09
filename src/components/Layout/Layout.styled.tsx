@@ -1,8 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components"
 
 export const Container = styled.div`
+  background-color: ${({ theme }) => theme.colors.secondary};
+`
+
+export const InnerContainer = styled.div`
   margin: 0 auto;
-  max-width: 960;
+  max-width: ${({ theme }) => theme.dimensions.desktop};
   padding: 0 1.0875rem 1.45rem;
 `
 
