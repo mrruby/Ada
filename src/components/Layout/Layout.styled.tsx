@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components"
+import "../../fonts/fonts.css" // TODO: check if there can be font removed from project
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -6,14 +7,14 @@ export const Container = styled.div`
 
 export const InnerContainer = styled.div`
   margin: 0 auto;
+  height: 70vh;
   max-width: ${({ theme }) => theme.dimensions.desktop};
   padding: 0 1.0875rem 1.45rem;
 `
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
   html {
-    font-family: 'Montserrat', sans-serif;
+    font-family: BebasNeueBold; 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
