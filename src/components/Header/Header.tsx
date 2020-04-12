@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Header = ({ siteTitle }: Props) => {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   return (
     <Container>
