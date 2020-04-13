@@ -1,17 +1,62 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>HI PEOPLE</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+type Image = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  node: any
+}
+
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 4) {
+        edges {
+          node {
+            id
+            caption
+            localFile {
+              childImageSharp {
+                fixed(width: 150, height: 150) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const listOfImages = data.allInstaNode.edges
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <h1>HI PEOPLE</h1>
+      <p>Welcome to your new Gatsby site.</p>
+      <p>Now go build something great.</p>
+      <div>
+        {listOfImages.map(({ node }: Image) => (
+          <a
+            key={node.id}
+            href={`https://www.instagram.com/p/${node.id}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Img
+              alt={node.caption}
+              fixed={node.localFile.childImageSharp.fixed}
+            />
+          </a>
+        ))}
+      </div>
+
+      <Link to="/page-2/">Go to page 2</Link>
+    </Layout>
+  )
+}
 
 export default IndexPage

@@ -34,8 +34,6 @@ const SecondPage = () => {
     }
   `)
 
-  console.log(edges)
-
   return (
     <Layout>
       <SEO title="Page two" />

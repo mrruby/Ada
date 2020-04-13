@@ -7,7 +7,6 @@ export const Container = styled.div`
 
 export const InnerContainer = styled.div`
   margin: 0 auto;
-  height: 70vh;
   max-width: ${({ theme }) => theme.dimensions.desktop};
   padding: 0 1.0875rem 1.45rem;
 `

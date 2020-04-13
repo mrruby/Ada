@@ -5,6 +5,7 @@ export const StyledMenu = styled.div<{ open: boolean }>`
   padding: 2rem 1.0875rem;
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}) {
     width: 100%;
+    z-index: 1;
     flex-direction: column;
     height: 100vh;
     position: absolute;

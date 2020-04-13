@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
-import Logo from "../Logo"
+import Logo from "./Logo"
 import Menu from "./Menu"
 import { Container, Nav } from "./Header.styled"
 
