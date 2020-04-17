@@ -5,6 +5,8 @@ export const theme = {
     tertiary: "#FF9362",
     quaternary: "#FFD350",
     quinary: "#44B7EF",
+    white: "#FFFFFF",
+    instaxShadow: "rgba(0, 0, 0, 0.3)",
   },
   dimensions: { mobile: "576px", desktop: "960px" },
 }

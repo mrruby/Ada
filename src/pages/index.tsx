@@ -1,8 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Layout from "components/Layout"
+import SEO from "components/seo"
+import Photo from "components/Photo"
+import PhotosContainer from "components/PhotosContainer"
 
 type Image = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -12,7 +13,7 @@ type Image = {
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 4) {
+      allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 3) {
         edges {
           node {
             id
@@ -38,22 +39,15 @@ const IndexPage = () => {
       <h1>HI PEOPLE</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
-      <div>
+      <PhotosContainer>
         {listOfImages.map(({ node }: Image) => (
-          <a
+          <Photo
             key={node.id}
-            href={`https://www.instagram.com/p/${node.id}/`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Img
-              alt={node.caption}
-              fixed={node.localFile.childImageSharp.fixed}
-            />
-          </a>
+            caption={node.caption}
+            fixed={node.localFile.childImageSharp.fixed}
+          />
         ))}
-      </div>
-
+      </PhotosContainer>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )
