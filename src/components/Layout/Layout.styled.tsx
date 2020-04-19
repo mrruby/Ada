@@ -5,6 +5,10 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
+export const Main = styled.main`
+  position: relative;
+`
+
 export const InnerContainer = styled.div`
   margin: 0 auto;
   max-width: ${({ theme }) => theme.dimensions.desktop};

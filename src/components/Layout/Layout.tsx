@@ -9,7 +9,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 
-import { GlobalStyles, Container, InnerContainer } from "./Layout.styled"
+import { GlobalStyles, Container, InnerContainer, Main } from "./Layout.styled"
 import Header from "../Header"
 import { theme } from "./theme"
 
@@ -34,7 +34,7 @@ const Layout = ({ children }: Props) => {
         <Header siteTitle={data.site.siteMetadata.title} />
         <GlobalStyles />
         <InnerContainer>
-          <main>{children}</main>
+          <Main>{children}</Main>
           <footer>
             © {new Date().getFullYear()}, Built with
             {` `}

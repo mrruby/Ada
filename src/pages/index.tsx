@@ -39,6 +39,10 @@ const IndexPage = () => {
       <h1>HI PEOPLE</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
+      <h2>TEST</h2>
+      <p>lorem ipusm</p>
+      <p>lorem ipusm</p>
+      <h3>TEST 2</h3>
       <PhotosContainer>
         {listOfImages.map(({ node }: Image) => (
           <Photo
