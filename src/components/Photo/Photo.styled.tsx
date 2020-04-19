@@ -10,15 +10,13 @@ export const Container = styled.a<{ rotate: number }>`
   display: inline-block;
   box-shadow: 0 4px 6px ${({ theme }) => theme.colors.instaxShadow};
   transform: ${({ rotate }) => `rotate(${rotate}deg)`};
+  transform-origin: center 120%;
 `
 
 export const AnimationOutside = styled(ScrollAnimation).attrs({
   animateIn: "bounceInLeft",
 })`
   display: inline-block;
-  &:not(:last-of-type) {
-    margin-right: 2rem;
-  }
 `
 
 export const AnimationInside = styled(ScrollAnimation).attrs({

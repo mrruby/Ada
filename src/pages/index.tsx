@@ -20,7 +20,7 @@ const IndexPage = () => {
             caption
             localFile {
               childImageSharp {
-                fixed(width: 150, height: 150) {
+                fixed(width: 200, height: 200) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -43,6 +43,7 @@ const IndexPage = () => {
         {listOfImages.map(({ node }: Image) => (
           <Photo
             key={node.id}
+            id={node.id}
             caption={node.caption}
             fixed={node.localFile.childImageSharp.fixed}
           />
