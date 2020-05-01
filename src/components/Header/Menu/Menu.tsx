@@ -13,7 +13,7 @@ const Menu = ({ open, setOpen }: Props) => {
     <>
       <StyledMenu open={open} aria-hidden={!open}>
         <Link to="/">O mnie</Link>
-        <Link to="/">Podcast</Link>
+        <Link to="/podcasts">Podcast</Link>
         <Link to="/">Blog</Link>
         <Link to="/">Kontakt</Link>
       </StyledMenu>

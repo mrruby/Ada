@@ -5,14 +5,14 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "podcast"
+    label: "Podcast"
+    folder: "content/podcast"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
       - { label: "title", name: "title", widget: "string" }
+      - { label: "number", name: "number", widget: "number" }
       - { label: "description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }

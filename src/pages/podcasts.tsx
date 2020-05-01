@@ -3,8 +3,9 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import { getTitlePath } from "../helpers"
 
-type BlogPost = {
+type Podcast = {
   node: {
     frontmatter: {
       title: string
@@ -12,14 +13,14 @@ type BlogPost = {
   }
 }
 
-type BlogPosts = {
-  allMarkdownRemark: { edges: BlogPost[] }
+type Podcasts = {
+  allMarkdownRemark: { edges: Podcast[] }
 }
 
 const SecondPage = () => {
   const {
     allMarkdownRemark: { edges },
-  }: BlogPosts = useStaticQuery(graphql`
+  }: Podcasts = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
         edges {
@@ -37,11 +38,12 @@ const SecondPage = () => {
   return (
     <Layout>
       <SEO title="Page two" />
-      <h1>Hi from the second page</h1>
+      <h1>Lista moich podcastów</h1>
       {edges.map(({ node: { frontmatter: { title } } }) => (
-        <p key={title}>{title}</p>
+        <Link to={`/${getTitlePath(title)}`} key={title}>
+          {title}
+        </Link>
       ))}
-      <Link to="/">Go back to the homepage</Link>
     </Layout>
   )
 }

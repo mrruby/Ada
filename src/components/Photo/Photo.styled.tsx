@@ -15,12 +15,14 @@ export const Container = styled.a<{ rotate: number }>`
 
 export const AnimationOutside = styled(ScrollAnimation).attrs({
   animateIn: "bounceInLeft",
+  animateOnce: true,
 })`
   display: inline-block;
 `
 
 export const AnimationInside = styled(ScrollAnimation).attrs({
   animateIn: "rotateIn",
+  animateOnce: true,
 })`
   display: inline-block;
 `
