@@ -40,9 +40,9 @@ const SecondPage = () => {
       <SEO title="Page two" />
       <h1>Lista moich podcastów</h1>
       {edges.map(({ node: { frontmatter: { title } } }) => (
-        <Link to={`/${getTitlePath(title)}`} key={title}>
-          {title}
-        </Link>
+        <p key={title}>
+          <Link to={`/${getTitlePath(title)}`}>{title}</Link>
+        </p>
       ))}
     </Layout>
   )

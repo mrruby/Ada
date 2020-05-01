@@ -28,7 +28,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(sort: { order: DESC }, limit: 1000) {
+      allMarkdownRemark(limit: 1000) {
         edges {
           node {
             fields {
