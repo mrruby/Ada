@@ -23,7 +23,7 @@ const Logo = ({ alt }: Props) => {
       placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fixed(width: 200) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
