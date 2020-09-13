@@ -17,6 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -50,7 +57,32 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `adriannapromis`,
+        username: `32647039885`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-podcast-feed-mdx`,
+      options: {
+        title: `Phrasówka`,
+        description: `Nazywam się Ada, a to jest mój podcast, w którym mówię o rzeczach najróżniejszych - często o marketingu, nieco o podróżach i trochę o pracy zdalnej. Jeśli chcesz poznać mój punkt widzenia, dowiedzieć się kilku ciekawostek albo po prostu posłuchać czegoś do kawusi - zapraszam!`,
+        podcastType: `episodic`,
+        siteUrl: `https://adrianna.getbold.agency/`,
+        imageUrl: `https://podcastada.s3.eu-central-1.amazonaws.com/pic.png`,
+        feedUrl: `https://adrianna.getbold.agency/pocast-rss-feed.xml`,
+        language: `pl`,
+        copyright: `Phrasówka`,
+        authorName: `Adrianna Promis`,
+        ownerName: `Adrianna Promis`,
+        ownerEmail: `adrianna@getbold.agency`,
+        managingEditor: `dawid@getbold.agency`,
+        webMaster: `dawid@getbold.agency`,
+        explicit: `no`,
+        publicationDate: `Jun 25, 2020 10:00:00 GMT`,
+        category1: `Business`,
+        subCategory1: `Books`,
+        category2: `Marketing`,
+        timeToLive: `60`,
+        outputPath: `/podcast-rss-feed.xml`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

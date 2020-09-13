@@ -13,8 +13,8 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
     <>
       <StyledMenu open={open} aria-hidden={!open}>
         <Link to="/">O mnie</Link>
-        <Link to="/podcasts">Podcast</Link>
-        <Link to="/">Blog</Link>
+        <Link to="/podcast">Podcast</Link>
+        <Link to="/blog">Blog</Link>
         <Link to="/">Kontakt</Link>
       </StyledMenu>
       <Burger open={open} setOpen={setOpen} />

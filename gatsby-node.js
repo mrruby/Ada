@@ -9,14 +9,26 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+function isPodcastOrBlog(name) {
+  if (name.includes("podcast")) {
+    return true
+  }
+  if (name.includes("blog")) {
+    return false
+  }
+  throw Error()
+}
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `podcast` })
+    const slug = createFilePath({ node, getNode })
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: `/${
+        isPodcastOrBlog(node.fileAbsolutePath) ? "podcast" : "blog"
+      }${slug}`,
     })
   }
 }
@@ -25,6 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const podcastTemplate = path.resolve(`src/templates/podcast.tsx`)
+  const blogTemplate = path.resolve(`src/templates/blog.tsx`)
 
   const result = await graphql(`
     {
@@ -49,7 +62,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: podcastTemplate,
+      component: isPodcastOrBlog(node.fields.slug)
+        ? podcastTemplate
+        : blogTemplate,
       context: {}, // additional data can be passed via context
     })
   })

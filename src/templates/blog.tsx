@@ -4,31 +4,31 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-type PodcastData = {
+type BlogData = {
   data: {
     markdownRemark: {
       frontmatter: {
         number: number
         description: string
       }
+      html: string
     }
   }
 }
 
-const PodcastPage = ({ data }: PodcastData): JSX.Element => {
-  const { number, description } = data.markdownRemark.frontmatter
-
+const PodcastPage = ({
+  data: {
+    markdownRemark: { html },
+  },
+}: BlogData): JSX.Element => {
   return (
     <Layout>
       <SEO title="Podcast" />
-      <audio controls>
-        <source
-          src={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast${number}.mp3`}
-          type="audio/mpeg"
-        />
-        Your browser does not support the audio element.
-      </audio>
-      <p>{description}</p>
+      <h1>Blog</h1>
+      <div
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </Layout>
   )
 }

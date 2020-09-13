@@ -17,12 +17,12 @@ type Podcasts = {
   allMarkdownRemark: { edges: Podcast[] }
 }
 
-const SecondPage = (): JSX.Element => {
+const PodcastsPage = (): JSX.Element => {
   const {
     allMarkdownRemark: { edges },
   }: Podcasts = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fields: { slug: { regex: "/podcast/" } } }) {
         edges {
           node {
             frontmatter {
@@ -41,11 +41,11 @@ const SecondPage = (): JSX.Element => {
       <h1>Lista moich podcastów</h1>
       {edges.map(({ node: { frontmatter: { title } } }) => (
         <p key={title}>
-          <Link to={`/${getTitlePath(title)}`}>{title}</Link>
+          <Link to={`/podcast/${getTitlePath(title)}`}>{title}</Link>
         </p>
       ))}
     </Layout>
   )
 }
 
-export default SecondPage
+export default PodcastsPage
