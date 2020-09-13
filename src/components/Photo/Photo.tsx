@@ -9,7 +9,7 @@ type Props = {
   fixed: FixedObject
 }
 
-const Photo = ({ id, fixed, caption }: Props) => {
+const Photo = ({ id, fixed, caption }: Props): JSX.Element => {
   const rotate = Math.random() * 50 - 25
   return (
     <AnimationOutside>

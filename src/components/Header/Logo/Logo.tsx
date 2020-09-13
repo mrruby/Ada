@@ -17,7 +17,7 @@ type Props = {
   alt: string
 }
 
-const Logo = ({ alt }: Props) => {
+const Logo = ({ alt }: Props): JSX.Element => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "logo.png" }) {

@@ -3,10 +3,10 @@ import { StyledBurger } from "./Burger.styled"
 
 type Props = {
   open: boolean
-  setOpen: Function
+  setOpen: (_: boolean) => void
 }
 
-const Burger = ({ open, setOpen }: Props) => {
+const Burger = ({ open, setOpen }: Props): JSX.Element => {
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />

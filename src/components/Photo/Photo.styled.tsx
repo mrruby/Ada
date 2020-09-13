@@ -1,5 +1,4 @@
 import styled from "styled-components"
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import ScrollAnimation from "react-animate-on-scroll"
 

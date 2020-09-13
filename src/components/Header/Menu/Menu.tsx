@@ -5,10 +5,10 @@ import Burger from "./Burger"
 
 type Props = {
   open: boolean
-  setOpen: Function
+  setOpen: (_: boolean) => void
 }
 
-const Menu = ({ open, setOpen }: Props) => {
+const Menu = ({ open, setOpen }: Props): JSX.Element => {
   return (
     <>
       <StyledMenu open={open} aria-hidden={!open}>

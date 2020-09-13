@@ -15,7 +15,7 @@ type Podcast = {
   }
 }
 
-const PodcastPage = ({ data }: Podcast) => {
+const PodcastPage = ({ data }: Podcast): JSX.Element => {
   const { number, description } = data.markdownRemark.frontmatter
 
   return (

@@ -8,7 +8,7 @@ type Props = {
   siteTitle: string
 }
 
-const Header = ({ siteTitle }: Props) => {
+const Header = ({ siteTitle }: Props): JSX.Element => {
   const [open, setOpen] = useState(false)
 
   return (

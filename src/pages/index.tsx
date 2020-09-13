@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "components/Layout"
 import SEO from "components/seo"
 import Photo from "components/Photo"
@@ -10,7 +10,7 @@ type Image = {
   node: any
 }
 
-const IndexPage = () => {
+const IndexPage = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     query {
       allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 3) {

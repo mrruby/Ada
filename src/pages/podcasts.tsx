@@ -17,7 +17,7 @@ type Podcasts = {
   allMarkdownRemark: { edges: Podcast[] }
 }
 
-const SecondPage = () => {
+const SecondPage = (): JSX.Element => {
   const {
     allMarkdownRemark: { edges },
   }: Podcasts = useStaticQuery(graphql`
