@@ -42,24 +42,24 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/logo.png`, // This path is relative to the root of the site.
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-instagram`,
-    //   options: {
-    //     username: `32647039885`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `32647039885`,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-podcast-feed-mdx`,
     //   options: {
