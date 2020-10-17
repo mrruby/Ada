@@ -1,10 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  margin: 1rem 0;
-  top: 0;
-  right: 0;
-  position: absolute;
+  margin: 3rem 0 1rem 0;
   @media (max-width: ${({ theme }) => theme.dimensions.desktop}) {
     position: static;
     display: flex;

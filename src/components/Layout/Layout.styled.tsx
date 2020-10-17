@@ -7,6 +7,9 @@ export const Container = styled.div`
 
 export const Main = styled.main`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const InnerContainer = styled.div`

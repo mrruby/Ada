@@ -12,7 +12,8 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
   return (
     <>
       <StyledMenu open={open} aria-hidden={!open}>
-        <Link to="/">O mnie</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">O mnie</Link>
         <Link to="/podcast">Podcast</Link>
         <Link to="/blog">Blog</Link>
         <Link to="/">Kontakt</Link>
