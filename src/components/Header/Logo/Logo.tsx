@@ -22,7 +22,7 @@ const Logo = ({ alt }: Props): JSX.Element => {
     query {
       placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 200) {
+          fixed(width: 150) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }

@@ -26,5 +26,15 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          date_format: "DD.MM.YYYY",
+          time_format: "HH:mm",
+          format: "LLL",
+        }
       - { label: "Blog post content", name: "body", widget: "markdown" }

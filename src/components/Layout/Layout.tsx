@@ -9,7 +9,13 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 
-import { GlobalStyles, Container, InnerContainer, Main } from "./Layout.styled"
+import {
+  GlobalStyles,
+  Container,
+  InnerContainer,
+  Main,
+  Footer,
+} from "./Layout.styled"
 import Header from "../Header"
 import { theme } from "./theme"
 
@@ -35,11 +41,11 @@ const Layout = ({ children }: Props): JSX.Element => {
         <GlobalStyles />
         <InnerContainer>
           <Main>{children}</Main>
-          <footer>
+          <Footer>
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          </Footer>
         </InnerContainer>
       </Container>
     </ThemeProvider>

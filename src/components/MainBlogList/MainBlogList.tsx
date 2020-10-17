@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import { OutersContainer, Title } from "./MainBlogList.styled"
 import BlogElement from "components/BlogElement"
-import { DesktopRowMobileColumn } from "../shared.styled"
+import { DesktopRowMobileColumn } from "../../shared.styled"
 
 type Blog = {
   node: {
@@ -19,12 +18,16 @@ type Blogs = {
   allMarkdownRemark: { edges: Blog[] }
 }
 
-const BlogPage = (): JSX.Element => {
+const MainBlogList = (): JSX.Element => {
   const {
     allMarkdownRemark: { edges },
   }: Blogs = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { fields: { slug: { regex: "/blog/" } } }) {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/blog/" } } }
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 3
+      ) {
         edges {
           node {
             frontmatter {
@@ -38,16 +41,15 @@ const BlogPage = (): JSX.Element => {
   `)
 
   return (
-    <Layout>
-      <SEO title="Page two" />
-      <h1>Lista moich blogów</h1>
+    <OutersContainer>
+      <Title>Ostatnie wpisy na blogu</Title>
       <DesktopRowMobileColumn>
         {edges.map(({ node: { frontmatter } }) => (
           <BlogElement key={frontmatter.title} {...frontmatter} />
         ))}
       </DesktopRowMobileColumn>
-    </Layout>
+    </OutersContainer>
   )
 }
 
-export default BlogPage
+export default MainBlogList

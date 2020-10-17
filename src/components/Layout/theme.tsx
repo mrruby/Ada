@@ -6,6 +6,7 @@ export const theme = {
     quaternary: "#FFD350",
     quinary: "#44B7EF",
     white: "#FFFFFF",
+    black: "#000000",
     instaxShadow: "rgba(0, 0, 0, 0.3)",
   },
   dimensions: { mobile: "576px", desktop: "960px" },

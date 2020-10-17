@@ -4,6 +4,7 @@ import Layout from "components/Layout"
 import SEO from "components/seo"
 import Photo from "components/Photo"
 import PhotosContainer from "components/PhotosContainer"
+import MainBlogList from "components/MainBlogList"
 
 type Image = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -53,6 +54,7 @@ const IndexPage = (): JSX.Element => {
           />
         ))}
       </PhotosContainer>
+      <MainBlogList />
     </Layout>
   )
 }

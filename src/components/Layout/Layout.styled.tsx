@@ -15,6 +15,10 @@ export const InnerContainer = styled.div`
   padding: 0 1.0875rem 1.45rem;
 `
 
+export const Footer = styled.footer`
+  margin-top: 2rem;
+`
+
 export const GlobalStyles = createGlobalStyle`
   html {
     font-family: BebasNeueBold; 
