@@ -1,10 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "components/Layout"
 import SEO from "components/seo"
 import Photo from "components/Photo"
 import PhotosContainer from "components/PhotosContainer"
 import MainBlogList from "components/MainBlogList"
+import MainAbout from "components/MainAbout"
 
 type Image = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -29,6 +31,13 @@ const IndexPage = (): JSX.Element => {
           }
         }
       }
+      placeholderImage: file(relativePath: { eq: "main_banner.png" }) {
+        childImageSharp {
+          fixed(width: 800, height: 300) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
     }
   `)
 
@@ -37,13 +46,8 @@ const IndexPage = (): JSX.Element => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>HI PEOPLE</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <h2>TEST</h2>
-      <p>lorem ipusm</p>
-      <p>lorem ipusm</p>
-      <h3>TEST 2</h3>
+      <Img alt={"banner"} fixed={data.placeholderImage.childImageSharp.fixed} />
+      <MainAbout />
       <PhotosContainer>
         {listOfImages.map(({ node }: Image) => (
           <Photo

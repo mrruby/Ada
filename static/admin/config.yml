@@ -28,6 +28,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Thumbnail", name: "thumbnail", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
       - {
           label: "Date",
           name: "date",
