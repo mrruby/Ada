@@ -2,33 +2,37 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
+import Audio from "../components/Audio"
 import SEO from "../components/seo"
+import { Container } from "../shared.styled"
 
 type PodcastData = {
   data: {
     markdownRemark: {
       frontmatter: {
-        number: number
+        episodeNumber: number
+        season: number
         description: string
       }
+      html: string
     }
   }
 }
 
 const PodcastPage = ({ data }: PodcastData): JSX.Element => {
-  const { number, description } = data.markdownRemark.frontmatter
+  const {
+    frontmatter: { season, episodeNumber, description },
+    html,
+  } = data.markdownRemark
 
   return (
     <Layout>
       <SEO title="Podcast" />
-      <audio controls>
-        <source
-          src={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast${number}.mp3`}
-          type="audio/mpeg"
-        />
-        Your browser does not support the audio element.
-      </audio>
       <p>{description}</p>
+      <Audio
+        url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
+      />
+      <Container dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
@@ -41,7 +45,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        number
+        episodeNumber
+        season
         description
       }
     }

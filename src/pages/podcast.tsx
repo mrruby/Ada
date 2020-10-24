@@ -3,13 +3,13 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import { getTitlePath } from "../helpers"
 
 type Podcast = {
   node: {
     frontmatter: {
       title: string
     }
+    fields: { slug: string }
   }
 }
 
@@ -29,6 +29,9 @@ const PodcastsPage = (): JSX.Element => {
               title
               description
             }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -39,9 +42,9 @@ const PodcastsPage = (): JSX.Element => {
     <Layout>
       <SEO title="Page two" />
       <h1>Lista moich podcastów</h1>
-      {edges.map(({ node: { frontmatter: { title } } }) => (
+      {edges.map(({ node: { frontmatter: { title }, fields: { slug } } }) => (
         <p key={title}>
-          <Link to={`/podcast/${getTitlePath(title)}`}>{title}</Link>
+          <Link to={slug}>{title}</Link>
         </p>
       ))}
     </Layout>
