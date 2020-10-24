@@ -9,3 +9,7 @@ export const DesktopRowMobileColumn = styled.div`
     align-items: center;
   }
 `
+
+export const Container = styled.div`
+  padding: 30px;
+`

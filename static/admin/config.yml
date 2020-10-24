@@ -11,13 +11,28 @@ collections:
     label: "Podcast"
     folder: "content/podcast"
     create: true
-    slug: "{{slug}}"
+    slug: "{{title}}"
     editor:
       preview: false
     fields:
-      - { label: "title", name: "title", widget: "string" }
-      - { label: "number", name: "number", widget: "number" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Publication Date",
+          name: "publicationDate",
+          widget: "date",
+          default: "",
+          format: "DD-MM-YYYY",
+        }
+      - { label: "Season", name: "season", widget: "number" }
+      - { label: "Episode Number", name: "episodeNumber", widget: "number" }
+      - {
+          label: "Explicit",
+          name: "explicit",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "description", name: "description", widget: "string" }
+      - { label: "Podcast content", name: "body", widget: "markdown" }
   - name: "blog"
     label: "Blog"
     folder: "content/blog"

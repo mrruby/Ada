@@ -3,12 +3,12 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import { Container } from "../shared.styled"
 
 type BlogData = {
   data: {
     markdownRemark: {
       frontmatter: {
-        number: number
         description: string
       }
       html: string
@@ -25,10 +25,7 @@ const PodcastPage = ({
     <Layout>
       <SEO title="Podcast" />
       <h1>Blog</h1>
-      <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <Container dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
@@ -41,7 +38,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        number
         description
       }
     }
