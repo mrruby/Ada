@@ -13,3 +13,8 @@ export const DesktopRowMobileColumn = styled.div`
 export const Container = styled.div`
   padding: 30px;
 `
+
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+`

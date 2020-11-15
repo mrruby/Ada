@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components"
 import "../../fonts/fonts.css" // TODO: check if there can be font removed from project
+import { ThemeType } from "./theme"
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -22,11 +23,12 @@ export const Footer = styled.footer`
   margin-top: 2rem;
 `
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
   html {
     font-family: BebasNeueBold; 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    background-color: ${({ theme }) => theme.colors.secondary}
   }
   body {
     margin: 0;
