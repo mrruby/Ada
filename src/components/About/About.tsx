@@ -18,7 +18,7 @@ const About = (): JSX.Element => {
     query {
       imageDesktop: file(relativePath: { eq: "about-me.png" }) {
         childImageSharp {
-          fixed(width: 400) {
+          fixed(width: 420) {
             ...GatsbyImageSharpFixed
           }
         }
