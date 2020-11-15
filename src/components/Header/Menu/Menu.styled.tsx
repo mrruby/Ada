@@ -28,7 +28,8 @@ export const StyledMenu = styled.div<{ open: boolean }>`
     @media (min-width: ${({ theme }) => theme.dimensions.mobile}) {
       display: inline;
       padding: 0.5rem 0.5rem;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
+      font-size: 1.6rem;
       &:hover:after {
         background-color: ${({ theme }) => theme.colors.tertiary};
         width: 100%;
