@@ -5,6 +5,8 @@ export const theme = {
     tertiary: "#FF9362",
     quaternary: "#FFD350",
     quinary: "#44B7EF",
+    blue: "#6097E3",
+    yellow: "#FFD450",
     darkPink: "#FFA3B1",
     darkOrange: "#FD955E",
     white: "#FFFFFF",

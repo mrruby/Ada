@@ -4,20 +4,21 @@ import CustomBanner from "components/CustomBanner"
 import { graphql, useStaticQuery } from "gatsby"
 import { theme } from "components/Layout/theme"
 import SEO from "components/seo"
+import { PrimaryButton } from "../shared.styled"
 
-const AboutPage = (): JSX.Element => {
+const ContactPage = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     query {
-      imageDesktop: file(relativePath: { eq: "about-me.png" }) {
+      imageDesktop: file(relativePath: { eq: "contact.png" }) {
         childImageSharp {
-          fixed(width: 420) {
+          fixed(height: 380) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      imageMobile: file(relativePath: { eq: "about-me.png" }) {
+      imageMobile: file(relativePath: { eq: "contact.png" }) {
         childImageSharp {
-          fixed(width: 300) {
+          fixed(height: 300) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -27,15 +28,16 @@ const AboutPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <SEO title="O mnie" />
+      <SEO title="Kontakt" />
       <CustomBanner
-        title="KIM JESTEM?"
-        paragraph1="Jako małe dziecko pochłaniałam stosy książek, aby następnie zacząć
-    pisać swoje. Jako że niewiele z nich ujrzało światło dzienne, jako
-    28-latka postanowiłam nadrobić stracony czas i podzielić się ze
-    światem tym co czuję i myślę."
-        paragraph2="pracuję w marketingu (wiecie, te fejsbuki i inne...), uwielbiam
-    gotować i uczę się uważności w życiu codziennym."
+        reverse={true}
+        actionButton={
+          <PrimaryButton href="mailto:adrianna@getbold.agency">
+            adrianna@getbold.agency
+          </PrimaryButton>
+        }
+        title="Kontakt"
+        paragraph1="Dobrze dogaduję się z alpakami, z ludźmi też całkiem nieźle, więc jeśli chcesz porozmawiać, wyślij mi maila na adres:"
         fixedImagesArray={[
           data.imageMobile.childImageSharp.fixed,
           {
@@ -48,4 +50,4 @@ const AboutPage = (): JSX.Element => {
   )
 }
 
-export default AboutPage
+export default ContactPage

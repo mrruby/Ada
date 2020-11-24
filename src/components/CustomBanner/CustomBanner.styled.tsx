@@ -1,18 +1,28 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
+export const Container = styled.div<{ reverse: boolean }>`
   margin: 2rem 1rem;
   display: flex;
+  ${(props) => props.reverse && "flex-direction: row-reverse;"};
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}) {
-    flex-direction: column;
+    flex-direction: ${(props) =>
+      props.reverse ? "column-reverse;" : "column;"};
+    margin: 0 1rem;
   }
 `
 
-export const Column = styled.div`
+export const Column = styled.div<{ reverse: boolean }>`
+  text-align: center;
   width: 45%;
-  :first-child {
+
+  ${(props) =>
+    props.reverse
+      ? `:last-child {
     margin-right: 10%;
-  }
+  }`
+      : `:first-child {
+    margin-right: 10%;
+  }};`}
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}) {
     width: 100%;
   }
@@ -31,18 +41,20 @@ export const Border = styled.div<{ width: number; height: number }>`
   background-color: ${({ theme }) => theme.colors.darkPink};
 `
 
-export const MainBox = styled.div<{ left: boolean }>`
+export const MainBox = styled.div<{ left: boolean; reverse: boolean }>`
   margin: 1rem 0;
   align-self: ${(props) => (props.left ? "start" : "flex-end")};
   height: 2rem;
   width: 6rem;
-  background-color: ${({ theme }) => theme.colors.darkOrange};
+  background-color: ${({ theme, reverse }) =>
+    reverse ? theme.colors.darkPink : theme.colors.darkOrange};
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}) {
     width: 0;
   }
 `
 
-export const Paragraph = styled.h2`
+export const Paragraph = styled.h2<{ isParagraph2?: boolean }>`
   text-align: center;
   color: ${({ theme }) => theme.colors.primary};
+  ${(props) => !props.isParagraph2 && "margin-bottom: 0.6rem;"};
 `

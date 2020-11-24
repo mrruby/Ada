@@ -41,7 +41,7 @@ const BlogPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Blog" />
       <h1>Lista moich blogów</h1>
       <DesktopRowMobileColumn>
         {edges.map(({ node: { frontmatter } }) => (
