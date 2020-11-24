@@ -40,7 +40,7 @@ const PodcastsPage = (): JSX.Element => {
 
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Podcast" />
       <h1>Lista moich podcastów</h1>
       {edges.map(({ node: { frontmatter: { title }, fields: { slug } } }) => (
         <p key={title}>

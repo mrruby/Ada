@@ -16,7 +16,7 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
         <Link to="/about">O mnie</Link>
         <Link to="/podcast">Podcast</Link>
         <Link to="/blog">Blog</Link>
-        <Link to="/">Kontakt</Link>
+        <Link to="/contact">Kontakt</Link>
       </StyledMenu>
       <Burger open={open} setOpen={setOpen} />
     </>
