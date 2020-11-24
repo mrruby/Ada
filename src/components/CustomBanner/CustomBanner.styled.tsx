@@ -32,11 +32,12 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 0.45rem;
   padding-bottom: 0;
+  font-size: 3.5rem;
 `
 
 export const Border = styled.div<{ width: number; height: number }>`
   height: ${(props) => props.height}rem;
-  margin-bottom: 0.95rem;
+  margin-bottom: 1.5rem;
   width: ${(props) => props.width}%;
   background-color: ${({ theme }) => theme.colors.darkPink};
 `
@@ -54,7 +55,8 @@ export const MainBox = styled.div<{ left: boolean; reverse: boolean }>`
 `
 
 export const Paragraph = styled.h2<{ isParagraph2?: boolean }>`
+  font-size: 1.8rem;
   text-align: center;
   color: ${({ theme }) => theme.colors.primary};
-  ${(props) => !props.isParagraph2 && "margin-bottom: 0.6rem;"};
+  ${(props) => !props.isParagraph2 && "margin-bottom: 1rem;"};
 `
