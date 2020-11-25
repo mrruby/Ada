@@ -33,11 +33,11 @@ const ContactPage = (): JSX.Element => {
         reverse={true}
         actionButton={
           <PrimaryButton href="mailto:adrianna@getbold.agency">
-            adrianna@getbold.agency
+            klik
           </PrimaryButton>
         }
         title="Kontakt"
-        paragraph1="Dobrze dogaduję się z alpakami, z ludźmi też całkiem nieźle, więc jeśli chcesz porozmawiać, wyślij mi maila na adres:"
+        paragraph1="Dobrze dogaduję się z alpakami, z ludźmi też całkiem nieźle, więc jeśli chcesz porozmawiać, wyślij mi maila:"
         fixedImagesArray={[
           data.imageMobile.childImageSharp.fixed,
           {
