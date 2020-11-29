@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Audio from "../components/Audio"
 import SEO from "../components/seo"
-import { Container } from "../shared.styled"
+import { PodcastContainer } from "../shared.styled"
 
 type PodcastData = {
   data: {
@@ -32,7 +32,7 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
       <Audio
         url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
       />
-      <Container dangerouslySetInnerHTML={{ __html: html }} />
+      <PodcastContainer dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
