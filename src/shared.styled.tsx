@@ -31,12 +31,6 @@ export const Container = styled.div`
   padding: 30px;
 `
 
-export const PodcastContainer = styled(Container)`
-  & > * {
-    font-family: Montserrat;
-  }
-`
-
 export const Center = styled.div`
   display: flex;
   justify-content: center;

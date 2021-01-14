@@ -6,6 +6,8 @@ export const Container = styled.header`
 `
 
 export const Nav = styled.nav`
+  font-family: BebasNeueBold;
+  letter-spacing: 2px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;

@@ -10,7 +10,7 @@ type Blog = {
     frontmatter: {
       title: string
       thumbnail: string
-      category: string
+      tags: string[]
     }
   }
 }
@@ -34,7 +34,7 @@ const MainBlogList = (): JSX.Element => {
             frontmatter {
               title
               thumbnail
-              category
+              tags
             }
           }
         }

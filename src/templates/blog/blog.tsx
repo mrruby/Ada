@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import { Container } from "../shared.styled"
+import Layout from "../../components/Layout"
+import SEO from "../../components/seo"
+import { Container } from "../../shared.styled"
 
 type BlogData = {
   data: {
