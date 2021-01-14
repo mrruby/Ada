@@ -2,7 +2,7 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: `Adrianna Promis Blog`,
+    title: `adrianna.com.pl`,
     description: `Social Media i podcast Phrasówka`,
     author: `Adrianna Promis`,
   },

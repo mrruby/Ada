@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import Audio from "../components/Audio"
-import SEO from "../components/seo"
-import { PodcastContainer } from "../shared.styled"
+import Layout from "../../components/Layout"
+import Audio from "../../components/Audio"
+import SEO from "../../components/seo"
+import { Container } from "../../shared.styled"
+import { Description, Title } from "./podcast.styled"
 
 type PodcastData = {
   data: {
@@ -13,6 +14,7 @@ type PodcastData = {
         episodeNumber: number
         season: number
         description: string
+        title: string
       }
       html: string
     }
@@ -21,18 +23,19 @@ type PodcastData = {
 
 const PodcastPage = ({ data }: PodcastData): JSX.Element => {
   const {
-    frontmatter: { season, episodeNumber, description },
+    frontmatter: { season, episodeNumber, description, title },
     html,
   } = data.markdownRemark
 
   return (
     <Layout>
       <SEO title="Podcast" />
-      <p>{description}</p>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
       <Audio
         url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
       />
-      <PodcastContainer dangerouslySetInnerHTML={{ __html: html }} />
+      <Container dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }

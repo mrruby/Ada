@@ -15,12 +15,12 @@ export const Button = styled(Link)`
   color: ${({ theme }) => theme.colors.black};
 `
 
-export const CategoryBloc = styled.div`
+export const TagsBloc = styled.div`
   background: ${({ theme }) => theme.colors.black};
   padding: 0.2rem 1rem;
 `
 
-export const CategoryText = styled.span`
+export const TagsText = styled.span`
   color: ${({ theme }) => theme.colors.white};
 `
 

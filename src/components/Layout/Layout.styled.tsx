@@ -25,7 +25,7 @@ export const Footer = styled.footer`
 
 export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
   html {
-    font-family: BebasNeueBold; 
+    font-family: Montserrat; 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     background-color: ${({ theme }) => theme.colors.secondary}

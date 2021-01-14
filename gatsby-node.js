@@ -72,8 +72,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const podcastTemplate = path.resolve(`src/templates/podcast.tsx`)
-  const blogTemplate = path.resolve(`src/templates/blog.tsx`)
+  const podcastTemplate = path.resolve(`src/templates/podcast/podcast.tsx`)
+  const blogTemplate = path.resolve(`src/templates/blog/blog.tsx`)
 
   const result = await graphql(`
     {

@@ -5,24 +5,24 @@ import {
   Image,
   ImageContainer,
   Button,
-  CategoryBloc,
-  CategoryText,
+  TagsBloc,
+  TagsText,
   Title,
 } from "./BlogElement.styled"
 
 type Props = {
   title: string
   thumbnail: string
-  category: string
+  tags: string[]
 }
 
-const BlogElement = ({ title, thumbnail, category }: Props): JSX.Element => {
+const BlogElement = ({ title, thumbnail, tags }: Props): JSX.Element => {
   return (
     <ImageContainer key={title}>
       <Image src={thumbnail} alt="A dog smiling in a party hat" />
-      <CategoryBloc>
-        <CategoryText>{category}</CategoryText>
-      </CategoryBloc>
+      <TagsBloc>
+        <TagsText>{tags.join(", ")}</TagsText>
+      </TagsBloc>
       <Title>{title}</Title>
       <Button to={`/blog/${getTitlePath(title)}`}>Czytaj więcej...</Button>
     </ImageContainer>
