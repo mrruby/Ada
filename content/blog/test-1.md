@@ -1,5 +1,9 @@
 ---
-title: Test 1
+title: Test 12
+description: W ubiegłym roku spontanicznie rozpoczęłam cykl na Instastories
+  dotyczący mojej garderoby. Mówiłam już o strojach kąpielowych i idealnych
+  boyfriend jeans. Przyszedł więc czas na spódnice. W tym wpisie pokażę Wam jak
+  je noszę, z czym łączę oraz które fasony wybieram i dlaczego.
 thumbnail: https://images.pexels.com/photos/4703534/pexels-photo-4703534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 tags:
   - tag1

@@ -32,7 +32,6 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 0.45rem;
   padding-bottom: 0;
-  font-size: 3.5rem;
 `
 
 export const Border = styled.div<{ width: number; height: number }>`
@@ -55,7 +54,7 @@ export const MainBox = styled.div<{ left: boolean; reverse: boolean }>`
 `
 
 export const Paragraph = styled.h2<{ isParagraph2?: boolean }>`
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   text-align: center;
   color: ${({ theme }) => theme.colors.primary};
   ${(props) => !props.isParagraph2 && "margin-bottom: 1rem;"};
