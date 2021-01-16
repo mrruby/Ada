@@ -10,6 +10,7 @@ type Blog = {
   node: {
     frontmatter: {
       title: string
+      description: string
       thumbnail: string
       tags: string[]
     }
@@ -32,6 +33,7 @@ const BlogPage = (): JSX.Element => {
               title
               thumbnail
               tags
+              description
             }
           }
         }
@@ -44,8 +46,12 @@ const BlogPage = (): JSX.Element => {
       <SEO title="Blog" />
       <h1>Lista moich blogów</h1>
       <DesktopRowMobileColumn>
-        {edges.map(({ node: { frontmatter } }) => (
-          <BlogElement key={frontmatter.title} {...frontmatter} />
+        {edges.map(({ node: { frontmatter } }, index) => (
+          <BlogElement
+            reverse={index % 2 == 0}
+            key={frontmatter.title}
+            {...frontmatter}
+          />
         ))}
       </DesktopRowMobileColumn>
     </Layout>

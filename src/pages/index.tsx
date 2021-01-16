@@ -1,12 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "components/Layout"
 import SEO from "components/seo"
 import Photo from "components/Photo"
 import PhotosContainer from "components/PhotosContainer"
 import MainBlogList from "components/MainBlogList"
-import MainAbout from "components/MainAbout"
 
 type Image = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -46,8 +44,7 @@ const IndexPage = (): JSX.Element => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Img alt={"banner"} fixed={data.placeholderImage.childImageSharp.fixed} />
-      <MainAbout />
+      <MainBlogList />
       <PhotosContainer>
         {listOfImages.map(({ node }: Image) => (
           <Photo
@@ -58,7 +55,6 @@ const IndexPage = (): JSX.Element => {
           />
         ))}
       </PhotosContainer>
-      <MainBlogList />
     </Layout>
   )
 }
