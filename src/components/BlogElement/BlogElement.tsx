@@ -1,12 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
+import { PrimaryButton } from "../../shared.styled"
 
 import { getTitlePath } from "../../helpers"
 import {
   Image,
   Column,
-  Button,
-  TagsBloc,
   TagsText,
   Title,
   Container,
@@ -31,14 +30,14 @@ const BlogElement = ({
   return (
     <Container reverse={reverse}>
       <Column reverse={reverse}>
-        <TagsBloc>
-          <TagsText>{tags.join(", ")}</TagsText>
-        </TagsBloc>
         <Title>{title}</Title>
+        <TagsText>{tags.map((el) => `#${el} `).join("")}</TagsText>
         <p>{description}</p>
-        <Button to={`/blog/${getTitlePath(title)}`}>Czytaj więcej...</Button>
+        <PrimaryButton href={`/blog/${getTitlePath(title)}`}>
+          Czytaj więcej...
+        </PrimaryButton>
       </Column>
-      <Column reverse={reverse}>
+      <Column reverse={reverse} isImage>
         <Link to={`/blog/${getTitlePath(title)}`}>
           <ImageContainer>
             <Image src={thumbnail} alt="A dog smiling in a party hat" />
