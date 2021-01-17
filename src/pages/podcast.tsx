@@ -3,13 +3,17 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import Post from "components/Post"
 
 type Podcast = {
   node: {
     frontmatter: {
       title: string
+      description: string
+      thumbnail: string
+      episodeNumber: number
+      tags: string[]
     }
-    fields: { slug: string }
   }
 }
 
@@ -27,10 +31,10 @@ const PodcastsPage = (): JSX.Element => {
           node {
             frontmatter {
               title
+              thumbnail
+              tags
               description
-            }
-            fields {
-              slug
+              episodeNumber
             }
           }
         }
@@ -42,10 +46,12 @@ const PodcastsPage = (): JSX.Element => {
     <Layout>
       <SEO title="Podcast" />
       <h1>Lista moich podcastów</h1>
-      {edges.map(({ node: { frontmatter: { title }, fields: { slug } } }) => (
-        <p key={title}>
-          <Link to={slug}>{title}</Link>
-        </p>
+      {edges.map(({ node: { frontmatter } }, index) => (
+        <Post
+          reverse={index % 2 == 0}
+          key={frontmatter.title}
+          {...frontmatter}
+        />
       ))}
     </Layout>
   )

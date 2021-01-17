@@ -17,6 +17,14 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          date_format: "DD.MM.YYYY",
+          time_format: "HH:mm",
+        }
+      - {
           label: "Publication Date",
           name: "publicationDate",
           widget: "date",
@@ -52,6 +60,5 @@ collections:
           default: "",
           date_format: "DD.MM.YYYY",
           time_format: "HH:mm",
-          format: "LLL",
         }
       - { label: "Blog post content", name: "body", widget: "markdown" }

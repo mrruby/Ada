@@ -10,31 +10,34 @@ import {
   Title,
   Container,
   ImageContainer,
-} from "./BlogElement.styled"
+} from "./Post.styled"
 
 type Props = {
   title: string
   thumbnail: string
+  episodeNumber: number
   tags: string[]
   reverse: boolean
   description: string
 }
 
-const BlogElement = ({
+const Post = ({
   title,
   thumbnail,
-  tags,
+  episodeNumber,
+  tags = [],
   reverse,
   description,
 }: Props): JSX.Element => {
+  const formattedTags = episodeNumber === null ? tags : ["podcast"]
   return (
     <Container reverse={reverse}>
       <Column reverse={reverse}>
         <Title>{title}</Title>
-        <TagsText>{tags.map((el) => `#${el} `).join("")}</TagsText>
+        <TagsText>{formattedTags.map((el) => `#${el} `).join("")}</TagsText>
         <p>{description}</p>
         <PrimaryButton href={`/blog/${getTitlePath(title)}`}>
-          Czytaj więcej...
+          {episodeNumber == null ? "Czytaj więcej..." : "Posłuchaj..."}
         </PrimaryButton>
       </Column>
       <Column reverse={reverse} isImage>
@@ -48,4 +51,4 @@ const BlogElement = ({
   )
 }
 
-export default BlogElement
+export default Post
