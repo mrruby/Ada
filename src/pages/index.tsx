@@ -4,7 +4,7 @@ import Layout from "components/Layout"
 import SEO from "components/seo"
 import Photo from "components/Photo"
 import PhotosContainer from "components/PhotosContainer"
-import MainBlogList from "components/MainBlogList"
+import MainPostList from "components/MainPostList"
 
 type Image = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -44,7 +44,7 @@ const IndexPage = (): JSX.Element => {
   return (
     <Layout>
       <SEO title="Home" />
-      <MainBlogList />
+      <MainPostList />
       <PhotosContainer>
         {listOfImages.map(({ node }: Image) => (
           <Photo

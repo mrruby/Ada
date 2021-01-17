@@ -1,6 +1,8 @@
 ---
 title: "Odcinek #0 "
+date: 2021-01-17T20:33:53.678Z
 publicationDate: 29-11-2020
+thumbnail: https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/78/55/7855118.jpeg
 season: 1
 episodeNumber: 0
 explicit: false
@@ -8,18 +10,15 @@ description: Zaczynamy! Kilka słów na początek, dlaczego nagrywam, co myślę
   Instagramie i co ma z tym wszystkim wspólnego rabarbar?
 ---
 
-
-*Podcast #0 - poniżej transkrypcja tego odcinka. To były moje nieśmiałe początki z nagrywaniem i wstawiam go tutaj, ponieważ słuchając następnych odcinków, jestem naprawdę dumna z tego, jaką pracę udało mi się wykonać! :)* 
-
-
+_Podcast #0 - poniżej transkrypcja tego odcinka. To były moje nieśmiałe początki z nagrywaniem i wstawiam go tutaj, ponieważ słuchając następnych odcinków, jestem naprawdę dumna z tego, jaką pracę udało mi się wykonać! :)_
 
 W tym miejscu - jak na początku wielu podcastów - powinien znaleźć się [dżingiel](https://pl.wikipedia.org/wiki/D%C5%BCingiel), który sprawi, że będziesz kojarzył/kojarzyła tą konkretną ścieżkę dźwiękową właśnie z moim podcastem. Natomiast nie ukrywam, że jeszcze nie odnalazłam ścieżki dźwiękowej, która odzwierciedlałaby pomysł na te opowieści albo moją osobowość. Dlatego też pozwoliłam sobie tych kilkanaście sekund zastąpić moją gadaniną. I takim oto sposobem - podcastowy wstęp jest za nami.
 
 O czym będziesz mógł/mogła usłyszeć w tym podcaście?
 
-* **Kim jestem i dlaczego postanowiłam nagrywać podcasty?**
-* **Dlaczego Instagram jest dla mnie bigosem?**
-* **Co i kogo podglądam na Instagramie?**
+- **Kim jestem i dlaczego postanowiłam nagrywać podcasty?**
+- **Dlaczego Instagram jest dla mnie bigosem?**
+- **Co i kogo podglądam na Instagramie?**
 
 A więc teraz przejdę do przywitania się, i do opowiedzenia o czym tak naprawdę będzie to nagranie. Ja nazywam się Ada i bardzo mi miło, że włączyłeś/włączyłaś sobie ten podcast i mnie słuchasz. Postanowiłam sobie, że będę go prowadzić. Natomiast z racji tego, że idea podcastu sprawia, że rozmawiamy sami ze sobą (no chyba, że mamy gościa, ale zapewniam Was, że w odcinku zerowym mojego podcastu gości nie ma – jestem tutaj sama), więc pozwolę też sama sobie zadać pytanie: dlaczego w ogóle zdecydowałam się nagrywać?
 
@@ -39,12 +38,10 @@ I takiego świadomego korzystania ze wszystkich aplikacji Wam życzę. Bo myśl�
 
 To już jest koniec tego odcinku zero, który już nigdy się nie powtórzy, bo teraz odliczamy już tylko od jednego. Tak jak obiecałam - najnowszy następny odcinek pojawi się w poniedziałek rano. I wam wszystkim dziękuję bardzo za uwagę, za to że dotrwaliście do tego momentu. I do usłyszenia.
 
-
-
 Polecane linki:
 
-\- [Raport Natalii Hatalskiej (CEO infutureinstitute) dot. wyglądu sypialni przyszłości.](<http://infuture.institute/raporty/sypialnia-przyszlosci/>)[](http://infuture.institute/raporty/sypialnia-przyszlosci/)
+\- [Raport Natalii Hatalskiej (CEO infutureinstitute) dot. wyglądu sypialni przyszłości.](http://infuture.institute/raporty/sypialnia-przyszlosci/)[](http://infuture.institute/raporty/sypialnia-przyszlosci/)
 
-\- [Konto Joanny Banaszewskiej.](<https://www.instagram.com/jbanaszewska/?hl=pl>)
+\- [Konto Joanny Banaszewskiej.](https://www.instagram.com/jbanaszewska/?hl=pl)
 
 \- [Konto Olki Kaźmierczak.](https://www.instagram.com/olkakazmierczak/)

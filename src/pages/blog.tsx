@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import BlogElement from "components/BlogElement"
+import Post from "components/Post"
 import { DesktopRowMobileColumn } from "../shared.styled"
 
 type Blog = {
@@ -12,6 +12,7 @@ type Blog = {
       title: string
       description: string
       thumbnail: string
+      episodeNumber: number
       tags: string[]
     }
   }
@@ -34,6 +35,7 @@ const BlogPage = (): JSX.Element => {
               thumbnail
               tags
               description
+              episodeNumber
             }
           }
         }
@@ -47,7 +49,7 @@ const BlogPage = (): JSX.Element => {
       <h1>Lista moich blogów</h1>
       <DesktopRowMobileColumn>
         {edges.map(({ node: { frontmatter } }, index) => (
-          <BlogElement
+          <Post
             reverse={index % 2 == 0}
             key={frontmatter.title}
             {...frontmatter}

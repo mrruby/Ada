@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 export const ImageContainer = styled.div`
   overflow: hidden;
+  border-radius: 20%;
 `
 
 export const Image = styled.img`
@@ -23,10 +23,13 @@ export const Container = styled.div<{ reverse: boolean }>`
   margin: 2rem 1rem;
   display: flex;
   background-color: ${({ theme }) => theme.colors.white};
-  padding: 1.5rem;
+  padding: 6rem;
+  border-radius: 50%;
   ${(props) => props.reverse && "flex-direction: row-reverse;"};
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}) {
     flex-direction: column-reverse;
+    border-radius: 20%;
+    padding: 2rem;
   }
 `
 
@@ -47,4 +50,8 @@ export const Column = styled.div<{ reverse: boolean; isImage?: boolean }>`
   }
 `
 
-export const Title = styled.h2``
+export const Title = styled.h2`
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}) {
+    margin-top: 2rem;
+  }
+`
