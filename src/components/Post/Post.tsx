@@ -29,19 +29,22 @@ const Post = ({
   reverse,
   description,
 }: Props): JSX.Element => {
-  const formattedTags = episodeNumber === null ? tags : ["podcast"]
+  const isBlog = episodeNumber === null
+  const formattedTags = isBlog ? tags : ["podcast"]
   return (
     <Container reverse={reverse}>
       <Column reverse={reverse}>
         <Title>{title}</Title>
         <TagsText>{formattedTags.map((el) => `#${el} `).join("")}</TagsText>
         <p>{description}</p>
-        <PrimaryButton href={`/blog/${getTitlePath(title)}`}>
+        <PrimaryButton
+          href={`/${isBlog ? "blog" : "podcast"}/${getTitlePath(title)}`}
+        >
           {episodeNumber == null ? "Czytaj więcej..." : "Posłuchaj..."}
         </PrimaryButton>
       </Column>
       <Column reverse={reverse} isImage>
-        <Link to={`/blog/${getTitlePath(title)}`}>
+        <Link to={`/${isBlog ? "blog" : "podcast"}/${getTitlePath(title)}`}>
           <ImageContainer>
             <Image src={thumbnail} alt="A dog smiling in a party hat" />
           </ImageContainer>
