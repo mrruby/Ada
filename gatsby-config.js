@@ -57,7 +57,9 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `8556131572`,
+        username: `wypadaniewypada`,
+        access_token: `EAAW5FFpOFsgBAL6ZBk5ZCoKi97C6zNN7pWWwegWCke2GtZAHnE9c4uPgo53N0XrBHXk0FvFl48mXOMKJhjopHdeF4vpjNDShzDVSDiXptMz6fKBYmlRHMa7l6GjJZAjL3YqMssCOZAhiLY3XiCZCKnMZBYh06mORTIA4AGkTwAhNhnANb3fnZCVi5hZAUSMiW1Y4ZD`,
+        instagram_id: `17841441545804570`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
