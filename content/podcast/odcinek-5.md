@@ -16,12 +16,13 @@ Hej wszystkim! A może raczej: hejka kochani! Jak mówi wiele instagramowych inf
 
 Dzisiejszy odcinek skupi się wokół tematu fake’u. Nie będziemy jednak rozmawiać o podrabianych kontach na Instagramie lub podrabianych torebkach Louis Vuitton – opowiem Wam o fake news. O tym, jakie są konsekwencje takiego zjawiska. A także, jakie może być rozwiązanie dla tej nierównej walki z falą nieprawdziwej informacji, z którą tak naprawdę ma do czynienia każdy z Nas, jeśli tylko posiada konto w mediach społecznościowych i korzysta z niego. A wierzę, że jeśli słuchasz tego podcastu – to właśnie tak jest.
 
-W tym odcinku przeczytasz o:\
-- aktywności premiera Mateusza Morawieckiego na Twitterze,\
-- charakterystyce fake newsów,\
-- circular reporting i jego wpływie na społeczeństwo,\
-- walce Facebooka i Twittera z fake newsami,\
-- możliwościach walki z fake newsami.
+W tym odcinku przeczytasz o:
+
+* aktywności premiera Mateusza Morawieckiego na Twitterze,
+* charakterystyce fake newsów,
+* circular reporting i jego wpływie na społeczeństwo,
+* walce Facebooka i Twittera z fake newsami,
+* możliwościach walki z fake newsami.
 
 Właśnie kupiłem bilet na prom. 26 lipca nad ranem opuszczę UK. Mam nadzieję, że na zawsze. Kierunek –> Polska – ten wpis został opublikowany na Twitterze przez użytkownika o nazwie Tomek emigrant. I doczekał się odpowiedzi samego premiera Mateusza Morawieckiego, który z ogromną radością i entuzjazmem odpowiedział na tweeta, niemalże zapraszając pana Tomka na biesiadę równą tej ze spotu reklamowego z życzeniami wielkanocnymi. Ale nie zaprosił, żeby nie było. Tak czy inaczej, zdecydowane 10/10 w skali gościnności. Nagle jednak pojawiło się o wiele więcej wpisów o podobnej lub tej samej treści. Krążą pogłoski, że najprawdopodobniej była to jedna z kampanii mająca na celu ocieplenie wizerunku Prawa i Sprawiedliwości. Jednak jej twórca popełnił jeden, podstawowy błąd. Mianowicie nie sprawdził tego, że z Wielkiej Brytanii do Polski nie ma absolutnie żadnego promu. Takich fake newsów oraz informacji powielanych przez tysiące osób rozprzestrzeniających się w mediach społecznościowych w zawrotnym tematem strusia pędziwiatra jest o wiele, o wiele więcej. A media zarówno te nowe, jak i tradycyjne niczym bajkowy kojot próbują każdego dnia dogonić, złapać i zweryfikować to, co prawdziwe. I odgrodzić od tego, co zmyślone.
 
