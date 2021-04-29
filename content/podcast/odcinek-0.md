@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #0"
-thumbnail: https://scontent-waw1-1.xx.fbcdn.net/v/t1.6435-9/66246432_2363268047265340_8226911590931234816_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_ohc=TSKWSeT4x58AX_rCalu&_nc_ht=scontent-waw1-1.xx&oh=498af603903a02309fcbba79e39bf8b0&oe=608BD3DE
+thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.18169-9/26165401_1726956713994050_2284666806199854660_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=174925&_nc_ohc=OBGk3DXZcjQAX966pW3&_nc_ht=scontent-vie1-1.xx&oh=fda024e193e8e5ab96488d1d50d7656b&oe=60B19355
 date: 2021-01-17T20:33:53.678Z
 publicationDate: 29-11-2020
 season: 1
