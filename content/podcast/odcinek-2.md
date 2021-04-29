@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #2"
-thumbnail: https://scontent-waw1-1.xx.fbcdn.net/v/t1.6435-9/66246432_2363268047265340_8226911590931234816_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_ohc=TSKWSeT4x58AX_rCalu&_nc_ht=scontent-waw1-1.xx&oh=498af603903a02309fcbba79e39bf8b0&oe=608BD3DE
+thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/77124860_2471885316403612_4024280147560497152_n.png?_nc_cat=111&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=U4M6Z6mPq_gAX9Y333a&_nc_ht=scontent-vie1-1.xx&oh=edeae7d595d66d37fa95e62e5d4af4b1&oe=60B0D45E
 date: 2021-04-15T13:44:54.932Z
 publicationDate: 15-04-2021
 season: 1
