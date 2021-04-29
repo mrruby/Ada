@@ -9,23 +9,20 @@ explicit: false
 description: Mam dla Was naprawdę sporo newsów. Większość z nich to zmiany i
   nowości dotyczące Instagrama, Facebooka i LinkedIna.
 ---
-
-
 Podcast #3
-
-
 
 Hej wszystkim. Dzisiaj bez muzycznego wstępu i bez mówienia o muzycznym wstępie. Mam dla Was naprawdę sporo newsów. Większość z nich to zmiany i nowości dotyczące Instagrama, Facebooka i LinkedIna. W szczególności przydatne będą one dla tych, którzy prowadzą profile firmowe agencyjne i korzystają z reklam, bądź posiadają konta, na których przykładowo promują swoją działalność w sieci. Mam nadzieję, że macie ze sobą kawę, herbatę lub wodę z cytryną. Jeśli tak, to zaczynamy. Ja nazywam się Ada i to jest trzeci odcinek poniedziałkowej phrasówki.
 
-W tym odcinku przeczytasz o:\
-- nowych filtrach Snapchata,\
-- nowych formatach reklamowych Facebooka,\
-- sprawozdaniu finansowym Facebooka,\
-- dlaczego nie warto kupować lajków na Instagramie,\
-- nowej funkcjonalności na LinkedIn,\
-- tym, jaki wpływ na Instagrama ma Kylie Jenner,\
-- pszczółce na Instagramie,\
-- Simsach 4 i ich wpływie na środowisko.
+W tym odcinku przeczytasz o:
+
+* nowych filtrach Snapchata,
+* nowych formatach reklamowych Facebooka,
+* sprawozdaniu finansowym Facebooka,
+* dlaczego nie warto kupować lajków na Instagramie,
+* nowej funkcjonalności na LinkedIn,
+* tym, jaki wpływ na Instagrama ma Kylie Jenner,
+* pszczółce na Instagramie,
+* Simsach 4 i ich wpływie na środowisko.
 
 Wszystkie agencje, które w swoich ogłoszeniach o pracę nadal jeszcze wypisują znajomość Snapchata jako obowiązkowy element pracy social media managera, w końcu mogą odetchnąć. Ponieważ Snapchat zanotował ostatnio najwyższy wzrost pobrań od 2016 roku. Jest to zapewne zasługa dwóch filtrów: jeden z nich odmładza, drugi zmienia płeć. Jestem ciekawa, ilu z Was jeszcze posiada Snapchata. Jeśli nadal gdzieś go macie, to wystarczy przedrzeć się przez wszystkie pajęczyny i udać się do zakątków waszych telefonów i korzystać z nowych filtrów. O ile tylko część z Was nie zrobiła tego za pośrednictwem aplikacji FaceApp, o której opowiadałam Wam w poprzednim odcinku.
 
@@ -49,9 +46,7 @@ Ok, a więc to tyle na dziś. Nie było dzisiaj jednego konkretnego tematu, tylk
 
 Życzę wam miłego dnia, wspaniałego tygodnia i wszystkiego dobrego – do usłyszenia.
 
-
-
 Linki i strony, o których wspominałam:
 
-* [bee_nfluencer](<* <https://www.instagram.com/bee_nfluencer/?fbclid=IwAR1zM_E7hd4mFK_2zH7wM5vy59QKLsFbgibmmoRrgxVHr4Fb59PDAV08IvA>>)
+* \[bee_nfluencer](<* <https://www.instagram.com/bee_nfluencer/?fbclid=IwAR1zM_E7hd4mFK_2zH7wM5vy59QKLsFbgibmmoRrgxVHr4Fb59PDAV08IvA>>)
 * [Kylie Jenner](https://www.instagram.com/kyliejenner/?hl=pl)
