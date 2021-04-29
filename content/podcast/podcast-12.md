@@ -6,8 +6,8 @@ publicationDate: 28-02-2021
 season: 1
 episodeNumber: 12
 explicit: false
-description: "Chciałabym też Wam przybliżyć moje osobiste i autorskie
-  porównanie: podróże autostopem do pracy w marketingu."
+description: "Chciałabym Wam przybliżyć moje osobiste i autorskie porównanie:
+  podróże autostopem do pracy w marketingu."
 ---
 Podcast #12
 
