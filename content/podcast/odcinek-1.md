@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #1"
-thumbnail: https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/78/55/7855118.jpeg
+thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/39098017_2000144630008589_6432144134886129664_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=174925&_nc_ohc=GPBhWWF2K2IAX8x1G60&_nc_ht=scontent-vie1-1.xx&oh=eea453816f560747bc269b6039bc0968&oe=60AEED90
 date: 2021-01-17T19:33:53.678Z
 publicationDate: 29-11-2020
 season: 1
