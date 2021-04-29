@@ -6,10 +6,7 @@ publicationDate: 15-04-2021
 season: 1
 episodeNumber: 2
 explicit: false
-description: O czym posłuchasz w dzisiejszym odcinku?\ - FaceApp - korzyści i
-  zagrożenia,\ - czym różni się FaceApp od innych aplikacji tego typu,\ - jak
-  chronić swoją prywatność w internecie,\ - jak Instagram zaczyna walczyć z
-  botami,\ - ile zajmują reklamy w Krakowie.
+description: "FaceApp: korzyści i zagrożenia. Jak chronić swoją prywatność w internecie?"
 ---
 Podcast #2
 
@@ -17,12 +14,13 @@ Podcast #2
 
 Oczywiście, że Was wkręcam – to nie jest dżingiel mojego podcastu, ale tak chciałam humorystycznie zacząć ten poniedziałkowy poranek. A więc: witam Was serdecznie. Nazywam się Ada. To jest drugi odcinek mojego podcastu o nazwie Poniedziałkowa phrasówka. I to, że tutaj doszliśmy, uważam za mój osobisty sukces. Bardzo się cieszę, że mogę nadal nagrywać. Przygotowałam dla Was kilka ciekawych rzeczy.
 
-O czym posłuchasz w dzisiejszym odcinku?\
-- FaceApp - korzyści i zagrożenia,\
-- czym różni się FaceApp od innych aplikacji tego typu,\
-- jak chronić swoją prywatność w internecie,\
-- jak Instagram zaczyna walczyć z botami,\
-- ile zajmują reklamy w Krakowie.
+O czym posłuchasz w dzisiejszym odcinku?
+
+* FaceApp - korzyści i zagrożenia,
+* czym różni się FaceApp od innych aplikacji tego typu,
+* jak chronić swoją prywatność w internecie,
+* jak Instagram zaczyna walczyć z botami,
+* ile zajmują reklamy w Krakowie.
 
 Tematem głównym tego odcinka (ponieważ będzie również kilka tematów pobocznych) jest coś, co w sumie samo mi się narzuciło poprzez totalne zalanie mojej facebookowej tablicy zdjęciami specjalnie postarzonych ludzi. Było to za pośrednictwem aplikacji o nazwie FaceApp, która wywołała sporo kontrowersji. A więc spróbujemy sobie to dzisiaj poukładać i zobaczyć tak naprawdę, na czym stoją osoby, które tę aplikację ściągnęły oraz czy jest to jedyna tego typu aplikacja, która ma dostęp do naszych zdjęć.
 
