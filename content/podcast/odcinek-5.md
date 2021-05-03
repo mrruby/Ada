@@ -3,13 +3,14 @@ title: "Odcinek #5"
 thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/77124860_2471885316403612_4024280147560497152_n.png?_nc_cat=111&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=U4M6Z6mPq_gAX9Y333a&_nc_ht=scontent-vie1-1.xx&oh=edeae7d595d66d37fa95e62e5d4af4b1&oe=60B0D45E
 date: 2021-04-29T15:40:50.136Z
 publicationDate: 08-04-2021
-season: 4
+season: 1
 episodeNumber: 5
 explicit: false
 description: Dzisiejszy odcinek skupi się wokół tematu fake’u. Nie będziemy
   jednak rozmawiać o podrabianych kontach na Instagramie lub podrabianych
   torebkach Louis Vuitton – opowiem Wam o fake news.
 ---
+
 Podcast #5
 
 Hej wszystkim! A może raczej: hejka kochani! Jak mówi wiele instagramowych influencerek i youtuberek. Dziś mamy odcinek piąty, więc z tej okazji przybijam sobie piątkę <odgłos przybijanej piątki> To prawie tak, jak polubienie własnego posta na Facebooku. Mam nadzieję, że to nie będzie na nagraniu brzmiało, jakbym próbowała zabić jakąś muchę.
@@ -18,11 +19,11 @@ Dzisiejszy odcinek skupi się wokół tematu fake’u. Nie będziemy jednak rozm
 
 W tym odcinku przeczytasz o:
 
-* aktywności premiera Mateusza Morawieckiego na Twitterze,
-* charakterystyce fake newsów,
-* circular reporting i jego wpływie na społeczeństwo,
-* walce Facebooka i Twittera z fake newsami,
-* możliwościach walki z fake newsami.
+- aktywności premiera Mateusza Morawieckiego na Twitterze,
+- charakterystyce fake newsów,
+- circular reporting i jego wpływie na społeczeństwo,
+- walce Facebooka i Twittera z fake newsami,
+- możliwościach walki z fake newsami.
 
 Właśnie kupiłem bilet na prom. 26 lipca nad ranem opuszczę UK. Mam nadzieję, że na zawsze. Kierunek –> Polska – ten wpis został opublikowany na Twitterze przez użytkownika o nazwie Tomek emigrant. I doczekał się odpowiedzi samego premiera Mateusza Morawieckiego, który z ogromną radością i entuzjazmem odpowiedział na tweeta, niemalże zapraszając pana Tomka na biesiadę równą tej ze spotu reklamowego z życzeniami wielkanocnymi. Ale nie zaprosił, żeby nie było. Tak czy inaczej, zdecydowane 10/10 w skali gościnności. Nagle jednak pojawiło się o wiele więcej wpisów o podobnej lub tej samej treści. Krążą pogłoski, że najprawdopodobniej była to jedna z kampanii mająca na celu ocieplenie wizerunku Prawa i Sprawiedliwości. Jednak jej twórca popełnił jeden, podstawowy błąd. Mianowicie nie sprawdził tego, że z Wielkiej Brytanii do Polski nie ma absolutnie żadnego promu. Takich fake newsów oraz informacji powielanych przez tysiące osób rozprzestrzeniających się w mediach społecznościowych w zawrotnym tematem strusia pędziwiatra jest o wiele, o wiele więcej. A media zarówno te nowe, jak i tradycyjne niczym bajkowy kojot próbują każdego dnia dogonić, złapać i zweryfikować to, co prawdziwe. I odgrodzić od tego, co zmyślone.
 
