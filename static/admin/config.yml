@@ -46,7 +46,7 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{title}}"
     editor:
       preview: false
     fields:
