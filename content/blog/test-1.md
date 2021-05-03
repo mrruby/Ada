@@ -1,5 +1,5 @@
 ---
-title: Cześć!
+title: Cześś!
 description: "Poznajmy się! O czym planuję tutaj pisać? Dlaczego warto odwiedzać
   moją stronę? "
 thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/67404770_2522591194430594_8508600250854801408_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_ohc=6yMqDyv0OrAAX-UOseX&_nc_ht=scontent-vie1-1.xx&oh=7512daa665fa54439e16027fd84153b4&oe=60AE7C82
