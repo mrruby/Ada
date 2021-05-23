@@ -4,12 +4,14 @@ export const DesktopRowMobileColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 30px;
+  background: ${({ theme }) => theme.colors.white};
 `
 
 export const PrimaryButton = styled.a`
   display: inline-block;
-  background: ${({ theme }) => theme.colors.yellow};
-  color: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.quinary};
+  color: ${({ theme }) => theme.colors.white};
   font-size: 1rem;
   margin-bottom: 1rem;
   padding: 0.7rem 1.3rem;
