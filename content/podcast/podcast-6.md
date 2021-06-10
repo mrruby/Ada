@@ -1,6 +1,6 @@
 ---
 title: "Podcast #6"
-thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/69275750_2391270897798388_9048805818413088768_n.png?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_ohc=0sEZSYz4g7YAX9WFRGK&_nc_ht=scontent-vie1-1.xx&oh=9867e68f16c9d97e2cc55281b0c84b8e&oe=60B149F0
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast6.png
 date: 2021-04-29T15:44:21.801Z
 publicationDate: 31-03-2021
 season: 1
