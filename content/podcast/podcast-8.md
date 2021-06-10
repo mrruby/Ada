@@ -1,6 +1,6 @@
 ---
 title: "Podcast #8"
-thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/69688645_2401831683408976_9053119219708723200_n.png?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_ohc=_ktyzHcWgvgAX8LMokt&_nc_ht=scontent-vie1-1.xx&oh=282a975998c2db1d0eb29fdec89139be&oe=60AF4916
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast8.png
 date: 2021-04-29T15:55:07.727Z
 publicationDate: 28-03-2021
 season: 1
