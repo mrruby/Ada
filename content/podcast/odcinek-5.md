@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #5"
-thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/77124860_2471885316403612_4024280147560497152_n.png?_nc_cat=111&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=U4M6Z6mPq_gAX9Y333a&_nc_ht=scontent-vie1-1.xx&oh=edeae7d595d66d37fa95e62e5d4af4b1&oe=60B0D45E
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
 date: 2021-04-29T15:40:50.136Z
 publicationDate: 08-04-2021
 season: 1
