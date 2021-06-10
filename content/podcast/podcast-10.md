@@ -1,6 +1,6 @@
 ---
 title: "Podcast #10"
-thumbnail: https://business.facebook.com/select/?next=https%3A%2F%2Fbusiness.facebook.com%2F%3F__cft__%255B0%255D%3DAZVsCbbD9THN0MVpCJ8YaczJ7VY3acPZTH2Ax77NyQ-6WjOcAzNIJH1Th57AZvCpkPmV3tl_KWsv3ZvJKxqdS8sFcGiSUcNvAg5UnZMPHUkvVFhc9lIsUdrtp3WAvo0QIOG6wJyBrZUMlTsstQ8cO1zVb2ztpqqiv4ZprgYajWk-oU__2T3a6TSromKPwxUbJeXYzbFYTkNSRP5TjpEz63oJKkbBagEH-KWjQSLJRcw9yA%26__tn__%3DR%255D-R&ext=1601975867&hash=Afmm4vJBLNiMVTFsVPFgy9R2Ma_ZatzD3_fPD4koULmFWg
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast10.png
 date: 2021-04-29T16:03:01.853Z
 publicationDate: 14-03-2021
 season: 1
