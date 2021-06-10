@@ -1,6 +1,6 @@
 ---
 title: "Podcast #11"
-thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/71956263_2432186590373485_2789342797872758784_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=730e14&_nc_ohc=PVBlkRnGz7wAX8Tz22j&_nc_ht=scontent-vie1-1.xx&oh=1303fa4fd2f7fa996099fae54b6f92e5&oe=60B0A6E3
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast11.jpeg
 date: 2021-04-29T16:05:30.175Z
 publicationDate: 07-03-2021
 season: 1
