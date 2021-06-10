@@ -11,11 +11,11 @@ date: 2021-06-10T09:46:04.973Z
 ---
 # **Cześć!**
 
-#### **"Jaki jest koszt kampanii na Facebooku?" to jedno z najczęstszych pytań, które otrzymuję na początku rozmów klientami. To całkowicie zrozumiała sprawa: w końcu trzeba zaplanować budżet na marketing!**
+## W dzisiejszym wpisie omawiam 5 najważniejszych czynników, które koniecznie musisz przeanalizować przed rozpoczęciem działań z pomocą Facebook Ads! ✌🏻
 
-#### **Bardzo chętnie odpowiedziałabym na to pytanie podając konkretne kwoty, ale prawda jest taka, że TO ZALEŻY. 🤷🏼‍♀**
+#### "Jaki jest koszt kampanii na Facebooku?" to jedno z najczęstszych pytań, które otrzymuję na początku rozmów klientami. To całkowicie zrozumiała sprawa: w końcu trzeba zaplanować budżet na marketing!
 
- dzisiejszym wpisie omawiam 5 najważniejszych czynników, które koniecznie musisz przeanalizować przed rozpoczęciem działań z pomocą Facebook Ads! ✌🏻
+#### Bardzo chętnie odpowiedziałabym na to pytanie podając konkretne kwoty, ale prawda jest taka, że TO ZALEŻY. 🤷🏼‍♀
 
 <p align="center">
   <img width="460" height="300" src="https://podcastada.s3.eu-central-1.amazonaws.com/pexels-cottonbro-5081926.jpeg">
