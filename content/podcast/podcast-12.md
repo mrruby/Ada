@@ -1,6 +1,6 @@
 ---
 title: "Podcast #12"
-thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/74273899_2437443369847807_9132290993280778240_n.png?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=smxwU0QS1eYAX-DAyw6&_nc_ht=scontent-vie1-1.xx&oh=b8e9651e0a7808016d5d58396e7b0b4e&oe=60B02211
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast12.png
 date: 2021-04-29T16:10:19.208Z
 publicationDate: 28-02-2021
 season: 1
