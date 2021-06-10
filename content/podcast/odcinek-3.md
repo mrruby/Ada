@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #3"
-thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.18169-9/26165401_1726956713994050_2284666806199854660_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=174925&_nc_ohc=OBGk3DXZcjQAX966pW3&_nc_ht=scontent-vie1-1.xx&oh=fda024e193e8e5ab96488d1d50d7656b&oe=60B19355
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
 date: 2021-04-29T15:31:20.805Z
 publicationDate: 29-04-2021
 season: 1
