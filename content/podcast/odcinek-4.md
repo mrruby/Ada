@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #4"
-thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.18169-9/23905211_1695378060485249_3514409208689758755_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=174925&_nc_ohc=bLDvUKHWDY4AX_YcQZS&_nc_ht=scontent-vie1-1.xx&oh=6c5e86c2db5e801baac79fae3b3d69a6&oe=60AEF863
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
 date: 2021-04-29T15:36:11.229Z
 publicationDate: 14-04-2021
 season: 1
