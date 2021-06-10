@@ -1,6 +1,6 @@
 ---
 title: "Podcast #9"
-thumbnail: https://scontent-vie1-1.xx.fbcdn.net/v/t1.6435-9/69797340_2407528656172612_4900869739879858176_n.png?_nc_cat=108&ccb=1-3&_nc_sid=730e14&_nc_ohc=vgAmqnuV2QEAX9spRkQ&_nc_ht=scontent-vie1-1.xx&oh=5932807afe37cf3318ad459d208ceeb0&oe=60B0AD7D
+thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast9.png
 date: 2021-04-29T16:00:23.458Z
 publicationDate: 21-03-2021
 season: 1
