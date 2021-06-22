@@ -22,7 +22,7 @@ export const TagsText = styled.p`
 export const Container = styled.div<{ reverse: boolean }>`
   margin: 2rem 1rem;
   display: flex;
-  padding: 6rem;
+  padding: 3rem 0;
   ${(props) => props.reverse && "flex-direction: row-reverse;"};
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}) {
     flex-direction: column-reverse;
