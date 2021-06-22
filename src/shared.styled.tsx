@@ -5,7 +5,21 @@ export const DesktopRowMobileColumn = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 30px;
+  padding: 2rem;
   background: ${({ theme }) => theme.colors.white};
+
+  h1 {
+    font-size: 1.8em;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 1.2em;
+    font-weight: normal;
+  }
 `
 
 export const PrimaryButton = styled.a`
@@ -23,10 +37,6 @@ export const PrimaryButton = styled.a`
   &:hover {
     box-shadow: inset 300px 0 0 0 ${({ theme }) => theme.colors.darkPink};
   }
-`
-
-export const Container = styled.div`
-  padding: 30px;
 `
 
 export const Center = styled.div`

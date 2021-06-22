@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
-import { Container } from "../../shared.styled"
+import { DesktopRowMobileColumn } from "../../shared.styled"
 
 type BlogData = {
   data: {
@@ -23,9 +23,8 @@ const PodcastPage = ({
 }: BlogData): JSX.Element => {
   return (
     <Layout>
-      <SEO title="Podcast" />
-      <h1>Blog</h1>
-      <Container dangerouslySetInnerHTML={{ __html: html }} />
+      <SEO title="Blog" />
+      <DesktopRowMobileColumn dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
