@@ -7000,7 +7000,7 @@ gatsby-page-utils@^0.2.24:
     lodash "^4.17.20"
     micromatch "^3.1.10"
 
-gatsby-plugin-google-gtag@^2.9.0:
+gatsby-plugin-google-gtag@^2.9.0-next.0:
   version "2.9.0-next.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-2.9.0-next.0.tgz#d86f2bebd7c6d98f958a48d0504d824820981627"
   integrity sha512-AsJPVuaCaE5TGWKnUp8jcWBXY2gkY7HbQVquxNOgHogO2JMsbw1eTUHXBYgmBQANjFfZIeaeMghjb8NRyT/Ynw==
