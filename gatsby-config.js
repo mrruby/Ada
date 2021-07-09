@@ -58,7 +58,7 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `wypadaniewypada`,
-        access_token: `EAAW5FFpOFsgBAJ87DwlH6T8VUZBf9QKLJvp8ZAHKXFdXOdsiADr9z5Ie5g2SKBVMRPejahTzDHLwN4yacP1hBhB1N5IkUZCWxkqIsgl4GhRuh8XFQNQKnAVrC7ODrOSwlHQTBHJ2dCqEFQVKmxV9OXwMnX0XpPYyHqrmxQ4OWyMcPCwZAN97RVhlahBLRzK8IeD0qJjcfO0GTHCGveaCRrLhJP4SW9cZD`,
+        access_token: `EAAW5FFpOFsgBACEk8e0eG4dSZCjWGQBh7WmQd96cIUJm4t8drZBBod9bZAZCB5DMXyaZAuLBhUnMzccJl8GNInFHm9HyC7LCDqYtZCPnPJL5GoY3tICVYBmdugM81ZAoGg42hKxwAkDZBiYGEnmiZBnGulEs3PbkmOexEuSz0kzET6lIfkaQiDVPINGlSXnbQtPZB7dBiNVvXZCEWoBGfmlQSN6AccDSic1nQsZD`,
         instagram_id: `17841441545804570`,
       },
     },
