@@ -30,7 +30,7 @@ const Post = ({
   description,
 }: Props): JSX.Element => {
   const isBlog = episodeNumber === null
-  const formattedTags = isBlog ? tags : ["podcast"]
+  const formattedTags = isBlog ? tags.filter((e) => e) : ["podcast"]
   return (
     <Container reverse={reverse}>
       <Column reverse={reverse}>
