@@ -3,12 +3,14 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Post from "components/Post"
 import { DesktopRowMobileColumn } from "../../shared.styled"
+import { isFutureDate } from "../../helpers"
 
 type PostEntry = {
   node: {
     frontmatter: {
       title: string
       description: string
+      date: string
       thumbnail: string
       episodeNumber: number
       tags: string[]
@@ -27,7 +29,7 @@ const MainBlogList = (): JSX.Element => {
     query {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 6
+        limit: 20
       ) {
         edges {
           node {
@@ -37,6 +39,7 @@ const MainBlogList = (): JSX.Element => {
               thumbnail
               tags
               description
+              date
             }
           }
         }
@@ -46,13 +49,16 @@ const MainBlogList = (): JSX.Element => {
 
   return (
     <DesktopRowMobileColumn>
-      {edges.map(({ node: { frontmatter } }, index) => (
-        <Post
-          reverse={index % 2 == 0}
-          key={frontmatter.title}
-          {...frontmatter}
-        />
-      ))}
+      {edges
+        .filter(({ node: { frontmatter } }) => !isFutureDate(frontmatter.date))
+        .slice(0, 6)
+        .map(({ node: { frontmatter } }, index) => (
+          <Post
+            reverse={index % 2 == 0}
+            key={frontmatter.title}
+            {...frontmatter}
+          />
+        ))}
     </DesktopRowMobileColumn>
   )
 }
