@@ -4,12 +4,14 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Post from "components/Post"
+import { isFutureDate } from "../helpers"
 
 type Podcast = {
   node: {
     frontmatter: {
       title: string
       description: string
+      date: string
       thumbnail: string
       episodeNumber: number
       tags: string[]
@@ -26,7 +28,10 @@ const PodcastsPage = (): JSX.Element => {
     allMarkdownRemark: { edges },
   }: Podcasts = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { fields: { slug: { regex: "/podcast/" } } }) {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/podcast/" } } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
         edges {
           node {
             frontmatter {
@@ -35,6 +40,7 @@ const PodcastsPage = (): JSX.Element => {
               tags
               description
               episodeNumber
+              date
             }
           }
         }
@@ -46,13 +52,15 @@ const PodcastsPage = (): JSX.Element => {
     <Layout>
       <SEO title="Podcast" />
       <h1>Lista moich podcastów</h1>
-      {edges.map(({ node: { frontmatter } }, index) => (
-        <Post
-          reverse={index % 2 == 0}
-          key={frontmatter.title}
-          {...frontmatter}
-        />
-      ))}
+      {edges
+        .filter(({ node: { frontmatter } }) => !isFutureDate(frontmatter.date))
+        .map(({ node: { frontmatter } }, index) => (
+          <Post
+            reverse={index % 2 == 0}
+            key={frontmatter.title}
+            {...frontmatter}
+          />
+        ))}
     </Layout>
   )
 }
