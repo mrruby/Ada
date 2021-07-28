@@ -4,8 +4,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Post from "components/Post"
+import { DesktopRowMobileColumn } from "../shared.styled"
 import { isFutureDate } from "../helpers"
-import { DesktopRowMobileColumn } from "shared.styled"
 
 type Podcast = {
   node: {
