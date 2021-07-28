@@ -4,27 +4,9 @@ import CustomBanner from "components/CustomBanner"
 import { graphql, useStaticQuery } from "gatsby"
 import { theme } from "components/Layout/theme"
 import SEO from "components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 const AboutPage = (): JSX.Element => {
-  const data = useStaticQuery(graphql`
-    query {
-      imageDesktop: file(relativePath: { eq: "about-me.png" }) {
-        childImageSharp {
-          fixed(width: 420) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      imageMobile: file(relativePath: { eq: "about-me.png" }) {
-        childImageSharp {
-          fixed(width: 300) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
       <SEO title="O mnie" />
@@ -36,13 +18,14 @@ const AboutPage = (): JSX.Element => {
     światem tym co czuję i myślę."
         paragraph2="pracuję w marketingu (wiecie, te fejsbuki i inne...), uwielbiam
     gotować i uczę się uważności w życiu codziennym."
-        fixedImagesArray={[
-          data.imageMobile.childImageSharp.fixed,
-          {
-            ...data.imageDesktop.childImageSharp.fixed,
-            media: `(min-width: ${theme.dimensions.desktop})`,
-          },
-        ]}
+        image={
+          <StaticImage
+            imgStyle={{ margin: "0 auto", display: "block" }}
+            width={400}
+            src={"../images/about-me.png"}
+            alt="banner"
+          />
+        }
       />
     </Layout>
   )

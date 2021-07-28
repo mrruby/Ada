@@ -1,6 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -18,19 +17,7 @@ type Props = {
 }
 
 const Logo = ({ alt }: Props): JSX.Element => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 150) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-  `)
-
-  return <Img alt={alt} fixed={data.placeholderImage.childImageSharp.fixed} />
+  return <StaticImage width={150} src="../../../images/logo.png" alt={alt} />
 }
 
 export default Logo
