@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Post from "components/Post"
 import { isFutureDate } from "../helpers"
+import { DesktopRowMobileColumn } from "shared.styled"
 
 type Podcast = {
   node: {
@@ -52,15 +53,19 @@ const PodcastsPage = (): JSX.Element => {
     <Layout>
       <SEO title="Podcast" />
       <h1>Lista moich podcastów</h1>
-      {edges
-        .filter(({ node: { frontmatter } }) => !isFutureDate(frontmatter.date))
-        .map(({ node: { frontmatter } }, index) => (
-          <Post
-            reverse={index % 2 == 0}
-            key={frontmatter.title}
-            {...frontmatter}
-          />
-        ))}
+      <DesktopRowMobileColumn>
+        {edges
+          .filter(
+            ({ node: { frontmatter } }) => !isFutureDate(frontmatter.date)
+          )
+          .map(({ node: { frontmatter } }, index) => (
+            <Post
+              reverse={index % 2 == 0}
+              key={frontmatter.title}
+              {...frontmatter}
+            />
+          ))}
+      </DesktopRowMobileColumn>
     </Layout>
   )
 }
