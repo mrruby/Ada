@@ -13,7 +13,7 @@ type Image = {
 
 const IndexPage = (): JSX.Element => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 3) {
         edges {
           node {
@@ -21,18 +21,9 @@ const IndexPage = (): JSX.Element => {
             caption
             localFile {
               childImageSharp {
-                fixed(width: 200, height: 200) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 200, height: 200, layout: FIXED)
               }
             }
-          }
-        }
-      }
-      placeholderImage: file(relativePath: { eq: "main_banner.png" }) {
-        childImageSharp {
-          fixed(width: 800, height: 300) {
-            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
@@ -51,7 +42,7 @@ const IndexPage = (): JSX.Element => {
             key={node.id}
             id={node.id}
             caption={node.caption}
-            fixed={node.localFile.childImageSharp.fixed}
+            fixed={node.localFile.childImageSharp.gatsbyImageData}
           />
         ))}
       </PhotosContainer>

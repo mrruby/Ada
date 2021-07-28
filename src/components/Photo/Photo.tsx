@@ -1,12 +1,12 @@
 import React from "react"
 
 import { Container, AnimationOutside, AnimationInside } from "./Photo.styled"
-import Img, { FixedObject } from "gatsby-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 type Props = {
   id: string
   caption: string
-  fixed: FixedObject
+  fixed: IGatsbyImageData
 }
 
 const Photo = ({ id, fixed, caption }: Props): JSX.Element => {
@@ -20,7 +20,7 @@ const Photo = ({ id, fixed, caption }: Props): JSX.Element => {
           rel="noopener noreferrer"
           rotate={rotate}
         >
-          <Img alt={caption} fixed={fixed} />
+          <GatsbyImage image={fixed} alt={caption} />
         </Container>
       </AnimationInside>
     </AnimationOutside>

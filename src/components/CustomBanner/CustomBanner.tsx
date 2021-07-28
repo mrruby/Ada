@@ -1,6 +1,6 @@
 import React from "react"
 
-import Img, { FixedObject } from "gatsby-image"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import {
   Container,
   Column,
@@ -17,7 +17,7 @@ type Props = {
   paragraph1: string
   paragraph2?: string
   actionButton?: JSX.Element
-  fixedImagesArray: FixedObject[]
+  image: JSX.Element
 }
 
 const CustomBanner = ({
@@ -26,7 +26,7 @@ const CustomBanner = ({
   actionButton,
   paragraph1,
   paragraph2,
-  fixedImagesArray,
+  image,
 }: Props): JSX.Element => {
   return (
     <>
@@ -41,13 +41,7 @@ const CustomBanner = ({
           <Border width={100} height={0.6} />
         </Column>
         <Column reverse={reverse}>
-          <Center>
-            <Img
-              alt={"banner"}
-              imgStyle={{ margin: "0 auto", display: "block" }}
-              fixed={fixedImagesArray}
-            />
-          </Center>
+          <Center>{image}</Center>
         </Column>
       </Container>
       <MainBox reverse={reverse} left={true} />
