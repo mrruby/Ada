@@ -9,7 +9,7 @@ tags:
   - marketing
   - strategia
   - ""
-date: 2021-08-13T08:02:01.961Z
+date: 2021-08-13T13:02:01.961Z
 ---
 Zawsze byłam pod wrażeniem, gdy Carrie Bradshaw po całym weekendzie randek, wyjść ze znajomymi oraz serii ciekawych towarzyskich zdarzeń siadała do komputera i niczym wirtuoz na pianinie pisała piękny tekst, publikowany na łamach jej własnej kolumny w New York Observer. 😉
 
