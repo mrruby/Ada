@@ -17,6 +17,9 @@ type Podcast = {
       episodeNumber: number
       tags: string[]
     }
+    fields: {
+      slug: string
+    }
   }
 }
 
@@ -43,6 +46,9 @@ const PodcastsPage = (): JSX.Element => {
               episodeNumber
               date
             }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -58,13 +64,24 @@ const PodcastsPage = (): JSX.Element => {
           .filter(
             ({ node: { frontmatter } }) => !isFutureDate(frontmatter.date)
           )
-          .map(({ node: { frontmatter } }, index) => (
-            <Post
-              reverse={index % 2 == 0}
-              key={frontmatter.title}
-              {...frontmatter}
-            />
-          ))}
+          .map(
+            (
+              {
+                node: {
+                  frontmatter,
+                  fields: { slug },
+                },
+              },
+              index
+            ) => (
+              <Post
+                reverse={index % 2 == 0}
+                key={frontmatter.title}
+                slug={slug}
+                {...frontmatter}
+              />
+            )
+          )}
       </DesktopRowMobileColumn>
     </Layout>
   )

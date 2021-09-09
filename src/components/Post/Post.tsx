@@ -19,6 +19,7 @@ type Props = {
   tags: string[]
   reverse: boolean
   description: string
+  slug: string
 }
 
 const Post = ({
@@ -28,6 +29,7 @@ const Post = ({
   tags = [],
   reverse,
   description,
+  slug,
 }: Props): JSX.Element => {
   const isBlog = episodeNumber === null
   const formattedTags = isBlog ? tags.filter((e) => e) : ["podcast"]
@@ -37,14 +39,12 @@ const Post = ({
         <Title>{title}</Title>
         <TagsText>{formattedTags.map((el) => `#${el} `).join("")}</TagsText>
         <p>{description}</p>
-        <PrimaryButton
-          href={`/${isBlog ? "blog" : "podcast"}/${getTitlePath(title)}`}
-        >
+        <PrimaryButton href={slug.slice(0, -1)}>
           {episodeNumber == null ? "Czytaj więcej..." : "Posłuchaj..."}
         </PrimaryButton>
       </Column>
       <Column reverse={reverse} isImage>
-        <Link to={`/${isBlog ? "blog" : "podcast"}/${getTitlePath(title)}`}>
+        <Link to={slug.slice(0, -1)}>
           <ImageContainer>
             <Image src={thumbnail} alt="A dog smiling in a party hat" />
           </ImageContainer>
