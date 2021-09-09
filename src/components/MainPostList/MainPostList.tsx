@@ -15,6 +15,9 @@ type PostEntry = {
       episodeNumber: number
       tags: string[]
     }
+    fields: {
+      slug: string
+    }
   }
 }
 
@@ -41,6 +44,9 @@ const MainBlogList = (): JSX.Element => {
               description
               date
             }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -52,13 +58,24 @@ const MainBlogList = (): JSX.Element => {
       {edges
         .filter(({ node: { frontmatter } }) => !isFutureDate(frontmatter.date))
         .slice(0, 6)
-        .map(({ node: { frontmatter } }, index) => (
-          <Post
-            reverse={index % 2 == 0}
-            key={frontmatter.title}
-            {...frontmatter}
-          />
-        ))}
+        .map(
+          (
+            {
+              node: {
+                frontmatter,
+                fields: { slug },
+              },
+            },
+            index
+          ) => (
+            <Post
+              reverse={index % 2 == 0}
+              key={frontmatter.title}
+              slug={slug}
+              {...frontmatter}
+            />
+          )
+        )}
     </DesktopRowMobileColumn>
   )
 }
