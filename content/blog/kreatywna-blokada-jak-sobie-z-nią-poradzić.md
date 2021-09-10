@@ -11,7 +11,6 @@ tags:
   - ""
 date: 2021-09-09T14:02:01.961Z
 ---
-
 # Cześć! Dziś porozmawiajmy na temat bariery kreatywnej i o tym, jak sobie z nią poradzić!
 
 Zawsze byłam pod wrażeniem, gdy Carrie Bradshaw po całym weekendzie randek, wyjść ze znajomymi oraz serii ciekawych towarzyskich zdarzeń siadała do komputera i niczym wirtuoz na pianinie pisała piękny tekst, publikowany na łamach jej własnej kolumny w New York Observer. 😉
@@ -26,11 +25,11 @@ W moim przypadku zazwyczaj kończy się to smutnymi spojrzeniami w stronę kompu
   <img width="460" height="300" src="https://podcastada.s3.eu-central-1.amazonaws.com/nick-morrison-FHnnjk1Yj7Y-unsplash.jpeg">
 </p>
 
-#### 1. Odpalam bibliotekę reklam na Facebooku.
+### 1. Odpalam bibliotekę reklam na Facebooku.
 
 [Biblioteka reklam](https://www.facebook.com/ads/library) to ogrom inspiracji do działania! Kiedy mam do przygotowania teksty na kampanie reklamowe dla moich klientów, na początku przeglądam różne reklamy, które znajduję w bibliotece. Może to być zarówno kampania bezpośredniej konkurencji, jak i inspirujące brandy. Taka analiza działań pozwoli nie tylko na rozeznanie się w branży, ale również naukę ciekawych, interesujących i inspirujących komunikatów reklamowych.
 
-#### 2. Gotuję.
+### 2. Gotuję.
 
 Gotowanie jest dla mnie jak medytacja - nie skupiam się na niczym innym, zapominam o całym świecie. Jestem tylko ja, jedzonko i ewentualnie jakiś podcast. Jeśli nie skupisz się na odpowiednim dobraniu składników i pilnowaniu kroków, nie zjesz czegoś pysznego, więc fundujesz sobie mini reset w przyspieszonej wersji. Co więcej, podczas gotowania dobrze jest praktykować mindfulness - skupić się na każdym składniku i czynności.
 
@@ -43,7 +42,6 @@ Spotify ma rewelacyjne playlisty, które pozwolą Ci się skupić na pracy i odc
 Zależnie od nastroju i samopoczucia, sięgam po lekturę:
 
 1. książki, artykułu, wpisu na Facebooku, gazety - czegoś kompletnie niezwiązanego z tematem tekstu, który chcę przygotować.
-
 2. Sprawdzam pierwsze 10 pozycji w Google, które wyskakują mi pod słowem kluczowym na temat materiału/usługi/reklamy, którą chcę przygotować. Wbijam się w buty odbiorcy i zastanawiam, czy dodałabym coś do tego tekstu? Może jest zbyt długi? A może brakuje mi szczegółów?
 
 Polecam przetestować koniecznie obie opcje!
