@@ -5,6 +5,8 @@ import SEO from "components/seo"
 import Photo from "components/Photo"
 import PhotosContainer from "components/PhotosContainer"
 import MainPostList from "components/MainPostList"
+import CustomBanner from "components/CustomBanner"
+import { StaticImage } from "gatsby-plugin-image"
 
 type Image = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -35,6 +37,19 @@ const IndexPage = (): JSX.Element => {
   return (
     <Layout>
       <SEO title="Home" />
+      <CustomBanner
+        title="Cześć!"
+        paragraph1="Nazywam się Ada i zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami.
+        Podpowiem Ci, jak prowadzić świadomy, kreatywny marketing dla Twojego biznesu."
+        image={
+          <StaticImage
+            imgStyle={{ margin: "0 auto", display: "block" }}
+            width={400}
+            src={"../images/banner.png"}
+            alt="banner"
+          />
+        }
+      />
       <MainPostList />
       <PhotosContainer>
         {listOfImages.map(({ node }: Image) => (
