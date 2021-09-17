@@ -17,7 +17,7 @@ const ContactPage = (): JSX.Element => {
           </PrimaryButton>
         }
         title="Kontakt"
-        paragraph1="Dobrze dogaduję się z alpakami, z ludźmi też całkiem nieźle, więc jeśli chcesz porozmawiać, wyślij mi maila:"
+        paragraph1={"Masz pytanie? Szukasz wsparcia marketingowego? Chcesz pogadać o alpakach? pisz śmiało!".toUpperCase()}
         image={
           <StaticImage
             imgStyle={{ margin: "0 auto", display: "block" }}

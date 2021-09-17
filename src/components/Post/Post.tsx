@@ -34,7 +34,12 @@ const Post = ({
   const isBlog = episodeNumber === null
   const formattedTags = isBlog ? tags.filter((e) => e) : ["podcast"]
   return (
-    <Container reverse={reverse}>
+    <Container
+      reverse={reverse}
+      data-sal="fade-in"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+    >
       <Column reverse={reverse}>
         <Title>{title}</Title>
         <TagsText>{formattedTags.map((el) => `#${el} `).join("")}</TagsText>

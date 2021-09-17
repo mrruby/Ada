@@ -12,12 +12,15 @@ const AboutPage = (): JSX.Element => {
       <SEO title="O mnie" />
       <CustomBanner
         title="KIM JESTEM?"
-        paragraph1="Jako małe dziecko pochłaniałam stosy książek, aby następnie zacząć
-    pisać swoje. Jako że niewiele z nich ujrzało światło dzienne, jako
-    28-latka postanowiłam nadrobić stracony czas i podzielić się ze
-    światem tym co czuję i myślę."
-        paragraph2="pracuję w marketingu (wiecie, te fejsbuki i inne...), uwielbiam
-    gotować i uczę się uważności w życiu codziennym."
+        paragraph1="Z wykształcenia tłumacz FR&ENG, z zawodu marketerka (znajdziemy kiedyś godne następstwo dla tego słowa, prawda?), 
+        a z charakteru kreatywna dusza. Prowadzę swoją działalność: GetBold! Agency."
+        paragraph2="Uwielbiam podróżować (w szczególności lubię wszelkie wyspy: wyspiarski klimat i luz to jest to!), zaczęłam pracować zdalnie długo przed pandemią (nie potrafiłam odnaleźć się w biurze), chętnie gotuję, medytuję i piszę."
+        paragraph3="Moje 5 talentów Gallupa:
+        indywidualizacja,
+        zbieranie,
+        strateg,
+        odkrywczość,
+        naprawianie"
         image={
           <StaticImage
             imgStyle={{ margin: "0 auto", display: "block" }}

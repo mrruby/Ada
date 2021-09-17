@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div<{ reverse: boolean }>`
   margin: 2rem 1rem;
   display: flex;
+
   ${(props) => props.reverse && "flex-direction: row-reverse;"};
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}) {
     flex-direction: ${(props) =>
@@ -12,6 +13,10 @@ export const Container = styled.div<{ reverse: boolean }>`
 `
 
 export const Column = styled.div<{ reverse: boolean }>`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 45%;
 
@@ -54,7 +59,7 @@ export const MainBox = styled.div<{ left: boolean; reverse: boolean }>`
 `
 
 export const Paragraph = styled.h2<{ isParagraph2?: boolean }>`
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   color: ${({ theme }) => theme.colors.primary};
   ${(props) => !props.isParagraph2 && "margin-bottom: 1rem;"};
