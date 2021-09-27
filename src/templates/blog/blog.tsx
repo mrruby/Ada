@@ -10,6 +10,7 @@ type BlogData = {
     markdownRemark: {
       frontmatter: {
         description: string
+        title: string
       }
       html: string
     }
@@ -18,12 +19,15 @@ type BlogData = {
 
 const PodcastPage = ({
   data: {
-    markdownRemark: { html },
+    markdownRemark: {
+      html,
+      frontmatter: { description, title },
+    },
   },
 }: BlogData): JSX.Element => {
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title={title} description={description} />
       <DesktopRowMobileColumn dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
@@ -32,7 +36,7 @@ const PodcastPage = ({
 export default PodcastPage
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {

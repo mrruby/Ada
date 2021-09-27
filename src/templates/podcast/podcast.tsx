@@ -29,7 +29,7 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
 
   return (
     <Layout>
-      <SEO title="Podcast" />
+      <SEO title={title} description={description} />
       <Title>{title}</Title>
       <Description>{description}</Description>
       <Audio
@@ -43,7 +43,7 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
 export default PodcastPage
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
