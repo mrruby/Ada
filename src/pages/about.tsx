@@ -25,7 +25,7 @@ const AboutPage = (): JSX.Element => {
           <StaticImage
             imgStyle={{ margin: "0 auto", display: "block" }}
             width={400}
-            src={"../images/about-me.png"}
+            src={"../images/about-me.webp"}
             alt="banner"
           />
         }

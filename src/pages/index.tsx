@@ -45,7 +45,7 @@ const IndexPage = (): JSX.Element => {
           <StaticImage
             imgStyle={{ margin: "0 auto", display: "block" }}
             width={400}
-            src={"../images/banner.png"}
+            src={"../images/banner.webp"}
             alt="banner"
           />
         }

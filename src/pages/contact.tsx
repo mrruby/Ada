@@ -22,7 +22,7 @@ const ContactPage = (): JSX.Element => {
           <StaticImage
             imgStyle={{ margin: "0 auto", display: "block" }}
             width={340}
-            src={"../images/contact.png"}
+            src={"../images/contact.webp"}
             alt="banner"
           />
         }
