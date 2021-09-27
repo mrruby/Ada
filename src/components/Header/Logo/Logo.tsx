@@ -17,7 +17,7 @@ type Props = {
 }
 
 const Logo = ({ alt }: Props): JSX.Element => {
-  return <StaticImage width={150} src="../../../images/logo.png" alt={alt} />
+  return <StaticImage width={150} src="../../../images/logo.webp" alt={alt} />
 }
 
 export default Logo
