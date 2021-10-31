@@ -17,7 +17,7 @@ const pluginOptions = {
   description: `Nazywam się Ada, a to jest mój podcast, w którym mówię o rzeczach najróżniejszych - często o marketingu, nieco o podróżach i trochę o pracy zdalnej. Jeśli chcesz poznać mój punkt widzenia, dowiedzieć się kilku ciekawostek albo po prostu posłuchać czegoś do kawusi - zapraszam!`,
   summary: `Nazywam się Ada, a to jest mój podcast, w którym mówię o rzeczach najróżniejszych - często o marketingu, nieco o podróżach i trochę o pracy zdalnej. Jeśli chcesz poznać mój punkt widzenia, dowiedzieć się kilku ciekawostek albo po prostu posłuchać czegoś do kawusi - zapraszam!`,
   podcastType: `episodic`,
-  siteUrl: `https://adrianna.getbold.agency`,
+  siteUrl: `https://adrianna.com.pl`,
   audioUrl: `https://podcastada.s3.eu-central-1.amazonaws.com`,
   imageUrl: `https://podcastada.s3.eu-central-1.amazonaws.com/pic.png`,
   feedUrl: `https://adrianna.getbold.agency/podcast-rss-feed.xml`,

@@ -1,9 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
+// @ts-ignore
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
 import { DesktopRowMobileColumn } from "../../shared.styled"
+import { siteName } from "../../helpers"
 
 type BlogData = {
   data: {
@@ -13,27 +16,41 @@ type BlogData = {
         title: string
       }
       html: string
+      id: string
+      fields: {
+        slug: string
+      }
     }
   }
 }
 
-const PodcastPage = ({
+const BlogPage = ({
   data: {
     markdownRemark: {
       html,
       frontmatter: { description, title },
+      id,
+      fields: { slug },
     },
   },
 }: BlogData): JSX.Element => {
+  const disqusConfig = {
+    url: `${siteName + slug.slice(0, -1)}`,
+    identifier: id,
+    title: title,
+  }
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <DesktopRowMobileColumn dangerouslySetInnerHTML={{ __html: html }} />
+      <div>
+        <DesktopRowMobileColumn dangerouslySetInnerHTML={{ __html: html }} />
+        <Disqus config={disqusConfig} />
+      </div>
     </Layout>
   )
 }
 
-export default PodcastPage
+export default BlogPage
 
 export const pageQuery = graphql`
   query ($path: String!) {
@@ -42,6 +59,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+      }
+      id
+      fields {
+        slug
       }
     }
   }
