@@ -1,8 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import { PrimaryButton } from "../../shared.styled"
-
-import { getTitlePath } from "../../helpers"
 import {
   Image,
   Column,

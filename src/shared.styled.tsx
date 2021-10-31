@@ -6,6 +6,7 @@ export const DesktopRowMobileColumn = styled.div`
   align-items: center;
   border-radius: 30px;
   padding: 2rem;
+  margin-bottom: 2rem;
   background: ${({ theme }) => theme.colors.white};
 
   h1 {
