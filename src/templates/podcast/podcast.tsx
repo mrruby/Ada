@@ -21,7 +21,6 @@ type PodcastData = {
         slug: string
       }
       html: string
-      id: string
       fields: {
         slug: string
       }
@@ -33,13 +32,12 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
   const {
     frontmatter: { season, episodeNumber, description, title },
     html,
-    id,
     fields: { slug },
   } = data.markdownRemark
 
   const disqusConfig = {
     url: `${siteName + slug.slice(0, -1)}`,
-    identifier: id,
+    identifier: slug,
     title: title,
   }
 
@@ -71,7 +69,6 @@ export const pageQuery = graphql`
         season
         description
       }
-      id
       fields {
         slug
       }
