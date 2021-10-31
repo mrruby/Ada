@@ -16,7 +16,6 @@ type BlogData = {
         title: string
       }
       html: string
-      id: string
       fields: {
         slug: string
       }
@@ -29,14 +28,13 @@ const BlogPage = ({
     markdownRemark: {
       html,
       frontmatter: { description, title },
-      id,
       fields: { slug },
     },
   },
 }: BlogData): JSX.Element => {
   const disqusConfig = {
     url: `${siteName + slug.slice(0, -1)}`,
-    identifier: id,
+    identifier: slug,
     title: title,
   }
   return (
@@ -60,7 +58,6 @@ export const pageQuery = graphql`
         title
         description
       }
-      id
       fields {
         slug
       }
