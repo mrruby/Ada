@@ -18,14 +18,7 @@ const ContactPage = (): JSX.Element => {
         }
         title="Kontakt"
         paragraph1={"Masz pytanie? Szukasz wsparcia marketingowego? Chcesz pogadać o alpakach? pisz śmiało!".toUpperCase()}
-        image={
-          <StaticImage
-            imgStyle={{ margin: "0 auto", display: "block" }}
-            width={340}
-            src={"../images/contact.webp"}
-            alt="banner"
-          />
-        }
+        image={<StaticImage src={"../images/contact.webp"} alt="banner" />}
       />
     </Layout>
   )
