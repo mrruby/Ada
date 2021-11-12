@@ -21,14 +21,7 @@ const AboutPage = (): JSX.Element => {
         strateg,
         odkrywczość,
         naprawianie"
-        image={
-          <StaticImage
-            imgStyle={{ margin: "0 auto", display: "block" }}
-            width={400}
-            src={"../images/about-me.webp"}
-            alt="banner"
-          />
-        }
+        image={<StaticImage src={"../images/about-me.webp"} alt="banner" />}
       />
     </Layout>
   )

@@ -41,14 +41,7 @@ const IndexPage = (): JSX.Element => {
         title="Cześć!"
         paragraph1="Nazywam się Ada i zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami.
         Podpowiem Ci, jak prowadzić świadomy, kreatywny marketing dla Twojego biznesu."
-        image={
-          <StaticImage
-            imgStyle={{ margin: "0 auto", display: "block" }}
-            width={400}
-            src={"../images/banner.webp"}
-            alt="banner"
-          />
-        }
+        image={<StaticImage src={"../images/banner.webp"} alt="banner" />}
       />
       <MainPostList />
       <PhotosContainer>
