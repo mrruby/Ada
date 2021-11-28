@@ -12,7 +12,7 @@ date: 2021-11-09T15:17:08.032Z
 ## Influencer marketing to szybko rozwijająca się gałąź marketingu, która często gra główną rolę w strategii marki. Mimo to, wielu właścicieli firm już na początku stwierdza: u mnie to nie zadziała. A przecież sukces w influencer marketingu zależy od wybrania odpowiedniej osoby. 
 
 <p align="center">
-  <img width="460" height="300" src="<https://podcastada.s3.eu-central-1.amazonaws.com/diggity-marketing-QFZ_72_NxIQ-unsplash.webp>">
+  <img width="460" height="300" src="https://podcastada.s3.eu-central-1.amazonaws.com/diggity-marketing-QFZ_72_NxIQ-unsplash.webp">
 </p>
 
 #### Z tego wpisu dowiesz się, kim są ci słynni „influencerzy” oraz na co zwrócić uwagę, by wybrać tego idealnego. Sprawdź sam i przekonaj się: 
@@ -22,15 +22,11 @@ date: 2021-11-09T15:17:08.032Z
 * #### czemu same lajki (prawie) nic nie znaczą,
 * #### i dlaczego sukcesu należy się bać.
 
-
-
 # Influencer, czyli kto?
 
 Influencer to dość płynne pojęcie. Nie istnieją przecież żadne kursy, po których ktoś mógłby się mianować influencerem, ani Wyższe Szkoły Influencerów, po których otrzymywałoby się dyplom z influencerstwa. Wobec tego kim jest influencer?
 
 To osoba, która z pomocą różnych kanałów internetowych (głównie mediów społecznościowych, z Instagramem i TikTokiem na czele) stworzyła wokół siebie społeczność, dla której jest autorytetem albo ekspertem w danej dziedzinie. Jego obserwatorzy ufają mu, dlatego rekomendacje takiego influencera mogą wpływać na ich decyzje zakupowe.
-
-
 
 # Jak wybrać influencera? 
 
