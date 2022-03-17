@@ -78,6 +78,10 @@ function SEO({ description, lang, meta = [], title }: Props): JSX.Element {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: "facebook-domain-verification",
+          content: "lghw23ob63nz7oal7ll1jo6ys8txt3",
+        },
       ].concat(meta)}
     />
   )
