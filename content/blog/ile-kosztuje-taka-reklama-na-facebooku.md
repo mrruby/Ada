@@ -17,7 +17,7 @@ date: 2021-06-10T09:46:04.973Z
 
 #### Bardzo chętnie odpowiedziałabym na to pytanie podając konkretne kwoty, ale prawda jest taka, że TO ZALEŻY. 🤷🏼‍♀
 
-![sprawdza telefon](/img/pexels-cottonbro-5081926.jpeg?nf_resize=fit&w=300&h=400 "reklama facebook ads")
+![sprawdza telefon](/img/pexels-cottonbro-5081926.jpeg?nf_resize=smartcrop&w=460&h=300 "reklama facebook ads")
 
 1. **KONKURENCJA** - jak liczni konkurenci prowadzą działania na Facebooku? Pamiętaj, że istnieje coś takiego jak [biblioteka reklam](https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=PL&sort_data[direction]=desc&sort_data[mode]=relevancy_monthly_grouped&media_type=all), gdzie możesz sprawdzić reklamy wszystkich swoich konkurentów łącznie z kreacją (czyli grafiką + tekstem, a nawet datą rozpoczęcia reklamy)! 🔥
 2. **DATA** - planujesz kampanię w okresie Black Friday lub przed świętami? Pamiętaj o tym, że stawki idą w górę! Im więcej reklam, tym droższe miejsce na tablicy naszego użytkownika. 💸
