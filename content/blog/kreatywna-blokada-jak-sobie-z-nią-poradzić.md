@@ -21,7 +21,7 @@ W moim przypadku zazwyczaj kończy się to smutnymi spojrzeniami w stronę kompu
 
 ### Przygotowałam całe 7 sposobów na pobudzenie kreatywności! Gotowi? No to zaczynamy!
 
-![sprawdza telefon](/img/nick-morrison-FHnnjk1Yj7Y-unsplash.jpeg?nf_resize=smartcrop&w=460&h=300 "reklama facebook ads")
+![komputer i notes](/img/nick-morrison-FHnnjk1Yj7Y-unsplash.jpeg?nf_resize=smartcrop&w=460&h=300 "kreatywność")
 
 ### 1. Odpalam bibliotekę reklam na Facebooku.
 

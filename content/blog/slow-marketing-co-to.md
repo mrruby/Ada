@@ -9,7 +9,7 @@ tags:
   - ""
 date: 2021-07-09T17:05:19.466Z
 ---
-![sprawdza telefon](/img/pexels-eternal-happiness-3326362.jpeg?nf_resize=smartcrop&w=460&h=300 "reklama facebook ads")
+![taniec](/img/pexels-eternal-happiness-3326362.jpeg?nf_resize=smartcrop&w=460&h=300 "balans w biznesie")
 
 ###### Spójrzmy prawdzie w oczy: reklam jest mnóstwo. I na żywo, i w sieci możemy spotkać się z setkami, tysiącami banerów dziennie. Z każdej strony atakują nas działania marketingowe, które wchodzą już powoli na wyższy poziom zaawansowania. I tak oto każdego dnia, wiele zespołów marketingowych zastanawia się nad odpowiedzią na pytanie: jak dotrzeć do odbiorców *tym razem*? Jak zwiększyć sprzedaż? Jak osiągnąć wyniki?
 
@@ -27,9 +27,7 @@ Slow marketing (zwany również 'marketing for hippies') to działania zwrócone
 
 W Polsce może być to między innymi: [Your Kaya](https://yourkaya.pl/) czy np. [mydła Yope](https://yope.me/). Komunikacja pierwszej marki zwraca dużą uwagę na czułość do swojego ciała, nie stroni od emotikonek w tekstach, zwraca się do odbiorcy po koleżeńsku. W obu przypadkach firmy stawiają na stuprocentową transparentność w kwestii składów swoich produktów i wspominają sporo o swojej misji. 
 
-<p align="center">
-  <img width="460" height="300" src="https://podcastada.s3.eu-central-1.amazonaws.com/tj-holowaychuk-1EYMue_AwDw-unsplash.jpeg">
-</p>
+![sprawdza telefon](/img/tj-holowaychuk-1EYMue_AwDw-unsplash.jpeg?nf_resize=smartcrop&w=460&h=300 "reklama facebook ads")
 
 ### Jak stworzyć markę, która komunikuje się w rytmie slow?
 
