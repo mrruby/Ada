@@ -27,7 +27,7 @@ Slow marketing (zwany również 'marketing for hippies') to działania zwrócone
 
 W Polsce może być to między innymi: [Your Kaya](https://yourkaya.pl/) czy np. [mydła Yope](https://yope.me/). Komunikacja pierwszej marki zwraca dużą uwagę na czułość do swojego ciała, nie stroni od emotikonek w tekstach, zwraca się do odbiorcy po koleżeńsku. W obu przypadkach firmy stawiają na stuprocentową transparentność w kwestii składów swoich produktów i wspominają sporo o swojej misji. 
 
-![sprawdza telefon](/img/tj-holowaychuk-1EYMue_AwDw-unsplash.jpeg?nf_resize=smartcrop&w=460&h=300 "reklama facebook ads")
+![jezioro widok](/img/tj-holowaychuk-1EYMue_AwDw-unsplash.jpeg?nf_resize=smartcrop&w=460&h=300 "slow marketing")
 
 ### Jak stworzyć markę, która komunikuje się w rytmie slow?
 
