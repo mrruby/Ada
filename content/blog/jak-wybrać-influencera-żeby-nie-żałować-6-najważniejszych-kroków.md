@@ -11,9 +11,7 @@ date: 2021-11-09T15:17:08.032Z
 ---
 ## Influencer marketing to szybko rozwijająca się gałąź marketingu, która często gra główną rolę w strategii marki. Mimo to, wielu właścicieli firm już na początku stwierdza: u mnie to nie zadziała. A przecież sukces w influencer marketingu zależy od wybrania odpowiedniej osoby. 
 
-<p align="center">
-  <img src="https://podcastada.s3.eu-central-1.amazonaws.com/diggity-marketing-QFZ_72_NxIQ-unsplash.webp">
-</p>
+![sprawdza telefon](/img/diggity-marketing-QFZ_72_NxIQ-unsplash.webp?nf_resize=smartcrop&w=300&h=400 "reklama facebook ads")
 
 #### Z tego wpisu dowiesz się, kim są ci słynni „influencerzy” oraz na co zwrócić uwagę, by wybrać tego idealnego. Sprawdź sam i przekonaj się: 
 

@@ -9,9 +9,7 @@ tags:
   - ""
 date: 2021-07-09T17:05:19.466Z
 ---
-<p align="center">
-  <img width="460" height="300" src="https://podcastada.s3.eu-central-1.amazonaws.com/pexels-eternal-happiness-3326362.jpeg">
-</p>
+![sprawdza telefon](/img/pexels-eternal-happiness-3326362.jpeg?nf_resize=smartcrop&w=460&h=300 "reklama facebook ads")
 
 ###### Spójrzmy prawdzie w oczy: reklam jest mnóstwo. I na żywo, i w sieci możemy spotkać się z setkami, tysiącami banerów dziennie. Z każdej strony atakują nas działania marketingowe, które wchodzą już powoli na wyższy poziom zaawansowania. I tak oto każdego dnia, wiele zespołów marketingowych zastanawia się nad odpowiedzią na pytanie: jak dotrzeć do odbiorców *tym razem*? Jak zwiększyć sprzedaż? Jak osiągnąć wyniki?
 
