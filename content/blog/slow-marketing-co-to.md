@@ -1,7 +1,7 @@
 ---
 title: "Slow marketing - co to? "
 description: "Sprawdź, czy slow marketing to dobre rozwiązanie dla Twojego biznesu! "
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/postblog1.png
+thumbnail: /img/postblog1.png
 tags:
   - slowmarketing
   - socialmedia

@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #2"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
+thumbnail: /img/pic.png
 date: 2021-04-15T13:44:54.932Z
 publicationDate: 15-04-2021
 season: 1

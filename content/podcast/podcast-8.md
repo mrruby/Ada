@@ -1,6 +1,6 @@
 ---
 title: "Podcast #8"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast8.png
+thumbnail: /img/podcast8.png
 date: 2021-04-29T15:55:07.727Z
 publicationDate: 28-03-2021
 season: 1

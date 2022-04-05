@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #4"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
+thumbnail: /img/pic.png
 date: 2021-04-29T15:36:11.229Z
 publicationDate: 14-04-2021
 season: 1

@@ -2,7 +2,7 @@
 title: 7 sposobów na kreatywną blokadę w pisaniu.
 description: "Masa pracy, nowe zlecenia, a Ty... nic? Sprawdź moje sposoby na
   kreatywną blokadę! "
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/karuzelawena.png
+thumbnail: /img/karuzelawena.png
 tags:
   - slowmarketing
   - kreatywność

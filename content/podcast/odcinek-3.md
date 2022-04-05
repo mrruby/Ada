@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #3"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
+thumbnail: /img/pic.png
 date: 2021-04-29T15:31:20.805Z
 publicationDate: 29-04-2021
 season: 1

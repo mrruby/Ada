@@ -1,6 +1,6 @@
 ---
 title: "Podcast #7"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast7.png
+thumbnail: /img/podcast7.png
 date: 2021-04-29T15:51:18.923Z
 publicationDate: 30-03-2021
 season: 1

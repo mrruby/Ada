@@ -1,6 +1,6 @@
 ---
 title: "Podcast #9"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast9.png
+thumbnail: /img/podcast9.png
 date: 2021-04-29T16:00:23.458Z
 publicationDate: 21-03-2021
 season: 1

@@ -2,7 +2,7 @@
 title: Jak wybrać influencera, żeby nie żałować? 6 najważniejszych kroków.
 description: "Z tego wpisu dowiesz się, kim są ci słynni „influencerzy” oraz na
   co zwrócić uwagę, by wybrać tego idealnego. "
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/georgia-de-lotz--UsJoNxLaNo-unsplash.jpeg
+thumbnail: /img/georgia-de-lotz--UsJoNxLaNo-unsplash.jpeg
 tags:
   - marketing
   - influencer

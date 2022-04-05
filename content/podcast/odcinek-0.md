@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #0"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
+thumbnail: /img/pic.png
 date: 2021-01-17T20:33:53.678Z
 publicationDate: 29-11-2020
 season: 1
