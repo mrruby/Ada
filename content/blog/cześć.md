@@ -2,7 +2,7 @@
 title: Cześć!
 description: "Poznajmy się! O czym planuję tutaj pisać? Dlaczego warto odwiedzać
   moją stronę? "
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
+thumbnail: /img/pic.png
 tags:
   - marketing
   - socialmedia

@@ -16,7 +16,7 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - {
           label: "Date",
           name: "date",
@@ -52,7 +52,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Tags", name: "tags", widget: "list" }
       - {
           label: "Date",

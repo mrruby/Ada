@@ -1,6 +1,6 @@
 ---
 title: "Odcinek #5"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/pic.png
+thumbnail: /img/pic.png
 date: 2021-04-29T15:40:50.136Z
 publicationDate: 08-04-2021
 season: 1

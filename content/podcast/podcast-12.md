@@ -1,6 +1,6 @@
 ---
 title: "Podcast #12"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast12.png
+thumbnail: /img/podcast12.png
 date: 2021-04-29T16:10:19.208Z
 publicationDate: 28-02-2021
 season: 1

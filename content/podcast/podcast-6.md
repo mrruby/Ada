@@ -1,6 +1,6 @@
 ---
 title: "Podcast #6"
-thumbnail: https://podcastada.s3.eu-central-1.amazonaws.com/podcast6.png
+thumbnail: /img/podcast6.png
 date: 2021-04-29T15:44:21.801Z
 publicationDate: 31-03-2021
 season: 1
