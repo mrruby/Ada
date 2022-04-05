@@ -1,5 +1,5 @@
 ---
-title: "Ile kosztuje taka reklama na Facebooku?"
+title: Ile kosztuje taka reklama na Facebooku?
 description: 5 czynników, które koniecznie musisz przeanalizować przed
   rozpoczęciem kampanii Facebook Ads!
 thumbnail: /img/pic.png
@@ -9,7 +9,6 @@ tags:
   - facebook ads
 date: 2021-06-10T09:46:04.973Z
 ---
-
 # **Cześć!**
 
 ## W dzisiejszym wpisie omawiam 5 najważniejszych czynników, które koniecznie musisz przeanalizować przed rozpoczęciem działań z pomocą Facebook Ads! ✌🏻
@@ -18,9 +17,7 @@ date: 2021-06-10T09:46:04.973Z
 
 #### Bardzo chętnie odpowiedziałabym na to pytanie podając konkretne kwoty, ale prawda jest taka, że TO ZALEŻY. 🤷🏼‍♀
 
-<p align="center">
-  <img width="460" height="300" src="https://podcastada.s3.eu-central-1.amazonaws.com/pexels-cottonbro-5081926.jpeg">
-</p>
+![sprawdza telefon](/img/pexels-cottonbro-5081926.jpeg "reklama facebook ads")
 
 1. **KONKURENCJA** - jak liczni konkurenci prowadzą działania na Facebooku? Pamiętaj, że istnieje coś takiego jak [biblioteka reklam](https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=PL&sort_data[direction]=desc&sort_data[mode]=relevancy_monthly_grouped&media_type=all), gdzie możesz sprawdzić reklamy wszystkich swoich konkurentów łącznie z kreacją (czyli grafiką + tekstem, a nawet datą rozpoczęcia reklamy)! 🔥
 2. **DATA** - planujesz kampanię w okresie Black Friday lub przed świętami? Pamiętaj o tym, że stawki idą w górę! Im więcej reklam, tym droższe miejsce na tablicy naszego użytkownika. 💸
