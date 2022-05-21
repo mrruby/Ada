@@ -74,6 +74,15 @@ module.exports = {
         trackingIds: ["G-8LX78J4XMN"],
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `wypadaniewypada`,
+        access_token: `EAAW5FFpOFsgBAFZBHyzvDIdGZCdFguHxL0zJc2ulMmY7BSbfx6pKUshz3cacSWLo8DqSFAgJFDLgR4nYS5vSCwoTkjheM954dsv3MZA3Sz8anZCPp9jZBGhSzZBWNEsldTm96BY16JbFXoZBpTX61A30sZCh9wEQsZCoFFxu9e8uuANFh0E7ybrJH1qqxN6TLIdkD9ZBm12zoepwZDZD`,
+        instagram_id: `17841441545804570`,
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
