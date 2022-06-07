@@ -14,25 +14,25 @@ type Image = {
 }
 
 const IndexPage = (): JSX.Element => {
-  const data = useStaticQuery(graphql`
-    {
-      allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 3) {
-        edges {
-          node {
-            id
-            caption
-            localFile {
-              childImageSharp {
-                gatsbyImageData(width: 200, height: 200, layout: FIXED)
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 3) {
+  //       edges {
+  //         node {
+  //           id
+  //           caption
+  //           localFile {
+  //             childImageSharp {
+  //               gatsbyImageData(width: 200, height: 200, layout: FIXED)
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const listOfImages = data.allInstaNode.edges
+  // const listOfImages = data.allInstaNode.edges
 
   return (
     <Layout>
@@ -44,7 +44,7 @@ const IndexPage = (): JSX.Element => {
         image={<StaticImage src={"../images/banner.webp"} alt="banner" />}
       />
       <MainPostList />
-      <PhotosContainer>
+      {/* <PhotosContainer>
         {listOfImages.map(({ node }: Image) => (
           <Photo
             key={node.id}
@@ -53,7 +53,7 @@ const IndexPage = (): JSX.Element => {
             fixed={node.localFile.childImageSharp.gatsbyImageData}
           />
         ))}
-      </PhotosContainer>
+      </PhotosContainer> */}
     </Layout>
   )
 }
