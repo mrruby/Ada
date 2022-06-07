@@ -5,7 +5,7 @@ description: Kolorowe kapelusze ułatwią Ci pracę — przeczytaj, jak skuteczn
 thumbnail: /img/metoda-6-kapeluszy-de-bono.png
 tags:
   - "#rozwiązywanieproblemów"
-date: 2022-06-07T11:35:53.667Z
+date: 2022-06-07T11:40:42.379Z
 ---
 Wyobraź sobie, że pracujesz nad ważnym projektem. Nadchodzi kryzys. Próbujesz go rozwiązać, ale… natłok pojawiających się w Twojej głowie myśli nie pomaga. Jest przecież tyle obaw. Pojawia się tak wiele możliwości. Jak podjąć decyzję? Skupić się na faktach czy ufać intuicji? Poznaj metodę, która pomoże Ci skoncentrować się na każdym aspekcie problemu. Dzięki niej przeanalizujesz problem z 5 perspektyw i zbliżysz się do znalezienia rozwiązania.
 
