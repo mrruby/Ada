@@ -1,6 +1,6 @@
 ---
 title: Ile czasu marnujesz w internecie? Kilka słów o zjawisku doom scrollingu
-description: Sprawdź, jak radzić sobie z natłokiem informacji
+description: Sprawdź, jak radzić sobie z natłokiem informacji.
 thumbnail: /img/doom-scrolling.jpg
 tags:
   - doomscrolling
@@ -8,11 +8,11 @@ tags:
   - socialmedia
 date: 2022-08-09T16:10:00.000Z
 ---
-### Kładąc się spać, jeszcze tylko na chwilę bierzesz do ręki telefon, jeszcze tylko rzucasz jedno spojrzenie na Facebooka, jeszcze tylko przeglądasz nowe relacje na Instagramie i… z 23 robi się 1 w nocy. Znasz to uczucie?
+#### Kładąc się spać, jeszcze tylko na chwilę bierzesz do ręki telefon, jeszcze tylko rzucasz jedno spojrzenie na Facebooka, jeszcze tylko przeglądasz nowe relacje na Instagramie i… z 23 robi się 1 w nocy. Znasz to uczucie?
 
 ## Scrollujesz Facebooka i Insta?
 
-To, co robisz, to **doom scrolling, czyli *\*nieskończone\** przesuwanie palcem w dół do feedzie.** Przeglądasz kolejną platformę informacyjną, oglądasz filmiki, chłoniesz wiadomości. Co czujesz: poszukiwanie informacji przybliża Cię do osiągnięcia wewnętrznej równowagi i spokoju czy… niekoniecznie?
+To, co robisz, to **doom scrolling, czyli \*\*nieskończone\*\* przesuwanie palcem w dół do feedzie.** Przeglądasz kolejną platformę informacyjną, oglądasz filmiki, chłoniesz wiadomości. Co czujesz: poszukiwanie informacji przybliża Cię do osiągnięcia wewnętrznej równowagi i spokoju czy… niekoniecznie?
 
 Poszukiwanie informacji stało się sposobem na radzenie sobie z trudnymi sytuacjami, jednak efekt bywa odwrotny od zamierzonego. Szukasz informacji o pandemii COVID-19, ponieważ chcesz być gotowy na ewentualne ryzyko zakażenia? Śledzisz na bieżąco przebieg wydarzeń na Ukrainie, aby móc uciekać w razie realnego zagrożenia dla Polski? W pewnym momencie z bycia na bieżąco przychodzisz do stanu, w którym złe wiadomości stanowią całą Twoją rzeczywistość. 
 
