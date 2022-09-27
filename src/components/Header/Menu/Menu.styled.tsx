@@ -29,7 +29,6 @@ export const StyledMenu = styled.div<{ open: boolean }>`
       display: inline;
       padding: 0.5rem 0.5rem;
       font-size: 1.6rem;
-      font-size: 1.6rem;
       &:hover:after {
         background-color: ${({ theme }) => theme.colors.tertiary};
         width: 100%;
@@ -38,6 +37,11 @@ export const StyledMenu = styled.div<{ open: boolean }>`
 
     &:hover {
       color: ${({ theme }) => theme.colors.tertiary};
+    }
+
+    &.highlight:after {
+      background-color: ${({ theme }) => theme.colors.tertiary};
+      width: 100%;
     }
 
     &:after {
