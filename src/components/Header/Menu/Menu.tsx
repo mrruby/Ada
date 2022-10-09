@@ -18,7 +18,7 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
         >
           ebook
         </a>
-        <a href="checklistafb.adrianna.com.pl">checklista</a>
+        <a href="https://checklistafb.adrianna.com.pl">checklista</a>
         <a href="https://metanewsletter.adrianna.com.pl">newsletter</a>
         <Link to="/about">O mnie</Link>
         <Link to="/podcast">Podcast</Link>
