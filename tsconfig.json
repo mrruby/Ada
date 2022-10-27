@@ -11,6 +11,7 @@
     "noUnusedLocals": false,
     "skipLibCheck": true,
     "baseUrl": "./src",
+    "resolveJsonModule": true,
     "rootDir": "./src"
   },
   "exclude": ["node_modules", "public", ".cache"]
