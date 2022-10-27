@@ -12,10 +12,7 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
   return (
     <>
       <StyledMenu open={open} aria-hidden={!open}>
-        <a
-          className="highlight"
-          href="https://chce-robic-lepsze-kampanie.adrianna.com.pl/"
-        >
+        <a className="highlight" href="https://ebook.adrianna.com.pl/">
           ebook
         </a>
         <a href="https://checklistafb.adrianna.com.pl">checklista</a>
@@ -23,6 +20,7 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
         <Link to="/about">O mnie</Link>
         <Link to="/podcast">Podcast</Link>
         <Link to="/blog">Blog</Link>
+        {/* <Link to="/quiz">Quiz</Link> */}
         <Link to="/contact">Kontakt</Link>
       </StyledMenu>
       <Burger open={open} setOpen={setOpen} />
