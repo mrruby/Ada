@@ -37,7 +37,7 @@ const IndexPage = (): JSX.Element => {
     const value = params.get("ec_product")
     if (typeof window !== "undefined" && !!value) {
       if (window.fbq != null) {
-        window.fbq("track", "Purchase")
+        window.fbq("track", "Purchase", { currency: "PLN", value: 97 })
       }
     }
   }, [])
