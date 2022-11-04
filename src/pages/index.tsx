@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "components/Layout"
 import SEO from "components/seo"
@@ -31,16 +31,6 @@ const IndexPage = (): JSX.Element => {
   //     }
   //   }
   // `)
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search)
-    const value = params.get("ec_product")
-    if (typeof window !== "undefined" && !!value) {
-      if (window.fbq != null) {
-        window.fbq("track", "Purchase", { currency: "PLN", value: 97 })
-      }
-    }
-  }, [])
 
   return (
     <Layout>
