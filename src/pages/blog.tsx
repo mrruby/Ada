@@ -34,7 +34,7 @@ const BlogPage = (): JSX.Element => {
     query {
       allMarkdownRemark(
         filter: { fields: { slug: { regex: "/blog/" } } }
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {

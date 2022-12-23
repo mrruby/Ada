@@ -30,10 +30,7 @@ const MainBlogList = (): JSX.Element => {
     allMarkdownRemark: { edges },
   }: Posts = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        limit: 20
-      ) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 20) {
         edges {
           node {
             frontmatter {
