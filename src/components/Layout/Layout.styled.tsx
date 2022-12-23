@@ -2,6 +2,18 @@ import styled, { createGlobalStyle } from "styled-components"
 import "../../fonts/fonts.css" // TODO: check if there can be font removed from project
 import { ThemeType } from "./theme"
 
+import { Link } from "gatsby"
+
+export const StyledLink = styled(Link)`
+  margin-left: 0.5rem;
+  color: ${({ theme }) => theme.colors.black};
+  text-decoration: none;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`
+
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
 `
@@ -21,6 +33,8 @@ export const InnerContainer = styled.div`
 
 export const Footer = styled.footer`
   margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
 `
 
 export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
