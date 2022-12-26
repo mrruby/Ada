@@ -639,8 +639,8 @@ const Policy = (): JSX.Element => {
         sesyjne). Inne cookies są zachowywane na Twoim urządzeniu końcowym i
         umożliwiają rozpoznanie Twojej przeglądarki przy kolejnym wejściu na
         stronę (trwałe cookies). Jeżeli chcesz dowiedzieć się więcej o plikach
-        cookies jako takich, możesz zapoznać się np. z tym materiałem
-        (https://pl.wikipedia.org/wiki/HTTP_cookie).
+        cookies jako takich, możesz zapoznać się np. z tym materiałem (
+        <a href="https://pl.wikipedia.org/wiki/HTTP_cookie">HTTP_cookie</a>).
       </p>
       <h4 className="text-md font-bold mb-2">
         # 13: Na jakiej podstawie korzystam z plików cookies?
@@ -743,8 +743,11 @@ const Policy = (): JSX.Element => {
         Google Analytics i Google Analytics 360. Jeżeli jesteś zainteresowany
         szczegółami związanymi z wykorzystywaniem przez Google danych z witryn i
         aplikacji, które korzystają z usług Google, zachęcam do zapoznania się z
-        tymi informacjami.
-        (https://policies.google.com/technologies/partner-sites)
+        tymi informacjami. (
+        <a href="https://policies.google.com/technologies/partner-sites">
+          partner-sites
+        </a>
+        )
       </p>
       <p className="mb-2 font-bold">Hotjar – szczegóły</p>
       <p className="mb-2">
@@ -777,11 +780,15 @@ const Policy = (): JSX.Element => {
         tym celu Google łączy tymczasowo zebrane informacje z innymi posiadanymi
         danymi, aby utworzyć grupy docelowe. Jeżeli nie chcesz otrzymywać
         personalizowanych reklam, możesz zarządzać ustawieniami reklam
-        bezpośrednio po stronie Google: https://adssettings.google.com/. Jeżeli
-        jesteś zainteresowany szczegółami związanymi z wykorzystywaniem przez
-        Google danych z witryn i aplikacji, które korzystają z usług Google,
-        zachęcam do zapoznania się z tymi informacjami:
-        https://policies.google.com/technologies/partner-sites.
+        bezpośrednio po stronie:{" "}
+        <a href="https://adssettings.google.com/">Google</a>. Jeżeli jesteś
+        zainteresowany szczegółami związanymi z wykorzystywaniem przez Google
+        danych z witryn i aplikacji, które korzystają z usług Google, zachęcam
+        do zapoznania się z{" "}
+        <a href="https://policies.google.com/technologies/partner-sites">
+          tymi
+        </a>{" "}
+        informacjami
       </p>
       <p className="mb-2 font-bold">Google Analytics - szczegóły</p>
       <p className="mb-2">
@@ -811,8 +818,11 @@ const Policy = (): JSX.Element => {
         Google Analytics i Google Analytics 360. Jeżeli jesteś zainteresowany
         szczegółami związanymi z wykorzystywaniem przez Google danych z witryn i
         aplikacji, które korzystają z usług Google, zachęcam do zapoznania się z
-        tymi informacjami.
-        (https://policies.google.com/technologies/partner-sites)
+        tymi informacjami. (
+        <a href="https://policies.google.com/technologies/partner-sites">
+          partner-sites
+        </a>
+        )
       </p>
       <p className="mb-2 font-bold">Facebook Custom Audiences – szczegóły</p>
       <p className="mb-2">
@@ -924,10 +934,15 @@ const Policy = (): JSX.Element => {
         podmiotem świadczącym na Twoją rzecz usługi drogą elektroniczną.
         Szczegółów w zakresie zasad korzystania z systemu Disqus, w tym ochrony
         prywatności, możesz szukać w dokumentach udostępnianych bezpośrednio
-        przez Disqus: ·
-        regulamin:https://help.disqus.com/en/articles/1717102-terms-of-service#publisher-terms-of-service-agreement,
-        · polityka prywatności:
-        https://help.disqus.com/en/articles/1717103-disqus-privacy-policy.
+        przez Disqus:{" "}
+        <a href="https://help.disqus.com/en/articles/1717102-terms-of-service#publisher-terms-of-service-agreement">
+          regulamin
+        </a>
+        ,{" "}
+        <a href="https://help.disqus.com/en/articles/1717103-disqus-privacy-policy">
+          polityka prywatności
+        </a>
+        .
       </p>
       <p className="mb-2 font-bold">YouTube – szczegóły</p>
       <p className="mb-4">
@@ -962,9 +977,9 @@ const Policy = (): JSX.Element => {
         Google LLC jest samodzielnym, niezależnym podmiotem świadczącym na Twoją
         rzecz usługi drogą elektroniczną. Szczegółów w zakresie zasad
         korzystania z YouTube, w tym ochrony prywatności, możesz szukać w
-        dokumentach udostępnianych bezpośrednio przez YouTube: · regulamin:
-        https://www.youtube.com/t/terms, · polityka prywatności:
-        https://policies.google.com/privacy
+        dokumentach udostępnianych bezpośrednio przez YouTube:{" "}
+        <a href="https://www.youtube.com/t/terms">regulamin</a>,{" "}
+        <a href="https://policies.google.com/privacy">polityka prywatności</a>
       </p>
       <h4 className="text-md font-bold mb-2">
         # 17: Czy śledzę Twoje zachowania podejmowane w ramach mojej strony
@@ -1003,11 +1018,13 @@ const Policy = (): JSX.Element => {
         zarządzające plikami cookies, · tryb incognito w przeglądarce
         internetowej, · ustawienia reklamy behawioralnej, np.
         youronlinechoices.com, · mechanizm zarządzania plikami cookies z poziomu
-        mojej strony[33] , · Google Analytics Opt-out:
-        https://tools.google.com/dlpage/gaoptout, · Google Ads Settings:
-        https://adssettings.google.com/, · Facebook Ads Settings:
-        https://www.facebook.com/ads/settings, · HotJar Opt-out:
-        https://www.hotjar.com/legal/compliance/opt-out[34]
+        mojej strony[33],{" "}
+        <a href="https://tools.google.com/dlpage/gaoptout">GA Opt-out</a>,{" "}
+        <a href="https://adssettings.google.com/">GS Settings</a>,{" "}
+        <a href="https://www.facebook.com/ads/settings">FA Settings</a>,{" "}
+        <a href="https://www.hotjar.com/legal/compliance/opt-out[34]">
+          HotJar Opt-out
+        </a>
       </p>
       <h4 className="text-md font-bold mb-2"># 20: Czym są logi serwera?</h4>
       <p className="mb-4">
