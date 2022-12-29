@@ -18,6 +18,12 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+`
+
 export const Main = styled.main`
   position: relative;
   display: flex;
@@ -32,9 +38,9 @@ export const InnerContainer = styled.div`
 `
 
 export const Footer = styled.footer`
-  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 
 export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
