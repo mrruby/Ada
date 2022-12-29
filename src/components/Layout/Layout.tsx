@@ -16,6 +16,7 @@ import {
   Main,
   Footer,
   StyledLink,
+  Column,
 } from "./Layout.styled"
 import Header from "../Header"
 import { theme } from "./theme"
@@ -43,7 +44,12 @@ const Layout = ({ children }: Props): JSX.Element => {
         <InnerContainer>
           <Main>{children}</Main>
           <Footer>
-            <span>© {new Date().getFullYear()}, Made by GetBold with ❤️</span>
+            <Column>
+              <span>© {new Date().getFullYear()}, Dawid Urbas Get Bold</span>
+              <span>ul. Żołnierzy Września 79/6, 41-500 Chorzów</span>
+              <span>NIP: 6272725565</span>
+            </Column>
+
             <div>
               <StyledLink to="/policy">
                 Polityka prywatności & plików cookie
