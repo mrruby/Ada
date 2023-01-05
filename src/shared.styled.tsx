@@ -44,3 +44,12 @@ export const Center = styled.div`
   display: flex;
   justify-content: center;
 `
+
+export const SmallParagraphContainer = styled.div`
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  font-size: 1rem;
+`

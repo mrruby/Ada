@@ -1,10 +1,9 @@
 import React from "react"
 import Layout from "components/Layout"
 import CustomBanner from "components/CustomBanner"
-import { graphql, useStaticQuery } from "gatsby"
-import { theme } from "components/Layout/theme"
 import SEO from "components/seo"
 import { StaticImage } from "gatsby-plugin-image"
+import { SmallParagraphContainer } from "shared.styled"
 
 const AboutPage = (): JSX.Element => {
   return (
@@ -23,6 +22,12 @@ const AboutPage = (): JSX.Element => {
         naprawianie"
         image={<StaticImage src={"../images/about-me.webp"} alt="banner" />}
       />
+      <SmallParagraphContainer>
+        <span>Dane firmy:</span>
+        <span>Dawid Urbas Get Bold</span>
+        <span>ul. Żołnierzy Września 79/6, 41-500 Chorzów</span>
+        <span>NIP: 6272725565</span>
+      </SmallParagraphContainer>
     </Layout>
   )
 }

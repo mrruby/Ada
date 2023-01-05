@@ -1,13 +1,11 @@
 import React from "react"
 
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import {
   Container,
   Column,
   Title,
   Paragraph,
   Border,
-  MainBox,
 } from "./CustomBanner.styled"
 import { Center } from "../../shared.styled"
 

@@ -18,12 +18,6 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
 `
 
-export const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8rem;
-`
-
 export const Main = styled.main`
   position: relative;
   display: flex;
