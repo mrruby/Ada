@@ -40,6 +40,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `legal`,
+        path: `${__dirname}/src/values/legal`,
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,

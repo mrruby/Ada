@@ -30,7 +30,11 @@ const MainBlogList = (): JSX.Element => {
     allMarkdownRemark: { edges },
   }: Posts = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 20) {
+      allMarkdownRemark(
+        sort: { frontmatter: { date: DESC } }
+        limit: 20
+        filter: { fileAbsolutePath: { regex: "/^(?!.*/(terms|policy).md$)/" } }
+      ) {
         edges {
           node {
             frontmatter {
