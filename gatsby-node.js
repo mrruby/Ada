@@ -47,6 +47,16 @@ function isPodcastOrBlog(name) {
   throw Error()
 }
 
+function returnPathValue(name) {
+  if (name.includes("podcast")) {
+    return "podcast"
+  }
+  if (name.includes("blog")) {
+    return "blog"
+  }
+  return "legal"
+}
+
 const wrapper = (promise) =>
   promise.then((result) => {
     if (result.errors) {
@@ -62,9 +72,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: `/${
-        isPodcastOrBlog(node.fileAbsolutePath) ? "podcast" : "blog"
-      }${slug}`,
+      value: `/${returnPathValue(node.fileAbsolutePath)}${slug}`,
     })
   }
 }
@@ -77,7 +85,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        limit: 1000
+        filter: { fileAbsolutePath: { regex: "/^(?!.*/(terms|policy).md$)/" } }
+      ) {
         edges {
           node {
             fields {
