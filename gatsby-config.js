@@ -47,6 +47,12 @@ module.exports = {
         path: `${__dirname}/src/values/legal`,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-TC7CLB2",
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
