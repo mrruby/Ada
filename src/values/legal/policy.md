@@ -1,6 +1,4 @@
-﻿**Polityka prywatności i plików cookies**
-
-Dzień dobry!
+﻿**Polityka prywatności i plików cookies** Dzień dobry!
 
 Jeżeli tutaj trafiłeś, to niezawodny znak, że cenisz swoją prywatność. Doskonale to rozumiemy, dlatego oddajemy w Twoje ręce dokument, w którym w jednym miejscu znajdziesz zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies i innych technologii śledzących.
 
@@ -10,9 +8,31 @@ Przetwarzamy Twoje dane osobowe przede wszystkim w celach związanych z korzysta
 
 Szczegółowe informacje na temat zasad przetwarzania Twoich danych osobowych znajdziesz w dalszej części Polityki prywatności.
 
+- **1: KTO JEST ADMINISTRATOREM DANYCH OSOBOWYCH? [2**](#_page1_x70.90_y79.70)**
+- **2: Z KIM MOŻESZ KONTAKTOWAĆ SIĘ W SPRAWIE PRZETWARZANIA DANYCH OSOBOWYCH? [2**](#_page1_x70.90_y316.38)**
+- **3: W JAKICH CELACH PRZETWARZAMY DANE OSOBOWE? [2**](#_page1_x70.90_y488.18)**
+- **4: JAKIE INFORMACJE NA TWÓJ TEMAT POSIADAMY? [10**](#_page6_x70.90_y56.70)**
+- **5: CZYM SĄ „INFORMACJE ANONIMOWE”? [10**](#_page6_x70.90_y371.51)**
+- **6: SKĄD MAMY TWOJE DANE OSOBOWE? [11**](#_page7_x70.90_y336.73)**
+- **7: CZY DANE SĄ BEZPIECZNE? [11**](#_page7_x70.90_y562.64)**
+- **8: JAK DŁUGO BĘDZIEMY PRZECHOWYWAĆ DANE OSOBOWE? [11**](#_page7_x70.90_y683.98)**
+- **9: KIM SĄ ODBIORCY DANYCH OSOBOWYCH? [13**](#_page9_x70.90_y133.60)**
+- **11: CZY KORZYSTAMY Z PROFILOWANIA? [14**](#_page10_x70.90_y312.50)**
+- **12: JAKIE MASZ PRAWA? [14**](#_page10_x70.90_y532.41)**
+- **13: CZY KORZYSTAMY Z COOKIES I CZYM ONE WŁAŚCIWIE SĄ? [15**](#_page11_x70.90_y381.18)**
+- **14: NA JAKIEJ PODSTAWIE KORZYSTAMY Z PLIKÓW COOKIES? [15**](#_page11_x70.90_y626.31)**
+- **15: CZY MOŻESZ WYŁĄCZYĆ PLIKI COOKIES? [15**](#_page12_x70.90_y56.70)**
+- **16: W JAKICH CELACH KORZYSTAMY Z PLIKÓW COOKIES WŁASNYCH? [16**](#_page12_x70.90_y401.63)**
+- **17: JAKIE PLIKI COOKIES PODMIOTÓW TRZECICH SĄ WYKORZYSTYWANE? [16**](#_page12_x70.90_y512.19)**
+- **18: CZY ŚLEDZIMY TWOJE ZACHOWANIA PODEJMOWANE W RAMACH STRONY? [16**](#_page12_x70.90_y617.86)**
+- **19: CZY KIERUJEMY DO CIEBIE TARGETOWANE REKLAMY? [16**](#_page12_x70.90_y712.76)**
+- **20: W JAKI SPOSÓB MOŻESZ ZARZĄDZAĆ SWOJĄ PRYWATNOŚCIĄ? [16**](#_page13_x70.90_y107.15)**
+- **21: CZY JEST JESZCZE COŚ, O CZYM POWINIENEŚ WIEDZIEĆ? [17**](#_page13_x70.90_y353.70)**
+- **22: CZY TA POLITYKA PRYWATNOŚCI MOŻE PODLEGAĆ ZMIANOM? [17 ](#_page13_x70.90_y493.05)ZAŁĄCZNIK DO POLITYKI PRYWATNOŚCI [18**](#_page14_x70.90_y56.70)**
+
 W razie jakichkolwiek wątpliwości związanych z Polityką prywatności, w każdej chwili możesz skontaktować się z nami, wysyłając wiadomość na adres adrianna@getbold.agency.
 
-- **2: Kto jest administratorem danych osobowych?**
+- **1:<a name="_page1_x70.90_y79.70"></a> Kto jest administratorem danych osobowych?**
 
 Administratorem Twoich danych osobowych jest Dawid Urbas Get Bold z siedzibą w Chorzowie przy ul. Żołnierzy Września, nr 79/6, 41-500, NIP 6272725565.
 
@@ -22,48 +42,189 @@ W zakresie profilów w mediach społecznościowych związanych z naszą stroną 
 
 - [Facebook](https://pl-pl.facebook.com/privacy/explanation),
 - [Instagram](https://help.instagram.com/519522125107875),
-- **2: Z kim możesz kontaktować się w sprawie przetwarzania danych osobowych?**
+- **2:<a name="_page1_x70.90_y316.38"></a> Z kim możesz kontaktować się w sprawie przetwarzania danych osobowych?**
 
 W ramach wdrożenia systemu ochrony danych osobowych w naszej organizacji podjęliśmy decyzję o niewyznaczaniu inspektora ochrony danych osobowych z uwagi na fakt, że w naszej sytuacji nie jest to obowiązkowe.
 
 W sprawach związanych z ochroną danych osobowych oraz szeroko pojętą prywatnością możesz kontaktować się pod adresem e-mail adrianna@getbold.agency. W zakresie mediów społecznościowych możesz dodatkowo kontaktować się bezpośrednio z administratorami serwisów społecznościowych, w których prowadzimy swoje profile.
 
-- **3: W jakich celach przetwarzamy dane osobowe?**
+- **3:<a name="_page1_x70.90_y488.18"></a> W jakich celach przetwarzamy dane osobowe?**
 
 Tych celów jest więcej niż jeden. Poniżej znajduje się ich lista, wraz z bardziej szczegółowym omówieniem. Poszczególnym celom przyporządkowaliśmy również odpowiednie podstawy prawne przetwarzania:
 
-| <p>**Cel przetwarzania**</p><p>**Obsługa konta użytkownika**</p> | <p>**Omówienie celu przetwarzania**</p><p>Zakładając konto użytkownika, musisz podać dane niezbędne do założenia konta określone w formularzu rejestracyjnym. </p><p>Podanie danych jest warunkiem założenia konta. </p><p>W ramach edycji danych konta możesz podać swoje dalej idące dane, zgodnie z dostępnymi opcjami w ramach konta. </p><p>Dane przetwarzane są w celu świadczenia na Twoją rzecz usługi konta użytkownika. Po usunięciu konta użytkownika dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z usługą konta użytkownika. </p> | <p>**Podstawa prawna**</p><p>art. 6 ust. 1 lit. b RODO</p> |
-| :--------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------- |
+1. **Obsługa konta użytkownika**
 
-| **Realizacja zamówienia i obsługa umowy**                            | <p>Składając zamówienie, musisz podać dane niezbędne do jego realizacji określone w formularzu zamówienia. </p><p>Podanie danych jest warunkiem złożenia zamówienia. </p><p>Ponadto system wykorzystywany do obsługi procesu zamówienia zapisuje Twój numer IP, z którego korzystałeś, składając zamówienie. </p><p>Każde zamówienie zapisywane jest w bazie, co oznacza, że Twoim danym osobowym przypisanym do zamówienia towarzyszą również informacje dotyczące zamówienia takie jak data i godzina złożenia zamówienia, numer identyfikacyjny zamówienia, identyfikator transakcji, przedmiot zamówienia, cena, sposób i termin płatności, data i godzina pobrania (w przypadku treści cyfrowych). </p><p>W związku z zawarciem umowy może przetwarzać również Twoje inne dane osobowe także po to, aby wykonać świadczenia przewidziane w umowie, jaka została zawarta. Zakres tych danych zależy od tego, które dane osobowe są potrzebne do wykonania umowy. </p><p>W sytuacji, gdy otrzymujemy Twoje dane w ramach wykonywania umowy np. od podmiotu, który Cię zatrudnia, opieramy taki proces przetwarzania danych na prawnie uzasadnionym interesie, jaki w tym przypadku stanowi zapewnienie sprawnej i efektywnej obsługi zawartej umowy. W takim przypadku możemy przetwarzać Twoje dane identyfikujące oraz dane kontaktowe. </p><p>Dane przetwarzane są w celu zawarcia i wykonania umowy. Po wykonaniu umowy, dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z umową. Dane trafiają również do dokumentacji księgowej na potrzeby wywiązywania się z obowiązków podatkowych.</p> | art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO |
-| :------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
-| **Działania podejmowane w celu dokończenia zamówień przez klientów** | <p>W związku z tym, że niektórzy klienci rozpoczynają składanie zamówienia, lecz go nie finalizują (nie zatwierdzają zamówienia i nie zawierają umowy z nami), możemy podejmować działania, które będą służyły temu, aby nasi klienci dokończyli proces zakupowy. </p><p>W tym celu możemy przykładowo wysyłać wiadomości e- mail zawierające informacje o niedokończonym zamówieniu oraz zachętę do sfinalizowania transakcji. </p><p>Na potrzeby opisanych działań możemy przetwarzać takie dane osobowe, jak informacje podane w trakcie składania zamówienia, w szczególności Twoje imię i nazwisko oraz adres e-mail, a także informacje o zawartości koszyka, dacie rozpoczęcia transakcji oraz inne dane pozostawione w związku z rozpoczętym procesem zakupowym. </p><p>Podstawą prawną przetwarzania Twoich danych osobowych jest art. 6 ust. 1 lit. b RODO, ponieważ działania te zmierzają do zawarcia umowy. Ponadto upatrujemy podstawy przetwarzania w naszym prawnie uzasadnionym interesie, jaki w tym przypadku stanowi zwiększanie sprzedaży. </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO |
+Zakładając konto użytkownika, musisz podać dane niezbędne do założenia konta określone w formularzu rejestracyjnym.
 
-| **Obsługa reklamacji lub odstąpienia od umowy** | <p>Jeżeli składasz reklamację lub odstępujesz od umowy, to przekazujesz dane osobowe zawarte w treści reklamacji lub oświadczeniu o odstąpieniu od umowy. </p><p>Podanie danych jest warunkiem złożenia oświadczenia o odstąpieniu od umowy lub reklamacji. </p><p>Dane przetwarzane są w celu obsługi procesu odstąpienia od umowy lub procesu reklamacyjnego. Po realizacji takiego procesu, dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z obsługą procesu odstąpienia od umowy lub procesu reklamacyjnego. Dane trafiają również do dokumentacji księgowej na potrzeby wywiązywania się z obowiązków podatkowych.</p> | Art. 6 ust. 1 lit. c RODO w zw. z właściwymi przepisami dotyczącymi prawa do odstąpienia od umowy i odpowiedzialnośc i za zgodność z umową, art. 6 ust. 1 lit. b RODO |
-| :---------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+Podanie danych jest warunkiem założenia konta.
 
-| **Obsługa newslettera** | <p>Zapisując się do newslettera, musisz podać dane niezbędne do jego otrzymywania określone w formularzu zapisu. </p><p>Podanie danych jest warunkiem otrzymywania newslettera. </p><p>Ponadto, system mailingowy zapisuje Twój numer IP, z którego korzystałeś, zapisując się do newslettera, określa Twoją przybliżoną lokalizację, klienta poczty, z którego korzystasz do obsługi poczty e-mail oraz śledzi Twoje działania podejmowane w związku z wysyłanymi do Ciebie wiadomościami. W związku z tym posiadamy również informacje, które wiadomości otworzyłeś, w ramach których wiadomości kliknąłeś w linki itp. </p><p>W systemie mailingowym możemy również definiować, na podstawie różnych kryteriów związanych z Twoją aktywnością, zainteresowaniami lub innymi preferencjami, określone grupy lub segmenty odbiorców newslettera mające wpływ na to, jakiego rodzaju wiadomości otrzymujesz w ramach newslettera. </p><p>Dane przekazane przez Ciebie w związku z zapisem do newslettera wykorzystywane są w celu przesyłania Ci newslettera, a podstawą prawną ich przetwarzania jest wykonanie umowy o świadczenie usługi elektronicznej, a także nasz prawnie usprawiedliwiony interes, jakim w tym przypadku jest realizacja celów marketingowych. </p><p>Jeżeli chodzi o przetwarzanie informacji, które nie pochodzą od Ciebie, a zostały zebrane automatycznie przez system mailingowy, opieramy się w tym zakresie na naszym prawnie uzasadnionym interesie polegającym na analizie zachowań subskrybentów newslettera w celu optymalizacji działań mailingowych. </p><p>W każdej chwili możesz zrezygnować z otrzymywania newslettera, klikając w dedykowany link znajdujący się w każdej wiadomości wysyłanej w ramach newslettera, lub po prostu kontaktując się z nami. </p><p>Rezygnacja z newslettera nie prowadzi do usunięcia Twoich danych z systemu mailingowego. Dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z newsletterem, jak również w celu zapewnienia możliwości wykazania, że działania newsletterowe prowadzone były zgodnie z prawem. </p> | art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO |
-| :---------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
+W ramach edycji danych konta możesz podać swoje dalej idące dane, zgodnie z dostępnymi opcjami w ramach konta.
 
-| **Kontakt i obsługa korespondencji**                                               | <p>Kontaktując się z nami za pośrednictwem dostępnych środków komunikacji, np. poczty elektronicznej, komunikatorów społecznościowych, chatów itp., w sposób naturalny przekazujesz swoje dane osobowe zawarte w treści korespondencji. </p><p>Podanie danych jest warunkiem nawiązania kontaktu. </p><p>Ponadto, system komunikacji zapisuje Twój numer IP, z którego korzystałeś, przesyłając wiadomość. </p><p>System komunikacji (np. czat, komunikator) może być obsługiwany przez zewnętrznego dostawcę. W takiej sytuacji korzystanie z systemu podlega regulaminowi oraz polityce prywatności zewnętrznego dostawcy. Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom. </p><p>Dane przetwarzane są w celu prowadzenia komunikacji, co stanowi nasz prawnie uzasadniony interes. Po zakończeniu komunikacji, dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z prowadzoną komunikacją.</p> | art. 6 ust. 1 lit. f RODO                                                                                                |
-| :--------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
-| **Realizacja obowiązków podatkowych i księgowych**                                 | <p>W związku z wykonywaniem umowy realizujemy także rozmaite obowiązki podatkowe i księgowe, w szczególności w postaci wystawienia faktury, włączenia faktury do naszej dokumentacji księgowej, przechowywania dokumentacji itp. </p><p>Aby wystawić fakturę, przetwarzamy między innymi takie dane, jak imię i nazwisko, firma, adres prowadzenia działalności, NIP. </p><p>Podanie danych wymaganych prawem podatkowych jest konieczne do realizacji wskazanych obowiązków.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | art. 6 ust. 1 lit. c RODO w związku z właściwymi przepisami prawa podatkowego                                            |
-| <p>**Tworzenie archiwum**</p><p>**Obrona, ustalenie lub dochodzenie roszczeń**</p> | <p>Na potrzeby naszej działalności możemy tworzyć archiwa: zarówno w postaci tradycyjnej, jak i cyfrowej. Do archiwów trafiają dane osobowe, które przetwarzaliśmy w związku z Tobą, a ich zakres może się różnić w zależności od tego, jakie dane do nas trafiły i jaki zakres danych uzasadniony jest pod kątem archiwalnym. W tym przypadku opieramy się na naszym prawnie uzasadnionym interesie </p><p>polegającym na porządkowaniu i organizowaniu nośników Korzystanie z naszej strony internetowej, jak również </p><p>zawarcie umowy z nami, może rodzić w przyszłości określone roszczenia po naszej lub Twojej stronie. W związku z tym jesteśmy uprawnieni do przetwarzania danych osobowych w celu obrony, ustalenia lub dochodzenia roszczeń. W ramach tego celu możemy przetwarzać wszelkie dane osobowe, które wiążą się z danym roszczeniem, dlatego ich zakres może się różnić w zależności od tego, czego dotyczy dane roszczenie. W tym </p>                                                                        | <p>art. 6 ust. 1 lit. f RODO</p><p>art. 6 ust. 1 lit. f RODO</p> przypadku opieramy się w tym zakresie na naszym prawnie |
+Dane przetwarzane są w celu świadczenia na Twoją rzecz usługi konta użytkownika. Po usunięciu konta użytkownika dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z usługą konta użytkownika.
 
-| **Tworzenie grup odbiorców reklam** | <p>Twój adres e-mail przechowywany w naszej bazie może zostać przesłany do określonego systemu reklamowego (np. Facebook Ads, LinkedIN Ads) w celu stworzenia grupy odbiorców reklam z wykorzystaniem tegoż adresu e-mail. </p><p>Podczas korzystania z tej funkcji adres e-mail jest hashowany przed przesłaniem go do danego systemu w celu utworzenia grupy odbiorców. </p><p>Adres e-mail zostanie użyty w procesie dopasowania prowadzonym przez dany system reklamowy. </p><p>System reklamowy nie udostępnia adresu e-mail osobom trzecim ani innym reklamodawcom i usuwa adres e-mail niezwłocznie po zakończeniu procesu dopasowywania. </p><p>System reklamowy wdraża procesy i procedury zapewniające poufność i bezpieczeństwo przesyłanego mu adresu e-mail i zbioru identyfikatorów użytkowników tworzących grupę odbiorców powstałą z wykorzystaniem adresu e-mail między innymi poprzez stosowanie technicznych i fizycznych zabezpieczeń. </p><p>Stworzenie grupy odbiorców reklam z wykorzystaniem Twojego adresu e-mail stanowi nasz prawnie uzasadniony interes, którym w tym przypadku jest realizacja naszych celów marketingowych.</p> | art. 6 ust. 1 lit. f RODO |
-| :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------ |
+(art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO)
 
-| **Obsługa mediów społecznościow ych**                                      | <p>Jeżeli obserwujesz nasze profile w serwisach społecznościowych lub wchodzisz w interakcję z treściami publikowanymi przez nas w mediach społecznościowych, w naturalny sposób widzimy Twoje dane, które są publicznie dostępne w Twoim profilu społecznościowym. Przetwarzamy te dane wyłącznie w obrębie danego serwisu społecznościowego i wyłącznie w celu obsługi danego serwisu społecznościowego, co stanowi nasz prawnie uzasadniony interes. </p><p>Jeżeli kontaktujesz się z nami za pośrednictwem prywatnej wiadomości, w sposób naturalny przekazujesz nam swoje dane osobowe zawarte w treści korespondencji, w szczególności wizerunek oraz imię i nazwisko. Twoje dane są w tym przypadku przetwarzane w celu kontaktu z Tobą, a podstawą przetwarzania jest nasz prawnie uzasadniony interes. </p><p>Może się zdarzyć, że to my będziemy stroną inicjującą kontakt z Tobą za pośrednictwem mediów społecznościowych, w celu zaoferowania współpracy, wówczas Twoje dane będą przetwarzane w celu poszukiwania potencjalnych kontrahentów, oferowania i nawiązywania współpracy, co jest naszym prawnie uzasadnionym interesem. </p><p>Wiadomości wysłane do nas za pośrednictwem mediów społecznościowych podlegają automatycznej archiwizacji za sprawą narzędzi dostępnych w ramach poszczególnych serwisów społecznościowych i są dla nas dostępne do momentu ich usunięcia przez Ciebie. Masz wgląd do wszystkich wymienionych z nami wiadomości w zakładce z prywatnymi wiadomościami. </p><p>Korzystanie przez Ciebie z serwisów społecznościowych podlega regulaminom i politykom prywatności administratorów tych serwisów, a ci administratorzy świadczą na Twoją rzecz, w pełni samodzielnie i niezależnie od nas, usługi drogą elektroniczną.</p> | art. 6 ust. 1 lit. f RODO |
-| :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------ |
-| **Analiza i statystyka z wykorzystaniem wyłącznie Informacji Anonimowych** | <p>Prowadzimy działania analityczne i statystyczne z wykorzystaniem narzędzi dostarczanych przez zewnętrznych dostawców. W ramach narzędzi analitycznych mamy dostęp wyłącznie do Informacji Anonimowych. Przetwarzanie Informacji Anonimowych opieramy na prawnie uzasadnionym interesie, który polega na tworzeniu, przeglądaniu i analizowaniu statystyk związanych z aktywnością użytkowników na stronie w celu wyciągania wniosków pozwalających na późniejszą optymalizację naszych działań. </p><p>Z poziomu narzędzi mamy wgląd wyłącznie do zbioru statystyk i informacji nieprzypisanych do konkretnych osób. </p><p>Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | art. 6 ust. 1 lit. f RODO |
+2. **Realizacja zamówienia i obsługa umowy**
 
-| **Marketing własny z wykorzystaniem wyłącznie Informacji Anonimowych**                | <p>Prowadzimy działania marketingowe z wykorzystaniem narzędzi dostarczanych przez zewnętrznych dostawców. W ramach narzędzi marketingowych mamy dostęp wyłącznie do Informacji Anonimowych. Przetwarzanie Informacji Anonimowych opieramy na prawnie uzasadnionym interesie, który polega na tworzeniu prowadzeniu działań marketingowych w oparciu o Informacje Anonimowe oraz targetowaniu reklam w ramach zewnętrznych systemów w oparciu o Informacje Anonimowe, na potrzeby marketingu własnych produktów i usług. Z poziomu narzędzi mamy wgląd wyłącznie do zbioru statystyk i informacji nieprzypisanych do konkretnych osób. </p><p>Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom.</p>          | art. 6 ust. 1 lit. f RODO                            |
-| :------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
-| **Organizacja akcji promocyjnych**                                                    | <p>Aby zwiększyć sprzedaż produktów / usług, możemy prowadzić różne akcje promocyjne, w tym także we współpracy z partnerami zewnętrznymi. Zasady związane z organizacją akcji promocyjnych określają odrębne regulaminy. Zakres danych osobowych, jakie będziemy przetwarzać w związku z organizacją akcji promocyjnej, mogą się różnić w zależności od rodzaju akcji promocyjnej. </p><p>Podstawą prawną przetwarzania Twoich danych osobowych jest nasz prawnie uzasadniony interes, który w tym przypadku stanowi marketing oraz zwiększanie sprzedaży własnych produktów. </p>                                                                                                                                                                                                       | art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO |
-| **Zapewnienie dodatkowych funkcji z wykorzystaniem wyłącznie Informacji Anonimowych** | Na naszych stronach możem osadzać odtwarzacze wideo lub audio, widgety społecznościowe, moduł komentarzy, czat, formy newsletterowe lub inne narzędzia dostarczane przez podmioty trzecie. Wszystkie te narzędzia przetwarzają Informacje Anonimowe. Przetwarzanie Informacji Anonimowych opieramy na prawnie uzasadnionym interesie, który polega w tym przypadku na zapewnieniu możliwości korzystania z dodatkowych funkcji na stronie. Z poziomu narzędzi nie mamy wglądu do innych informacji, ponadto informacje te nie są nam do niczego potrzebne – Informacje Anonimowe są przetwarzane są wyłącznie po to, żeby mogły działać dodatkowe funkcje. Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom. | art. 6 ust. 1 lit. f RODO                            |
-| **Realizacja obowiązków związanych z ochroną danych osobowych**                       | Jako administrator danych osobowych jesteśmy zobowiązani do realizacji obowiązków związanych z ochroną danych osobowych. W związku z tym możemy przetwarzać Twoje dane osobowe, o ile jest to niezbędne do wykonania tych obowiązków (np. w przypadku rozpatrywania Twojego żądania dotyczącego Twoich danych osobowych). Zakres danych zależy od tego, jakie dane są nam potrzebne do realizacji obowiązku i udowodnienia przestrzegania RODO. Ponadto w tym przypadku opieramy się także na naszym prawnie uzasadnionym interesie, który polega na zabezpieczeniu danych koniecznych do wykazania rozliczalności.                                                                                                                                                                       | art. 6 ust. 1 lit. c RODO, art. 6 ust. 1 lit. f RODO |
+Składając zamówienie, musisz podać dane niezbędne do jego realizacji określone w formularzu zamówienia.
 
-- **4: Jakie informacje na Twój temat posiadamy?**
+Podanie danych jest warunkiem złożenia zamówienia.
+
+Ponadto system wykorzystywany do obsługi procesu zamówienia zapisuje Twój numer IP, z którego korzystałeś, składając zamówienie.
+
+Każde zamówienie zapisywane jest w bazie, co oznacza, że Twoim danym osobowym przypisanym do zamówienia towarzyszą również informacje dotyczące zamówienia takie jak data i godzina złożenia zamówienia, numer identyfikacyjny zamówienia, identyfikator transakcji, przedmiot zamówienia, cena, sposób i termin płatności, data i godzina pobrania (w przypadku treści cyfrowych).
+
+W związku z zawarciem umowy może przetwarzać również Twoje inne dane osobowe także po to, aby wykonać świadczenia przewidziane w umowie, jaka została zawarta. Zakres tych danych zależy od tego, które dane osobowe są potrzebne do wykonania umowy.
+
+W sytuacji, gdy otrzymujemy Twoje dane w ramach wykonywania umowy np. od podmiotu, który Cię zatrudnia, opieramy taki proces przetwarzania danych na prawnie uzasadnionym interesie, jaki w tym przypadku stanowi zapewnienie sprawnej i efektywnej obsługi zawartej umowy. W takim przypadku możemy przetwarzać Twoje dane identyfikujące oraz dane kontaktowe.
+
+Dane przetwarzane są w celu zawarcia i wykonania umowy. Po wykonaniu umowy, dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z umową. Dane trafiają również do dokumentacji księgowej na potrzeby wywiązywania się z obowiązków podatkowych.
+
+(art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO)
+
+3. **Działania podejmowane w celu dokończenia zamówień przez klientów**
+
+W związku z tym, że niektórzy klienci rozpoczynają składanie zamówienia, lecz go nie finalizują (nie zatwierdzają zamówienia i nie zawierają umowy z nami), możemy podejmować działania, które będą służyły temu, aby nasi klienci dokończyli proces zakupowy.
+
+W tym celu możemy przykładowo wysyłać wiadomości e-mail zawierające informacje o niedokończonym zamówieniu oraz zachętę do sfinalizowania transakcji.
+
+Na potrzeby opisanych działań możemy przetwarzać takie dane osobowe, jak informacje podane w trakcie składania zamówienia, w szczególności Twoje imię i nazwisko oraz adres e-mail, a także informacje o zawartości koszyka, dacie rozpoczęcia transakcji oraz inne dane pozostawione w związku z rozpoczętym procesem zakupowym.
+
+Podstawą prawną przetwarzania Twoich danych osobowych jest art. 6 ust. 1 lit. b RODO, ponieważ działania te zmierzają do zawarcia umowy. Ponadto upatrujemy podstawy przetwarzania w naszym prawnie uzasadnionym interesie, jaki w tym przypadku stanowi zwiększanie sprzedaży.
+
+(art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO)
+
+4. **Obsługa reklamacji lub odstąpienia od umowy**
+
+Jeżeli składasz reklamację lub odstępujesz od umowy, to przekazujesz dane osobowe zawarte w treści reklamacji lub oświadczeniu o odstąpieniu od umowy.
+
+Podanie danych jest warunkiem złożenia oświadczenia o odstąpieniu od umowy lub reklamacji.
+
+Dane przetwarzane są w celu obsługi procesu odstąpienia od umowy lub procesu reklamacyjnego. Po realizacji takiego procesu, dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z obsługą procesu odstąpienia od umowy lub procesu reklamacyjnego. Dane trafiają również do dokumentacji księgowej na potrzeby wywiązywania się z obowiązków podatkowych.
+
+(Art. 6 ust. 1 lit. c RODO w zw. z właściwymi przepisami dotyczącymi prawa do odstąpienia od umowy i odpowiedzialności za zgodność z umową, art. 6 ust. 1 lit. b RODO)
+
+5. **Obsługa newslettera**
+
+Zapisując się do newslettera, musisz podać dane niezbędne do jego otrzymywania określone w formularzu zapisu.
+
+Podanie danych jest warunkiem otrzymywania newslettera.
+
+Ponadto, system mailingowy zapisuje Twój numer IP, z którego korzystałeś, zapisując się do newslettera, określa Twoją przybliżoną lokalizację, klienta poczty, z którego korzystasz do obsługi poczty e-mail oraz śledzi Twoje działania podejmowane w związku z wysyłanymi do Ciebie wiadomościami. W związku z tym posiadamy również informacje, które wiadomości otworzyłeś, w ramach których wiadomości kliknąłeś w linki itp.
+
+W systemie mailingowym możemy również definiować, na podstawie różnych kryteriów związanych z Twoją aktywnością, zainteresowaniami lub innymi preferencjami, określone grupy lub segmenty odbiorców newslettera mające wpływ na to, jakiego rodzaju wiadomości otrzymujesz w ramach newslettera.
+
+Dane przekazane przez Ciebie w związku z zapisem do newslettera wykorzystywane są w celu przesyłania Ci newslettera, a podstawą prawną ich przetwarzania jest wykonanie umowy o świadczenie usługi elektronicznej, a także nasz prawnie usprawiedliwiony interes, jakim w tym przypadku jest realizacja celów marketingowych.
+
+Jeżeli chodzi o przetwarzanie informacji, które nie pochodzą od Ciebie, a zostały zebrane automatycznie przez system mailingowy, opieramy się w tym zakresie na naszym prawnie uzasadnionym interesie polegającym na analizie zachowań subskrybentów newslettera w celu optymalizacji działań mailingowych.
+
+W każdej chwili możesz zrezygnować z otrzymywania newslettera, klikając w dedykowany link znajdujący się w każdej wiadomości wysyłanej w ramach newslettera, lub po prostu kontaktując się z nami.
+
+Rezygnacja z newslettera nie prowadzi do usunięcia Twoich danych z systemu mailingowego. Dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z newsletterem, jak również w celu zapewnienia możliwości wykazania, że działania newsletterowe prowadzone były zgodnie z prawem.
+
+(art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO)
+
+6. **Kontakt i obsługa korespondencji**
+
+Kontaktując się z nami za pośrednictwem dostępnych środków komunikacji, np. poczty elektronicznej, komunikatorów społecznościowych, chatów itp., w sposób naturalny przekazujesz swoje dane osobowe zawarte w treści korespondencji.
+
+Podanie danych jest warunkiem nawiązania kontaktu.
+
+Ponadto, system komunikacji zapisuje Twój numer IP, z którego korzystałeś, przesyłając wiadomość. System komunikacji (np. czat, komunikator) może być obsługiwany przez zewnętrznego dostawcę. W takiej sytuacji korzystanie z systemu podlega regulaminowi oraz polityce prywatności zewnętrznego dostawcy. Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom.
+
+Dane przetwarzane są w celu prowadzenia komunikacji, co stanowi nasz prawnie uzasadniony interes. Po zakończeniu komunikacji, dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z prowadzoną komunikacją.
+
+(art. 6 ust. 1 lit. f RODO)
+
+7. **Realizacja obowiązków podatkowych i księgowych**
+
+W związku z wykonywaniem umowy realizujemy także rozmaite obowiązki podatkowe i księgowe, w szczególności w postaci wystawienia faktury, włączenia faktury do naszej dokumentacji księgowej, przechowywania dokumentacji itp.
+
+Aby wystawić fakturę, przetwarzamy między innymi takie dane, jak imię i nazwisko, firma, adres prowadzenia działalności, NIP.
+
+Podanie danych wymaganych prawem podatkowych jest konieczne do realizacji wskazanych obowiązków.
+
+(art. 6 ust. 1 lit. c RODO w związku z właściwymi przepisami prawa podatkowego)
+
+8. **Tworzenie archiwum**
+
+Na potrzeby naszej działalności możemy tworzyć archiwa: zarówno w postaci tradycyjnej, jak i cyfrowej. Do archiwów trafiają dane osobowe, które przetwarzaliśmy w związku z Tobą, a ich zakres może się różnić w zależności od tego, jakie dane do nas trafiły i jaki zakres danych uzasadniony jest pod kątem archiwalnym. W tym przypadku opieramy się na naszym prawnie uzasadnionym interesie polegającym na porządkowaniu i organizowaniu nośników danych osobowych.
+
+(art. 6 ust. 1 lit. f RODO)
+
+9. **Obrona, ustalenie lub dochodzenie roszczeń**
+
+Korzystanie z naszej strony internetowej, jak również zawarcie umowy z nami, może rodzić w przyszłości określone roszczenia po naszej lub Twojej stronie. W związku z tym jesteśmy uprawnieni do przetwarzania danych osobowych w celu obrony, ustalenia lub dochodzenia roszczeń. W ramach tego celu możemy przetwarzać wszelkie dane osobowe, które wiążą się z danym roszczeniem, dlatego ich zakres może się różnić w zależności od tego, czego dotyczy dane roszczenie. W tym przypadku opieramy się w tym zakresie na naszym prawnie uzasadnionym interesie polegającym na ochronie naszych interesów.
+
+(art. 6 ust. 1 lit. f RODO)
+
+10. **Tworzenie grup odbiorców reklam**
+
+Twój adres e-mail przechowywany w naszej bazie może zostać przesłany do określonego systemu reklamowego (np. Facebook Ads, LinkedIN Ads) w celu stworzenia grupy odbiorców reklam z wykorzystaniem tegoż adresu e-mail.
+
+Podczas korzystania z tej funkcji adres e-mail jest hashowany przed przesłaniem go do danego systemu w celu utworzenia grupy odbiorców.
+
+Adres e-mail zostanie użyty w procesie dopasowania prowadzonym przez dany system reklamowy. System reklamowy nie udostępnia adresu e-mail osobom trzecim ani innym reklamodawcom i usuwa adres e-mail niezwłocznie po zakończeniu procesu dopasowywania.
+
+System reklamowy wdraża procesy i procedury zapewniające poufność i bezpieczeństwo przesyłanego mu adresu e-mail i zbioru identyfikatorów użytkowników tworzących grupę odbiorców powstałą z wykorzystaniem adresu e-mail między innymi poprzez stosowanie technicznych i fizycznych zabezpieczeń.
+
+Stworzenie grupy odbiorców reklam z wykorzystaniem Twojego adresu e-mail stanowi nasz prawnie uzasadniony interes, którym w tym przypadku jest realizacja naszych celów marketingowych.
+
+(art. 6 ust. 1 lit. f RODO)
+
+11. **Obsługa mediów społecznościowych**
+
+Jeżeli obserwujesz nasze profile w serwisach społecznościowych lub wchodzisz w interakcję z treściami publikowanymi przez nas w mediach społecznościowych, w naturalny sposób widzimy Twoje dane, które są publicznie dostępne w Twoim profilu społecznościowym. Przetwarzamy te dane wyłącznie w obrębie danego serwisu społecznościowego i wyłącznie w celu obsługi danego serwisu społecznościowego, co stanowi nasz prawnie uzasadniony interes.
+
+Jeżeli kontaktujesz się z nami za pośrednictwem prywatnej wiadomości, w sposób naturalny przekazujesz nam swoje dane osobowe zawarte w treści korespondencji, w szczególności wizerunek oraz imię i nazwisko. Twoje dane są w tym przypadku przetwarzane w celu kontaktu z Tobą, a podstawą przetwarzania jest nasz prawnie uzasadniony interes.
+
+Może się zdarzyć, że to my będziemy stroną inicjującą kontakt z Tobą za pośrednictwem mediów społecznościowych, w celu zaoferowania współpracy, wówczas Twoje dane będą przetwarzane w celu poszukiwania potencjalnych kontrahentów, oferowania i nawiązywania współpracy, co jest naszym prawnie uzasadnionym interesem.
+
+Wiadomości wysłane do nas za pośrednictwem mediów społecznościowych podlegają automatycznej archiwizacji za sprawą narzędzi dostępnych w ramach poszczególnych serwisów społecznościowych i są dla nas dostępne do momentu ich usunięcia przez Ciebie. Masz wgląd do wszystkich wymienionych z nami wiadomości w zakładce z prywatnymi wiadomościami.
+
+Korzystanie przez Ciebie z serwisów społecznościowych podlega regulaminom i politykom prywatności administratorów tych serwisów, a ci administratorzy świadczą na Twoją rzecz, w pełni samodzielnie i niezależnie od nas, usługi drogą elektroniczną.
+
+(art. 6 ust. 1 lit. f RODO)
+
+12. **Analiza i statystyka z wykorzystaniem wyłącznie Informacji Anonimowych**
+
+Prowadzimy działania analityczne i statystyczne z wykorzystaniem narzędzi dostarczanych przez zewnętrznych dostawców. W ramach narzędzi analitycznych mamy dostęp wyłącznie do Informacji Anonimowych. Przetwarzanie Informacji Anonimowych opieramy na prawnie uzasadnionym interesie, który polega na tworzeniu, przeglądaniu i analizowaniu statystyk związanych z aktywnością użytkowników na stronie w celu wyciągania wniosków pozwalających na późniejszą optymalizację naszych działań.
+
+Z poziomu narzędzi mamy wgląd wyłącznie do zbioru statystyk i informacji nieprzypisanych do konkretnych osób.
+
+Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom.
+
+(art. 6 ust. 1 lit. f RODO)
+
+13. **Marketing własny z wykorzystaniem wyłącznie Informacji Anonimowych**
+
+Prowadzimy działania marketingowe z wykorzystaniem narzędzi dostarczanych przez zewnętrznych dostawców. W ramach narzędzi marketingowych mamy dostęp wyłącznie do Informacji Anonimowych. Przetwarzanie Informacji Anonimowych opieramy na prawnie uzasadnionym interesie, który polega na tworzeniu prowadzeniu działań marketingowych w oparciu o Informacje Anonimowe oraz targetowaniu reklam w ramach zewnętrznych systemów w oparciu o Informacje Anonimowe, na potrzeby marketingu własnych produktów i usług. Z poziomu narzędzi mamy wgląd wyłącznie do zbioru statystyk i informacji nieprzypisanych do konkretnych osób.
+
+Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom.
+
+(art. 6 ust. 1 lit. f RODO)
+
+14. **Organizacja akcji promocyjnych**
+
+Aby zwiększyć sprzedaż produktów / usług, możemy prowadzić różne akcje promocyjne, w tym także we współpracy z partnerami zewnętrznymi. Zasady związane z organizacją akcji promocyjnych określają odrębne regulaminy. Zakres danych osobowych, jakie będziemy przetwarzać w związku z organizacją akcji promocyjnej, mogą się różnić w zależności od rodzaju akcji promocyjnej.
+
+Podstawą prawną przetwarzania Twoich danych osobowych jest nasz prawnie uzasadniony interes, który w tym przypadku stanowi marketing oraz zwiększanie sprzedaży własnych produktów.
+
+(art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO)
+
+15. **Zapewnienie dodatkowych funkcji z wykorzystaniem wyłącznie Informacji Anonimowych**
+
+Na naszych stronach możem osadzać odtwarzacze wideo lub audio, widgety społecznościowe, moduł komentarzy, czat, formy newsletterowe lub inne narzędzia dostarczane przez podmioty trzecie. Wszystkie te narzędzia przetwarzają Informacje Anonimowe. Przetwarzanie Informacji Anonimowych opieramy na prawnie uzasadnionym interesie, który polega w tym przypadku na zapewnieniu możliwości korzystania z dodatkowych funkcji na stronie. Z poziomu narzędzi nie mamy wglądu do innych informacji, ponadto informacje te nie są nam do niczego potrzebne – Informacje Anonimowe są przetwarzane są wyłącznie po to, żeby mogły działać dodatkowe funkcje. Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom.
+
+(art. 6 ust. 1 lit. f RODO)
+
+16. **Realizacja obowiązków związanych z ochroną danych osobowych**
+
+Jako administrator danych osobowych jesteśmy zobowiązani do realizacji obowiązków związanych z ochroną danych osobowych. W związku z tym możemy przetwarzać Twoje dane osobowe, o ile jest to niezbędne do wykonania tych obowiązków (np. w przypadku rozpatrywania Twojego żądania dotyczącego Twoich danych osobowych). Zakres danych zależy od tego, jakie dane są nam potrzebne do realizacji obowiązku i udowodnienia przestrzegania RODO. Ponadto w tym przypadku opieramy się także na naszym prawnie uzasadnionym interesie, który polega na zabezpieczeniu danych koniecznych do wykazania rozliczalności.
+
+(art. 6 ust. 1 lit. c RODO, art. 6 ust. 1 lit. f RODO)
+
+- **4:<a name="_page6_x70.90_y56.70"></a> Jakie informacje na Twój temat posiadamy?**
 
 Zakres przetwarzanych danych opisaliśmy w odniesieniu do każdego celu przetwarzania. Informacje w tym zakresie znajdują się powyżej, w punkcie 3 Polityki prywatności. Pośród danych znajdują się informacje takie jak:
 
@@ -80,7 +241,7 @@ Zakres przetwarzanych danych opisaliśmy w odniesieniu do każdego celu przetwar
 - informacje widoczne w profilach w mediach społecznościowych,
 - informacje zawarte w korespondencji,
 - Informacje Anonimowe.
-- **5: Czym są „Informacje Anonimowe”?**
+- **5:<a name="_page6_x70.90_y371.51"></a> Czym są „Informacje Anonimowe”?**
 
 Korzystamy z narzędzi, które gromadzą na Twój temat szereg informacji związanych z korzystaniem z naszej strony. Chodzi w szczególności o następujące informacje:
 
@@ -101,9 +262,7 @@ Korzystamy z narzędzi, które gromadzą na Twój temat szereg informacji związ
 
 Informacja te określane są niniejszej Polityce prywatności jako „Informacje Anonimowe”.
 
-Informacje Anonimowe same w sobie nie mają, w naszej ocenie, charakteru danych osobowych, ponieważ nie pozwalają nam na Twoją identyfikację oraz nie zestawiamy ich z typowymi danymi osobowymi, jakie gromadzimy na Twój temat. Niemniej jednak, biorąc pod uwagę rygorystyczne orzecznictwo Trybunału Sprawiedliwości Unii Europejskiej i podzielone zdania wśród prawników, z
-
-ostrożności, na wypadek, gdyby Informacjom Anonimowym został przypisany charakter danych osobowych, zawarliśmy w Polityce prywatności również szczegółowe wyjaśnienia w zakresie przetwarzania tych informacji.
+Informacje Anonimowe same w sobie nie mają, w naszej ocenie, charakteru danych osobowych, ponieważ nie pozwalają nam na Twoją identyfikację oraz nie zestawiamy ich z typowymi danymi osobowymi, jakie gromadzimy na Twój temat. Niemniej jednak, biorąc pod uwagę rygorystyczne orzecznictwo Trybunału Sprawiedliwości Unii Europejskiej i podzielone zdania wśród prawników, z ostrożności, na wypadek, gdyby Informacjom Anonimowym został przypisany charakter danych osobowych, zawarliśmy w Polityce prywatności również szczegółowe wyjaśnienia w zakresie przetwarzania tych informacji.
 
 Nie jesteśmy w stanie zapewnić Ci dostępu do Informacji Anonimowych na Twój temat, ponieważ żadnych z Informacji Anonimowych nie jesteśmy w stanie przypisać do żadnego konkretnego użytkownika. Z poziomu narzędzi gromadzących Informacje Anonimowe mamy wgląd wyłącznie do zbioru statystyk i informacji nieprzypisanych do konkretnych osób.
 
@@ -111,7 +270,7 @@ Przetwarzanie Informacji Anonimowych pozwala na zapewnianie Ci możliwości korz
 
 Informacje Anonimowe przetwarzane są również przez dostawców narzędzi na zasadach wynikających z ich regulaminów oraz polityk prywatności. Mogą być one wykorzystywane przez tych dostawców do świadczenia i ulepszania usług, zarządzania nimi, opracowywania nowych usług, mierzenia skuteczności reklam, ochrony przez oszustwami i nadużyciami, a także personalizowania treści i reklam wyświetlanych w poszczególnych serwisach, witrynach i aplikacjach. Szczegółowe informacje z tym związane znajdziesz w sekcji poświęconej używanym przez nas narzędziom.
 
-- **6: Skąd mamy Twoje dane osobowe?**
+- **6:<a name="_page7_x70.90_y336.73"></a> Skąd mamy Twoje dane osobowe?**
 
 W większości przypadków sam je nam przekazujesz. Przykładowo dzieje się tak, gdy rejestrujesz konto użytkownika, składasz zamówienie, przesyłasz reklamację lub odstępujesz od umowy, kontaktujesz się za pośrednictwem poczty elektronicznej lub chatu, a także korzystasz z funkcjonalności dostępnych na naszej Stronie lub w zewnętrznych serwisach (np. społecznościowych).
 
@@ -119,11 +278,11 @@ Ponadto część informacji na Twój temat może być automatycznie gromadzona p
 
 W wyjątkowych przypadkach możemy uzyskać Twoje dane osobowe także z innych źródeł, np. w sytuacji, gdy podmiot, który Cię zatrudnia, wskazuje nam Twoje dane jako osoby do kontaktu w sprawach związanych z zawartą umową, albo gdy reprezentujesz podmiot, który zawiera z nami umowę.
 
-- **7: Czy dane są bezpieczne?**
+- **7:<a name="_page7_x70.90_y562.64"></a> Czy dane są bezpieczne?**
 
 Dbamy o bezpieczeństwo Twoich danych osobowych. Przeanalizowaliśmy ryzyka, jakie wiążą się z poszczególnymi procesami przetwarzania Twoich danych, a następnie wdrożyliśmy odpowiednie środki bezpieczeństwa i ochrony danych osobowych. Na bieżąco monitorujemy stan infrastruktury technicznej, szkolimy personel, przyglądamy się stosowanym procedurom, wprowadzamy konieczne usprawnienia.
 
-- **8: Jak długo będziemy przechowywać dane osobowe?**
+- **8:<a name="_page7_x70.90_y683.98"></a> Jak długo będziemy przechowywać dane osobowe?**
 
 Twoje dane osobowe przetwarzamy tak długo, jak to jest uzasadnione w ramach danego celu przetwarzania danych osobowych, w związku z czym okresy przetwarzania różnią się w zależności od celu. Pamiętaj, że zakończenie przetwarzania Twoich danych w ramach jednego celu niekoniecznie musi prowadzić do całkowitego usunięcia lub zniszczenia Twoich danych osobowych, ponieważ ten sam zestaw danych może być przetwarzany w ramach innego celu, przez okres dla niego wskazany. Całkowite usunięcie lub zniszczenie danych następuje w momencie, gdy zakończymy realizację wszystkich celów oraz w innych przypadkach wskazanych w RODO.
 
@@ -143,13 +302,13 @@ Poniżej znajdziesz opis okresów przetwarzania:
 - **Media społecznościowe** – zasadniczo, nie mam wpływu na okres przechowywania Twoich danych osobowych w mediach społecznościowych. Są one dostępne w serwisach Facebook, Instagram. Nie jesteśmy w stanie usunąć Twoich danych z Facebooka, Instagrama.
 - **Analiza i statystyka** – dane związane z analityką i statystyką będą przetwarzane do czasu utraty przydatności lub skutecznego wniesienia przez Ciebie sprzeciwu;
 - **Marketing własny** – dane związane z marketingiem własnym będą przetwarzane do czasu utraty przydatności lub skutecznego wniesienia przez Ciebie sprzeciwu;
-- **Organizacja akcji promocyjnych** – dane związane z organizacją akcji promocyjnych przetwarzamy przez czas konieczny do przeprowadzenia akcji promocyjnej;\*\*
+- **Organizacja akcji promocyjnych** – dane związane z organizacją akcji promocyjnych przetwarzamy przez czas konieczny do przeprowadzenia akcji promocyjnej;
 - **Narzędzia dodatkowe** – dane związane z narzędziami dodatkowymi będą przetwarzane do czasu utraty przydatności lub skutecznego wniesienia przez Ciebie sprzeciwu;
 - **Obowiązki związane z ochroną danych osobowych –** dane związane z ochroną danych osobowych będą przetwarzane do czasu utraty przydatności, skutecznego wniesienia przez Ciebie sprzeciwu lub upływu okresu przedawnienia naszej odpowiedzialności jako administratora danych osobowych.
 
 W przypadku, gdy przetwarzamy Twoje dane osobowe na podstawie udzielonej przez Ciebie zgody, możesz taką zgodę cofnąć w każdym czasie: albo poprzez swoje działanie, albo kontaktując się z nami na podane dane kontaktowe. Pamiętaj, że wycofanie zgody nie wpływa na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej wycofaniem.
 
-- **9: Kim są odbiorcy danych osobowych?**
+- **9:<a name="_page9_x70.90_y133.60"></a> Kim są odbiorcy danych osobowych?**
 
 Zaryzykujemy stwierdzenie, że współczesny biznes nie jest w stanie obejść się bez usług świadczonych przez podmioty trzecie. My również z takich usług korzystamy. Część z tych usług wiąże się z przetwarzaniem Twoich danych osobowych. Zewnętrzni usługodawcy, którzy biorą udział w przetwarzaniu Twoich danych osobowych, to:
 
@@ -184,21 +343,18 @@ Przekazujemy Twoje dane osobowe do państw trzecich w związku z korzystaniem z 
 
 Aktualnie Twoje dane osobowe są przekazywane do państw trzecich w związku z korzystaniem przez nas z następujących rozwiązań:
 
-| **Rodzaj rozwiązania** | **Dostawca rozwiązania** | **Państwo trzecie** |
-| ---------------------- | ------------------------ | ------------------- |
-| System mailingowy      | MailerLite               | Irlandia            |
-| Poczta elektroniczna   | Google                   | USA                 |
-| Wyświetlanie pop-up’ów | Popt.in                  | UK                  |
+1. System mailingowy: MailerLite (Irlandia)
+1. Poczta elektroniczna: Google (USA)
 
 Oprócz tego, do państw trzecich, w szczególności USA, mogą być przekazywane Informacje Anonimowe gromadzone w związku z wykorzystywaniem narzędzi wskazanych w załączniku do niniejszej polityki prywatności.
 
-- **11: Czy korzystamy z profilowania?**
+- **11:<a name="_page10_x70.90_y312.50"></a> Czy korzystamy z profilowania?**
 
 Nie podejmujemy wobec Ciebie decyzji opierających się wyłącznie na zautomatyzowanym przetwarzaniu, w tym profilowaniu, które wywoływałyby wobec Ciebie skutki prawne lub w podobny sposób istotnie na Ciebie wpływały. Owszem, korzystamy z narzędzi, które mogę podejmować określone działania w zależności od informacji zebranych w ramach mechanizmów śledzących, ale uważamy, że działania te nie mają istotnego wpływu na Ciebie, ponieważ nie różnicują Twojej sytuacji jako klienta, nie wpływają na warunki umowy, jaką możesz z nami zawrzeć itp.
 
 Korzystając z określonych narzędzi, możemy np. kierować do Ciebie spersonalizowane reklamy w oparciu o wcześniejsze działania podjęte przez Ciebie w ramach danej Strony czy też podpowiadać Ci produkty, które mogą Cię zainteresować. Mowa tutaj o tzw. reklamie behawioralnej. Zachęcamy Cię do pogłębienia wiedzy na temat reklamy behawioralnej, w szczególności w zakresie kwestii związanych z prywatnością. Szczegółowe informacje, wraz z możliwością zarządzania ustawieniami w zakresie reklamy behawioralnej, znajdziesz [tutaj](http://www.youronlinechoices.com/).
 
-- **12: Jakie masz prawa?**
+- **12:<a name="_page10_x70.90_y532.41"></a> Jakie masz prawa?**
 
 RODO przyznaje Ci następujące potencjalne uprawnienia związane z przetwarzaniem Twoich danych osobowych:
 
@@ -206,7 +362,10 @@ RODO przyznaje Ci następujące potencjalne uprawnienia związane z przetwarzani
 - prawo do sprostowania (poprawiania) swoich danych;
 - prawo do usunięcia danych (jeżeli Twoim zdaniem nie ma podstaw, abyśmy przetwarzali Twoje dane, możesz żądać, abyśmy je usunęli);
 - prawo do ograniczenia przetwarzania danych (możesz żądać, abyśmy ograniczyli przetwarzanie danych wyłącznie do ich przechowywania lub wykonywania uzgodnionych z Tobą działań, jeżeli w Twojej opinii mamy nieprawidłowe dane lub przetwarzamy je bezpodstawnie);
-- prawo do wniesienia sprzeciwu wobec przetwarzania danych (masz prawo do sprzeciwu wobec przetwarzania danych na podstawie prawnie uzasadnionego interesu; powinieneś wskazać szczególną sytuację, która Twoim zdaniem uzasadnia zaprzestanie przez nas przetwarzania objętego sprzeciwem; przestaniemy przetwarzać Twoje dane w tych celach, chyba że wykażemy, że podstawy przetwarzania przez nas danych są nadrzędne wobec Twoich praw lub też, że Twoje dane są nam niezbędne do ustalenia, dochodzenia lub obrony roszczeń);
+- prawo do wniesienia sprzeciwu wobec przetwarzania danych (masz prawo do sprzeciwu wobec przetwarzania danych na podstawie prawnie uzasadnionego interesu; powinieneś wskazać szczególną sytuację, która Twoim zdaniem uzasadnia zaprzestanie przez nas przetwarzania objętego sprzeciwem; przestaniemy przetwarzać Twoje dane w tych celach,
+
+chyba że wykażemy, że podstawy przetwarzania przez nas danych są nadrzędne wobec Twoich praw lub też, że Twoje dane są nam niezbędne do ustalenia, dochodzenia lub obrony roszczeń);
+
 - prawo do przenoszenia danych (masz prawo otrzymać od nas w ustrukturyzowanym, powszechnie używanym formacie nadającym się do odczytu maszynowego dane osobowe, które dostarczyłeś nam na podstawie umowy lub Twojej zgody; możesz nam zlecić przesłanie tych danych bezpośrednio innemu podmiotowi);
 - prawo do cofnięcia zgody na przetwarzanie danych osobowych, jeżeli uprzednio taką zgodę wyraziłeś;
 - prawo wniesienia skargi do organu nadzorczego (jeżeli stwierdzisz, że przetwarzamy dane niezgodnie z prawem, możesz złożyć w tej sprawie skargę do Prezesa Urzędu Ochrony Danych Osobowych lub innego właściwego organu nadzorczego).
@@ -215,7 +374,7 @@ Zasady związane z realizacją wskazanych powyżej uprawnień zostały opisane s
 
 Podkreślamy, że jedno z uprawnień wskazanych powyżej przysługuje Ci zawsze: jeżeli uznasz, że przy przetwarzaniu Twoich danych osobowych dopuściliśmy się naruszenia przepisów o ochronie danych osobowych, masz możliwość wniesienia skargi do organu nadzorczego (Prezesa Urzędu Ochrony Danych Osobowych).
 
-- **13: Czy korzystamy z cookies i czym one właściwie są?**
+- **13:<a name="_page11_x70.90_y381.18"></a> Czy korzystamy z cookies i czym one właściwie są?**
 
 Nasza strona internetowa, podobnie jak niemal wszystkie inne strony internetowe, wykorzystuje pliki cookies.
 
@@ -225,13 +384,13 @@ Niektóre używane przeze nas cookies są usuwane po zakończeniu sesji przeglą
 
 Jeżeli chcesz dowiedzieć się więcej o plikach cookies jako takich, możesz zapoznać się np. [z tym materiałem](https://pl.wikipedia.org/wiki/HTTP_cookie).
 
-- **14: Na jakiej podstawie korzystamy z plików cookies?**
+- **14:<a name="_page11_x70.90_y626.31"></a> Na jakiej podstawie korzystamy z plików cookies?**
 
 Z plików cookies korzystamy na podstawie Twojej zgody, z wyjątkiem sytuacji, gdy pliki cookies są niezbędne do prawidłowego świadczenia na Twoją rzecz usługi drogą elektroniczną.
 
 Pliki cookies, które nie są niezbędne do prawidłowego świadczenia usługi drogą elektroniczną, pozostają zablokowane do czasu wyrażenia przez Ciebie zgody na korzystanie z plików cookies. Podczas Twojej pierwszej wizyty na danej Stronie wyświetlamy Ci komunikat z pytaniem o Twoją zgodę wraz z możliwością zarządzania plikami cookies, tj. zdecydowania, na które pliki cookies się godzisz, a które chcesz blokować.
 
-- **15: Czy możesz wyłączyć pliki cookies?**
+- **15:<a name="_page12_x70.90_y56.70"></a> Czy możesz wyłączyć pliki cookies?**
 
 Tak, możesz zarządzać ustawieniami plików cookies w ramach swojej przeglądarki internetowej. Możesz blokować wszystkie lub wybrane pliki cookies. Możesz również blokować pliki cookies konkretnych witryn. W każdej chwili możesz również usunąć zapisane wcześniej pliki cookies oraz inne dane witryn i wtyczek.
 
@@ -243,23 +402,23 @@ Ponadto w Internecie dostępne są narzędzia pozwalające na kontrolę nad niek
 
 Dajemy Ci również możliwość kontroli nad plikami cookies bezpośrednio z poziomu naszej strony. Zaimplementowaliśmy specjalny mechanizm do zarządzania plikami cookies, który pozwala Ci blokować te pliki cookies, których sobie nie życzysz. Pamiętaj, że wyłączenie lub ograniczenie obsługi plików cookies może uniemożliwiać używanie części funkcji dostępnych na naszych stronach oraz powodować trudności w korzystaniu ze Stron, jak również z wielu innych stron internetowych, które stosują cookies. Przykładowo, jeżeli zablokujesz pliki cookies wtyczek serwisów społecznościowych, przyciski, widgety, funkcje społecznościowe zaimplementowane na naszych Stronach mogą być dla Ciebie niedostępne.
 
-- **16: W jakich celach korzystamy z plików cookies własnych?**
+- **16:<a name="_page12_x70.90_y401.63"></a> W jakich celach korzystamy z plików cookies własnych?**
 
 Pliki cookies własne wykorzystywane są do zapewnienia prawidłowego funkcjonowania poszczególnych mechanizmów naszych stron, takich jak zapamiętywanie zawartości koszyka przez określony czas po dodaniu do niego wybranych produktów, prawidłowe przesyłanie formularzu widocznych na stronach, obsługa form newsletterowych itp. W plikach cookies własnych przechowywana jest również informacja o zdefiniowanych przez Ciebie ustawieniach cookies dokonanych z poziomu mechanizmu do zarządzania plikami cookies.
 
-- **17: Jakie pliki cookies podmiotów trzecich są wykorzystywane?**
+- **17:<a name="_page12_x70.90_y512.19"></a> Jakie pliki cookies podmiotów trzecich są wykorzystywane?**
 
 Wykaz narzędzi, które wymagają używania cookies, oraz opis wykorzystywanych cookies znajdziesz w załączniku do niniejszej Polityki prywatności.
 
-- **18: Czy śledzimy Twoje zachowania podejmowane w ramach strony?**
+- **18:<a name="_page12_x70.90_y617.86"></a> Czy śledzimy Twoje zachowania podejmowane w ramach strony?**
 
 Tak, korzystamy z narzędzi zewnętrznych dostawców, które wiążą się z gromadzeniem informacji na temat Twoich aktywności na naszych stronach. Narzędzia te zostały szczegółowo opisane w załączniku do niniejszej Polityki prywatności.
 
-- **19: Czy kierujemy do Ciebie targetowane reklamy?**
+- **19:<a name="_page12_x70.90_y712.76"></a> Czy kierujemy do Ciebie targetowane reklamy?**
 
 Tak, korzystamy z narzędzi zewnętrznych dostawców, w ramach których możemy kierować reklamy do określonych grup docelowych zdefiniowanych w oparciu o różne kryteria takie jak wiek, płeć, zainteresowania, zawód, praca, działania podejmowane uprzednio w ramach naszych stron. Narzędzia te zostały szczegółowo opisane w załączniku do niniejszej Polityki prywatności.
 
-- **20: W jaki sposób możesz zarządzać swoją prywatnością?**
+- **20:<a name="_page13_x70.90_y107.15"></a> W jaki sposób możesz zarządzać swoją prywatnością?**
 
 Odpowiedź na to pytanie znajduje się w wielu miejscach niniejszej Polityki prywatności przy okazji opisywania poszczególnych narzędzi, reklamy behawioralnej, zgody na cookies itp. Niemniej jednak, dla Twojej wygody zebraliśmy jeszcze raz te informacji w jednym miejscu. Poniżej znajdziesz listę możliwości zarządzania swoją prywatnością.
 
@@ -271,27 +430,71 @@ Odpowiedź na to pytanie znajduje się w wielu miejscach niniejszej Polityki pry
 - mechanizm zarządzania plikami cookies z poziomu naszej strony;
 - [Facebook Ads Settings](https://www.facebook.com/ads/settings);
 - [HotJar Opt-out](https://www.hotjar.com/legal/compliance/opt-out);
-- **21: Czy jest jeszcze coś, o czym powinieneś wiedzieć?**
+- **21:<a name="_page13_x70.90_y353.70"></a> Czy jest jeszcze coś, o czym powinieneś wiedzieć?**
 
 Jak widzisz, tematyka przetwarzania danych osobowych, wykorzystywania plików cookies i zarządzania ogólnie pojętą prywatnością jest dość skomplikowana. Dołożyliśmy wszelkich starań, by niniejszy dokument dostarczył Ci jak najdalej idącej wiedzy w ważnych dla Ciebie kwestiach. Jeżeli cokolwiek jest dla Ciebie niejasne, chcesz dowiedzieć się więcej lub po prostu porozmawiać o Twojej prywatności, napisz do nas na adres adrianna@getbold.agency
 
-- **22: Czy ta Polityka prywatności może podlegać zmianom?**
+- **22:<a name="_page13_x70.90_y493.05"></a> Czy ta Polityka prywatności może podlegać zmianom?**
 
 Tak, możemy modyfikować tę Politykę prywatności, w szczególności ze względu na zmiany technologiczne oraz zmiany przepisów prawa. Jeżeli jesteś zarejestrowanym użytkownikiem, o każdej zmianie Polityki prywatności otrzymasz wiadomość. Zmiany Polityki prywatności zaczynają obowiązywać najwcześniej po 7 dniach. Wszystkie archiwalne wersje Polityki prywatności podlinkowane są poniżej.
 
-**Załącznik do Polityki prywatności**
+<a name="_page14_x70.90_y56.70"></a>**Załącznik do Polityki prywatności**
 
 **WYKAZ NARZĘDZI WYKORZYSTUJĄCYCH PLIKI COOKIES**
 
-| **Nazwa narzędzia**    | **Opis działania oraz plików cookies**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| :--------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Google Tag Manager** | <p>Korzystamy z narzędzia Google Tag Manager zapewnianego przez amerykańską spółkę Google LLC, które to narzędzie służy do zarządzania tagami i ładowaniem skryptów w ramach strony. </p><p>Google Tag Manager jako narzędzie samo w sobie nie gromadzi żadnych informacji poza tymi, które niezbędne są do jego prawidłowego działania, ale odpowiada za ładowanie innych skryptów opisanych poniżej.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Meta Pixel**         | <p>Korzystamy z systemu reklamowego Meta zapewnianego przez amerykańską spółkę Meta Platform Inc. W celu kierowania do Ciebie reklam spersonalizowanych pod kątem Twoich zachowań na naszej stronie zaimplementowaliśmy w ramach strony Pixel Meta, który w sposób automatyczny informacje na temat Twojej aktywności na naszej stronie przesyłane następnie do systemu reklamowego Meta. </p><p>W ramach systemu reklamowego Meta mamy dostęp wyłącznie do Informacji Anonimowych. </p><p>Dzięki zgromadzonym w ten sposób informacjom jesteśmy w stanie wyświetlać Ci reklamy w ramach systemu reklamowego Meta w zależności od Twoich zachowań na naszej stronie oraz prowadzić pomiary skuteczności realizowanych kampanii reklamowych w celu wyciągania wniosków pozwalających na optymalizację tych kampanii pod kątem efektywności. </p><p>Spółka Meta Platform Inc. może łączyć informacje zbierane z wykorzystaniem Pixel Meta z innymi informacjami o Tobie gromadzonymi w ramach korzystania przez Ciebie z serwisów zarządzanych przez spółkę (m.in. Facebook, Instagram) i wykorzystywać dla swoich własnych celów, w tym marketingowych. Takie działania Meta nie są już zależne od nas, a informacji o nich możesz szukać bezpośrednio w [polityce prywatności Meta](https://www.facebook.com/privacy/explanation). Z poziomu swojego konta na Facebooku możesz również zarządzać swoimi ustawieniami prywatności. [Tutaj](https://www.facebook.com/ads/settings) znajdziesz przydatne informacje w tym zakresie.</p> |
-| **Facebook Connect**   | <p>Na naszej stronie internetowej używane są wtyczki, przyciski i inne narzędzia społecznościowe, zwane dalej łącznie „wtyczkami”, związane z serwisami społecznościowymi zarządzanymi przez amerykańską spółkę Meta Platform Inc. </p><p>Dzięki temu, masz możliwość korzystania z wybranych funkcji społecznościowych na naszych stronach, np. przycisk lubię to, udostępnij itp. </p><p>Wtyczki gromadzą informacje na temat Twojej aktywności na naszej stronie. Nie mamy dostępu do tych informacji. Dla nas ważne jest tylko to, żeby wtyczki działały prawidłowo. </p><p>Informacje gromadzone przez wtyczki mogą być wykorzystywane przez Meta Platform Inc. we własnych celach, takich jak np. doskonalenie własnych produktów, tworzenie profili użytkowników, analiza i optymalizacja własnych działań, targetowanie reklam, na co nie mamy jednak realnego wpływu. Szczegółów w tym zakresie możesz szukać w [polityce prywatności Meta](https://www.facebook.com/privacy/explanation).</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+1. **Google Tag Manager**
 
-| **MailerLite**                      | <p>Korzystamy z systemu mailingowego MailerLite zapewnianego przez irlandzką spółkę MailerLite Limited. Formularze zapisu na listy mailingowe osadzane na naszych stronach mogą wykorzystywać technologię plików cookies na potrzeby zapewnienia prawidłowego funkcjonowania tych formularzy oraz mierzenia ich konwersji. Do informacji gromadzonych w plikach cookies MailerLite w celu prawidłowego funkcjonowania formularzy nie mamy dostępu – interesuje nas tylko, żeby formularz działał prawidłowo. Jeżeli chodzi o mierzenie konwersji formularzy zapisu, mamy dostęp wyłącznie do anonimowych informacji statystycznych. </p><p>Ponadto, korzystamy z dodatkowej funkcji systemu MailerLite polegającej na kontroli częstotliwości wyświetlania Ci pop-up’ów z formularzami zapisu na listy mailingowe. W tym celu wykorzystywany jest plik cookie MailerLite, który przechowuje informacje o wyświetleniu Ci pop-up’u w celu niewyświetlania Ci go ponownie przez określony czas. </p><p>Ponadto, korzystamy z dodatkowej funkcji systemu MailerLite – kreatora stron internetowych. Tworzone w ten sposób strony internetowe przechowywane są w ramach infrastruktury MailerLite i wykorzystują pliki cookies MailerLite w celu zapewnienia prawidłowego ich działania oraz zapewniania wglądu do anonimowych statystyk pozwalających na ocenę efektywności stron.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>**Vimeo** </p><p>**Popt.in**</p> | <p>Na naszych stronach osadzane są widgety Vimeo pozwalające Ci odtwarzać nagrania dostępne na naszych stronach. Vimeo obsługiwany jest przez amerykańską spółkę Vimeo.com Inc. </p><p>Gdy odtwarzasz nagranie, Vimeo zapisuje na Twoim urządzeniu pliki cookies i otrzymuje informacje, że odtworzyłeś nagranie z poziomu określonej strony internetowej. Cel i zakres gromadzenia danych oraz ich dalszego przetwarzania i wykorzystania przez Vimeo, jak również możliwość kontaktu oraz Twoje prawa w tym zakresie i możliwość dokonania ustawień zapewniających ochronę Twojej prywatności zostały opisane w [polityce prywatności Vimeo](https://vimeo.com/privacy). </p><p>Informacje gromadzone w ramach plików cookies związanych z osadzonymi na naszych stronach filmami wykorzystywane są przez Vimeo w celu zapewnienia prawidłowego i bezpiecznego funkcjonowania widgetu, analizy i optymalizacji w zakresie świadczonych przez Vimeo usług, jak również w celach personalizacji i reklamy. Nie mamy dostępu do tych informacji. Dla nas ważne jest tylko to, żeby odtwarzacz działał prawidłowo. </p><p>Pamiętaj, że odtwarzając nagrania dostępne na naszych stronach, korzystasz z usług świadczonych drogą elektroniczną przez Vimeo. Vimeo jest samodzielnym, </p><p>niezależnym od nas podmiotem świadczącym na Twoją rzecz usługi drogą Na naszej stronie internetowej wykorzystujemy narzędzie Popt.in zapewniane </p><p>przez brytyjską spółkę Popt.in Ltd. Dzięki temu, możemy wyświetlać Ci pop-up’y skłaniaj[ące do po](https://vimeo.com/terms)dj[ęcia określonej akcji ](https://vimeo.com/privacy)(np. zakup, zapis do newslettera). </p><p>Mechanizm pop-up’ów wykorzystuje pliki cookies Popt.in w celu zapewnienia prawidłowego działania pop-up’ów, kontroli częstotliwości wyświetlania Ci danego pop-up’u i budowania anonimowych statystyk dotyczących konwersji pop-up’ów. Jeżeli chodzi o informacje gromadzone za pośrednictwem tych plików cookies, mamy dostęp wyłącznie do anonimowych statystyk dotyczących konwersji. </p><p>Jeżeli pop-up ma na celu uzyskanie od Ciebie jakiś informacji (np. adres e-mail, numer telefonu itp.), informacje te również przechowywane są w bazie Popt.in. </p><p>Więcej informacji na temat informacji gromadzonych przez Popt.in znajdziesz [tutaj](https://www.poptin.com/privacy-policy/).</p> |
+Korzystamy z narzędzia Google Tag Manager zapewnianego przez amerykańską spółkę Google LLC, które to narzędzie służy do zarządzania tagami i ładowaniem skryptów w ramach strony.
 
-| **Hotjar** | <p>Korzystamy z narzędzia Hotjar, żeby lepiej zrozumieć Twoje potrzeby oraz optymalizować naszą stronę pod kątem Twoich doświadczeń związanych z korzystaniem z niej. Narzędzie zapewniane jest przez spółkę Hotjar Limited. </p><p>Hotjar rejestruje każdego odwiedzającego naszą stronę i umożliwia odtworzenie nagrania wideo z jego ruchu na naszej stronie, jak również wygenerowanie tzw. map cieplnych. W ramach narzędzia Hotjar nie mamy dostępu do informacji, które pozwalają nam na Twoją identyfikację, ponieważ Hotjar nie rejestruje procesu wypełnienia formularzy przeznaczonych do przekazywania danych osobowych. </p><p>W celu korzystania z Hotjar zaimplementowaliśmy w kodzie naszej strony specjalny kod śledzący Hotjar. Kod śledzący wykorzystuje pliki cookies firmy Hotjar Limited. Zgromadzone w ramach plików cookies informacje przechowywane są przez Hotjar w ramach pseudonimowego profilu użytkownika. Ani Hotjar, ani my wykorzystujemy tych informacji do Twojej identyfikacji. </p><p>Możesz sprzeciwić się tworzeniu przez Hotjar Twojego profilu użytkownika, przechowywania przez Hotjar informacji na temat Twojego korzystania z naszej strony oraz wykorzystywania plików cookies Hotjar [tutaj](https://www.hotjar.com/legal/compliance/opt-out). </p><p>Jeżeli jesteś zainteresowany szczegółami związanymi z przetwarzaniem danych w ramach Hotjar, zachęcamy do zapoznania się z [polityką prywatności Hotjar](https://www.hotjar.com/legal/policies/privacy).</p> |
-| ---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+Google Tag Manager jako narzędzie samo w sobie nie gromadzi żadnych informacji poza tymi, które niezbędne są do jego prawidłowego działania, ale odpowiada za ładowanie innych skryptów opisanych poniżej.
+
+2. **Meta Pixel**
+
+Korzystamy z systemu reklamowego Meta zapewnianego przez amerykańską spółkę Meta Platform Inc. W celu kierowania do Ciebie reklam spersonalizowanych pod kątem Twoich zachowań na naszej stronie zaimplementowaliśmy w ramach strony Pixel Meta, który w sposób automatyczny informacje na temat Twojej aktywności na naszej stronie przesyłane następnie do systemu reklamowego Meta.
+
+W ramach systemu reklamowego Meta mamy dostęp wyłącznie do Informacji Anonimowych.
+
+Dzięki zgromadzonym w ten sposób informacjom jesteśmy w stanie wyświetlać Ci reklamy w ramach systemu reklamowego Meta w zależności od Twoich zachowań na naszej stronie oraz prowadzić pomiary skuteczności realizowanych kampanii reklamowych w celu wyciągania wniosków pozwalających na optymalizację tych kampanii pod kątem efektywności.
+
+Spółka Meta Platform Inc. może łączyć informacje zbierane z wykorzystaniem Pixel Meta z innymi informacjami o Tobie gromadzonymi w ramach korzystania przez Ciebie z serwisów zarządzanych przez spółkę (m.in. Facebook, Instagram) i wykorzystywać dla swoich własnych celów, w tym marketingowych. Takie działania Meta nie są już zależne od nas, a informacji o nich możesz szukać bezpośrednio w polityce prywatności Meta. Z poziomu swojego konta na Facebooku możesz również zarządzać swoimi ustawieniami prywatności. Tutaj znajdziesz przydatne informacje w tym zakresie.
+
+3. **Facebook Connect**
+
+Na naszej stronie internetowej używane są wtyczki, przyciski i inne narzędzia społecznościowe, zwane dalej łącznie „wtyczkami”, związane z serwisami społecznościowymi zarządzanymi przez amerykańską spółkę Meta Platform Inc.
+
+Dzięki temu, masz możliwość korzystania z wybranych funkcji społecznościowych na naszych stronach, np. przycisk lubię to, udostępnij itp.
+
+Wtyczki gromadzą informacje na temat Twojej aktywności na naszej stronie. Nie mamy dostępu do tych informacji. Dla nas ważne jest tylko to, żeby wtyczki działały prawidłowo.
+
+Informacje gromadzone przez wtyczki mogą być wykorzystywane przez Meta Platform Inc. we własnych celach, takich jak np. doskonalenie własnych produktów, tworzenie profili użytkowników, analiza i optymalizacja własnych działań, targetowanie reklam, na co nie mamy jednak realnego wpływu. Szczegółów w tym zakresie możesz szukać w polityce prywatności Meta.
+
+4. **MailerLite**
+
+Korzystamy z systemu mailingowego MailerLite zapewnianego przez irlandzką spółkę MailerLite Limited. Formularze zapisu na listy mailingowe osadzane na naszych stronach mogą wykorzystywać technologię plików cookies na potrzeby zapewnienia prawidłowego funkcjonowania tych formularzy oraz mierzenia ich konwersji. Do informacji gromadzonych w plikach cookies MailerLite w celu prawidłowego funkcjonowania formularzy nie mamy dostępu – interesuje nas tylko, żeby formularz działał prawidłowo. Jeżeli chodzi o mierzenie konwersji formularzy zapisu, mamy dostęp wyłącznie do anonimowych informacji statystycznych.
+
+Ponadto, korzystamy z dodatkowej funkcji systemu MailerLite polegającej na kontroli częstotliwości wyświetlania Ci pop-up’ów z formularzami zapisu na listy mailingowe. W tym celu wykorzystywany jest plik cookie MailerLite, który przechowuje informacje o wyświetleniu Ci pop-up’u w celu niewyświetlania Ci go ponownie przez określony czas.
+
+Ponadto, korzystamy z dodatkowej funkcji systemu MailerLite – kreatora stron internetowych. Tworzone w ten sposób strony internetowe przechowywane są w ramach infrastruktury MailerLite i wykorzystują pliki cookies MailerLite w celu zapewnienia prawidłowego ich działania oraz zapewniania wglądu do anonimowych statystyk pozwalających na ocenę efektywności stron.
+
+5. **Vimeo**
+
+Na naszych stronach osadzane są widgety Vimeo pozwalające Ci odtwarzać nagrania dostępne na naszych stronach. Vimeo obsługiwany jest przez amerykańską spółkę Vimeo.com Inc.
+
+Gdy odtwarzasz nagranie, Vimeo zapisuje na Twoim urządzeniu pliki cookies i otrzymuje informacje, że odtworzyłeś nagranie z poziomu określonej strony internetowej. Cel i zakres gromadzenia danych oraz ich dalszego przetwarzania i wykorzystania przez Vimeo, jak również możliwość kontaktu oraz Twoje prawa w tym zakresie i możliwość dokonania ustawień zapewniających ochronę Twojej prywatności zostały opisane w polityce prywatności Vimeo.
+
+Informacje gromadzone w ramach plików cookies związanych z osadzonymi na naszych stronach filmami wykorzystywane są przez Vimeo w celu zapewnienia prawidłowego i bezpiecznego funkcjonowania widgetu, analizy i optymalizacji w zakresie świadczonych przez Vimeo usług, jak również w celach personalizacji i reklamy. Nie mamy dostępu do tych informacji. Dla nas ważne jest tylko to, żeby odtwarzacz działał prawidłowo.
+
+Pamiętaj, że odtwarzając nagrania dostępne na naszych stronach, korzystasz z usług świadczonych drogą elektroniczną przez Vimeo. Vimeo jest samodzielnym, niezależnym od nas podmiotem świadczącym na Twoją rzecz usługi drogą elektroniczną. Szczegółów w zakresie zasad korzystania z Vimeo, w tym ochrony prywatności, możesz szukać w dokumentach udostępnianych bezpośrednio przez Vimeo: regulamin i polityka prywatności.
+
+6. **Hotjar**
+
+Korzystamy z narzędzia Hotjar, żeby lepiej zrozumieć Twoje potrzeby oraz optymalizować naszą stronę pod kątem Twoich doświadczeń związanych z korzystaniem z niej. Narzędzie zapewniane jest przez spółkę Hotjar Limited.
+
+Hotjar rejestruje każdego odwiedzającego naszą stronę i umożliwia odtworzenie nagrania wideo z jego ruchu na naszej stronie, jak również wygenerowanie tzw. map cieplnych. W ramach narzędzia Hotjar nie mamy dostępu do informacji, które pozwalają nam na Twoją identyfikację, ponieważ Hotjar nie rejestruje procesu wypełnienia formularzy przeznaczonych do przekazywania danych osobowych.
+
+W celu korzystania z Hotjar zaimplementowaliśmy w kodzie naszej strony specjalny kod śledzący Hotjar. Kod śledzący wykorzystuje pliki cookies firmy Hotjar Limited. Zgromadzone w ramach plików cookies informacje przechowywane są przez Hotjar w ramach pseudonimowego profilu użytkownika. Ani Hotjar, ani my wykorzystujemy tych informacji do Twojej identyfikacji.
+
+Możesz sprzeciwić się tworzeniu przez Hotjar Twojego profilu użytkownika, przechowywania przez Hotjar informacji na temat Twojego korzystania z naszej strony oraz wykorzystywania plików cookies Hotjar tutaj.
+
+Jeżeli jesteś zainteresowany szczegółami związanymi z przetwarzaniem danych w ramach Hotjar, zachęcamy do zapoznania się z polityką prywatności Hotjar.
+16
