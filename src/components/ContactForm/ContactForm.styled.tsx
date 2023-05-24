@@ -13,6 +13,7 @@ export const Column = styled.div`
 
 export const SmallParagraph = styled.p`
   font-size: 0.6rem;
+  margin-left: 10px;
 `
 
 export const Input = styled.input`
@@ -34,7 +35,6 @@ export const TextArea = styled.textarea`
 `
 
 export const CheckBox = styled.input.attrs({ type: "checkbox" })`
-  margin-right: 10px;
   width: 18px;
   height: 18px;
   transition: 0.5s ease-out;
