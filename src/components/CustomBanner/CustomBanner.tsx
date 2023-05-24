@@ -1,13 +1,7 @@
 import React from "react"
 
-import {
-  Container,
-  Column,
-  Title,
-  Paragraph,
-  Border,
-} from "./CustomBanner.styled"
-import { Center } from "../../shared.styled"
+import { Paragraph, Border } from "./CustomBanner.styled"
+import { Center, Container, Column, Title } from "../../shared.styled"
 
 type Props = {
   title: string
