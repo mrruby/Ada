@@ -35,6 +35,8 @@ export const TextArea = styled.textarea`
 
 export const CheckBox = styled.input.attrs({ type: "checkbox" })`
   margin-right: 10px;
+  width: 18px;
+  height: 18px;
   transition: 0.5s ease-out;
 `
 
