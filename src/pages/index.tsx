@@ -7,6 +7,7 @@ import PhotosContainer from "components/PhotosContainer"
 import MainPostList from "components/MainPostList"
 import CustomBanner from "components/CustomBanner"
 import { StaticImage } from "gatsby-plugin-image"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 
 type Image = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -33,14 +34,18 @@ const IndexPage = (): JSX.Element => {
   // `)
 
   return (
-    <Layout>
+    <Layout
+    flowerBlue={true}
+    starPink={true}
+    >
       <SEO title="Home" />
+      <MaxWithBgColorContainer bgColor="bg-ada-white">
       <CustomBanner
-        title="Cześć!"
-        paragraph1="Nazywam się Ada i zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami.
-        Podpowiem Ci, jak prowadzić świadomy, kreatywny marketing dla Twojego biznesu."
-        image={<StaticImage src={"../images/banner.webp"} alt="banner" />}
+        title={<>Ada<span className="text-ada-pink"> Promis</span></>}
+        paragraph1={<>Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold">świadomy, kreatywny marketing</span> dla Twojego biznesu.</>}
+        image={<StaticImage src={"../images/ada_hero.webp"} alt="Ada Promis - hero" placeholder="none"  />}
       />
+      </MaxWithBgColorContainer>
       <MainPostList />
       {/* <PhotosContainer>
         {listOfImages.map(({ node }: Image) => (
