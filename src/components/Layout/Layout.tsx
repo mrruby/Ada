@@ -8,6 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { ThemeProvider } from "styled-components"
+import { ILayoutElements } from "utils/types/layoutElements"
 
 import {
   GlobalStyles,
@@ -21,10 +22,12 @@ import Header from "../Header"
 import { theme } from "./theme"
 
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+  flowerBlue?: boolean;
+  starPink?: boolean;
+};
 
-const Layout = ({ children }: Props): JSX.Element => {
+const Layout = ({ children, flowerBlue, starPink }: Props): JSX.Element => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
