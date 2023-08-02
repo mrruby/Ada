@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Adrianna Promis <adrianna@getbold.agency>",
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.4",
     "@types/styled-components": "^5.0.1",
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.14",

@@ -15,7 +15,7 @@ module.exports = {
         "linear": "linear-gradient(180deg, #F4DCE8 0%, #FFF 100%);",
       },
       fontFamily: {
-        montserrat: ['Montserrat', sans-serif],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       fontSize: {
         adaNav: "0.9375rem",

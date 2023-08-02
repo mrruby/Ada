@@ -1,12 +1,13 @@
+import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import React from "react"
-
-import { Paragraph, Border } from "./CustomBanner.styled"
-import { Center, Container, Column, Title } from "../../shared.styled"
+// import { Paragraph, Border } from "./CustomBanner.styled"
+// import { Center, Container, Column, Title } from "../../shared.styled"
 
 type Props = {
-  title: string
+  title: JSX.Element
   reverse?: boolean
-  paragraph1: string
+  paragraph1: JSX.Element
   paragraph2?: string
   paragraph3?: string
   actionButton?: JSX.Element
@@ -23,27 +24,21 @@ const CustomBanner = ({
   image,
 }: Props): JSX.Element => {
   return (
-    <>
-      <Container
-        reverse={reverse}
-        data-sal="slide-up"
-        data-sal-delay="300"
-        data-sal-easing="ease"
-      >
-        <Column reverse={reverse}>
-          <Title>{title}</Title>
-          <Border width={70} height={0.4} />
-          <Paragraph isParagraph2={!!paragraph2}>{paragraph1}</Paragraph>
-          {paragraph2 && <Paragraph>{paragraph2}</Paragraph>}
-          {paragraph3 && <Paragraph>{paragraph3}</Paragraph>}
-          {actionButton}
-          <Border width={100} height={0.6} />
-        </Column>
-        <Column reverse={reverse}>
-          <Center>{image}</Center>
-        </Column>
-      </Container>
-    </>
+    <div className="flex px-2 flex-col lg:flex-row text-ada-blue">
+        <div className="lg:w-[575px] pt-[120px]">
+          <h1 className="text-adaTitle font-bold pb-8">{title}</h1>
+          <p className="text-adaSubtitle font-medium">{paragraph1}</p>
+          <p className="text-adaSubtitle font-medium">{paragraph2}</p>
+          <p className="text-adaSubtitle font-medium">{paragraph3}</p>
+          <Button
+          type="button"
+          text="Pokaż mi więcej"
+        />   
+        </div>
+        <div>
+          {image}
+        </div>
+    </div>
   )
 }
 

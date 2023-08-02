@@ -11,4 +11,5 @@ body {
   width: 100%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  font-family: 'Montserrat', sans-serif;
 }
