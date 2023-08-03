@@ -1,15 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import Burger from "./Burger"
 
-type Props = {
-  open: boolean
-  setOpen: (_: boolean) => void
-}
-
-const Menu = ({ open, setOpen }: Props): JSX.Element => {
-
-  const linkClass = "text-ada-blue text-adaSubtitle md:text-adaNav font-bold uppercase py-4 hover:text-ada-white hover:underline";
+const MenuDesktop = (): JSX.Element => {
+  const linkClass = "text-ada-blue text-adaBsamd:text-adaNav font-bold uppercase hover:text-ada-white hover:hover:underline";
 
   const links = [
     { to: "https://ebook.adrianna.com.pl/", text: "ebook" },
@@ -26,11 +19,9 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
   return (
     <>
     <nav
-        aria-hidden={!open}
-        className=  {`md:hidden flex flex-col items-center justify-center ${open ? " translate-x-0 h-screen" : "-translate-x-full h-0"
-        } transition-transform duration-300 ease-in-out`}
+        className={`px-[50px] py-[11px] hidden md:flex justify-end gap-[20px] lg:gap-[30px]`}
       >
-        {links.map((link, index) =>
+      {links.map((link, index) =>
           link.to.startsWith("http") ? (
             <a key={index} href={link.to} className={linkClass}>
               {link.text}
@@ -42,9 +33,8 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
           )
         )}
         </nav>
-        <Burger open={open} setOpen={setOpen} />
     </>
   )
 }
 
-export default Menu
+export default MenuDesktop

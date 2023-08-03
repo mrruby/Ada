@@ -13,16 +13,17 @@ const IndexPage = (): JSX.Element => {
     <Layout
     flowerBlue={true}
     starPink={true}
+    flowerWhite={true}
     >
       <SEO title="Home" />
       <MaxWithBgColorContainer bgColor="bg-ada-white">
       <CustomBanner
         title={<>Ada<span className="text-ada-pink"> Promis</span></>}
-        paragraph1={<>Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold">świadomy, kreatywny marketing</span> dla Twojego biznesu.</>}
+        paragraph1={<>Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold italic">świadomy, kreatywny marketing</span> dla Twojego biznesu.</>}
         image={<StaticImage src={"../images/ada_hero.webp"} alt="Ada Promis - hero" placeholder="none"  />}
       />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear">
+      <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="z-20">
       <Services />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
@@ -30,8 +31,9 @@ const IndexPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white">
       <AdaBanner
-        title={<>Lorem ipsum dolor sit amet <br/> Lorem ipsum dolor sit amet</>}
-        paragraph={<>Bla bla bla bla bla bla bla bla bla bla <span>bla bla bla bla</span> bla bla bla bla bla bla bla bla bla bla</>}
+        title1={<>Lorem ipsum dolor sit amet</>}
+        title2={<>Lorem ipsum dolor sit amet</>}
+        paragraph={<>Bla bla bla bla bla bla bla bla bla bla <span className="font-bold italic">bla bla bla bla</span> bla bla bla bla bla bla bla bla bla bla</>}
       />
       </MaxWithBgColorContainer>
     </Layout>
