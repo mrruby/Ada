@@ -18,7 +18,7 @@ const Features = (): JSX.Element => {
   ];
 
   return (
-    <div className=" text-ada-blue flex gap-[48px] flex-col lg:flex-row items-center justify-center pb-[32px]">
+    <div className=" text-ada-blue flex gap-[48px] flex-col md:flex-row items-center justify-center pb-[32px]">
     {featuresData.map((feature, index) => (
           <FeatureBox key={index} text={feature.text}  />
         ))}

@@ -1,25 +1,18 @@
-import { Link } from "gatsby"
 import React, { useState } from "react"
-import Logo from "./Logo"
 import Menu from "./Menu"
-import { Container, Nav } from "./Header.styled"
+import MaxWithBgColorContainer from "../Layout/MaxWithBgColorContainer";
+import MenuDesktop from "./MenuDesktop";
 
-type Props = {
-  siteTitle: string
-}
-
-const Header = ({ siteTitle }: Props): JSX.Element => {
+const Header = (): JSX.Element => {
   const [open, setOpen] = useState(false)
 
   return (
-    <Container>
-      <Nav>
-        <Link to="/">
-          <Logo alt={siteTitle} />
-        </Link>
+    <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+    <header>
         <Menu open={open} setOpen={setOpen} />
-      </Nav>
-    </Container>
+        <MenuDesktop />
+    </header>
+    </MaxWithBgColorContainer>
   )
 }
 
