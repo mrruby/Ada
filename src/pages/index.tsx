@@ -1,62 +1,41 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Layout from "components/Layout"
 import SEO from "components/seo"
-import Photo from "components/Photo"
-import PhotosContainer from "components/PhotosContainer"
-import MainPostList from "components/MainPostList"
 import CustomBanner from "components/CustomBanner"
 import { StaticImage } from "gatsby-plugin-image"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-
-type Image = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  node: any
-}
+import Services from "components/Services"
+import Features from "components/Features"
+import AdaBanner from "components/AdaBanner"
 
 const IndexPage = (): JSX.Element => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     allInstaNode(sort: { order: DESC, fields: timestamp }, limit: 3) {
-  //       edges {
-  //         node {
-  //           id
-  //           caption
-  //           localFile {
-  //             childImageSharp {
-  //               gatsbyImageData(width: 200, height: 200, layout: FIXED)
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <Layout
     flowerBlue={true}
     starPink={true}
+    flowerWhite={true}
     >
       <SEO title="Home" />
       <MaxWithBgColorContainer bgColor="bg-ada-white">
       <CustomBanner
         title={<>Ada<span className="text-ada-pink"> Promis</span></>}
-        paragraph1={<>Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold">świadomy, kreatywny marketing</span> dla Twojego biznesu.</>}
+        paragraph1={<>Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold italic">świadomy, kreatywny marketing</span> dla Twojego biznesu.</>}
         image={<StaticImage src={"../images/ada_hero.webp"} alt="Ada Promis - hero" placeholder="none"  />}
       />
       </MaxWithBgColorContainer>
-      <MainPostList />
-      {/* <PhotosContainer>
-        {listOfImages.map(({ node }: Image) => (
-          <Photo
-            key={node.id}
-            id={node.id}
-            caption={node.caption}
-            fixed={node.localFile.childImageSharp.gatsbyImageData}
-          />
-        ))}
-      </PhotosContainer> */}
+      <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="z-20">
+      <Services />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+      <Features />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white">
+      <AdaBanner
+        title1={<>Lorem ipsum dolor sit amet</>}
+        title2={<>Lorem ipsum dolor sit amet</>}
+        paragraph={<>Bla bla bla bla bla bla bla bla bla bla <span className="font-bold italic">bla bla bla bla</span> bla bla bla bla bla bla bla bla bla bla</>}
+      />
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }

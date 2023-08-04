@@ -29,7 +29,7 @@ export const FlowerBlue: React.FC<Props> = ({
 }) => {
   return (
     <img
-      src="../assets/layout-elements/flower-blue.svg"
+      src="../assets/layout-elements/flower-left-blue.svg"
       alt="Blue Flower - Ada Promis"
       className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
@@ -52,11 +52,34 @@ export const StarPink: React.FC<Props> = ({
 }) => {
   return (
     <img
-      src="../../../../assets/layout-elements/star-pink.svg"
+      src="../../../../assets/layout-elements/star-right-pink.svg"
       alt="Pink Star - Ada Promis"
       className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
         } ${mobileBottom && mobileBottom} z-0 w-[${width}] max-w-[140px]`}
+    />
+  );
+};
+
+export const FlowerWhite: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+    src="../assets/layout-elements/flower-right-white.svg"
+    alt="Pink Star - Ada Promis"
+      className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
+        } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
+        } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
     />
   );
 };
