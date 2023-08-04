@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import NavLink from '../../../../src/helpers/NavLink'
 
 const FooterMenu = (): JSX.Element => {
-  const linkClass = "text-ada-blue text-adaNav font-bold uppercase hover:text-ada-white hover:underline";
+  const linkClass = "text-ada-blue text-adaNav font-bold uppercase hover:text-ada-white";
 
   const links = [
     { to: "https://ebook.adrianna.com.pl/", text: "ebook" },
@@ -19,17 +19,9 @@ const FooterMenu = (): JSX.Element => {
   return (
     <>
         <nav className="px-[11px] py-[36px] flex justify-center lg:justify-end gap-[18px] flex-wrap">
-        {links.map((link, index) =>
-          link.to.startsWith("http") ? (
-            <a key={index} href={link.to} className={linkClass}>
-              {link.text}
-            </a>
-          ) : (
-            <Link key={index} to={link.to} className={linkClass}>
-              {link.text}
-            </Link>
-          )
-        )}
+        {links.map((link, index) => (
+          <NavLink key={index} to={link.to} text={link.text} className={linkClass} />
+        ))}
         </nav>
     </>
   )

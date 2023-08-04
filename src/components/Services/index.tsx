@@ -31,8 +31,8 @@ const Services = (): JSX.Element => {
 
   return (
     <div className=" text-ada-blue flex flex-col items-center py-6 lg:pt-[68px] lg:pb-[150px]">
-      <div className="px-6 flex flex-col items-center">
-        <h3 className="text-adaTitle lg:text-adaBig text-ada-grey font-bold h-[58px]">W czym mogę Ci pomóc?</h3>
+      <div className="px-6 flex flex-col items-center text-center">
+        <h3 className="text-adaTitle lg:text-adaBig text-ada-grey font-bold lg:h-[58px]">W czym mogę Ci pomóc?</h3>
         <h2 className="text-adaTitle font-bold">Moje usługi</h2>
         <p className="text-adaBase py-8">Nie widzisz usługi dla siebie? Napisz do mnie!</p>
       </div>
