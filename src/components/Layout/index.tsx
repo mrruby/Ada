@@ -5,17 +5,17 @@ import { LayoutElements } from "../Layout/elements";
 import { ThemeProvider } from "styled-components"
 import { theme } from "./theme"
 
-interface ILayoutElements {
-    flowerBlue?: boolean;
-    starPink?: boolean;
-    flowerWhite?: boolean;
-  }
+type LayoutElements = {
+  flowerBlue?: boolean;
+  starPink?: boolean;
+  flowerWhite?: boolean;
+};
   
   type Props = {
     children: React.ReactNode;
-  } & ILayoutElements;
+  } & LayoutElements;
 
-  const defaultProps: ILayoutElements = {
+  const defaultProps: LayoutElements = {
     flowerBlue: false,
     starPink: false,
     flowerWhite: false,

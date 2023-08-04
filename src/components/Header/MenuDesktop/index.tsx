@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import NavLink from '../../../../src/helpers/NavLink'
 
 const MenuDesktop = (): JSX.Element => {
-  const linkClass = "text-ada-blue text-adaBsamd:text-adaNav font-bold uppercase hover:text-ada-white hover:hover:underline";
+  const linkClass = "text-ada-blue text-adaBsamd:text-adaNav font-bold  uppercase transition-colors duration-300 hover:text-ada-white hover:border-b-4 hover:border-ada-blue";
 
   const links = [
     { to: "https://ebook.adrianna.com.pl/", text: "ebook" },
@@ -19,19 +19,11 @@ const MenuDesktop = (): JSX.Element => {
   return (
     <>
     <nav
-        className={`px-[50px] py-[11px] hidden md:flex justify-end gap-[20px] lg:gap-[30px]`}
+        className={`px-[50px] h-[50px] py-[11px] hidden md:flex justify-end gap-[20px] lg:gap-[30px]`}
       >
-      {links.map((link, index) =>
-          link.to.startsWith("http") ? (
-            <a key={index} href={link.to} className={linkClass}>
-              {link.text}
-            </a>
-          ) : (
-            <Link key={index} to={link.to} className={linkClass}>
-              {link.text}
-            </Link>
-          )
-        )}
+       {links.map((link, index) => (
+          <NavLink key={index} to={link.to} text={link.text} className={linkClass} />
+        ))}
         </nav>
     </>
   )
