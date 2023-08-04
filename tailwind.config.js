@@ -6,12 +6,13 @@ module.exports = {
       colors: {
         ada: {
           blue: "#253274",
+          grey: "rgba(37, 50, 116, 0.20);",
           "light-pink": "#EEDCF6",
           pink: "#F2A7B2",
           white: "#FFFFFF",
         },
       },
-      background: {
+      backgroundImage: {
         "linear": "linear-gradient(180deg, #F4DCE8 0%, #FFF 100%);",
       },
       fontFamily: {
