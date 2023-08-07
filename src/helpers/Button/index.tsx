@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "gatsby";
 
 interface Props {
   type: "button" | "submit" | "reset";
   text: string;
+  url: string;
   textSize?: string;
   sectionId?: string;
+  border?: boolean;
 }
 
 export const Button: React.FC<Props> = ({ type, text, 
-  textSize = "lg:text-[25px]",
-  sectionId
+  textSize = "lg:text-[25px]", url,
+  border, sectionId
 }) => {
   const handleButtonClick = () => {
     if (sectionId) {
@@ -20,13 +23,17 @@ export const Button: React.FC<Props> = ({ type, text,
     }
   };
 
+  const borderStyles = border ? "border border-ada-blue": "";
+
   return (
-    <button
+    <Link to={url}>
+        <button
       onClick={handleButtonClick}
       type={type}
-      className={`bg-ada-light-pink ${textSize} px-[48px] py-[6px] mt-[50px] hover:bg-ada-pink`}    
+      className={`bg-ada-light-pink ${textSize} px-[48px] py-[6px] hover:bg-ada-pink ${borderStyles}`}    
       >
       {text}
     </button>
+    </Link>
   );
 };

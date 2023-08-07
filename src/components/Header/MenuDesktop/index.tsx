@@ -5,7 +5,8 @@ const MenuDesktop = (): JSX.Element => {
   const linkClass = "text-ada-blue text-adaBsamd:text-adaNav font-bold  uppercase transition-colors duration-300 hover:text-ada-white hover:border-b-4 hover:border-ada-blue";
 
   const links = [
-    { to: "https://ebook.adrianna.com.pl/", text: "ebook" },
+    // { to: "https://ebook.adrianna.com.pl/", text: "ebook" },
+    { to: "/ebook", text: "ebook" },
     { to: "https://checklistafb.adrianna.com.pl", text: "checklista" },
     { to: "https://metanewsletter.adrianna.com.pl", text: "newsletter" },
     { to: "/about", text: "O mnie" },
