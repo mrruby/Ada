@@ -16,7 +16,7 @@ const IndexPage = (): JSX.Element => {
     flowerWhite={true}
     >
       <SEO title="Home" />
-      <MaxWithBgColorContainer bgColor="bg-ada-white">
+      <MaxWithBgColorContainer bgColor="bg-transparent">
       <CustomBanner
         title={<>Ada<span className="text-ada-pink"> Promis</span></>}
         paragraph1={<>Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold italic">świadomy, kreatywny marketing</span> dla Twojego biznesu.</>}
