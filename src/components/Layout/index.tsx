@@ -28,7 +28,7 @@ type LayoutElements = {
 
   return (
     <ThemeProvider theme={theme}>
-    <div className="antialiased min-h-screen max-w-full overflow-hidden flex flex-col scroll-smooth relative">
+    <div className="antialiased min-h-screen max-w-full overflow-hidden flex flex-col scroll-smooth relative text-ada-blue">
         <Header />
         {children}
         <Footer />

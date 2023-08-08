@@ -10,6 +10,7 @@ module.exports = {
           "light-pink": "#EEDCF6",
           pink: "#F2A7B2",
           white: "#FFFFFF",
+          white40: "#FFFFFF66",
         },
       },
       backgroundImage: {
@@ -22,6 +23,7 @@ module.exports = {
         adaNav: "0.9375rem",
         adaBase: "1.125rem",
         adaSubtitle: "1.5625rem",
+        adaSubtitleSecondary: "2.1875rem",
         adaTitle: "3rem",
         adaBig: "5rem",
       },
