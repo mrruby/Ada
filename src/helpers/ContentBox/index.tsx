@@ -12,7 +12,7 @@ type ContentBoxProps = {
 export const ContentBox: React.FC<ContentBoxProps> = ({ title, description, actionButton = false, url
 }) => {
   return (
-    <div className="mx-6 lg:max-w-[270px] flex flex-col items-center relative mt-[100px] pt-[58px] px-3">
+    <div className="bg-white mx-6 lg:max-w-[270px] flex flex-col items-center relative mt-[100px] pt-[58px] px-3">
       <div className="absolute top-[-90px]">
       <StaticImage src={"../../images/flower-blue.svg"} alt="Blue Flower Ada Promis" placeholder="none" width={150} height={150} />
       </div>

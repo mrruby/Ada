@@ -10,7 +10,7 @@ type ContentBoxProps = {
 
 type ContentSectionProps = {
   title: string;
-  heading: string;
+  heading?: string;
   description?: string;
   data: ContentBoxProps[];
   actionButtonBoxes: boolean;
