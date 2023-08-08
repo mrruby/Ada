@@ -4,7 +4,7 @@ import { Button } from "helpers/Button";
 
 type ContentBoxProps = {
   title: string;
-  description: JSX.Element;
+  description: JSX.Element | string;
   actionButton?: boolean;
   url?: string;
 }
