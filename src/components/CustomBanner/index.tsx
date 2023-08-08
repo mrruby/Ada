@@ -29,7 +29,7 @@ const CustomBanner = ({
           <p className={subtitleClass}>{paragraph2}</p>
           <p className={subtitleClass}>{paragraph3}</p>
           <div className="mt-[28px]">
-          {actionButton && <Button type="button" text="Pokaż mi więcej" url="#"/>}
+          {actionButton && <Button type="button" text="Pokaż mi więcej" url="/product"/>}
           </div>
         </div>
         <div className="lg:absolute top-10 right-0">

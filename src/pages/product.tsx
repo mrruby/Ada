@@ -4,12 +4,11 @@ import SEO from "components/seo"
 import CustomBanner from "components/CustomBanner"
 import { StaticImage } from "gatsby-plugin-image"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import BlogPosts from "components/BlogPosts"
-import Features from "components/Features"
-import Products from "components/Products"
-import NewsletterBanner from "components/NewsletterBanner"
+import EbookContainer from "components/EbookContainer"
+import EbookKnowledge from "components/EbookKnowledge"
+import References from "components/References"
 
-const EbookPage = (): JSX.Element => {
+const ProductPage = (): JSX.Element => {
   return (
     <Layout
     flowerBlue={true}
@@ -23,20 +22,20 @@ const EbookPage = (): JSX.Element => {
         paragraph1={<>Chcesz zdobyć nowych<span className="font-bold"> lojalnych</span> klientów?</>}
         paragraph2={<>Pokażę Ci, jak to zrobić za pomocą kampanii na Facebooku i Instagramie. Nawet jeśli teraz Manager Reklam budzi u Ciebie <span className="font-bold">przerażenie!</span></>}
         image={<StaticImage src={"../images/ada_ebook.webp"} alt="Ada Promis - hero" placeholder="none"  />}
+        actionButton={false}
       />
-        <Products />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-      <Features />
+      <MaxWithBgColorContainer bgColor="bg-linear">
+        <EbookContainer />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="z-20">
-      <BlogPosts />
+      <MaxWithBgColorContainer bgColor="bg-linear">
+        <EbookKnowledge />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="transparent">
-          <NewsletterBanner/>
+      <MaxWithBgColorContainer bgColor="bg-transparent">
+          <References/>
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
 
-export default EbookPage
+export default ProductPage

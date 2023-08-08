@@ -7,7 +7,7 @@ const Products = (): JSX.Element => {
     {
       title: "Konsultacje reklamowe",
       buttonText: 'Produkt 1',
-      url: '#',
+      url: '/product',
       image: <StaticImage src={"../../images/ada_hero.webp"} alt="Ada Promis - hero" placeholder="none"  />
     },
     {

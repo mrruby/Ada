@@ -10,6 +10,7 @@ module.exports = {
           "light-pink": "#EEDCF6",
           pink: "#F2A7B2",
           white: "#FFFFFF",
+          white40: "#FFFFFF66",
         },
       },
       backgroundImage: {
