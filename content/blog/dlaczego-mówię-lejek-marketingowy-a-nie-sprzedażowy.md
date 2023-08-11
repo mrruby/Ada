@@ -17,8 +17,6 @@ Teraz, po 6 latach pracy w marketingu i prawie 2 latach „na swoim”, jeszcze 
 * działaniach, które warto podjąć na każdym z nich,
 * tym, co można zyskać dzięki temu podejściu.
 
-
-
 ## Co to jest lejek marketingowy?
 
 Standardowo lejek marketingowy składa się z 4 etapów:
@@ -40,13 +38,9 @@ Zamiast przeglądać kolejne sklepy w poszukiwaniu sukienki idealnej, decydujemy
 
 ![Grafika z lejkiem marketingowym. Etapy: świadomość, zaintersowanie, akcja.](/img/lejek-marketingowy-3-etapy.png "lejek-marketingowy-3-etapy")
 
-
-
 ## Jak działać na poszczególnych etapach lejka?
 
 Aby zbudować relację z odbiorcami, trzeba dotrzeć do nich z odpowiednimi treściami. Jakimi? Na szczęście to nie jest wiedza tajemna.
-
-
 
 ### Jak zbudować świadomość marki?
 
@@ -57,8 +51,6 @@ Aby zbudować relację z odbiorcami, trzeba dotrzeć do nich z odpowiednimi tre�
 ✔ zaczepnie, 
 
 ✔ szukamy wspólnego punktu zainteresowań.
-
-
 
 ### Co zrobić, aby zainteresować?
 
@@ -72,13 +64,9 @@ Na tym etapie:
 
 ✔ Wykorzystujemy testimoniale. Korzyść to podstawa :)
 
-
-
 ### Akcja: jak przekonać do zakupu?
 
 Co dalej? W końcu: akcja. To, na co wszyscy czekają! Jesteśmy na ostatniej prostej — klienci są gotowi do zakupu. Nadchodzi czas na wyjaśnianie szczegółów, odpowiadanie na pojawiające się pytania.
-
-
 
 ## Dzięki tym działaniom sprzedasz?
 
@@ -87,8 +75,6 @@ Prawie 2 lata temu, po 5 latach pracy na etacie, przeszłam na swoje. Miałam ok
 To, że marketing może być slow. To, że powinien dawać wartość. To, że nie musi być nachalny. Z tym że biznes musi zarabiać — końcu taki jest cel prowadzenia firmy.
 
 I nie tylko okazało się, że miałam rację i można robić marketing po swojemu. Okazało się również, że traktowanie potencjalnych klientów jak fajnych ludzi, daje dużo lepsze efekty niż nachalna sprzedaż!
-
-
 
 ## Co zyskałam lejkowi marketingowemu?
 
@@ -102,12 +88,10 @@ Takie podejście sprawia, że nie muszę już krzyczeć kup, kup, kup, bo… oso
 
 Czy gdybym skoncentrowała się tylko i wyłącznie na sprzedaży, zobaczyłabym oczekiwane efekty? Na usta ciśnie mi się tylko jedna odpowiedź „no właśnie” 😉.
 
-
-
 ## Co Ty zyskasz?
 
 Czy Tobie również bliskie jest podejście do marketingu w rytmie slow? Chcesz sprzedawać w zgodzie ze sobą? Może pracujesz nad stworzeniem biznesu działającego na Twoich zasadach, a marketing jest tym elementem, którego do tej pory nie dało się dostosować?
 
 * Przeczytaj o idei [slow marketingu](https://adrianna.com.pl/blog/slow-marketing-co-to/), dzięki której zaczniesz sprzedawać w zgodzie ze sobą.
 * Próbujesz tworzyć content prosto z serca, ale zdarzają Ci się spadki kreatywności? Napisałam, jak walczę z [kreatywną blokadą](https://adrianna.com.pl/blog/kreatywna-blokada-jak-sobie-z-ni%C4%85-poradzi%C4%87/).
-* Chcesz wdrożyć slow marketing w swojej firmie, ale nie wiesz, od czego zacząć? [„Slow marketing a reklama na Facebooku i Instagramie”](http://ebook.adrianna.com.pl/bL5D0p) będzie dla Ciebie świetnym rozwiązaniem!
+* Chcesz wdrożyć slow marketing w swojej firmie, ale nie wiesz, od czego zacząć? „Slow marketing a reklama na Facebooku i Instagramie” będzie dla Ciebie świetnym rozwiązaniem!
