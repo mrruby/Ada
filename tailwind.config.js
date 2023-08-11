@@ -22,8 +22,8 @@ module.exports = {
       fontSize: {
         adaNav: "0.9375rem",
         adaBase: "1.125rem",
-        adaSubtitle: "1.5625rem",
-        adaSubtitleSecondary: "2.1875rem",
+        adaSubtitle: "1.5rem",
+        adaSubtitleSecondary: "2.0625rem",
         adaTitle: "3rem",
         adaBig: "5rem",
       },

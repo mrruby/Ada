@@ -2,12 +2,13 @@ import React from "react"
 import { Button } from "helpers/Button"
 
 type Props = {
-  title: JSX.Element
+  title: string
   reverse?: boolean
   paragraph1: JSX.Element
   paragraph2?: JSX.Element
   paragraph3?: string
   actionButton?: boolean
+  btnText: string
   image: JSX.Element
 }
 
@@ -17,22 +18,23 @@ const CustomBanner = ({
   paragraph1,
   paragraph2,
   paragraph3,
+  btnText,
   image,
 }: Props): JSX.Element => {
-  const subtitleClass = "text-adaSubtitle font-medium leading-tight";
+  const subtitleClass = "text-adaSubtitle font-medium leading-tight py-2";
 
   return (
     <div className="flex px-4 lg:pl-[110px] flex-col items-center lg:flex-row text-ada-blue relative min-h-[660px]">
-        <div className="lg:w-[575px]">
+        <div className="lg:w-[678px]">
           <h1 className="text-adaTitle font-bold pb-8 lg:w-[704px]">{title}</h1>
           <p className={subtitleClass}>{paragraph1}</p>
           <p className={subtitleClass}>{paragraph2}</p>
           <p className={subtitleClass}>{paragraph3}</p>
-          <div className="mt-[28px]">
-          {actionButton && <Button type="button" text="Pokaż mi więcej" url="/product"/>}
+          <div className="mt-[14px]">
+          {actionButton && <Button type="button" text={btnText} url="/ebook"/>}
           </div>
         </div>
-        <div className="lg:absolute top-10 right-0">
+        <div className="lg:absolute top-10 right-[-120px]">
           {image}
         </div>
     </div>
