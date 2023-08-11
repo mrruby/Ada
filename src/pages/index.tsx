@@ -18,9 +18,10 @@ const IndexPage = (): JSX.Element => {
       <SEO title="Home" />
       <MaxWithBgColorContainer bgColor="bg-ada-white">
       <CustomBanner
-        title={<>Ada<span className="text-ada-pink"> Promis</span></>}
-        paragraph1={<>Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold italic">świadomy, kreatywny marketing</span> dla Twojego biznesu.</>}
-        image={<StaticImage src={"../images/ada_hero.webp"} alt="Ada Promis - hero" placeholder="none"  />}
+        title="Cześć!"
+        paragraph1={<>Tutaj Ada Promis. <br/> Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić świadomy, kreatywny marketing dla Twojego biznesu.</>}
+        btnText="Pokaż mi więcej"
+        image={<StaticImage src={"../images/ada_hero.png"} alt="Ada Promis - hero" placeholder="none"  width={700} height={700} />}
       />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="z-20">
@@ -31,9 +32,10 @@ const IndexPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white">
       <AdaBanner
-        title1={<>Lorem ipsum dolor sit amet</>}
-        title2={<>Lorem ipsum dolor sit amet</>}
-        paragraph={<>Bla bla bla bla bla bla bla bla bla bla <span className="font-bold italic">bla bla bla bla</span> bla bla bla bla bla bla bla bla bla bla</>}
+        title1="Praktykuję slow marketing: przemyślany,"
+        title2="wartościowy, zbudowany na relacjach."
+        paragraph1={<>W kampaniach reklamowych buduję świadomość, wzbudzam zainteresowanie i sprawiam, aby klient Cię polubił.</>} 
+        paragraph2={<>Zgaduję, że Ty też chętniej kupujesz od marek, do których czujesz <span className="font-bold italic"> sympatię? :)</span></>}
       />
       </MaxWithBgColorContainer>
     </Layout>

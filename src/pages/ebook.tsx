@@ -8,6 +8,7 @@ import BlogPosts from "components/BlogPosts"
 import Features from "components/Features"
 import Products from "components/Products"
 import NewsletterBanner from "components/NewsletterBanner"
+import References from "components/References"
 
 const EbookPage = (): JSX.Element => {
   return (
@@ -19,10 +20,11 @@ const EbookPage = (): JSX.Element => {
       <SEO title="Home" />
       <MaxWithBgColorContainer bgColor="bg-transparent">
       <CustomBanner
-        title={<><span className="italic">Slow Marketing</span> a reklama na Facebooku i Instagramie</>}
-        paragraph1={<>Chcesz zdobyć nowych<span className="font-bold"> lojalnych</span> klientów?</>}
-        paragraph2={<>Pokażę Ci, jak to zrobić za pomocą kampanii na Facebooku i Instagramie. Nawet jeśli teraz Manager Reklam budzi u Ciebie <span className="font-bold">przerażenie!</span></>}
-        image={<StaticImage src={"../images/ada_ebook.webp"} alt="Ada Promis - hero" placeholder="none"  />}
+        title="Chcesz zdobyć nowych, lojalnych klientów?"
+        paragraph1={<>Dowiedz się, jak to zrobić za pomocą reklam na Facebooku i Instagramie.</>}
+        paragraph2={<>Nawet jeśli teraz Manager Reklam budzi u Ciebie przerażenie <span className="font-bold">(albo myślisz: co to w ogóle jest?).</span> </>}
+        btnText="Dowiedz się więcej o tym, jak zdobyć klientów"
+        image={<StaticImage src={"../images/ada_ebook.webp"} alt="Ada Promis - Ebook" placeholder="none" width={650} height={650}  />}
       />
         <Products />
       </MaxWithBgColorContainer>
@@ -31,6 +33,11 @@ const EbookPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="z-20">
       <BlogPosts />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-transparent">
+          <References
+            title="Co mówią osoby, z którymi współpracowałam?"
+          />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="transparent">
           <NewsletterBanner/>
