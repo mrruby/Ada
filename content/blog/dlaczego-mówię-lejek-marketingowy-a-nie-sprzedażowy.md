@@ -94,4 +94,4 @@ Czy Tobie również bliskie jest podejście do marketingu w rytmie slow? Chcesz 
 
 * Przeczytaj o idei [slow marketingu](https://adrianna.com.pl/blog/slow-marketing-co-to/), dzięki której zaczniesz sprzedawać w zgodzie ze sobą.
 * Próbujesz tworzyć content prosto z serca, ale zdarzają Ci się spadki kreatywności? Napisałam, jak walczę z [kreatywną blokadą](https://adrianna.com.pl/blog/kreatywna-blokada-jak-sobie-z-ni%C4%85-poradzi%C4%87/).
-* Chcesz wdrożyć slow marketing w swojej firmie, ale nie wiesz, od czego zacząć? „Slow marketing a reklama na Facebooku i Instagramie” będzie dla Ciebie świetnym rozwiązaniem!
+* Chcesz wdrożyć slow marketing w swojej firmie, ale nie wiesz, od czego zacząć? [„Slow marketing a reklama na Facebooku i Instagramie” ](https://ebook.adrianna.com.pl/)będzie dla Ciebie świetnym rozwiązaniem!
