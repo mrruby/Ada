@@ -17,7 +17,7 @@ const EbookPage = (): JSX.Element => {
     starPink={true}
     flowerWhite={true}
     >
-      <SEO title="Home" />
+      <SEO title="Home" lang="pl"/>
       <MaxWithBgColorContainer bgColor="bg-transparent">
       <CustomBanner
         title="Chcesz zdobyć nowych, lojalnych klientów?"

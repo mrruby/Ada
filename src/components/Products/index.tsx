@@ -9,7 +9,7 @@ const Products = (): JSX.Element => {
       description:"Prowadź kampanie reklamowe pod moim okiem i rozwijaj biznes.",
       buttonText: 'Pokaż ofertę konsultacji dla mnie',
       url: '/product',
-      image: <StaticImage src={"../../images/ada_hero.png"} alt="Ada Promis" placeholder="none" width={500} height={500} />
+      image: <StaticImage src={"../../images/ada_hero.png"} alt="Ada Promis" placeholder="none" width={300} height={300} />
     },
     {
       title: "Prowadzenie kampanii",

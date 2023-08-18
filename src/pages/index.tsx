@@ -15,7 +15,7 @@ const IndexPage = (): JSX.Element => {
     starPink={true}
     flowerWhite={true}
     >
-      <SEO title="Home" />
+      <SEO title="Home" lang="pl"/>
       <MaxWithBgColorContainer bgColor="bg-ada-white">
       <CustomBanner
         title="Cześć!"

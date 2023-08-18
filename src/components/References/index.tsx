@@ -72,6 +72,8 @@ const CustomLeftArrow = ({ onClick, ...rest }: any) => {
       <img
         src="../../../../arrow-left.svg"
         alt="Left Arrow"
+        width={16}
+        height={25}
       />
     </div>
   );
@@ -86,6 +88,8 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
       <img
         src="../../../../arrow-right.svg"
         alt="Right Arrow"
+        width={16}
+        height={25}
       />
     </div>
   );
