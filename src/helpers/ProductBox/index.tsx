@@ -17,7 +17,7 @@ export const ProductBox: React.FC<ContentBoxProps> = ({ title, description, imag
       {image}
      </div>
       <div className="flex flex-col gap-8">
-        <h3 className="font-semibold text-adaSubtitleSecondary italic max-w-[325px] leading-tight">{title}</h3>
+        <h2 className="font-semibold text-adaSubtitleSecondary italic max-w-[325px] leading-tight">{title}</h2>
         <p className="text-adaBase leading-tight max-w-[245px]">{description}</p>
         <Button type="button" text={buttonText} url={url} border={true}/>
       </div>

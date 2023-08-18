@@ -24,9 +24,9 @@ const ContentSection: React.FC<ContentSectionProps> = ({ title,
   return (
     <div className=" text-ada-blue flex flex-col items-center py-6 lg:pt-[68px] lg:pb-[150px]">
       <div className="flex flex-col items-center text-center">
-      <h3 className={`${headingTextStyle} font-bold lg:h-[58px]`}>
+      <p className={`${headingTextStyle} font-bold lg:h-[58px]`}>
       {heading}
-        </h3>
+        </p>
         <h2 className="px-6 text-adaTitle font-bold">{title}</h2>
         {description && <p className="text-adaBase py-8">{description}</p>}
       </div>
