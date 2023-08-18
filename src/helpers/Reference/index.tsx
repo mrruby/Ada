@@ -3,14 +3,14 @@ import React from "react"
 type IReference = {
   reference: string;
   name: string;
-  company: string;
+  company?: string;
 }
 
 const Reference = ({ reference, name, company }: IReference): JSX.Element => {
   return (
-    <div className="flex flex-col mt-10 mb-14 text-center px-8 max-w-[1000px] m-auto bg-ada-light-pink">
-      <p className="lg:text-adaSubtitle italic pt-[50px]">Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla {reference} </p>
-      <h3 className="lg:text-adaSubtitle font-bold py-[20px]">{name}, {company} </h3>
+    <div className="flex flex-col mt-10 mb-14 text-center max-w-[1080px] m-auto justify-center">
+      <p className="lg:text-adaSubtitle pt-[50px]">{reference} </p>
+      <h3 className="lg:text-adaSubtitle max-w-[760px] px-8 mx-auto font-bold my-[20px] border-b-[25px] border-ada-light-pink h-[38px]">{name} <span className="font-medium">{company}</span> </h3>
     </div>
   );
 };

@@ -3,25 +3,31 @@ import { ContentBox } from "helpers/ContentBox";
 
 type ContentBoxProps = {
   title: string;
-  description: JSX.Element;
+  description: string;
   url?: string;
+  btnText: string;
   actionButton?: boolean
 }
 
 type ContentSectionProps = {
   title: string;
+  headingTextStyle?: string;
   heading?: string;
   description?: string;
   data: ContentBoxProps[];
   actionButtonBoxes: boolean;
 };
 
-const ContentSection: React.FC<ContentSectionProps> = ({ title, heading, description, data, actionButtonBoxes  }) => {
+const ContentSection: React.FC<ContentSectionProps> = ({ title, 
+  headingTextStyle = "text-adaTitle lg:text-adaBig text-ada-grey",
+  heading, description, data, actionButtonBoxes  }) => {
   return (
     <div className=" text-ada-blue flex flex-col items-center py-6 lg:pt-[68px] lg:pb-[150px]">
-      <div className="px-6 flex flex-col items-center text-center">
-        <h3 className="text-adaTitle lg:text-adaBig text-ada-grey font-bold lg:h-[58px]">{heading}</h3>
-        <h2 className="text-adaTitle font-bold">{title}</h2>
+      <div className="flex flex-col items-center text-center">
+      <p className={`${headingTextStyle} font-bold lg:h-[58px]`}>
+      {heading}
+        </p>
+        <h2 className="px-6 text-adaTitle font-bold">{title}</h2>
         {description && <p className="text-adaBase py-8">{description}</p>}
       </div>
       <div className="flex gap-4 lg:gap-[58px] flex-col md:flex-row">
@@ -32,6 +38,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({ title, heading, descrip
                 title={item.title}
                 description={item.description}
                 url={item.url}
+                btnText={item.btnText}
                 actionButton={true}
               />
             ))
@@ -41,6 +48,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({ title, heading, descrip
                 key={index}
                 title={item.title}
                 description={item.description}
+                btnText={item.btnText}
                 actionButton={false}
               />
             ))}
