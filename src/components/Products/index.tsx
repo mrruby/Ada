@@ -6,13 +6,15 @@ const Products = (): JSX.Element => {
   const productsData = [
     {
       title: "Konsultacje reklamowe",
-      buttonText: 'Produkt 1',
+      description:"Prowadź kampanie reklamowe pod moim okiem i rozwijaj biznes.",
+      buttonText: 'Pokaż ofertę konsultacji dla mnie',
       url: '/product',
-      image: <StaticImage src={"../../images/ada_hero.webp"} alt="Ada Promis - hero" placeholder="none"  />
+      image: <StaticImage src={"../../images/ada_hero.png"} alt="Ada Promis" placeholder="none" width={300} height={300} />
     },
     {
-      title: "Inny produkt",
-      buttonText: 'Produkt 2',
+      title: "Prowadzenie kampanii",
+      description:"Oddeleguj pozyskiwanie klientów i ciesz się czasem dla Ciebie.",
+      buttonText: 'Sprawdź, jak poprowadzę dla Ciebie kampanie reklamowe',
       url: '#',
       image: <></>
     },
@@ -24,6 +26,7 @@ const Products = (): JSX.Element => {
         <ProductBox
           key={index}
           title={item.title}
+          description={item.description}
           buttonText={item.buttonText}
           url={item.url}
           image={item.image} 

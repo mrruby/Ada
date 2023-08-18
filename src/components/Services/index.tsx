@@ -5,27 +5,15 @@ const Services = (): JSX.Element => {
   const servicesData = [
     {
       title: "Meta Ads",
-      description: (
-        <>
-          Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold italic">świadomy, kreatywny marketing </span> dla Twojego biznesu.
-        </>
-      ),
+      description: "Kampanie reklamowe na Facebooku i Instagramie, dzięki którym zobaczysz stały napływ klientów do Twojego biznesu. Poprowadzę je dla Ciebie!"
     },
     {
       title: "Konsultacje",
-      description: (
-        <>
-          Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold italic">świadomy, kreatywny marketing </span>dla Twojego biznesu.
-        </>
-      ),
+      description: "Mentoring dotyczący Twoich kampanii reklamowych. Zdradzę Ci moje tipy i zaoszczędzę dobre kilka lat samodzielnego klikania w menedżerze reklam." 
     },
     {
-      title: "Inne",
-      description: (
-        <>
-          Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić <span className="font-bold italic">świadomy, kreatywny marketing </span> dla Twojego biznesu.
-        </>
-      ),
+      title: "E-book",
+      description:"Strategia prowadzenia kampanii reklamowych, którą możesz wdrożyć u siebie od zaraz. 6 lat tworzenia reklam w duchu slow marketingu na 100 stronach."
     },
   ];
 
@@ -33,10 +21,10 @@ const Services = (): JSX.Element => {
     <ContentSection
       title="Moje usługi"
       heading="W czym mogę Ci pomóc?"
-      description="Nie widzisz usługi dla siebie? Napisz do mnie!"
+      description="Szukasz czegoś innego? Napisz , czego potrzebujesz i wspólnie zobaczymy, co możemy zrobić!"
       data={servicesData}
-      actionButtonBoxes={false}
-    />
+      actionButtonBoxes={false}    
+      />
   );
 };
 

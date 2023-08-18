@@ -13,7 +13,7 @@ const Burger = ({ open, setOpen }: Props): JSX.Element => {
     "md:hidden w-[32px] h-[4px] transition-all duration-300 ease-linear transform";
 
   return (
-    <button className={burgerClass} onClick={() => setOpen(!open)}>
+    <button className={burgerClass} onClick={() => setOpen(!open)} aria-label="Toggle Menu">
       <div
         className={`${lineClass} ${open ? "rotate-45 translate-y-3 bg-ada-pink" : "rotate-0 bg-ada-blue"}`}
       />

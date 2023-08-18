@@ -15,14 +15,15 @@ const ProductPage = (): JSX.Element => {
     starPink={true}
     flowerWhite={true}
     >
-      <SEO title="Home" />
+      <SEO title="Home" lang="pl"/>
       <MaxWithBgColorContainer bgColor="bg-transparent">
       <CustomBanner
-        title={<><span className="italic">Slow Marketing</span> a reklama na Facebooku i Instagramie</>}
-        paragraph1={<>Chcesz zdobyć nowych<span className="font-bold"> lojalnych</span> klientów?</>}
-        paragraph2={<>Pokażę Ci, jak to zrobić za pomocą kampanii na Facebooku i Instagramie. Nawet jeśli teraz Manager Reklam budzi u Ciebie <span className="font-bold">przerażenie!</span></>}
-        image={<StaticImage src={"../images/ada_ebook.webp"} alt="Ada Promis - hero" placeholder="none"  />}
-        actionButton={false}
+        title="W e-booku przeczytasz o…"
+        paragraph1={<>zastosowaniu Slow Marketingu w kampaniach reklamowych na Facebooku i Instagramie. Dowiesz się, czym się kierować przy wyborze celów reklamowych,<span className="font-bold"> jakie sposoby targetowania grup wybrać i jak tworzyć kreacje. </span> </>}
+        paragraph2={<>Pewnie wolisz korzystać ze sprawdzonej wiedzy niż próbować znaleźć informacje  w Internecie, prawda?</>}
+        image={<StaticImage src={"../images/ada_ebook.png"} alt="Ada Promis - Ebook" placeholder="none" width={650} height={650}  />}
+        btnText="Chcę nauczyć się wdrażać kampanie w rytmie slow"
+        actionButton={true}
       />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear">
@@ -32,7 +33,9 @@ const ProductPage = (): JSX.Element => {
         <EbookKnowledge />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-transparent">
-          <References/>
+          <References
+            title="Co mówią osoby, z którymi tworzyłam kampanie?"
+          />
       </MaxWithBgColorContainer>
     </Layout>
   )
