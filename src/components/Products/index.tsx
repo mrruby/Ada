@@ -8,14 +8,14 @@ const Products = (): JSX.Element => {
       title: "Konsultacje reklamowe",
       description:"Prowadź kampanie reklamowe pod moim okiem i rozwijaj biznes.",
       buttonText: 'Pokaż ofertę konsultacji dla mnie',
-      url: 'https://getbold.pl/oferta/',
+      url: 'https://sklep.adrianna.com.pl/search?q=konsultacja',
       image: <StaticImage src={"../../images/ada-konsultacje.png"} alt="Ada Promis" placeholder="none" width={300} height={300} />
     },
     {
       title: "Prowadzenie kampanii",
       description: "Oddeleguj pozyskiwanie klientów i ciesz się czasem dla Ciebie.",
       buttonText: 'Poprowadzę Twoje kampanie reklamowe',
-      url: 'https://sklep.adrianna.com.pl/search',
+      url: '/contact',
       image: <StaticImage src={"../../images/ada-kampanie.png"} alt="Ada Promis" placeholder="none" width={300} height={300} />    
     },
   ];
