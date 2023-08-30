@@ -8,20 +8,20 @@ const Products = (): JSX.Element => {
       title: "Konsultacje reklamowe",
       description:"Prowadź kampanie reklamowe pod moim okiem i rozwijaj biznes.",
       buttonText: 'Pokaż ofertę konsultacji dla mnie',
-      url: '/product',
-      image: <StaticImage src={"../../images/ada_hero.png"} alt="Ada Promis" placeholder="none" width={300} height={300} />
+      url: 'https://getbold.pl/oferta/',
+      image: <StaticImage src={"../../images/ada-konsultacje.png"} alt="Ada Promis" placeholder="none" width={300} height={300} />
     },
     {
       title: "Prowadzenie kampanii",
-      description:"Oddeleguj pozyskiwanie klientów i ciesz się czasem dla Ciebie.",
-      buttonText: 'Sprawdź, jak poprowadzę dla Ciebie kampanie reklamowe',
-      url: '#',
-      image: <></>
+      description: "Oddeleguj pozyskiwanie klientów i ciesz się czasem dla Ciebie.",
+      buttonText: 'Poprowadzę Twoje kampanie reklamowe',
+      url: 'https://sklep.adrianna.com.pl/search',
+      image: <StaticImage src={"../../images/ada-kampanie.png"} alt="Ada Promis" placeholder="none" width={300} height={300} />    
     },
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row items-center w-full px-4 lg:px-10">
+    <div className="flex flex-col md:flex-row items-center w-full px-4 lg:px-10 lg:gap-[32px]">
       {productsData.map((item, index) => (
         <ProductBox
           key={index}

@@ -9,6 +9,8 @@ type LayoutElements = {
   flowerBlue?: boolean;
   starPink?: boolean;
   flowerWhite?: boolean;
+  twoBlueFlowers?: boolean;
+  flowerBlue2?: boolean;
 };
   
   type Props = {
@@ -19,6 +21,8 @@ type LayoutElements = {
     flowerBlue: false,
     starPink: false,
     flowerWhite: false,
+    twoBlueFlowers: false,
+    flowerBlue2: false,
   };
 
   const Layout: React.FC<Props> = ({
