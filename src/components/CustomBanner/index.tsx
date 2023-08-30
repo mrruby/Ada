@@ -31,10 +31,10 @@ const CustomBanner = ({
           <p className={subtitleClass}>{paragraph2}</p>
           <p className={subtitleClass}>{paragraph3}</p>
           <div className="mt-[14px]">
-          {actionButton && <Button type="button" text={btnText} url="/ebook"/>}
+          {actionButton && <Button type="button" text={btnText} url="https://sklep.adrianna.com.pl/search"/>}
           </div>
         </div>
-        <div className="lg:absolute top-10 right-[-120px]">
+        <div className="lg:absolute top-0 right-[-50px]">
           {image}
         </div>
     </div>
