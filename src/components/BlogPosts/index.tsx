@@ -29,7 +29,7 @@ const BlogPosts = (): JSX.Element => {
       heading="Kampanie reklamowe w duchu slow?"
       data={postsData}
       actionButtonBoxes={true}
-      headingTextStyle= "text-adaTitle lg:text-[60px] text-ada-white40"
+      headingTextStyle="text-adaSubtitle md:text-adaTitle lg:text-[60px] text-ada-grey"
     />
   );
 };

@@ -15,6 +15,11 @@ module.exports = {
       },
       backgroundImage: {
         "linear": "linear-gradient(180deg, #F4DCE8 0%, #FFF 100%);",
+        "linear2": "linear-gradient(0deg, #EEDCF6 0%, #FFF 100%);",
+        "linear3": "linear-gradient(180deg, #EEDCF6 0%, #FFF 100%)",
+      },
+      backgroundPosition: {
+        "bgPosition": "0px 310px",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
@@ -27,6 +32,12 @@ module.exports = {
         adaTitle: "3rem",
         adaBig: "5rem",
       },
+      animation: {
+        fadeIn: 'fadeIn .3s ease-in-out',
+        carousel: 'marquee 60s linear infinite',
+        blink: 'blink 1.4s both infinite',
+        'spin-slow': 'spin 4s linear infinite',
+      }
     },
   },
   plugins: [require("@tailwindcss/forms")],

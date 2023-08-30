@@ -66,7 +66,7 @@ const responsive = {
 const CustomLeftArrow = ({ onClick, ...rest }: any) => {
   return (
     <div
-      className={`absolute top-0 md:top-[-100px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
+      className={`absolute max-h-[400px] top-0 md:top-[-100px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
       onClick={onClick}
     >
       <img
@@ -82,7 +82,7 @@ const CustomLeftArrow = ({ onClick, ...rest }: any) => {
 const CustomRightArrow = ({ onClick, ...rest }: any) => {
   return (
     <div
-      className={`absolute top-0 md:top-[-100px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
+      className={`absolute max-h-[400px] top-0 md:top-[-100px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
       onClick={onClick}
     >
       <img
@@ -97,24 +97,26 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
 
 const References = ({ title }: IReferences): JSX.Element => {
   return (
-    <div className="pt-[100px]">
-    <h3 className="text-center text-adaSubtitle lg:text-adaTitle font-bold lg:mb-2 border-b-[20px] lg:border-b-[34px]	border-ada-light-pink h-[40px] lg:h-[60px]">{title}</h3>
-    <Carousel
-      responsive={responsive}
-      infinite={true}
-      customLeftArrow={<CustomLeftArrow />}
-      customRightArrow={<CustomRightArrow />}
-      ssr={true}
-    >
-      {referencesList.map((reference, index) => (
-        <Reference
-          key={index}
-          reference={reference.reference}
-          name={reference.name}
-          company={reference.company}
-        />
-      ))}
-    </Carousel>
+    <div className="pt-[20px]">
+      <h3 className="text-center text-adaSubtitle lg:text-adaTitle font-bold lg:mb-2 border-b-[20px] lg:border-b-[34px]	border-ada-light-pink h-[40px] lg:h-[60px]">{title}</h3>
+      {referencesList &&
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+          ssr={true}
+        >
+          {referencesList.map((reference, index) => (
+            <Reference
+              key={index}
+              reference={reference.reference}
+              name={reference.name}
+              company={reference.company}
+            />
+          ))}
+        </Carousel>
+      }
     </div>
   );
 };
