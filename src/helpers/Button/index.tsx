@@ -30,7 +30,7 @@ export const Button: React.FC<Props> = ({ type, text,
         <button
       onClick={handleButtonClick}
       type={type}
-      className={`bg-ada-light-pink ${textSize} px-[20px] py-[6px] hover:bg-ada-pink ${borderStyles}`}    
+      className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink ${borderStyles}`}    
       >
       {text}
     </button>
