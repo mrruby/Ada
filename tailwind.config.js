@@ -1,0 +1,44 @@
+module.exports = {
+  mode: "jit",
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        ada: {
+          blue: "#253274",
+          grey: "rgba(37, 50, 116, 0.20);",
+          "light-pink": "#EEDCF6",
+          pink: "#F2A7B2",
+          white: "#FFFFFF",
+          white40: "#FFFFFF66",
+        },
+      },
+      backgroundImage: {
+        "linear": "linear-gradient(180deg, #F4DCE8 0%, #FFF 100%);",
+        "linear2": "linear-gradient(0deg, #EEDCF6 0%, #FFF 100%);",
+        "linear3": "linear-gradient(180deg, #EEDCF6 0%, #FFF 100%)",
+      },
+      backgroundPosition: {
+        "bgPosition": "0px 310px",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+      fontSize: {
+        adaNav: "0.9375rem",
+        adaBase: "1.125rem",
+        adaSubtitle: "1.5rem",
+        adaSubtitleSecondary: "2.0625rem",
+        adaTitle: "3rem",
+        adaBig: "5rem",
+      },
+      animation: {
+        fadeIn: 'fadeIn .3s ease-in-out',
+        carousel: 'marquee 60s linear infinite',
+        blink: 'blink 1.4s both infinite',
+        'spin-slow': 'spin 4s linear infinite',
+      }
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
