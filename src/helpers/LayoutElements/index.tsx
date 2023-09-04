@@ -129,3 +129,49 @@ export const FlowerBlue2: React.FC<Props> = ({
     />
   );
 };
+
+export const FlowerBlue3: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+}) => {
+  return (
+    <img
+    src="../assets/layout-elements/flower-blue.svg"
+    alt="Blue Flower - Ada Promis"
+      className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
+        } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
+        } ${mobileBottom && mobileBottom} z-20`}
+      width={150}
+      height={150}
+    />
+  );
+};
+
+export const TwoBlueFlowers2: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+}) => {
+  return (
+    <img
+      src="../assets/layout-elements/two-flowers.svg"
+      alt="Two Flowers - Ada Promis"
+      className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
+        } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
+        } ${mobileBottom && mobileBottom} z-20 opacity-0 lg:opacity-100`}
+      width={230}
+      height={300}
+    />
+  );
+};
