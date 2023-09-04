@@ -19,7 +19,7 @@ export const ContentBox: React.FC<ContentBoxProps> = ({ title, description, acti
       </div>
       <div className="text-center">
       <h3 className="font-semibold text-adaSubtitle border-b-[25px]	border-ada-light-pink h-[33px]">{title}</h3>
-      <p className="text-adaBase pt-9 pb-[30px] leading-tight max-w-[232px] m-auto">{description}</p>
+      <p className="text-adaDesc pt-9 pb-[30px] leading-tight max-w-[240px] m-auto font-medium">{description}</p>
       </div>
       {actionButton && url  &&<Button type="button" text={btnText} url={url} border={true} textSize="lg:text-adaBase" />}
     </div>

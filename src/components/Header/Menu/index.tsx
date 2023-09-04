@@ -11,17 +11,13 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
   const linkClass = "text-ada-blue text-adaSubtitle md:text-adaNav font-bold uppercase py-3 transition-colors duration-300 hover:text-ada-white hover:border-b-4 hover:border-ada-blue";
 
   const links = [
-    { to: "https://ebook.adrianna.com.pl/", text: "ebook" },
-    { to: "https://checklistafb.adrianna.com.pl", text: "checklista" },
-    { to: "https://metanewsletter.adrianna.com.pl", text: "newsletter" },
-    { to: "/about", text: "O mnie" },
-    { to: "/blog", text: "Blog" },
-    // { to: "/quiz", text: "Quiz" },
-    { to: "/contact", text: "Kontakt" },
-    { to: "/podcast", text: "Podcast" },
+    { to: "https://sklep.adrianna.com.pl/", text: "sklep" },
+    { to: "/about", text: "o mnie" },
+    { to: "/podcast", text: "materiały" },
+    { to: "/blog", text: "blog" },
+    { to: "/contact", text: "kontakt" },
   ];
 
-  
   return (
     <>
     <nav
