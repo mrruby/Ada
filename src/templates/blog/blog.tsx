@@ -7,6 +7,7 @@ import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
 import { DesktopRowMobileColumn } from "../../shared.styled"
 import { siteName } from "../../helpers"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 
 type BlogData = {
   data: {
@@ -40,10 +41,13 @@ const BlogPage = ({
   return (
     <Layout>
       <SEO title={title} description={description} />
+      <MaxWithBgColorContainer extraStyle="pt-[50px]">
       <div>
         <DesktopRowMobileColumn dangerouslySetInnerHTML={{ __html: html }} />
         <Disqus config={disqusConfig} />
       </div>
+      </MaxWithBgColorContainer>
+
     </Layout>
   )
 }
