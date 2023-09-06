@@ -4,7 +4,6 @@ import SEO from "components/seo"
 import CustomBanner from "components/CustomBanner"
 import { StaticImage } from "gatsby-plugin-image"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import BlogPosts from "components/BlogPosts"
 import Features from "components/Features"
 import Products from "components/Products"
 import NewsletterBanner from "components/NewsletterBanner"
@@ -32,9 +31,6 @@ const EbookPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
       <Features />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="z-20">
-      <BlogPosts />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-transparent">
           <References
