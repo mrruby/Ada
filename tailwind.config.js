@@ -8,6 +8,7 @@ module.exports = {
           blue: "#253274",
           grey: "rgba(37, 50, 116, 0.20);",
           "light-pink": "#EEDCF6",
+          "dark-pink": "#ABA3AF",
           pink: "#F2A7B2",
           white: "#FFFFFF",
           white40: "#FFFFFF66",

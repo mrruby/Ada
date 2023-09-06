@@ -24,6 +24,7 @@ const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
     title: edge.node.frontmatter.title,
     tags: edge.node.frontmatter.tags,
     date: edge.node.frontmatter.date,
+    thumbnail: edge.node.frontmatter.thumbnail,
     slug: edge.node.fields.slug,
   }));
 
@@ -89,6 +90,7 @@ const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
             title={item.title}
             tags={item.tags}
             date={item.date}
+            thumbnail={item.thumbnail}
             slug={item.slug}
           />
         ))}
