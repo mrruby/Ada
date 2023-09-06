@@ -1,16 +1,18 @@
 import React from "react"
 import Footer from "../Footer";
 import Header from "../Header";
-import { LayoutElements } from "../Layout/elements";
 import { ThemeProvider } from "styled-components"
 import { theme } from "./theme"
+import { LayoutElements } from "../Layout/elements";
 
 type LayoutElements = {
   flowerBlue?: boolean;
   starPink?: boolean;
   flowerWhite?: boolean;
   twoBlueFlowers?: boolean;
+  twoBlueFlowers2?: boolean;
   flowerBlue2?: boolean;
+  flowerBlue3?: boolean;
 };
   
   type Props = {
@@ -22,7 +24,9 @@ type LayoutElements = {
     starPink: false,
     flowerWhite: false,
     twoBlueFlowers: false,
+    twoBlueFlowers2: false,
     flowerBlue2: false,
+    flowerBlue3: false,
   };
 
   const Layout: React.FC<Props> = ({

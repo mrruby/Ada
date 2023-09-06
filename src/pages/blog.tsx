@@ -6,6 +6,11 @@ import SEO from "../components/seo"
 import Post from "components/Post"
 import { DesktopRowMobileColumn } from "../shared.styled"
 import { isFutureDate } from "../helpers"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import CustomBanner from "components/CustomBanner"
+import { StaticImage } from "gatsby-plugin-image"
+import BlogPosts from "components/BlogPosts"
+import NewsletterBanner from "components/NewsletterBanner"
 
 type Blog = {
   node: {
@@ -56,10 +61,33 @@ const BlogPage = (): JSX.Element => {
   `)
 
   return (
-    <Layout>
+    <Layout
+      flowerBlue={true}
+      flowerBlue3={true}
+    >
       <SEO title="Blog" />
-      <h1>Lista moich blogów</h1>
-      <DesktopRowMobileColumn>
+      <MaxWithBgColorContainer >
+      <CustomBanner
+        title="Witaj na moim blogu!"
+        paragraph1={<>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla b</>}
+        btnText="Pokaż mi więcej"
+        image={<StaticImage src={"../images/ada-blog.png"} alt="Ada Promis - hero" placeholder="none"  width={680} height={760} />}
+        paragraphStyle="max-w-[532px]"
+        imgStyle="lg:absolute top-0 right-0"
+        btnUrl="#posty"
+      />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="z-20">
+        <BlogPosts />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+          <NewsletterBanner 
+            title3
+            paragraph
+            image
+          />
+        </MaxWithBgColorContainer>
+      {/* <DesktopRowMobileColumn>
         {edges
           .filter(
             ({ node: { frontmatter } }) => !isFutureDate(frontmatter.date)
@@ -82,7 +110,7 @@ const BlogPage = (): JSX.Element => {
               />
             )
           )}
-      </DesktopRowMobileColumn>
+      </DesktopRowMobileColumn> */}
     </Layout>
   )
 }

@@ -25,8 +25,8 @@ const BlogPosts = (): JSX.Element => {
 
   return (
     <ContentSection
-      title="Sprawdź darmowe materiały"
-      heading="Kampanie reklamowe w duchu slow?"
+      title="na blogu?"
+      heading="Co nowego"
       data={postsData}
       actionButtonBoxes={true}
       headingTextStyle="text-adaSubtitle md:text-adaTitle lg:text-[60px] text-ada-grey"

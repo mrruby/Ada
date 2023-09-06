@@ -13,3 +13,9 @@ body {
   -webkit-overflow-scrolling: touch;
   font-family: 'Montserrat', sans-serif;
 }
+
+.bg-adapromis {
+  background-image: url("../../static/bg-adapromis.png");
+  background-size: cover;
+  background-position: center;
+}
