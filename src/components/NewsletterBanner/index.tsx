@@ -24,7 +24,7 @@ const NewsletterBanner = ({
   const h2ClassName = "text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]";
 
   return (
-    <div className="flex items-left flex-col pt-10 pb-14 relative min-h-[500px] max-w-7xl mx-auto px-2">
+    <div className="flex items-left flex-col pt-10 md:pb-14 relative min-h-[500px] max-w-7xl mx-auto px-2">
       { title1 && (
         <>
           <h2 className={`lg:max-w-[780px] ${h2ClassName}`}>Chcesz wiedzieć więcej o slow</h2>

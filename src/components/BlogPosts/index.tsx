@@ -1,36 +1,99 @@
 import React from "react";
-import ContentSection from "helpers/ContentSection";
+import { BlogPost } from "helpers/BlogPost";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
-const BlogPosts = (): JSX.Element => {
-  const postsData = [
-    {
-      title: "Slow marketing",
-      description: "Jak marketing, który ma generować zyski, może być slow? Przekonaj się, że możesz prowadzić działania marketingowe w zgodzie ze sobą, bez nachalnej sprzedaży i na tym zarabiać.",
-      url: '#',
-      btnText: "Czytaj dalej"
-    },
-    {
-      title: "Lejek sprzedażowy",
-      description: "Czy kuchenny przyrząd ma coś wspólnego z marketingiem? Dowiedz się, jak podzielić działania marketingowe na etapy i zyskać zaufanie swoich odbiorców.",
-      url: '#',
-      btnText: "Czytaj dalej"
-    },
-    {
-      title: "Kampanie reklamowe",
-      description: "Jak ustawić kampanię reklamową Facebook Ads i osiągnąć fajne wyniki? Przeczytaj moje porady o kampaniach reklamowych. Chciałabym to wiedzieć, gdy zaczynałam działać w branży.",
-      url: 'aaa',
-      btnText: "Czytaj dalej"
-    },
-  ];
+type Blog = {
+  node: {
+    frontmatter: {
+      title: string
+      description: string
+      date: string
+      thumbnail: string
+      episodeNumber: number
+      tags: string[]
+    }
+    fields: {
+      slug: string
+    }
+  }
+}
 
+const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
+  const formattedPostsData = postsData?.map((edge) => ({
+    title: edge.node.frontmatter.title,
+    tags: edge.node.frontmatter.tags,
+    date: edge.node.frontmatter.date,
+    slug: edge.node.fields.slug,
+  }));
+
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+      slidesToSlide: 3 
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1
+    }
+  };
+
+  const CustomDot = ({ onClick, ...rest }:any) => {
+    const { index, active } = rest;
+
+    return (
+      <button
+      className={`custom-dot ${
+        active ? "active text-ada-pink" : "inactive"
+      } py-[2px] font-bold bg-ada-light-pink top-[200px] hidden md:block px-[20px]
+      }`}
+        onClick={() => onClick()}
+      >
+        {index + 1}
+      </button>
+    );
+  };
+  
   return (
-    <ContentSection
-      title="na blogu?"
-      heading="Co nowego"
-      data={postsData}
-      actionButtonBoxes={true}
-      headingTextStyle="text-adaSubtitle md:text-adaTitle lg:text-[60px] text-ada-grey"
-    />
+    <div className="py-6 lg:pt-[68px] lg:pb-[40px]" id="blog-posts" >
+      <div className="text-ada-blue flex flex-col items-center " >
+      <div className="flex flex-col items-center text-center">
+        <p className="font-bold lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey">Co nowego</p>
+        <h2 className="px-6 text-adaTitle font-bold">na blogu?</h2>
+        <p className="text-adaBase py-8">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+      </div>
+    </div>
+    <Carousel
+          responsive={responsive}
+          infinite={false}
+          ssr={true}
+          showDots={true}
+          containerClass={"max-w-[1100px] mx-auto"}
+          customDot={<CustomDot />}
+        >
+        {formattedPostsData.map((item, index) => (
+          <BlogPost
+            key={index}
+            title={item.title}
+            tags={item.tags}
+            date={item.date}
+            slug={item.slug}
+          />
+        ))}
+    </Carousel>    
+    </div>
   );
 };
 
