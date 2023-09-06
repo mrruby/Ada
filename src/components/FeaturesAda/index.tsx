@@ -1,16 +1,22 @@
 import React from "react";
 import { FeatureBox } from "helpers/FeatureBox";
 
-const Features = (): JSX.Element => {
+const FeaturesAda = (): JSX.Element => {
   const featuresData = [
     {
-      text: "6 lat doświadczenia w sprzedaży",
+      text: "ODKRYWCZOŚĆ",
     },
     {
-      text: "+1 000 000 złotych wydane na reklamę",
+      text: "STRATEG",
     },
     {
-      text: ">1000 godzin konsultacji marketingowych",
+      text: "INDYWIDUALIZACJA",
+    },
+    {
+      text: "ZBIERANIE",
+    },
+    {
+      text: "NAPRAWIANIE",
     },
   ];
 
@@ -23,4 +29,4 @@ const Features = (): JSX.Element => {
   );
 };
 
-export default Features;
+export default FeaturesAda;

@@ -16,6 +16,7 @@ const EbookPage = (): JSX.Element => {
     flowerBlue={true}
     starPink={true}
     flowerWhite={true}
+    flowerBlue3={true}
     >
       <SEO title="Home" lang="pl"/>
       <MaxWithBgColorContainer bgColor="bg-transparent">
@@ -25,6 +26,7 @@ const EbookPage = (): JSX.Element => {
         paragraph2={<>Nawet jeśli teraz Manager Reklam budzi u Ciebie przerażenie <span className="font-bold">(albo myślisz: co to w ogóle jest?).</span> </>}
         btnText="Dowiedz się więcej o tym, jak zdobyć klientów"
         image={<StaticImage src={"../images/ada_ebook.webp"} alt="Ada Promis - Ebook" placeholder="none" width={650} height={650}  />}
+        btnUrl="#ebook"
       />
         <Products />
       </MaxWithBgColorContainer>
@@ -36,7 +38,7 @@ const EbookPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-transparent">
           <References
-            title="Co mówią osoby, z którymi współpracowałam?"
+            title2
           />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="transparent">

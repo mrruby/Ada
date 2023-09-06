@@ -17,6 +17,7 @@ module.exports = {
         "linear": "linear-gradient(180deg, #F4DCE8 0%, #FFF 100%);",
         "linear2": "linear-gradient(0deg, #EEDCF6 0%, #FFF 100%);",
         "linear3": "linear-gradient(180deg, #EEDCF6 0%, #FFF 100%)",
+        "linear4": "linear-gradient(270deg, #EEDCF6 0%, #FFF 100%)",
       },
       backgroundPosition: {
         "bgPosition": "0px 310px",
@@ -26,7 +27,8 @@ module.exports = {
       },
       fontSize: {
         adaNav: "0.9375rem",
-        adaBase: "1.125rem",
+        adaDesc: "1.125rem",
+        adaBase: "1.25rem",
         adaSubtitle: "1.5rem",
         adaSubtitleSecondary: "2.0625rem",
         adaTitle: "3rem",

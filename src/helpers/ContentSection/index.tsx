@@ -22,7 +22,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({ title,
   headingTextStyle = "text-adaTitle lg:text-adaBig text-ada-grey",
   heading, description, data, actionButtonBoxes  }) => {
   return (
-    <div className=" text-ada-blue flex flex-col items-center py-6 lg:pt-[68px] lg:pb-[150px]">
+    <div className=" text-ada-blue flex flex-col items-center py-6 lg:pt-[68px] lg:pb-[40px]" id="uslugi">
       <div className="flex flex-col items-center text-center">
       <p className={`${headingTextStyle} font-bold lg:h-[58px]`}>
       {heading}
