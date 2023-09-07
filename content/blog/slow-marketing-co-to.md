@@ -11,7 +11,7 @@ date: 2021-07-09T17:05:19.466Z
 ---
 ![taniec](/img/pexels-eternal-happiness-3326362.jpeg?nf_resize=smartcrop&w=460&h=300 "balans w biznesie")
 
-###### Spójrzmy prawdzie w oczy: reklam jest mnóstwo. I na żywo, i w sieci możemy spotkać się z setkami, tysiącami banerów dziennie. Z każdej strony atakują nas działania marketingowe, które wchodzą już powoli na wyższy poziom zaawansowania. I tak oto każdego dnia, wiele zespołów marketingowych zastanawia się nad odpowiedzią na pytanie: jak dotrzeć do odbiorców *tym razem*? Jak zwiększyć sprzedaż? Jak osiągnąć wyniki?
+#### Spójrzmy prawdzie w oczy: reklam jest mnóstwo. I na żywo, i w sieci możemy spotkać się z setkami, tysiącami banerów dziennie. Z każdej strony atakują nas działania marketingowe, które wchodzą już powoli na wyższy poziom zaawansowania. I tak oto każdego dnia, wiele zespołów marketingowych zastanawia się nad odpowiedzią na pytanie: jak dotrzeć do odbiorców *tym razem*? Jak zwiększyć sprzedaż? Jak osiągnąć wyniki?
 
 Slow marketing to połączenie znudzonego konsumenta z kreatywną firmą. To tworzenie prawdziwej relacji między odbiorcą a nadawcą i co więcej: to marketing, który prowadzisz zgodnie z Twoimi wartościami. 
 
@@ -21,7 +21,7 @@ Spotkałam się z wieloma przedsiębiorcami, którzy oczekiwali efektów 'na ju�
 
 I tu z pomocą przychodzi slow marketing. Choć tak naprawdę wcale nie trzeba go tak nazywać: bardziej chodzi tutaj o skupienie się na stworzeniu relacji z naszymi odbiorcami i pewność, że nasz produkt sam się obroni. Dajemy coś od siebie i dostajemy w zamian! W efekcie nasze wyniki miarowo rosną, a my po prostu żyjemy w zgodzie ze sobą. ✨
 
-### Co oznacza slow marketing?
+## Co oznacza slow marketing?
 
 Slow marketing (zwany również 'marketing for hippies') to działania zwrócone w stronę klienta i nakierowane na utworzenie prawdziwej, **mocnej relacji między marką a odbiorcą.**  Choć dla wielu połączenie słów 'marketing' i 'slow' może być nierealne, całe szczęście pojawia się coraz więcej marek działających zgodnie z taką strategią! 
 
@@ -29,7 +29,7 @@ W Polsce może być to między innymi: [Your Kaya](https://yourkaya.pl/) czy np.
 
 ![jezioro widok](/img/tj-holowaychuk-1EYMue_AwDw-unsplash.jpeg?nf_resize=smartcrop&w=460&h=300 "slow marketing")
 
-### Jak stworzyć markę, która komunikuje się w rytmie slow?
+## Jak stworzyć markę, która komunikuje się w rytmie slow?
 
 Jeśli czujesz, że podstawą sukcesu Twojego produktu jest silna relacja z odbiorcą i chcesz postawić na stałych klientów, slow marketing to idealne rozwiązanie dla Ciebie. Oczywiście, warto również pamiętać, że poglądy *slow* często idą w parze z działalnościami, które mają na celu komfort, polepszenie poziomu życia i zdrowie naszego odbiorcy: jak chociażby eko kosmetyki, masaże, joga, zdrowa żywność lub ubrania produkowane w lokalnych szwalniach, bez wyzysku wśród pracowników. 
 
