@@ -18,6 +18,7 @@ type BlogData = {
         tags: string[]
       }
       html: string
+      rawMarkdownBody: any
       fields: {
         slug: string
       }
@@ -29,6 +30,7 @@ const BlogPage = ({
   data: {
     markdownRemark: {
       html,
+      rawMarkdownBody,
       frontmatter: { description, title, date, tags },
       fields: { slug },
     },
@@ -43,7 +45,7 @@ const BlogPage = ({
     <Layout    >
       <SEO title={title} description={description} />
       <MaxWithBgColorContainer extraStyle="pt-[50px]">
-        <BlogPostLayout title={title} date={date} tags={tags} html={html} />
+        <BlogPostLayout title={title} date={date} tags={tags} markdown={rawMarkdownBody}  />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer extraStyle="px-2">
         <Disqus config={disqusConfig} />
@@ -64,6 +66,7 @@ export const pageQuery = graphql`
         tags
         date
       }
+      rawMarkdownBody
       fields {
         slug
       }
