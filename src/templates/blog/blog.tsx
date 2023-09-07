@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 // @ts-ignore
-import { Disqus, CommentCount } from "gatsby-plugin-disqus"
-
+import { Disqus } from "gatsby-plugin-disqus"
 import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
-import { DesktopRowMobileColumn } from "../../shared.styled"
 import { siteName } from "../../helpers"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import BlogPostLayout from "components/BlogPostLayout"
 
 type BlogData = {
   data: {
@@ -15,6 +14,8 @@ type BlogData = {
       frontmatter: {
         description: string
         title: string
+        date: string
+        tags: string[]
       }
       html: string
       fields: {
@@ -28,7 +29,7 @@ const BlogPage = ({
   data: {
     markdownRemark: {
       html,
-      frontmatter: { description, title },
+      frontmatter: { description, title, date, tags },
       fields: { slug },
     },
   },
@@ -39,15 +40,14 @@ const BlogPage = ({
     title: title,
   }
   return (
-    <Layout>
+    <Layout    >
       <SEO title={title} description={description} />
       <MaxWithBgColorContainer extraStyle="pt-[50px]">
-      <div>
-        <DesktopRowMobileColumn dangerouslySetInnerHTML={{ __html: html }} />
-        <Disqus config={disqusConfig} />
-      </div>
+        <BlogPostLayout title={title} date={date} tags={tags} html={html} />
       </MaxWithBgColorContainer>
-
+      <MaxWithBgColorContainer extraStyle="px-2">
+        <Disqus config={disqusConfig} />
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }
@@ -61,6 +61,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        tags
+        date
       }
       fields {
         slug
