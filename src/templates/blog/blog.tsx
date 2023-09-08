@@ -17,7 +17,6 @@ type BlogData = {
         date: string
         tags: string[]
       }
-      html: string
       rawMarkdownBody: any
       fields: {
         slug: string
@@ -29,7 +28,6 @@ type BlogData = {
 const BlogPage = ({
   data: {
     markdownRemark: {
-      html,
       rawMarkdownBody,
       frontmatter: { description, title, date, tags },
       fields: { slug },
@@ -59,7 +57,6 @@ export default BlogPage
 export const pageQuery = graphql`
   query ($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
-      html
       frontmatter {
         title
         description
