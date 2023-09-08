@@ -40,7 +40,7 @@ const BlogPostLayout = ({ title, markdown, date, tags }: Props): JSX.Element => 
     };
 
   return (
-    <div className="max-w-7xl mx-auto px-3 lg:px-5 pb-10">
+    <div className="w-6xl max-w-[920px] mx-auto px-3 lg:px-5 pb-10">
       <h1 className="font-bold text-adaSubtitle md:text-adaSubtitleSecondary pb-4 pt-6">
         {title}
       </h1>
