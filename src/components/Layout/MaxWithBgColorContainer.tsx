@@ -13,7 +13,7 @@ const MaxWithBgColorContainer: React.FC<Props> = ({
 }) => {
     return (
         <div className={`w-screen ${bgColor} ${extraStyle}`}>
-            <div className="container mx-auto max-w-7xl">
+            <div className="container mx-auto">
                 {children}
             </div>
         </div>

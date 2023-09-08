@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Post from "components/Post"
-import { DesktopRowMobileColumn } from "../shared.styled"
-import { isFutureDate } from "../helpers"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import CustomBanner from "components/CustomBanner"
+import { StaticImage } from "gatsby-plugin-image"
+import BlogPosts from "components/BlogPosts"
+import NewsletterBanner from "components/NewsletterBanner"
 
 type Blog = {
   node: {
@@ -56,33 +57,33 @@ const BlogPage = (): JSX.Element => {
   `)
 
   return (
-    <Layout>
+    <Layout
+      flowerBlue={true}
+      flowerBlue3={true}
+      flowerWhite={true}
+    >
       <SEO title="Blog" />
-      <h1>Lista moich blogów</h1>
-      <DesktopRowMobileColumn>
-        {edges
-          .filter(
-            ({ node: { frontmatter } }) => !isFutureDate(frontmatter.date)
-          )
-          .map(
-            (
-              {
-                node: {
-                  frontmatter,
-                  fields: { slug },
-                },
-              },
-              index
-            ) => (
-              <Post
-                reverse={index % 2 == 0}
-                key={frontmatter.title}
-                slug={slug}
-                {...frontmatter}
-              />
-            )
-          )}
-      </DesktopRowMobileColumn>
+      <MaxWithBgColorContainer>
+      <CustomBanner
+        title="Witaj na moim blogu!"
+        paragraph1={<>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla b</>}
+        btnText="Pokaż mi więcej"
+        image={<StaticImage src={"../images/ada-blog.png"} alt="Ada Promis - hero" placeholder="none"  width={680} height={740} />}
+        paragraphStyle="max-w-[532px]"
+        imgStyle="lg:absolute top-0 right-0"
+        btnUrl="#posty"
+      />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear">
+        <BlogPosts postsData={edges} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+          <NewsletterBanner 
+            title3
+            paragraph
+            image
+          />
+        </MaxWithBgColorContainer>
     </Layout>
   )
 }
