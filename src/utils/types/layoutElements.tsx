@@ -3,5 +3,7 @@ export interface ILayoutElements {
     starPink?: boolean;
     flowerWhite?: boolean;
     twoBlueFlowers?: boolean;
+    twoBlueFlowers2?: boolean;
     flowerBlue2?: boolean;
+    flowerBlue3?: boolean;
   }
