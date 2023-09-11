@@ -68,7 +68,7 @@ const BlogPage = (): JSX.Element => {
         title="Witaj na moim blogu!"
         paragraph1={<>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla b</>}
         btnText="Pokaż mi więcej"
-        image={<StaticImage src={"../images/ada-blog.png"} alt="Ada Promis - hero" placeholder="none"  width={680} height={740} />}
+        image={<StaticImage src={"../images/ada_blog.webp"} alt="Ada Promis - hero" placeholder="none"  width={680} height={740} />}
         paragraphStyle="max-w-[532px]"
         imgStyle="lg:absolute top-0 right-0"
         btnUrl="#posty"
