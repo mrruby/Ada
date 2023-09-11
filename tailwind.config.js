@@ -36,11 +36,21 @@ module.exports = {
         adaBig: "5rem",
       },
       animation: {
-        fadeIn: 'fadeIn .3s ease-in-out',
+        fadeIn: 'fadeIn 3s ease-in-out',
         carousel: 'marquee 60s linear infinite',
         blink: 'blink 1.4s both infinite',
         'spin-slow': 'spin 4s linear infinite',
-      }
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],

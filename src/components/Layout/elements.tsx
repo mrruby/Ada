@@ -51,7 +51,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
 
       {flowerBlue2 && (
         <FlowerBlue2
-          mobileTop="top-[5910px] lg:top-[2280px]"
+          mobileTop="top-[5910px] lg:top-[2270px]"
           mobileRight="right-[-70px]"
         />
 

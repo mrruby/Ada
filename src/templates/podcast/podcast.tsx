@@ -9,6 +9,8 @@ import SEO from "../../components/seo"
 import { Description, Title } from "./podcast.styled"
 import { DesktopRowMobileColumn } from "../../shared.styled"
 import { siteName } from "../../helpers"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import PodcastPostLayout from "components/PodcastPostLayout"
 
 type PodcastData = {
   data: {
@@ -21,6 +23,7 @@ type PodcastData = {
         slug: string
       }
       html: string
+      rawMarkdownBody: any
       fields: {
         slug: string
       }
@@ -32,6 +35,7 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
   const {
     frontmatter: { season, episodeNumber, description, title },
     html,
+    rawMarkdownBody,
     fields: { slug },
   } = data.markdownRemark
 
@@ -44,7 +48,12 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <Title>{title}</Title>
+      <MaxWithBgColorContainer extraStyle="pt-[70px] px-3 lg:px-5 flex flex-col w-6xl max-w-[920px] mx-auto">
+      <Audio
+        url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
+      />
+        <PodcastPostLayout title={title} description={description} markdown={rawMarkdownBody}  />
+        {/* <Title>{title}</Title>
       <Description>{description}</Description>
       <Audio
         url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
@@ -52,7 +61,8 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
       <div>
         <DesktopRowMobileColumn dangerouslySetInnerHTML={{ __html: html }} />
         <Disqus config={disqusConfig} />
-      </div>
+      </div> */}
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }
@@ -69,6 +79,7 @@ export const pageQuery = graphql`
         season
         description
       }
+      rawMarkdownBody
       fields {
         slug
       }

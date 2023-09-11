@@ -14,7 +14,7 @@ const AboutPage = (): JSX.Element => {
       twoBlueFlowers2={true}
     >
       <SEO title="O mnie" />
-        <HelloBanner />
+        <HelloBanner />      
       <MaxWithBgColorContainer bgColor="bg-linear4">
         <AdaBanner />
       </MaxWithBgColorContainer>

@@ -18,8 +18,7 @@ const ContactPage = (): JSX.Element => {
     <Layout>
       <SEO title="Kontakt" />
       <MaxWithBgColorContainer extraStyle="pt-[50px]">
-      <Title>Kontakt</Title>
-      <Container
+      {/* <Container
         reverse
         data-sal="slide-up"
         data-sal-delay="300"
@@ -33,7 +32,8 @@ const ContactPage = (): JSX.Element => {
             <StaticImage src={"../images/contact.webp"} alt="banner" />
           </Center>
         </Column>
-      </Container>
+      </Container> */}
+      <ContactForm />
       </MaxWithBgColorContainer>
     </Layout>
   )
