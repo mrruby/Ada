@@ -31,6 +31,7 @@ export const FlowerBlue: React.FC<Props> = ({
     <img
       src="../assets/layout-elements/flower-left-blue.svg"
       alt="Blue Flower - Ada Promis"
+      aria-hidden
       className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
         } ${mobileBottom && mobileBottom} z-0 w-[${width}] max-w-[140px]`}
@@ -54,6 +55,7 @@ export const StarPink: React.FC<Props> = ({
     <img
       src="../../../../assets/layout-elements/star-right-pink.svg"
       alt="Pink Star - Ada Promis"
+      aria-hidden
       className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
         } ${mobileBottom && mobileBottom} z-0 w-[${width}] max-w-[140px]`}
@@ -77,6 +79,7 @@ export const FlowerWhite: React.FC<Props> = ({
     <img
     src="../assets/layout-elements/flower-right-white.svg"
     alt="White Flower - Ada Promis"
+    aria-hidden
     className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
         } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
@@ -98,6 +101,7 @@ export const TwoBlueFlowers: React.FC<Props> = ({
     <img
       src="../assets/layout-elements/two-flowers.svg"
       alt="Two Flowers - Ada Promis"
+      aria-hidden
       className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
         } ${mobileBottom && mobileBottom} z-20 opacity-0 lg:opacity-100`}
@@ -121,6 +125,7 @@ export const FlowerBlue2: React.FC<Props> = ({
     <img
       src="../assets/layout-elements/flower-bottom.svg"
       alt="Blue Flower - Ada Promis"
+      aria-hidden
       className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
         } ${mobileBottom && mobileBottom} z-20`}
@@ -144,6 +149,7 @@ export const FlowerBlue3: React.FC<Props> = ({
     <img
     src="../assets/layout-elements/flower-blue.svg"
     alt="Blue Flower - Ada Promis"
+    aria-hidden
       className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
         } ${mobileBottom && mobileBottom} z-20`}
@@ -167,6 +173,7 @@ export const TwoBlueFlowers2: React.FC<Props> = ({
     <img
       src="../assets/layout-elements/two-flowers.svg"
       alt="Two Flowers - Ada Promis"
+      aria-hidden
       className={`absolute ${top && top} ${right && right} ${left && left} ${bottom && bottom
         } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${mobileLeft && mobileLeft
         } ${mobileBottom && mobileBottom} z-20 opacity-0 lg:opacity-100`}

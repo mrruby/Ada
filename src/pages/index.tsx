@@ -25,8 +25,8 @@ const IndexPage = (): JSX.Element => {
         title="Cześć!"
         paragraph1={<>Tutaj Ada Promis. <br/> Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić świadomy, kreatywny marketing dla Twojego biznesu.</>}
         btnText="Pokaż mi więcej"
-        image={<StaticImage src={"../images/ada-konsultacje.png"} alt="Ada Promis - hero" placeholder="none"  width={700} height={700} />}
-        paragraphStyle="max-w-[592px]"
+        image={<StaticImage src={"../images/ada_hero2.png"} alt="Ada Promis - hero" placeholder="none"  width={690} height={690} />}
+        paragraphStyle="max-w-[592px] px-2 md:px-5 z-"
         btnUrl="#uslugi"
       />
         </MaxWithBgColorContainer>
