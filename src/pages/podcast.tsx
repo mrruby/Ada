@@ -1,11 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Post from "components/Post"
-import { DesktopRowMobileColumn } from "../shared.styled"
-import { isFutureDate } from "../helpers"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import Podcasts from "components/Podcasts"
 
 type Podcast = {
   node: {
@@ -58,31 +56,9 @@ const PodcastsPage = (): JSX.Element => {
   return (
     <Layout>
       <SEO title="Podcast" />
-      <h1>Lista moich podcastów</h1>
-      <DesktopRowMobileColumn>
-        {edges
-          .filter(
-            ({ node: { frontmatter } }) => !isFutureDate(frontmatter.date)
-          )
-          .map(
-            (
-              {
-                node: {
-                  frontmatter,
-                  fields: { slug },
-                },
-              },
-              index
-            ) => (
-              <Post
-                reverse={index % 2 == 0}
-                key={frontmatter.title}
-                slug={slug}
-                {...frontmatter}
-              />
-            )
-          )}
-      </DesktopRowMobileColumn>
+      <MaxWithBgColorContainer>
+        <Podcasts postsData={edges}/>
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }

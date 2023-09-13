@@ -101,12 +101,12 @@ const References = ({ title1, title2 }: IReferences): JSX.Element => {
     <div className="pt-[120px]">
         {title1 &&
           <>
-          <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[12px] lg:border-b-[34px]	border-ada-light-pink h-[24px] lg:h-[60px]">Co mówią osoby,</h3>
-          <h3 className="mx-auto max-w-[780px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[12px] lg:border-b-[34px]	border-ada-light-pink h-[24px] lg:h-[60px]">z którymi współpracowałam?</h3>
+          <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">Co mówią osoby,</h3>
+          <h3 className="mx-auto max-w-[780px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">z którymi współpracowałam?</h3>
           </>
         }
        {title2 &&
-          <h3 className="text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[20px] lg:border-b-[34px]	border-ada-light-pink h-[40px] lg:h-[60px]">Co mówią Ci, którzy przeczytali?</h3>
+          <h3 className="text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">Co mówią Ci, którzy przeczytali?</h3>
         }
       {referencesList &&
         <Carousel
