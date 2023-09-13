@@ -1,13 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 // @ts-ignore
-import { Disqus } from "gatsby-plugin-disqus"
-
 import Layout from "../../components/Layout"
 import Audio from "../../components/Audio"
 import SEO from "../../components/seo"
-import { Description, Title } from "./podcast.styled"
-import { DesktopRowMobileColumn } from "../../shared.styled"
 import { siteName } from "../../helpers"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import PodcastPostLayout from "components/PodcastPostLayout"
@@ -22,7 +18,6 @@ type PodcastData = {
         title: string
         slug: string
       }
-      html: string
       rawMarkdownBody: any
       fields: {
         slug: string
@@ -34,7 +29,6 @@ type PodcastData = {
 const PodcastPage = ({ data }: PodcastData): JSX.Element => {
   const {
     frontmatter: { season, episodeNumber, description, title },
-    html,
     rawMarkdownBody,
     fields: { slug },
   } = data.markdownRemark
@@ -53,15 +47,6 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
         url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
       />
         <PodcastPostLayout title={title} description={description} markdown={rawMarkdownBody}  />
-        {/* <Title>{title}</Title>
-      <Description>{description}</Description>
-      <Audio
-        url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
-      />
-      <div>
-        <DesktopRowMobileColumn dangerouslySetInnerHTML={{ __html: html }} />
-        <Disqus config={disqusConfig} />
-      </div> */}
       </MaxWithBgColorContainer>
     </Layout>
   )
@@ -72,7 +57,6 @@ export default PodcastPage
 export const pageQuery = graphql`
   query ($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
-      html
       frontmatter {
         title
         episodeNumber
