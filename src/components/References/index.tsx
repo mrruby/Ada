@@ -106,7 +106,7 @@ const References = ({ title1, title2 }: IReferences): JSX.Element => {
           </>
         }
        {title2 &&
-          <h3 className="text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">Co mówią Ci, którzy przeczytali?</h3>
+          <h3 className="mx-auto max-w-[850px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">Co mówią Ci, którzy przeczytali?</h3>
         }
       {referencesList &&
         <Carousel

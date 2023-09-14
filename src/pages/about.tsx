@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "components/Layout"
-import CustomBanner from "components/CustomBanner"
 import SEO from "components/seo"
 import FeaturesAda from "components/FeaturesAda"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
