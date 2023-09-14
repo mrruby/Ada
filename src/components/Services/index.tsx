@@ -27,7 +27,7 @@ const Services = (): JSX.Element => {
     <ContentSection
       title="Moje usługi"
       heading="W czym mogę Ci pomóc?"
-      description="Szukasz czegoś innego? Napisz , czego potrzebujesz i wspólnie zobaczymy, co możemy zrobić!"
+      description="Szukasz czegoś innego? Napisz, czego potrzebujesz i wspólnie zobaczymy, co możemy zrobić!"
       data={servicesData}
       actionButtonBoxes={true}    
       />

@@ -19,24 +19,14 @@ const BlogPostLayout = ({ title, markdown, date, tags }: Props): JSX.Element => 
     .replace(/\//g, ".");
 
     const components = {
-      h2: ({ children }: { children: any }) => (
-        <h2 className="font-bold md:text-adaSubtitle py-3">{children}</h2>
+      h2: ({ ...props }) => (
+        <h2 className="font-bold md:text-adaSubtitle py-3" {...props} />
       ),
-      h3: ({ children }: { children: any }) => (
-        <h3 className="font-bold py-3 ">{children}</h3>
-      ),
-      h4: ({ children }: { children: any }) => (
-        <h4 className="font-bold py-3 ">{children}</h4>
-      ),
-      ul: ({ children }: { children: any }) => (
-        <ul className="list-disc pl-6 pb-4">{children}</ul>
-      ),
-      ol: ({ children }: { children: any }) => (
-        <ol className="list-decimal pl-6 pb-4">{children}</ol>
-      ),
-      p: ({ children }: { children: any }) => (
-        <p className="pb-4">{children}</p>
-      ),
+      h3: ({ ...props }) => <h3 className="font-bold py-3" {...props} />,
+      h4: ({ ...props }) => <h4 className="font-bold py-3" {...props} />,
+      ul: ({ ...props }) => <ul className="list-disc pl-6 pb-4" {...props} />,
+      ol: ({ ...props }) => <ol className="list-decimal pl-6 pb-4" {...props} />,
+      p: ({ ...props }) => <p className="pb-4" {...props} />,
     };
 
   return (

@@ -7,7 +7,7 @@ const FooterMenu = (): JSX.Element => {
   const links = [
     { to: "https://sklep.adrianna.com.pl/", text: "sklep" },
     { to: "/about", text: "o mnie" },
-    { to: "/podcast", text: "materiały" },
+    { to: "/materials", text: "materiały" },
     { to: "/blog", text: "blog" },
     { to: "/contact", text: "kontakt" },
   ];

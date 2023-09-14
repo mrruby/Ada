@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "components/Layout"
-import CustomBanner from "components/CustomBanner"
 import SEO from "components/seo"
 import FeaturesAda from "components/FeaturesAda"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
@@ -14,7 +13,7 @@ const AboutPage = (): JSX.Element => {
       twoBlueFlowers2={true}
     >
       <SEO title="O mnie" />
-        <HelloBanner />
+        <HelloBanner />      
       <MaxWithBgColorContainer bgColor="bg-linear4">
         <AdaBanner />
       </MaxWithBgColorContainer>
