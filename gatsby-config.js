@@ -55,7 +55,6 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-root-import`,
