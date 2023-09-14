@@ -8,11 +8,12 @@ interface Props {
   textSize?: string;
   sectionId?: string;
   border?: boolean;
+  btnStyle?: string;
 }
 
 export const Button: React.FC<Props> = ({ type, text, 
   textSize = "lg:text-[25px]", url,
-  border, sectionId
+  border, sectionId, btnStyle
 }) => {
   const handleButtonClick = () => {
     if (sectionId) {
@@ -30,7 +31,7 @@ export const Button: React.FC<Props> = ({ type, text,
         <button
       onClick={handleButtonClick}
       type={type}
-      className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink ${borderStyles}`}    
+      className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink ${borderStyles} ${btnStyle}`}    
       >
       {text}
     </button>

@@ -28,7 +28,7 @@ const Podcasts = ({ postsData }: { postsData: Podcast[] }): JSX.Element => {
 
   return (
 <div className="flex flex-col items-center pt-[70px]">
-    <h1 className="px-4 text-adaTitle font-bold pb-8 {titleStyle}">Lista moich podkastów</h1>
+    <h1 className="px-4 text-adaTitle font-bold pb-8 {titleStyle}">Lista moich podcastów</h1>
       <div className="flex flex-col pb-5 md:pb-0">
          {formattedPostsData.map((item, index) => (
           <Podcast

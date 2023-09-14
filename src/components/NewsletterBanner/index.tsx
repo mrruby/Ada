@@ -6,7 +6,9 @@ type Props = {
   title1?: boolean;
   title2?: boolean;
   title3?: boolean;
+  title4?: boolean;
   paragraph?: boolean;
+  paragraph2?: boolean;
   twoParagraphs?: boolean; 
   btnText?: string
   image?: boolean;
@@ -16,7 +18,9 @@ const NewsletterBanner = ({
   title1,
   title2,
   title3,
+  title4,
   paragraph,
+  paragraph2,
   twoParagraphs,
   btnText = "Zapisuję się, zanim wyjdzie kolejny mail!",
   image
@@ -46,10 +50,22 @@ const NewsletterBanner = ({
         </>
       )
       }
+      { title4 && (
+        <>
+          <h2 className={`lg:max-w-[566px] ${h2ClassName}`}>Zaglądaj tutaj często</h2>
+          <h2 className={`lg:max-w-[335px] ${h2ClassName}`}>po nowości!</h2>
+        </>
+      )
+      }
       {paragraph && (
         <p className="lg:text-adaBase mt-[30px]">
           Zapisz się do newslettera i odbieraj maile z wiedzą.
         </p>
+      )}
+      {paragraph2 && (
+        <p className="lg:text-adaSubtitle mt-[30px] lg:max-w-[641px]">
+          Chcesz być na bieżąco? Zapisz się na slowmarketingowy newsletter i zdobądź wiedzę o robieniu marketingu w zgodzie ze sobą!        
+      </p>
       )}
     {twoParagraphs && (
     <div>

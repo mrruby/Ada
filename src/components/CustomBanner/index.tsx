@@ -30,7 +30,7 @@ const CustomBanner = ({
   const subtitleClass = "text-adaSubtitle font-medium leading-tight py-2";
 
   return (
-    <div className="flex px-6 flex-col items-center lg:flex-row text-ada-blue relative min-h-[740px] max-w-[1280px] mx-auto">
+    <div className="flex xl:px-6 flex-col items-center lg:flex-row text-ada-blue relative min-h-[740px] max-w-[1280px] mx-auto">
         <div className={paragraphStyle}>
           <h1 className="text-adaTitle font-bold pb-8 lg:w-[704px] {titleStyle}">{title}</h1>
           <p className={subtitleClass}>{paragraph1}</p>
