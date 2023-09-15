@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 // @ts-ignore
+import { Disqus } from "gatsby-plugin-disqus"
 import Layout from "../../components/Layout"
 import Audio from "../../components/Audio"
 import SEO from "../../components/seo"
@@ -43,10 +44,17 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
     <Layout>
       <SEO title={title} description={description} />
       <MaxWithBgColorContainer extraStyle="pt-[70px] px-3 lg:px-5 flex flex-col w-6xl max-w-[920px] mx-auto">
-      <Audio
-        url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
-      />
-        <PodcastPostLayout title={title} description={description} markdown={rawMarkdownBody}  />
+        <Audio
+          url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
+        />
+        <PodcastPostLayout
+          title={title}
+          description={description}
+          markdown={rawMarkdownBody}
+        />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer extraStyle="px-2">
+        <Disqus config={disqusConfig} />
       </MaxWithBgColorContainer>
     </Layout>
   )
