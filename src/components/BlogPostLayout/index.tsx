@@ -1,14 +1,19 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
+import React from "react"
+import Markdown from "markdown-to-jsx"
 
 type Props = {
-  title: string;
-  markdown: string;
-  date: string;
-  tags: string[];
-};
+  title: string
+  markdown: string
+  date: string
+  tags: string[]
+}
 
-const BlogPostLayout = ({ title, markdown, date, tags }: Props): JSX.Element => {
+const BlogPostLayout = ({
+  title,
+  markdown,
+  date,
+  tags,
+}: Props): JSX.Element => {
   const formattedDate = new Date(date)
     .toLocaleDateString("en-UK", {
       day: "2-digit",
@@ -16,18 +21,18 @@ const BlogPostLayout = ({ title, markdown, date, tags }: Props): JSX.Element => 
       year: "numeric",
     })
     .toUpperCase()
-    .replace(/\//g, ".");
+    .replace(/\//g, ".")
 
-    const components = {
-      h2: ({ ...props }) => (
-        <h2 className="font-bold md:text-adaSubtitle py-3" {...props} />
-      ),
-      h3: ({ ...props }) => <h3 className="font-bold py-3" {...props} />,
-      h4: ({ ...props }) => <h4 className="font-bold py-3" {...props} />,
-      ul: ({ ...props }) => <ul className="list-disc pl-6 pb-4" {...props} />,
-      ol: ({ ...props }) => <ol className="list-decimal pl-6 pb-4" {...props} />,
-      p: ({ ...props }) => <p className="pb-4" {...props} />,
-    };
+  const overrides = {
+    h2: ({ ...props }) => (
+      <h2 className="font-bold md:text-adaSubtitle py-3" {...props} />
+    ),
+    h3: ({ ...props }) => <h3 className="font-bold py-3" {...props} />,
+    h4: ({ ...props }) => <h4 className="font-bold py-3" {...props} />,
+    ul: ({ ...props }) => <ul className="list-disc pl-6 pb-4" {...props} />,
+    ol: ({ ...props }) => <ol className="list-decimal pl-6 pb-4" {...props} />,
+    p: ({ ...props }) => <p className="pb-4" {...props} />,
+  }
 
   return (
     <div className="w-6xl max-w-[920px] mx-auto px-3 lg:px-5 pb-10">
@@ -40,9 +45,9 @@ const BlogPostLayout = ({ title, markdown, date, tags }: Props): JSX.Element => 
         </p>
         <p className="font-bold text-adaNav pb-[24px]">{formattedDate}</p>
       </div>
-      <ReactMarkdown components={components} children={markdown}></ReactMarkdown>  
+      <Markdown options={{ overrides }}>{markdown}</Markdown>
     </div>
-  );
-};
+  )
+}
 
-export default BlogPostLayout;
+export default BlogPostLayout
