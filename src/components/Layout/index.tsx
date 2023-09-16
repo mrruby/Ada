@@ -1,8 +1,6 @@
 import React from "react"
 import Footer from "../Footer";
 import Header from "../Header";
-import { ThemeProvider } from "styled-components"
-import { theme } from "./theme"
 import { LayoutElements } from "../Layout/elements";
 
 type LayoutElements = {
@@ -35,14 +33,12 @@ type LayoutElements = {
   }) => {
 
   return (
-    <ThemeProvider theme={theme}>
     <div className="antialiased min-h-screen max-w-full overflow-hidden flex flex-col scroll-smooth relative text-ada-blue">
         <Header />
         {children}
         <Footer />
         <LayoutElements {...defaultProps} {...layoutElements} />
     </div>
-    </ThemeProvider>
   )
 }
 
