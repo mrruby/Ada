@@ -1,17 +1,44 @@
 import React from "react"
-import Layout from "components/Layout"
-import CustomBanner from "components/CustomBanner"
+import { graphql } from "gatsby"
 import SEO from "components/seo"
-import { StaticImage } from "gatsby-plugin-image"
-import { Policy } from "components/Legal"
+import Layout from "../components/Layout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import LegalLayout from "components/LegalLayout"
 
-const PolicyPage = (): JSX.Element => {
+
+type PolicyData = {
+  data: {
+    markdownRemark: {
+      rawMarkdownBody: any
+    } 
+  }
+}
+
+const PolicyPage = ({
+  data: {
+    markdownRemark: {
+      rawMarkdownBody
+    },
+  },
+  }: PolicyData): JSX.Element => {
+
   return (
     <Layout>
       <SEO title="Polityka prywatności & plików cookies" />
-      <Policy />
+      <MaxWithBgColorContainer>
+        <LegalLayout markdown={rawMarkdownBody}  />
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }
 
 export default PolicyPage
+
+
+export const pageQuery = graphql`
+  query {
+  markdownRemark(fields: { slug: { eq: "/legal/policy/" } }) {
+    rawMarkdownBody
+  }
+}
+`

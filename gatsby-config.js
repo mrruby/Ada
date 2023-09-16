@@ -67,7 +67,6 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-scroll-reveal`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
