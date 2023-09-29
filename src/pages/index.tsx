@@ -42,7 +42,7 @@ const IndexPage = (): JSX.Element => {
               quality={100}
             />
           }
-          imgStyle="max-w-[592px]"
+          imgStyle="max-w-[592px] self-end"
           paragraphStyle="max-w-[592px] px-2 md:px-5"
           btnUrl="#uslugi"
         />
