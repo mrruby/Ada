@@ -8,7 +8,7 @@ const ContactForm = (): JSX.Element => {
 
   return (
     <div className="flex flex-col items-center">
-    <h1 className="px-4 text-adaTitle font-bold pb-8 {titleStyle}">Kontakt</h1>
+    <h1 className="px-4 text-adaTitle font-bold pb-8">Kontakt</h1>
       <div className="flex flex-col md:flex-row pb-5 md:pb-0">
         <div>
           <StaticImage src={"../../images/contact.webp"} alt="Ada Promis - kontakt" width={650}  height={770}/>
