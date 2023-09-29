@@ -35,7 +35,7 @@ const MaterialsPage = (): JSX.Element => {
         <TextBanner
           title="A tak w ogóle..."
           title2="Cześć!"
-          paragraph1={<>nazywam się Adrianna Promis-Urbas, na co dzień tworzę slow marketing. Co robię? Skąd się wzięłam? Co mogę dla Ciebie zrobić? Przeczytasz o tym tutaj. </>}
+          paragraph1={<>Nazywam się Adrianna Promis-Urbas, na co dzień tworzę slow marketing. Co robię? Skąd się wzięłam? Co mogę dla Ciebie zrobić? Przeczytasz o tym tutaj. </>}
           paragraph2={<>W razie pytań napisz do mnie maila: adrianna@getbold.agency. Zawsze chętnie odpowiem i umówię się na wirtualną kawkę! ☕</>}
           socials
         />  

@@ -68,7 +68,7 @@ const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
   };
   
   return (
-    <div className="py-6 lg:pt-[68px] lg:pb-[40px]" id="blog-posts" >
+    <div className="py-6 lg:pt-[68px] lg:pb-[40px]" id="posts" >
       <div className="text-ada-blue flex flex-col items-center " >
       <div className="flex flex-col items-center text-center">
         <p className="font-bold lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey">Co nowego</p>

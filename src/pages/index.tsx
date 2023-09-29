@@ -12,40 +12,51 @@ import References from "components/References"
 const IndexPage = (): JSX.Element => {
   return (
     <Layout
-    flowerBlue={true}
-    starPink={true}
-    flowerWhite={true}
-    twoBlueFlowers={true}
-    flowerBlue2={true}
-    flowerBlue3={true}
+      flowerBlue={true}
+      starPink={true}
+      flowerWhite={true}
+      twoBlueFlowers={true}
+      flowerBlue2={true}
+      flowerBlue3={true}
     >
-      <SEO title="Home" lang="pl"/>
-      <MaxWithBgColorContainer >
-      <CustomBanner
-        title="Cześć!"
-        paragraph1={<>Tutaj Ada Promis. <br/> Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak prowadzić świadomy, kreatywny marketing dla Twojego biznesu.</>}
-        btnText="Pokaż mi więcej"
-        image={<StaticImage src={"../images/ada_hero2.png"} alt="Ada Promis - hero" placeholder="none"  width={690} height={690} />}
-        paragraphStyle="max-w-[592px] px-2 md:px-5"
-        btnUrl="#uslugi"
-      />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-linear">
-          <Services />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-          <Features />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer>
-          <References
-           title1
-          />
-          <NewsletterBanner 
-            title1
-            paragraph
-            image
-          />
-        </MaxWithBgColorContainer>
+      <SEO title="Home" lang="pl" />
+      <MaxWithBgColorContainer>
+        <CustomBanner
+          title="Cześć!"
+          paragraph1={
+            <>
+              Tutaj Ada Promis. <br /> Zajmuję się strategią marketingową,
+              mediami społecznościowymi i płatnymi reklamami. Podpowiem Ci, jak
+              prowadzić świadomy, kreatywny marketing dla Twojego biznesu.
+            </>
+          }
+          btnText="Pokaż mi więcej"
+          image={
+            <StaticImage
+              src={"../images/ada_hero.webp"}
+              alt="Ada Promis - hero"
+              placeholder="none"
+              width={1000}
+              height={1000}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+          }
+          imgStyle="max-w-[592px]"
+          paragraphStyle="max-w-[592px] px-2 md:px-5"
+          btnUrl="#uslugi"
+        />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear">
+        <Services />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+        <Features />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <References title1 />
+        <NewsletterBanner title1 paragraph image />
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }
