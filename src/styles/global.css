@@ -19,3 +19,10 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.bg-meetme {
+  background-image: url("../../static/assets/layout-elements/meetmeicons.svg");
+  background-size: auto;
+  background-repeat: none;
+  background-position: top right;
+}

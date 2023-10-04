@@ -7,6 +7,7 @@ import CustomBanner from "components/CustomBanner"
 import { StaticImage } from "gatsby-plugin-image"
 import BlogPosts from "components/BlogPosts"
 import NewsletterBanner from "components/NewsletterBanner"
+import InfoBanner from "components/InfoBanner"
 
 type Blog = {
   node: {
@@ -61,12 +62,16 @@ const BlogPage = (): JSX.Element => {
       <SEO title="Blog" />
       <MaxWithBgColorContainer>
         <CustomBanner
-          title="Witaj na moim blogu!"
+          title="Hej, tu Ada!"
           paragraph1={
             <>
-              bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-              bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-              bla bla bla bla bla bla bla b
+              Gdy w 2018 roku zaczęłam pracę w marketingu, poczułam, że da się robić marketing inaczej: baz nachalnej sprzedaży i krzyczenia „kup, kup, kup!”.
+            </>
+          }
+          paragraph2={
+            <>
+            Dlatego na co dzień praktykuję slow marketing: przemyślany, wartościowy, zbudowany na relacjach.
+            <br/>Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny oraz uczę, jak robić skuteczny marketing w zgodzie ze sobą.
             </>
           }
           btnText="Pokaż mi więcej"
@@ -77,15 +82,19 @@ const BlogPage = (): JSX.Element => {
               placeholder="none"
               width={680}
               height={740}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
             />
           }
-          paragraphStyle="max-w-[532px]"
-          imgStyle="lg:absolute top-0 right-0"
+          paragraphStyle="max-w-[532px] h-[740px] pt-[160px] text-adaBase"
+          paragraphTextStyle="text-adaBase"
+          imgStyle="lg:absolute top-0 right-[-200px]"
           btnUrl="#posts"
         />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear">
         <BlogPosts postsData={edges} />
+        <InfoBanner/>
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <NewsletterBanner title3 paragraph image />

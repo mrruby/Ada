@@ -35,7 +35,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ tags, title, date,thumbnail,
         </div>
         <p className="font-bold text-[10px] pb-[24px]">{formattedDate}</p>
       </div>
-      <Button type="button" text="Czytaj dalej..." url={slug} border={true} textSize="lg:text-adaBase" />
+      <Button type="button" text="Czytaj dalej..." url={slug} border={true} textSize="lg:text-adaBase" btnStyle="md:w-[245px]"/>
     </div>
   );
 };
