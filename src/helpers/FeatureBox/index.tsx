@@ -15,7 +15,7 @@ export const FeatureBox: React.FC<Props> = ({ text, text2
       </div>
       <p className="lg:text-adaDesc max-w-[240px] text-center pt-[-10px] leading-snug font-bold">{text}</p>
       <div className="md:absolute bottom-[-180px] lg:bottom-[-240px] h-full">
-      {text2 &&  <p className="lg:text-[18px] w-full md:max-w-[240px] text-center pt-[-10px] leading-snug ">{text2}</p>}
+      {text2 &&  <p className="lg:text-[18px] w-full md:max-w-[220px] text-center pt-[-10px] leading-snug px-2">{text2}</p>}
       </div>
     </div>
   );
