@@ -19,6 +19,7 @@ module.exports = {
         "linear2": "linear-gradient(0deg, #EEDCF6 0%, #FFF 100%);",
         "linear3": "linear-gradient(180deg, #EEDCF6 0%, #FFF 100%)",
         "linear4": "linear-gradient(270deg, #EEDCF6 0%, #FFF 100%)",
+        "linear5": "linear-gradient(180deg, #F4DCE8 0%, #FFF 50%, #F4DCE8 100%);",
       },
       backgroundPosition: {
         "bgPosition": "0px 310px",
@@ -33,6 +34,7 @@ module.exports = {
         adaSubtitle: "1.5rem",
         adaSubtitleSecondary: "2.0625rem",
         adaTitle: "3rem",
+        adaTitle2: "3.75rem",
         adaBig: "5rem",
       },
       animation: {

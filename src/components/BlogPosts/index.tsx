@@ -71,9 +71,14 @@ const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
     <div className="py-6 lg:pt-[68px] lg:pb-[40px]" id="posts" >
       <div className="text-ada-blue flex flex-col items-center " >
       <div className="flex flex-col items-center text-center">
-        <p className="font-bold lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey">Co nowego</p>
-        <h2 className="px-6 text-adaTitle font-bold">na blogu?</h2>
-        <p className="text-adaBase py-8">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+        <p className="font-bold lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey">Kategorie</p>
+        <h2 className="px-6 text-adaTitle font-bold">bloga</h2>
+        <div className="flex mt-[-10px]"> 
+          <p className="text-adaBase py-8">BRANDING <span className="mx-[10px]">|</span></p>
+          <p className="text-adaBase py-8">REKLAMY<span className="mx-[10px]">|</span></p>
+          <p className="text-adaBase py-8">BRANDING<span className="mx-[10px]">|</span></p>
+          <p className="text-adaBase py-8">REKLAMY</p>
+        </div>
       </div>
     </div>
     <Carousel
