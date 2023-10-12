@@ -17,5 +17,12 @@ body {
 .bg-adapromis {
   background-image: url("../../static/bg-adapromis.png");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+}
+
+.bg-meetme {
+  background-image: url("../../static/assets/layout-elements/meetmeicons.svg");
+  background-size: auto;
+  background-repeat: none;
+  background-position: top right;
 }

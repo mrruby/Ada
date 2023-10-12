@@ -102,14 +102,14 @@ const NewsletterBanner = ({
         />
       </div>
       {image && (
-        <div className="md:absolute top-0 right-0 xl:right-[50px]">
+        <div className="md:absolute bottom-[-30px] right-0 xl:right-[50px]">
           <StaticImage
             src={"../../images/ada_homepage.webp"}
             alt="Ada Promis"
             placeholder="blurred"
             formats={["auto", "webp", "avif"]}
             width={500}
-            height={500}
+            height={540}
             quality={95}
           />
         </div>

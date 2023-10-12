@@ -14,7 +14,7 @@ const Knowledge = (): JSX.Element => {
       text: <>
       Zapisz się po <span className="font-bold">checklistę</span> <br/> „Przed przygotowaniem Twojej pierwszej kampanii Facebook Ads” i dowiedz się, jak ogarnąć technikalia przed startem kampanii.</>,
       btnText: "Zapisuję się!",
-      url: "/contact",
+      url: "https://checklistafb.adrianna.com.pl/",
       type: "variant1"
     },
     {
@@ -32,13 +32,13 @@ const Knowledge = (): JSX.Element => {
     {
       text: <>Chcesz poczytać o slow marketingu w kampaniach reklamowych jeszcze więcej? Zobacz e-booka „Slow Marketing a reklama na Facebooku i Instagramie”. </>,
       btnText: "Patrzę!",
-      url: "/ebook",
+      url: "https://sklep.adrianna.com.pl/product/e-book-slow-marketing-a-reklamy-na-facebooku-i-instagramie",
       type: "variant1"
     },
     {
       text: <>Pobierz mini e-booka „10 grup, do których możesz skierować kampanie, aby zwiększyć wyniki” i docieraj ze swoją ofertą do odpowiednich osób. </>,
       btnText: "Pobieram!",
-      url: "/",
+      url: "https://subscribepage.io/miniebook10",
       type: "variant1"
     },
     {
@@ -56,7 +56,7 @@ const Knowledge = (): JSX.Element => {
     {
       text: <>Chcesz ze mną współpracować 1:1? Sprawdź ofertę konsultacji indywidualnych</>,
       btnText: "Sprawdzam!",
-      url: "https://sklep.adrianna.com.pl/search?q=konsultacjae",
+      url: "https://sklep.adrianna.com.pl/search?q=konsultacja",
       type: "variant2"
     },
     {
