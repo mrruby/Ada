@@ -1,7 +1,7 @@
-import React from "react";
-import { BlogPost } from "helpers/BlogPost";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import React from "react"
+import { BlogPost } from "helpers/BlogPost"
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 
 type Blog = {
   node: {
@@ -26,69 +26,75 @@ const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
     date: edge.node.frontmatter.date,
     thumbnail: edge.node.frontmatter.thumbnail,
     slug: edge.node.fields.slug,
-  }));
+  }))
 
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
       items: 3,
-      slidesToSlide: 3 
+      slidesToSlide: 3,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      slidesToSlide: 3
+      slidesToSlide: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 2
+      slidesToSlide: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1
-    }
-  };
+      slidesToSlide: 1,
+    },
+  }
 
-  const CustomDot = ({ onClick, ...rest }:any) => {
-    const { index, active } = rest;
+  const CustomDot = ({ onClick, ...rest }: any) => {
+    const { index, active } = rest
 
     return (
       <button
-      className={`custom-dot ${
-        active ? "active text-ada-pink" : "inactive"
-      } py-[2px] font-bold bg-ada-light-pink top-[200px] hidden md:block px-[20px]
+        className={`custom-dot ${
+          active ? "active text-ada-pink" : "inactive"
+        } py-[2px] font-bold bg-ada-light-pink top-[200px] hidden md:block px-[20px]
       }`}
         onClick={() => onClick()}
       >
         {index + 1}
       </button>
-    );
-  };
-  
+    )
+  }
+
   return (
-    <div className="py-6 lg:pt-[68px] lg:pb-[40px]" id="posts" >
-      <div className="text-ada-blue flex flex-col items-center " >
-      <div className="flex flex-col items-center text-center">
-        <p className="font-bold lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey">Kategorie</p>
+    <div className="py-6 lg:pt-[68px] lg:pb-[40px]" id="posts">
+      <div className="text-ada-blue flex flex-col items-center flex-wrap">
+        <p className="font-bold lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey">
+          Kategorie
+        </p>
         <h2 className="px-6 text-adaTitle font-bold">bloga</h2>
-        <div className="flex mt-[-10px]"> 
-          <p className="text-adaBase py-8">BRANDING <span className="mx-[10px]">|</span></p>
-          <p className="text-adaBase py-8">REKLAMY<span className="mx-[10px]">|</span></p>
-          <p className="text-adaBase py-8">BRANDING<span className="mx-[10px]">|</span></p>
-          <p className="text-adaBase py-8">REKLAMY</p>
+        <div className="flex mt-[-10px]">
+          <p className="text-[12px] lg:text-adaBase py-8">
+            BRANDING <span className="mx-[10px]">|</span>
+          </p>
+          <p className="text-[12px] lg:text-adaBase py-8">
+            REKLAMY<span className="mx-[10px]">|</span>
+          </p>
+          <p className="text-[12px] lg:text-adaBase py-8">
+            BRANDING<span className="mx-[10px]">|</span>
+          </p>
+          <p className="text-[12px] lg:text-adaBase py-8">REKLAMY</p>
         </div>
       </div>
-    </div>
-    <Carousel
-          responsive={responsive}
-          infinite={false}
-          ssr={true}
-          showDots={true}
-          containerClass={"max-w-[1100px] mx-auto"}
-          customDot={<CustomDot />}
-        >
+      <Carousel
+        responsive={responsive}
+        infinite={false}
+        ssr={true}
+        showDots={true}
+        containerClass={"max-w-[1100px] mx-auto"}
+        customDot={<CustomDot />}
+      >
         {formattedPostsData.map((item, index) => (
           <BlogPost
             key={index}
@@ -99,9 +105,9 @@ const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
             slug={item.slug}
           />
         ))}
-    </Carousel>    
+      </Carousel>
     </div>
-  );
-};
+  )
+}
 
-export default BlogPosts;
+export default BlogPosts
