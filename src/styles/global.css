@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .bg-adapromis {
@@ -23,6 +23,12 @@ body {
 .bg-meetme {
   background-image: url("../../static/assets/layout-elements/meetmeicons.svg");
   background-size: auto;
-  background-repeat: none;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.bg-mails {
+  background-image: url("../../static/assets/layout-elements/mails.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
   background-position: top right;
 }
