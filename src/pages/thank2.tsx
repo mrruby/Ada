@@ -2,17 +2,17 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import ThankBanner from "components/ThankBanner"
+import ThankBanner2 from "components/ThankBanner2"
 
-const ThankYouPage2 = (): JSX.Element => {
+const ThankYouPage = (): JSX.Element => {
   return (
     <Layout>
       <SEO title="Thank you page" />
       <MaxWithBgColorContainer>
-        <ThankBanner />
+        <ThankBanner2 />
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
 
-export default ThankYouPage2
+export default ThankYouPage
