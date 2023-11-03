@@ -31,7 +31,7 @@ const ThankBanner2 = (): JSX.Element => {
           quality={100}
         />
       </div>
-      <div className="hidden md:flex md:absolute right-[-300px] xl:right-[-100px] bottom-[-200px]">
+      <div className="hidden md:flex md:absolute right-[-300px] xl:right-[-100px] bottom-[-250px]">
         <StaticImage
           src={"../../images/instagram.webp"}
           alt="Ada Promis - instagram"
