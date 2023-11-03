@@ -15,19 +15,19 @@ body {
 }
 
 .bg-adapromis {
-  background-image: url("../../static/bg-adapromis.png");
+  background-image: url("../../static/img/bg-adapromis.png");
   background-size: cover;
   background-position: center top;
 }
 
 .bg-meetme {
-  background-image: url("../../static/assets/layout-elements/meetmeicons.svg");
+  background-image: url("../../static/assets/meetmeicons.svg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top right;
 }
 .bg-mails {
-  background-image: url("../../static/assets/layout-elements/mails.svg");
+  background-image: url("../../static/assets/mails.svg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top right;

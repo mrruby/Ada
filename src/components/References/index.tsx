@@ -1,17 +1,19 @@
 import React from "react"
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import Reference from '../../helpers/Reference'
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
+import Reference from "../../helpers/Reference"
+import ArrowLeft from "../../images/arrow-left.svg"
+import ArrowRight from "../../images/arrow-right.svg"
 
 type IReferencesList = {
-  reference: string;
-  name: string;
-  company?: string;
+  reference: string
+  name: string
+  company?: string
 }
 
-type IReferences =  {
-  title1?: boolean;
-  title2?: boolean;
+type IReferences = {
+  title1?: boolean
+  title2?: boolean
 }
 
 const referencesList: IReferencesList[] = [
@@ -23,8 +25,8 @@ const referencesList: IReferencesList[] = [
   },
   {
     reference:
-    "„Bardzo dobrze prowadzone i jakościowe kampanie, które pomogły nam dotrzeć do dużej grupy nowych odbiorców. Koncepcja slow marketingu bardzo się wpasowała w nasze potrzeby. Polecamy z całego serca współpracę z Adą.”",
-  name: "Stan Skupienia",
+      "„Bardzo dobrze prowadzone i jakościowe kampanie, które pomogły nam dotrzeć do dużej grupy nowych odbiorców. Koncepcja slow marketingu bardzo się wpasowała w nasze potrzeby. Polecamy z całego serca współpracę z Adą.”",
+    name: "Stan Skupienia",
   },
   {
     reference:
@@ -43,26 +45,26 @@ const referencesList: IReferencesList[] = [
       "„Czuć, że Ada przepracowała już masę kampanii. Jesteśmy bardzo zadowolone, bo ma podobne do nas podejście do marketingu — w rytmie slow. Bez nagabywania, sztucznych promocji, na rzecz poznania marki i przedstawienia jej wartości.”",
     name: "Ziołowa Wyspa",
   },
-];
+]
 
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
-    items: 1
+    items: 1,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 1
+    items: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 1
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
+    items: 1,
+  },
+}
 
 const CustomLeftArrow = ({ onClick, ...rest }: any) => {
   return (
@@ -70,14 +72,9 @@ const CustomLeftArrow = ({ onClick, ...rest }: any) => {
       className={`absolute max-h-[400px] top-0 md:top-[-100px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
       onClick={onClick}
     >
-      <img
-        src="../../../../arrow-left.svg"
-        alt="Left Arrow"
-        width={16}
-        height={25}
-      />
+      <img src={ArrowLeft} alt="Left Arrow" width={16} height={25} />
     </div>
-  );
+  )
 }
 
 const CustomRightArrow = ({ onClick, ...rest }: any) => {
@@ -86,29 +83,30 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
       className={`absolute max-h-[400px] top-0 md:top-[-100px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
       onClick={onClick}
     >
-      <img
-        src="../../../../arrow-right.svg"
-        alt="Right Arrow"
-        width={16}
-        height={25}
-      />
+      <img src={ArrowRight} alt="Right Arrow" width={16} height={25} />
     </div>
-  );
+  )
 }
 
 const References = ({ title1, title2 }: IReferences): JSX.Element => {
   return (
     <div className="pt-[120px]">
-        {title1 &&
-          <>
-          <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">Co mówią osoby,</h3>
-          <h3 className="mx-auto max-w-[780px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">z którymi współpracowałam?</h3>
-          </>
-        }
-       {title2 &&
-          <h3 className="mx-auto max-w-[850px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">Co mówią Ci, którzy przeczytali?</h3>
-        }
-      {referencesList &&
+      {title1 && (
+        <>
+          <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+            Co mówią osoby,
+          </h3>
+          <h3 className="mx-auto max-w-[780px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+            z którymi współpracowałam?
+          </h3>
+        </>
+      )}
+      {title2 && (
+        <h3 className="mx-auto max-w-[850px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+          Co mówią Ci, którzy przeczytali?
+        </h3>
+      )}
+      {referencesList && (
         <Carousel
           responsive={responsive}
           infinite={true}
@@ -125,9 +123,9 @@ const References = ({ title1, title2 }: IReferences): JSX.Element => {
             />
           ))}
         </Carousel>
-      }
+      )}
     </div>
-  );
-};
+  )
+}
 
-export default References;
+export default References
