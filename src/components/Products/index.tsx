@@ -12,7 +12,7 @@ const Products = (): JSX.Element => {
       url: "https://sklep.adrianna.com.pl/search?q=konsultacja",
       image: (
         <StaticImage
-          src={"../../images/ada-konsultacje.png"}
+          src={"../../images/ada_hero.webp"}
           alt="Ada Promis"
           placeholder="none"
           width={300}

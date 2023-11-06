@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react"
+import { Link } from "gatsby"
 
 type NavLinkProps = {
-  to: string;
-  text: string;
-  className: string;
+  to: string
+  text: string
+  className: string
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ to, text, className }) => {
@@ -16,7 +16,7 @@ const NavLink: React.FC<NavLinkProps> = ({ to, text, className }) => {
     <Link to={to} className={className}>
       {text}
     </Link>
-  );
-};
+  )
+}
 
-export default NavLink;
+export default NavLink

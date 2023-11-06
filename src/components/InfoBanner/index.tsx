@@ -13,7 +13,7 @@ const InfoBanner = (): JSX.Element => {
           alt="Ada Promis - materials"
           placeholder="none"
           width={370}
-          height={370}
+          height={250}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
@@ -28,7 +28,7 @@ const InfoBanner = (): JSX.Element => {
           alt="Ada Promis - about"
           placeholder="none"
           width={370}
-          height={370}
+          height={250}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
@@ -43,7 +43,7 @@ const InfoBanner = (): JSX.Element => {
           alt="Ada Promis - shop"
           placeholder="none"
           width={370}
-          height={370}
+          height={250}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
