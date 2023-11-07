@@ -3,8 +3,8 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const AboutBanner2 = (): JSX.Element => {
   return (
-    <div className="flex flex-col lg:flex-row text-ada-blue relative w-full justify-end min-h-[610px]">
-      <div className="md:absolute lg:left-[-120px] xl:left-[20px] top-[-30px]">
+    <div className="flex flex-col lg:flex-row relative w-full justify-end min-h-[610px]">
+      <div className="lg:absolute lg:left-[-150px] xl:left-[20px] top-[-30px]">
         <StaticImage
           src={"../../images/ada_about.webp"}
           alt="Ada Promis - hero"
@@ -15,7 +15,7 @@ const AboutBanner2 = (): JSX.Element => {
           quality={100}
         />
       </div>
-      <div className="pt-[60px] px-3 xl:pr-[100px]">
+      <div className="pt-[10px] px-3 xl:pr-[100px]">
         <h3 className="text-adaTitle lg:text-adaBig text-ada-grey font-bold mb-[-50px]">
           O mnie
         </h3>
@@ -28,12 +28,15 @@ const AboutBanner2 = (): JSX.Element => {
           </p>
           <p className="pb-8">
             I tak od stażu w agencji marketingowej do swojej działalności: dziś{" "}
-            <span className="font-bold">pod szyldem GetBold!</span>
+            <span className="font-bold">pod szyldem GetBold! </span>
             obsługuję klientów z Europy, w tym z Polski i na moim liczniku
             wybiło już ponad 1 mln budżetów reklamowych wydanych w ramach Meta
-            Ads. Pracuję z biznesami, które dbają o{" "}
-            <span className="font-bold">dobrostan psychiczny i fizyczny</span> :
-            praktykuję <span className="font-bold">slow marketing,</span>{" "}
+            Ads. Pracuję z biznesami, które dbają o
+            <span className="font-bold">
+              {" "}
+              dobrostan psychiczny i fizyczny
+            </span>{" "}
+            : praktykuję <span className="font-bold">slow marketing,</span>{" "}
             przemyślany, wartościowy, zbudowany na relacjach.
           </p>
           <p>

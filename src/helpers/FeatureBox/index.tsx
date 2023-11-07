@@ -5,9 +5,15 @@ interface Props {
   text: string
   text2?: string
   number?: string
+  styleText?: string
 }
 
-export const FeatureBox: React.FC<Props> = ({ text, text2, number }) => {
+export const FeatureBox: React.FC<Props> = ({
+  text,
+  text2,
+  number,
+  styleText,
+}) => {
   return (
     <div className="flex flex-col items-center pt-[-30px] relative lg:min-w-[240px]">
       <p className="absolute text-adaDesc font-semibold top-[60px] z-10">
@@ -22,7 +28,9 @@ export const FeatureBox: React.FC<Props> = ({ text, text2, number }) => {
           height={150}
         />
       </div>
-      <p className="lg:text-adaDesc max-w-[240px] text-center pt-[-10px] leading-snug font-bold">
+      <p
+        className={`lg:text-adaDesc max-w-[240px] text-center pt-[-10px] leading-snug font-bold ${styleText}`}
+      >
         {text}
       </p>
       <div className="md:absolute bottom-[-180px] lg:bottom-[-240px] h-full">

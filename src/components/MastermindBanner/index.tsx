@@ -21,7 +21,13 @@ const MastermindBanner = (): JSX.Element => {
         </p>
         <Button
           type="button"
-          text="Chcę ulepszyć moje kampanie!"
+          text={
+            <>
+              Chcę
+              <span className="font-bold"> ulepszyć </span>
+              moje kampanie!
+            </>
+          }
           url="/"
           textSize="md:text-adaSubtitle"
           btnStyle="md:w-[425px]"

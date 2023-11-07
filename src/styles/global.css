@@ -45,3 +45,10 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
 }
+
+.bg-faq {
+  background-image: url("../../static/assets/faq.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top right;
+}

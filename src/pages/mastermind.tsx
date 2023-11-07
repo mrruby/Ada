@@ -11,7 +11,10 @@ import MastermindWhy1 from "components/MastermindWhy1"
 import MastermindWhy2 from "components/MastermindWhy2"
 import MastermindInfo1 from "components/MastermindInfo1"
 import MastermindInfo2 from "components/MastermindInfo2"
+import MastermindInfo3 from "components/MastermindInfo3"
 import MastermindAgenda from "components/MastermindAgenda"
+import MastermindPrice from "components/MastermindPrice"
+import MastermindFAQ from "components/MastermindFAQ"
 
 const MastermindPage = (): JSX.Element => {
   return (
@@ -38,6 +41,15 @@ const MastermindPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <AboutBanner2 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <MastermindInfo3 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear3">
+        <MastermindPrice />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <MastermindFAQ />
       </MaxWithBgColorContainer>
     </Layout>
   )

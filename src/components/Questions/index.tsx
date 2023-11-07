@@ -77,13 +77,13 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
 
 const Questions = (): JSX.Element => {
   return (
-    <div className="pt-[120px] text-center">
-      <>
-        <h2 className="font-bold lg:h-[58px] text-adaTitle lg:text-adaTitle2 text-ada-grey">
-          Pewnie teraz się{" "}
-        </h2>
-        <h2 className="px-6 text-adaTitle font-bold">zastanawiasz...</h2>
-      </>
+    <div className="pt-[120px] text-center pb-4">
+      <h2 className="font-bold lg:h-[58px] text-adaDesc lg:text-adaTitle2 text-ada-grey">
+        Pewnie teraz się{" "}
+      </h2>
+      <h2 className="px-6 text-adaDesc lg:text-adaTitle font-bold">
+        zastanawiasz...
+      </h2>
       {questionsList && (
         <Carousel
           responsive={responsive}

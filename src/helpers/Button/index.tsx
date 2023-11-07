@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 interface Props {
   type: "button" | "submit" | "reset"
-  text: string
+  text: string | JSX.Element
   url: string
   textSize?: string
   sectionId?: string

@@ -7,7 +7,7 @@ const MastermindWhy1 = (): JSX.Element => {
 
   return (
     <div className="flex flex-col text-ada-blue items-center px-3">
-      <div className="relative flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
+      <div className="relative flex flex-col md:flex-row gap-[60px] xl:gap-[90px] items-center w-full justify-center">
         <div className="lg:w-[736px] pt-[60px] lg:pt-[76px] z-0">
           <h2 className="text-[20px] lg:text-adaTitle font-bold w-[345px] border-b-[12px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]">
             Dlatego...
@@ -58,7 +58,7 @@ const MastermindWhy1 = (): JSX.Element => {
             </li>
           </ul>
         </div>
-        <div className=" min-w-[448px]">
+        <div className="min-w-[448px] md:mr-[-130px]">
           <StaticImage
             src={"../../images/ada_mastermind1.webp"}
             alt="Ada Promis - hero"
@@ -78,9 +78,13 @@ const MastermindWhy1 = (): JSX.Element => {
         </h3>
         <Button
           type="button"
-          text="Dołączam i pracuję nad kampaniami!"
+          text={
+            <span className="font-bold">
+              Dołączam i pracuję nad kampaniami!
+            </span>
+          }
           url="/"
-          textSize="md:text-adaSubtitle"
+          textSize="md:text-adaSubtitle font-bold"
           btnStyle="md:w-[561px]"
         />
       </div>
