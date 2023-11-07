@@ -20,6 +20,12 @@ body {
   background-position: center top;
 }
 
+.bg-mastermind {
+  background-image: url("../../static/img/bg-mastermind.png");
+  background-size: cover;
+  background-position: center top;
+}
+
 .bg-meetme {
   background-image: url("../../static/assets/meetmeicons.svg");
   background-size: auto;
@@ -28,6 +34,13 @@ body {
 }
 .bg-mails {
   background-image: url("../../static/assets/mails.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.bg-puzzles {
+  background-image: url("../../static/assets/puzzles.svg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top right;
