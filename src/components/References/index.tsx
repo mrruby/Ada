@@ -14,6 +14,7 @@ type IReferencesList = {
 type IReferences = {
   title1?: boolean
   title2?: boolean
+  title3?: boolean
 }
 
 const referencesList: IReferencesList[] = [
@@ -88,7 +89,7 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
   )
 }
 
-const References = ({ title1, title2 }: IReferences): JSX.Element => {
+const References = ({ title1, title2, title3 }: IReferences): JSX.Element => {
   return (
     <div className="pt-[120px]">
       {title1 && (
@@ -102,6 +103,16 @@ const References = ({ title1, title2 }: IReferences): JSX.Element => {
         </>
       )}
       {title2 && (
+        <>
+          <h3 className="mx-auto max-w-[778px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+            Opinie właścicielek biznesów,
+          </h3>
+          <h3 className="mx-auto max-w-[600px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+            które mi zaufały
+          </h3>
+        </>
+      )}
+      {title3 && (
         <h3 className="mx-auto max-w-[850px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
           Co mówią Ci, którzy przeczytali?
         </h3>
