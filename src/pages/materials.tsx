@@ -10,43 +10,72 @@ import TextBanner from "components/TextBanner"
 const MaterialsPage = (): JSX.Element => {
   return (
     <Layout
-    flowerBlue={true}
-    starPink={true}
-    flowerWhite={true}
-    flowerBlue3={true}
+      flowerBlue={true}
+      starPink={true}
+      flowerWhite={true}
+      flowerBlue3={true}
     >
       <SEO title="Materiały" />
       <MaxWithBgColorContainer bgColor="bg-transparent">
-        <KnowledgeBanner/>  
-      </MaxWithBgColorContainer>  
+        <KnowledgeBanner />
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <TextBanner
           title="Co tu znajdziesz?"
           title2="Same dobroci!"
-          paragraph1={<><span className="font-bold">bezpłatne</span> checklisty i mini <span className="font-bold">e-booki</span> </>}
-          paragraph2={<>zapisy na <span className="font-bold">darmowe </span>szkolenia i webinary</>}
-          paragraph3={<>informacje o <span className="font-bold">nowych produktach</span> edukacyjnych</>}
-        />  
-      </MaxWithBgColorContainer> 
+          paragraph1={
+            <>
+              <span className="font-bold">bezpłatne</span> checklisty i mini{" "}
+              <span className="font-bold">e-booki</span>{" "}
+            </>
+          }
+          paragraph2={
+            <>
+              zapisy na <span className="font-bold">darmowe </span>szkolenia i
+              webinary
+            </>
+          }
+          paragraph3={
+            <>
+              informacje o <span className="font-bold">nowych produktach</span>{" "}
+              edukacyjnych
+            </>
+          }
+        />
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-        <Knowledge/>
+        <Knowledge />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <TextBanner
           title="A tak w ogóle..."
           title2="Cześć!"
-          paragraph1={<>Nazywam się Adrianna Promis-Urbas, na co dzień tworzę slow marketing. Co robię? Skąd się wzięłam? Co mogę dla Ciebie zrobić? Przeczytasz o tym tutaj. </>}
-          paragraph2={<>W razie pytań napisz do mnie maila: adrianna@getbold.agency. Zawsze chętnie odpowiem i umówię się na wirtualną kawkę! ☕</>}
+          paragraph1={
+            <>
+              Nazywam się Adrianna Promis-Urbas, na co dzień tworzę slow
+              marketing. Co robię? Skąd się wzięłam? Co mogę dla Ciebie zrobić?
+              Przeczytasz o tym tutaj.{" "}
+            </>
+          }
+          paragraph2={
+            <>
+              W razie pytań napisz do mnie maila:{" "}
+              <a href="mailto:adrianna@getbold.agency">
+                adrianna@getbold.agency
+              </a>
+              . Zawsze chętnie odpowiem i umówię się na wirtualną kawkę! ☕
+            </>
+          }
           socials
-        />  
-      </MaxWithBgColorContainer> 
+        />
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <NewsletterBanner 
-            title4
-            paragraph2
-            btnText = "Zapisuję się i zdobywam wiedzę!"
-            image
-          />
+        <NewsletterBanner
+          title4
+          paragraph2
+          btnText="Zapisuję się i zdobywam wiedzę!"
+          image
+        />
       </MaxWithBgColorContainer>
     </Layout>
   )

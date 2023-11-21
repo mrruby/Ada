@@ -33,7 +33,7 @@ const IndexPage = (): JSX.Element => {
           btnText="Pokaż mi więcej"
           image={
             <StaticImage
-              src={"../images/ada_hero.webp"}
+              src={"./../images/ada_homepage2.webp"}
               alt="Ada Promis - hero"
               placeholder="none"
               width={1000}

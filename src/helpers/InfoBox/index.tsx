@@ -16,7 +16,7 @@ export const InfoBox: React.FC<Props> = ({ btnText, url, image }) => {
         border={true}
         url={url}
         textSize="lg:text-adaBase"
-        btnStyle="md:w-[314px]"
+        btnStyle="md:w-[314px] mb-4"
       />
       {image}
     </div>

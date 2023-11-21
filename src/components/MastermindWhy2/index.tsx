@@ -16,10 +16,10 @@ const MastermindWhy2 = (): JSX.Element => {
         />
       </div>
       <div className="flex flex-col">
-        <h2 className=" max-w-[500px] text-adaBase lg:text-adaTitle font- border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+        <h2 className=" max-w-[500px] text-adaBase lg:text-adaTitle font- border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px]">
           Dlaczego program
         </h2>
-        <h2 className="x-w-[600px] text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px] lg:mt-[-10px]">
+        <h2 className="x-w-[600px] text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] lg:mt-[-10px]">
           startuje właśnie teraz?
         </h2>
         <p className="lg:text-adaDesc lg:w-[574px] pt-10 font-medium leading-tight">

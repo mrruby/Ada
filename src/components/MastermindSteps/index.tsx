@@ -33,7 +33,7 @@ const MastermindSteps = (): JSX.Element => {
   ]
   return (
     <div className="text-center pt-10">
-      <h2 className="font-bold lg:h-[58px] text-adaTitle lg:text-adaTitle2 text-ada-grey">
+      <h2 className="font-bold lg:h-[58px] text-adaTitle lg:text-adaTitle2 text-ada-grey -mb-2 lg:-mb-4">
         Nad czym będziemy
       </h2>
       <h2 className="px-6 text-adaTitle font-bold">pracować?</h2>

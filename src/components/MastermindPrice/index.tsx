@@ -50,7 +50,7 @@ const MastermindPrice = (): JSX.Element => {
   return (
     <div className="w-full flex flex-col px-3 items-center text-center pb-8">
       <div className="pt-[60px] lg:pt-[140px]">
-        <h2 className="font-bold text-adaSubtitle lg:text-adaTitle text-ada-grey">
+        <h2 className="font-bold text-adaSubtitle lg:text-adaTitle text-ada-grey -mb-4 lg:mb-[-48px]">
           Ile to{" "}
         </h2>
         <h2 className="lg:mt-[-20px] text-adaSubtitle lg:text-adaTitle font-bold">kosztuje?</h2>

@@ -9,7 +9,7 @@ const MastermindWhy1 = (): JSX.Element => {
     <div className="flex flex-col text-ada-blue items-center px-3">
       <div className="relative flex flex-col md:flex-row gap-[60px] xl:gap-[90px] items-center w-full justify-center">
         <div className="lg:w-[736px] pt-[60px] lg:pt-[76px] z-0">
-          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[345px] border-b-[12px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]">
+          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[140px] md:w-[300px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px]">
             Dlatego...
           </h2>
           <p className="lg:text-adaBase lg:w-[574px] pt-[24px] font-medium leading-tight">

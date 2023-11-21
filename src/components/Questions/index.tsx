@@ -78,10 +78,10 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
 const Questions = (): JSX.Element => {
   return (
     <div className="pt-[120px] text-center pb-4">
-      <h2 className="font-bold lg:h-[58px] text-adaDesc lg:text-adaTitle2 text-ada-grey">
+      <h2 className="font-bold lg:h-[58px] text-adaSubtitle lg:text-adaTitle2 text-ada-grey -mb-4">
         Pewnie teraz się{" "}
       </h2>
-      <h2 className="px-6 text-adaDesc lg:text-adaTitle font-bold">
+      <h2 className="px-6 text-adaSubtitle lg:text-adaTitle font-bold">
         zastanawiasz...
       </h2>
       {questionsList && (

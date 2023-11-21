@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   FlowerBlue,
   FlowerBlue2,
@@ -7,37 +7,34 @@ import {
   StarPink,
   TwoBlueFlowers,
   TwoBlueFlowers2,
-} from "../../helpers/LayoutElements/index";
-import { ILayoutElements } from "../../utils/types/layoutElements";
+} from "../../helpers/LayoutElements/index"
+import { ILayoutElements } from "../../utils/types/layoutElements"
 
 export const LayoutElements: React.FC<ILayoutElements> = ({
-    flowerBlue,
-    starPink,
-    flowerWhite,
-    twoBlueFlowers,
-    twoBlueFlowers2,
-    flowerBlue2,
-    flowerBlue3,
+  flowerBlue,
+  starPink,
+  flowerWhite,
+  twoBlueFlowers,
+  twoBlueFlowers2,
+  flowerBlue2,
+  flowerBlue3,
 }) => {
   return (
     <>
       {flowerBlue && (
         <FlowerBlue
-          mobileTop="top-[1380px] lg:top-[500px] xl:top-[300px]"
+          mobileTop="top-[1340px] lg:top-[500px] xl:top-[300px]"
           mobileLeft="left-0"
         />
       )}
 
       {starPink && (
-        <StarPink
-          mobileTop="lg:top-[170px]"
-          mobileRight="right-0"
-        />
+        <StarPink mobileTop="lg:top-[170px]" mobileRight="right-0" />
       )}
 
       {flowerWhite && (
         <FlowerWhite
-          mobileTop="top-[3200px] lg:top-[890px]"
+          mobileTop="top-[6000px] md:top-[3200px] lg:top-[890px]"
           mobileRight="right-0"
         />
       )}
@@ -54,20 +51,19 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
           mobileTop="top-[5910px] lg:top-[2270px]"
           mobileRight="right-[-70px]"
         />
-
       )}
       {twoBlueFlowers2 && (
         <TwoBlueFlowers2
           mobileTop="top-[1000px] lg:top-[1600px]"
           mobileRight="right-[-110px]"
         />
-      )} 
+      )}
       {flowerBlue3 && (
         <FlowerBlue3
-          mobileTop="top-[600px] lg:top-[600px]"
+          mobileTop="top-[680px] lg:top-[600px]"
           mobileLeft="left-[-70px] lg:left-[100px]"
         />
       )}
     </>
-  );
-};
+  )
+}
