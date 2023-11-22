@@ -88,11 +88,11 @@ const ContactForm = (): JSX.Element => {
             Chorzów ul. Żołnierzy Września 79/6.
           </label>
         </div>
-        {/* <ReCAPTCHA
+        <ReCAPTCHA
           sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY || ""}
           className="my-4"
           aria-label="ReCAPTCHA"
-        /> */}
+        />
         <Button
           type="submit"
           url=""
