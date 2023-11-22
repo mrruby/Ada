@@ -5,7 +5,7 @@ const MastermindBanner = (): JSX.Element => {
   return (
     <div className="w-full bg-mastermind h-[500px] md:h-[690px] xl:h-[850px] flex flex-col items-center justify-center">
       <div className="max-w-[1072px] flex flex-col items-center">
-        <h1 className="text-adaBase lg:text-adaTitle font-bold text-center leading-tight">
+        <h1 className="text-adaBase lg:text-adaTitle font-bold text-center leading-tight animate-bounce">
           Chcesz, aby więcej osób kupowało Twoje produkty i korzystało z Twoich
           usług?
         </h1>
@@ -28,7 +28,7 @@ const MastermindBanner = (): JSX.Element => {
               moje kampanie!
             </>
           }
-          url="/"
+          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
           textSize="md:text-adaSubtitle"
           btnStyle="md:w-[425px]"
         />

@@ -8,14 +8,14 @@ const MeetMeBanner = (): JSX.Element => {
     <div className="flex px-2 xl:pl-[120px] flex-col lg:flex-row text-ada-blue relative pt-[60px]">
       <div className="hidden md:flex md:absolute md:right-[-160px] lg:right-0 bg-meetme h-[224px] w-[428px]"></div>
       <div className="pt-[60px] lg:pt-[10px] z-0 pb-[70px]">
-        <h2 className="text-[20px] lg:text-adaTitle font-bold max-w-[478px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px]">
+        <h2 className="text-[20px] lg:text-adaTitle font-bold max-w-[478px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
           Tu mnie spotkasz
         </h2>
         <ul className="max-w-[574px] pt-4">
           <li className={listItemClass}>
             Online: na Instagramie{" "}
             <Link to="https://www.instagram.com/adapromis/">
-              <span className="font-bold">@adapromis</span>
+              <span className="font-bold hover:text-ada-pink">@adapromis</span>
             </Link>
           </li>
           <li className={listItemClass}>

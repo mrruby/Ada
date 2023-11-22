@@ -69,8 +69,11 @@ const Knowledge = (): JSX.Element => {
     {
       text: (
         <>
-          Obserwuj mojego Instagrama
-          <Link to="https://www.instagram.com/adapromis/" className="font-bold">
+          Obserwuj mojego Instagrama{" "}
+          <Link
+            to="https://www.instagram.com/adapromis/"
+            className="font-bold hover:text-ada-pink"
+          >
             @adapromis{" "}
           </Link>
           i bądź na bieżąco ze zmianami w kampaniach reklamowych!
@@ -87,10 +90,10 @@ const Knowledge = (): JSX.Element => {
           agencyjnego Instagrama{" "}
           <Link
             to="https://www.instagram.com/slowm.arketing/"
-            className="font-bold"
+            className="font-bold hover:text-ada-pink"
           >
             @slowm.arketing
-          </Link>
+          </Link>{" "}
           i naucz się, jak robić marketing w zgodzie ze sobą!
         </>
       ),

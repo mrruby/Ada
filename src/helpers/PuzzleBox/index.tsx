@@ -10,7 +10,7 @@ interface Props {
 
 export const PuzzleBox: React.FC<Props> = ({ text, btnText, url }) => {
   return (
-    <div className="flex flex-col items-center pt-[80px] relative lg:min-w-[240px] bg-white pb-6 mt-[30px] md:mt-[80px]">
+    <div className="flex flex-col items-center pt-[80px] relative lg:min-w-[240px] bg-white pb-6 mt-[30px] md:mt-[80px] hover:shadow-xl">
       <div className="mb-[-10px] absolute top-[-60px]">
         <StaticImage
           src={"./../../images/puzzle.png"}

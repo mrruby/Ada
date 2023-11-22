@@ -34,12 +34,13 @@ const MastermindFAQ = (): JSX.Element => {
       question: "Czy na pewno będzie czas dla mnie?",
       answer: (
         <>
-          "Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
+          {" "}
+          Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
           przedstawić swój problem, zadać pytania. Spotykamy się w grupie
           maksymalnie 7 osób, aby każdy znalazł czas dla siebie. <br /> ❌ To
           NIE są spotkania, na których jedna osoba mówi, a druga słucha. <br />{" "}
           ✅ To są spotkania, na których każdy może zabrać głos i znaleźć
-          przestrzeń dla siebie.",
+          przestrzeń dla siebie.
         </>
       ),
     },
@@ -67,7 +68,7 @@ const MastermindFAQ = (): JSX.Element => {
       <div className="relative flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
         <div className="pt-[60px] lg:pt-[76px] z-0">
           <div className="hidden md:flex bg-faq w-full h-[200px] mb-[-10px] -z-10"></div>
-          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px]">
+          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
             FAQ
           </h2>
           <div className="pt-[30px] flex flex-col md:flex-row lg:gap-[60px]">
@@ -92,7 +93,7 @@ const MastermindFAQ = (): JSX.Element => {
               Dołączam teraz, bo też chcę rozwijać siebie i biznes!
             </span>
           }
-          url="/"
+          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
           textSize="md:text-adaSubtitle"
           btnStyle="md:w-[710px] bg-white"
         />

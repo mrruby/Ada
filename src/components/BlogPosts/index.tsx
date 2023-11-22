@@ -70,10 +70,10 @@ const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
   return (
     <div className="py-6 lg:pt-[68px] lg:pb-[40px]" id="posts">
       <div className="text-ada-blue flex flex-col items-center flex-wrap">
-        <p className="font-bold lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey -mb-10 lg:mb-0">
+        <p className="font-bold lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey -mb-10 lg:mb-0 animate-bounce">
           Kategorie
         </p>
-        <h2 className="px-6 text-adaTitle font-bold">bloga</h2>
+        <h2 className="px-6 text-adaTitle font-bold animate-bounce">bloga</h2>
         <div className="flex mt-[-10px]">
           <p className="text-[12px] lg:text-adaBase py-8">
             BRANDING <span className="mx-[10px]">|</span>

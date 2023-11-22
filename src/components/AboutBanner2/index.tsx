@@ -42,8 +42,8 @@ const AboutBanner2 = (): JSX.Element => {
           <p>
             W programie <span className="font-bold">„Ogarnij swoje adsy!”</span>{" "}
             skupimy się Twoim koncie reklamowym! Zdradzę Ci{" "}
-            <span>moje tipy</span> i zaoszczędzę dobre kilka lat samodzielnego
-            klikania w menedżerze reklam.
+            <span className="font-bold">moje tipy</span> i zaoszczędzę dobre
+            kilka lat samodzielnego klikania w menedżerze reklam.
           </p>
         </div>
         <p></p>

@@ -32,7 +32,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({
   const formattedDate = formatDate(date)
 
   return (
-    <div className="bg-white mx-6 lg:w-[320px] min-h-[400px] flex flex-col items-center justify-between relative mt-[24px] pt-[58px] lg:pb-[40px] mb-[60px] animate-fadeIn">
+    <div className="bg-white mx-6 lg:w-[320px] min-h-[400px] flex flex-col items-center justify-between relative mt-[24px] pt-[58px] lg:pb-[40px] mb-[60px] animate-fadeIn hover:shadow-xl">
       <div className="text-center lg:w-[274px]">
         <p className="font-bold text-adaNav text-ada-dark-pink">
           {tags.map((tag) => `#${tag} `).join("")}

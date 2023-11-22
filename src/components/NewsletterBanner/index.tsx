@@ -26,7 +26,7 @@ const NewsletterBanner = ({
   image,
 }: Props): JSX.Element => {
   const h2ClassName =
-    "text-adaDesc lg:text-adaTitle font-bold lg:mb-2 border-b-[11px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px]"
+    "text-adaDesc lg:text-adaTitle font-bold lg:mb-2 border-b-[11px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] animate-bounce"
 
   return (
     <div className="flex items-left flex-col pt-10 relative min-h-[500px] max-w-7xl mx-auto px-2">

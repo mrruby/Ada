@@ -36,7 +36,7 @@ export const Button: React.FC<Props> = ({
       <button
         onClick={handleButtonClick}
         type={type}
-        className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink ${borderStyles} ${btnStyle}`}
+        className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink hover:shadow-xl ${borderStyles} ${btnStyle}`}
       >
         {text}
       </button>

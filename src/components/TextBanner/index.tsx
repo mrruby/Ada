@@ -20,13 +20,15 @@ const TextBanner = ({
   socials,
 }: Props): JSX.Element => {
   return (
-    <div className="py-6 px-4 lg:pt-[68px] lg:pb-[40px]" id="blog-posts">
+    <div className="py-6 px-4 lg:pt-[68px] lg:pb-[40px] abu" id="blog-posts">
       <div className="text-ada-blue flex flex-col items-center ">
         <div className="flex flex-col items-center text-center max-w-[864px]">
           <p className="font-bold h-[110px] lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey">
             {title}
           </p>
-          <h2 className="px-6 text-adaTitle font-bold">{title2}</h2>
+          <h2 className="px-6 text-adaTitle font-bold animate-bounce">
+            {title2}
+          </h2>
           <p className="text-adaBase pt-8">{paragraph1}</p>
           <p className="text-adaBase pt-4">{paragraph2}</p>
           <p className="text-adaBase pt-4">{paragraph3}</p>

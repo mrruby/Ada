@@ -60,7 +60,10 @@ const MaterialsPage = (): JSX.Element => {
           paragraph2={
             <>
               W razie pytań napisz do mnie maila:{" "}
-              <a href="mailto:adrianna@getbold.agency">
+              <a
+                href="mailto:adrianna@getbold.agency"
+                className="hover:text-ada-pink font-bold"
+              >
                 adrianna@getbold.agency
               </a>
               . Zawsze chętnie odpowiem i umówię się na wirtualną kawkę! ☕

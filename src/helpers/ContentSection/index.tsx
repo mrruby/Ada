@@ -33,7 +33,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
     >
       <div className="flex flex-col items-center text-center">
         <p className={`${headingTextStyle} font-bold`}>{heading}</p>
-        <h2 className="px-6 text-adaTitle font-bold mt-[-30px] md:mt-[-50px]">
+        <h2 className="px-6 text-adaTitle font-bold mt-[-30px] md:mt-[-50px] animate-bounce">
           {title}
         </h2>
         {description && <p className="text-adaBase py-8">{description}</p>}

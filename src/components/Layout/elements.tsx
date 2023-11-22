@@ -7,6 +7,8 @@ import {
   StarPink,
   TwoBlueFlowers,
   TwoBlueFlowers2,
+  FlowerWhite2,
+  FlowerWhite3,
 } from "../../helpers/LayoutElements/index"
 import { ILayoutElements } from "../../utils/types/layoutElements"
 
@@ -18,6 +20,8 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   twoBlueFlowers2,
   flowerBlue2,
   flowerBlue3,
+  flowerWhite2,
+  flowerWhite3,
 }) => {
   return (
     <>
@@ -62,6 +66,20 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
         <FlowerBlue3
           mobileTop="top-[680px] lg:top-[600px]"
           mobileLeft="left-[-70px] lg:left-[100px]"
+        />
+      )}
+
+      {flowerWhite2 && (
+        <FlowerWhite2
+          mobileTop="hidden md:flex md:top-[5400px] lg:top-[4800px]"
+          mobileRight="right-0"
+        />
+      )}
+
+      {flowerWhite3 && (
+        <FlowerWhite3
+          mobileTop="hidden md:flex md:top-[6800px] lg:top-[7700px]"
+          mobileRight="right-0"
         />
       )}
     </>

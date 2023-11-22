@@ -4,7 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha"
 
 const ContactForm = (): JSX.Element => {
   const inputStyles =
-    "border-1 border-ada-blue mb-4 p-4 text-ada-blue w-full text-center"
+    "border-1 border-ada-blue mb-4 p-4 text-ada-blue w-full text-center hover:shadow-xl"
 
   return (
     <div className="flex flex-col items-center bg-mails">
@@ -88,11 +88,11 @@ const ContactForm = (): JSX.Element => {
             Chorzów ul. Żołnierzy Września 79/6.
           </label>
         </div>
-        <ReCAPTCHA
+        {/* <ReCAPTCHA
           sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY || ""}
           className="my-4"
           aria-label="ReCAPTCHA"
-        />
+        /> */}
         <Button
           type="submit"
           url=""

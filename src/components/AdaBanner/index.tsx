@@ -5,7 +5,7 @@ const AdaBanner = (): JSX.Element => {
   return (
     <div className="flex px-2 lg:pl-[120px] flex-col lg:flex-row text-ada-blue relative">
       <div className="lg:w-[736px] pt-[60px] lg:pt-[76px] z-0 pb-[60px]">
-        <h2 className="text-[20px] lg:text-adaTitle font-bold w-[345px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px]">
+        <h2 className="text-[20px] lg:text-adaTitle font-bold w-[345px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
           Kim jestem?
         </h2>
         <p className="lg:text-adaBase lg:w-[530px] pt-[24px] font-medium leading-tight">

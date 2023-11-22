@@ -1,25 +1,43 @@
+import { Link } from "gatsby"
 import React from "react"
 
 interface ListItem {
   title: string
-  description: string
+  description: string | JSX.Element
 }
 
 const MastermindAgenda = (): JSX.Element => {
-  const listItemClass = "leading-tight max-w-[410px]"
+  const listItemClass = "leading-tight max-w-[406px]"
   const listItemTitleClass = "text-[15px] lg:text-adaDesc font-bold"
   const listItemDesClass = "text-[15px] lg:text-adaDesc"
 
   const leftList: ListItem[] = [
     {
       title: "temat przewodni",
-      description:
-        "Każde spotkanie ma temat przewodni, który pomoże Ci ulepszyć Twoje kampanie reklamowe na całej ścieżce klienta, a nie tylko na poziomie Managera Reklam. Listę tematów spotkań sprawdzisz tutaj.",
+      description: (
+        <>
+          Każde spotkanie ma temat przewodni, który pomoże Ci ulepszyć Twoje
+          kampanie reklamowe na całej ścieżce klienta, a nie tylko na poziomie
+          Managera Reklam. Listę tematów spotkań sprawdzisz{" "}
+          <Link to="#" className="underline">
+            tutaj.
+          </Link>
+        </>
+      ),
     },
     {
       title: "realne case’y",
-      description:
-        "Pracujemy na przykładach z życia wziętych: Twoich oraz innych uczestniczek. Dość teoretycznych przykładów, które nie mają nic wspólnego z rzeczywistością. Przyszedł czas na praktykę i efekty.",
+      description: (
+        <>
+          Pracujemy na przykładach z życia wziętych: Twoich oraz innych
+          uczestniczek.{" "}
+          <span className="underline">
+            Dość teoretycznych przykładów, które nie mają nic wspólnego z
+            rzeczywistością. Przyszedł czas na praktykę i efekty.
+          </span>
+          ",
+        </>
+      ),
     },
     {
       title: "nagrania ze spotkań",
@@ -37,7 +55,7 @@ const MastermindAgenda = (): JSX.Element => {
     {
       title: "15 godzin spotkań!",
       description:
-        "Spotykamy się 6 razy na 2,5 godziny na Google Meets. Co dwa tygodnie przez 3 miesiące w najgorętszym okresie reklamowym: od października do grudnia.",
+        "Spotykamy się 6 razy na 2,5 godziny na Google Meets. Co dwa tygodnie przez 3 miesiące! W tym czasie tworzysz, wdrażasz i obserwujesz wyniki swoich kampanii pod moim okiem.",
     },
     {
       title: "kameralna grupa",
@@ -55,9 +73,9 @@ const MastermindAgenda = (): JSX.Element => {
         "Gdy dołączysz do programu, umówimy się na konsultację 1:1 — zajrzę do Twojego konta reklamowego i pokażę Ci, jak ogarnąć ustawienia. Dzięki temu na pierwszym spotkaniu będziesz gotowa do działania z reklamami.",
     },
     {
-      title: "sesja skupienia",
+      title: "office hours",
       description:
-        "Raz z tygodniu - wspólna praca w ciszy nad optymalizacją kampanii oraz zamknięty czat na Messengerze lub Instagramie, na którym możesz zadać pytanie i szybko zyskać odpowiedź.",
+        "Raz w tygodniu możesz wskoczyć na moje “okienko” i zadać mi dowolne pytanie. Dzięki office hours również między spotkaniami jest szansa na to, aby obgadać kampanie wspólnie na żywo i szybko uzyskać odpowiedź!",
     },
   ]
 

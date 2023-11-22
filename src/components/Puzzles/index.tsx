@@ -17,7 +17,7 @@ const Puzzles = (): JSX.Element => {
 
   return (
     <div className=" text-ada-blue flex gap-[80px] flex-col md:flex-row items-center justify-center pt-[40px] pb-[40px] md:pb-[180px]">
-      <div className="flex flex-row md:flex-col ">
+      <div className="flex flex-row md:flex-col animate-bounce">
         <h2 className="text-[20px] lg:text-adaTitle font-bold max-w-[560px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] mr-1">
           Przygotowałam{" "}
         </h2>

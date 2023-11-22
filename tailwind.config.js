@@ -15,14 +15,14 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "linear": "linear-gradient(180deg, #F4DCE8 0%, #FFF 100%);",
-        "linear2": "linear-gradient(0deg, #EEDCF6 0%, #FFF 100%);",
-        "linear3": "linear-gradient(180deg, #EEDCF6 0%, #FFF 100%)",
-        "linear4": "linear-gradient(270deg, #EEDCF6 0%, #FFF 100%)",
-        "linear5": "linear-gradient(180deg, #F4DCE8 0%, #FFF 50%, #F4DCE8 100%);",
+        linear: "linear-gradient(180deg, #F4DCE8 0%, #FFF 100%);",
+        linear2: "linear-gradient(0deg, #EEDCF6 0%, #FFF 100%);",
+        linear3: "linear-gradient(180deg, #EEDCF6 0%, #FFF 100%)",
+        linear4: "linear-gradient(270deg, #EEDCF6 0%, #FFF 100%)",
+        linear5: "linear-gradient(180deg, #F4DCE8 0%, #FFF 50%, #F4DCE8 100%);",
       },
       backgroundPosition: {
-        "bgPosition": "0px 310px",
+        bgPosition: "0px 310px",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
@@ -38,22 +38,31 @@ module.exports = {
         adaBig: "5rem",
       },
       animation: {
-        fadeIn: 'fadeIn 3s ease-in-out',
-        carousel: 'marquee 60s linear infinite',
-        blink: 'blink 1.4s both infinite',
-        'spin-slow': 'spin 4s linear infinite',
+        fadeIn: "fadeIn 3s ease-in-out",
+        carousel: "marquee 60s linear infinite",
+        blink: "blink 1s both infinite",
+        "spin-slow": "spin 4s linear infinite",
+        bounce: "bounce 1.2s ease",
       },
       keyframes: {
         fadeIn: {
-          '0%': {
-            opacity: '0',
+          "0%": {
+            opacity: "0",
           },
-          '100%': {
-            opacity: '1',
+          "100%": {
+            opacity: "1",
+          },
+        },
+        bounce: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
           },
         },
       },
     },
   },
   plugins: [require("@tailwindcss/forms")],
-};
+}
