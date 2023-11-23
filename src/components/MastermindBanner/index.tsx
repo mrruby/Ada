@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const MastermindBanner = (): JSX.Element => {
   return (
-    <div className="grid relative h-[500px] md:h-[690px]">
+    <div className="grid relative md:h-[690px]">
       <StaticImage
         className="row-start-1 col-start-1"
         layout="fullWidth"
@@ -12,7 +12,7 @@ const MastermindBanner = (): JSX.Element => {
         src={"../../images/bg-mastermind.png"}
         formats={["auto", "webp", "avif"]}
       />
-      <div className="row-start-1 col-start-1 grid relative justify-center pt-40">
+      <div className="row-start-1 col-start-1 grid relative justify-center pt-20 md:pt-40">
         <div className="max-w-[1072px] flex flex-col items-center z-20">
           <h1 className="text-adaBase lg:text-adaTitle font-bold text-center leading-tight animate-bounce pb-8">
             Chcesz, aby więcej osób kupowało Twoje produkty i korzystało z
@@ -40,7 +40,7 @@ const MastermindBanner = (): JSX.Element => {
             }
             sectionId="mastermind-info"
             textSize="md:text-adaSubtitle"
-            btnStyle="md:w-[425px] scroll-smooth"
+            btnStyle="md:w-[425px] scroll-smooth mb-8"
           />
         </div>
       </div>
