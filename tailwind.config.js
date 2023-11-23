@@ -42,7 +42,7 @@ module.exports = {
         carousel: "marquee 60s linear infinite",
         blink: "blink 1s both infinite",
         "spin-slow": "spin 4s linear infinite",
-        bounce: "bounce 1.2s ease",
+        bounce: "custombounce 1.5s ease-in-out",
       },
       keyframes: {
         fadeIn: {
@@ -53,13 +53,10 @@ module.exports = {
             opacity: "1",
           },
         },
-        bounce: {
-          "0%": {
-            opacity: "0",
-          },
-          "100%": {
-            opacity: "1",
-          },
+        custombounce: {
+          "0%, 20%, 50%, 80%, 100%": { transform: "translateY(0)" },
+          "40%": { transform: "translateY(-10px)" },
+          "60%": { transform: "translateY(-4px)" },
         },
       },
     },
