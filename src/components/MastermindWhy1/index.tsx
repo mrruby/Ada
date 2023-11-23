@@ -6,14 +6,17 @@ const MastermindWhy1 = (): JSX.Element => {
   const listItemClass = "lg:text-adaBase leading-tight py-2 leading-tight"
 
   return (
-    <div className="flex flex-col text-ada-blue items-center px-3">
+    <div
+      className="flex flex-col text-ada-blue items-center px-3"
+      id="mastermind-info"
+    >
       <div className="relative flex flex-col md:flex-row gap-[60px] xl:gap-[90px] items-center w-full justify-center">
         <div className="lg:w-[736px] pt-[60px] lg:pt-[76px] z-0">
-          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[345px] border-b-[12px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]">
+          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[140px] md:w-[300px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
             Dlatego...
           </h2>
           <p className="lg:text-adaBase lg:w-[574px] pt-[24px] font-medium leading-tight">
-            przygotowałam dla Ciebie program mentoringowy
+            przygotowałam dla Ciebie program mentoringowy{" "}
             <span className="font-bold">„Ogarnij swoje adsy!”</span>
           </p>
           <p className="lg:text-adaBase lg:w-[530px] pt-10 font-medium leading-tight">
@@ -23,7 +26,8 @@ const MastermindWhy1 = (): JSX.Element => {
             <li className={listItemClass}>
               &#10003;
               <span className="font-bold">
-                podkręcisz wyniki swojego biznesu
+                {" "}
+                podkręcisz wyniki swojego biznesu{" "}
               </span>
               i nauczysz się docierać do osób zainteresowanych ofertą, którą
               reklamujesz,
@@ -44,6 +48,7 @@ const MastermindWhy1 = (): JSX.Element => {
             <li className={listItemClass}>
               &#10003;
               <span className="font-bold">
+                {" "}
                 zrozumiesz ścieżkę Twojego klienta{" "}
               </span>
               i dowiesz się, co zrobić, jeśli kampanie nie działają,
@@ -53,6 +58,7 @@ const MastermindWhy1 = (): JSX.Element => {
               problemy w zdobywaniu nowych klientów i przekonasz się, że
               rozwiązanie jest bliżej niż myślisz —
               <span className="font-bold">
+                {" "}
                 wystarczy wiedzieć, gdzie go szukać!
               </span>
             </li>
@@ -73,19 +79,19 @@ const MastermindWhy1 = (): JSX.Element => {
       <div className="flex flex-col items-center text-center gap-10 pb-10 md:pb-[118px]">
         <h3 className="md:text-adaSubtitle max-w-[1024px] mx-auto font-medium pt-[90px]">
           Dołącz do programu „Ogarnij swoje adsy!” i zrób krok w stronę
-          <span className="font-bold">zdobywania nowych klientów</span> dzięki
+          <span className="font-bold"> zdobywania nowych klientów</span> dzięki
           kampaniom reklamowym.
         </h3>
         <Button
           type="button"
           text={
             <span className="font-bold">
-              Dołączam i pracuję nad kampaniami!
+              Chcę dołączyć - umawiam bezpłatną konsultację
             </span>
           }
-          url="/"
+          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
           textSize="md:text-adaSubtitle font-bold"
-          btnStyle="md:w-[561px]"
+          btnStyle="md:w-[660px] px-0"
         />
       </div>
     </div>

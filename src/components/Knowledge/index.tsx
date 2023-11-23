@@ -1,9 +1,10 @@
 import React from "react"
 import { KnowledgeBox } from "helpers/KnowledgeBox"
+import { Link } from "gatsby"
 
 interface KnowledgeData {
   text: JSX.Element
-  btnText: string
+  btnText: string | JSX.Element
   url: string
   type: "variant1" | "variant2"
 }
@@ -18,7 +19,7 @@ const Knowledge = (): JSX.Element => {
           dowiedz się, jak ogarnąć technikalia przed startem kampanii.
         </>
       ),
-      btnText: "Zapisuję się!",
+      btnText: <span className="font-bold">Zapisuję się! </span>,
       url: "https://checklistafb.adrianna.com.pl/",
       type: "variant1",
     },
@@ -28,7 +29,7 @@ const Knowledge = (): JSX.Element => {
           Przeczytaj najnowszy wpis na <span className="font-bold">blogu.</span>
         </>
       ),
-      btnText: "Czytam!",
+      btnText: <span className="font-bold">Czytam! </span>,
       url: "/blog",
       type: "variant2",
     },
@@ -38,7 +39,7 @@ const Knowledge = (): JSX.Element => {
           Odsłuchaj najnowszy <span className="font-bold">podcast.</span>
         </>
       ),
-      btnText: "Słucham ciekawych rzeczy!",
+      btnText: <span className="font-bold">Słucham ciekawych rzeczy! </span>,
       url: "/podcast",
       type: "variant2",
     },
@@ -47,10 +48,10 @@ const Knowledge = (): JSX.Element => {
         <>
           Chcesz poczytać o slow marketingu w kampaniach reklamowych jeszcze
           więcej? Zobacz e-booka „Slow Marketing a reklama na Facebooku i
-          Instagramie”.{" "}
+          Instagramie”.
         </>
       ),
-      btnText: "Patrzę!",
+      btnText: <span className="font-bold">Patrzę! </span>,
       url: "https://sklep.adrianna.com.pl/product/e-book-slow-marketing-a-reklamy-na-facebooku-i-instagramie",
       type: "variant1",
     },
@@ -61,18 +62,24 @@ const Knowledge = (): JSX.Element => {
           aby zwiększyć wyniki” i docieraj ze swoją ofertą do odpowiednich osób.{" "}
         </>
       ),
-      btnText: "Pobieram!",
+      btnText: <span className="font-bold">Pobieram! </span>,
       url: "https://subscribepage.io/miniebook10",
       type: "variant1",
     },
     {
       text: (
         <>
-          Obserwuj mojego Instagrama @adapromis i bądź na bieżąco ze zmianami w
-          kampaniach reklamowych!
+          Obserwuj mojego Instagrama{" "}
+          <Link
+            to="https://www.instagram.com/adapromis/"
+            className="font-bold hover:text-ada-pink"
+          >
+            @adapromis{" "}
+          </Link>
+          i bądź na bieżąco ze zmianami w kampaniach reklamowych!
         </>
       ),
-      btnText: "Obserwuję!",
+      btnText: <span className="font-bold">Obserwuję! </span>,
       url: "https://www.instagram.com/adapromis/",
       type: "variant2",
     },
@@ -80,11 +87,17 @@ const Knowledge = (): JSX.Element => {
       text: (
         <>
           Bardziej niż kampanie kręci Cię slow marketing? Śledź naszego
-          agencyjnego Instagrama @slowm.arketing i naucz się, jak robić
-          marketing w zgodzie ze sobą!
+          agencyjnego Instagrama{" "}
+          <Link
+            to="https://www.instagram.com/slowm.arketing/"
+            className="font-bold hover:text-ada-pink"
+          >
+            @slowm.arketing
+          </Link>{" "}
+          i naucz się, jak robić marketing w zgodzie ze sobą!
         </>
       ),
-      btnText: "Obserwuję!",
+      btnText: <span className="font-bold">Obserwuję! </span>,
       url: "https://www.instagram.com/slowm.arketing/",
       type: "variant2",
     },
@@ -95,7 +108,7 @@ const Knowledge = (): JSX.Element => {
           indywidualnych
         </>
       ),
-      btnText: "Sprawdzam!",
+      btnText: <span className="font-bold">Sprawdzam! </span>,
       url: "https://sklep.adrianna.com.pl/search?q=konsultacja",
       type: "variant2",
     },
@@ -106,7 +119,7 @@ const Knowledge = (): JSX.Element => {
           Adsy!”.
         </>
       ),
-      btnText: "Chcę wiedzieć więcej!",
+      btnText: <span className="font-bold">Chcę wiedzieć więcej! </span>,
       url: "/mastermind",
       type: "variant2",
     },

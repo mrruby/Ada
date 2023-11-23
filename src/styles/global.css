@@ -52,3 +52,20 @@ body {
   background-repeat: no-repeat;
   background-position: top right;
 }
+
+.vertical-timeline::before {
+  background-color: #253274 !important;
+}
+
+@media (max-width: 768px) {
+  .vertical-timeline-element-content {
+    text-align: left !important;
+  }
+}
+
+@media (min-width: 1170px) {
+  .vertical-timeline-element-content {
+    padding-inline: 0px !important;
+    margin-inline: 0px !important;
+  }
+}

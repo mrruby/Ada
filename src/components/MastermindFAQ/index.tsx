@@ -15,7 +15,7 @@ const MastermindFAQ = (): JSX.Element => {
     {
       question: "Kiedy będą odbywać się spotkania?",
       answer:
-        "Spotykamy się co 2 tygodnie. Zaczniemy od konsultacji, na której skonfigurujemy Twojego Managera Reklam. Pierwsze spotkanie w grupie odbędzie się w 3 tygodniu października. Terminy pozostałych spotkań ustalimy wspólnie.",
+        "Spotykamy się co 2 tygodnie. Zaczniemy od konsultacji indywidualnej już w grudniu, na której skonfigurujemy Twojego Managera Reklam. Terminy pozostałych spotkań ustalimy wspólnie.",
     },
     {
       question: "Czy spotkania będą nagrywane?",
@@ -34,12 +34,12 @@ const MastermindFAQ = (): JSX.Element => {
       question: "Czy na pewno będzie czas dla mnie?",
       answer: (
         <>
-          "Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
+          Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
           przedstawić swój problem, zadać pytania. Spotykamy się w grupie
           maksymalnie 7 osób, aby każdy znalazł czas dla siebie. <br /> ❌ To
           NIE są spotkania, na których jedna osoba mówi, a druga słucha. <br />{" "}
           ✅ To są spotkania, na których każdy może zabrać głos i znaleźć
-          przestrzeń dla siebie.",
+          przestrzeń dla siebie.
         </>
       ),
     },
@@ -53,11 +53,7 @@ const MastermindFAQ = (): JSX.Element => {
     return list.map((item, index) => (
       <li className={listItemClass} key={index}>
         <h3 className={listItemQuestionClass}>{item.question}</h3>
-        <p className={listItemAnswerClass}>
-          {" "}
-          &#10003;
-          {item.answer}
-        </p>
+        <p className={listItemAnswerClass}> &#10003; {item.answer}</p>
       </li>
     ))
   }
@@ -67,7 +63,7 @@ const MastermindFAQ = (): JSX.Element => {
       <div className="relative flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
         <div className="pt-[60px] lg:pt-[76px] z-0">
           <div className="hidden md:flex bg-faq w-full h-[200px] mb-[-10px] -z-10"></div>
-          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[152px] border-b-[12px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]">
+          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
             FAQ
           </h2>
           <div className="pt-[30px] flex flex-col md:flex-row lg:gap-[60px]">
@@ -82,8 +78,7 @@ const MastermindFAQ = (): JSX.Element => {
           <span className="font-bold">
             dołączasz teraz i szlifujesz kampanie,
           </span>{" "}
-          aby przed końcem roku zobaczyć wzrost wyników, czy czekasz do kolejnej
-          edycji?
+          aby zobaczyć realny wzrost wyników, czy czekasz do kolejnej edycji?
         </h3>
         <Button
           type="button"
@@ -92,7 +87,7 @@ const MastermindFAQ = (): JSX.Element => {
               Dołączam teraz, bo też chcę rozwijać siebie i biznes!
             </span>
           }
-          url="/"
+          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
           textSize="md:text-adaSubtitle"
           btnStyle="md:w-[710px] bg-white"
         />

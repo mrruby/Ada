@@ -16,7 +16,7 @@ const AboutBanner2 = (): JSX.Element => {
         />
       </div>
       <div className="pt-[10px] px-3 xl:pr-[100px]">
-        <h3 className="text-adaTitle lg:text-adaBig text-ada-grey font-bold mb-[-50px]">
+        <h3 className="text-adaTitle lg:text-adaBig text-ada-grey font-bold -mb-10 lg:mb-[-60px]">
           O mnie
         </h3>
         <h2 className="text-adaTitle font-bold">Cześć</h2>
@@ -42,8 +42,8 @@ const AboutBanner2 = (): JSX.Element => {
           <p>
             W programie <span className="font-bold">„Ogarnij swoje adsy!”</span>{" "}
             skupimy się Twoim koncie reklamowym! Zdradzę Ci{" "}
-            <span>moje tipy</span> i zaoszczędzę dobre kilka lat samodzielnego
-            klikania w menedżerze reklam.
+            <span className="font-bold">moje tipy</span> i zaoszczędzę dobre
+            kilka lat samodzielnego klikania w menedżerze reklam.
           </p>
         </div>
         <p></p>

@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 interface Props {
   type: "button" | "submit" | "reset"
   text: string | JSX.Element
-  url: string
+  url?: string
   textSize?: string
   sectionId?: string
   border?: boolean
@@ -14,14 +14,14 @@ interface Props {
 export const Button: React.FC<Props> = ({
   type,
   text,
-  textSize = "lg:text-[25px]",
   url,
-  border,
+  textSize = "lg:text-[25px]",
   sectionId,
+  border,
   btnStyle,
 }) => {
   const handleButtonClick = () => {
-    if (sectionId) {
+    if (sectionId && !url) {
       const section = document.getElementById(sectionId)
       if (section) {
         section.scrollIntoView({ behavior: "smooth" })
@@ -31,15 +31,15 @@ export const Button: React.FC<Props> = ({
 
   const borderStyles = border ? "border border-ada-blue" : ""
 
-  return (
-    <Link to={url}>
-      <button
-        onClick={handleButtonClick}
-        type={type}
-        className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink ${borderStyles} ${btnStyle}`}
-      >
-        {text}
-      </button>
-    </Link>
+  const buttonContent = (
+    <button
+      onClick={handleButtonClick}
+      type={type}
+      className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink hover:shadow-xl ${borderStyles} ${btnStyle}`}
+    >
+      {text}
+    </button>
   )
+
+  return url ? <Link to={url}>{buttonContent}</Link> : buttonContent
 }

@@ -94,20 +94,20 @@ const References = ({ title1, title2, title3 }: IReferences): JSX.Element => {
     <div className="pt-[120px]">
       {title1 && (
         <>
-          <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+          <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] animate-bounce">
             Co mówią osoby,
           </h3>
-          <h3 className="mx-auto max-w-[780px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+          <h3 className="mx-auto max-w-[780px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] animate-bounce">
             z którymi współpracowałam?
           </h3>
         </>
       )}
       {title2 && (
         <>
-          <h3 className="mx-auto max-w-[778px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+          <h3 className="mx-auto max-w-[778px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] animate-bounce">
             Opinie właścicielek biznesów,
           </h3>
-          <h3 className="mx-auto max-w-[600px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
+          <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] animate-bounce">
             które mi zaufały
           </h3>
         </>
