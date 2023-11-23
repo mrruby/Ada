@@ -34,7 +34,6 @@ const MastermindFAQ = (): JSX.Element => {
       question: "Czy na pewno będzie czas dla mnie?",
       answer: (
         <>
-          {" "}
           Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
           przedstawić swój problem, zadać pytania. Spotykamy się w grupie
           maksymalnie 7 osób, aby każdy znalazł czas dla siebie. <br /> ❌ To
@@ -54,11 +53,7 @@ const MastermindFAQ = (): JSX.Element => {
     return list.map((item, index) => (
       <li className={listItemClass} key={index}>
         <h3 className={listItemQuestionClass}>{item.question}</h3>
-        <p className={listItemAnswerClass}>
-          {" "}
-          &#10003;
-          {item.answer}
-        </p>
+        <p className={listItemAnswerClass}> &#10003; {item.answer}</p>
       </li>
     ))
   }

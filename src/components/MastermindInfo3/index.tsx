@@ -69,7 +69,7 @@ const MastermindInfo3 = (): JSX.Element => {
         <h2 className="text-adaDesc lg:text-adaTitle font-bold md:w-[878px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
           Co dostajesz w ramach programu?
         </h2>
-        <ul className="px-3 lg:max-w-[1084px] pt-6">
+        <ul className="lg:max-w-[1084px] pt-6">
           {whatYouGetList.map((item, index) => (
             <li key={index} className={listItemClass}>
               &#10003; {item}
