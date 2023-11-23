@@ -12,14 +12,14 @@ const MastermindSteps = (): JSX.Element => {
       number: "2",
     },
     {
-      text: "Lead magnet i newsletter: jak stworzyć kampanie reklamowe na zapis do newslettera?",
+      text: "Kampanie na obserwacje na IG/FB: jak pozyskiwać wartościowych odbiorców?",
       number: "3",
     },
   ]
 
   const featuresDataSecondRow = [
     {
-      text: "Kampanie na obserwacje na IG: jak pozyskiwać wartościowych odbiorców?",
+      text: "Lead magnet i newsletter: jak stworzyć kampanie reklamowe na zapis do newslettera?",
       number: "4",
     },
     {
@@ -32,7 +32,7 @@ const MastermindSteps = (): JSX.Element => {
     },
   ]
   return (
-    <div className="text-center pt-10">
+    <section className="text-center pt-10" id="steps">
       <h2 className="font-bold lg:h-[58px] text-adaTitle lg:text-adaTitle2 text-ada-grey -mb-2 lg:-mb-4">
         Nad czym będziemy
       </h2>
@@ -59,7 +59,7 @@ const MastermindSteps = (): JSX.Element => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

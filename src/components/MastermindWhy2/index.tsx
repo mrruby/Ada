@@ -21,9 +21,11 @@ const MastermindWhy2 = (): JSX.Element => {
           Czy to dla Ciebie?{" "}
         </h2>
         <p className="lg:text-adaDesc lg:w-[574px] pt-10 font-medium leading-tight pb-9">
-          W pierwszej oficjalnej edycji zaplanowałam 14 miejsc! Zanim
-          zdecydujesz, proponuję Ci krótkie spotkanie, podczas którego
-          zdecydujemy wspólnie, czy program mentoringowy jest dla Ciebie.
+          W pierwszej oficjalnej edycji zaplanowałam 7 miejsc! <br /> Zanim
+          podejmiesz decyzję, proponuję Ci krótkie spotkanie, podczas którego
+          wspólnie porozmawiamy o Twoim udziale w programie mentoringowym. Chcę
+          dowiedzieć się, jakie są Twoje oczekiwania i poznać lepiej Twój
+          biznes!
         </p>
         <Button
           type="button"

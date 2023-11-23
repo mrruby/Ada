@@ -15,7 +15,7 @@ const MastermindFAQ = (): JSX.Element => {
     {
       question: "Kiedy będą odbywać się spotkania?",
       answer:
-        "Spotykamy się co 2 tygodnie. Zaczniemy od konsultacji, na której skonfigurujemy Twojego Managera Reklam. Pierwsze spotkanie w grupie odbędzie się w 3 tygodniu października. Terminy pozostałych spotkań ustalimy wspólnie.",
+        "Spotykamy się co 2 tygodnie. Zaczniemy od konsultacji indywidualnej już w grudniu, na której skonfigurujemy Twojego Managera Reklam. Terminy pozostałych spotkań ustalimy wspólnie.",
     },
     {
       question: "Czy spotkania będą nagrywane?",

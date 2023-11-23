@@ -1,9 +1,14 @@
-import { Link } from "gatsby"
 import React from "react"
 
 interface ListItem {
   title: string
   description: string | JSX.Element
+}
+
+const scrollToSection = (section: Element | null): void => {
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" })
+  }
 }
 
 const MastermindAgenda = (): JSX.Element => {
@@ -19,9 +24,12 @@ const MastermindAgenda = (): JSX.Element => {
           Każde spotkanie ma temat przewodni, który pomoże Ci ulepszyć Twoje
           kampanie reklamowe na całej ścieżce klienta, a nie tylko na poziomie
           Managera Reklam. Listę tematów spotkań sprawdzisz{" "}
-          <Link to="#" className="underline">
+          <span
+            className="underline cursor-pointer"
+            onClick={() => scrollToSection(document.getElementById("steps"))}
+          >
             tutaj.
-          </Link>
+          </span>
         </>
       ),
     },
@@ -35,7 +43,6 @@ const MastermindAgenda = (): JSX.Element => {
             Dość teoretycznych przykładów, które nie mają nic wspólnego z
             rzeczywistością. Przyszedł czas na praktykę i efekty.
           </span>
-          ",
         </>
       ),
     },

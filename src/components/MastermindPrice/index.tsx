@@ -59,7 +59,7 @@ const MastermindPrice = (): JSX.Element => {
         <p className="max-w-[710px] mx-auto py-2">
           <span className="font-bold">Płacąc za całość, oszczędzasz:</span>{" "}
           wtedy kwota całościowa to {" "}
-          <span className="font-bold">2050 złotych netto</span>
+          <span className="font-bold">2050 złotych netto </span>
           (2521,50 zł brutto)!
         </p>
       </div>

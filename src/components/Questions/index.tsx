@@ -19,7 +19,7 @@ const questionsList: IQuestionsList[] = [
   {
     question: "Czy terminy spotkań będą mi odpowiadać?",
     answer:
-      "Pierwsze spotkanie odbędzie się w 2 tygodniu października, a terminy pozostałych spotkań ustalimy wspólnie. Tak, żeby każdy mógł dołączyć na żywo lub w wyjątkowych sytuacjach obejrzeć nagranie! ",
+      "Spotykamy się co 2 tygodnie. Zaczniemy od konsultacji indywidualnej już w grudniu, na której skonfigurujemy Twojego Managera Reklam. Terminy pozostałych spotkań ustalimy wspólnie.",
   },
   {
     question: "Co jeśli nie będę mogła pojawić się na którymś spotkaniu?",

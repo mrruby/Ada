@@ -5,7 +5,7 @@ const MastermindInfo1 = (): JSX.Element => {
     "text-[15px] lg:text-adaDesc leading-tight font-medium py-2 leading-tight"
 
   return (
-    <div className="w-full flex flex-col px-3 py-2">
+    <div className="w-full flex flex-col px-3 py-2" id="mastermind">
       <h2 className="text-adaSubtitle lg:text-adaBig font-bold text-center text-ada-white40 mb-[-10px]">
         Prowadzisz własny biznes?
       </h2>
