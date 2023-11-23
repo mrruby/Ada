@@ -1,38 +1,46 @@
-import React from "react";
-import { ContentBox } from "helpers/ContentBox";
+import React from "react"
+import { ContentBox } from "helpers/ContentBox"
 
 type ContentBoxProps = {
-  title: string;
-  description: string;
-  url?: string;
-  btnText: string;
+  title: string
+  description: string
+  url?: string
+  btnText: string
   actionButton?: boolean
 }
 
 type ContentSectionProps = {
-  title: string;
-  headingTextStyle?: string;
-  heading?: string;
-  description?: string;
-  data: ContentBoxProps[];
-  actionButtonBoxes: boolean;
-};
+  title: string
+  headingTextStyle?: string
+  heading?: string
+  description?: string
+  data: ContentBoxProps[]
+  actionButtonBoxes: boolean
+}
 
-const ContentSection: React.FC<ContentSectionProps> = ({ title, 
-  headingTextStyle = "text-adaTitle lg:text-adaBig text-ada-grey",
-  heading, description, data, actionButtonBoxes  }) => {
+const ContentSection: React.FC<ContentSectionProps> = ({
+  title,
+  headingTextStyle = "text-adaSubtitleSecondary lg:text-adaBig text-ada-grey",
+  heading,
+  description,
+  data,
+  actionButtonBoxes,
+}) => {
   return (
-    <div className=" text-ada-blue flex flex-col items-center py-6 lg:pt-[68px] lg:pb-[40px]" id="uslugi">
+    <div
+      className=" text-ada-blue flex flex-col items-center py-6 lg:pt-[68px] lg:pb-[40px]"
+      id="uslugi"
+    >
       <div className="flex flex-col items-center text-center">
-      <p className={`${headingTextStyle} font-bold lg:h-[58px]`}>
-      {heading}
-        </p>
-        <h2 className="px-6 text-adaTitle font-bold">{title}</h2>
+        <p className={`${headingTextStyle} font-bold`}>{heading}</p>
+        <h2 className="px-6 text-adaTitle font-bold mt-[-30px] md:mt-[-50px] animate-bounce">
+          {title}
+        </h2>
         {description && <p className="text-adaBase py-8">{description}</p>}
       </div>
       <div className="flex gap-4 lg:gap-[58px] flex-col md:flex-row">
-      {actionButtonBoxes ? 
-            data.map((item, index) => (
+        {actionButtonBoxes
+          ? data.map((item, index) => (
               <ContentBox
                 key={index}
                 title={item.title}
@@ -42,8 +50,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({ title,
                 actionButton={true}
               />
             ))
-          : 
-            data.map((item, index) => (
+          : data.map((item, index) => (
               <ContentBox
                 key={index}
                 title={item.title}
@@ -54,7 +61,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({ title,
             ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContentSection;
+export default ContentSection

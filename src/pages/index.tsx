@@ -33,17 +33,17 @@ const IndexPage = (): JSX.Element => {
           btnText="Pokaż mi więcej"
           image={
             <StaticImage
-              src={"../images/ada_hero.webp"}
+              src={"./../images/ada_homepage2.webp"}
               alt="Ada Promis - hero"
               placeholder="none"
-              width={1000}
-              height={1000}
+              width={680}
+              height={700}
               formats={["auto", "webp", "avif"]}
               quality={100}
             />
           }
-          imgStyle="max-w-[592px] self-end"
-          paragraphStyle="max-w-[592px] px-2 md:px-5"
+          imgStyle="lg:h-[740px] lg:absolute top-0 lg:right-[-80px] xl:right-[-140px] 2xl:right-[-310px]"
+          paragraphStyle="lg:h-[700px] lg:pt-[100px] max-w-[592px] px-2 md:px-5"
           btnUrl="#uslugi"
         />
       </MaxWithBgColorContainer>

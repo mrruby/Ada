@@ -19,7 +19,7 @@ const questionsList: IQuestionsList[] = [
   {
     question: "Czy terminy spotkań będą mi odpowiadać?",
     answer:
-      "Pierwsze spotkanie odbędzie się w 2 tygodniu października, a terminy pozostałych spotkań ustalimy wspólnie. Tak, żeby każdy mógł dołączyć na żywo lub w wyjątkowych sytuacjach obejrzeć nagranie! ",
+      "Spotykamy się co 2 tygodnie. Zaczniemy od konsultacji indywidualnej już w grudniu, na której skonfigurujemy Twojego Managera Reklam. Terminy pozostałych spotkań ustalimy wspólnie.",
   },
   {
     question: "Co jeśli nie będę mogła pojawić się na którymś spotkaniu?",
@@ -77,11 +77,11 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
 
 const Questions = (): JSX.Element => {
   return (
-    <div className="pt-[120px] text-center pb-4">
-      <h2 className="font-bold lg:h-[58px] text-adaDesc lg:text-adaTitle2 text-ada-grey">
+    <div className="pt-[120px] text-center pb-10">
+      <h2 className="font-bold lg:h-[58px] text-adaSubtitle lg:text-adaTitle2 text-ada-grey -mb-4">
         Pewnie teraz się{" "}
       </h2>
-      <h2 className="px-6 text-adaDesc lg:text-adaTitle font-bold">
+      <h2 className="px-6 text-adaSubtitle lg:text-adaTitle font-bold">
         zastanawiasz...
       </h2>
       {questionsList && (

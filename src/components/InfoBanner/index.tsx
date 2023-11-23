@@ -12,8 +12,8 @@ const InfoBanner = (): JSX.Element => {
           src={"../../images/info_materials.webp"}
           alt="Ada Promis - materials"
           placeholder="none"
-          width={370}
-          height={250}
+          width={360}
+          height={200}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
@@ -27,8 +27,8 @@ const InfoBanner = (): JSX.Element => {
           src={"../../images/info_about.webp"}
           alt="Ada Promis - about"
           placeholder="none"
-          width={370}
-          height={250}
+          width={360}
+          height={200}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
@@ -39,11 +39,11 @@ const InfoBanner = (): JSX.Element => {
       url: "https://sklep.adrianna.com.pl/",
       image: (
         <StaticImage
-          src={"../../images/info_about.webp"}
+          src={"../../images/info_shop.webp"}
           alt="Ada Promis - shop"
           placeholder="none"
-          width={370}
-          height={250}
+          width={360}
+          height={200}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
@@ -52,7 +52,7 @@ const InfoBanner = (): JSX.Element => {
   ]
 
   return (
-    <div className=" text-ada-blue flex gap-[0px] lg:gap-[80px] flex-col md:flex-row items-center justify-center pb-[24px]">
+    <div className=" text-ada-blue flex gap-[0px] lg:gap-[80px] flex-col md:flex-row items-center justify-center pb-10">
       {infoData.map((info, index) => (
         <InfoBox
           key={index}

@@ -19,7 +19,7 @@ const AboutBanner = (): JSX.Element => {
         />
       </div>
       <div className="pt-[60px] px-3 xl:pr-[100px]">
-        <h3 className="text-adaTitle lg:text-adaBig text-ada-grey font-bold mb-[-50px]">
+        <h3 className="text-adaTitle lg:text-adaBig text-ada-grey font-bold -mb-10 lg:mb-[-60px]">
           O mnie
         </h3>
         <h2 className="text-adaTitle font-bold">Cześć</h2>

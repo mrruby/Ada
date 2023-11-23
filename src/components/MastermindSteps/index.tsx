@@ -12,14 +12,14 @@ const MastermindSteps = (): JSX.Element => {
       number: "2",
     },
     {
-      text: "Lead magnet i newsletter: jak stworzyć kampanie reklamowe na zapis do newslettera?",
+      text: "Kampanie na obserwacje na IG/FB: jak pozyskiwać wartościowych odbiorców?",
       number: "3",
     },
   ]
 
   const featuresDataSecondRow = [
     {
-      text: "Kampanie na obserwacje na IG: jak pozyskiwać wartościowych odbiorców?",
+      text: "Lead magnet i newsletter: jak stworzyć kampanie reklamowe na zapis do newslettera?",
       number: "4",
     },
     {
@@ -32,11 +32,11 @@ const MastermindSteps = (): JSX.Element => {
     },
   ]
   return (
-    <div className="text-center pt-10">
-      <h2 className="font-bold lg:h-[58px] text-adaTitle lg:text-adaTitle2 text-ada-grey">
+    <section className="text-center pt-10" id="steps">
+      <h2 className="font-bold lg:h-[58px] text-adaTitle lg:text-adaTitle2 text-ada-grey -mb-2 lg:-mb-4">
         Nad czym będziemy
       </h2>
-      <h2 className="px-6 text-adaTitle font-bold">pracować?</h2>
+      <h2 className="px-6 text-adaTitle font-bold animate-bounce">pracować?</h2>
       <div className="flex flex-col mx-auto items-center justify-center pb-10">
         <div className="flex flex-col md:flex-row gap-10 md:gap-[90px]">
           {featuresDataFirtstRow.map((feature, index) => (
@@ -59,7 +59,7 @@ const MastermindSteps = (): JSX.Element => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

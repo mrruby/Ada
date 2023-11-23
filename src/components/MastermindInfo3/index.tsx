@@ -53,18 +53,23 @@ const MastermindInfo3 = (): JSX.Element => {
     <span key={4}>
       każde spotkanie to godzina tematu przewodniego +{" "}
       <span className="font-bold">Q&A</span> i możliwość, wskoczenia na hot seat
-      ze swoim problemem
+      ze swoim problemem,
       <br />
+    </span>,
+    <span key={5}>
+      co tydzień: <span className="font-bold">office hours</span>, podczas
+      których możesz szybko rozwiązać bieżący problem z reklamami lub
+      zoptymalizować je pod moim czujnym okiem
     </span>,
   ]
 
   return (
     <div className="w-full flex flex-col px-3 items-center ">
       <div className="pt-[60px] lg:pt-[150px]">
-        <h2 className="text-adaDesc lg:text-adaTitle font-bold md:w-[878px] border-b-[12px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]">
+        <h2 className="text-adaDesc lg:text-adaTitle font-bold md:w-[878px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
           Co dostajesz w ramach programu?
         </h2>
-        <ul className="md:max-w-[1084px] pt-6">
+        <ul className="lg:max-w-[1084px] pt-6">
           {whatYouGetList.map((item, index) => (
             <li key={index} className={listItemClass}>
               &#10003; {item}
@@ -73,7 +78,7 @@ const MastermindInfo3 = (): JSX.Element => {
         </ul>
       </div>
       <div className="pt-[60px] lg:pt-[76px]">
-        <h2 className="text-[20px] lg:text-adaTitle font-bold md:w-[774px] border-b-[12px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]">
+        <h2 className="text-[20px] lg:text-adaTitle font-bold w-[150px]  md:w-[350px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
           W programie
         </h2>
         <ul className="md:max-w-[1084px] pt-6">

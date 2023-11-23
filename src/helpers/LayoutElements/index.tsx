@@ -196,3 +196,55 @@ export const TwoBlueFlowers2: React.FC<Props> = ({
     />
   )
 }
+
+export const FlowerWhite2: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/flower-right-white.svg"
+      alt="White Flower - Ada Promis"
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const FlowerWhite3: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/flower-right-white.svg"
+      alt="White Flower - Ada Promis"
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}

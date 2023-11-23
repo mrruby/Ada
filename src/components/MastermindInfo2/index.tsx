@@ -88,7 +88,7 @@ const MastermindInfo2 = (): JSX.Element => {
   return (
     <div className="w-full flex flex-col px-3 items-center">
       <div className="pt-[60px] lg:pt-[76px]">
-        <h2 className="text-[20px] lg:text-adaTitle font-bold md:w-[774px] border-b-[12px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]">
+        <h2 className="text-[20px] lg:text-adaTitle font-bold md:w-[774px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px]">
           Program jest dla Ciebie, jeśli…
         </h2>
         <ul className="md:max-w-[1084px] pt-6">
@@ -102,7 +102,7 @@ const MastermindInfo2 = (): JSX.Element => {
       <div className="pt-[60px] lg:pt-[76px] flex">
         <div className="lg:h-[480px] lg:w-[310px] bg-puzzles lg:mr-10"></div>
         <div>
-          <h2 className="text-[20px] lg:text-adaTitle font-bold md:w-[658px] border-b-[12px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[60px]">
+          <h2 className="text-[20px] lg:text-adaTitle font-bold md:w-[658px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px]">
             Nie jest dla Ciebie, jeśli…
           </h2>
           <ul className="md:max-w-[750px] pt-6">

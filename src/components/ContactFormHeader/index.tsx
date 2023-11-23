@@ -7,7 +7,9 @@ const ContactFormHeader = (): JSX.Element => {
         <p className="text-adaSubtitle lg:text-adaBig text-ada-grey font-bold lg:h-[58px]">
           Porozmawiajmy!
         </p>
-        <h1 className="text-adaTitle font-bold">Napisz do mnie!</h1>
+        <h1 className="text-adaTitle font-bold animate-bounce">
+          Napisz do mnie!
+        </h1>
         <p className="text-adaBase px-2 py-4 md:py-8 max-w-[840px]">
           Kampanie? Strategia? Szkolenia? Konsultacje? A może po prostu
           wirtualna kawka? Chętnie spotkam się, aby obgadać wspólne plany,
