@@ -19,7 +19,7 @@ const MastermindPrice = (): JSX.Element => {
       </span>
       <br/>
       Miesięczny pakiet konsultacji marketingowych (3 lub 4 godzinne spotkania)
-      to 1300 zł netto. To >325 złotych za godzinę wiedzy.
+      to 1500 zł netto. To >375 złotych za godzinę wiedzy.
     </span>,
     <span key={2}>
       <span className="font-bold">

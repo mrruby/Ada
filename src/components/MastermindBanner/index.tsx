@@ -3,7 +3,7 @@ import { Button } from "helpers/Button"
 
 const MastermindBanner = (): JSX.Element => {
   return (
-    <div className="w-full bg-mastermind h-[500px] md:h-[690px] xl:h-[760px] flex flex-col items-center justify-center">
+    <div className="w-full bg-mastermind h-[500px] md:h-[690px] xl:h-[760px] flex flex-col items-center justify-center px-2">
       <div className="max-w-[1072px] flex flex-col items-center">
         <h1 className="text-adaBase lg:text-adaTitle font-bold text-center leading-tight animate-bounce pb-8">
           Chcesz, aby więcej osób kupowało Twoje produkty i korzystało z Twoich

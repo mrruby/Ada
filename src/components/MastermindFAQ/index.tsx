@@ -78,8 +78,7 @@ const MastermindFAQ = (): JSX.Element => {
           <span className="font-bold">
             dołączasz teraz i szlifujesz kampanie,
           </span>{" "}
-          aby przed końcem roku zobaczyć wzrost wyników, czy czekasz do kolejnej
-          edycji?
+          aby zobaczyć realny wzrost wyników, czy czekasz do kolejnej edycji?
         </h3>
         <Button
           type="button"
