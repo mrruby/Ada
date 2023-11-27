@@ -6,7 +6,7 @@ const MastermindVideo = (): JSX.Element => {
   return (
     <div className="flex flex-col pb-20 pt-20 md:pt-14 gap-10 px-2">
       <div className="flex flex-col md:flex-row items-center gap-8 mx-auto">
-        <CountdownTimer targetDate={new Date('2023-12-04T00:00:00')} />
+        <CountdownTimer targetDate={new Date('2023-12-05T00:00:00')} />
         <Button
             type="button"
             text={
