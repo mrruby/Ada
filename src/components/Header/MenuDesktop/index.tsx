@@ -7,8 +7,12 @@ const MenuDesktop = (): JSX.Element => {
   const linkClass =
     "text-ada-blue text-adaBase md:text-adaNav font-bold  uppercase transition-colors duration-300 hover:text-ada-white hover:border-b-4 hover:border-ada-blue"
 
+  const mentoringLinkClass =
+    "text-white-pink text-adaSubtitle md:text-adaNav font-extrabold uppercase transition-colors duration-300 hover:text-ada-white border-b-4 border-ada-pink hover:border-ada-blue"
+
   const links = [
     { to: "https://sklep.adrianna.com.pl/", text: "sklep" },
+    { to: "/ogarnij-swoje-adsy", text: "mentoring" },
     { to: "/about", text: "o mnie" },
     { to: "/materials", text: "materiały" },
     { to: "/blog", text: "blog" },
@@ -36,7 +40,9 @@ const MenuDesktop = (): JSX.Element => {
             key={index}
             to={link.to}
             text={link.text}
-            className={linkClass}
+            className={
+              link.text === "mentoring" ? mentoringLinkClass : linkClass
+            }
           />
         ))}
       </nav>

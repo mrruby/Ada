@@ -115,12 +115,12 @@ const Knowledge = (): JSX.Element => {
     {
       text: (
         <>
-          Wolisz grupowe zdobywanie wiedzy? Sprawdź mastermind „Ogarnij swoje
-          Adsy!”.
+          Wolisz grupowe zdobywanie wiedzy? Sprawdź mastermind{" "}
+          <span className="font-extrabold">„Ogarnij swoje Adsy!”</span>.
         </>
       ),
       btnText: <span className="font-bold">Chcę wiedzieć więcej! </span>,
-      url: "/mastermind",
+      url: "/ogarnij-swoje-adsy",
       type: "variant2",
     },
   ]

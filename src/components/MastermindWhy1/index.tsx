@@ -91,7 +91,8 @@ const MastermindWhy1 = (): JSX.Element => {
           }
           url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
           textSize="md:text-adaSubtitle font-bold"
-          btnStyle="md:w-[660px] px-0"
+          btnStyle="md:w-[700px] px-0 border-b-4 border-ada-pink"
+          iconCalender
         />
       </div>
     </div>
