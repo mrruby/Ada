@@ -31,8 +31,9 @@ const MastermindWhy2 = (): JSX.Element => {
           type="button"
           text={<span className="font-bold">Umawiam spotkanie</span>}
           url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
-          textSize="md:text-adaSubtitle"
-          btnStyle="md:w-[315px]"
+          textSize="md:text-adaSubtitle border-b-4 border-ada-pink"
+          btnStyle="md:w-[340px]"
+          iconCalender
         />
       </div>
     </div>
