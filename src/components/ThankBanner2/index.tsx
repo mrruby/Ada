@@ -6,10 +6,10 @@ const ThankBanner2 = (): JSX.Element => {
   return (
     <div className="flex px-2 lg:pl-[120px] flex-col items-center text-ada-blue relative md:min-h-[85vh]">
       <div className="lg:w-[1000px] pt-[80px] lg:pt-[110px] md:pb-[60px] text-center">
-        <h1 className="text-[20px] lg:text-adaTitle2 font-bold">
+        <h1 className="text-[20px] lg:text-adaTitle font-bold">
           Właśnie potwierdziłaś zapis - dziękuję!
         </h1>
-        <p className="lg:text-[30px] pt-[24px] font-medium leading-tight pb-[30px] md:pb-[50px]">
+        <p className="lg:text-[28px] pt-[24px] font-medium leading-tight pb-[30px] md:pb-[50px]">
           Już za kilka minut dostaniesz ode mnie kolejnego maila - stay tuned!
           Sprawdź mojego Instagrama w poszukiwaniu <br /> ciekawych stories o
           kampaniach i masy tipów!

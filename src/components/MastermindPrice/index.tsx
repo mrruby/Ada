@@ -91,7 +91,8 @@ const MastermindPrice = (): JSX.Element => {
         text={<span className="font-bold">Rezerwuję spotkanie i działam!</span>}
         url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
         textSize="md:text-adaSubtitle"
-        btnStyle="md:w-[460px]"
+        btnStyle="md:w-[480px] border-b-4 border-ada-pink"
+        iconCalender
       />
     </div>
   )

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 interface Props {
   type: "button" | "submit" | "reset"
@@ -9,6 +10,7 @@ interface Props {
   sectionId?: string
   border?: boolean
   btnStyle?: string
+  iconCalender?: boolean
 }
 
 export const Button: React.FC<Props> = ({
@@ -19,6 +21,7 @@ export const Button: React.FC<Props> = ({
   sectionId,
   border,
   btnStyle,
+  iconCalender,
 }) => {
   const handleButtonClick = () => {
     if (sectionId && !url) {
@@ -38,6 +41,16 @@ export const Button: React.FC<Props> = ({
       className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink hover:shadow-xl ${borderStyles} ${btnStyle}`}
     >
       {text}
+      {iconCalender && (
+        <StaticImage
+          src={"../../images/calendar.svg"}
+          alt=""
+          placeholder="none"
+          width={24}
+          height={24}
+          className="ml-4 mt-[5px]"
+        />
+      )}
     </button>
   )
 
