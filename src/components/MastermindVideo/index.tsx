@@ -5,20 +5,28 @@ import CountdownTimer  from "helpers/CountdownTimer"
 const MastermindVideo = (): JSX.Element => {
   return (
     <div className="flex flex-col pb-20 pt-20 md:pt-14 gap-10 px-2">
-      <div className="flex flex-col md:flex-row items-center gap-8 mx-auto">
+      <div className="flex flex-col items-center gap-2 mx-auto pb-8">
+        <h2 className="text-adaBase lg:text-[36px] font-bold text-center leading-tight animate-bounce pt-5">
+           Do końca zapisów na program zostało:
+          </h2>
         <CountdownTimer targetDate={new Date('2023-12-05T00:00:00')} />
+        <div className="flex flex-col items-center pt-20">
+        <h2 className="text-adaBase lg:text-[36px] font-bold text-center leading-tight pb-8">
+          Umów się na wirtualną kawkę ☕, <br/> aby pogadać o programie mentoringowym
+           </h2>
         <Button
             type="button"
             text={
               <>
-                Umów konsultacje i<span className="font-bold"> dołącz teraz</span>
+                Kliknij<span className="font-bold"> i wybierz termin</span>
               </>
             }
             url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
             textSize="md:text-adaSubtitle"
-            btnStyle="xl:w-[600px] border-b-4 border-ada-pink"
+            btnStyle="xl:w-[410px] border-b-4 border-ada-pink"
             iconCalender
           />
+        </div>
         </div>
         <div className="flex flex-col items-center">
           <h1 className="text-adaBase lg:text-adaTitle font-bold text-center leading-tight animate-bounce pb-8">

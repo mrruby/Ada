@@ -24,7 +24,7 @@ const WebinarReplayPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MastermindVideo/>
       </MaxWithBgColorContainer>
-      <MastermindBanner />
+   
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MastermindInfo1 />
         <MastermindWhy1 />

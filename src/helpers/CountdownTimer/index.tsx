@@ -38,7 +38,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   });
 
   return (
-    <div className='flex w-full gap-8 lg:min-w-[600px] justify-around bg-ada-light-pink px-4 py-2'>
+    <div className='flex w-full gap-8 lg:max-w-[660px] justify-around bg-ada-light-pink px-4 py-2'>
       <TimeSegment label="dni" value={timeLeft.days} />
       <TimeSegment label="godzin" value={timeLeft.hours} />
       <TimeSegment label="minut" value={timeLeft.minutes} />
