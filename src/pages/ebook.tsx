@@ -11,7 +11,6 @@ import EbookKnowledge from "components/EbookKnowledge"
 const EbookPage = (): JSX.Element => {
   return (
     <Layout flowerBlue={true} starPink={true} flowerWhite={true}>
-      <SEO title="Home" />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <CustomBanner
           title="W e-booku przeczytasz o…."
@@ -58,5 +57,7 @@ const EbookPage = (): JSX.Element => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Ebook" />
 
 export default EbookPage

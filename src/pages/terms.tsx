@@ -9,23 +9,19 @@ type TermsData = {
   data: {
     markdownRemark: {
       rawMarkdownBody: any
-    } 
+    }
   }
 }
 
 const TermsPage = ({
   data: {
-    markdownRemark: {
-      rawMarkdownBody
-    },
+    markdownRemark: { rawMarkdownBody },
   },
-  }: TermsData): JSX.Element => {
-
+}: TermsData): JSX.Element => {
   return (
     <Layout>
-      <SEO title="Polityka prywatności & plików cookies" />
       <MaxWithBgColorContainer>
-        <LegalLayout markdown={rawMarkdownBody}  />
+        <LegalLayout markdown={rawMarkdownBody} />
       </MaxWithBgColorContainer>
     </Layout>
   )
@@ -33,10 +29,12 @@ const TermsPage = ({
 
 export default TermsPage
 
+export const Head = () => <SEO title="Polityka prywatności & plików cookies" />
+
 export const termsQuery = graphql`
   query {
-  markdownRemark(fields: { slug: { eq: "/legal/terms/" } }) {
-    rawMarkdownBody
+    markdownRemark(fields: { slug: { eq: "/legal/terms/" } }) {
+      rawMarkdownBody
+    }
   }
-}
 `

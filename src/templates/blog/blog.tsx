@@ -40,10 +40,14 @@ const BlogPage = ({
     title: title,
   }
   return (
-    <Layout    >
-      <SEO title={title} description={description} />
+    <Layout>
       <MaxWithBgColorContainer extraStyle="pt-[50px]">
-        <BlogPostLayout title={title} date={date} tags={tags} markdown={rawMarkdownBody}  />
+        <BlogPostLayout
+          title={title}
+          date={date}
+          tags={tags}
+          markdown={rawMarkdownBody}
+        />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer extraStyle="px-2">
         <Disqus config={disqusConfig} />
@@ -51,6 +55,14 @@ const BlogPage = ({
     </Layout>
   )
 }
+
+export const Head = ({
+  data: {
+    markdownRemark: {
+      frontmatter: { title, description },
+    },
+  },
+}: BlogData) => <SEO title={title} description={description} />
 
 export default BlogPage
 

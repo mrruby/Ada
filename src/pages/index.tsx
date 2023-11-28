@@ -19,7 +19,6 @@ const IndexPage = (): JSX.Element => {
       flowerBlue2={true}
       flowerBlue3={true}
     >
-      <SEO title="Home" />
       <MaxWithBgColorContainer>
         <CustomBanner
           title="Cześć!"
@@ -60,5 +59,7 @@ const IndexPage = (): JSX.Element => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Home" />
 
 export default IndexPage

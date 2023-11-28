@@ -19,7 +19,6 @@ import MastermindFAQ from "components/MastermindFAQ"
 const MastermindPage = (): JSX.Element => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
-      <SEO title="Ogarnij swoje Adsy" />
       <MastermindBanner />
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MastermindInfo1 />
@@ -52,5 +51,7 @@ const MastermindPage = (): JSX.Element => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Ogarnij swoje Adsy" />
 
 export default MastermindPage

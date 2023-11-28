@@ -15,7 +15,6 @@ const MaterialsPage = (): JSX.Element => {
       flowerWhite={true}
       flowerBlue3={true}
     >
-      <SEO title="Materiały" />
       <MaxWithBgColorContainer bgColor="bg-transparent">
         <KnowledgeBanner />
       </MaxWithBgColorContainer>
@@ -83,5 +82,7 @@ const MaterialsPage = (): JSX.Element => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Materiały" />
 
 export default MaterialsPage

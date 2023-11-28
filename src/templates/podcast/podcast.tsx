@@ -42,7 +42,6 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
       <MaxWithBgColorContainer extraStyle="pt-[70px] px-3 lg:px-5 flex flex-col w-6xl max-w-[920px] mx-auto">
         <Audio
           url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
@@ -61,6 +60,14 @@ const PodcastPage = ({ data }: PodcastData): JSX.Element => {
 }
 
 export default PodcastPage
+
+export const Head = ({
+  data: {
+    markdownRemark: {
+      frontmatter: { title, description },
+    },
+  },
+}: PodcastData) => <SEO title={title} description={description} />
 
 export const pageQuery = graphql`
   query ($path: String!) {

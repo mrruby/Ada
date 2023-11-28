@@ -7,12 +7,13 @@ import ThankBanner2 from "components/ThankBanner2"
 const ThankYouPage = (): JSX.Element => {
   return (
     <Layout>
-      <SEO title="Thank you page" />
       <MaxWithBgColorContainer>
         <ThankBanner2 />
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Thank you page" />
 
 export default ThankYouPage

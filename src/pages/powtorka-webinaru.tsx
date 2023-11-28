@@ -20,11 +20,10 @@ import MastermindVideo from "components/MastermindVideo"
 const WebinarReplayPage = (): JSX.Element => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
-      <SEO title="Ogarnij swoje Adsy" />
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindVideo/>
+        <MastermindVideo />
       </MaxWithBgColorContainer>
-   
+
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MastermindInfo1 />
         <MastermindWhy1 />
@@ -56,5 +55,7 @@ const WebinarReplayPage = (): JSX.Element => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Ogarnij swoje Adsy" />
 
 export default WebinarReplayPage
