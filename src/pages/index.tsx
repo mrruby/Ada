@@ -19,7 +19,7 @@ const IndexPage = (): JSX.Element => {
       flowerBlue2={true}
       flowerBlue3={true}
     >
-      <SEO title="Home" lang="pl" />
+      <SEO title="Home" />
       <MaxWithBgColorContainer>
         <CustomBanner
           title="Cześć!"
