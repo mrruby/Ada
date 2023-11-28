@@ -59,19 +59,23 @@ const BlogPage = (): JSX.Element => {
 
   return (
     <Layout flowerBlue={true} flowerBlue3={true} flowerWhite={true}>
-      <SEO title="Blog" />
       <MaxWithBgColorContainer>
         <CustomBanner
           title="Hej, tu Ada!"
           paragraph1={
             <>
-              Gdy w 2018 roku zaczęłam pracę w marketingu, poczułam, że da się robić marketing inaczej: baz nachalnej sprzedaży i krzyczenia „kup, kup, kup!”.
+              Gdy w 2018 roku zaczęłam pracę w marketingu, poczułam, że da się
+              robić marketing inaczej: baz nachalnej sprzedaży i krzyczenia
+              „kup, kup, kup!”.
             </>
           }
           paragraph2={
             <>
-            Dlatego na co dzień praktykuję slow marketing: przemyślany, wartościowy, zbudowany na relacjach.
-            <br/>Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny oraz uczę, jak robić skuteczny marketing w zgodzie ze sobą.
+              Dlatego na co dzień praktykuję slow marketing: przemyślany,
+              wartościowy, zbudowany na relacjach.
+              <br />
+              Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny
+              oraz uczę, jak robić skuteczny marketing w zgodzie ze sobą.
             </>
           }
           btnText="Pokaż mi więcej"
@@ -94,7 +98,7 @@ const BlogPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear">
         <BlogPosts postsData={edges} />
-        <InfoBanner/>
+        <InfoBanner />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <NewsletterBanner title3 paragraph image />
@@ -102,5 +106,7 @@ const BlogPage = (): JSX.Element => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Blog" />
 
 export default BlogPage

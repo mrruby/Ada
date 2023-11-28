@@ -5,40 +5,36 @@ import Layout from "../components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import LegalLayout from "components/LegalLayout"
 
-
 type PolicyData = {
   data: {
     markdownRemark: {
       rawMarkdownBody: any
-    } 
+    }
   }
 }
 
 const PolicyPage = ({
   data: {
-    markdownRemark: {
-      rawMarkdownBody
-    },
+    markdownRemark: { rawMarkdownBody },
   },
-  }: PolicyData): JSX.Element => {
-
+}: PolicyData): JSX.Element => {
   return (
     <Layout>
-      <SEO title="Polityka prywatności & plików cookies" />
       <MaxWithBgColorContainer>
-        <LegalLayout markdown={rawMarkdownBody}  />
+        <LegalLayout markdown={rawMarkdownBody} />
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
 
-export default PolicyPage
+export const Head = () => <SEO title="Polityka prywatności & plików cookies" />
 
+export default PolicyPage
 
 export const pageQuery = graphql`
   query {
-  markdownRemark(fields: { slug: { eq: "/legal/policy/" } }) {
-    rawMarkdownBody
+    markdownRemark(fields: { slug: { eq: "/legal/policy/" } }) {
+      rawMarkdownBody
+    }
   }
-}
 `

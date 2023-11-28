@@ -8,7 +8,6 @@ import ContactFormHeader from "components/ContactFormHeader"
 const ContactPage = (): JSX.Element => {
   return (
     <Layout>
-      <SEO title="Kontakt" />
       <ContactFormHeader />
       <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="pt-[50px]">
         <ContactForm />
@@ -16,5 +15,7 @@ const ContactPage = (): JSX.Element => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Kontakt" />
 
 export default ContactPage

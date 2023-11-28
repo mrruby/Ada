@@ -12,31 +12,35 @@ import Puzzles from "components/Puzzles"
 
 const AboutPage = (): JSX.Element => {
   return (
-    <Layout
-      twoBlueFlowers2={true}
-    >
-      <SEO title="O mnie" />
-        <HelloBanner />      
+    <Layout twoBlueFlowers2={true}>
+      <HelloBanner />
       <MaxWithBgColorContainer bgColor="bg-linear4">
         <AdaBanner />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-light-pink" extraStyle="lg:h-[208px]">
+      <MaxWithBgColorContainer
+        bgColor="bg-ada-light-pink"
+        extraStyle="lg:h-[208px]"
+      >
         <FeaturesAda />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-white" extraStyle="lg:h-[180px]">
-      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer
+        bgColor="bg-white"
+        extraStyle="lg:h-[180px]"
+      ></MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear5">
-        <Cooperation/>
-      </MaxWithBgColorContainer>    
+        <Cooperation />
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-          <MeetMeBanner/>
-      </MaxWithBgColorContainer>    
-      <MaxWithBgColorContainer  bgColor="bg-linear3">
-          <AboutBanner/>
-          <Puzzles/>
-      </MaxWithBgColorContainer>      
+        <MeetMeBanner />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear3">
+        <AboutBanner />
+        <Puzzles />
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="O mnie" />
 
 export default AboutPage
