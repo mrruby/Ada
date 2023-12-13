@@ -115,7 +115,7 @@ const Knowledge = (): JSX.Element => {
     {
       text: (
         <>
-          Wolisz grupowe zdobywanie wiedzy? Sprawdź program mantoringowy{" "}
+          Wolisz grupowe zdobywanie wiedzy? Sprawdź program mentoringowy{" "}
           <span className="font-extrabold">„Ogarnij swoje Adsy!”</span>.
         </>
       ),
