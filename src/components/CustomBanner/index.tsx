@@ -45,7 +45,7 @@ const CustomBanner = ({
             <Button
               type="button"
               text={btnText}
-              url={btnUrl}
+              sectionId={btnUrl}
               btnStyle="md:w-[344px]"
             />
           )}
