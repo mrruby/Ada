@@ -35,14 +35,14 @@ const IndexPage = (): JSX.Element => {
               src={"../images/contact.webp"}
               alt="Ada Promis - hero"
               placeholder="none"
-              width={680}
+              width={800}
               height={800}
               formats={["auto", "webp", "avif"]}
               quality={100}
             />
           }
-          paragraphStyle="max-w-[532px] h-[800px] pt-[160px] text-adaBase"
-          imgStyle="lg:absolute top-0 right-[-170px]"
+          paragraphStyle="max-w-[400px] xl:max-w-[532px] h-[770px] pt-[160px] text-adaBase"
+          imgStyle="lg:absolute top-0 right-[-170px] lg:pt-[10px]"
           btnUrl="uslugi"
         />
       </MaxWithBgColorContainer>
