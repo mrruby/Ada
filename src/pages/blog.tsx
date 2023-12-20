@@ -93,7 +93,7 @@ const BlogPage = (): JSX.Element => {
           paragraphStyle="max-w-[532px] h-[740px] pt-[160px] text-adaBase"
           paragraphTextStyle="text-adaBase"
           imgStyle="lg:absolute top-0 right-[-200px]"
-          btnUrl="#posts"
+          btnUrl="posts"
         />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear">
