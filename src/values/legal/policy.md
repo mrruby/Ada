@@ -1,40 +1,41 @@
-﻿**Polityka prywatności i plików cookies** Dzień dobry!
+﻿**Polityka prywatności i plików cookies**
+Dzień dobry!
 
 Jeżeli tutaj trafiłeś, to niezawodny znak, że cenisz swoją prywatność. Doskonale to rozumiemy, dlatego oddajemy w Twoje ręce dokument, w którym w jednym miejscu znajdziesz zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies i innych technologii śledzących.
 
-Informacja formalna na początek: administratorem Twoich danych osobowych jest Dawid Urbas Get Bold z siedzibą w Chorzowie przy ul. Żołnierzy Września, nr 79/6, 41-500, NIP 6272725565.
+Informacja formalna na początek: administratorem Twoich danych osobowych jest Slow Marketing Adrianna Promis-Urbas z siedzibą w Raciborzu przy ul. Mała 2, 47-400, NIP 6391970911.
 
 Przetwarzamy Twoje dane osobowe przede wszystkim w celach związanych z korzystaniem przez Ciebie z naszej strony internetowej, takich jak prowadzenie konta użytkownika, składanie zamówień i obsługa umów, rozpatrywanie reklamacji i odstąpień, wypełnianie obowiązków prawnych podatkowych, wysyłka newslettera, sprawy dotyczące roszczeń, analiza, statystyka, marketing itp. Twoje dane osobowe przetwarzamy przez okres niezbędny dla realizacji poszczególnego celu. Przysługuje Ci prawo dostępu do danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, wniesienia sprzeciwu wobec przetwarzania, a także o prawo do przenoszenia danych. Ponadto możesz złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych.
 
 Szczegółowe informacje na temat zasad przetwarzania Twoich danych osobowych znajdziesz w dalszej części Polityki prywatności.
 
-- **1: KTO JEST ADMINISTRATOREM DANYCH OSOBOWYCH? [2**](#_page1_x70.90_y79.70)**
-- **2: Z KIM MOŻESZ KONTAKTOWAĆ SIĘ W SPRAWIE PRZETWARZANIA DANYCH OSOBOWYCH? [2**](#_page1_x70.90_y316.38)**
-- **3: W JAKICH CELACH PRZETWARZAMY DANE OSOBOWE? [2**](#_page1_x70.90_y488.18)**
-- **4: JAKIE INFORMACJE NA TWÓJ TEMAT POSIADAMY? [10**](#_page6_x70.90_y56.70)**
-- **5: CZYM SĄ „INFORMACJE ANONIMOWE”? [10**](#_page6_x70.90_y371.51)**
-- **6: SKĄD MAMY TWOJE DANE OSOBOWE? [11**](#_page7_x70.90_y336.73)**
-- **7: CZY DANE SĄ BEZPIECZNE? [11**](#_page7_x70.90_y562.64)**
-- **8: JAK DŁUGO BĘDZIEMY PRZECHOWYWAĆ DANE OSOBOWE? [11**](#_page7_x70.90_y683.98)**
-- **9: KIM SĄ ODBIORCY DANYCH OSOBOWYCH? [13**](#_page9_x70.90_y133.60)**
-- **11: CZY KORZYSTAMY Z PROFILOWANIA? [14**](#_page10_x70.90_y312.50)**
-- **12: JAKIE MASZ PRAWA? [14**](#_page10_x70.90_y532.41)**
-- **13: CZY KORZYSTAMY Z COOKIES I CZYM ONE WŁAŚCIWIE SĄ? [15**](#_page11_x70.90_y381.18)**
-- **14: NA JAKIEJ PODSTAWIE KORZYSTAMY Z PLIKÓW COOKIES? [15**](#_page11_x70.90_y626.31)**
-- **15: CZY MOŻESZ WYŁĄCZYĆ PLIKI COOKIES? [15**](#_page12_x70.90_y56.70)**
-- **16: W JAKICH CELACH KORZYSTAMY Z PLIKÓW COOKIES WŁASNYCH? [16**](#_page12_x70.90_y401.63)**
-- **17: JAKIE PLIKI COOKIES PODMIOTÓW TRZECICH SĄ WYKORZYSTYWANE? [16**](#_page12_x70.90_y512.19)**
-- **18: CZY ŚLEDZIMY TWOJE ZACHOWANIA PODEJMOWANE W RAMACH STRONY? [16**](#_page12_x70.90_y617.86)**
-- **19: CZY KIERUJEMY DO CIEBIE TARGETOWANE REKLAMY? [16**](#_page12_x70.90_y712.76)**
-- **20: W JAKI SPOSÓB MOŻESZ ZARZĄDZAĆ SWOJĄ PRYWATNOŚCIĄ? [16**](#_page13_x70.90_y107.15)**
-- **21: CZY JEST JESZCZE COŚ, O CZYM POWINIENEŚ WIEDZIEĆ? [17**](#_page13_x70.90_y353.70)**
-- **22: CZY TA POLITYKA PRYWATNOŚCI MOŻE PODLEGAĆ ZMIANOM? [17 ](#_page13_x70.90_y493.05)ZAŁĄCZNIK DO POLITYKI PRYWATNOŚCI [18**](#_page14_x70.90_y56.70)**
+- [**1: KTO JEST ADMINISTRATOREM DANYCH OSOBOWYCH?**](#_page1_x70.90_y79.70)
+- [**2: Z KIM MOŻESZ KONTAKTOWAĆ SIĘ W SPRAWIE PRZETWARZANIA DANYCH OSOBOWYCH?**](#_page1_x70.90_y316.38)
+- [**3: W JAKICH CELACH PRZETWARZAMY DANE OSOBOWE?**](#_page1_x70.90_y488.18)
+- [**4: JAKIE INFORMACJE NA TWÓJ TEMAT POSIADAMY?**](#_page6_x70.90_y56.70)
+- [**5: CZYM SĄ „INFORMACJE ANONIMOWE”?**](#_page6_x70.90_y371.51)
+- [**6: SKĄD MAMY TWOJE DANE OSOBOWE?**](#_page7_x70.90_y336.73)
+- [**7: CZY DANE SĄ BEZPIECZNE?**](#_page7_x70.90_y562.64)
+- [**8: JAK DŁUGO BĘDZIEMY PRZECHOWYWAĆ DANE OSOBOWE?**](#_page7_x70.90_y683.98)
+- [**9: KIM SĄ ODBIORCY DANYCH OSOBOWYCH?**](#_page9_x70.90_y133.60)
+- [**11: CZY KORZYSTAMY Z PROFILOWANIA?**](#_page10_x70.90_y312.50)
+- [**12: JAKIE MASZ PRAWA?**](#_page10_x70.90_y532.41)
+- [**13: CZY KORZYSTAMY Z COOKIES I CZYM ONE WŁAŚCIWIE SĄ?**](#_page11_x70.90_y381.18)
+- [**14: NA JAKIEJ PODSTAWIE KORZYSTAMY Z PLIKÓW COOKIES?**](#_page11_x70.90_y626.31)
+- [**15: CZY MOŻESZ WYŁĄCZYĆ PLIKI COOKIES?**](#_page12_x70.90_y56.70)
+- [**16: W JAKICH CELACH KORZYSTAMY Z PLIKÓW COOKIES WŁASNYCH?**](#_page12_x70.90_y401.63)
+- [**17: JAKIE PLIKI COOKIES PODMIOTÓW TRZECICH SĄ WYKORZYSTYWANE?**](#_page12_x70.90_y512.19)
+- [**18: CZY ŚLEDZIMY TWOJE ZACHOWANIA PODEJMOWANE W RAMACH STRONY?**](#_page12_x70.90_y617.86)
+- [**19: CZY KIERUJEMY DO CIEBIE TARGETOWANE REKLAMY?**](#_page12_x70.90_y712.76)
+- [**20: W JAKI SPOSÓB MOŻESZ ZARZĄDZAĆ SWOJĄ PRYWATNOŚCIĄ?**](#_page13_x70.90_y107.15)
+- [**21: CZY JEST JESZCZE COŚ, O CZYM POWINIENEŚ WIEDZIEĆ?**](#_page13_x70.90_y353.70)
+- [**22: CZY TA POLITYKA PRYWATNOŚCI MOŻE PODLEGAĆ ZMIANOM?**](#_page13_x70.90_y493.05)
 
 W razie jakichkolwiek wątpliwości związanych z Polityką prywatności, w każdej chwili możesz skontaktować się z nami, wysyłając wiadomość na adres adrianna@getbold.agency.
 
 - **1:<a name="_page1_x70.90_y79.70"></a> Kto jest administratorem danych osobowych?**
 
-Administratorem Twoich danych osobowych jest Dawid Urbas Get Bold z siedzibą w Chorzowie przy ul. Żołnierzy Września, nr 79/6, 41-500, NIP 6272725565.
+Administratorem Twoich danych osobowych jest Slow Marketing Adrianna Promis-Urbas z siedzibą w Raciborzu przy ul. Mała 2, 47-400, NIP 6391970911.
 
 Niniejsza Polityka prywatności dotyczy strony internetowej https://adrianna.com.pl.
 
@@ -42,6 +43,8 @@ W zakresie profilów w mediach społecznościowych związanych z naszą stroną 
 
 - [Facebook](https://pl-pl.facebook.com/privacy/explanation),
 - [Instagram](https://help.instagram.com/519522125107875),
+
+
 - **2:<a name="_page1_x70.90_y316.38"></a> Z kim możesz kontaktować się w sprawie przetwarzania danych osobowych?**
 
 W ramach wdrożenia systemu ochrony danych osobowych w naszej organizacji podjęliśmy decyzję o niewyznaczaniu inspektora ochrony danych osobowych z uwagi na fakt, że w naszej sytuacji nie jest to obowiązkowe.
@@ -241,6 +244,8 @@ Zakres przetwarzanych danych opisaliśmy w odniesieniu do każdego celu przetwar
 - informacje widoczne w profilach w mediach społecznościowych,
 - informacje zawarte w korespondencji,
 - Informacje Anonimowe.
+
+
 - **5:<a name="_page6_x70.90_y371.51"></a> Czym są „Informacje Anonimowe”?**
 
 Korzystamy z narzędzi, które gromadzą na Twój temat szereg informacji związanych z korzystaniem z naszej strony. Chodzi w szczególności o następujące informacje:
@@ -430,6 +435,8 @@ Odpowiedź na to pytanie znajduje się w wielu miejscach niniejszej Polityki pry
 - mechanizm zarządzania plikami cookies z poziomu naszej strony;
 - [Facebook Ads Settings](https://www.facebook.com/ads/settings);
 - [HotJar Opt-out](https://www.hotjar.com/legal/compliance/opt-out);
+
+
 - **21:<a name="_page13_x70.90_y353.70"></a> Czy jest jeszcze coś, o czym powinieneś wiedzieć?**
 
 Jak widzisz, tematyka przetwarzania danych osobowych, wykorzystywania plików cookies i zarządzania ogólnie pojętą prywatnością jest dość skomplikowana. Dołożyliśmy wszelkich starań, by niniejszy dokument dostarczył Ci jak najdalej idącej wiedzy w ważnych dla Ciebie kwestiach. Jeżeli cokolwiek jest dla Ciebie niejasne, chcesz dowiedzieć się więcej lub po prostu porozmawiać o Twojej prywatności, napisz do nas na adres adrianna@getbold.agency
@@ -438,7 +445,10 @@ Jak widzisz, tematyka przetwarzania danych osobowych, wykorzystywania plików co
 
 Tak, możemy modyfikować tę Politykę prywatności, w szczególności ze względu na zmiany technologiczne oraz zmiany przepisów prawa. Jeżeli jesteś zarejestrowanym użytkownikiem, o każdej zmianie Polityki prywatności otrzymasz wiadomość. Zmiany Polityki prywatności zaczynają obowiązywać najwcześniej po 7 dniach. Wszystkie archiwalne wersje Polityki prywatności podlinkowane są poniżej.
 
-<a name="_page14_x70.90_y56.70"></a>**Załącznik do Polityki prywatności**
+
+
+
+**<a name="_page14_x70.90_y56.70"></a> Załącznik do Polityki prywatności**
 
 **WYKAZ NARZĘDZI WYKORZYSTUJĄCYCH PLIKI COOKIES**
 

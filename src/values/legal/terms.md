@@ -2,7 +2,7 @@
 
 Jeżeli tutaj trafiłeś_aś, to niezawodny znak, że cenisz sobie transparentność marki. Doskonale to rozumiem, dlatego oddaję w Twoje ręce dokument, który wyjaśni Ci zasady funkcjonowania mojego sklepu oraz całego procesu zakupów.
 
-Tyle słowem wstępu, teraz czas na formalności. Na początek moje pełne dane rejestrowe jako administratora sklepu, sprzedawcy i usługodawcy: Dawid Urbas Get Bold z siedzibą w Chorzowie przy ul. Żołnierzy Września, nr 79/6, 41-500, NIP 6272725565.
+Tyle słowem wstępu, teraz czas na formalności. Na początek moje pełne dane rejestrowe jako administratora sklepu, sprzedawcy i usługodawcy: Slow Marketing Adrianna Promis-Urbas z siedzibą w Raciborzu przy ul. Mała 2, 47-400, NIP 6391970911.
 
 Poniżej znajdziesz regulamin, w którym zawarte zostały informacje m.in. o sposobie złożenia zamówienia prowadzącego do zawarcia umowy, szczegółach dotyczących realizacji zawartej umowy, formach dostawy i płatności dostępnych w sklepie, procedurze odstąpienia od umowy, czy postępowaniu reklamacyjnym.
 
@@ -24,17 +24,15 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 1. **Przedsprzedaż** — proces zbierania przez Sprzedawcę zamówień na Produkty, które będą dostępne w sprzedaży od określonego terminu, i zawierania Umów przed planowanym terminem wprowadzenia Produktów do sprzedaży;
 1. **Regulamin** – regulamin Serwisu internetowego XXX, dostępny pod adresem https:// adrianna.com.pl/terms/.
 1. **Serwis** – strona internetowa działająca pod adresem https://adrianna.com.pl i jej rozszerzeniami;
-1. **Sprzedawca** – Dawid Urbas Get Bold z siedzibą w Chorzowie przy ul. Żołnierzy Września, nr
+1. **Sprzedawca** – Slow Marketing Adrianna Promis-Urbas z siedzibą w Raciborzu przy ul. Mała 2, 47-400, NIP 6391970911;
 
-79/6, 41-500, NIP 6272725565.;
-
-12. **Towar** – wszelkie rzeczy ruchome oferowane przez Sprzedawcę w ramach Sklepu, w tym TzEC;
-13. **Towar z Elementami Cyfrowymi (TzEC)** – Towar oferowany przez Sprzedawcę, zawierający Treść Cyfrową lub Usługę Cyfrową, bez których Towar nie jest w stanie prawidłowo funkcjonować. Treści Cyfrowe lub Usługi Cyfrowe mogą być dostarczane przez Sprzedawcę lub podmiot trzeci;
-14. **Treść Cyfrowa** – dane wytwarzane i dostarczane w postaci cyfrowej;
-15. **Treści Użytkownika** – treści, które zostały dostarczone lub wytworzone przez Konsumenta lub PNPK w trakcie korzystania z Treści Cyfrowych;
-16. **Umowa** – umowa zawierana pomiędzy Sprzedawcą a Kupującym, której przedmiotem jest sprzedaż Towarów, dostarczenie Treści Cyfrowych albo świadczenie Usług Podstawowych lub Usług Elektronicznych na rzecz Kupującego;
-17. **Usługi** – Usługi Elektroniczne lub Usługi Podstawowe;
-18. **Usługi Cyfrowe** – usługi pozwalające Kupującemu na:
+1. **Towar** – wszelkie rzeczy ruchome oferowane przez Sprzedawcę w ramach Sklepu, w tym TzEC;
+1. **Towar z Elementami Cyfrowymi (TzEC)** – Towar oferowany przez Sprzedawcę, zawierający Treść Cyfrową lub Usługę Cyfrową, bez których Towar nie jest w stanie prawidłowo funkcjonować. Treści Cyfrowe lub Usługi Cyfrowe mogą być dostarczane przez Sprzedawcę lub podmiot trzeci;
+1. **Treść Cyfrowa** – dane wytwarzane i dostarczane w postaci cyfrowej;
+1. **Treści Użytkownika** – treści, które zostały dostarczone lub wytworzone przez Konsumenta lub PNPK w trakcie korzystania z Treści Cyfrowych;
+1. **Umowa** – umowa zawierana pomiędzy Sprzedawcą a Kupującym, której przedmiotem jest sprzedaż Towarów, dostarczenie Treści Cyfrowych albo świadczenie Usług Podstawowych lub Usług Elektronicznych na rzecz Kupującego;
+1. **Usługi** – Usługi Elektroniczne lub Usługi Podstawowe;
+1. **Usługi Cyfrowe** – usługi pozwalające Kupującemu na:
 
 - wytwarzanie, przetwarzanie, przechowywanie lub dostęp do danych w postaci cyfrowej;
 - wspólne korzystanie z danych w postaci cyfrowej, które zostały przesłane lub wytworzone przez Kupującego lub innych użytkowników Usługi Cyfrowej;
@@ -65,9 +63,7 @@ a)w przypadku Towarów dochodzi do zawarcia umowy sprzedaży;
 
 b)w przypadku Treści Cyfrowych dochodzi do zawarcia umowy o dostarczenie treści cyfrowych;
 
-c)w przypadku Usług Elektronicznych dochodzi do zawarcia umowy o świadczenie usług
-
-elektronicznych;
+c)w przypadku Usług Elektronicznych dochodzi do zawarcia umowy o świadczenie usług elektronicznych;
 
 d)w przypadku Usług Podstawowych dochodzi do zawarcia umowy o świadczenie usług.
 
@@ -76,17 +72,11 @@ d)w przypadku Usług Podstawowych dochodzi do zawarcia umowy o świadczenie usł
 
 a)Umowy, które dotyczą sprzedaży Towarów, są umowami zobowiązującymi do przeniesienia własności Towaru, do których stosuje się przepisy rozdziału 5a ustawy z dnia 30 maja 2014 r. o prawach konsumenta;
 
-b)Umowy, które dotyczą sprzedaży TzEC, są umowami zobowiązującymi do przeniesienia
+b)Umowy, które dotyczą sprzedaży TzEC, są umowami zobowiązującymi do przeniesienia własności Towaru, do których stosuje się przepisy rozdziału 5a i nie stosuje się przepisów rozdziału 5b ustawy z dnia 30 maja 2014 r. o prawach konsumenta;
 
-własności Towaru, do których stosuje się przepisy rozdziału 5a i nie stosuje się przepisów rozdziału 5b ustawy z dnia 30 maja 2014 r. o prawach konsumenta;
+c)Umowy, które dotyczą Treści Cyfrowych, są umowami o dostarczanie treści cyfrowej, do których stosuje się przepisy rozdziału 5b ustawy z dnia 30 maja 2014 r. o prawach konsumenta;
 
-c)Umowy, które dotyczą Treści Cyfrowych, są umowami o dostarczanie treści cyfrowej, do
-
-których stosuje się przepisy rozdziału 5b ustawy z dnia 30 maja 2014 r. o prawach konsumenta;
-
-d)do Umów, które nie dotyczą Treści Cyfrowych, nie stosuje się przepisów rozdziału 5b ustawy
-
-z dnia 30 maja 2014 r. o prawach konsumenta.
+d)do Umów, które nie dotyczą Treści Cyfrowych, nie stosuje się przepisów rozdziału 5b ustawy z dnia 30 maja 2014 r. o prawach konsumenta.
 
 **§ 3. Usługi Elektroniczne dotyczące Serwisu**
 
@@ -111,13 +101,9 @@ a)dodawać nowe funkcje oraz zmieniać lub usuwać istniejące funkcje w ramach 
 1. Proces składania zamówienia kończy kliknięcie w przycisk finalizujący zamówienie. Kliknięcie w przycisk finalizujący zamówienie stanowi złożenie przez Kupującego oferty nabycia wybranych Produktów od Sprzedawcy, na warunkach określonych w formularzu zamówienia.
 1. Po otrzymaniu zamówienia Sprzedawca, najpóźniej w terminie 7 (słownie: siedmiu) dni od dnia otrzymania zamówienia, może:
 
-a)przyjąć ofertę złożoną przez Kupującego poprzez przyjęcie zamówienia do realizacji — w
+a)przyjąć ofertę złożoną przez Kupującego poprzez przyjęcie zamówienia do realizacji — w takim przypadku Umowa zostaje zawarta z chwilą doręczenia Kupującemu wiadomości potwierdzającej przyjęcie zamówienia do realizacji,
 
-takim przypadku Umowa zostaje zawarta z chwilą doręczenia Kupującemu wiadomości potwierdzającej przyjęcie zamówienia do realizacji,
-
-b)może nie przyjąć oferty Kupującego i anulować złożone zamówienie — w takim przypadku
-
-Umowa nie zostaje zawarta, a Kupującemu są zwracane wszystkie płatności, o ile Kupujący ich dokonał na etapie składania zamówienia.
+b)może nie przyjąć oferty Kupującego i anulować złożone zamówienie — w takim przypadku Umowa nie zostaje zawarta, a Kupującemu są zwracane wszystkie płatności, o ile Kupujący ich dokonał na etapie składania zamówienia.
 
 **§ 5. Przedsprzedaż**
 
@@ -158,25 +144,15 @@ a)link przesłany Kupującemu na wskazany przez Kupującego adres e-mail lub b)k
 10. Jeżeli Kupujący będzie chciał wykorzystać Treści Cyfrowe w swojej działalności gospodarczej lub zawodowej, jest zobowiązany zwrócić się do Sprzedawcy o udzielenie licencji na daną Treść Cyfrową poprzez wysłanie wiadomości na adres e-mail Sprzedawcy. W celu zawarcia takiej umowy Kupujący powinien zwrócić się do Sprzedawcy z propozycją zawarcia umowy licencyjnej, informując Sprzedawcę w szczególności o celach, w jakich zamierza korzystać z Treści Cyfrowych, oraz o zakładanym czasie korzystania. Po otrzymaniu takiej propozycji Sprzedawca przedstawi ofertę zgodnie z własną polityką licencyjną.
 11. Sprzedawca jest uprawniony do dokonywania zmian w zakresie Treści Cyfrowych w trakcie trwania Umowy, z wyjątkiem Treści Cyfrowych, które są dostarczane w sposób jednorazowy. Zmiany w zakresie Treści Cyfrowych, które zostały nabyte przez Konsumenta lub PNPK, mogą być dokonywane z zachowaniem poniższych wymogów:
 
-a)zmiany w Treściach Cyfrowych mogą być dokonywane wyłącznie z uzasadnionych przyczyn,
+a)zmiany w Treściach Cyfrowych mogą być dokonywane wyłącznie z uzasadnionych przyczyn, w szczególności takich jak usunięcie usterek, dostosowanie Treści Cyfrowych do potrzeb Kupujących, dostosowanie Treści Cyfrowych do zmian prawnych lub decyzji sądów i organów;
 
-w szczególności takich jak usunięcie usterek, dostosowanie Treści Cyfrowych do potrzeb Kupujących, dostosowanie Treści Cyfrowych do zmian prawnych lub decyzji sądów i organów;
+b)zmiany w Treściach Cyfrowych nie mogą wiązać się z kosztami po stronie Konsumenta lub PNPK;
 
-b)zmiany w Treściach Cyfrowych nie mogą wiązać się z kosztami po stronie Konsumenta lub
+c)Sprzedawca poinformuje Konsumenta lub PNPK w sposób jasny i zrozumiały o dokonywanej zmianie;
 
-PNPK;
+d)jeżeli zmiana w Treściach Cyfrowych istotnie i negatywnie wpływa na dostęp Kupującego do Treści Cyfrowych lub korzystanie z nich, Sprzedawca jest zobowiązany poinformować Konsumenta lub PNPK z odpowiednim wyprzedzeniem, nie krótszym niż 7 dni, na trwałym nośniku, o właściwościach i terminie wprowadzenia zmiany, a także uprawnieniach związanych z tymi zmianami;
 
-c)Sprzedawca poinformuje Konsumenta lub PNPK w sposób jasny i zrozumiały o dokonywanej
-
-zmianie;
-
-d)jeżeli zmiana w Treściach Cyfrowych istotnie i negatywnie wpływa na dostęp Kupującego do
-
-Treści Cyfrowych lub korzystanie z nich, Sprzedawca jest zobowiązany poinformować Konsumenta lub PNPK z odpowiednim wyprzedzeniem, nie krótszym niż 7 dni, na trwałym nośniku, o właściwościach i terminie wprowadzenia zmiany, a także uprawnieniach związanych z tymi zmianami;
-
-e)jeżeli zmiana w Treściach Cyfrowych istotnie i negatywnie wpływa na dostęp Kupującego do
-
-Treści Cyfrowych lub korzystanie z nich, Konsument lub PNPK może wypowiedzieć Umowę bez zachowania okresu wypowiedzenia w ciągu 30 dni od dnia dokonania zmiany w Treściach Cyfrowych lub poinformowania o zmianach w Treściach Cyfrowych, jeżeli poinformowanie nastąpiło później niż ta zmiana. Uprawnienie to nie przysługuje Kupującemu, gdy Sprzedawca zapewni Konsumentowi lub PNPK, bez dodatkowych kosztów, prawo do zachowania Treści Cyfrowych zgodnych z Umową w stanie niezmienionym.
+e)jeżeli zmiana w Treściach Cyfrowych istotnie i negatywnie wpływa na dostęp Kupującego do Treści Cyfrowych lub korzystanie z nich, Konsument lub PNPK może wypowiedzieć Umowę bez zachowania okresu wypowiedzenia w ciągu 30 dni od dnia dokonania zmiany w Treściach Cyfrowych lub poinformowania o zmianach w Treściach Cyfrowych, jeżeli poinformowanie nastąpiło później niż ta zmiana. Uprawnienie to nie przysługuje Kupującemu, gdy Sprzedawca zapewni Konsumentowi lub PNPK, bez dodatkowych kosztów, prawo do zachowania Treści Cyfrowych zgodnych z Umową w stanie niezmienionym.
 
 12. Treściom Cyfrowym mogą, ale nie muszą, towarzyszyć świadczenia dodatkowe, np. dostęp do grupy wsparcia związanej z zakupionymi Treściami Cyfrowymi, spotkanie on-line ze Sprzedawcą lub innymi osobami, udział w dodatkowych webinarach itp. Wszystkie tego rodzaju świadczenia mają charakter poboczny w stosunku do głównego zobowiązania Sprzedawcy, jakim jest dostarczenie Treści Cyfrowych zgodnych z Umową i realizowane są zgodnie z informacjami dostępnymi w Serwisie zawartymi w opisie kupowanej Treści Cyfrowej. Sprzedawca może przewidywać dodatkowe zasady korzystania ze świadczeń dodatkowych mające na celu zapewnienie komfortu i poczucia bezpieczeństwa pośród wszystkich osób mających dostęp do określonych świadczeń, np. zasady uczestnictwa w grupie wsparcia. Nieprzestrzeganie takich zasad może skutkować pozbawieniem Kupującego możliwości korzystania ze świadczeń dodatkowych, co nie ma jednak wpływu na realizację przez Sprzedawcę jego zobowiązania głównego w postaci dostarczenia Treści Cyfrowych, nie stanowi naruszenia Umowy przez Sprzedawcę i nie może być podstawą roszczeń Kupującego z tytułu naruszenia Umowy.
 
@@ -192,35 +168,21 @@ Treści Cyfrowych lub korzystanie z nich, Konsument lub PNPK może wypowiedzieć
 
 1. Konsument lub PNPK ma prawo odstąpić Umowy, która była zawarta za pośrednictwem Serwisu, bez podawania przyczyny w terminie:
 
-a)14 dni od dnia objęcia Towaru w posiadanie przez Konsumenta lub PNPK, lub wskazaną
+a)14 dni od dnia objęcia Towaru w posiadanie przez Konsumenta lub PNPK, lub wskazaną przez Konsumenta lub PNPK osobę trzecią, inną niż przewoźnik. W przypadku, gdy Umowa obejmuje wiele Towarów, które są dostarczane osobno, partiami lub w częściach termin na odstąpienie od Umowy liczy się od objęcia w posiadanie ostatniego Towaru, jego partii lub części;
 
-przez Konsumenta lub PNPK osobę trzecią, inną niż przewoźnik. W przypadku, gdy Umowa obejmuje wiele Towarów, które są dostarczane osobno, partiami lub w częściach termin na odstąpienie od Umowy liczy się od objęcia w posiadanie ostatniego Towaru, jego partii lub części;
-
-b)14 dni od dnia zawarcia Umowy — w przypadku innych Umów niż umowa sprzedaży
-
-Towarów.
+b)14 dni od dnia zawarcia Umowy — w przypadku innych Umów niż umowa sprzedaży Towarów.
 
 2. Prawo do odstąpienia od Umowy nie przysługuje w stosunku do Umowy:
 
-a)o świadczenie Usług, za które Kupujący jest zobowiązany do zapłaty Ceny, jeżeli Sprzedawca
+a)o świadczenie Usług, za które Kupujący jest zobowiązany do zapłaty Ceny, jeżeli Sprzedawca wykonał w pełni Usługę za wyraźną i uprzednią zgodą Kupującego, który został poinformowany przed rozpoczęciem świadczenia, że po spełnieniu świadczenia przez Sprzedawcę utraci prawo odstąpienia od Umowy, i przyjął to do wiadomości;
 
-wykonał w pełni Usługę za wyraźną i uprzednią zgodą Kupującego, który został poinformowany przed rozpoczęciem świadczenia, że po spełnieniu świadczenia przez Sprzedawcę utraci prawo odstąpienia od Umowy, i przyjął to do wiadomości;
+b)w której przedmiotem świadczenia jest Towar nieprefabrykowany, wyprodukowany według specyfikacji Konsumenta albo PNPK lub służący zaspokojeniu jego zindywidualizowanych potrzeb;
 
-b)w której przedmiotem świadczenia jest Towar nieprefabrykowany, wyprodukowany według
+c)w której przedmiotem świadczenia jest Towar ulegający szybkiemu zepsuciu lub mający krótki termin przydatności do użycia;
 
-specyfikacji Konsumenta albo PNPK lub służący zaspokojeniu jego zindywidualizowanych potrzeb;
+d)w której przedmiotem świadczenia jest Towar dostarczany w zapieczętowanym opakowaniu, którego po otwarciu opakowania nie można zwrócić ze względu na ochronę zdrowia lub ze względów higienicznych, jeżeli opakowanie zostało otwarte po dostarczeniu;
 
-c)w której przedmiotem świadczenia jest Towar ulegający szybkiemu zepsuciu lub mający krótki
-
-termin przydatności do użycia;
-
-d)w której przedmiotem świadczenia jest Towar dostarczany w zapieczętowanym opakowaniu,
-
-którego po otwarciu opakowania nie można zwrócić ze względu na ochronę zdrowia lub ze względów higienicznych, jeżeli opakowanie zostało otwarte po dostarczeniu;
-
-e)w której przedmiotem świadczenia są Towary, które po dostarczeniu, ze względu na swój
-
-charakter, zostają nierozłącznie połączone z innymi rzeczami;
+e)w której przedmiotem świadczenia są Towary, które po dostarczeniu, ze względu na swój charakter, zostają nierozłącznie połączone z innymi rzeczami;
 
 f) w której przedmiotem świadczenia są nagrania dźwiękowe lub wizualne albo programy komputerowe dostarczane w zapieczętowanym opakowaniu, jeżeli opakowanie zostało otwarte po dostarczeniu,
 
@@ -241,13 +203,9 @@ Konsument lub PNPK jest zobowiązany do zapłaty Ceny, jeżeli Sprzedawca rozpoc
 1. Sprzedawca jest odpowiedzialny względem Konsumenta oraz PNPK za zgodność Towaru z Umową. Zgodność Towaru z Umową ocenia się zgodnie z przepisami ustawy o prawach konsumenta.
 1. Sprzedawca ponosi odpowiedzialność za brak zgodności Towaru z Umową istniejący w chwili jego dostarczenia i ujawniony w ciągu dwóch lat od tej chwili, chyba że:
 
-a)termin przydatności Towaru do użycia, określony przez Sprzedawcę, jego poprzedników
+a)termin przydatności Towaru do użycia, określony przez Sprzedawcę, jego poprzedników prawnych lub osoby działające w ich imieniu, jest dłuższy;
 
-prawnych lub osoby działające w ich imieniu, jest dłuższy;
-
-b)Umowa dotyczy Towaru Outletowego, gdzie Kupujący wyraźnie wyraził zgodę na nabycie
-
-Towaru Outletowego.
+b)Umowa dotyczy Towaru Outletowego, gdzie Kupujący wyraźnie wyraził zgodę na nabycie Towaru Outletowego.
 
 5. W przypadku TzEC Sprzedawca ponosi odpowiedzialność za brak zgodności z Umową Treści Cyfrowych lub Usług Cyfrowych dostarczanych w sposób ciągły, który wystąpił lub ujawnił się w czasie, w którym zgodnie z Umową miały być dostarczane, jednak nie krócej niż przez dwa lata od chwili dostarczenia TzEC.
 
@@ -256,9 +214,7 @@ Towaru Outletowego.
 1. Jeżeli Towar jest niezgodny z Umową, Konsument lub PNPK może żądać jego naprawy lub wymiany.
 1. Sprzedawca może:
 
-a)dokonać wymiany, gdy Konsument lub PNPK żąda naprawy, lub b)dokonać naprawy, gdy Konsument lub PNPK żąda wymiany,
-
-jeżeli doprowadzenie Towaru do zgodności z Umową w sposób wybrany przez Konsumenta lub PNPK jest niemożliwe albo wymagałoby nadmiernych kosztów dla Sprzedawcy.
+a)dokonać wymiany, gdy Konsument lub PNPK żąda naprawy, lub b)dokonać naprawy, gdy Konsument lub PNPK żąda wymiany, jeżeli doprowadzenie Towaru do zgodności z Umową w sposób wybrany przez Konsumenta lub PNPK jest niemożliwe albo wymagałoby nadmiernych kosztów dla Sprzedawcy.
 
 3. Jeżeli naprawa i wymiana są niemożliwe lub wymagałyby nadmiernych kosztów dla Sprzedawcy, może on odmówić wymiany lub naprawy w celu doprowadzenia do zgodności Towaru z Umową.
 4. Konsument lub PNPK udostępnia Sprzedawcy Towar podlegający naprawie lub wymianie, a Sprzedawca odbiera go na swój koszt. Koszty naprawy lub wymiany, w tym w szczególności koszty opłat pocztowych, przewozu, robocizny i materiałów, ponosi Sprzedawca.
@@ -270,19 +226,15 @@ zgodności Towaru z Umową, i bez nadmiernych niedogodności dla Konsumenta lub 
 
 1. Jeżeli Towar jest niezgodny z Umową, Konsument lub PNPK może złożyć oświadczenie o obniżeniu Ceny albo odstąpieniu od Umowy, gdy:
 
-a)Sprzedawca odmówił naprawy lub wymiany Towaru zgodnie z § 11 ust. 3; b)Sprzedawca nie doprowadził Towaru do zgodności z Umową;
+a)Sprzedawca odmówił naprawy lub wymiany Towaru zgodnie z § 11 ust. 3;
 
-c)brak zgodności Towaru z Umową występuje nadal, mimo że Sprzedawca próbował
+b)Sprzedawca nie doprowadził Towaru do zgodności z Umową;
 
-doprowadzić Towar do zgodności z Umową;
+c)brak zgodności Towaru z Umową występuje nadal, mimo że Sprzedawca próbował doprowadzić Towar do zgodności z Umową;
 
-d)brak zgodności Towaru z Umową jest na tyle istotny, że uzasadnia obniżenie Ceny albo
+d)brak zgodności Towaru z Umową jest na tyle istotny, że uzasadnia obniżenie Ceny albo odstąpienie od Umowy bez uprzedniego skorzystania ze środków, o których mowa w § 11 ust. 1;
 
-odstąpienie od Umowy bez uprzedniego skorzystania ze środków, o których mowa w § 11 ust. 1;
-
-e)z oświadczenia Sprzedawcy lub okoliczności wyraźnie wynika, że nie doprowadzi on Towaru
-
-do zgodności z Umową w rozsądnym czasie lub bez nadmiernych niedogodności dla Konsumenta lub PNPK.
+e)z oświadczenia Sprzedawcy lub okoliczności wyraźnie wynika, że nie doprowadzi on Towaru do zgodności z Umową w rozsądnym czasie lub bez nadmiernych niedogodności dla Konsumenta lub PNPK.
 
 2. Obniżona Cena musi pozostawać w takiej proporcji do Ceny wynikającej z Umowy, w jakiej wartość Towaru niezgodnego z Umową pozostaje do wartości Towaru zgodnego z Umową.
 3. Sprzedawca zwraca Konsumentowi lub PNPK kwoty należne wskutek skorzystania z prawa obniżenia Ceny niezwłocznie, nie później niż w terminie 14 dni od dnia otrzymania oświadczenia Konsumenta lub PNPK o obniżeniu Ceny.
@@ -298,13 +250,9 @@ do zgodności z Umową w rozsądnym czasie lub bez nadmiernych niedogodności dl
 1. Sprzedawca jest odpowiedzialny względem Konsumenta oraz PNPK za zgodność Treści Cyfrowych z Umową. Zgodność Treści Cyfrowych z Umową ocenia się zgodnie z przepisami ustawy o prawach konsumenta.
 1. W przypadku Treści Cyfrowych:
 
-a)dostarczanych jednorazowo lub w częściach — Sprzedawca ponosi odpowiedzialność za
+a)dostarczanych jednorazowo lub w częściach — Sprzedawca ponosi odpowiedzialność za brak zgodności Treści Cyfrowych z Umową, który istniał w chwili ich dostarczenia i ujawnił się w ciągu dwóch lat od tej chwili;
 
-brak zgodności Treści Cyfrowych z Umową, który istniał w chwili ich dostarczenia i ujawnił się w ciągu dwóch lat od tej chwili;
-
-b)dostarczanych w sposób ciągły — Sprzedawca ponosi odpowiedzialność za brak zgodności
-
-Treści Cyfrowych z Umową, który wystąpił lub ujawnił się w czasie, w którym zgodnie z Umową miały być dostarczane.
+b)dostarczanych w sposób ciągły — Sprzedawca ponosi odpowiedzialność za brak zgodności Treści Cyfrowych z Umową, który wystąpił lub ujawnił się w czasie, w którym zgodnie z Umową miały być dostarczane.
 
 5. W przypadku, gdy Sprzedawca dostarcza Treści Cyfrowych w sposób ciągły, Treści Cyfrowych powinny być zgodne przez czas ich dostarczania zgodnie z Umową.
 
@@ -319,23 +267,15 @@ Treści Cyfrowych z Umową, który wystąpił lub ujawnił się w czasie, w któ
 
 1. Jeżeli Treści Cyfrowe są niezgodne z Umową, Konsument lub PNPK może złożyć oświadczenie o obniżeniu Ceny albo odstąpieniu od Umowy, gdy:
 
-a)Sprzedawca odmówił doprowadzenia Treści Cyfrowych do zgodności z Umową zgodnie z §
-
-10 ust. 2;
+a)Sprzedawca odmówił doprowadzenia Treści Cyfrowych do zgodności z Umową zgodnie z §10 ust. 2;
 
 b)Sprzedawca nie doprowadził Treści Cyfrowych do zgodności z Umową;
 
-c)brak zgodności Treści Cyfrowych z Umową występuje nadal, mimo że Sprzedawca próbował
+c)brak zgodności Treści Cyfrowych z Umową występuje nadal, mimo że Sprzedawca próbował doprowadzić Treści Cyfrowych do zgodności z Umową;
 
-doprowadzić Treści Cyfrowych do zgodności z Umową;
+d)brak zgodności Treści Cyfrowych z Umową jest na tyle istotny, że uzasadnia obniżenie Ceny albo odstąpienie od Umowy bez uprzedniego skorzystania ze środków, o których mowa w § 10 ust. 1;
 
-d)brak zgodności Treści Cyfrowych z Umową jest na tyle istotny, że uzasadnia obniżenie Ceny
-
-albo odstąpienie od Umowy bez uprzedniego skorzystania ze środków, o których mowa w § 10 ust. 1;
-
-e)z oświadczenia Sprzedawcy lub okoliczności wyraźnie wynika, że nie doprowadzi on Treści
-
-Cyfrowych do zgodności z Umową w rozsądnym czasie lub bez nadmiernych niedogodności dla Konsumenta lub PNPK.
+e)z oświadczenia Sprzedawcy lub okoliczności wyraźnie wynika, że nie doprowadzi on Treści Cyfrowych do zgodności z Umową w rozsądnym czasie lub bez nadmiernych niedogodności dla Konsumenta lub PNPK.
 
 2. Obniżona Cena musi pozostawać w takiej proporcji do Ceny wynikającej z Umowy, w jakiej wartość Treści Cyfrowych niezgodnych z Umową pozostaje do wartości Treści Cyfrowych zgodnych z Umową. Jeżeli Treści Cyfrowych są dostarczane w częściach lub w sposób ciągły, przy obniżeniu Ceny należy uwzględnić czas, w którym Treści Cyfrowych pozostawały niezgodne z Umową.
 3. Sprzedawca jest zobowiązany zwrócić Konsumentowi lub PNPK należną mu Cenę niezwłocznie, nie później niż w terminie 14 dni od dnia otrzymania oświadczenia Konsumenta lub PNPK o obniżeniu Ceny.
@@ -345,15 +285,9 @@ Cyfrowych do zgodności z Umową w rozsądnym czasie lub bez nadmiernych niedogo
 
 1. W sytuacji, gdy Kupujący będący Konsumentem lub PNPK odstąpi od Umowy:
 
-a)w ramach uprawnień wynikających z rękojmi konsumenckiej za niezgodność Treści
+a)w ramach uprawnień wynikających z rękojmi konsumenckiej za niezgodność Treści Cyfrowych z Umową;
 
-Cyfrowych z Umową;
-
-b)w przypadku niedostarczenia przez Sprzedawcę Treści Cyfrowych, pomimo wezwania ze
-
-strony Kupującego,
-
-do rozliczeń pomiędzy Stronami stosuje się postanowienia niniejszego paragrafu.
+b)w przypadku niedostarczenia przez Sprzedawcę Treści Cyfrowych, pomimo wezwania ze strony Kupującego, do rozliczeń pomiędzy Stronami stosuje się postanowienia niniejszego paragrafu.
 
 2. Jeżeli Sprzedawca dostarczył Treść Cyfrową na nośniku materialnym, Sprzedawca może zażądać zwrotu tego nośnika najpóźniej w terminie 14 dni od dnia otrzymania oświadczenia o odstąpieniu, a Konsument lub PNPK jest zobowiązany zwrócić nośnik niezwłocznie, nie później niż w terminie 21 dni, na koszt Sprzedawcy.
 3. Sprzedawca jest zobowiązany do zwrotu Ceny jedynie w części odpowiadającej Treściom Cyfrowym niezgodnym z Umową albo Treściom Cyfrowym, w odniesieniu do których odpadł obowiązek ich dostarczenia na skutek odstąpienia od Umowy. Jednocześnie Sprzedawca nie jest uprawniony do żądania zapłaty za czas, w którym Treści Cyfrowych były niezgodne z Umową, nawet jeżeli przed odstąpieniem od Umowy Konsument lub PNPK faktycznie z nich korzystał.
@@ -366,17 +300,11 @@ do rozliczeń pomiędzy Stronami stosuje się postanowienia niniejszego paragraf
 
 a) są użyteczne wyłącznie w związku z Treściami Cyfrowymi;
 
-b)dotyczą wyłącznie aktywności Konsumenta lub PNPK w trakcie korzystania z Treści
+b)dotyczą wyłącznie aktywności Konsumenta lub PNPK w trakcie korzystania z Treści Cyfrowych;
 
-Cyfrowych;
+c)zostały połączone przez Sprzedawcę z innymi danymi i nie mogą zostać rozłączone bez nadmiernych trudności;
 
-c)zostały połączone przez Sprzedawcę z innymi danymi i nie mogą zostać rozłączone bez
-
-nadmiernych trudności;
-
-d)zostały wytworzone wspólnie z innymi Konsumentami lub PNPK, którzy nadal mogą z nich
-
-korzystać.
+d)zostały wytworzone wspólnie z innymi Konsumentami lub PNPK, którzy nadal mogą z nich korzystać.
 
 2. Na żądanie Konsumenta lub PNPK Sprzedawca udostępni takiemu Kupującemu, na swój koszt, w rozsądnym czasie oraz w powszechnie używanym formacie nadającym się do odczytu maszynowego, Treści Użytkownika, które zostały wytworzone lub dostarczone w trakcie korzystania z Treści Cyfrowych. Obowiązek ten nie dotyczy zwrotu Treści Użytkownika, o których mowa w ust. 1 pkt a) - c).
 
@@ -403,9 +331,7 @@ a)bez uprzedniego skorzystania ze Serwisu;
 
 b)na temat Treści Cyfrowych, z których Kupujący nie korzystał lub których nie nabył,
 
-c)wypełniających znamiona czynu nieuczciwej konkurencji w rozumieniu art. 3 ustawy z dnia 16
-
-kwietnia 1993 r. o zwalczaniu nieuczciwej konkurencji;
+c)wypełniających znamiona czynu nieuczciwej konkurencji w rozumieniu art. 3 ustawy z dnia 16 kwietnia 1993 r. o zwalczaniu nieuczciwej konkurencji;
 
 d)naruszających dobra osobiste Sprzedawcy lub osoby trzeciej;
 
@@ -420,17 +346,11 @@ Treści Cyfrowej.
 
 1. Konsument ma możliwość skorzystania z pozasądowych sposobów rozpatrywania reklamacji i dochodzenia roszczeń. Konsument ma między innymi możliwość:
 
-a)zwrócenia się do stałego polubownego sądu konsumenckiego z wnioskiem o rozstrzygnięciu
+a)zwrócenia się do stałego polubownego sądu konsumenckiego z wnioskiem o rozstrzygnięciu sporu wynikłego z zawartej Umowy,
 
-sporu wynikłego z zawartej Umowy,
+b)zwrócenia się do wojewódzkiego inspektora Inspekcji Handlowej z wnioskiem o wszczęcie postępowania mediacyjnego w sprawie polubownego zakończenia sporu między Kupującym a Sprzedawcą,
 
-b)zwrócenia się do wojewódzkiego inspektora Inspekcji Handlowej z wnioskiem o wszczęcie
-
-postępowania mediacyjnego w sprawie polubownego zakończenia sporu między Kupującym a Sprzedawcą,
-
-c)skorzystania z pomocy powiatowego (miejskiego) rzecznika konsumenta lub organizacji
-
-społecznej, do której statutowych zadań należy ochrona konsumentów.
+c)skorzystania z pomocy powiatowego (miejskiego) rzecznika konsumenta lub organizacji społecznej, do której statutowych zadań należy ochrona konsumentów.
 
 2. Bardziej szczegółowych informacji na temat pozasądowych sposobów rozpatrywania reklamacji i dochodzenia roszczeń Konsument może szukać na stronie internetowej [http:// polubowne.uokik.gov.pl](http://polubowne.uokik.gov.pl).
 3. Konsument może również skorzystać z platformy ODR, która dostępna jest pod adresem [http:// ec.europa.eu/consumers/odr](http://ec.europa.eu/consumers/odr). Platforma służy rozstrzyganiu sporów pomiędzy konsumentami i przedsiębiorcami dążącymi do pozasądowego rozstrzygnięcia sporu dotyczącego zobowiązań umownych wynikających z internetowej umowy sprzedaży lub umowy o świadczenie usług.
@@ -443,13 +363,9 @@ społecznej, do której statutowych zadań należy ochrona konsumentów.
 1. Odpowiedź na reklamację zostanie przesłana do Kupującego na kontakt podany przez Kupującego podczas składania reklamacji.
 1. Jeżeli Sprzedawca nie dostarczył Treści Cyfrowych zgodnie z Umową, Kupujący może złożyć reklamację, w której wezwie Sprzedawcę do dostarczenia Treści Cyfrowych. Jeżeli pomimo tego wezwania Sprzedawca nie dostarczy Treści Cyfrowych niezwłocznie lub w dodatkowym terminie umówionym pomiędzy Stronami, Kupujący może odstąpić od Umowy. Kupujący może odstąpić od Umowy bez wzywania Sprzedawcy do dostarczenia Treści Cyfrowych, gdy:
 
-a)z oświadczenia Sprzedawcy lub okoliczności będzie wyraźnie wynikać, że Sprzedawca nie
+a)z oświadczenia Sprzedawcy lub okoliczności będzie wyraźnie wynikać, że Sprzedawca nie dostarczy Treści Cyfrowych;
 
-dostarczy Treści Cyfrowych;
-
-b)Strony uzgodniły lub z okoliczności zawarcia Umowy wyraźnie wynika, że określony termin
-
-dostarczenia Treści Cyfrowych miał istotne znaczenie dla Kupującego, a Sprzedawca nie dostarczył ich w tym terminie.
+b)Strony uzgodniły lub z okoliczności zawarcia Umowy wyraźnie wynika, że określony termin dostarczenia Treści Cyfrowych miał istotne znaczenie dla Kupującego, a Sprzedawca nie dostarczył ich w tym terminie.
 
 **§ 24. Postanowienia końcowe**
 
