@@ -24,7 +24,7 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 1. **Przedsprzedaż** — proces zbierania przez Sprzedawcę zamówień na Produkty, które będą dostępne w sprzedaży od określonego terminu, i zawierania Umów przed planowanym terminem wprowadzenia Produktów do sprzedaży;
 1. **Regulamin** – regulamin Serwisu internetowego XXX, dostępny pod adresem https:// adrianna.com.pl/terms/.
 1. **Serwis** – strona internetowa działająca pod adresem https://adrianna.com.pl i jej rozszerzeniami;
-1. **Sprzedawca** – Slow Marketing Adrianna Promis-Urbas z siedzibą w Chorzowie przy w Raciborzu przy ul. Mała 2, 47-400, NIP 6391970911;
+1. **Sprzedawca** – Slow Marketing Adrianna Promis-Urbas z siedzibą w Raciborzu przy ul. Mała 2, 47-400, NIP 6391970911;
 
 1. **Towar** – wszelkie rzeczy ruchome oferowane przez Sprzedawcę w ramach Sklepu, w tym TzEC;
 1. **Towar z Elementami Cyfrowymi (TzEC)** – Towar oferowany przez Sprzedawcę, zawierający Treść Cyfrową lub Usługę Cyfrową, bez których Towar nie jest w stanie prawidłowo funkcjonować. Treści Cyfrowe lub Usługi Cyfrowe mogą być dostarczane przez Sprzedawcę lub podmiot trzeci;
