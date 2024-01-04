@@ -13,6 +13,12 @@ type LayoutElements = {
   flowerBlue3?: boolean
   flowerWhite2?: boolean
   flowerWhite3?: boolean
+  waves1?: boolean
+  waves2?: boolean
+  waves3?: boolean
+  waves4?: boolean
+  waves5?: boolean
+  waves6?: boolean
 }
 
 type Props = {
@@ -29,6 +35,12 @@ const defaultProps: LayoutElements = {
   flowerBlue3: false,
   flowerWhite2: false,
   flowerWhite3: false,
+  waves1: false,
+  waves2: false,
+  waves3: false,
+  waves4: false,
+  waves5: false,
+  waves6: false,
 }
 
 const Layout: React.FC<Props> = ({ children, ...layoutElements }) => {

@@ -8,4 +8,10 @@ export interface ILayoutElements {
   flowerBlue3?: boolean
   flowerWhite2?: boolean
   flowerWhite3?: boolean
+  waves1?: boolean
+  waves2?: boolean
+  waves3?: boolean
+  waves4?: boolean
+  waves5?: boolean
+  waves6?: boolean
 }
