@@ -9,27 +9,10 @@ import HelloBanner from "components/HelloBanner"
 import Cooperation from "components/Cooperation"
 import MeetMeBanner from "components/MeetMeBanner"
 import Puzzles from "components/Puzzles"
-import MasterclassBanner from "components/MasterclassBanner"
-import MasterclassInfo1 from "components/MasterclassInfo1"
-import MasterclassInfo2 from "components/MasterclassInfo2"
-import MasterclassInfo3 from "components/MasterclassInfo3"
-import MasterclassInfo4 from "components/MasterclassInfo4"
+
 const AboutPage = (): JSX.Element => {
   return (
     <Layout twoBlueFlowers2={true}>
-      {/* <MaxWithBgColorContainer> */}
-      <MasterclassBanner />
-      {/* </MaxWithBgColorContainer> */}
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassInfo1 />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassInfo2 />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassInfo3 />
-        <MasterclassInfo4 />
-      </MaxWithBgColorContainer>
       <HelloBanner />
       <MaxWithBgColorContainer bgColor="bg-linear4">
         <AdaBanner />

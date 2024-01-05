@@ -16,8 +16,8 @@ const MasterclassBanner = (): JSX.Element => {
           quality={100}
         />
       </div>
-      <div className="pt-[50px]">
-        <h1 className="text-adaSubtitle md:text-[96px] font-extrabold  animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-4">
+      <div className="pt-[140px]">
+        <h1 className="text-adaSubtitle md:text-[96px] font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-4">
           MASTERCLASS
         </h1>
         <div className="max-w-[400px] xl:max-w-[790px] md:text-adaSubtitle mt-10 pb-[85px]">
@@ -38,7 +38,7 @@ const MasterclassBanner = (): JSX.Element => {
             type="button"
             text="PROWADZĘ WŁASNY BIZNES"
             sectionId="prowadze-wlasny-biznes"
-            btnStyle="md:w-[250px] "
+            btnStyle="md:w-[250px] py-[100px]"
             textSize="text-adaDesc"
             border={true}
           />

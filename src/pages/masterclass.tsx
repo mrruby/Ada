@@ -7,11 +7,20 @@ import MasterclassInfo1 from "components/MasterclassInfo1"
 import MasterclassInfo2 from "components/MasterclassInfo2"
 import MasterclassInfo3 from "components/MasterclassInfo3"
 import MasterclassInfo4 from "components/MasterclassInfo4"
+import MasterclassInfo5 from "components/MasterclassInfo5"
+import MasterclassInfo6 from "components/MasterclassInfo6"
 import MasterclassTime from "components/MasterclassTime"
+import MasterclassFAQ from "components/MasterclassFAQ"
+import MasterclassAbout from "components/MasterclassAbout"
+import MasterclassAgenda from "components/MasterclassAgenda"
+import MasterclassDate from "components/MasterclassDate"
+import MasterclassPreparing from "components/MasterclassPreparing"
+import References from "components/References"
 
 const MasterclassPage = (): JSX.Element => {
   return (
     <Layout
+      flowerBlue={true}
       waves1={true}
       waves2={true}
       waves3={true}
@@ -29,8 +38,30 @@ const MasterclassPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassInfo3 />
         <MasterclassInfo4 />
-        <MasterclassTime />
       </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <MasterclassAbout />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-white">
+        <References title4 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <MasterclassAgenda />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-pink2">
+        <MasterclassInfo5 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <MasterclassDate />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-pink2">
+        <MasterclassInfo6 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear3">
+        <MasterclassPreparing />
+      </MaxWithBgColorContainer>
+      <MasterclassTime />
+      <MasterclassFAQ />
     </Layout>
   )
 }

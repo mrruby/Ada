@@ -15,6 +15,7 @@ type IReferences = {
   title1?: boolean
   title2?: boolean
   title3?: boolean
+  title4?: boolean
 }
 
 const referencesList: IReferencesList[] = [
@@ -89,7 +90,12 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
   )
 }
 
-const References = ({ title1, title2, title3 }: IReferences): JSX.Element => {
+const References = ({
+  title1,
+  title2,
+  title3,
+  title4,
+}: IReferences): JSX.Element => {
   return (
     <div className="pt-[120px]">
       {title1 && (
@@ -116,6 +122,16 @@ const References = ({ title1, title2, title3 }: IReferences): JSX.Element => {
         <h3 className="mx-auto max-w-[850px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[34px] border-ada-light-pink h-[24px] lg:h-[68px]">
           Co mówią Ci, którzy przeczytali?
         </h3>
+      )}
+      {title4 && (
+        <>
+          <h3 className="mx-auto md:max-w-[941px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-light-pink md:h-[24px] lg:h-[40px] animate-bounce uppercase">
+            TAK mówią osoby, z którymi współpracowałam
+          </h3>
+          <h3 className="mx-auto md:max-w-[680px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-light-pink md:h-[24px] lg:h-[40px] animate-bounce uppercase">
+            przy kampaniach reklamowych:
+          </h3>
+        </>
       )}
       {referencesList && (
         <Carousel

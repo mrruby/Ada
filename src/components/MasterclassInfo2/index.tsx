@@ -13,7 +13,7 @@ const listItems = [
 const MasterclassInfo2 = (): JSX.Element => {
   return (
     <div
-      className="w-full flex flex-col px-3 py-2 items-center mb-[85px]"
+      className="w-full flex flex-col px-3 py-4 md:pt-[60px] items-center mb-[85px]"
       id="pracuje-w-marketingu"
     >
       <MasterclassInfoSection title="Pracuję w marketingu" list={listItems} />

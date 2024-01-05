@@ -4,11 +4,11 @@ import { Button } from "helpers/Button"
 
 const listItems = [
   "Pewnie jesteś teraz trochę na rozdrożu: podsumowałaś 2023 rok, zaplanowałaś cele na nowy i zastanawiasz się, jak to wszystko pomieścić w 12 miesiącach?",
+  "Myślałaś, że na tym etapie prowadzenia biznesu będzie Ci łatwiej pozyskiwać nowych klientów?",
   "A może wręcz odwrotnie — nie wiesz, jak w 2024 roku przyciągnąć do siebie nowych klientów?",
+  "Czujesz, że konkurencja Cię wyprzedza — przejmują klientów i dyktują stawki, a Ty zostajesz w tyle?",
   "Chcesz rozwinąć swoje profile na Facebooku i Instagramie, ale brakuje Ci siły przebicia?",
   "Co chwile wymyślasz nowe sposoby na przyciągnięcie klientów, ale mało kto na to reaguje?",
-  "Myślałaś, że na tym etapie prowadzenia biznesu będzie Ci łatwiej pozyskiwać nowych klientów?",
-  "Czujesz, że konkurencja Cię wyprzedza — przejmują klientów i dyktują stawki, a Ty zostajesz w tyle?",
   "Dotyka Cię słynny syndrom oszusta i czujesz, że hamuje Cię brak wiary w siebie?",
   "Co roku obiecujesz sobie, że „ten rok to już na pewno będzie mój”, a wychodzi różnie?",
 ]
@@ -20,15 +20,15 @@ const MasterclassInfo1 = (): JSX.Element => {
       id="prowadze-wlasny-biznes"
     >
       <MasterclassInfoSection title="Prowadzę własny biznes" list={listItems} />
-      <h3 className="md:text-adaSubtitleSecondary font-bold max-w-[1045px] text-center py-[100px]">
+      <h3 className="md:text-adaSubtitleSecondary font-bold max-w-[945px] text-center py-[100px]">
         Jeśli odpowiedziałaś <span className="text-ada-purple">tak</span> na co
-        najmniej jedną „kropkę”, to WARSZTATY{" "}
+        najmniej jedną „kropkę”, to warsztaty{" "}
         <span className="text-ada-purple">
           „KEVIN SAM W MENEDŻERZE REKLAM: STWÓRZ LEJEK REKLAMOWY NA 2024 ROK!”
         </span>{" "}
         są dla Ciebie!
       </h3>
-      <h3 className="md:text-[40px] uppercase font-extrabold pb-10">
+      <h3 className="md:text-adaSubtitleThird uppercase font-extrabold pb-10">
         Bez względu na to, czy:
       </h3>
       <ul className="md:text-adaSubtitle max-w-[860px]">

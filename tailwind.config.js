@@ -35,6 +35,7 @@ module.exports = {
         adaBase: "1.25rem",
         adaSubtitle: "1.5rem",
         adaSubtitleSecondary: "2.0625rem",
+        adaSubtitleThird: "2.5rem",
         adaTitle: "3rem",
         adaTitle2: "3.75rem",
         adaBig: "5rem",
