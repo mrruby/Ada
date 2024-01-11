@@ -16,9 +16,9 @@ export const MasterclassInfoSection: React.FC<Props> = ({ title, list }) => {
           {list.map((item, index) => (
             <li
               key={index}
-              className="flex flex-col items-center md:flex-row max-w-[560px] px-2"
+              className="flex flex-col items-center md:flex-row max-w-[560px] px-2 md:text-adaBase"
             >
-              <div>
+              <div className="animate-spin-slow">
                 <StaticImage
                   src={"../../images/flower-blue.svg"}
                   alt="Ada Promis"

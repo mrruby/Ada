@@ -3,14 +3,10 @@ import { MasterclassInfoSection } from "helpers/MasterclassInfoSection"
 import { Button } from "helpers/Button"
 
 const listItems = [
-  "Pewnie jesteś teraz trochę na rozdrożu: podsumowałaś 2023 rok, zaplanowałaś cele na nowy i zastanawiasz się, jak to wszystko pomieścić w 12 miesiącach?",
-  "Myślałaś, że na tym etapie prowadzenia biznesu będzie Ci łatwiej pozyskiwać nowych klientów?",
-  "A może wręcz odwrotnie — nie wiesz, jak w 2024 roku przyciągnąć do siebie nowych klientów?",
-  "Czujesz, że konkurencja Cię wyprzedza — przejmują klientów i dyktują stawki, a Ty zostajesz w tyle?",
-  "Chcesz rozwinąć swoje profile na Facebooku i Instagramie, ale brakuje Ci siły przebicia?",
-  "Co chwile wymyślasz nowe sposoby na przyciągnięcie klientów, ale mało kto na to reaguje?",
-  "Dotyka Cię słynny syndrom oszusta i czujesz, że hamuje Cię brak wiary w siebie?",
-  "Co roku obiecujesz sobie, że „ten rok to już na pewno będzie mój”, a wychodzi różnie?",
+  "Podsumowałaś 2023 rok, myślisz o planach w 2024 i zastanawiasz się, jak to wszystko ogarnąć bez ciągłej obecności w mediach społecznościowych?",
+  "Przygotowałaś świetne posty, merytoryczne treści, a zobaczyła je zaledwie garstka Twoich obserwujących?",
+  "Twoja firma żyje w chaosie - w którym dotychczas nie było przestrzeni na przemyślane reklamy?",
+  "Szukasz systemu, który działa w tle, kiedy Ty spędzasz czas z rodziną, odpoczywasz lub oglądasz serial?",
 ]
 
 const MasterclassInfo1 = (): JSX.Element => {
@@ -19,7 +15,10 @@ const MasterclassInfo1 = (): JSX.Element => {
       className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-[85px]"
       id="prowadze-wlasny-biznes"
     >
-      <MasterclassInfoSection title="Prowadzę własny biznes" list={listItems} />
+      <MasterclassInfoSection
+        title="Prowadzę własny biznes / Jestem freelancerką"
+        list={listItems}
+      />
       <h3 className="md:text-adaSubtitleSecondary font-bold max-w-[945px] text-center py-[100px]">
         Jeśli odpowiedziałaś <span className="text-ada-purple">tak</span> na co
         najmniej jedną „kropkę”, to warsztaty{" "}
@@ -35,17 +34,17 @@ const MasterclassInfo1 = (): JSX.Element => {
         <li className="mb-5 flex">
           <span className="inline-block w-6 h-6 bg-ada-pink2 rounded-xl mr-4 flex-shrink-0"></span>
           Już prowadzisz kampanie reklamowe i w 2024 roku chcesz wycisnąć je jak
-          cytrynkę
+          cytrynkę 🍋
         </li>
         <li className="mb-5 flex">
           <span className="inline-block w-6 h-6 bg-ada-pink2 rounded-xl mr-4 flex-shrink-0"></span>
           Jeszcze nigdy nie inwestowałaś w płatne reklamy, ale zastanawiasz się,
           jakie działania mogłabyś wdrożyć, aby zobaczyć wzrost sprzedaży w
-          swoim biznesie
+          swoim biznesie 📈
         </li>
         <li className="mb-[70px] flex">
           <span className="inline-block w-6 h-6 bg-ada-pink2 rounded-xl mr-4 flex-shrink-0"></span>
-          Nie prowadzisz reklam samodzielnie, a je zlecasz
+          Nie prowadzisz reklam samodzielnie, a je zlecasz 🚀
         </li>
       </ul>
       <Button

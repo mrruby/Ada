@@ -21,6 +21,11 @@ type IReferences = {
 const referencesList: IReferencesList[] = [
   {
     reference:
+      "Serdecznie polecam współpracę z Adą! Dzięki konsultacjom swobodnie poruszam się po menedżerze reklam, ustawiam kampanie na różne grupy docelowe i sprawdzam ich skuteczność. Ada jest kompendium wiedzy w sprawach meta adsów, zna i rozumie wszystkie zmiany. Zawsze sugeruje najlepsze możliwe rozwiązania, pozwalając rozwinąć skrzydła jednocześnie!",
+    name: "Natalia Plewniok",
+  },
+  {
+    reference:
       "„Naprawdę polecam współpracę z Adrianną. Konkretnie i z dużym sukcesem rozwinęłam sprzedaż swoich produktów on-line, dzięki odpowiedniej strategii, którą zaproponowała Ada. Ada kontroluje reklamy, wprowadza poprawki i dba o to, żeby maszyna ruszyła, gdy ja mogłam się zająć spokojnym opowiadaniem o moich produktach w sieci. Dużym plusem jest też stały kontakt i podsumowywanie na koniec kampanii, dzięki czemu wiedziałyśmy, co zadziałało, a co nie.”",
     name: "Katarzyna Skórska, ",
     company: "Dietetyk kliniczny",

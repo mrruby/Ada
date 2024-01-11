@@ -23,7 +23,7 @@ const listItems = [
   </span>,
 ]
 
-const MasterclassDate = (): JSX.Element => {
+const MasterclassDate1 = (): JSX.Element => {
   return (
     <div
       className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-[85px]"
@@ -33,7 +33,7 @@ const MasterclassDate = (): JSX.Element => {
         Spotykamy się!
       </h2>
       <h2 className="text-adaSubtitle uppercase md:text-adaTitle2 font-extrabold animate-bounce bg-ada-pink2 mt-[80px] px-12 md:px-32 py-8">
-        17.01 o 18:00
+        25.01 o 18:00
       </h2>
       <p className="md:text-adaSubtitleSecondary py-20 max-w-[810px] text-center">
         Dołącz i sprawdź, czy strategiczne planowanie kampanii reklamowych jest
@@ -53,18 +53,14 @@ const MasterclassDate = (): JSX.Element => {
         />
       </div>
       <div className="text-center flex flex-col gap-6 md:pb-[120px]">
-        <h3 className="font-bold md:text-adaSubtitleSecondary">
-          Zastanawiasz się pewnie: no dobra, dobra. <br /> Ile to kosztuje?
+        <h3 className="font-bold md:text-adaSubtitle">
+          Zastanawiasz się pewnie: no dobra, dobra. <br /> Ile to kosztuje? 💰
         </h3>
-        <p className="text-adaDesc">
-          Do <span className="font-bold">15 stycznia </span> możesz dołączyć do
+        <p className="md:text-adaSubtitle">
+          Do <span className="font-bold">23 stycznia </span> możesz dołączyć do
           warsztatów w fajnej cenie:{" "}
-          <span className="font-bold">59 złotych!</span>
-        </p>
-        <p>
-          <span className="font-bold">16 i 17 stycznia</span> za dostęp do
-          warsztatów last minute zapłacisz{" "}
-          <span className="font-bold">20 złotych więcej - 79 zł.</span>
+          <span className="font-bold bg-ada-pink2 p-2">59 złotych</span> zamiast
+          129!
         </p>
       </div>
       <p className="max-w-[810px] pb-8 text-center md:text-adaSubtitle">
@@ -79,7 +75,7 @@ const MasterclassDate = (): JSX.Element => {
         {listItems.map((item, index) => (
           <li
             key={index}
-            className="flex gap-2 flex-col items-center md:flex-row"
+            className="flex gap-2 flex-col items-center md:flex-row md:text-adaDesc"
           >
             <div>
               <StaticImage
@@ -99,4 +95,4 @@ const MasterclassDate = (): JSX.Element => {
   )
 }
 
-export default MasterclassDate
+export default MasterclassDate1

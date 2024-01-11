@@ -1,5 +1,6 @@
 import React from "react"
 import { Button } from "helpers/Button"
+import { Accordion } from "helpers/Accordion"
 
 interface ListItem {
   question: string
@@ -7,11 +8,6 @@ interface ListItem {
 }
 
 const MasterclassFAQ = (): JSX.Element => {
-  const listItemClass = "lg:w-[550px]"
-  const listItemQuestionClass =
-    "lg:text-adaDesc font-bold py-4 px-4 bg-ada-light-pink max-w-[360px] flex items-center justify-center text-center mx-auto"
-  const listItemAnswerClass = "my-8 lg:text-adaDesc"
-
   const leftList: ListItem[] = [
     {
       question: "Czy te warsztaty są dla mnie?",
@@ -26,6 +22,11 @@ const MasterclassFAQ = (): JSX.Element => {
       question: "Kiedy odbędą się warsztaty?",
       answer:
         "17 stycznia o 18:00. Po warsztatach dostaniesz nagranie ze spotkania z zarejestrowaną sesją Q&A.",
+    },
+    {
+      question: "Dlaczego tak tanio?",
+      answer:
+        "Bo nie będziesz mieć już więcej wymówek i dzięki temu zaczniesz działać z reklamami w 2024 roku! ;)",
     },
     {
       question: "Czy muszę mieć doświadczenie z reklamami?",
@@ -59,10 +60,7 @@ const MasterclassFAQ = (): JSX.Element => {
 
   const renderList = (list: ListItem[]) => {
     return list.map((item, index) => (
-      <li className={listItemClass} key={index}>
-        <h3 className={listItemQuestionClass}>{item.question}</h3>
-        <p className={listItemAnswerClass}> {item.answer}</p>
-      </li>
+      <Accordion key={index} question={item.question} answer={item.answer} />
     ))
   }
 
@@ -70,7 +68,6 @@ const MasterclassFAQ = (): JSX.Element => {
     <div className="flex flex-col text-ada-blue items-center px-3">
       <div className="relative flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
         <div className="pt-[60px] lg:pt-[76px] z-0">
-          <div className="hidden md:flex w-full h-[200px] mb-[-10px] -z-10"></div>
           <h2 className="text-[20px] lg:text-adaTitle font-bold mx-auto lg:mb-2 animate-bounce text-center">
             FAQ
           </h2>

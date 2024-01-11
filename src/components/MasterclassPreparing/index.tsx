@@ -2,7 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 const listItems = [
-  "Kliknij w link, który dostaniesz w mailu i dołącz do spotkania na Google Meets.",
+  "Kliknij w link, który dostaniesz w mailu i upewnij się, że jesteś zalogowana na Youtube, aby móc zadawać pytania na spotkaniu!",
   "Przygotuj coś do pisania, notatnik lub otwarty dokument w Wordzie.",
   "Jeśli prowadzisz kampanie, otwórz swoje konto reklamowe.",
 ]
@@ -28,8 +28,8 @@ const MasterclassPreparing = (): JSX.Element => {
           src={"../../images/document.webp"}
           alt="Ada Promis"
           placeholder="none"
-          width={177}
-          height={189}
+          width={159}
+          height={170}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />

@@ -11,10 +11,10 @@ const listItems = [
 ]
 
 const listItems2 = [
-  "przeanalizujemy statystyki z Twojego profilu lub wyniki z menadżera reklam z 2023 roku (jeśli korzystasz z płatnych reklam)",
-  "sprawdzimy, co u Ciebie działa, a co nie do końca",
-  "zaplanujemy lejek marketingowy na działania w 2024 roku w reklamach",
-  "wymyślimy co najmniej 10 kreacji do przetestowania w kampaniach",
+  "przeanalizowanymi statystykami z Twojego profilu/menedżera reklam (jeśli z nich korzystałaś w 2023 roku) - nawet jesli myślisz, że jesteś nietechniczna",
+  "poczuciem, że wiesz co działało, rozwijasz to i skalujesz w 2024",
+  "zaplanowanym lejkiem reklam na 2024 rok",
+  "co najmniej 10 pomysłami na kreacje do przetestowania w reklamach!",
 ]
 
 const MasterclassAgenda = (): JSX.Element => {
@@ -23,17 +23,26 @@ const MasterclassAgenda = (): JSX.Element => {
       className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-[85px]"
       id="prowadze-wlasny-biznes"
     >
+      <StaticImage
+        src={"../../images/screen-mastermind.webp"}
+        alt="Ada Promis"
+        placeholder="none"
+        width={920}
+        height={615}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
       <h3 className="md:text-adaSubtitleSecondary font-semibold pb-10 max-w-[1085px] text-center">
         Gdy w zeszłym roku prowadziłam rekrutację do programu mentoringowego,
         słyszałam:{" "}
       </h3>
-      <ul className="flex flex-wrap gap-[50px] max-w-[1200px] mx-auto justify-center">
+      <ul className="flex flex-wrap gap-[10px] max-w-[1200px] mx-auto justify-center mb-10">
         {listItems.map((item, index) => (
           <li
             key={index}
-            className="mb-5 flex flex-col items-center md:flex-row max-w-[560px] md:min-w-[560px]"
+            className="flex flex-col items-center md:flex-row max-w-[480px] md:min-w-[480px] md:text-adaBase"
           >
-            <div>
+            <div className="animate-spin-slow">
               <StaticImage
                 src={"../../images/flower-blue.svg"}
                 alt="Ada Promis"
@@ -47,28 +56,19 @@ const MasterclassAgenda = (): JSX.Element => {
           </li>
         ))}
       </ul>
-      <StaticImage
-        src={"../../images/screen-mastermind.webp"}
-        alt="Ada Promis"
-        placeholder="none"
-        width={1023}
-        height={684}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
       <h3 className="md:text-adaSubtitleSecondary pb-10 max-w-[940px] text-center">
-        I właśnie dla takich osób (kto wie, może wśród nich jesteś Ty?)
+        I własnie dla takich osób (kto wie, może wśród nich jesteś Ty?)
         przygotowałam{" "}
         <span className="font-bold">
           2-godzinny warsztat strategiczno-reklamowy,
         </span>{" "}
-        na którym:
+        po którym wyjdziesz z:{" "}
       </h3>
       <ul>
         {listItems2.map((item, index) => (
           <li
             key={index}
-            className="flex flex-col md:flex-row gap-2 items-center px-2"
+            className="flex flex-col md:flex-row gap-2 items-center px-2 max-w-[800px] md:text-adaBase"
           >
             <div>
               <StaticImage

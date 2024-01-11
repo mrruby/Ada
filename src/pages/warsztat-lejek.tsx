@@ -8,8 +8,8 @@ import MasterclassInfo2 from "components/MasterclassInfo2"
 import MasterclassInfo3 from "components/MasterclassInfo3"
 import MasterclassInfo4 from "components/MasterclassInfo4"
 import MasterclassInfo5 from "components/MasterclassInfo5"
-import MasterclassInfo6 from "components/MasterclassInfo6"
-import MasterclassTime from "components/MasterclassTime"
+import MasterclassTime1 from "components/MasterclassTime1"
+import MasterclassTime2 from "components/MasterclassTime2"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import MasterclassAbout from "components/MasterclassAbout"
 import MasterclassAgenda from "components/MasterclassAgenda"
@@ -20,7 +20,7 @@ import References from "components/References"
 const MasterclassPage = (): JSX.Element => {
   return (
     <Layout
-      flowerBlue={true}
+      flowerBlue2={true}
       waves1={true}
       waves2={true}
       waves3={true}
@@ -28,6 +28,7 @@ const MasterclassPage = (): JSX.Element => {
       waves5={true}
       waves6={true}
     >
+      <MasterclassTime1 />
       <MasterclassBanner />
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassInfo1 />
@@ -37,7 +38,6 @@ const MasterclassPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassInfo3 />
-        <MasterclassInfo4 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MasterclassAbout />
@@ -49,18 +49,18 @@ const MasterclassPage = (): JSX.Element => {
         <MasterclassAgenda />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink2">
-        <MasterclassInfo5 />
+        <MasterclassInfo4 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MasterclassDate />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink2">
-        <MasterclassInfo6 />
+        <MasterclassInfo5 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassPreparing />
       </MaxWithBgColorContainer>
-      <MasterclassTime />
+      <MasterclassTime2 />
       <MasterclassFAQ />
     </Layout>
   )

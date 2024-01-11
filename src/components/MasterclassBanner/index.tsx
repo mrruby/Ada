@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const MasterclassBanner = (): JSX.Element => {
   return (
-    <div className="flex px-2 xl:px-6 flex-col-reverse items-center lg:flex-row text-ada-blue mx-auto gap-8 py-20">
+    <div className="flex px-2 xl:px-6 flex-col-reverse items-center lg:flex-row text-ada-blue mx-auto gap-8 md:py-20">
       <div className="flex">
         <StaticImage
           src={"../../images/masterclass.webp"}
@@ -16,7 +16,7 @@ const MasterclassBanner = (): JSX.Element => {
           quality={100}
         />
       </div>
-      <div className="pt-[140px]">
+      <div className="pt-[40px] md:pt-[140px]">
         <h1 className="text-adaSubtitle md:text-[96px] font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-4">
           MASTERCLASS
         </h1>
@@ -33,12 +33,12 @@ const MasterclassBanner = (): JSX.Element => {
             </span>
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-5">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-20">
           <Button
             type="button"
             text="PROWADZĘ WŁASNY BIZNES"
             sectionId="prowadze-wlasny-biznes"
-            btnStyle="md:w-[250px] py-[100px]"
+            btnStyle="md:w-[400px] py-[100px]"
             textSize="text-adaDesc"
             border={true}
           />
@@ -46,15 +46,7 @@ const MasterclassBanner = (): JSX.Element => {
             type="button"
             text="PRACUJĘ W MARKETINGU"
             sectionId="pracuje-w-marketingu"
-            btnStyle="md:w-[250px] "
-            textSize="text-adaDesc"
-            border={true}
-          />
-          <Button
-            type="button"
-            text="ROBIĘ COŚ INNEGO"
-            sectionId="obsluguje-klientow"
-            btnStyle="md:w-[250px] "
+            btnStyle="md:w-[400px] "
             textSize="text-adaDesc"
             border={true}
           />

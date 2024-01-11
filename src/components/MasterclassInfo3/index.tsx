@@ -1,22 +1,56 @@
 import React from "react"
-import { MasterclassInfoSection } from "helpers/MasterclassInfoSection"
-
-const listItems = [
-  "Pracujesz na własny rachunek, ale gdy zaczynałaś, nikt nie powiedział Ci, że praca na swoim to wciąż obsługiwanie klientów — tylko nie ma płatnych urlopów ani L4?",
-  "Chciałabyś oferować swoim klientom szerszy zakres usług, aby móc podnosić stawki i dyktować warunki?",
-  "Słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
-  "Masz podstawową wiedzę na temat reklam, ale nie wiesz, jak je zaplanować, aby w kampaniach sprzedażowych pojawiały się kolejne zakupy?",
-  "Potrzebujesz wsparcia i empatycznego wytłumaczenia, od czego zacząć reklamy?",
-  "Marzysz o umiejętnościach, dzięki którym zaczniesz pracować tak, jak lubisz, bo klienci będą chętnie korzystać z Twoich usług reklamowych?",
-]
+import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 
 const MasterclassInfo3 = (): JSX.Element => {
   return (
     <div
-      className="w-full flex flex-col px-3 py-2 md:pt-[60px] items-center mb-[85px]"
+      className="w-full px-3 py-2 flex flex-col pb-[80px]"
       id="obsluguje-klientow"
     >
-      <MasterclassInfoSection title="Obsługuję klientów" list={listItems} />
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="flex">
+          <StaticImage
+            src={"../../images/warsztaty.webp"}
+            alt="Ada Promis - hero"
+            placeholder="none"
+            width={440}
+            height={432}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </div>
+        <div className="md:min-w-[800px] md:ml-[50px]">
+          <div className="pl-4 md:pl-20 py-6 bg-ada-pink2 w-full">
+            <h3 className="max-w-[800px] md:text-adaSubtitle uppercase font-semibold ">
+              Warsztaty Kevin sam w menedżerze reklam: stwórz lejek reklamowy na
+              2024 rok!{" "}
+            </h3>
+          </div>
+          <p className="max-w-[800px] pl-4 md:pl-20 md:text-adaSubtitle pt-8">
+            {" "}
+            to niezawodny sposób na rozpoczęcie pracy z reklamami.
+            <br />
+            Poznasz podstawy{" "}
+            <span className="font-bold">
+              strategicznego ustawiania reklam,
+            </span>{" "}
+            a potem dodasz do portfolio nowe, opłacalne usługi.
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col justify-center gap-8">
+        <h3 className="md:text-adaSubtitleSecondary text-center pt-[100px] uppercase font-extrabold">
+          To jak, wchodzisz do gry?
+        </h3>
+        <Button
+          type="button"
+          text={<span className="font-bold">DOŁĄCZAM DO WARSZTATÓW </span>}
+          url=""
+          textSize="md:text-adaSubtitle"
+          btnStyle="md:w-[410px] bg-ada-pink2 tracking-[2.90px] mx-auto"
+        />
+      </div>
     </div>
   )
 }

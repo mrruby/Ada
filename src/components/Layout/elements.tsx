@@ -125,14 +125,14 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
 
       {waves5 && (
         <Waves5
-          mobileTop="hidden lg:flex lg:top-[3760px]"
+          mobileTop="hidden lg:flex lg:top-[4260px]"
           mobileLeft="left-0"
         />
       )}
 
       {waves6 && (
         <Waves6
-          mobileTop="hidden lg:flex lg:top-[4200px]"
+          mobileTop="hidden lg:flex lg:top-[4800px]"
           mobileRight="right-0"
         />
       )}
