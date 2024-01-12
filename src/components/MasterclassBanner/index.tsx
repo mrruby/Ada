@@ -7,6 +7,7 @@ const MasterclassBanner = (): JSX.Element => {
     <div className="flex px-2 xl:px-6 flex-col-reverse items-center lg:flex-row text-ada-blue mx-auto gap-8 md:py-20">
       <div className="flex">
         <StaticImage
+          loading="eager"
           src={"../../images/masterclass.webp"}
           alt="Ada Promis - hero"
           placeholder="none"
