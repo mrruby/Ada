@@ -3,9 +3,9 @@ import { MasterclassInfoSection } from "helpers/MasterclassInfoSection"
 import { Button } from "helpers/Button"
 
 const listItems = [
-  "Podsumowałaś 2023 rok, myślisz o planach w 2024 i zastanawiasz się, jak to wszystko ogarnąć bez ciągłej obecności w mediach społecznościowych?",
+  "Podsumowałaś 2023 rok, myślisz o planach na 2024 i zastanawiasz się, jak to wszystko ogarnąć bez ciągłej obecności w mediach społecznościowych?",
   "Przygotowałaś świetne posty, merytoryczne treści, a zobaczyła je zaledwie garstka Twoich obserwujących?",
-  "Twoja firma żyje w chaosie - w którym dotychczas nie było przestrzeni na przemyślane reklamy?",
+  "Twoja firma żyje w chaosie, w którym dotychczas nie było przestrzeni na przemyślane reklamy?",
   "Szukasz systemu, który działa w tle, kiedy Ty spędzasz czas z rodziną, odpoczywasz lub oglądasz serial?",
 ]
 
@@ -15,13 +15,10 @@ const MasterclassInfo1 = (): JSX.Element => {
       className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-[85px]"
       id="prowadze-wlasny-biznes"
     >
-      <MasterclassInfoSection
-        title="Prowadzę własny biznes / Jestem freelancerką"
-        list={listItems}
-      />
-      <h3 className="md:text-adaSubtitleSecondary font-bold max-w-[945px] text-center py-[100px]">
-        Jeśli odpowiedziałaś <span className="text-ada-purple">tak</span> na co
-        najmniej jedną „kropkę”, to warsztaty{" "}
+      <MasterclassInfoSection title="Prowadzę własny biznes" list={listItems} />
+      <h3 className="md:text-adaSubtitleSecondary font-bold max-w-[780px] text-center py-[100px]">
+        Jeśli odpowiedziałaś <span className="text-ada-purple">'tak!'</span> na
+        co najmniej raz, to warsztaty{" "}
         <span className="text-ada-purple">
           „KEVIN SAM W MENEDŻERZE REKLAM: STWÓRZ LEJEK REKLAMOWY NA 2024 ROK!”
         </span>{" "}
@@ -54,9 +51,10 @@ const MasterclassInfo1 = (): JSX.Element => {
             CHCĘ SKUTECZNIE ROZWINĄĆ MÓJ BIZNES <br /> W 2024 ROKU!
           </span>
         }
-        url="/"
+        url="https://app.easycart.pl/checkout/62332176/masterclass-kevin-sam-w-menedzerze-reklam-zaplanuj-swoj-lejek-reklamowy"
         textSize="md:text-adaSubtitle"
-        btnStyle="md:w-[858px] bg-ada-pink2 tracking-[2.90px]"
+        btnStyle="md:w-[858px] bg-ada-pink2 tracking-[2.90px] border-b-4 border-ada-pink shadow-xl"
+        iconCalender
       />
     </div>
   )

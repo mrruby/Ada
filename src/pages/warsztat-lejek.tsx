@@ -27,6 +27,7 @@ const MasterclassPage = (): JSX.Element => {
       waves4={true}
       waves5={true}
       waves6={true}
+      showHeader={false}
     >
       <MasterclassTime1 />
       <MasterclassBanner />

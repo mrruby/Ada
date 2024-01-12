@@ -8,8 +8,7 @@ const MasterclassInfo4 = (): JSX.Element => {
         mieć za sobą całego roku prowadzenia kampanii!
       </h3>
       <h3 className="md:text-adaSubtitle text-center pt-6">
-        Nawet jeśli{" "}
-        <span className="font-bold">nigdy nie prowadziłaś reklam,</span>{" "}
+        Nawet jeśli <span className="font-bold">nigdy nie robiłaś reklam,</span>{" "}
         wyniesiesz ze spotkania całą maaasę wiedzy.
       </h3>
     </div>

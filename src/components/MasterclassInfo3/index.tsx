@@ -39,16 +39,17 @@ const MasterclassInfo3 = (): JSX.Element => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col justify-center gap-8">
+      <div className="flex flex-col justify-center gap-8 items-center">
         <h3 className="md:text-adaSubtitleSecondary text-center pt-[100px] uppercase font-extrabold">
           To jak, wchodzisz do gry?
         </h3>
         <Button
           type="button"
           text={<span className="font-bold">DOŁĄCZAM DO WARSZTATÓW </span>}
-          url=""
+          url="https://app.easycart.pl/checkout/62332176/masterclass-kevin-sam-w-menedzerze-reklam-zaplanuj-swoj-lejek-reklamowy"
           textSize="md:text-adaSubtitle"
-          btnStyle="md:w-[410px] bg-ada-pink2 tracking-[2.90px] mx-auto"
+          btnStyle="md:w-[410px] bg-ada-pink2 tracking-[2.90px] mx-auto border-b-4 border-ada-pink shadow-xl"
+          iconCalender
         />
       </div>
     </div>

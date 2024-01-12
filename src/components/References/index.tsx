@@ -21,7 +21,7 @@ type IReferences = {
 const referencesList: IReferencesList[] = [
   {
     reference:
-      "Serdecznie polecam współpracę z Adą! Dzięki konsultacjom swobodnie poruszam się po menedżerze reklam, ustawiam kampanie na różne grupy docelowe i sprawdzam ich skuteczność. Ada jest kompendium wiedzy w sprawach meta adsów, zna i rozumie wszystkie zmiany. Zawsze sugeruje najlepsze możliwe rozwiązania, pozwalając rozwinąć skrzydła jednocześnie!",
+      "„Serdecznie polecam współpracę z Adą! Dzięki konsultacjom swobodnie poruszam się po menedżerze reklam, ustawiam kampanie na różne grupy docelowe i sprawdzam ich skuteczność. Ada jest kompendium wiedzy w sprawach meta adsów, zna i rozumie wszystkie zmiany. Zawsze sugeruje najlepsze możliwe rozwiązania, pozwalając rozwinąć skrzydła jednocześnie!”",
     name: "Natalia Plewniok",
   },
   {

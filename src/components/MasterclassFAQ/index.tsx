@@ -12,7 +12,7 @@ const MasterclassFAQ = (): JSX.Element => {
     {
       question: "Czy te warsztaty są dla mnie?",
       answer:
-        "Warsztaty są dla każdej osoby, która chce w 2024 podnieść wyniki sprzedażowe — czy to swoje, czy swoich klientów.  Nie rozdzielam warsztatów na osobne grupy dla przedsiębiorczyń, freelancerek i etatowców, bo podstawowe zasady planowania lejka sprzedażowego są takie same.  Ważne, aby mieć wybrane konto w mediach społecznościowych, które chcesz rozwijać!",
+        "Warsztaty są dla każdej osoby, która chce w 2024 podnieść wyniki sprzedażowe — czy to swoje, czy swoich klientów. Nie rozdzielam warsztatów na osobne grupy dla przedsiębiorczyń, freelancerek i etatowców, bo podstawowe zasady planowania lejka sprzedażowego są takie same. Ważne, aby mieć wybrane konto w mediach społecznościowych, które chcesz rozwijać!",
     },
     {
       question: "Kiedy dostanę dostęp?",
@@ -21,12 +21,7 @@ const MasterclassFAQ = (): JSX.Element => {
     {
       question: "Kiedy odbędą się warsztaty?",
       answer:
-        "17 stycznia o 18:00. Po warsztatach dostaniesz nagranie ze spotkania z zarejestrowaną sesją Q&A.",
-    },
-    {
-      question: "Dlaczego tak tanio?",
-      answer:
-        "Bo nie będziesz mieć już więcej wymówek i dzięki temu zaczniesz działać z reklamami w 2024 roku! ;)",
+        "25 stycznia o 18:00. Po warsztatach dostaniesz nagranie ze spotkania z zarejestrowaną sesją Q&A.",
     },
     {
       question: "Czy muszę mieć doświadczenie z reklamami?",
@@ -37,14 +32,14 @@ const MasterclassFAQ = (): JSX.Element => {
 
   const rightList: ListItem[] = [
     {
-      question: "Czy na pewno będzie czas dla mnie?",
+      question: "Dlaczego tak tanio?",
       answer:
-        "Chcę, aby jak najwięcej osób poznało skuteczne sposoby konstruowania ścieżki klientów, bo wiem, że solidną bazę można przekuć w porządne wyniki. Meta Ads to nadal najtańszy system reklamowy, a ogromna szkoda, aby treści, nad którymi tak ciężko pracujesz, dotarły jedynie do garstki odbiorców. ",
+        "Bo nie będziesz mieć już więcej wymówek i dzięki temu zaczniesz działać z reklamami w 2024 roku! ;) Chcę, aby jak najwięcej osób poznało skuteczne sposoby konstruowania ścieżki klientów, bo wiem, że solidną bazę można przekuć w porządne wyniki. Meta Ads to nadal najtańszy system reklamowy, a ogromna szkoda, aby treści, nad którymi tak ciężko pracujesz, dotarły jedynie do garstki odbiorców.",
     },
     {
       question: "Gdzie odbędą się warsztaty?",
       answer:
-        "Warsztaty odbędą się na Google Meets. Przed spotkaniem dostaniesz maila z linkiem do dołączenia.",
+        "Warsztaty odbędą się na YouTube. Przed spotkaniem dostaniesz maila z linkiem do dołączenia.",
     },
     {
       question: "Ile mam czasu na przerobienie warsztatów?",
@@ -86,9 +81,10 @@ const MasterclassFAQ = (): JSX.Element => {
               klientów!{" "}
             </span>
           }
-          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
+          url="https://app.easycart.pl/checkout/62332176/masterclass-kevin-sam-w-menedzerze-reklam-zaplanuj-swoj-lejek-reklamowy"
           textSize="md:text-adaSubtitle"
-          btnStyle="md:w-[1030px] bg-ada-pink2 py-8 px-8"
+          btnStyle="md:w-[1030px] bg-ada-pink2 py-8 px-8 border-b-4 border-ada-pink shadow-xl"
+          iconCalender
         />
       </div>
     </div>

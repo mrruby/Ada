@@ -30,7 +30,7 @@ const MasterclassDate1 = (): JSX.Element => {
       id="prowadze-wlasny-biznes"
     >
       <h2 className="text-adaSubtitle md:text-adaTitle2 font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px] uppercase">
-        Spotykamy się!
+        Spotykamy się
       </h2>
       <h2 className="text-adaSubtitle uppercase md:text-adaTitle2 font-extrabold animate-bounce bg-ada-pink2 mt-[80px] px-12 md:px-32 py-8">
         25.01 o 18:00
@@ -49,7 +49,8 @@ const MasterclassDate1 = (): JSX.Element => {
           }
           url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
           textSize="md:text-adaTitle"
-          btnStyle="md:w-[704px] bg-ada-light-pink py-8 px-8"
+          btnStyle="md:w-[704px] bg-ada-light-pink py-8 px-8 border-b-4 border-ada-pink shadow-xl"
+          iconCalender
         />
       </div>
       <div className="text-center flex flex-col gap-6 md:pb-[120px]">

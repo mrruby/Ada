@@ -11,16 +11,16 @@ const listItems = [
 ]
 
 const listItems2 = [
-  "przeanalizowanymi statystykami z Twojego profilu/menedżera reklam (jeśli z nich korzystałaś w 2023 roku) - nawet jesli myślisz, że jesteś nietechniczna",
-  "poczuciem, że wiesz co działało, rozwijasz to i skalujesz w 2024",
-  "zaplanowanym lejkiem reklam na 2024 rok",
-  "co najmniej 10 pomysłami na kreacje do przetestowania w reklamach!",
+  "przeanalizowanymi statystykami z Twojego profilu/menedżera reklam (jeśli z nich korzystałaś w 2023 roku) - nawet jesli myślisz, że jesteś nietechniczna 👩‍💻",
+  "poczuciem, że wiesz co działało, rozwijasz to i skalujesz w 2024 🎆",
+  "zaplanowanym lejkiem reklam na 2024 rok ✨",
+  "co najmniej 10 pomysłami na kreacje do przetestowania w reklamach! 😎",
 ]
 
 const MasterclassAgenda = (): JSX.Element => {
   return (
     <div
-      className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-[85px]"
+      className="w-full flex flex-col px-3 py-2 items-center p-2 mb-[85px]"
       id="prowadze-wlasny-biznes"
     >
       <StaticImage

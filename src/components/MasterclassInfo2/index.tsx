@@ -16,7 +16,7 @@ const MasterclassInfo2 = (): JSX.Element => {
       id="pracuje-w-marketingu"
     >
       <MasterclassInfoSection
-        title="Pracuję w marketingu / Jestem freelancerką"
+        title="Pracuję w marketingu / jako freelancerka"
         list={listItems}
       />
       <h3 className="md:text-adaSubtitleSecondary max-w-[1045px] text-center pt-[100px]">
@@ -29,7 +29,7 @@ const MasterclassInfo2 = (): JSX.Element => {
       <p className="md:text-adaSubtitle leading-8 max-w-[1045px] text-center pt-8 pb-[80px]">
         to znak, że na <span className="font-bold">warsztatach</span>{" "}
         przybliżysz się do życia, w którym pracujesz tak, jak lubisz i zarabiasz
-        dzięki temu naprawdę fajne pieniądze{" "}
+        dzięki temu naprawdę fajne pieniądze 💸
       </p>
       <Button
         type="button"
@@ -39,9 +39,10 @@ const MasterclassInfo2 = (): JSX.Element => {
             WARUNKACH!{" "}
           </span>
         }
-        url=""
+        url="https://app.easycart.pl/checkout/62332176/masterclass-kevin-sam-w-menedzerze-reklam-zaplanuj-swoj-lejek-reklamowy"
         textSize="md:text-adaSubtitle"
-        btnStyle="md:w-[858px] bg-ada-pink2 tracking-[2.90px]"
+        btnStyle="md:w-[858px] bg-ada-pink2 tracking-[2.90px] border-b-4 border-ada-pink shadow-xl"
+        iconCalender
       />
     </div>
   )

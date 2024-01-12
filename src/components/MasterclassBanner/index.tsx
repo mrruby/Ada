@@ -38,15 +38,15 @@ const MasterclassBanner = (): JSX.Element => {
             type="button"
             text="PROWADZĘ WŁASNY BIZNES"
             sectionId="prowadze-wlasny-biznes"
-            btnStyle="md:w-[400px] py-[100px]"
+            btnStyle="md:w-[345px] py-[100px]"
             textSize="text-adaDesc"
             border={true}
           />
           <Button
             type="button"
-            text="PRACUJĘ W MARKETINGU"
+            text="PRACUJĘ W MARKETINGU/  JAKO FREELANCERKA"
             sectionId="pracuje-w-marketingu"
-            btnStyle="md:w-[400px] "
+            btnStyle="md:w-[345px]"
             textSize="text-adaDesc"
             border={true}
           />

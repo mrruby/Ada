@@ -9,12 +9,12 @@ const MasterclassAbout = (): JSX.Element => {
           src={"../../images/hello.webp"}
           alt="Ada Promis"
           placeholder="none"
-          width={580}
-          height={426}
+          width={522}
+          height={383}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
-        <h2 className="text-adaSubtitle uppercase md:text-[96px] font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]">
+        <h2 className="text-adaSubtitle uppercase md:text-[80px] font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]">
           Cześć!
         </h2>
         <h3 className="md:text-adaSubtitleSecondary text-center pt-8 font-extrabold md:border-b-[20px] border-ada-light-pink md:leading-[0px]">
@@ -52,7 +52,7 @@ const MasterclassAbout = (): JSX.Element => {
           quality={100}
         />
         <div className="max-w-[628px]">
-          <p className="pb-8 md:text-adaDesc">
+          <p className="md:text-adaDesc">
             Gdy zaczynałam przygodę z marketingiem, szukałam{" "}
             <span className="font-bold">sprawdzonych</span> źródeł wiedzy o
             reklamach.
@@ -87,7 +87,7 @@ const MasterclassAbout = (): JSX.Element => {
               Ty — marketerko, pracowniczko, freelancerko, przedsiębiorczynio!
             </span>
           </p>
-          <p className="md:text-adaDesc">
+          <p className="pb-8 md:text-adaDesc">
             Ta droga <span className="font-bold">nie była</span> usłana różami,
             ale wiedziałam, że muszę postawić na jedno:{" "}
             <span className="font-bold">twarde kompetencje.</span>

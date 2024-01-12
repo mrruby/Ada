@@ -19,6 +19,7 @@ type LayoutElements = {
   waves4?: boolean
   waves5?: boolean
   waves6?: boolean
+  showHeader?: boolean
 }
 
 type Props = {
@@ -43,10 +44,14 @@ const defaultProps: LayoutElements = {
   waves6: false,
 }
 
-const Layout: React.FC<Props> = ({ children, ...layoutElements }) => {
+const Layout: React.FC<Props> = ({
+  children,
+  showHeader = true,
+  ...layoutElements
+}) => {
   return (
     <div className="antialiased min-h-screen max-w-full overflow-hidden flex flex-col scroll-smooth relative text-ada-blue">
-      <Header />
+      {showHeader && <Header />}
       {children}
       <Footer />
       <LayoutElements {...defaultProps} {...layoutElements} />
