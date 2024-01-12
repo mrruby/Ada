@@ -9,6 +9,12 @@ import {
   TwoBlueFlowers2,
   FlowerWhite2,
   FlowerWhite3,
+  Waves1,
+  Waves2,
+  Waves3,
+  Waves4,
+  Waves5,
+  Waves6,
 } from "../../helpers/LayoutElements/index"
 import { ILayoutElements } from "../../utils/types/layoutElements"
 
@@ -22,6 +28,12 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   flowerBlue3,
   flowerWhite2,
   flowerWhite3,
+  waves1,
+  waves2,
+  waves3,
+  waves4,
+  waves5,
+  waves6,
 }) => {
   return (
     <>
@@ -79,6 +91,48 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       {flowerWhite3 && (
         <FlowerWhite3
           mobileTop="hidden md:flex md:top-[6800px] lg:top-[7700px]"
+          mobileRight="right-0"
+        />
+      )}
+
+      {waves1 && (
+        <Waves1
+          mobileTop="hidden lg:flex lg:top-[800px]"
+          mobileLeft="left-[-100px]"
+        />
+      )}
+
+      {waves2 && (
+        <Waves2
+          mobileTop="hidden lg:flex lg:top-[1500px]"
+          mobileRight="right-0"
+        />
+      )}
+
+      {waves3 && (
+        <Waves3
+          mobileTop="hidden lg:flex lg:top-[2540px]"
+          mobileLeft="left-0"
+        />
+      )}
+
+      {waves4 && (
+        <Waves4
+          mobileTop="hidden lg:flex lg:top-[3050px]"
+          mobileRight="right-0"
+        />
+      )}
+
+      {waves5 && (
+        <Waves5
+          mobileTop="hidden lg:flex lg:top-[4260px]"
+          mobileLeft="left-0"
+        />
+      )}
+
+      {waves6 && (
+        <Waves6
+          mobileTop="hidden lg:flex lg:top-[4800px]"
           mobileRight="right-0"
         />
       )}

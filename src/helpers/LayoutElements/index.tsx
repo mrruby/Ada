@@ -248,3 +248,159 @@ export const FlowerWhite3: React.FC<Props> = ({
     />
   )
 }
+
+export const Waves1: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/waves1.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Waves2: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/waves2.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Waves3: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/waves3.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Waves4: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/waves4.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Waves5: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/waves5.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Waves6: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/waves6.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}

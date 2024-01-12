@@ -14,7 +14,7 @@ const HelloBanner = (): JSX.Element => {
       />
       <div className="row-start-1 col-start-1 grid justify-center items-center pt-40">
         <div className="flex flex-col items-center z-20">
-          <h2 className="text-[40px] lg:text-[96px] font-bold text-center animate-bounce">
+          <h2 className="text-adaSubtitleThird lg:text-[96px] font-bold text-center animate-bounce">
             Cześć, tu Ada Promis!
           </h2>
           <p className="max-w-[726px] text-center font-medium text-[14px] md:text-adaBase mx-auto">
