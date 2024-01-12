@@ -17,7 +17,7 @@ const KnowledgeBanner = (): JSX.Element => {
         type="button"
         text="Wchodzę i chłonę wiedzę!"
         border={true}
-        url="#knowledge"
+        sectionId="knowledge"
         textSize="lg:text-adaBase"
         btnStyle="h-50 md:w-[388px]"
       />

@@ -23,10 +23,9 @@ const AboutPage = (): JSX.Element => {
       >
         <FeaturesAda />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer
-        bgColor="bg-white"
-        extraStyle="lg:h-[180px]"
-      ></MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-white" extraStyle="lg:h-[180px]">
+        <span></span>
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear5">
         <Cooperation />
       </MaxWithBgColorContainer>
