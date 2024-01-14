@@ -11,6 +11,7 @@ interface Props {
   border?: boolean
   btnStyle?: string
   iconCalender?: boolean
+  iconCalender2?: boolean
 }
 
 export const Button: React.FC<Props> = ({
@@ -22,6 +23,7 @@ export const Button: React.FC<Props> = ({
   border,
   btnStyle,
   iconCalender,
+  iconCalender2,
 }) => {
   const handleButtonClick = () => {
     if (sectionId && !url) {
@@ -48,7 +50,17 @@ export const Button: React.FC<Props> = ({
           placeholder="none"
           width={24}
           height={24}
-          className="ml-4 mt-[5px]"
+          className="ml-1 md:ml-4 md:mt-[5px]"
+        />
+      )}
+      {iconCalender2 && (
+        <StaticImage
+          src={"../../images/calendar.svg"}
+          alt=""
+          placeholder="none"
+          width={48}
+          height={48}
+          className="w-[24px] md:w-[48px] ml-4 mt-[10px]"
         />
       )}
     </button>

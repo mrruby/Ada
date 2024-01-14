@@ -46,8 +46,8 @@ const MasterclassAbout = (): JSX.Element => {
           src={"../../images/ada.webp"}
           alt="Ada Promis"
           placeholder="none"
-          width={504}
-          height={491}
+          width={451}
+          height={442}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
@@ -75,8 +75,8 @@ const MasterclassAbout = (): JSX.Element => {
           src={"../../images/diagram.webp"}
           alt="Ada Promis"
           placeholder="none"
-          width={348}
-          height={255}
+          width={313}
+          height={230}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />

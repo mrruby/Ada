@@ -16,6 +16,7 @@ import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassDate from "components/MasterclassDate"
 import MasterclassPreparing from "components/MasterclassPreparing"
 import References from "components/References"
+import Opinions from "components/Opinions"
 
 const MasterclassPage = (): JSX.Element => {
   return (
@@ -31,6 +32,7 @@ const MasterclassPage = (): JSX.Element => {
     >
       <MasterclassTime1 />
       <MasterclassBanner />
+      <Opinions />
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassInfo1 />
       </MaxWithBgColorContainer>

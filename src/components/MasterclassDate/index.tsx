@@ -47,10 +47,10 @@ const MasterclassDate1 = (): JSX.Element => {
               Dołączam po wiedzę, która zarabia!
             </span>
           }
-          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
+          url="https://app.easycart.pl/checkout/62332176/masterclass-kevin-sam-w-menedzerze-reklam-zaplanuj-swoj-lejek-reklamowy"
           textSize="md:text-adaTitle"
           btnStyle="md:w-[704px] bg-ada-light-pink py-8 px-8 border-b-4 border-ada-pink shadow-xl"
-          iconCalender
+          iconCalender2
         />
       </div>
       <div className="text-center flex flex-col gap-6 md:pb-[120px]">
@@ -72,7 +72,7 @@ const MasterclassDate1 = (): JSX.Element => {
       <h3 className="md:text-adaSubtitleSecondary pb-10 max-w-[940px] text-center font-bold">
         Dołącz teraz, bo...
       </h3>
-      <ul className=" max-w-[900px] flex flex-col gap-4">
+      <ul className="max-w-[900px] flex flex-col gap-4">
         {listItems.map((item, index) => (
           <li
             key={index}
