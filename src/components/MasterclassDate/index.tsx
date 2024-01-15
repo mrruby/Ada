@@ -47,7 +47,7 @@ const MasterclassDate1 = (): JSX.Element => {
               Dołączam po wiedzę, która zarabia!
             </span>
           }
-          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
+          url="https://app.easycart.pl/checkout/62332176/masterclass-kevin-sam-w-menedzerze-reklam-zaplanuj-swoj-lejek-reklamowy"
           textSize="md:text-adaTitle"
           btnStyle="md:w-[704px] bg-ada-light-pink py-8 px-8 border-b-4 border-ada-pink shadow-xl"
           iconCalender
