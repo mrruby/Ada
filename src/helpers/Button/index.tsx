@@ -60,7 +60,7 @@ export const Button: React.FC<Props> = ({
           placeholder="none"
           width={48}
           height={48}
-          className="w-[24px] md:w-[48px] ml-4 mt-[10px]"
+          className="w-[24px] md:w-[48px] ml-4 md:mt-[10px]"
         />
       )}
     </button>

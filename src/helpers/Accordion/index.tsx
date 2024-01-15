@@ -11,7 +11,7 @@ export const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
 
   return (
     <div
-      className="lg:w-[550px]"
+      className="xl:w-[550px]"
       onClick={() => setAccordionOpen(!accordionOpen)}
     >
       <button className="flex lg:text-adaDesc font-bold py-4 px-4 bg-ada-light-pink items-center justify-between w-full text-center mx-auto">

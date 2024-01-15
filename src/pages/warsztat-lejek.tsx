@@ -22,6 +22,14 @@ const MasterclassPage = (): JSX.Element => {
   return (
     <Layout
       flowerBlue2={true}
+      flowerBlue4={true}
+      flowerBlue5={true}
+      flowerBlue6={true}
+      flowerBlue7={true}
+      flowerBlue8={true}
+      flowerBlue9={true}
+      flowerBlue10={true}
+      flowerBlue11={true}
       waves1={true}
       waves2={true}
       waves3={true}
