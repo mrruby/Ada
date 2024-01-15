@@ -32,7 +32,7 @@ const MasterclassPage = (): JSX.Element => {
     >
       <MasterclassTime1 />
       <MasterclassBanner />
-      <Opinions />
+      {/* <Opinions /> */}
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassInfo1 />
       </MaxWithBgColorContainer>

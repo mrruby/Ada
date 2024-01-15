@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const MasterclassAbout = (): JSX.Element => {
   return (
     <div className="flex flex-col text-ada-blue items-center px-3 pb-16">
-      <div className="flex flex-col items-center max-w-[806px] md:pb-[100px] gap-4">
+      <div className="flex flex-col items-center max-w-[806px] md:pb-[40px] gap-4">
         <StaticImage
           src={"../../images/hello.webp"}
           alt="Ada Promis"
@@ -20,11 +20,11 @@ const MasterclassAbout = (): JSX.Element => {
         <h3 className="md:text-adaSubtitleSecondary text-center pt-8 font-extrabold md:border-b-[20px] border-ada-light-pink md:leading-[0px]">
           Nazywam się Adrianna Promis-Urbas
         </h3>
-        <p className="py-10 md:text-adaDesc">
+        <p className="py-4 md:text-adaDesc">
           Mam za sobą epizod pracy w audycie finansowym, ale moim powołaniem
           chyba od zawsze był <span className="font-bold">marketing! </span>
         </p>
-        <p className="pb-10 md:text-adaDesc">
+        <p className="pb-4 md:text-adaDesc">
           I tak{" "}
           <span className="font-bold">
             od stażu w agencji marketingowej do swojej działalności:
@@ -41,13 +41,13 @@ const MasterclassAbout = (): JSX.Element => {
           sposobów na skuteczną promocję swojego biznesu.  
         </p>
       </div>
-      <div className="flex flex-col md:flex-row items-center md:pb-[100px] gap-6">
+      <div className="flex flex-col md:flex-row items-center md:pb-[20px] gap-6">
         <StaticImage
           src={"../../images/ada.webp"}
           alt="Ada Promis"
           placeholder="none"
-          width={451}
-          height={442}
+          width={383}
+          height={376}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
@@ -57,12 +57,12 @@ const MasterclassAbout = (): JSX.Element => {
             <span className="font-bold">sprawdzonych</span> źródeł wiedzy o
             reklamach.
           </p>
-          <p className="py-10 md:text-adaDesc">
+          <p className="py-4 md:text-adaDesc">
             Byłam w miejscu, w którym{" "}
             <span className="font-bold">praca na swoim</span> wciąż oznaczała
             pracę dla klientów i walkę o każde nowe zlecenie.
           </p>
-          <p className="pb-10 md:text-adaDesc">
+          <p className="pb-4 md:text-adaDesc">
             Teraz <span className="font-bold">pewnie</span> rozmawiam z każdym
             potencjalnym klientem, bo wiem, jaką{" "}
             <span className="font-bold"> wartość</span> oferuję i co można
@@ -75,19 +75,19 @@ const MasterclassAbout = (): JSX.Element => {
           src={"../../images/diagram.webp"}
           alt="Ada Promis"
           placeholder="none"
-          width={313}
-          height={230}
+          width={266}
+          height={196}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
         <div className="max-w-[654px]">
-          <p className="pb-8 md:text-adaDesc">
+          <p className="pb-4 md:text-adaDesc">
             Dzięki temu wiem, czego możesz potrzebować{" "}
             <span className="font-bold">
               Ty — marketerko, pracowniczko, freelancerko, przedsiębiorczynio!
             </span>
           </p>
-          <p className="pb-8 md:text-adaDesc">
+          <p className="pb-4 md:text-adaDesc">
             Ta droga <span className="font-bold">nie była</span> usłana różami,
             ale wiedziałam, że muszę postawić na jedno:{" "}
             <span className="font-bold">twarde kompetencje.</span>
