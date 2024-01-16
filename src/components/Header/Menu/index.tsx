@@ -18,7 +18,7 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
 
   const links = [
     { to: "https://sklep.adrianna.com.pl/", text: "sklep" },
-    { to: "/ogarnij-swoje-adsy", text: "mentoring" },
+    { to: "/warsztat-lejek", text: "masterclass" },
     { to: "/about", text: "o mnie" },
     { to: "/materials", text: "materiały" },
     { to: "/blog", text: "blog" },
@@ -50,7 +50,7 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
             to={link.to}
             text={link.text}
             className={
-              link.text === "mentoring" ? mentoringLinkClass : linkClass
+              link.text === "masterclass" ? mentoringLinkClass : linkClass
             }
           />
         ))}

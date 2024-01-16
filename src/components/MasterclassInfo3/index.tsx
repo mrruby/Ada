@@ -4,10 +4,7 @@ import { Button } from "helpers/Button"
 
 const MasterclassInfo3 = (): JSX.Element => {
   return (
-    <div
-      className="w-full px-3 py-2 flex flex-col pb-[80px]"
-      id="obsluguje-klientow"
-    >
+    <div className="w-full px-3 py-2 flex flex-col pb-[80px]">
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex">
           <StaticImage
@@ -20,14 +17,14 @@ const MasterclassInfo3 = (): JSX.Element => {
             quality={100}
           />
         </div>
-        <div className="md:min-w-[800px] md:ml-[50px]">
+        <div className="xl:min-w-[800px] lg:ml-[50px]">
           <div className="pl-4 md:pl-20 py-6 bg-ada-pink2 w-full">
             <h3 className="max-w-[800px] md:text-adaSubtitle uppercase font-semibold ">
               Warsztaty Kevin sam w menedżerze reklam: stwórz lejek reklamowy na
               2024 rok!{" "}
             </h3>
           </div>
-          <p className="max-w-[800px] pl-4 md:pl-20 md:text-adaSubtitle pt-8">
+          <p className="max-w-[800px] pl-4 lg:pl-20 md:text-adaSubtitle pt-8">
             {" "}
             to niezawodny sposób na rozpoczęcie pracy z reklamami.
             <br />

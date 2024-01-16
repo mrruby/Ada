@@ -46,6 +46,8 @@ module.exports = {
         blink: "blink 1s both infinite",
         "spin-slow": "spin 4s linear infinite",
         bounce: "custombounce 1.5s ease-in-out",
+        marquee: "marquee 25s linear infinite",
+        marquee2: "marquee 25s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -55,6 +57,14 @@ module.exports = {
           "100%": {
             opacity: "1",
           },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
         custombounce: {
           "0%, 20%, 50%, 80%, 100%": { transform: "translateY(0)" },

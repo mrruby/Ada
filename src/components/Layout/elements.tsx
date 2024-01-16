@@ -3,6 +3,14 @@ import {
   FlowerBlue,
   FlowerBlue2,
   FlowerBlue3,
+  FlowerBlue4,
+  FlowerBlue5,
+  FlowerBlue6,
+  FlowerBlue7,
+  FlowerBlue8,
+  FlowerBlue9,
+  FlowerBlue10,
+  FlowerBlue11,
   FlowerWhite,
   StarPink,
   TwoBlueFlowers,
@@ -26,6 +34,14 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   twoBlueFlowers2,
   flowerBlue2,
   flowerBlue3,
+  flowerBlue4,
+  flowerBlue5,
+  flowerBlue6,
+  flowerBlue7,
+  flowerBlue8,
+  flowerBlue9,
+  flowerBlue10,
+  flowerBlue11,
   flowerWhite2,
   flowerWhite3,
   waves1,
@@ -43,28 +59,24 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
           mobileLeft="left-0"
         />
       )}
-
       {starPink && (
         <StarPink mobileTop="lg:top-[170px]" mobileRight="right-0" />
       )}
-
       {flowerWhite && (
         <FlowerWhite
           mobileTop="top-[6000px] md:top-[3200px] lg:top-[890px]"
           mobileRight="right-0"
         />
       )}
-
       {twoBlueFlowers && (
         <TwoBlueFlowers
           mobileTop="top-[5430px] lg:top-[2300px]"
           mobileLeft="left-[-70px]"
         />
       )}
-
       {flowerBlue2 && (
         <FlowerBlue2
-          mobileTop="top-[5910px] lg:top-[2270px]"
+          mobileTop="top-[5810px] lg:top-[2270px]"
           mobileRight="right-[-70px]"
         />
       )}
@@ -80,56 +92,96 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
           mobileLeft="left-[-70px] lg:left-[100px]"
         />
       )}
-
+      {flowerBlue4 && (
+        <FlowerBlue4
+          mobileTop="hidden md:flex md:top-[6300px]"
+          mobileLeft="left-[-70px]"
+        />
+      )}
+      {flowerBlue5 && (
+        <FlowerBlue5
+          mobileTop="hidden md:flex md:top-[6800px]"
+          mobileRight="right-[-70px]"
+        />
+      )}{" "}
+      {flowerBlue6 && (
+        <FlowerBlue6
+          mobileTop="hidden md:flex md:top-[8800px]"
+          mobileLeft="left-[-70px]"
+        />
+      )}{" "}
+      {flowerBlue7 && (
+        <FlowerBlue7
+          mobileTop="hidden md:flex md:top-[9400px]"
+          mobileRight="right-[-70px]"
+        />
+      )}
+      {flowerBlue8 && (
+        <FlowerBlue8
+          mobileTop="hidden md:flex md:top-[9800px]"
+          mobileLeft="left-[-70px]"
+        />
+      )}
+      {flowerBlue9 && (
+        <FlowerBlue9
+          mobileTop="hidden md:flex md:top-[10000px]"
+          mobileRight="right-[-70px]"
+        />
+      )}{" "}
+      {flowerBlue10 && (
+        <FlowerBlue10
+          mobileTop="hidden md:flex md:top-[11000px]"
+          mobileLeft="left-[-70px]"
+        />
+      )}{" "}
+      {flowerBlue11 && (
+        <FlowerBlue11
+          mobileTop="hidden md:flex md:top-[12000px]"
+          mobileRight="right-[-70px]"
+        />
+      )}
       {flowerWhite2 && (
         <FlowerWhite2
           mobileTop="hidden md:flex md:top-[5400px] lg:top-[4800px]"
           mobileRight="right-0"
         />
       )}
-
       {flowerWhite3 && (
         <FlowerWhite3
           mobileTop="hidden md:flex md:top-[6800px] lg:top-[7700px]"
           mobileRight="right-0"
         />
       )}
-
       {waves1 && (
         <Waves1
           mobileTop="hidden lg:flex lg:top-[800px]"
           mobileLeft="left-[-100px]"
         />
       )}
-
       {waves2 && (
         <Waves2
           mobileTop="hidden lg:flex lg:top-[1500px]"
           mobileRight="right-0"
         />
       )}
-
       {waves3 && (
         <Waves3
-          mobileTop="hidden lg:flex lg:top-[2540px]"
+          mobileTop="hidden xl:flex xl:top-[2540px]"
           mobileLeft="left-0"
         />
       )}
-
       {waves4 && (
         <Waves4
-          mobileTop="hidden lg:flex lg:top-[3050px]"
+          mobileTop="hidden xl:flex xl:top-[3050px]"
           mobileRight="right-0"
         />
       )}
-
       {waves5 && (
         <Waves5
-          mobileTop="hidden lg:flex lg:top-[4260px]"
+          mobileTop="hidden xl:flex xl:top-[4260px]"
           mobileLeft="left-0"
         />
       )}
-
       {waves6 && (
         <Waves6
           mobileTop="hidden lg:flex lg:top-[4800px]"

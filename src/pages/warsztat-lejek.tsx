@@ -16,11 +16,20 @@ import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassDate from "components/MasterclassDate"
 import MasterclassPreparing from "components/MasterclassPreparing"
 import References from "components/References"
+import Opinions from "components/Opinions"
 
 const MasterclassPage = (): JSX.Element => {
   return (
     <Layout
       flowerBlue2={true}
+      flowerBlue4={true}
+      flowerBlue5={true}
+      flowerBlue6={true}
+      flowerBlue7={true}
+      flowerBlue8={true}
+      flowerBlue9={true}
+      flowerBlue10={true}
+      flowerBlue11={true}
       waves1={true}
       waves2={true}
       waves3={true}
@@ -31,6 +40,7 @@ const MasterclassPage = (): JSX.Element => {
     >
       <MasterclassTime1 />
       <MasterclassBanner />
+      {/* <Opinions /> */}
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassInfo1 />
       </MaxWithBgColorContainer>
