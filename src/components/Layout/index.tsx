@@ -11,6 +11,14 @@ type LayoutElements = {
   twoBlueFlowers2?: boolean
   flowerBlue2?: boolean
   flowerBlue3?: boolean
+  flowerBlue4?: boolean
+  flowerBlue5?: boolean
+  flowerBlue6?: boolean
+  flowerBlue7?: boolean
+  flowerBlue8?: boolean
+  flowerBlue9?: boolean
+  flowerBlue10?: boolean
+  flowerBlue11?: boolean
   flowerWhite2?: boolean
   flowerWhite3?: boolean
   waves1?: boolean
@@ -34,6 +42,14 @@ const defaultProps: LayoutElements = {
   twoBlueFlowers2: false,
   flowerBlue2: false,
   flowerBlue3: false,
+  flowerBlue4: false,
+  flowerBlue5: false,
+  flowerBlue6: false,
+  flowerBlue7: false,
+  flowerBlue8: false,
+  flowerBlue9: false,
+  flowerBlue10: false,
+  flowerBlue11: false,
   flowerWhite2: false,
   flowerWhite3: false,
   waves1: false,

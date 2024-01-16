@@ -4,11 +4,10 @@ import "react-multi-carousel/lib/styles.css"
 import Reference from "../../helpers/Reference"
 import ArrowLeft from "../../images/arrow-left.svg"
 import ArrowRight from "../../images/arrow-right.svg"
+import { StaticImage } from "gatsby-plugin-image"
 
 type IReferencesList = {
-  reference: string
-  name: string
-  company?: string
+  image: JSX.Element
 }
 
 type IReferences = {
@@ -20,37 +19,69 @@ type IReferences = {
 
 const referencesList: IReferencesList[] = [
   {
-    reference:
-      "„Serdecznie polecam współpracę z Adą! Dzięki konsultacjom swobodnie poruszam się po menedżerze reklam, ustawiam kampanie na różne grupy docelowe i sprawdzam ich skuteczność. Ada jest kompendium wiedzy w sprawach meta adsów, zna i rozumie wszystkie zmiany. Zawsze sugeruje najlepsze możliwe rozwiązania, pozwalając rozwinąć skrzydła jednocześnie!”",
-    name: "Natalia Plewniok",
+    image: (
+      <StaticImage
+        src={"../../images/opinia1.webp"}
+        alt="Opinia o współpracy z Adą Promis - Ziołowa Wyspa"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
   },
   {
-    reference:
-      "„Naprawdę polecam współpracę z Adrianną. Konkretnie i z dużym sukcesem rozwinęłam sprzedaż swoich produktów on-line, dzięki odpowiedniej strategii, którą zaproponowała Ada. Ada kontroluje reklamy, wprowadza poprawki i dba o to, żeby maszyna ruszyła, gdy ja mogłam się zająć spokojnym opowiadaniem o moich produktach w sieci. Dużym plusem jest też stały kontakt i podsumowywanie na koniec kampanii, dzięki czemu wiedziałyśmy, co zadziałało, a co nie.”",
-    name: "Katarzyna Skórska, ",
-    company: "Dietetyk kliniczny",
+    image: (
+      <StaticImage
+        src={"../../images/opinia2.webp"}
+        alt="Opinia o współpracy z Adą Promis - Natalia Plewniok"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
   },
   {
-    reference:
-      "„Bardzo dobrze prowadzone i jakościowe kampanie, które pomogły nam dotrzeć do dużej grupy nowych odbiorców. Koncepcja slow marketingu bardzo się wpasowała w nasze potrzeby. Polecamy z całego serca współpracę z Adą.”",
-    name: "Stan Skupienia",
+    image: (
+      <StaticImage
+        src={"../../images/opinia3.webp"}
+        alt="Opinia o współpracy z Adą Promis - Aleksandra Adamczyk"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
   },
   {
-    reference:
-      "„Bardzo długo szukałam specjalisty od reklam, któremu mogłabym w 100% zaufać i mieć pewność, że naprawdę wie, co robi i zna się na swojej pracy. Miałam sporo doświadczeń z marketerami, ale dopiero współpraca z Adą przyniosła mi prawdziwe, mierzalne efekty. Bardzo cenię to, że Ada podpowiada kreatywne rozwiązania i sugeruje jakie treści, produkty czy materiały warto by było stworzyć, aby poprawić wyniki. Jest to naprawdę niespotykane podejście, które wspiera nie tylko skuteczność reklam, ale i rozwój całej firmy! Ada dba też o to, bym była ze wszystkim na bieżąco i cierpliwie tłumaczy zagadnienia, których nie rozumiem. Nawet kiedy pytam trzeci raz o to samo! ;) Bardzo się cieszę, że nawiązałyśmy współpracę. :)”",
-    name: "Julia Boryczka, ",
-    company: "Creatownia",
+    image: (
+      <StaticImage
+        src={"../../images/opinia4.webp"}
+        alt="Opinia o współpracy z Adą Promis - Stan Skupienia"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
   },
   {
-    reference:
-      "„Pracowałyśmy z Adą w jednej z agencji reklamowych i przyznam, że nie wiem, czy była druga taka osoba, która tak szybko awansowała co Ada. Dlaczego? Bo każda jej kampania reklamowa przynosiła świetne wyniki i tym samym każdy z jej klientów uwielbiał z nią współpracować. Wspaniała kobieta, która nie dość, że najtrudniejszą kwestię wytłumaczy Ci w prosty sposób, to jeszcze wyniki jej kampanii zwiększą przychody Twojej firmie.”",
-    name: "Aleksandra Adamczyk, ",
-    company: "@ola.ad",
-  },
-  {
-    reference:
-      "„Czuć, że Ada przepracowała już masę kampanii. Jesteśmy bardzo zadowolone, bo ma podobne do nas podejście do marketingu — w rytmie slow. Bez nagabywania, sztucznych promocji, na rzecz poznania marki i przedstawienia jej wartości.”",
-    name: "Ziołowa Wyspa",
+    image: (
+      <StaticImage
+        src={"../../images/opinia5.webp"}
+        alt="Opinia o współpracy z Adą Promis - Creatownia Studio"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
   },
 ]
 
@@ -76,7 +107,7 @@ const responsive = {
 const CustomLeftArrow = ({ onClick, ...rest }: any) => {
   return (
     <div
-      className={`absolute max-h-[400px] top-0 md:top-[-100px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
+      className={`absolute max-h-[400px] top-0 md:top-[160px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
       onClick={onClick}
     >
       <img src={ArrowLeft} alt="Left Arrow" width={16} height={25} />
@@ -87,7 +118,7 @@ const CustomLeftArrow = ({ onClick, ...rest }: any) => {
 const CustomRightArrow = ({ onClick, ...rest }: any) => {
   return (
     <div
-      className={`absolute max-h-[400px] top-0 md:top-[-100px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
+      className={`absolute max-h-[400px] top-0 md:top-[160px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
       onClick={onClick}
     >
       <img src={ArrowRight} alt="Right Arrow" width={16} height={25} />
@@ -138,24 +169,21 @@ const References = ({
           </h3>
         </>
       )}
-      {referencesList && (
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}
-          ssr={true}
-        >
-          {referencesList.map((reference, index) => (
-            <Reference
-              key={index}
-              reference={reference.reference}
-              name={reference.name}
-              company={reference.company}
-            />
-          ))}
-        </Carousel>
-      )}
+      <div className="max-w-[600px] mx-auto mt-[-40px] md:mt-[-100px]">
+        {referencesList && (
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
+            ssr={true}
+          >
+            {referencesList.map((reference, index) => (
+              <Reference key={index} image={reference.image} />
+            ))}
+          </Carousel>
+        )}
+      </div>
     </div>
   )
 }

@@ -20,15 +20,15 @@ const listItems2 = [
 const MasterclassAgenda = (): JSX.Element => {
   return (
     <div
-      className="w-full flex flex-col px-3 py-2 items-center p-2 mb-[85px]"
+      className="w-full flex flex-col px-3 pb-2 items-center mb-[85px]"
       id="prowadze-wlasny-biznes"
     >
       <StaticImage
         src={"../../images/screen-mastermind.webp"}
         alt="Ada Promis"
         placeholder="none"
-        width={920}
-        height={615}
+        width={828}
+        height={554}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />

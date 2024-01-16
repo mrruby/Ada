@@ -21,7 +21,7 @@ const MasterclassBanner = (): JSX.Element => {
         <h1 className="text-adaSubtitle md:text-[96px] font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-4">
           MASTERCLASS
         </h1>
-        <div className="max-w-[400px] xl:max-w-[790px] md:text-adaSubtitle mt-10 pb-[85px]">
+        <div className="xl:max-w-[790px] md:text-adaSubtitle mt-10 pb-[85px]">
           <p>
             <span className="font-bold">Kevin sam w menedżerze reklam:</span>{" "}
             stwórz lejek reklamowy na 2024 rok! Zaplanuj ścieżkę klientów: od
