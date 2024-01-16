@@ -23,15 +23,6 @@ const MasterclassAgenda = (): JSX.Element => {
       className="w-full flex flex-col px-3 pb-2 items-center mb-[85px]"
       id="prowadze-wlasny-biznes"
     >
-      <StaticImage
-        src={"../../images/screen-mastermind.webp"}
-        alt="Ada Promis"
-        placeholder="none"
-        width={828}
-        height={554}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
       <h3 className="md:text-adaSubtitleSecondary font-semibold pb-10 max-w-[1085px] text-center">
         Gdy w zeszłym roku prowadziłam rekrutację do programu mentoringowego,
         słyszałam:{" "}

@@ -10,7 +10,7 @@ const Opinions = (): JSX.Element => {
         <div className="flex items-center animate-marquee whitespace-nowrap">
           <div className={commonClassNames}>
             <StaticImage
-              src="../../images/opinia1.png"
+              src="../../images/opinia1.webp"
               alt="Ada Promis"
               placeholder="none"
               width={1414}
@@ -19,7 +19,7 @@ const Opinions = (): JSX.Element => {
           </div>
           <div className={commonClassNames}>
             <StaticImage
-              src="../../images/opinia2.png"
+              src="../../images/opinia2.webp"
               alt="Ada Promis"
               placeholder="none"
               width={1414}
@@ -28,7 +28,7 @@ const Opinions = (): JSX.Element => {
           </div>
           <div className={commonClassNames}>
             <StaticImage
-              src="../../images/opinia3.png"
+              src="../../images/opinia3.webp"
               alt="Ada Promis"
               placeholder="none"
               width={1414}
@@ -39,7 +39,7 @@ const Opinions = (): JSX.Element => {
         <div className="flex items-center animate-marquee2 whitespace-nowrap">
           <div className={commonClassNames}>
             <StaticImage
-              src="../../images/opinia1.png"
+              src="../../images/opinia1.webp"
               alt="Ada Promis"
               placeholder="none"
               width={1414}
@@ -48,7 +48,7 @@ const Opinions = (): JSX.Element => {
           </div>
           <div className={commonClassNames}>
             <StaticImage
-              src="../../images/opinia2.png"
+              src="../../images/opinia2.webp"
               alt="Ada Promis"
               placeholder="none"
               width={1414}
@@ -57,7 +57,7 @@ const Opinions = (): JSX.Element => {
           </div>
           <div className={commonClassNames}>
             <StaticImage
-              src="../../images/opinia3.png"
+              src="../../images/opinia3.webp"
               alt="Ada Promis"
               placeholder="none"
               width={1414}
