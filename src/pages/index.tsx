@@ -37,8 +37,6 @@ const IndexPage = (): JSX.Element => {
               placeholder="none"
               width={600}
               height={600}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
             />
           }
           paragraphStyle="max-w-[400px] xl:max-w-[532px] h-[620px] pt-[160px] text-adaBase"
