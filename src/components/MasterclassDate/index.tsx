@@ -60,7 +60,7 @@ const MasterclassDate1 = (): JSX.Element => {
         <p className="md:text-adaSubtitle">
           Do <span className="font-bold">23 stycznia </span> możesz dołączyć do
           warsztatów w fajnej cenie:{" "}
-          <span className="font-bold bg-ada-pink2 p-2">59 złotych</span> zamiast
+          <span className="font-bold bg-ada-pink2 p-2">79 złotych</span> zamiast
           129!
         </p>
       </div>
