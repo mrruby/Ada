@@ -9,7 +9,7 @@ const MastermindOffertExpired = (): JSX.Element => {
           Ta oferta już wygasła!
           <br />
           Jeśli chcesz zapisać się na listę zainteresowanych programem, kliknij{" "}
-          <Link to="" className="underline">
+          <Link to="https://subscribepage.io/uleZQU" className="underline">
             tutaj
           </Link>
           , a dowiesz się o starcie, gdy tylko otworzę drzwi do programu!{" "}
