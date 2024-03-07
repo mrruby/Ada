@@ -4,13 +4,13 @@ import { StaticImage } from "gatsby-plugin-image"
 const WebinarAbout = (): JSX.Element => {
   return (
     <div className="flex flex-col text-ada-blue items-center px-3 pb-16 text-center">
-      <div className="flex flex-col items-center max-w-[806px] md:pb-[40px] gap-4">
+      <div className="flex flex-col items-center max-w-[806px] gap-4">
         <StaticImage
           src={"../../images/hello2.webp"}
           alt="Ada Promis"
           placeholder="none"
-          width={522}
-          height={383}
+          width={418}
+          height={306}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />

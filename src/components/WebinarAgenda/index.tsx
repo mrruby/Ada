@@ -28,7 +28,7 @@ const listItems2 = [
 
 const WebinarAgenda = (): JSX.Element => {
   return (
-    <div className="w-full flex flex-col px-3 pb-2 items-center py-10 md:py-[140px]">
+    <div className="w-full flex flex-col px-3 pb-2 items-center py-20">
       <h3 className="text-adaSubtitle md:text-adaTitle2 font-bold uppercase mb-10 max-w-[1085px] text-center animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]">
         Czego się nauczysz?
       </h3>
@@ -54,7 +54,7 @@ const WebinarAgenda = (): JSX.Element => {
           </li>
         ))}
       </ul>
-      <h3 className="text-adaSubtitle md:text-adaTitle font-bold uppercase pb-16 max-w-[960px] text-center mt-10 md:mt-[100px] tracking-wider">
+      <h3 className="text-adaSubtitle md:text-adaTitle font-bold uppercase pb-4 max-w-[960px] text-center mt-4 tracking-wider">
         Dlaczego jeszcze warto wziąć udział w webinarze?{" "}
       </h3>
       <div className="flex flex-wrap justify-center mb-20 gap-5">

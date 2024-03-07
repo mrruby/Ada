@@ -16,7 +16,7 @@ const listItems = [
 
 const WebinarInfo = (): JSX.Element => {
   return (
-    <div className="px-2 xl:px-6 text-ada-blue mx-auto gap-8 bg-ada-light-pink flex flex-col md:flex-row justify-between font-leagueSpartan tracking-wider pb-10 md:pb-0">
+    <div className="px-2 xl:px-6 text-ada-blue mx-auto gap-8 bg-ada-light-pink flex flex-col md:flex-row justify-between tracking-wider pb-10 md:pb-0">
       <StaticImage
         loading="eager"
         src={"../../images/ada_mastermind2.webp"}

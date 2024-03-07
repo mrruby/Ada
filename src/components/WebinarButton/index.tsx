@@ -7,10 +7,10 @@ const WebinarButton = ({
   variant: "variant1" | "variant2"
 }): JSX.Element => {
   return (
-    <div className="py-10 md:py-[100px]">
+    <div className="py-4">
       {variant === "variant1" && (
         <div className="flex flex-col items-center text-center gap-[40px]">
-          <h2 className="text-adaSubtitle md:text-adaSubtitleThird font-bold font-leagueSpartan tracking-wider max-w-[1008px]">
+          <h2 className="text-adaSubtitle md:text-adaSubtitleThird font-bold tracking-wider max-w-[1008px]">
             Chcesz, aby Twoje klientki mówiły podobnie o współpracy z Tobą?
           </h2>
 
@@ -23,7 +23,7 @@ const WebinarButton = ({
             }
             sectionId="webinar-form"
             textSize="md:text-adaSubtitleThird"
-            btnStyle="uppercase md:w-[580px] bg-ada-lightpink tracking-[2.90px] h-[140px] shadow-xl"
+            btnStyle="uppercase md:w-[580px] bg-ada-lightpink tracking-[2.90px] h-[140px] shadow-xl mb-4"
           />
         </div>
       )}

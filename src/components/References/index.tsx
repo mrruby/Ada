@@ -135,7 +135,7 @@ const References = ({
   title5,
 }: IReferences): JSX.Element => {
   return (
-    <div className="pt-[120px]">
+    <div className="pt-[40px]">
       {title1 && (
         <>
           <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] animate-bounce">
@@ -181,7 +181,7 @@ const References = ({
           </h3>
         </>
       )}
-      <div className="max-w-[600px] mx-auto mt-[-40px] md:mt-[-100px]">
+      <div className="max-w-[600px] max-h-[720px] mx-auto mt-[-40px] md:mt-[-100px]">
         {referencesList && (
           <Carousel
             responsive={responsive}
