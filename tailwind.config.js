@@ -28,6 +28,7 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        leagueSpartan: ["League Spartan", "sans-serif"],
       },
       fontSize: {
         adaNav: "0.9375rem",

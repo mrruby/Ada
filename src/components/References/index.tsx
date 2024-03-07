@@ -15,6 +15,7 @@ type IReferences = {
   title2?: boolean
   title3?: boolean
   title4?: boolean
+  title5?: boolean
 }
 
 const referencesList: IReferencesList[] = [
@@ -131,6 +132,7 @@ const References = ({
   title2,
   title3,
   title4,
+  title5,
 }: IReferences): JSX.Element => {
   return (
     <div className="pt-[120px]">
@@ -166,6 +168,16 @@ const References = ({
           </h3>
           <h3 className="mx-auto md:max-w-[680px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-light-pink md:h-[24px] lg:h-[40px] animate-bounce uppercase">
             przy kampaniach reklamowych:
+          </h3>
+        </>
+      )}
+      {title5 && (
+        <>
+          <h3 className="mx-auto md:max-w-[540px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            Moje klientki tak mówią{" "}
+          </h3>
+          <h3 className="mx-auto md:max-w-[540px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            o współpracy ze mną:{" "}
           </h3>
         </>
       )}
