@@ -56,7 +56,7 @@ const WebinarBanner = (): JSX.Element => {
             <span className="font-bold"> zbudujesz zaufanie odbiorców. </span>
           </p>
           <p className="pt-4 md:text-adaSubtitle">
-            Twoi <span className="font-bold">klienci będą zadowoleni</span>z
+            Twoi <span className="font-bold">klienci będą zadowoleni </span>z
             Twoich działań, <br /> a
             <span className="font-bold"> Ty zarobisz więcej </span>ze spokojną
             głową! 😊
