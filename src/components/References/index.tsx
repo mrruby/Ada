@@ -15,6 +15,7 @@ type IReferences = {
   title2?: boolean
   title3?: boolean
   title4?: boolean
+  title5?: boolean
 }
 
 const referencesList: IReferencesList[] = [
@@ -131,9 +132,10 @@ const References = ({
   title2,
   title3,
   title4,
+  title5,
 }: IReferences): JSX.Element => {
   return (
-    <div className="pt-[120px]">
+    <div className="pt-[40px]">
       {title1 && (
         <>
           <h3 className="mx-auto max-w-[500px] text-center text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] animate-bounce">
@@ -169,7 +171,17 @@ const References = ({
           </h3>
         </>
       )}
-      <div className="max-w-[600px] mx-auto mt-[-40px] md:mt-[-100px]">
+      {title5 && (
+        <>
+          <h3 className="mx-auto md:max-w-[540px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            Moje klientki tak mówią{" "}
+          </h3>
+          <h3 className="mx-auto md:max-w-[540px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            o współpracy ze mną:{" "}
+          </h3>
+        </>
+      )}
+      <div className="max-w-[600px] max-h-[720px] mx-auto mt-[-40px] md:mt-[-100px]">
         {referencesList && (
           <Carousel
             responsive={responsive}

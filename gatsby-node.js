@@ -65,6 +65,22 @@ const wrapper = (promise) =>
     return result
   })
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.html$/,
+          loader: require.resolve("html-loader"),
+          options: {
+            minimize: false,
+          },
+        },
+      ],
+    },
+  })
+}
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
