@@ -23,7 +23,7 @@ const WebinarInfo = (): JSX.Element => {
         alt="Ada Promis - hero"
         placeholder="none"
         width={393}
-        height={506}
+        height={460}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -35,7 +35,7 @@ const WebinarInfo = (): JSX.Element => {
         </h2>
         <ul>
           {listItems.map((item, index) => (
-            <li key={index} className="adaDesc md:text-adaSubtitle">
+            <li key={index} className="md:text-adaDesc pb-2">
               {item}
             </li>
           ))}

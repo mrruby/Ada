@@ -16,7 +16,7 @@ const WebinarBanner = (): JSX.Element => {
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
-        <div className="flex flex-col justify-center text-center max-w-[713px] gap-4">
+        <div className="flex flex-col justify-center text-center max-w-[600px] gap-4">
           <h1 className="text-ada-purple text-adaSubtitle md:text-adaSubtitleThird font-bold tracking-wider leading-none">
             Social media marketerko! <br /> Wirtualna Asystentko! Freelancerko!
           </h1>
@@ -39,13 +39,13 @@ const WebinarBanner = (): JSX.Element => {
         </div>
       </div>
       <div className="pt-[40px] md:pt-[140px] text-center flex flex-col items-center">
-        <h2 className="text-adaSubtitle md:text-[107px] font-extrabold animate-bounce md:border-b-[78px]  border-ada-light-pink md:leading-[0px] max-w-[660px]">
+        <h2 className="text-adaSubtitle md:text-[96px] font-extrabold animate-bounce md:border-b-[55px]  border-ada-light-pink md:leading-[0px] max-w-[660px]">
           WEBINAR
         </h2>
-        <div className="max-w-[1015px] pt-20">
-          <p className="md:text-adaSubtitleSecondary font-bold">
-            3 kampanie, których zapragną Twoi klienci. Zostań specjalistką od
-            reklam na Facebooku i Instagramie.{" "}
+        <div className="max-w-[1015px] pt-10">
+          <p className="md:text-adaSubtitle font-bold pb-10">
+            3 kampanie, których zapragną Twoi klienci. <br /> Zostań
+            specjalistką od reklam na Facebooku i Instagramie.{" "}
           </p>
           <p className="md:text-adaSubtitleThird font-bold tracking-wider">
             Już <span className="text-ada-purple"> 19 marca o 18:00!</span>
