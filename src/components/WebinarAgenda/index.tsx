@@ -28,7 +28,7 @@ const listItems2 = [
 
 const WebinarAgenda = (): JSX.Element => {
   return (
-    <div className="w-full flex flex-col px-3 pb-2 items-center py-20">
+    <div className="w-full flex flex-col px-3 pb-2 items-center py-[100px] mt-5">
       <h3 className="text-adaSubtitle md:text-adaTitle2 font-bold uppercase mb-10 max-w-[1085px] text-center animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]">
         Czego się nauczysz?
       </h3>
@@ -40,46 +40,51 @@ const WebinarAgenda = (): JSX.Element => {
                 src={"../../images/check.svg"}
                 alt="Ada Promis"
                 placeholder="none"
-                width={44}
-                height={46}
-                style={{ width: "44px", height: "46px" }}
+                width={42}
+                height={44}
+                style={{ width: "42px", height: "44px" }}
               />
             </div>
-            <span className="max-w-[627px]">
-              <h4 className="font-bold md:text-adaSubtitle tracking-wider">
+            <span className="max-w-[530px]">
+              <h4 className="font-bold md:text-adaBase tracking-wider">
                 {item.title}
               </h4>
-              <p className="md:text-adaDesc">{item.description}</p>
+              <p className="leading-none">{item.description}</p>
             </span>
           </li>
         ))}
       </ul>
-      <h3 className="text-adaSubtitle md:text-adaTitle font-bold uppercase pb-4 max-w-[960px] text-center mt-4 tracking-wider">
-        Dlaczego jeszcze warto wziąć udział w webinarze?{" "}
-      </h3>
-      <div className="flex flex-wrap justify-center mb-20 gap-5">
+      <div className="flex flex-col md:gap-8 max-w-[960px] text-adaBase md:text-adaTitle font-bold uppercase text-center tracking-wider mt-8 md:mt-[100px] mb-16">
+        <h3 className=" tracking-wider md:border-b-[24px] border-ada-light-pink md:leading-[0px]">
+          Dlaczego jeszcze warto
+        </h3>
+        <h3 className="md:border-b-[24px] border-ada-light-pink md:leading-[0px]">
+          wziąć udział w webinarze?
+        </h3>
+      </div>
+      <div className="flex flex-wrap justify-center mb-20 gap-10">
         {listItems2.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row gap-6 items-center px-2 xl:w-[620px] md:text-adaSubtitle font-bold tracking-wider leading-none"
+            className="flex flex-col md:flex-row gap-6 items-center px-2 xl:w-[620px] md:text-adaBase font-bold tracking-wider leading-none"
           >
             <div>
               <StaticImage
                 src={"../../images/check.svg"}
                 alt="Ada Promis"
                 placeholder="none"
-                width={44}
-                height={46}
-                style={{ width: "44px", height: "46px" }}
+                width={42}
+                height={44}
+                style={{ width: "42px", height: "44px" }}
               />
             </div>
             {item}
           </div>
         ))}
       </div>
-      <div className="flex flex-col md:flex-row gap-8 pb-2 md:pb-8">
-        <div className="text-[64px] mt-[-20px]">🎁</div>
-        <p className="md:text-adaSubtitle font-bold uppercase tracking-wider max-w-[570px]">
+      <div className="flex flex-col md:flex-row md:gap-8 pb-2 md:pb-8">
+        <div className="text-adaBase md:text-[64px] md:mt-[-20px]">🎁</div>
+        <p className="md:text-adaBase font-bold uppercase tracking-wider max-w-[450px]">
           <span className="text-ada-purple">BONUS:</span> Specjalna
           niespodzianka dla wszystkich uczestniczek!
         </p>

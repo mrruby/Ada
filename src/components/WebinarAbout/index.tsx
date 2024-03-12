@@ -20,12 +20,12 @@ const WebinarAbout = (): JSX.Element => {
         <h3 className="md:text-adaSubtitleSecondary text-center pt-8 font-bold md:border-b-[20px] border-ada-light-pink md:leading-[0px]">
           Nazywam się Ada Promis
         </h3>
-        <p className="pt-8 pb-4 md:text-adaSubtitle tracking-wider">
+        <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none">
           Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny:{" "}
           <span className="font-bold">praktykuję slow marketing, </span>
           przemyślany, wartościowy, zbudowany na relacjach. 
         </p>
-        <p className="pt-8 pb-4 md:text-adaSubtitle tracking-wider">
+        <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none">
           <span className="font-bold">
             Prowadzę dochodowe kampanie Meta Ads dla klientów
           </span>{" "}
@@ -33,13 +33,13 @@ const WebinarAbout = (): JSX.Element => {
           <span className="font-bold">1 mln budżetów reklamowych </span>wydanych
           w ramach Meta Ads.
         </p>
-        <p className="pt-8 pb-4 md:text-adaSubtitle tracking-wider">
+        <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none">
           <span className="font-bold">Tworzę programy mentoringowe</span> dla
           specjalistek od marketingu oraz właścicielek biznesów, w którychuczę
           jak, jak skutecznie zdobywać klientów dzięki kampaniom na Facebooku i
           Instagramie.
         </p>
-        <p className="md:text-adaSubtitle tracking-wider">
+        <p className="md:text-adaBase tracking-wider leading-none">
           Przeszłam drogę od stażu w agencji marketingowej przez freelance do
           swojej działalności. Teraz dzielę się z Tobą moimi doświadczeniami{" "}
           <span className="font-bold">
