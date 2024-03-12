@@ -7,7 +7,7 @@ const WebinarButton = ({
   variant: "variant1" | "variant2"
 }): JSX.Element => {
   return (
-    <div className="py-4">
+    <div className="py-20">
       {variant === "variant1" && (
         <div className="flex flex-col items-center text-center gap-[40px]">
           <h2 className="text-adaSubtitle md:text-adaSubtitleThird font-bold tracking-wider max-w-[1008px]">

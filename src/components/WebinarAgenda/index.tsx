@@ -28,7 +28,7 @@ const listItems2 = [
 
 const WebinarAgenda = (): JSX.Element => {
   return (
-    <div className="w-full flex flex-col px-3 pb-2 items-center py-20">
+    <div className="w-full flex flex-col px-3 pb-2 items-center py-[100px] mt-5">
       <h3 className="text-adaSubtitle md:text-adaTitle2 font-bold uppercase mb-10 max-w-[1085px] text-center animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]">
         Czego się nauczysz?
       </h3>
@@ -40,9 +40,9 @@ const WebinarAgenda = (): JSX.Element => {
                 src={"../../images/check.svg"}
                 alt="Ada Promis"
                 placeholder="none"
-                width={44}
-                height={46}
-                style={{ width: "44px", height: "46px" }}
+                width={42}
+                height={44}
+                style={{ width: "42px", height: "44px" }}
               />
             </div>
             <span className="max-w-[627px]">
@@ -54,9 +54,14 @@ const WebinarAgenda = (): JSX.Element => {
           </li>
         ))}
       </ul>
-      <h3 className="text-adaSubtitle md:text-adaTitle font-bold uppercase pb-4 max-w-[960px] text-center mt-4 tracking-wider">
-        Dlaczego jeszcze warto wziąć udział w webinarze?{" "}
-      </h3>
+      <div className="flex flex-col gap-8 max-w-[960px] text-adaSubtitle md:text-adaTitle font-bold uppercase text-center tracking-wider mt-10 mb-8">
+        <h3 className=" tracking-wider md:border-b-[24px] border-ada-light-pink md:leading-[0px]">
+          Dlaczego jeszcze warto
+        </h3>
+        <h3 className="md:border-b-[24px] border-ada-light-pink md:leading-[0px]">
+          wziąć udział w webinarze?{" "}
+        </h3>
+      </div>
       <div className="flex flex-wrap justify-center mb-20 gap-5">
         {listItems2.map((item, index) => (
           <div
@@ -68,17 +73,17 @@ const WebinarAgenda = (): JSX.Element => {
                 src={"../../images/check.svg"}
                 alt="Ada Promis"
                 placeholder="none"
-                width={44}
-                height={46}
-                style={{ width: "44px", height: "46px" }}
+                width={42}
+                height={44}
+                style={{ width: "42px", height: "44px" }}
               />
             </div>
             {item}
           </div>
         ))}
       </div>
-      <div className="flex flex-col md:flex-row gap-8 pb-2 md:pb-8">
-        <div className="text-[64px] mt-[-20px]">🎁</div>
+      <div className="flex flex-col md:flex-row md:gap-8 pb-2 md:pb-8">
+        <div className="text-adaBase md:text-[64px] md:mt-[-20px]">🎁</div>
         <p className="md:text-adaSubtitle font-bold uppercase tracking-wider max-w-[570px]">
           <span className="text-ada-purple">BONUS:</span> Specjalna
           niespodzianka dla wszystkich uczestniczek!

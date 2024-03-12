@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const WebinarBanner = (): JSX.Element => {
   return (
-    <div className="px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:py-20">
+    <div className="px-2 xl:px-6 text-ada-blue mx-auto gap-8 pb-4 md:py-16">
       <div className="flex flex-col md:flex-row justify-between max-w-[1350px] mx-auto">
         <StaticImage
           loading="eager"
@@ -17,10 +17,10 @@ const WebinarBanner = (): JSX.Element => {
           quality={100}
         />
         <div className="flex flex-col justify-center text-center max-w-[713px] gap-4">
-          <h1 className="text-ada-purple text-adaSubtitle md:text-adaSubtitleThird font-bold tracking-wider leading-tight">
+          <h1 className="text-ada-purple text-adaSubtitle md:text-adaSubtitleThird font-bold tracking-wider leading-none">
             Social media marketerko! <br /> Wirtualna Asystentko! Freelancerko!
           </h1>
-          <h2 className="md:text-adaSubtitle pb-3">
+          <h2 className="md:text-adaSubtitle pb-3 pt-2">
             Dodaj do swojej oferty prowadzenie{" "}
             <span className="font-bold">skutecznych kampanii reklamowych </span>
             i zarabiaj więcej
@@ -42,7 +42,7 @@ const WebinarBanner = (): JSX.Element => {
         <h2 className="text-adaSubtitle md:text-[107px] font-extrabold animate-bounce md:border-b-[78px]  border-ada-light-pink md:leading-[0px] max-w-[660px]">
           WEBINAR
         </h2>
-        <div className="max-w-[1015px]">
+        <div className="max-w-[1015px] pt-20">
           <p className="md:text-adaSubtitleSecondary font-bold">
             3 kampanie, których zapragną Twoi klienci. Zostań specjalistką od
             reklam na Facebooku i Instagramie.{" "}
@@ -50,7 +50,7 @@ const WebinarBanner = (): JSX.Element => {
           <p className="md:text-adaSubtitleThird font-bold tracking-wider">
             Już <span className="text-ada-purple"> 19 marca o 18:00!</span>
           </p>
-          <p className="pt-[80px] md:text-adaSubtitle">
+          <p className="pt-[64px] md:text-adaSubtitle">
             Dołącz i <span className="font-bold">dowiedz się,</span> jak
             prowadzić kampanie reklamowe, dzięki którym przyciągniesz uwagę i
             <span className="font-bold"> zbudujesz zaufanie odbiorców. </span>
