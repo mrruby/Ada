@@ -16,6 +16,7 @@ type IReferences = {
   title3?: boolean
   title4?: boolean
   title5?: boolean
+  variant2?: boolean
 }
 
 const referencesList: IReferencesList[] = [
@@ -86,6 +87,61 @@ const referencesList: IReferencesList[] = [
   },
 ]
 
+const referencesList2: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinia1typ2.webp"}
+        alt="Opinia o współpracy z Adą Promis - Ziołowa Wyspa"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinia2.webp"}
+        alt="Opinia o współpracy z Adą Promis - Natalia Plewniok"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinia3.webp"}
+        alt="Opinia o współpracy z Adą Promis - Aleksandra Adamczyk"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinia4.webp"}
+        alt="Opinia o współpracy z Adą Promis - Stan Skupienia"
+        placeholder="none"
+        width={1414}
+        height={2000}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
+
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -133,6 +189,7 @@ const References = ({
   title3,
   title4,
   title5,
+  variant2 = false,
 }: IReferences): JSX.Element => {
   return (
     <div className="pt-[40px]">
@@ -182,19 +239,33 @@ const References = ({
         </>
       )}
       <div className="max-w-[600px] max-h-[720px] mx-auto mt-[-40px] md:mt-[-100px]">
-        {referencesList && (
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            customLeftArrow={<CustomLeftArrow />}
-            customRightArrow={<CustomRightArrow />}
-            ssr={true}
-          >
-            {referencesList.map((reference, index) => (
-              <Reference key={index} image={reference.image} />
-            ))}
-          </Carousel>
-        )}
+        {variant2
+          ? referencesList2 && (
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                ssr={true}
+              >
+                {referencesList2.map((reference, index) => (
+                  <Reference key={index} image={reference.image} />
+                ))}
+              </Carousel>
+            )
+          : referencesList && (
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                ssr={true}
+              >
+                {referencesList.map((reference, index) => (
+                  <Reference key={index} image={reference.image} />
+                ))}
+              </Carousel>
+            )}
       </div>
     </div>
   )
