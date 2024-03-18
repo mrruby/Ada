@@ -239,7 +239,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         <>
           <StaticImage
             loading="eager"
-            src={"../../images/Canva.png"}
+            src={"./../../images/canva.webp"}
             alt=""
             placeholder="none"
             width={90}

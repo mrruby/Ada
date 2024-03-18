@@ -42,7 +42,7 @@ body {
 }
 
 .bg-wave {
-  background-image: url("../../static/assets/wave.svg");
+  background-image: url("../../static/assets/wave.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
