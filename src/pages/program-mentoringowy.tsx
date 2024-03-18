@@ -12,16 +12,22 @@ import MentoringAbout from "components/MentoringAbout"
 import MastermindInfo3 from "components/MastermindInfo3"
 import MastermindAgenda from "components/MastermindAgenda"
 import MastermindPrice from "components/MastermindPrice"
-import MastermindFAQ from "components/MastermindFAQ"
-import References from "components/References"
+import ReferencesMentoring from "components/ReferencesMentoring"
+import MasterclassFAQ from "components/MasterclassFAQ"
 
 const MentoringPage = (): JSX.Element => {
   return (
     <Layout
       flowerBlue={true}
       flowerBlue2={true}
-      flowerBlue3={true}
       flowerBlue4={true}
+      flowerBlue5={true}
+      flowerBlue6={true}
+      flowerBlue7={true}
+      flowerBlue8={true}
+      flowerBlue9={true}
+      flowerBlue10={true}
+      flowerBlue11={true}
     >
       <MastermindBanner version={2} />
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
@@ -50,7 +56,7 @@ const MentoringPage = (): JSX.Element => {
         <MentoringAbout />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <References title4 variant2 />
+        <ReferencesMentoring />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-wave">
         <MentoringBanner version={3} />
@@ -62,7 +68,7 @@ const MentoringPage = (): JSX.Element => {
         <MastermindPrice version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindFAQ version={2} />
+        <MasterclassFAQ version={2} />
       </MaxWithBgColorContainer>
     </Layout>
   )

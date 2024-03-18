@@ -52,7 +52,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           </span>
         </>
       ),
-      text2: "17 kwietnia, 12:30",
     },
     {
       number: "3",
@@ -65,7 +64,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           </span>
         </>
       ),
-      text2: "24 kwietnia, 12:30",
     },
     {
       number: "4",
@@ -78,7 +76,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           </span>
         </>
       ),
-      text2: "8 maja, 12:30",
     },
     {
       number: "5",
@@ -90,7 +87,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           </span>
         </>
       ),
-      text2: "15 maja, 12:30",
     },
   ]
 
@@ -104,7 +100,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           <span className="font-medium">tips & trick + Q&A z graficzką</span>
         </>
       ),
-      text2: "22 maja, 12:30",
     },
     {
       number: "7",
@@ -117,7 +112,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           </span>
         </>
       ),
-      text2: "29 maja, 12:30",
     },
     {
       number: "8",
@@ -129,7 +123,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           </span>
         </>
       ),
-      text2: "12 czerwca, 12:30",
     },
     {
       number: "9",
@@ -145,7 +138,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           <span className="font-medium">w kampaniach reklamowych</span>
         </>
       ),
-      text2: "19 czerwca, 12:30",
     },
   ]
 
@@ -158,8 +150,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/www.svg"}
             alt=""
             placeholder="none"
-            width={116}
-            height={108}
+            width={99}
+            height={92}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -187,8 +179,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/raport.svg"}
             alt=""
             placeholder="none"
-            width={114}
-            height={110}
+            width={97}
+            height={93}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -218,8 +210,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/szablon.svg"}
             alt=""
             placeholder="none"
-            width={93}
-            height={110}
+            width={79}
+            height={93}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -250,8 +242,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/Canva.png"}
             alt=""
             placeholder="none"
-            width={108}
-            height={108}
+            width={90}
+            height={92}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -280,8 +272,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/docs.svg"}
             alt=""
             placeholder="none"
-            width={175}
-            height={145}
+            width={148}
+            height={125}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -308,8 +300,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/docs2.svg"}
             alt=""
             placeholder="none"
-            width={137}
-            height={130}
+            width={119}
+            height={113}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -338,8 +330,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/certyfikat.svg"}
             alt=""
             placeholder="none"
-            width={152}
-            height={117}
+            width={129}
+            height={99}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -420,7 +412,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
                 <FeatureBox
                   key={index}
                   text={feature.text}
-                  text2={feature.text2}
                   number={feature.number}
                   styleText="font-bold max-w-[320px]"
                   flowerColor="white"

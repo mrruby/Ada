@@ -46,7 +46,7 @@ const MastermindPage = (): JSX.Element => {
         <MastermindPrice version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindFAQ version={1} />
+        <MastermindFAQ />
       </MaxWithBgColorContainer>
     </Layout>
   )

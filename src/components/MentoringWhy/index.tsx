@@ -22,7 +22,7 @@ const MentoringWhy = (): JSX.Element => {
     },
     {
       icon: "👀",
-      text: "Słyszysz narzekanie, że zasięgi powinny być większe? W głębi duszy czujesz, że sam zasięg nie wystarczy? Chcesz wiedzieć, jak sprawić, aby oprócz dotarcia do klienta wywołać akcję?",
+      text: "Słyszysz narzekanie, że zasięgi powinny być większe? W głębi duszy czujesz, że sam zasięg nie wystarczy? ",
     },
   ]
 
@@ -42,6 +42,10 @@ const MentoringWhy = (): JSX.Element => {
     {
       icon: "💰",
       text: "Chcesz tworzyć skuteczne i bardziej zaawansowane lejki reklamowe, za które Twoi klienci będą Cię świetnie wynagradzać?",
+    },
+    {
+      icon: "👀",
+      text: "Chcesz wiedzieć, jak sprawić, aby oprócz dotarcia do klienta wywołać akcję?",
     },
   ]
 

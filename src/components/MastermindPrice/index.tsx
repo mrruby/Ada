@@ -50,14 +50,11 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
   const pricingList2: JSX.Element[] = [
     <span key={0}>
       <span className="font-bold">
-        To co najmniej o połowę mniej niż zlecenie reklam agencji lub
-        freelancerowi.{" "}
+        Stawki za prowadzenie kampanii reklamowych zaczynają się od 2000 złotych
+        miesięcznie.{" "}
       </span>
-      Dołączając do programu mentoringowego zyskasz nie tylko dochodowe
-      kampanie, ale również wiedzę, jak ustawić je zgodnie ze sztuką! Gdy w
-      przyszłości będziesz chciała oddelegować kampanie, dzięki wiedzy zdobytej
-      podczas spotkań, wybierzesz do współpracy osobę, która naprawdę się na tym
-      zna.
+      Udział w programie mentoringowym zwróci Ci się już po 2 miesiącach
+      prowadzenia kampanii reklamowych dla jednego klienta!
     </span>,
     <span key={1}>
       <span className="font-bold">
@@ -188,7 +185,7 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
               </span>{" "}
             </p>
           </div>
-          <ul className="max-w-[960px] mb-8">
+          <ul className="max-w-[900px] mb-8">
             {pricingList2.map((item, index) => (
               <li key={index} className={listItemClass}>
                 <span className="w-[100px] h-[100px] mb-2 animate-spin-slow">

@@ -154,10 +154,10 @@ const MentoringAbout = (): JSX.Element => {
               Marianna Ciniak{" "}
             </h4>
             <p className="md:text-adaBase">
-              loremip sumloremip sumlorem ipsumloremips umlor emipsum loremipsu
-              mloremipsumlo remip suml oremipsumlore mipsu mloremips uml oremi
-              psumloremipsumlor emipsumlor emips umlore mipsumloremi psumlorem
-              ipsumloremip
+              Miłośniczka automatyzacji i psycholożka to be! Jeśli chcesz
+              poprawić swoją stronę www, dowiedzieć się jak być bardziej
+              efektywną i co robić, kiedy ilość drobnych tasków przytłacza, I'm
+              your girl!
             </p>
           </div>
         </div>

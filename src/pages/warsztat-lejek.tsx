@@ -72,7 +72,7 @@ const MasterclassPage = (): JSX.Element => {
         <MasterclassPreparing />
       </MaxWithBgColorContainer>
       <MasterclassTime2 />
-      <MasterclassFAQ />
+      <MasterclassFAQ version={1} />
     </Layout>
   )
 }

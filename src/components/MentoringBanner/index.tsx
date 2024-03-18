@@ -9,18 +9,18 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
           <h3 className="md:text-adaTitle3 text-ada-white uppercase font-bold">
             Wiesz, jak to działa, prawda?
           </h3>
-          <ul className="md:pt-6 max-w-[600px] mx-auto md:text-adaBase font-medium">
-            <li>
-              {"\u00b7"} Pracujesz jako marketerka na etacie lub freelance i
-              chcesz, aby Twoi klienci byli zadowoleni?
+          <ul className="md:pt-6 max-w-[800px] mx-auto md:text-adaBase font-medium">
+            <li className="pb-4">
+              🙃 Pracujesz jako marketerka na etacie lub freelance i chcesz, aby
+              Twoi klienci byli zadowoleni?
+            </li>
+            <li className="pb-4">
+              💸 Chcą pozyskać dla siebie nowych klientów, bo oni oznaczają dla
+              nich dodatkowy zysk, a dla Ciebie premię?
             </li>
             <li>
-              {"\u00b7"} Chcą pozyskać dla siebie nowych klientów, bo oni
-              oznaczają dla nich dodatkowy zysk, a dla Ciebie premię?
-            </li>
-            <li>
-              {"\u00b7"} Możesz zapewnić im rozgłos i konwersje dzięki
-              przemyślanym reklamom!
+              🚀 Możesz zapewnić im rozgłos i konwersje dzięki przemyślanym
+              reklamom!
             </li>
           </ul>
         </>
