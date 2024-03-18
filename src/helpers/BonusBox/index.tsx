@@ -18,13 +18,13 @@ export const BonusBox: React.FC<Props> = ({
     <div className="flex flex-col items-center relative lg:min-w-[240px] md:max-w-[416px] px-3">
       {image}
       <p
-        className={`lg:text-adaDesc text-center pt-[-10px] leading-snug ${styleText}`}
+        className={`lg:text-adaDesc text-center pt-8 leading-snug ${styleText}`}
       >
         {text}
       </p>
       {text2 && (
         <p
-          className={`lg:text-[18px] w-full text-center pt-4 leading-snug px-2 ${styleText}`}
+          className={`lg:text-[18px] w-full text-center pt-4 pb-20 leading-snug px-2 ${styleText}`}
         >
           {text2}
         </p>

@@ -30,6 +30,7 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MentoringWhy />
       </MaxWithBgColorContainer>
+      <div className="h-[300px] bg-wave absolute top-[3600px] w-screen"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MentoringWhy2 />
       </MaxWithBgColorContainer>
@@ -42,7 +43,7 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MentoringInfo />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-wave">
         <MentoringBanner version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
@@ -50,6 +51,8 @@ const MentoringPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <References title4 variant2 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-wave">
         <MentoringBanner version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>

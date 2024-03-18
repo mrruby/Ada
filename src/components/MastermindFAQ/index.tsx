@@ -161,7 +161,7 @@ const MastermindFAQ = ({ version }: { version: number }): JSX.Element => {
               <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce text-center mx-auto">
                 FAQ
               </h2>
-              <div className="pt-[30px] flex flex-col md:flex-row lg:gap-[60px]">
+              <div className="pt-[30px] flex flex-col flex-wrap lg:flex-row lg:gap-[60px]">
                 <ul className="gap-10 md:gap-[120px] ">
                   {renderList(leftList2)}
                 </ul>

@@ -142,7 +142,7 @@ const MentoringWhy = (): JSX.Element => {
             }
             url="/"
             textSize="md:text-adaSubtitle uppercase"
-            btnStyle="md:w-[568px] text-white bg-[#283977]"
+            btnStyle="md:w-[568px] text-white bg-blue"
           />
         </div>
       </div>

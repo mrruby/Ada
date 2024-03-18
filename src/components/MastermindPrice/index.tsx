@@ -182,7 +182,10 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
               Wybierając płatność comiesięczną,{" "}
               <span className="font-bold">opłata wynosi 770 złotych netto</span>{" "}
               (947,10 zł brutto) miesięcznie.
-              <span className="font-bold">W sumie 3788,40 zł brutto.</span>{" "}
+              <span className="font-bold">
+                {" "}
+                W sumie 3788,40 zł brutto.
+              </span>{" "}
             </p>
           </div>
           <ul className="max-w-[960px] mb-8">

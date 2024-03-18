@@ -67,7 +67,7 @@ const MentoringInfo = (): JSX.Element => {
   const leftNoList: JSX.Element[] = [
     <span key={0}>
       masz nadzieję, że
-      <span className="font-bold">wyniki zrobią się „same” </span>w menadżerze
+      <span className="font-bold"> wyniki zrobią się „same” </span>w menadżerze
       reklam
     </span>,
     <span key={1}>
@@ -84,7 +84,7 @@ const MentoringInfo = (): JSX.Element => {
   ]
   const rightNoList: JSX.Element[] = [
     <span key={0}>
-      <span className="font-bold">wiesz, że</span>
+      <span className="font-bold">wiesz, że </span>
       Ty wszystko zrobisz najlepiej{" "}
       <span className="font-bold"> i nie interesują Cię inne perspektywy</span>
     </span>,
@@ -96,7 +96,7 @@ const MentoringInfo = (): JSX.Element => {
     <span key={2}>
       jesteś super wymiataczką —
       <span className="font-bold">
-        — tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz.{" "}
+        tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz.{" "}
       </span>
       Brawo!
     </span>,
@@ -106,7 +106,7 @@ const MentoringInfo = (): JSX.Element => {
     <div className="flex flex-col text-ada-blue items-center px-3 pb-16">
       <div className="flex flex-col items-center max-w-[1194px]">
         <h2 className="text-adaSubtitle uppercase md:text-adaTitle3 font-bold animate-bounce text-ada-grey text-center">
-          Dlaczego m﻿entoring
+          Dlaczego mentoring
         </h2>
         <h2 className="text-adaSubtitle uppercase md:text-adaTitle3 font-bold animate-bounce text-center md:mt-[-20px]">
           startuje właśnie teraz?

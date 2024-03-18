@@ -41,7 +41,7 @@ const MentoringAbout = (): JSX.Element => {
             Nazywam się Adrianna Promis-Urbas
           </h3>
         </div>
-        <div className="flex flex-col md:flex-row md:pt-[40px] px-3">
+        <div className="flex flex-col lg:flex-row md:pt-[40px] px-3">
           <StaticImage
             loading="eager"
             src={"../../images/mentoring.webp"}
@@ -52,7 +52,7 @@ const MentoringAbout = (): JSX.Element => {
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
-          <div className="max-w-[810px] pt-6">
+          <div className="max-w-[400px] lg:max-w-[810px] pt-6">
             <p className="pb-8 md:text-adaBase">
               Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z
               zamiłowania — kreatywną duszą. Mam za sobą epizod pracy w audycie

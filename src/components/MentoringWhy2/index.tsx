@@ -50,7 +50,7 @@ const MentoringWhy2 = (): JSX.Element => {
       text: (
         <>
           zderzysz swoje wątpliwości z osobami, które mają podobne problemy w
-          zdobywaniu nowych klientów i przekonasz się, że
+          zdobywaniu nowych klientów i przekonasz się, że{" "}
           <span className="font-bold">
             rozwiązanie jest bliżej niż myślisz —
           </span>

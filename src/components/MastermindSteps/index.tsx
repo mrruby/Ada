@@ -280,8 +280,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/docs.svg"}
             alt=""
             placeholder="none"
-            width={116}
-            height={108}
+            width={175}
+            height={145}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -308,8 +308,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/docs2.svg"}
             alt=""
             placeholder="none"
-            width={114}
-            height={110}
+            width={137}
+            height={130}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />

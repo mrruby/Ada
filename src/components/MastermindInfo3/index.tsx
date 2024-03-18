@@ -126,7 +126,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
       <span className="font-bold">bieżący kontakt i wsparcie na grupie</span> na
       Facebooku oraz czacie na Messegerze lub Instagramie (kanał do ustalenia w
       pierwszym tygodniu trwania programu)
-      <span className="font-bold">o wartości 697 złotych</span>
+      <span className="font-bold"> o wartości 697 złotych</span>
     </span>,
   ]
   const rightProgramDetailsList2: JSX.Element[] = [
@@ -144,7 +144,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     <span key={2}>
       <span className="font-bold">nagrania ze wszystkich spotkań na żywo </span>
       dostępne bez ograniczeń. Każde spotkanie to
-      <span className="font-bold">godzina tematu przewodniego + Q&A</span>i
+      <span className="font-bold">godzina tematu przewodniego + Q&A </span>i
       możliwość, wskoczenia na hot seat ze swoim problemem – bezcenne 😊
     </span>,
   ]
