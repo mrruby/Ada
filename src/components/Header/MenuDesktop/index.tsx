@@ -12,7 +12,7 @@ const MenuDesktop = (): JSX.Element => {
 
   const links = [
     { to: "https://sklep.adrianna.com.pl/", text: "sklep" },
-    { to: "/webinar", text: "webinar" },
+    { to: "/meta-ads-mentoring", text: "mentoring" },
     { to: "/about", text: "o mnie" },
     { to: "/materials", text: "materiały" },
     { to: "/blog", text: "blog" },
@@ -40,7 +40,9 @@ const MenuDesktop = (): JSX.Element => {
             key={index}
             to={link.to}
             text={link.text}
-            className={link.text === "webinar" ? mentoringLinkClass : linkClass}
+            className={
+              link.text === "mentoring" ? mentoringLinkClass : linkClass
+            }
           />
         ))}
       </nav>
