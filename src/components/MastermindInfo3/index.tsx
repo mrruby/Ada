@@ -137,7 +137,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     </span>,
     <span key={1}>
       <span className="font-bold">
-        7 bonusów o łącznej wartości 1529 złotych
+        6 bonusów o łącznej wartości 1529 złotych
       </span>
       <br />
     </span>,
