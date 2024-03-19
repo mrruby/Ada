@@ -19,16 +19,16 @@ import MastermindFAQ from "components/MastermindFAQ"
 const MastermindPage = (): JSX.Element => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
-      <MastermindBanner />
+      <MastermindBanner version={1} />
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MastermindInfo1 />
         <MastermindWhy1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindAgenda />
+        <MastermindAgenda version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindSteps />
+        <MastermindSteps version={1} />
         <MastermindWhy2 />
         <References title2 />
       </MaxWithBgColorContainer>
@@ -40,10 +40,10 @@ const MastermindPage = (): JSX.Element => {
         <AboutBanner2 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindInfo3 />
+        <MastermindInfo3 version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindPrice />
+        <MastermindPrice version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MastermindFAQ />

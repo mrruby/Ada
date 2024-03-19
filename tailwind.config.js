@@ -12,6 +12,7 @@ module.exports = {
           purple: "#A361B4",
           pink: "#F2A7B2",
           pink2: "#FFD3EB",
+          pink3: "#BA93DF",
           white: "#FFFFFF",
           white40: "#FFFFFF66",
         },
@@ -38,6 +39,7 @@ module.exports = {
         adaSubtitleThird: "2.5rem",
         adaTitle: "3rem",
         adaTitle2: "3.75rem",
+        adaTitle3: "4rem",
         adaBig: "5rem",
       },
       animation: {
