@@ -30,7 +30,7 @@ const referencesList: IReferencesList[] = [
         alt="Opinia o programie mentoringowym Meta Ads - Juila Boryczka"
         placeholder="none"
         width={412}
-        height={583}
+        height={600}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
