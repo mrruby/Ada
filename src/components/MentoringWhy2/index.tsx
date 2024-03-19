@@ -61,7 +61,7 @@ const MentoringWhy2 = (): JSX.Element => {
   ]
 
   return (
-    <section>
+    <section id="solution">
       <div className="flex flex-col items-center text-center">
         <StaticImage
           loading="eager"
@@ -135,7 +135,7 @@ const MentoringWhy2 = (): JSX.Element => {
               nad kampaniami!
             </span>
           }
-          url="/"
+          url="https://koalendar.com/e/meta-ads-master"
           textSize="md:text-adaSubtitle uppercase"
           btnStyle="md:w-[460px] bg-ada-pink2"
         />

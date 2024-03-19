@@ -34,7 +34,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
                 Przekonałaś mnie, chcę <br /> dołączyć do programu
               </span>
             }
-            url="/"
+            url="https://koalendar.com/e/meta-ads-master"
             textSize="md:text-adaSubtitleThird"
             btnStyle="md:w-[840px] md:h-[170px] bg-ada-pink2 my-20"
           />
@@ -50,7 +50,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
                 <br /> wyniki w reklamach!
               </span>
             }
-            url="/"
+            url="https://koalendar.com/e/meta-ads-master"
             textSize="md:text-adaSubtitleThird"
             btnStyle="md:w-[840px] md:h-[170px] bg-ada-pink2 mt-20"
           />

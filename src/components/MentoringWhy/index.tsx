@@ -70,7 +70,7 @@ const MentoringWhy = (): JSX.Element => {
               programu!
             </span>
           }
-          url="/"
+          url="https://koalendar.com/e/meta-ads-master"
           textSize="md:text-adaSubtitle uppercase"
           btnStyle="md:w-[810px] bg-ada-pink2 md:h-[110px]"
           iconCalender
@@ -98,7 +98,7 @@ const MentoringWhy = (): JSX.Element => {
                 Czytam dalej!
               </span>
             }
-            url="/"
+            sectionId="solution"
             textSize="md:text-adaSubtitle uppercase"
             btnStyle="md:w-[568px] text-white bg-blue"
           />

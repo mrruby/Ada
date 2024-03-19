@@ -144,7 +144,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     <span key={2}>
       <span className="font-bold">nagrania ze wszystkich spotkań na żywo </span>
       dostępne bez ograniczeń. Każde spotkanie to
-      <span className="font-bold">godzina tematu przewodniego + Q&A </span>i
+      <span className="font-bold"> godzina tematu przewodniego + Q&A </span>i
       możliwość, wskoczenia na hot seat ze swoim problemem – bezcenne 😊
     </span>,
   ]

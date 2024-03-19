@@ -61,8 +61,11 @@ const MastermindBanner = ({ version }: { version: number }): JSX.Element => {
           <div className="row-start-1 col-start-1 grid relative pt-20 md:pt-40 tracking-[0.05em]">
             <div className="mx-auto flex flex-col items-start px-3">
               <h1 className="text-adaBase lg:text-adaTitle font-bold leading-tight animate-bounce pb-6">
-                Prowadzisz solo-biznes marketingowy? <br /> Jesteś wirtualną
-                asystentką?
+                Prowadzisz solo-biznes marketingowy?
+                <br />
+                Jesteś wirtualną asystentką?
+                <br />
+                Pracujesz w marketingu na etacie?
               </h1>
               <p className="max-w-[680px] font-medium text-[14px] md:text-adaBase leading-tight">
                 Chcesz zdobyć bardziej dochodowych klientów i{" "}

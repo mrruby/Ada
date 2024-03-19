@@ -196,7 +196,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
                   zarabiać więcej!
                 </span>
               }
-              url="/"
+              url="https://koalendar.com/e/meta-ads-master"
               textSize="md:text-adaSubtitleSecondary"
               btnStyle="md:w-[810px] bg-ada-pink2"
               iconCalender
@@ -211,7 +211,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             <Button
               type="button"
               text={<span className="font-bold">POBIERAM ❤️</span>}
-              url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
+              url="https://drive.google.com/file/d/1xjKvh-4U5-A2kOodu3epBV438wT4O76T/view?usp=sharing"
               textSize="md:text-adaSubtitle"
               btnStyle="md:w-[340px] bg-ada-pink2"
             />
