@@ -14,6 +14,7 @@ import MastermindAgenda from "components/MastermindAgenda"
 import MastermindPrice from "components/MastermindPrice"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import MasterclassFAQ from "components/MasterclassFAQ"
+import IconText from "components/IconText"
 
 const MentoringPage = (): JSX.Element => {
   return (
@@ -30,6 +31,7 @@ const MentoringPage = (): JSX.Element => {
       flowerBlue11={true}
     >
       <MastermindBanner version={2} />
+      <IconText />
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={1} />
       </MaxWithBgColorContainer>
@@ -74,6 +76,6 @@ const MentoringPage = (): JSX.Element => {
   )
 }
 
-export const Head = () => <SEO title="Program mentoringowy - Ogarnij te Adsy" />
+export const Head = () => <SEO title="Meta Ads Masters Mentoring" />
 
 export default MentoringPage

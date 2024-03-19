@@ -50,10 +50,10 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
   const pricingList2: JSX.Element[] = [
     <span key={0}>
       <span className="font-bold">
-        Stawki za prowadzenie kampanii reklamowych zaczynają się od 2000 złotych
+        Stawki za prowadzenie kampanii reklamowych zaczynają się od 1000 złotych
         miesięcznie.{" "}
       </span>
-      Udział w programie mentoringowym zwróci Ci się już po 2 miesiącach
+      Udział w programie mentoringowym zwróci Ci się już po 2/3 miesiącach
       prowadzenia kampanii reklamowych dla jednego klienta!
     </span>,
     <span key={1}>

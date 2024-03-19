@@ -72,7 +72,8 @@ const MastermindBanner = ({ version }: { version: number }): JSX.Element => {
               </p>
               <p className="py-[30px] max-w-[661px] font-medium text-[14px] md:text-adaBase leading-tight">
                 <span className="font-bold">
-                  Dołącz do programu mentoringowego „Ogarnij te adsy!”,
+                  Dołącz do programu mentoringowego „Meta Ads Masters
+                  Mentoring!”,
                 </span>{" "}
                 prowadź samodzielnie kampanie reklamowe na Facebooku oraz
                 Instagramie i zarabiaj.

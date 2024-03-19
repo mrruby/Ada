@@ -120,27 +120,28 @@ const MentoringInfo = (): JSX.Element => {
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
-        <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none max-w-[728px]">
-          <span className="font-bold">
-            Program mentoringowy startuje w kwietniu,{" "}
-          </span>
-          abyś mogła wykorzystać nowe umiejętności w drugim najbardziej
-          reklamowym okresie w roku.
-        </p>
-        <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none max-w-[728px]">
-          <span className="font-bold">Do lipca zdobędziesz wiedzę</span> o
-          najważniejszych 4 typach kampanii reklamowych. Od września, gdy
-          zacznie się największe coroczne szaleństwo marketingowe, będziesz
-          gotowa na wykręcanie świetnych wyników w kampaniach.
-        </p>
-        <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none max-w-[728px]">
-          Wrzesień jest też miesiącem, w którym dostaję najwięcej zapytań o
-          prowadzenie kampanii reklamowych.{" "}
-          <span className="font-bold">
-            Ty też we wrześniu będziesz przygotowana,{" "}
-          </span>
-          aby odpowiedzieć na zapytania od nowych klientów.
-        </p>
+        <div className="flex flex-col items-start">
+          <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none max-w-[728px] font-bold">
+            Program mentoringowy startuje 8 kwietnia.
+          </p>
+          <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none max-w-[728px]">
+            <span className="font-bold">Do lipca zdobędziesz wiedzę</span> o
+            najważniejszych 4 typach kampanii reklamowych.
+          </p>
+          <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none max-w-[728px]">
+            <span className="font-bold">Od września,</span> gdy zacznie się
+            największe coroczne szaleństwo marketingowe, będziesz gotowa na
+            wykręcanie świetnych wyników w kampaniach.
+          </p>
+          <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none max-w-[728px]">
+            Wrzesień jest też miesiącem, w którym dostaję najwięcej zapytań o
+            prowadzenie kampanii reklamowych.{" "}
+            <span className="font-bold">
+              Ty też we wrześniu będziesz przygotowana,{" "}
+            </span>
+            aby odpowiedzieć na zapytania od nowych klientów.
+          </p>
+        </div>
       </div>
       <div className="pt-[60px] lg:pt-[150px]">
         <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase">

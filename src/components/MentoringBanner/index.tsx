@@ -31,7 +31,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
             type="button"
             text={
               <span className="font-bold uppercase">
-                Przekonałaś mnie, chcę <br /> ogarnąć moje adsy!
+                Przekonałaś mnie, chcę <br /> dołączyć do programu
               </span>
             }
             url="/"

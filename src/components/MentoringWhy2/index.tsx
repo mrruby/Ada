@@ -78,7 +78,7 @@ const MentoringWhy2 = (): JSX.Element => {
             Rozwiązaniem jest program mentoringowy{" "}
           </span>
           <br />
-          „Ogarnij te adsy!”
+          „Meta Ads Masters Mentoring!”
         </h3>
         <StaticImage
           loading="eager"
@@ -121,9 +121,9 @@ const MentoringWhy2 = (): JSX.Element => {
       </div>
       <div className="flex flex-col items-center mb-20 px-3">
         <h2 className="text-adaBase lg:text-adaTitle font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[30px] border-ada-light-pink lg:h-[68px] lg:mt-10 mx-auto uppercase text-center">
-          Dołącz do programu „Ogarnij te adsy!”{" "}
+          Dołącz do programu „Meta Ads Masters Mentoring!”{" "}
         </h2>
-        <p className="md:text-adaSubtitle pb-8 max-w-[1000px] text-center">
+        <p className="md:text-adaSubtitle pb-8 max-w-[1000px] text-center mt-14">
           i zrób krok w stronę zdobywania nowych klientów, którzy chętnie
           wynagrodzą Cię za świetnie wykonaną pracę!
         </p>

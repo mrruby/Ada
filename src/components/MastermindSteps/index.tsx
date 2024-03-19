@@ -37,7 +37,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
   const featuresDataFirtstRow2 = [
     {
       text: "Menedżer reklam+ skuteczna współpraca z klientem",
-      text2: "10 kwietnia, 12:30",
       number: "1",
     },
     {
@@ -135,7 +134,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           </span>{" "}
           <br />
           Automatyzacje
-          <span className="font-medium">w kampaniach reklamowych</span>
+          <span className="font-medium"> w kampaniach reklamowych</span>
         </>
       ),
     },

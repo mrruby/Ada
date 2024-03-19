@@ -3,52 +3,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 
 const MentoringWhy = (): JSX.Element => {
-  const leftList = [
-    {
-      icon: "🔥",
-      text: "Słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
-    },
-    {
-      icon: "👶",
-      text: "Ustawiasz już pierwsze kampanie dla swoich klientów, ale czujesz, że błądzisz jak dziecko we mgle?",
-    },
-    {
-      icon: "💸",
-      text: "Ogarniasz podstawy, ale czujesz, że budżet reklamowy trochę przecieka Ci przez palce?",
-    },
-    {
-      icon: "💎",
-      text: "Chciałabyś dotrzeć do nowych odbiorców i skutecznie przekonać ich do skorzystania z oferty, którą reklamujesz?",
-    },
-    {
-      icon: "👀",
-      text: "Słyszysz narzekanie, że zasięgi powinny być większe? W głębi duszy czujesz, że sam zasięg nie wystarczy? ",
-    },
-  ]
-
-  const rightList = [
-    {
-      icon: "🤯",
-      text: "Twoi klienci wywierają presję na wyniki, a Ty już nie wiesz, co robić i jak spełnić oczekiwania?",
-    },
-    {
-      icon: "👀",
-      text: "Potrzebujesz spojrzenia z zewnątrz i wyjścia z bańki marketingowej, do której trafiłaś?",
-    },
-    {
-      icon: "‍👩‍🎓",
-      text: "Chcesz się rozwijać, ale kursy video i e-booki nie pozwalają Ci na konfrontowanie wiedzy z wynikami oraz przemyślaną praktykę?",
-    },
-    {
-      icon: "💰",
-      text: "Chcesz tworzyć skuteczne i bardziej zaawansowane lejki reklamowe, za które Twoi klienci będą Cię świetnie wynagradzać?",
-    },
-    {
-      icon: "👀",
-      text: "Chcesz wiedzieć, jak sprawić, aby oprócz dotarcia do klienta wywołać akcję?",
-    },
-  ]
-
   return (
     <section>
       <div className="flex flex-col md:flex-row gap-4 xl:gap-[90px] items-center w-full justify-center mx-3">
@@ -102,7 +56,8 @@ const MentoringWhy = (): JSX.Element => {
         </p>
         <p className="pb-20 max-w-[860px] mx-auto">
           <span className="font-bold">
-            Dlatego przygotowałam dla Ciebie program „Ogarnij te adsy”{" "}
+            Dlatego przygotowałam dla Ciebie program „Meta Ads Masters
+            Mentoring”{" "}
           </span>
           podczas którego w 3 miesiące nauczysz się, jak prowadzić skuteczne
           kampanie reklamowe. 🚀
@@ -126,14 +81,13 @@ const MentoringWhy = (): JSX.Element => {
           Teraz możesz myśleć:{" "}
         </h2>
         <p className="lg:text-adaSubtitle pt-2 md:pt-8">
+          Przecież to takie trudne...
+          <br />
           Czy reklamy na pewno pomogą mi zarabiać więcej?
           <br />
           Czy znajdę klientów zainteresowanych płatnymi reklamami?
           <br />
-          Czy to zadziała?
-        </p>
-        <p className="lg:text-adaSubtitle pt-2">
-          Przecież każdy się teraz reklamuje…
+          Czy to w ogóle zadziała?
         </p>
         <div className="mt-10 mb-10 md:mb-[120px]">
           <Button
@@ -151,28 +105,6 @@ const MentoringWhy = (): JSX.Element => {
         </div>
       </div>
       <div className="mx-auto pb-10">
-        <h2 className="text-adaBase lg:text-adaTitle font-bold lg:mb-2 mx-auto text-center">
-          Pracujesz w marketingu lub jako
-          <br /> Wirtualna Asystentka?
-        </h2>
-        <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
-          <ul className="gap-10 md:gap-[120px] ">
-            {leftList.map((item, index) => (
-              <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
-                <span className="text-adaSubtitle"> {item.icon}</span>
-                <span className="md:text-adaBase">{item.text}</span>
-              </li>
-            ))}
-          </ul>
-          <ul className="gap-10 md:gap-[120px] ">
-            {rightList.map((item, index) => (
-              <li className="flex gap-4 max-w-[560px] pb-8 px-3" key={index}>
-                <span className="text-adaSubtitle"> {item.icon}</span>
-                <span className="md:text-adaBase">{item.text}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
         <div className="font-bold text-center max-w-[860px] mx-auto my-8">
           <h3 className="md:text-adaSubtitleThird text-ada-pink3">
             Wiem, jak się teraz czujesz.

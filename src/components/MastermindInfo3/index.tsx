@@ -87,13 +87,13 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
 
   const rightWhatYouGetList2: JSX.Element[] = [
     <span key={0}>
-      <span className="font-bold">Dodatkowo:</span>
+      <span className="font-bold">Dodatkowo: </span>
       nauczysz się jak prowadzić działania reklamowe dla własnej marki osobistej
       i pozyskasz dla siebie nowych klientów
     </span>,
     <span key={1}>
       Twoje świetnie ustawione reklamy będą docierać do
-      <span className="font-bold">nowych potencjalnych klientów.</span>
+      <span className="font-bold"> nowych potencjalnych klientów.</span>
     </span>,
     <span key={2}>
       Będziesz spokojna, że pieniądze, które Twoi klienci zainwestowali w
@@ -131,7 +131,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
   ]
   const rightProgramDetailsList2: JSX.Element[] = [
     <span key={0}>
-      <span className="font-bold">12 godzin office hour,</span>
+      <span className="font-bold">12 godzin office hour, </span>
       czyli grupowych konsultacji reklamowych{" "}
       <span className="font-bold">o łącznej wartości 3900 złotych</span>
     </span>,

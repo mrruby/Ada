@@ -183,10 +183,10 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             <h4 className="md:text-adaSubtitle max-w-[868px] mx-auto font-medium py-[90px]">
               To jak?{" "}
               <span className="font-bold">
-                Dołączasz teraz i szlifujesz kampanie
+                Dołączasz teraz i szlifujesz kampanie,
               </span>{" "}
-              aby za 4 miesiące zobaczyć wzrost wyników, czy czekasz do kolejnej
-              edycji?
+              aby przez kolejne miesiące widzieć systematyczny wzrost wyników,
+              czy czekasz do kolejnej edycji?
             </h4>
             <Button
               type="button"
@@ -200,6 +200,20 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               textSize="md:text-adaSubtitleSecondary"
               btnStyle="md:w-[810px] bg-ada-pink2"
               iconCalender
+            />
+          </div>
+          <div className="flex flex-col items-center text-center gap-10 pb-10 md:pb-[118px]">
+            <h3 className="md:text-adaSubtitle max-w-[1024px] mx-auto font-medium pt-[90px]">
+              Chcesz, aby pracodawca sfinansował Twój udział w programie?  Tutaj
+              pobierzesz gotowy wniosek, który pomoże Ci zdobyć środki na
+              rozwój.
+            </h3>
+            <Button
+              type="button"
+              text={<span className="font-bold">POBIERAM ❤️</span>}
+              url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
+              textSize="md:text-adaSubtitle"
+              btnStyle="md:w-[340px] bg-ada-pink2"
             />
           </div>
         </>
