@@ -14,7 +14,7 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia1typ2.webp"}
-        alt="Opinia o współpracy z Adą Promis - Ziołowa Wyspa"
+        alt="Opinia o programie mentoringowym Meta Ads - Monika Gajek"
         placeholder="none"
         width={412}
         height={583}
@@ -27,7 +27,7 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia2typ2.webp"}
-        alt="Opinia o współpracy z Adą Promis - Natalia Plewniok"
+        alt="Opinia o programie mentoringowym Meta Ads - Juila Boryczka"
         placeholder="none"
         width={412}
         height={583}
@@ -40,7 +40,7 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia3typ2.webp"}
-        alt="Opinia o współpracy z Adą Promis - Aleksandra Adamczyk"
+        alt="Opinia o programie mentoringowym Meta Ads - Martyna Sitarz"
         placeholder="none"
         width={412}
         height={583}
@@ -53,7 +53,20 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia4typ2.webp"}
-        alt="Opinia o współpracy z Adą Promis - Stan Skupienia"
+        alt="Opinia o programie mentoringowym Meta Ads - Izabela Ścisłowska"
+        placeholder="none"
+        width={412}
+        height={583}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinia5typ2.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
         placeholder="none"
         width={412}
         height={583}
