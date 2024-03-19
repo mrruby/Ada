@@ -41,8 +41,30 @@ body {
   background-position: top right;
 }
 
+.bg-wave {
+  background-image: url("../../static/assets/wave.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .bg-wave {
+    background-size: contain;
+  }
+}
+
 .vertical-timeline::before {
   background-color: #253274 !important;
+}
+
+.vertical-timeline-element {
+  margin: 0em 0px !important;
+  margin-bottom: -40px !important;
+}
+@media (max-width: 1170px) {
+  .vertical-timeline-element {
+    margin-bottom: 0em !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -62,4 +84,8 @@ body {
   .form-scale {
     scale: 1.2;
   }
+}
+
+.bg-blue {
+  background-color: #283977 !important;
 }

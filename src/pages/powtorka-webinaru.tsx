@@ -29,10 +29,10 @@ const WebinarReplayPage = (): JSX.Element => {
         <MastermindWhy1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindAgenda />
+        <MastermindAgenda version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindSteps />
+        <MastermindSteps version={1} />
         <MastermindWhy2 />
         <References title2 />
       </MaxWithBgColorContainer>
@@ -44,10 +44,10 @@ const WebinarReplayPage = (): JSX.Element => {
         <AboutBanner2 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindInfo3 />
+        <MastermindInfo3 version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindPrice />
+        <MastermindPrice version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MastermindFAQ />

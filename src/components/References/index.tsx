@@ -182,19 +182,17 @@ const References = ({
         </>
       )}
       <div className="max-w-[600px] max-h-[720px] mx-auto mt-[-40px] md:mt-[-100px]">
-        {referencesList && (
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            customLeftArrow={<CustomLeftArrow />}
-            customRightArrow={<CustomRightArrow />}
-            ssr={true}
-          >
-            {referencesList.map((reference, index) => (
-              <Reference key={index} image={reference.image} />
-            ))}
-          </Carousel>
-        )}
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+          ssr={true}
+        >
+          {referencesList.map((reference, index) => (
+            <Reference key={index} image={reference.image} />
+          ))}
+        </Carousel>
       </div>
     </div>
   )

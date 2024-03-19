@@ -87,7 +87,7 @@ const MastermindFAQ = (): JSX.Element => {
               Dołączam teraz, bo też chcę rozwijać siebie i biznes!
             </span>
           }
-          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
+          url="https://koalendar.com/e/meta-ads-master"
           textSize="md:text-adaSubtitle"
           btnStyle="md:w-[740px] bg-white border-b-4 border-ada-pink"
           iconCalender

@@ -3,7 +3,7 @@ import { Button } from "helpers/Button"
 
 type AccordionProps = {
   question: string
-  answer: string
+  answer: string | JSX.Element
 }
 
 export const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
@@ -14,8 +14,8 @@ export const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
       className="xl:w-[550px]"
       onClick={() => setAccordionOpen(!accordionOpen)}
     >
-      <button className="flex lg:text-adaDesc font-bold py-4 px-4 bg-ada-light-pink items-center justify-between w-full text-center mx-auto">
-        <h2>{question}</h2>
+      <button className="flex lg:text-adaBase font-bold py-4 px-4  items-center justify-between w-full text-center mx-auto shadow-lg">
+        <h2 className="text-left">{question}</h2>
         <svg
           className="fill-ada-blue shrink-0 ml-8"
           width="16"
