@@ -15,6 +15,7 @@ import MastermindPrice from "components/MastermindPrice"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import IconText from "components/IconText"
+import Opinions from "components/Opinions"
 
 const MentoringPage = (): JSX.Element => {
   return (
@@ -38,7 +39,8 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MentoringWhy />
       </MaxWithBgColorContainer>
-      <div className="h-[300px] bg-wave absolute top-[3600px] w-screen"></div>
+      <Opinions />
+      <div className="h-[300px] bg-wave absolute top-[4180px] w-screen"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MentoringWhy2 />
       </MaxWithBgColorContainer>

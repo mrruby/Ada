@@ -48,8 +48,8 @@ module.exports = {
         blink: "blink 1s both infinite",
         "spin-slow": "spin 4s linear infinite",
         bounce: "custombounce 1.5s ease-in-out",
-        marquee: "marquee 25s linear infinite",
-        marquee2: "marquee 25s linear infinite",
+        marquee: "marquee 120s linear infinite",
+        marquee2: "marquee 120s linear infinite",
       },
       keyframes: {
         fadeIn: {
