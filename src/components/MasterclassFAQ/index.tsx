@@ -232,7 +232,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             <Button
               type="button"
               text={<span className="font-bold">POBIERAM ❤️</span>}
-              url="https://drive.google.com/file/d/1xjKvh-4U5-A2kOodu3epBV438wT4O76T/view?usp=sharing"
+              url="https://drive.google.com/file/u/1/d/1WlAQAXhvwK5eS7hOqsJV1cOjAwpaMqRQ/view?usp=sharing"
               textSize="md:text-adaSubtitle"
               btnStyle="md:w-[340px] bg-ada-pink2"
             />

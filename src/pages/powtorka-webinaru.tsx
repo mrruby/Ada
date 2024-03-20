@@ -9,7 +9,7 @@ const WebinarReplayPage = (): JSX.Element => {
     <Layout flowerWhite2={true} flowerWhite3={true}>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MastermindVideo
-          videoUrl="https://www.youtube.com/watch?v=y_HOSt8dcy4"
+          videoUrl="https://www.youtube.com/embed/y_HOSt8dcy4?si=aKR8v1BbLwZZ1cZq"
           buttonUrl="https://koalendar.com/e/meta-ads-master/"
           targetDate={new Date("2024-03-27T00:00:00")}
         />
