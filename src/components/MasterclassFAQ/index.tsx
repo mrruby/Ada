@@ -57,18 +57,18 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     {
       question: "Kiedy będą odbywać się spotkania?",
       answer:
-        "Spotkania tematyczne w ramach programu mentoringowego będą odbywać się w środy w godzinach 12:30-15:00, 10, 17, 24 kwietnia, 8, 15, 22, 29 maja, 12, 19 czerwca. Czekamy też na Was w każdy poniedziałek o 10:00 na office hour! Podane terminy są elastyczne. Już teraz wiesz, że nie będziesz mogła wpaść na któreś spotkanie? Daj znać — przedyskutujemy temat i poszukamy alternatywnych terminów.",
+        "✓ Spotkania tematyczne w ramach programu mentoringowego będą odbywać się w środy w godzinach 12:30-15:00, 10, 17, 24 kwietnia, 8, 15, 22, 29 maja, 12, 19 czerwca. Czekamy też na Was w każdy poniedziałek o 10:00 na office hour! Podane terminy są elastyczne. Już teraz wiesz, że nie będziesz mogła wpaść na któreś spotkanie? Daj znać — przedyskutujemy temat i poszukamy alternatywnych terminów.",
     },
     {
       question: "Czy spotkania będą nagrywane?",
       answer:
-        "Tak, każde spotkanie będzie nagrane i udostępnione uczestniczkom spotkania. Jeśli nie możesz dołączyć na żywo, nadrobisz materiał później.",
+        "✓ Tak, każde spotkanie będzie nagrane i udostępnione uczestniczkom spotkania. Jeśli nie możesz dołączyć na żywo, nadrobisz materiał później.",
     },
     {
       question: "Kto weźmie udział w programie mentoringowym?",
       answer: (
         <>
-          Program to przestrzeń dla Social Media Managerek, Specjalistek ds.
+          ✓Program to przestrzeń dla Social Media Managerek, Specjalistek ds.
           marketingu i Wirtualnych Asystentek. Jednym słowem: dla osób, które
           pracują online i chcą poszerzyć zakres swoich usług o prowadzenie
           kampanii reklamowych.
@@ -86,7 +86,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "Czy na pewno będzie czas dla mnie?",
       answer: (
         <>
-          Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
+          ✓ Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
           przedstawić swój problem, zadać pytania. Spotykamy się w grupie
           maksymalnie 7 osób, aby każdy znalazł czas dla siebie. <br /> ❌ To
           NIE są spotkania, na których jedna osoba mówi, a druga słucha. <br />{" "}
@@ -97,8 +97,29 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     },
     {
       question: "Nie umiem w techniczne rzeczy, czy dam sobie radę?",
-      answer:
-        "Oczywiście! W czasie programu przekonasz się, że techniczne tematy nie są takie straszne, jak się wydają. Pierwsze spotkanie w całości poświęcimy tematom dotyczącym ustawień menadżera reklam oraz dobrym praktykom we współpracy z klientem. Dowiesz się, jak sprawnie ustawić kwestie techniczne i wytłumaczyć klientowi, czego od niego potrzebujesz.",
+      answer: (
+        <>
+          ✓ Oczywiście! W czasie programu przekonasz się, że techniczne tematy
+          nie są takie straszne, jak się wydają. Pierwsze spotkanie w całości
+          poświęcimy tematom dotyczącym ustawień menadżera reklam oraz dobrym
+          praktykom we współpracy z klientem. Dowiesz się, jak sprawnie ustawić
+          kwestie techniczne i wytłumaczyć klientowi, czego od niego
+          potrzebujesz.
+          <br />
+          <span className="font-bold">
+            Zawsze możesz też wpaść na office hour,
+          </span>{" "}
+          czyli konsultacje grupowe, które odbywają się w każdy poniedziałek od
+          10 do 11, aby rozwiać wątpliwości i zyskać wsparcie w technicznych
+          tematach!
+          <br />
+          <span className="font-bold">
+            Powitalne office hour odbędą się 8 kwietnia,
+          </span>{" "}
+          czyli przed pierwszym spotkaniem mentoringowym. Wpadnij i postaw
+          pierwsze kroki w menadżerze reklam
+        </>
+      ),
     },
   ]
 

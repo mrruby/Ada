@@ -2,67 +2,147 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Opinions = (): JSX.Element => {
-  const commonClassNames = "w-[400px] md:w-[600px] mx-4"
+  const commonClassNames = "min-h-fit min-w-[431px] mx-4"
 
   return (
-    <div className="overflow-hidden bg-gray-200">
-      <div className="flex">
-        <div className="flex items-center animate-marquee whitespace-nowrap">
-          <div className={commonClassNames}>
-            <StaticImage
-              src="../../images/opinia1.webp"
-              alt="Ada Promis"
-              placeholder="none"
-              width={1414}
-              height={2000}
-            />
+    <div className=" bg-ada-light-pink text-center py-20">
+      <h2 className="max-w-[740px] text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-pink2 h-[24px] lg:h-[68px] lg:mt-[-10px] mx-auto">
+        A przecież Twoja nauka
+      </h2>
+      <h2 className="max-w-[800px] text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-pink2 h-[24px] lg:h-[68px] lg:mt-[-10px] mx-auto">
+        reklam może wyglądać tak:
+      </h2>
+      <div className="overflow-hidden">
+        <div className="flex my-10">
+          <div className="flex items-center animate-marquee whitespace-nowrap mb-20">
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja1.webp"
+                alt=""
+                placeholder="none"
+                width={431}
+                height={276}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja2.webp"
+                alt=""
+                placeholder="none"
+                width={432}
+                height={79}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja3.webp"
+                alt=""
+                placeholder="none"
+                width={425}
+                height={111}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja4.webp"
+                alt=""
+                placeholder="none"
+                width={537}
+                height={83}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja5.webp"
+                alt=""
+                placeholder="none"
+                width={537}
+                height={83}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja6.webp"
+                alt=""
+                placeholder="none"
+                width={537}
+                height={130}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja7.webp"
+                alt=""
+                placeholder="none"
+                width={537}
+                height={83}
+              />
+            </div>
           </div>
-          <div className={commonClassNames}>
-            <StaticImage
-              src="../../images/opinia2.webp"
-              alt="Ada Promis"
-              placeholder="none"
-              width={1414}
-              height={2000}
-            />
-          </div>
-          <div className={commonClassNames}>
-            <StaticImage
-              src="../../images/opinia3.webp"
-              alt="Ada Promis"
-              placeholder="none"
-              width={1414}
-              height={2000}
-            />
-          </div>
-        </div>
-        <div className="flex items-center animate-marquee2 whitespace-nowrap">
-          <div className={commonClassNames}>
-            <StaticImage
-              src="../../images/opinia1.webp"
-              alt="Ada Promis"
-              placeholder="none"
-              width={1414}
-              height={2000}
-            />
-          </div>
-          <div className={commonClassNames}>
-            <StaticImage
-              src="../../images/opinia2.webp"
-              alt="Ada Promis"
-              placeholder="none"
-              width={1414}
-              height={2000}
-            />
-          </div>
-          <div className={commonClassNames}>
-            <StaticImage
-              src="../../images/opinia3.webp"
-              alt="Ada Promis"
-              placeholder="none"
-              width={1414}
-              height={2000}
-            />
+          <div className="flex items-center animate-marquee2 whitespace-nowrap">
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja1.webp"
+                alt=""
+                placeholder="none"
+                width={431}
+                height={276}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja2.webp"
+                alt=""
+                placeholder="none"
+                width={432}
+                height={79}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja3.webp"
+                alt=""
+                placeholder="none"
+                width={425}
+                height={111}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja4.webp"
+                alt=""
+                placeholder="none"
+                width={537}
+                height={83}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja5.webp"
+                alt=""
+                placeholder="none"
+                width={537}
+                height={83}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja6.webp"
+                alt=""
+                placeholder="none"
+                width={537}
+                height={130}
+              />
+            </div>
+            <div className={commonClassNames}>
+              <StaticImage
+                src="../../images/referencja7.webp"
+                alt=""
+                placeholder="none"
+                width={537}
+                height={83}
+              />
+            </div>
           </div>
         </div>
       </div>
