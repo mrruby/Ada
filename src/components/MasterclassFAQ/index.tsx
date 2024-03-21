@@ -186,21 +186,6 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             </div>
           </div>
           <div className="flex flex-col items-center text-center gap-10 pb-10 md:pb-[118px]">
-            <p className="md:text-adaBase max-w-[914px] mx-auto font-medium pt-[90px]">
-              <span className="font-bold">
-                Zawsze możesz też wpaść na office hour,
-              </span>{" "}
-              czyli konsultacje grupowe, które odbywają się w każdy poniedziałek
-              od 10 do 11, aby rozwiać wątpliwości i zyskać wsparcie w
-              technicznych tematach!
-            </p>
-            <p className="md:text-adaBase max-w-[914px] mx-auto font-medium pt-2">
-              <span className="font-bold">
-                Powitalne office hour odbędą się 8 kwietnia,
-              </span>{" "}
-              czyli przed pierwszym spotkaniem mentoringowym. Wpadnij i postaw
-              pierwsze kroki w menadżerze reklam!
-            </p>
             <h4 className="md:text-adaSubtitle max-w-[868px] mx-auto font-medium py-[90px]">
               To jak?{" "}
               <span className="font-bold">
