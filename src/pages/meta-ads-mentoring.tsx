@@ -16,6 +16,7 @@ import MastermindPrice from "components/MastermindPrice"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import IconText from "components/IconText"
 import Opinions from "components/Opinions"
+import MentoringCountdown from "components/MentoringCountdown"
 
 const MentoringPage = (): JSX.Element => {
   return (
@@ -31,6 +32,7 @@ const MentoringPage = (): JSX.Element => {
       flowerBlue10={true}
       flowerBlue11={true}
     >
+      <MentoringCountdown />
       <MastermindBanner version={2} />
       <IconText />
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
@@ -40,7 +42,7 @@ const MentoringPage = (): JSX.Element => {
         <MentoringWhy />
       </MaxWithBgColorContainer>
       <Opinions />
-      <div className="h-[300px] bg-wave absolute top-[4180px] w-screen"></div>
+      <div className="h-[300px] bg-wave absolute top-[4380px] w-screen"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MentoringWhy2 />
       </MaxWithBgColorContainer>
@@ -53,7 +55,7 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MentoringInfo />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-wave">
+      <MaxWithBgColorContainer bgColor="bg-wave-element">
         <MentoringBanner version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
@@ -62,7 +64,7 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <ReferencesMentoring />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-wave">
+      <MaxWithBgColorContainer bgColor="bg-wave-element">
         <MentoringBanner version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>

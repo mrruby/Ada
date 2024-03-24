@@ -149,8 +149,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/www.svg"}
             alt=""
             placeholder="none"
-            width={99}
-            height={92}
+            width={89}
+            height={83}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -178,8 +178,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/raport.svg"}
             alt=""
             placeholder="none"
-            width={97}
-            height={93}
+            width={87}
+            height={84}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -209,8 +209,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/szablon.svg"}
             alt=""
             placeholder="none"
-            width={79}
-            height={93}
+            width={71}
+            height={84}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -241,8 +241,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"./../../images/canva.webp"}
             alt=""
             placeholder="none"
-            width={90}
-            height={92}
+            width={81}
+            height={83}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -271,8 +271,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/docs.svg"}
             alt=""
             placeholder="none"
-            width={148}
-            height={125}
+            width={130}
+            height={110}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -299,8 +299,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/docs2.svg"}
             alt=""
             placeholder="none"
-            width={119}
-            height={113}
+            width={102}
+            height={97}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -329,8 +329,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/certyfikat.svg"}
             alt=""
             placeholder="none"
-            width={129}
-            height={99}
+            width={116}
+            height={89}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -385,7 +385,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         </section>
       )}
       {version === 2 && (
-        <section className="text-center pt-10 pb-10" id="steps">
+        <section className="text-center pt-10 pb-4" id="steps">
           <h2 className="font-bold lg:h-[58px] text-adaTitle lg:text-adaTitle2 text-ada-grey uppercase">
             Nad czym będziemy
           </h2>
@@ -398,7 +398,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
                 <FeatureBox
                   key={index}
                   text={feature.text}
-                  text2={feature.text2}
                   number={feature.number}
                   styleText="font-bold max-w-[310px]"
                   styleParagraph="pt-4"
@@ -418,9 +417,9 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
               ))}
             </div>
           </div>
-          <div className="py-20">
-            <div className="text-[128px]">🎁</div>
-            <div className="md:text-adaSubtitleThird py-3 px-10 bg-ada-pink2 font-bold max-w-fit mx-auto mb-20">
+          <div className="pt-10 py-16">
+            <div className="text-[100px]">🎁</div>
+            <div className="md:text-adaSubtitleThird py-3 px-10 bg-ada-pink2 font-bold max-w-fit mx-auto mb-14">
               BONUSY:
             </div>
             <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[30px] flex-wrap">

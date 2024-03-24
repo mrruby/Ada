@@ -5,14 +5,14 @@ import { StaticImage } from "gatsby-plugin-image"
 const MentoringAbout = (): JSX.Element => {
   return (
     <section className="mb-20 px-3">
-      <div className="max-w-[810px] text-center mx-auto mb-10">
+      <div className="max-w-[700px] text-center mx-auto mb-10">
         <h2 className="text-adaSubtitle lg:text-adaTitle font-bold animate-bounce uppercase pt-[60px] lg:pt-[40px]">
           Pewnie teraz się zastanawiasz…
         </h2>
-        <p className="font-bold md:text-adaSubtitle pt-8">
+        <p className="font-bold md:text-adaBase pt-4">
           Czy znajdę czas na udział w spotkaniach?
         </p>
-        <p className="md:text-adaSubtitle py-4">
+        <p className="md:text-adaBase py-2">
           Według raportu{" "}
           <a
             href="https://datareportal.com/reports/digital-2023-poland"
@@ -25,7 +25,7 @@ const MentoringAbout = (): JSX.Element => {
           też raz na jakiś czas zdarza się zapomnieć i spędzić kilka godzin z
           telefonem w ręce? ;)
         </p>
-        <p className="md:text-adaSubtitle py-4">
+        <p className="md:text-adaBase py-2">
           W czasie programu spotykamy się na 2,5 godziny raz na tydzień. To
           prawie 19 razy mniej niż czas, który spędzasz w sieci. Przyznaj: czas
           na wspólnej pracy nad reklamami jest dużo lepiej wykorzystany niż
@@ -92,20 +92,22 @@ const MentoringAbout = (): JSX.Element => {
             poznać też:
           </h3>
         </div>
-        <div className="flex flex-col md:flex-row gap-12 mx-auto items-center pb-20">
+        <div className="flex flex-col md:flex-row gap-12 mx-auto items-center pb-4">
           <StaticImage
             loading="eager"
             src={"../../images/justyna.png"}
             alt="Justyna Król"
             placeholder="none"
-            width={360}
-            height={360}
+            width={290}
+            height={290}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
           <div className="max-w-[686px] tracking-[0.12em] px-3">
-            <h4 className="md:text-adaSubtitleThird font-bold">Justyna Król</h4>
-            <p className="md:text-adaBase">
+            <h4 className="md:text-adaSubtitleSecondary font-bold">
+              Justyna Król
+            </h4>
+            <p className="md:text-adaDesc">
               Copywriterka & socjolożka specjalizująca się w pisaniu skutecznych
               tekstów do kampanii reklamowych. Skutecznych, czyli takich, dzięki
               którym dasz się poznać i polubić, a odbiorcy zamienią się w Twoich
@@ -113,22 +115,22 @@ const MentoringAbout = (): JSX.Element => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row-reverse gap-12 mx-auto items-center pb-20">
+        <div className="flex flex-col md:flex-row-reverse gap-12 mx-auto items-center pb-4">
           <StaticImage
             loading="eager"
             src={"../../images/dorota.png"}
             alt="Dorota Woźniak"
             placeholder="none"
-            width={360}
-            height={360}
+            width={290}
+            height={290}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
           <div className="max-w-[686px] tracking-[0.12em] px-3">
-            <h4 className="md:text-adaSubtitleThird font-bold">
+            <h4 className="md:text-adaSubtitleSecondary font-bold">
               Dorota Woźniak
             </h4>
-            <p className="md:text-adaBase">
+            <p className="md:text-adaDesc">
               Architektka i projektantka graficzna. W wolnych chwilach
               ilustratorka. Specjalizuję się w kreacjach na potrzeby social
               media - w tym adsowych. Pracowałam zarówno w agencjach
@@ -144,16 +146,16 @@ const MentoringAbout = (): JSX.Element => {
             src={"../../images/marianna.png"}
             alt="Marianna Ciniak"
             placeholder="none"
-            width={360}
-            height={360}
+            width={290}
+            height={290}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
           <div className="max-w-[686px] tracking-[0.12em] px-3">
-            <h4 className="md:text-adaSubtitleThird font-bold">
-              Marianna Ciniak{" "}
+            <h4 className="md:text-adaSubtitleSecondary font-bold">
+              Marianna Ciniak
             </h4>
-            <p className="md:text-adaBase">
+            <p className="md:text-adaDesc">
               Miłośniczka automatyzacji i psycholożka to be! Jeśli chcesz
               poprawić swoją stronę www, dowiedzieć się jak być bardziej
               efektywną i co robić, kiedy ilość drobnych tasków przytłacza, I'm

@@ -1,5 +1,4 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 
 interface Props {
   text: string | JSX.Element
@@ -17,14 +16,10 @@ export const BonusBox: React.FC<Props> = ({
   return (
     <div className="flex flex-col items-center relative lg:min-w-[240px] md:max-w-[416px] px-3">
       {image}
-      <p
-        className={`lg:text-adaDesc text-center pt-8 leading-snug ${styleText}`}
-      >
-        {text}
-      </p>
+      <p className={`text-center pt-4 leading-snug ${styleText}`}>{text}</p>
       {text2 && (
         <p
-          className={`lg:text-[18px] w-full text-center pt-4 pb-20 leading-snug px-2 ${styleText}`}
+          className={`w-full text-center pt-2 pb-10 leading-snug px-2 ${styleText}`}
         >
           {text2}
         </p>

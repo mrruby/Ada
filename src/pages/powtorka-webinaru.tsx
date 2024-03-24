@@ -35,7 +35,7 @@ const WebinarReplayPage = (): JSX.Element => {
         <MentoringWhy />
       </MaxWithBgColorContainer>
       <Opinions />
-      <div className="h-[300px] bg-wave absolute top-[4180px] w-screen"></div>
+      <div className="h-[300px] bg-wave absolute top-[5180px] w-screen"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MentoringWhy2 />
       </MaxWithBgColorContainer>
@@ -48,7 +48,7 @@ const WebinarReplayPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MentoringInfo />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-wave">
+      <MaxWithBgColorContainer bgColor="bg-wave-element">
         <MentoringBanner version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
@@ -57,7 +57,7 @@ const WebinarReplayPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <ReferencesMentoring />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-wave">
+      <MaxWithBgColorContainer bgColor="bg-wave-element">
         <MentoringBanner version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>

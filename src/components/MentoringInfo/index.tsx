@@ -105,18 +105,18 @@ const MentoringInfo = (): JSX.Element => {
   return (
     <div className="flex flex-col text-ada-blue items-center px-3 pb-16">
       <div className="flex flex-col items-center max-w-[1194px]">
-        <h2 className="text-adaSubtitle uppercase md:text-adaTitle3 font-bold animate-bounce text-ada-grey text-center">
+        <h2 className="text-adaSubtitle uppercase md:text-adaTitle2 font-bold animate-bounce text-ada-grey text-center">
           Dlaczego mentoring
         </h2>
-        <h2 className="text-adaSubtitle uppercase md:text-adaTitle3 font-bold animate-bounce text-center md:mt-[-20px]">
+        <h2 className="text-adaSubtitle uppercase md:text-adaTitle2 font-bold animate-bounce text-center md:mt-[-20px]">
           startuje właśnie teraz?
         </h2>
         <StaticImage
           src={"../../images/contact.webp"}
           alt="Ada Promis"
           placeholder="none"
-          width={530}
-          height={530}
+          width={460}
+          height={460}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />

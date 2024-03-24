@@ -185,7 +185,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center text-center gap-10 pb-10 md:pb-[118px]">
+          <div className="flex flex-col items-center text-center gap-10 pb-8">
             <h4 className="md:text-adaSubtitle max-w-[868px] mx-auto font-medium py-[90px]">
               To jak?{" "}
               <span className="font-bold">
@@ -208,9 +208,9 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               iconCalender
             />
           </div>
-          <div className="flex flex-col items-center text-center gap-10 pb-10 md:pb-[118px]">
+          <div className="flex flex-col items-center text-center gap-6 pb-10 md:pb-[118px]">
             <h3 className="md:text-adaSubtitle max-w-[1024px] mx-auto font-medium pt-[90px]">
-              Chcesz, aby pracodawca sfinansował Twój udział w programie?  Tutaj
+              Chcesz, aby pracodawca sfinansował Twój udział w programie? Tutaj
               pobierzesz gotowy wniosek, który pomoże Ci zdobyć środki na
               rozwój.
             </h3>

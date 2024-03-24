@@ -16,8 +16,8 @@ const referencesList: IReferencesList[] = [
         src={"../../images/opinia1typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Monika Gajek"
         placeholder="none"
-        width={412}
-        height={583}
+        width={363}
+        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -29,8 +29,8 @@ const referencesList: IReferencesList[] = [
         src={"../../images/opinia2typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Juila Boryczka"
         placeholder="none"
-        width={412}
-        height={600}
+        width={344}
+        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -42,8 +42,8 @@ const referencesList: IReferencesList[] = [
         src={"../../images/opinia3typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Martyna Sitarz"
         placeholder="none"
-        width={412}
-        height={583}
+        width={363}
+        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -55,8 +55,8 @@ const referencesList: IReferencesList[] = [
         src={"../../images/opinia4typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Izabela Ścisłowska"
         placeholder="none"
-        width={412}
-        height={583}
+        width={342}
+        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -68,8 +68,8 @@ const referencesList: IReferencesList[] = [
         src={"../../images/opinia5typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
         placeholder="none"
-        width={412}
-        height={583}
+        width={363}
+        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -122,7 +122,7 @@ const ReferencesMentoring = (): JSX.Element => {
   return (
     <div className="pt-[40px]">
       <h3 className="mx-auto md:max-w-[1140px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
-        TAK mówią osoby, z którymi współpracowałamą{" "}
+        TAK mówią osoby, z którymi współpracowałam{" "}
       </h3>
       <h3 className="mx-auto md:max-w-[790px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
         przy kampaniach reklamowych
@@ -135,6 +135,8 @@ const ReferencesMentoring = (): JSX.Element => {
           customLeftArrow={<CustomLeftArrow />}
           customRightArrow={<CustomRightArrow />}
           ssr={true}
+          autoPlay
+          autoPlaySpeed={2000}
         >
           {referencesList.map((reference, index) => (
             <Reference key={index} image={reference.image} />

@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import TypingAnimation from "helpers/TypingAnimation"
 
 const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
   const listItemClass =
@@ -141,10 +142,16 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
       {version === 2 && (
         <>
           <div className="text-adaSubtitle lg:text-adaTitle font-bold animate-bounce uppercase pt-[60px] lg:pt-[40px]">
+            <TypingAnimation
+              text="...abyś lepiej niż kiedykolwiek zadbała"
+              textStyle="text-ada-grey"
+            />
+            <TypingAnimation text="o biznesy swoich klientów!" textStyle="" />
+            {/* 
             <h2 className="text-ada-grey">
               ...abyś lepiej niż kiedykolwiek zadbała
             </h2>
-            <h2>o biznesy swoich klientów!</h2>
+            <h2>o biznesy swoich klientów!</h2> */}
           </div>
           <h2 className="pt-20 text-adaSubtitle lg:text-adaTitle font-bold animate-bounce uppercase">
             Ile to kosztuje?
