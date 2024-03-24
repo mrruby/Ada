@@ -68,12 +68,12 @@ const MentoringWhy2 = (): JSX.Element => {
           src={"../../images/ada_about2.webp"}
           alt="Ada Promis - hero"
           placeholder="none"
-          width={435}
-          height={435}
+          width={380}
+          height={380}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
-        <h3 className="md:text-adaSubtitleThird font-bold max-w-[860px] mx-auto my-8">
+        <h3 className="md:text-adaSubtitleThird font-bold max-w-[940px] mx-auto my-6">
           <span className="text-ada-pink3">
             Rozwiązaniem jest program mentoringowy{" "}
           </span>
@@ -85,14 +85,16 @@ const MentoringWhy2 = (): JSX.Element => {
           src={"../../images/arrowdown.svg"}
           alt=""
           placeholder="none"
-          width={62}
-          height={54}
+          width={56}
+          height={48}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
-        <h2 className="text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] lg:mt-20 mx-auto">
-          To bezpieczna przestrzeń, w której:
-        </h2>
+        <div className="text-adaDesc lg:text-adaTitle font-bold lg:h-[68px] lg:mt-20 mx-auto  text-center animated-border lg:mb-2">
+          <h2 className="z-10 sticky px-2">
+            To bezpieczna przestrzeń, w której:
+          </h2>
+        </div>
         <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4 pb-10 px-3">
           <ul className="gap-10 md:gap-[120px] ">
             {leftList.map((item, index) => (
@@ -111,7 +113,6 @@ const MentoringWhy2 = (): JSX.Element => {
                 className="flex gap-4 max-w-[540px] pb-4 text-start"
                 key={index}
               >
-                {" "}
                 <span className="text-[44px] font-extrabold">&#10003;</span>
                 <span className="md:text-adaBase">{item.text}</span>
               </li>
@@ -120,9 +121,12 @@ const MentoringWhy2 = (): JSX.Element => {
         </div>
       </div>
       <div className="flex flex-col items-center mb-20 px-3">
-        <h2 className="text-adaBase lg:text-adaTitle font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[30px] border-ada-light-pink lg:h-[68px] lg:mt-10 mx-auto uppercase text-center">
-          Dołącz do programu „Meta Ads Masters Mentoring!”{" "}
-        </h2>
+        <div className="text-adaBase lg:text-adaTitle font-bold lg:h-[68px] lg:mt-10 mx-auto uppercase text-center animated-border">
+          <h2 className="z-10 sticky px-2">Dołącz do programu „Meta Ads</h2>
+        </div>
+        <div className="text-adaBase lg:text-adaTitle font-bold lg:mb-2 lg:h-[68px] mx-auto uppercase text-center animated-border">
+          <h2 className="z-10 sticky px-2">Masters Mentoring!”</h2>
+        </div>
         <p className="md:text-adaSubtitle pb-8 max-w-[1000px] text-center mt-14">
           i zrób krok w stronę zdobywania nowych klientów, którzy chętnie
           wynagrodzą Cię za świetnie wykonaną pracę!

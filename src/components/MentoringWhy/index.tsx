@@ -77,9 +77,9 @@ const MentoringWhy = (): JSX.Element => {
         />
       </div>
       <div className="flex flex-col mx-auto text-center pt-5 md:pt-[100px]">
-        <h2 className="max-w-[600px] text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-pink2 h-[24px] lg:h-[68px] lg:mt-[-10px] mx-auto">
-          Teraz możesz myśleć:{" "}
-        </h2>
+        <div className="text-adaBase lg:text-adaTitle font-bold lg:mb-2 lg:h-[68px] mx-auto  text-center animated-border2">
+          <h2 className="z-10 sticky px-2">Teraz możesz myśleć:</h2>
+        </div>
         <p className="lg:text-adaSubtitle pt-2 md:pt-8">
           Przecież to takie trudne...
           <br />
@@ -89,7 +89,7 @@ const MentoringWhy = (): JSX.Element => {
           <br />
           Czy to w ogóle zadziała?
         </p>
-        <div className="mt-10 mb-10 md:mb-[120px]">
+        <div className="mt-10 mb-10 md:mb-20">
           <Button
             type="button"
             text={
@@ -105,7 +105,7 @@ const MentoringWhy = (): JSX.Element => {
         </div>
       </div>
       <div className="mx-auto pb-10">
-        <div className="font-bold text-center max-w-[860px] mx-auto my-8">
+        <div className="font-bold text-center max-w-[860px] mx-auto">
           <h3 className="md:text-adaSubtitleThird text-ada-pink3">
             Wiem, jak się teraz czujesz.
           </h3>
