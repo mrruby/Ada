@@ -75,7 +75,7 @@ const MentoringAbout = (): JSX.Element => {
             </p>
             <p className="pb-8 md:text-adaBase">
               W programie{" "}
-              <span className="font-bold">„Ogarnij swoje adsy!”</span> skupimy
+              <span className="font-bold">„Ogarnij swoje adsy!”</span> skupię
               się Twoim koncie reklamowym! Zdradzę Ci{" "}
               <span className="font-bold">moje tipy</span> i zaoszczędzę dobre
               kilka lat samodzielnego klikania w menedżerze reklam.

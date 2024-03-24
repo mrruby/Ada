@@ -178,7 +178,7 @@ const MentoringInfo = (): JSX.Element => {
           <ul className="lg:max-w-[500px] pt-6">
             {leftNoList.map((item, index) => (
               <div className="flex gap-4">
-                <span className="text-[44px] font-extrabold">&#10003;</span>
+                <span className="text-[44px] font-extrabold">&#10007;</span>
                 <li key={index} className={listItemClass}>
                   {item}
                 </li>
@@ -188,7 +188,7 @@ const MentoringInfo = (): JSX.Element => {
           <ul className="lg:max-w-[500px] pt-6">
             {rightNoList.map((item, index) => (
               <div className="flex gap-4">
-                <span className="text-[44px] font-extrabold">&#10003;</span>
+                <span className="text-[44px] font-extrabold">&#10007;</span>
                 <li key={index} className={listItemClass}>
                   {item}
                 </li>

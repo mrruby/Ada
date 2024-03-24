@@ -147,11 +147,6 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
               textStyle="text-ada-grey"
             />
             <TypingAnimation text="o biznesy swoich klientów!" textStyle="" />
-            {/* 
-            <h2 className="text-ada-grey">
-              ...abyś lepiej niż kiedykolwiek zadbała
-            </h2>
-            <h2>o biznesy swoich klientów!</h2> */}
           </div>
           <h2 className="pt-20 text-adaSubtitle lg:text-adaTitle font-bold animate-bounce uppercase">
             Ile to kosztuje?
