@@ -58,7 +58,7 @@ const MastermindBanner = ({ version }: { version: number }): JSX.Element => {
             src={"../../images/bg-mentoring.png"}
             formats={["auto", "webp", "avif"]}
           />
-          <div className="row-start-1 col-start-1 grid relative pt-20 md:pt-40 tracking-[0.05em]">
+          <div className="row-start-1 col-start-1 grid relative pt-20 md:pt-20 tracking-[0.05em]">
             <div className="mx-auto flex flex-col items-start px-3">
               <h1 className="text-adaBase lg:text-adaTitle font-bold leading-tight animate-bounce pb-6">
                 Prowadzisz solo-biznes marketingowy?

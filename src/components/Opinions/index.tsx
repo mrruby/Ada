@@ -5,7 +5,7 @@ const Opinions = (): JSX.Element => {
   const commonClassNames = "min-h-fit min-w-[431px] mx-4"
 
   return (
-    <div className=" bg-ada-light-pink text-center py-20">
+    <div className=" bg-ada-light-pink text-center py-16">
       <h2 className="max-w-[740px] text-adaBase lg:text-adaTitle font-bold lg:mb-2 border-b-[16px] lg:border-b-[30px] border-ada-pink2 h-[24px] lg:h-[68px] lg:mt-[-10px] mx-auto">
         A przecież Twoja nauka
       </h2>

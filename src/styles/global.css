@@ -46,9 +46,43 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  animation: rotate 6s infinite;
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.bg-wave-element {
+  position: relative;
+}
+.bg-wave-element::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 400px;
+  background-image: url("../../static/assets/wave.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  animation: rotate 6s infinite;
+}
+
 @media (max-width: 768px) {
-  .bg-wave {
+  .bg-wave,
+  .bg-wave-element::before {
     background-size: contain;
   }
 }
@@ -88,4 +122,58 @@ body {
 
 .bg-blue {
   background-color: #283977 !important;
+}
+
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.animated-border {
+  position: relative;
+}
+
+.animated-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0;
+  left: 0;
+  z-index: 1;
+  height: 30px;
+  background-color: #eedcf6;
+  animation: underlineAnimation 16s infinite;
+}
+@media (max-width: 1170px) {
+  .animated-border::after {
+    height: 10px;
+  }
+}
+
+.animated-border2 {
+  position: relative;
+}
+
+.animated-border2::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0;
+  left: 0;
+  z-index: 1;
+  height: 30px;
+  background-color: #ffd3eb;
+  animation: underlineAnimation 16s infinite;
+}
+@media (max-width: 1170px) {
+  .animated-border2::after {
+    height: 10px;
+  }
 }
