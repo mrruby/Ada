@@ -139,7 +139,7 @@ const MentoringWhy2 = (): JSX.Element => {
               nad kampaniami!
             </span>
           }
-          url="https://koalendar.com/e/meta-ads-master"
+          sectionId="koalendar"
           textSize="md:text-adaSubtitle uppercase"
           btnStyle="md:w-[460px] bg-ada-pink2"
         />
