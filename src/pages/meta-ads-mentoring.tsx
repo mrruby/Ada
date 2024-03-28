@@ -17,6 +17,7 @@ import MasterclassFAQ from "components/MasterclassFAQ"
 import IconText from "components/IconText"
 import Opinions from "components/Opinions"
 import MentoringCountdown from "components/MentoringCountdown"
+import MentoringKoalendar from "components/MentoringKoalendar"
 
 const MentoringPage = (): JSX.Element => {
   return (
@@ -76,6 +77,7 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MasterclassFAQ version={2} />
       </MaxWithBgColorContainer>
+      <MentoringKoalendar />
     </Layout>
   )
 }

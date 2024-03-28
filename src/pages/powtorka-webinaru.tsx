@@ -16,6 +16,7 @@ import MastermindInfo3 from "components/MastermindInfo3"
 import MastermindPrice from "components/MastermindPrice"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import MastermindAgenda from "components/MastermindAgenda"
+import MentoringKoalendar from "components/MentoringKoalendar"
 
 const WebinarReplayPage = (): JSX.Element => {
   return (

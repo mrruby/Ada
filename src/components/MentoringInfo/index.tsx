@@ -21,11 +21,6 @@ const MentoringInfo = (): JSX.Element => {
       sposobu zdobywania klientów na 110%
     </span>,
     <span key={2}>
-      prowadzisz reklamy na koncie reklamowym, na którym budżet miesięczny
-      wynosi
-      <span className="font-bold"> min. 700 zł</span>
-    </span>,
-    <span key={3}>
       chcesz{" "}
       <span className="font-bold">
         {" "}
@@ -33,15 +28,15 @@ const MentoringInfo = (): JSX.Element => {
       </span>{" "}
       a dzięki temu zarabiać więcej
     </span>,
+    <span key={3}>
+      wiesz, że
+      <span className="font-bold"> skuteczny marketing </span>
+      to patrzenie na liczby + kreatywna głowa i chcesz działać w ten sposób
+    </span>,
   ]
 
   const rightYesList: JSX.Element[] = [
     <span key={0}>
-      wiesz, że
-      <span className="font-bold"> skuteczny marketing</span>
-      to patrzenie na liczby + kreatywna głowa i chcesz działać w ten sposób
-    </span>,
-    <span key={1}>
       możesz
       <span className="font-bold">
         {" "}
@@ -49,7 +44,7 @@ const MentoringInfo = (): JSX.Element => {
       </span>
       zdajesz sobie sprawę, że tutaj nie wystarczy zerknięcie z doskoku
     </span>,
-    <span key={2}>
+    <span key={1}>
       <span className="font-bold">
         {" "}
         znasz podstawową obsługę menadżera reklam
@@ -57,7 +52,7 @@ const MentoringInfo = (): JSX.Element => {
       — nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza, gdzie
       kliknąć, aby ustawić kampanię i stworzyć zestaw reklam to must have{" "}
     </span>,
-    <span key={3}>
+    <span key={2}>
       <span className="font-bold">jesteś gotowa </span> na pracę, testowanie,
       analizę, modyfikacje i świętowanie (tak, na to też przyjdzie czas, gdy
       zobaczysz rosnące wyniki)
@@ -75,25 +70,18 @@ const MentoringInfo = (): JSX.Element => {
       materiałów i optymalizację
     </span>,
     <span key={2}>
-      <span className="font-bold">
-        nie masz pod opieką konta reklamowego z budżetem miesięcznym min. 700 zł
-      </span>{" "}
-      Podczas programu pracujemy na realnych biznesach i stawiamy na praktykę,
-      więc konto reklamowe to must have!
-    </span>,
-  ]
-  const rightNoList: JSX.Element[] = [
-    <span key={0}>
       <span className="font-bold">wiesz, że </span>
       Ty wszystko zrobisz najlepiej{" "}
       <span className="font-bold"> i nie interesują Cię inne perspektywy</span>
     </span>,
-    <span key={1}>
+  ]
+  const rightNoList: JSX.Element[] = [
+    <span key={0}>
       nigdy nie widziałaś na oczy menadżerze reklam, albo słyszysz o nim
       pierwszy raz. W takim wypadku proponuję, abyś najbliższe miesiące spędziła
       na przeklikaniu się przez system i dołączyła do drugiej edycji.
     </span>,
-    <span key={2}>
+    <span key={1}>
       jesteś super wymiataczką —
       <span className="font-bold">
         tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz.{" "}
