@@ -1,6 +1,7 @@
 import React from "react"
 import { Button } from "helpers/Button"
 import CountdownTimer from "helpers/CountdownTimer"
+import MentoringKoalendar from "components/MentoringKoalendar"
 
 interface MastermindVideoProps {
   videoUrl: string
@@ -25,19 +26,8 @@ const MastermindVideo = ({
             Umów się na wirtualną kawkę ☕, <br /> aby pogadać o programie
             mentoringowym
           </h2>
-          <Button
-            type="button"
-            text={
-              <>
-                Kliknij<span className="font-bold"> i wybierz termin</span>
-              </>
-            }
-            url={buttonUrl}
-            textSize="md:text-adaSubtitle"
-            btnStyle="xl:w-[410px] border-b-4 border-ada-pink"
-            iconCalender
-          />
         </div>
+        <MentoringKoalendar />
       </div>
       <div className="flex flex-col items-center">
         <h1 className="text-adaBase lg:text-adaTitle font-bold text-center leading-tight animate-bounce pb-8">
