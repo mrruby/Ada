@@ -25,7 +25,7 @@ const WebinarReplayPage = (): JSX.Element => {
         <MastermindVideo
           videoUrl="https://www.youtube.com/embed/y_HOSt8dcy4?si=aKR8v1BbLwZZ1cZq"
           buttonUrl="https://koalendar.com/e/meta-ads-master/"
-          targetDate={new Date("2024-04-03T00:00:00")}
+          targetDate={new Date("2024-04-04T23:59:59")}
         />
       </MaxWithBgColorContainer>
       <IconText />

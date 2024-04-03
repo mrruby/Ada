@@ -7,7 +7,7 @@ const MentoringCountdown = (): JSX.Element => {
       <h2 className="text-adaBase lg:text-[36px] font-bold text-center leading-tight animate-bounce pt-5">
         ZAREZERWUJ SPOTKANIE DO ☕
       </h2>
-      <CountdownTimer targetDate={new Date("2024-04-03T00:00:00")} />
+      <CountdownTimer targetDate={new Date("2024-04-04T23:59:00")} />
     </div>
   )
 }
