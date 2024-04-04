@@ -16,17 +16,23 @@ import MastermindInfo3 from "components/MastermindInfo3"
 import MastermindPrice from "components/MastermindPrice"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import MastermindAgenda from "components/MastermindAgenda"
-import MentoringKoalendar from "components/MentoringKoalendar"
 
 const WebinarReplayPage = (): JSX.Element => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindVideo
+        {/* <MastermindVideo
           videoUrl="https://www.youtube.com/embed/y_HOSt8dcy4?si=aKR8v1BbLwZZ1cZq"
           buttonUrl="https://koalendar.com/e/meta-ads-master/"
           targetDate={new Date("2024-04-04T23:59:59")}
-        />
+        /> */}
+        <div className="text-center mt-20 mb-10 max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl font-semibold">
+            Twój dostęp do nagrania się skończył, ale rekrutacja do Meta Ads
+            Masters Mentoring wciąż trwa! Nie przegap i zarezerwuj termin
+            niezobowiązującego spotkania do 4 kwietnia do końca dnia.
+          </p>
+        </div>
       </MaxWithBgColorContainer>
       <IconText />
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
