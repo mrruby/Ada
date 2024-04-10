@@ -36,7 +36,7 @@ const MastermindFAQ = (): JSX.Element => {
         <>
           Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
           przedstawić swój problem, zadać pytania. Spotykamy się w grupie
-          maksymalnie 7 osób, aby każdy znalazł czas dla siebie. <br /> ❌ To
+          maksymalnie 10 osób, aby każdy znalazł czas dla siebie. <br /> ❌ To
           NIE są spotkania, na których jedna osoba mówi, a druga słucha. <br />{" "}
           ✅ To są spotkania, na których każdy może zabrać głos i znaleźć
           przestrzeń dla siebie.

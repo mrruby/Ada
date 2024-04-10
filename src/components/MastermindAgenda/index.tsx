@@ -221,12 +221,7 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 <h3 className={listItemTitleClass2}>22,5 godziny spotkań!</h3>
                 <p className={listItemDesClass}>
                   Spotykamy się 9 razy na 2,5 godziny na Google Meets. Co
-                  tydzień przez 3 miesiące od kwietnia do czerwca, czyli w
-                  jednym z najgorętszych sezonów reklamowych roku 🔥 Teraz
-                  uczysz się prowadzić skuteczne kampanie reklamowe, a od
-                  września pełną parą startujesz z przygotowaniami do Black
-                  Friday oraz promocji przedświątecznych i wykorzystujesz
-                  zdobytą wiedzę.
+                  tydzień przez 3 miesiące (termin do ustalenia).
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
