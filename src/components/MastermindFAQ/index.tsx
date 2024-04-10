@@ -15,7 +15,7 @@ const MastermindFAQ = (): JSX.Element => {
     {
       question: "Kiedy będą odbywać się spotkania?",
       answer:
-        "Spotykamy się co 2 tygodnie. Zaczniemy od konsultacji indywidualnej już w grudniu, na której skonfigurujemy Twojego Managera Reklam. Terminy pozostałych spotkań ustalimy wspólnie.",
+        "Spotykamy się co 2 tygodnie. Zaczniemy od konsultacji indywidualnej już w (termin do ustalenia), na której skonfigurujemy Twojego Managera Reklam. Terminy pozostałych spotkań ustalimy wspólnie.",
     },
     {
       question: "Czy spotkania będą nagrywane?",
@@ -74,22 +74,23 @@ const MastermindFAQ = (): JSX.Element => {
       </div>
       <div className="flex flex-col items-center text-center gap-10 pb-10 md:pb-[118px]">
         <h3 className="md:text-adaSubtitle max-w-[1024px] mx-auto font-medium pt-[90px]">
-          To jak:{" "}
+          To jak,{" "}
           <span className="font-bold">
-            dołączasz teraz i szlifujesz kampanie,
+            zapisujesz się na listę zainteresowanych,
           </span>{" "}
-          aby zobaczyć realny wzrost wyników, czy czekasz do kolejnej edycji?
+          aby w kolejnej edycji rozwinąć swój biznes z reklamami?”
         </h3>
         <Button
           type="button"
           text={
             <span className="font-bold">
-              Dołączam teraz, bo też chcę rozwijać siebie i biznes!
+              Już nie mogę się doczekać! <br />
+              Daj znać, gdy zapisy wystartują
             </span>
           }
-          url="https://koalendar.com/e/meta-ads-master"
+          sectionId="zostaw-maila"
           textSize="md:text-adaSubtitle"
-          btnStyle="md:w-[740px] bg-white border-b-4 border-ada-pink"
+          btnStyle="md:w-[640px] bg-white border-b-4 border-ada-pink"
           iconCalender
         />
       </div>

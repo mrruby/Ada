@@ -57,7 +57,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     {
       question: "Kiedy będą odbywać się spotkania?",
       answer:
-        "✓ Spotkania tematyczne w ramach programu mentoringowego będą odbywać się w środy w godzinach 12:30-15:00, 10, 17, 24 kwietnia, 8, 15, 22, 29 maja, 12, 19 czerwca. Czekamy też na Was w każdy poniedziałek o 10:00 na office hour! Podane terminy są elastyczne. Już teraz wiesz, że nie będziesz mogła wpaść na któreś spotkanie? Daj znać — przedyskutujemy temat i poszukamy alternatywnych terminów.",
+        "✓ Spotkania tematyczne w ramach programu mentoringowego będą odbywać się w (termin do ustalenia). Czekamy też na Was w każdy (termin do ustalenia) o (godzina do ustalenia) na office hour! Podane terminy są elastyczne. Już teraz wiesz, że nie będziesz mogła wpaść na któreś spotkanie? Daj znać — przedyskutujemy temat i poszukamy alternatywnych terminów.",
     },
     {
       question: "Czy spotkania będą nagrywane?",
@@ -109,15 +109,9 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           <span className="font-bold">
             Zawsze możesz też wpaść na office hour,
           </span>{" "}
-          czyli konsultacje grupowe, które odbywają się w każdy poniedziałek od
-          10 do 11, aby rozwiać wątpliwości i zyskać wsparcie w technicznych
+          czyli konsultacje grupowe, które odbywają się w każdy (termin do
+          ustalenia), aby rozwiać wątpliwości i zyskać wsparcie w technicznych
           tematach!
-          <br />
-          <span className="font-bold">
-            Powitalne office hour odbędą się 8 kwietnia,
-          </span>{" "}
-          czyli przed pierwszym spotkaniem mentoringowym. Wpadnij i postaw
-          pierwsze kroki w menadżerze reklam
         </>
       ),
     },
@@ -206,7 +200,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             <h4 className="md:text-adaSubtitle max-w-[868px] mx-auto font-medium py-[90px]">
               To jak?{" "}
               <span className="font-bold">
-                Dołączasz teraz i szlifujesz kampanie,
+                Dołączasz i szlifujesz kampanie,
               </span>{" "}
               aby przez kolejne miesiące widzieć systematyczny wzrost wyników,
               czy czekasz do kolejnej edycji?
@@ -215,11 +209,10 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               type="button"
               text={
                 <span className="font-bold uppercase">
-                  Dołączam teraz, bo też chcę zdobywać nowych klientów i
-                  zarabiać więcej!
+                  Wyślij mi informacje o kolejnej edycji programu!
                 </span>
               }
-              sectionId="koalendar"
+              sectionId="zostaw-maila"
               textSize="md:text-adaSubtitleSecondary"
               btnStyle="md:w-[810px] bg-ada-pink2"
               iconCalender

@@ -21,19 +21,22 @@ const MastermindWhy2 = (): JSX.Element => {
           Czy to dla Ciebie?{" "}
         </h2>
         <p className="lg:text-adaDesc lg:w-[574px] pt-10 font-medium leading-tight pb-9">
-          W pierwszej oficjalnej edycji zaplanowałam 7 miejsc! <br /> Zanim
-          podejmiesz decyzję, proponuję Ci krótkie spotkanie, podczas którego
-          wspólnie porozmawiamy o Twoim udziale w programie mentoringowym. Chcę
+          W każdej edycji jest tylko 7-10 miejsc. <br /> Zanim zdecydujesz się
+          dołączyć, zaproponuję Ci krótkie spotkanie, podczas którego wspólnie
+          porozmawiamy o Twoim udziale w programie mentoringowym. Chcę
           dowiedzieć się, jakie są Twoje oczekiwania i poznać lepiej Twój
           biznes!
         </p>
         <Button
           type="button"
-          text={<span className="font-bold">Umawiam spotkanie</span>}
-          url="https://koalendar.com/e/meta-ads-master"
+          text={
+            <span className="font-bold">
+              Daj znać, gdy otworzysz zapisy na rozmowy!
+            </span>
+          }
+          sectionId="zostaw-maila"
           textSize="md:text-adaSubtitle border-b-4 border-ada-pink"
-          btnStyle="md:w-[340px]"
-          iconCalender
+          btnStyle="md:w-[620px]"
         />
       </div>
     </div>

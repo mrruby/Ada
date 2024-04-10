@@ -25,12 +25,13 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
       </span>
       <br />
       Miesięczny pakiet konsultacji marketingowych (3 lub 4 godzinne spotkania)
-      to 1500 zł netto. To {">"}375 złotych za godzinę wiedzy.
+      to (cena w przygotowaniu) zł netto. To {">"}(cena w przygotowaniu) złotych
+      za godzinę wiedzy.
     </span>,
     <span key={2}>
       <span className="font-bold">
-        W programie godzina zdobywania wiedzy i wymiany doświadczeń kosztuje 137
-        złotych.{" "}
+        W programie godzina zdobywania wiedzy i wymiany doświadczeń kosztuje
+        (cena w przygotowaniu) złotych.{" "}
       </span>
       <br />
       Konsultacje indywidualne masz w gratisie! Jestem pewna, że kampanie
@@ -99,16 +100,22 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
             </h2>
           </div>
           <p className="max-w-[710px] md:text-adaSubtitle pt-16">
-            <span className="font-bold"> 750 złotych netto </span>
-            (920.40 zł brutto) miesięcznie przy płatności w 3 ratach co miesiąc.{" "}
-            <span className="font-bold">W sumie 2250 złotych.</span>
+            <span className="font-bold"> (cena w przygotowaniu) netto </span>
+            (cena w przygotowaniu) miesięcznie przy płatności w 3 ratach co
+            miesiąc.{" "}
+            <span className="font-bold">
+              W sumie (cena w przygotowaniu) złotych.
+            </span>
           </p>
           <div className="bg-ada-light-pink lg:w-[1016px] md:text-adaSubtitle my-7">
             <p className="max-w-[710px] mx-auto py-2">
               <span className="font-bold">Płacąc za całość, oszczędzasz:</span>{" "}
               wtedy kwota całościowa to{" "}
-              <span className="font-bold">2050 złotych netto </span>
-              (2521,50 zł brutto)!
+              <span className="font-bold">
+                {" "}
+                (cena w przygotowaniu) złotych netto{" "}
+              </span>
+              (cena w przygotowaniu){" "}
             </p>
           </div>
           <ul className="max-w-[960px] mb-8">
@@ -130,9 +137,11 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
           <Button
             type="button"
             text={
-              <span className="font-bold">Rezerwuję spotkanie i działam!</span>
+              <span className="font-bold">
+                Zapisuję się na listę osób zainteresowanych!
+              </span>
             }
-            url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
+            sectionId="zostaw-maila"
             textSize="md:text-adaSubtitle"
             btnStyle="md:w-[480px] border-b-4 border-ada-pink"
             iconCalender
@@ -157,10 +166,7 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
               Wartość wszystkich materiałów i spotkań,
             </span>{" "}
             do których zyskujesz dostęp dołączając do programu to
-            <span className="font-bold">
-              {" "}
-              13 763 złotych netto, czyli 16 338 złotych brutto.
-            </span>
+            <span className="font-bold">(cena w przygotowaniu)</span>
           </p>
           <p className="max-w-[780px] md:text-adaSubtitle pt-16">
             Wiem jednak, że może być Ci{" "}
@@ -173,17 +179,19 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
             <p className="mx-auto">
               Dlatego przygotowałam{" "}
               <span className="font-bold">
-                dla Ciebie specjalną, niską cenę - 2850 złotych netto{" "}
+                dla Ciebie specjalną, niską cenę - (tu będzie cena netto)
               </span>{" "}
-              (3505,50 zł brutto) przy płatności z góry!
+              (tu będzie cena brutto) przy płatności z góry!
             </p>
             <p className="mx-auto">
               Wybierając płatność comiesięczną,{" "}
-              <span className="font-bold">opłata wynosi 770 złotych netto</span>{" "}
-              (947,10 zł brutto) miesięcznie.
+              <span className="font-bold">
+                opłata wynosi (cena w przygotowaniu) złotych netto
+              </span>{" "}
+              miesięcznie.
               <span className="font-bold">
                 {" "}
-                W sumie 3788,40 zł brutto.
+                W sumie (cena w przygotowaniu) zł brutto.
               </span>{" "}
             </p>
           </div>

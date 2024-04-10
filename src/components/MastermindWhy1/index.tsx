@@ -86,10 +86,10 @@ const MastermindWhy1 = (): JSX.Element => {
           type="button"
           text={
             <span className="font-bold">
-              Chcę dołączyć - umawiam bezpłatną konsultację
+              Chcę dołączyć! Zapisuję się na listę zainteresowanych!
             </span>
           }
-          url="https://koalendar.com/e/ogarnij-swoje-adsy-konsultacja/"
+          sectionId="zostaw-maila"
           textSize="md:text-adaSubtitle font-bold"
           btnStyle="md:w-[700px] px-0 border-b-4 border-ada-pink"
           iconCalender

@@ -92,7 +92,7 @@ const MentoringInfo = (): JSX.Element => {
 
   return (
     <div className="flex flex-col text-ada-blue items-center px-3 pb-16">
-      <div className="flex flex-col items-center max-w-[1194px]">
+      {/* <div className="flex flex-col items-center max-w-[1194px]">
         <h2 className="text-adaSubtitle uppercase md:text-adaTitle2 font-bold animate-bounce text-ada-grey text-center">
           Dlaczego mentoring
         </h2>
@@ -130,7 +130,7 @@ const MentoringInfo = (): JSX.Element => {
             aby odpowiedzieć na zapytania od nowych klientów.
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="pt-[60px] lg:pt-[150px]">
         <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase">
           Program jest dla Ciebie, jeśli…{" "}
