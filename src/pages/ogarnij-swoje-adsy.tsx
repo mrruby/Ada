@@ -56,6 +56,6 @@ const MastermindPage = (): JSX.Element => {
   )
 }
 
-export const Head = () => <SEO title="Strona archiwalna - Ogarnij swoje Adsy" />
+export const Head = () => <SEO title="Ogarnij swoje Adsy Mentoring" />
 
 export default MastermindPage
