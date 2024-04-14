@@ -56,8 +56,17 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
   const leftList2: ListItem[] = [
     {
       question: "Kiedy będą odbywać się spotkania?",
-      answer:
-        "✓ Spotkania tematyczne w ramach programu mentoringowego będą odbywać się w (termin do ustalenia). Czekamy też na Was w każdy (termin do ustalenia) o (godzina do ustalenia) na office hour! Podane terminy są elastyczne. Już teraz wiesz, że nie będziesz mogła wpaść na któreś spotkanie? Daj znać — przedyskutujemy temat i poszukamy alternatywnych terminów.",
+      answer: (
+        <>
+          ✓ Spotkania tematycznie w ramach programu mentoringowego odbywają się
+          co tydzień lub co 2 tygodnie. Terminy są elastyczne! Jeśli nie będzie
+          pasował Ci któryś z nich, grupowo przedyskutujemy zmianę na inny :)
+          <br />
+          Raz w tygodniu widzimy się również na office hours, czyli grupowych
+          konsultacjach, na których wspólnie zaglądamy do Waszych menadżerów
+          reklam i odpowiadamy na pytania.
+        </>
+      ),
     },
     {
       question: "Czy spotkania będą nagrywane?",
@@ -109,9 +118,8 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           <span className="font-bold">
             Zawsze możesz też wpaść na office hour,
           </span>{" "}
-          czyli konsultacje grupowe, które odbywają się w każdy (termin do
-          ustalenia), aby rozwiać wątpliwości i zyskać wsparcie w technicznych
-          tematach!
+          czyli konsultacje grupowe, które odbywają się raz w tygodniu, aby
+          rozwiać wątpliwości i zyskać wsparcie w technicznych tematach!
         </>
       ),
     },
