@@ -16,14 +16,35 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
   const mentoringLinkClass =
     "text-white-pink text-adaSubtitle md:text-adaNav font-extrabold uppercase transition-colors duration-300 hover:text-ada-white border-b-4 border-ada-pink hover:border-ada-blue"
 
+  const submenuLinkClass =
+    "text-ada-blue text-adaBase md:text-adaNav font-bold uppercase transition-colors duration-300 hover:text-ada-white pt-4 pb-4 bg-ada-light-pink text-center"
+
   const links = [
     { to: "https://sklep.adrianna.com.pl/", text: "sklep" },
-    { to: "/meta-ads-mentoring", text: "mentoring" },
+    {
+      to: "",
+      text: "mentoring",
+      subMenu: [
+        {
+          to: "/meta-ads-mentoring",
+          text: "dla specjalistek",
+        },
+        {
+          to: "/ogarnij-swoje-adsy/",
+          text: "dla biznesu",
+        },
+      ],
+    },
     { to: "/about", text: "o mnie" },
     { to: "/materials", text: "materiały" },
     { to: "/blog", text: "blog" },
     { to: "/contact", text: "kontakt" },
   ]
+
+  const [isOpen, setIsOpen] = React.useState(false)
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <>
@@ -44,16 +65,35 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
             quality={95}
           />
         </Link>
-        {links.map((link, index) => (
-          <NavLink
-            key={index}
-            to={link.to}
-            text={link.text}
-            className={
-              link.text === "mentoring" ? mentoringLinkClass : linkClass
-            }
-          />
-        ))}
+        {links.map((link, index) => {
+          return link.subMenu ? (
+            <div key={index} className="flex flex-col mx-auto">
+              <button className={mentoringLinkClass} onClick={handleMenuToggle}>
+                {link.text}
+              </button>
+              <div className="flex flex-col bg-ada-light-pink px-6">
+                {isOpen &&
+                  link.subMenu.map((subLink) => (
+                    <NavLink
+                      key={subLink.text}
+                      to={subLink.to}
+                      text={subLink.text}
+                      className={submenuLinkClass}
+                    />
+                  ))}
+              </div>
+            </div>
+          ) : (
+            <NavLink
+              key={index}
+              to={link.to}
+              text={link.text}
+              className={
+                link.text === "mentoring" ? mentoringLinkClass : linkClass
+              }
+            />
+          )
+        })}
       </nav>
       <Burger open={open} setOpen={setOpen} />
     </>
