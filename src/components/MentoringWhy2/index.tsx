@@ -131,18 +131,6 @@ const MentoringWhy2 = (): JSX.Element => {
           i zrób krok w stronę zdobywania nowych klientów, którzy chętnie
           wynagrodzą Cię za świetnie wykonaną pracę!
         </p>
-        <Button
-          type="button"
-          text={
-            <span className="font-bold">
-              Dołączam i pracuję <br />
-              nad kampaniami!
-            </span>
-          }
-          sectionId="koalendar"
-          textSize="md:text-adaSubtitle uppercase"
-          btnStyle="md:w-[460px] bg-ada-pink2"
-        />
       </div>
     </section>
   )

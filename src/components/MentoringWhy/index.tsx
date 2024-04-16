@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import MentoringForm from "components/MentoringForm"
 
 const MentoringWhy = (): JSX.Element => {
   return (
@@ -66,22 +67,17 @@ const MentoringWhy = (): JSX.Element => {
           type="button"
           text={
             <span className="font-bold">
-              Umawiam się na wirtualną kawkę, aby pogadać o szczegółach
-              programu!
+              Zapisuję się na listę osób zainteresowanych programem!
             </span>
           }
-          sectionId="koalendar2"
+          sectionId="zapisz-sie"
           textSize="md:text-adaSubtitle uppercase"
           btnStyle="md:w-[810px] bg-ada-pink2 md:h-[110px] mx-auto"
           iconCalender
         />
-        <iframe
-          src="https://koalendar.com/e/meta-ads-master?embed=true"
-          width="100%"
-          height="800px"
-          frameBorder="0"
-          id="koalendar2"
-        ></iframe>
+        <div className="mt-16 mb-10" id="zapisz-sie">
+          <MentoringForm version={1} />
+        </div>
       </div>
       <div className="flex flex-col mx-auto text-center pt-5 md:pt-[100px]">
         <div className="text-adaBase lg:text-adaTitle font-bold lg:mb-2 lg:h-[68px] mx-auto  text-center animated-border2">

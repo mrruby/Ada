@@ -114,30 +114,37 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
       <span className="font-bold">9 spotkań</span> w czasie rzeczywistym
       <span className="font-bold">
         {" "}
-        po 2,5 godziny o łącznej wartości 7312 złotych
+        po 2,5 godziny o łącznej wartości (cena w przygotowaniu) złotych
       </span>
     </span>,
     <span key={1}>
       <span className="font-bold">60-minutowa konsultacja indywidualna</span> do
-      wykorzystania w dowolnym momencie trwania kampanii
-      <span className="font-bold">o wartości 325 złotych</span>
+      wykorzystania w dowolnym momencie trwania kampanii{" "}
+      <span className="font-bold">
+        o wartości (cena w przygotowaniu) złotych
+      </span>
     </span>,
     <span key={2}>
       <span className="font-bold">bieżący kontakt i wsparcie na grupie</span> na
       Facebooku oraz czacie na Messegerze lub Instagramie (kanał do ustalenia w
       pierwszym tygodniu trwania programu)
-      <span className="font-bold"> o wartości 697 złotych</span>
+      <span className="font-bold">
+        {" "}
+        o wartości (cena w przygotowaniu) złotych
+      </span>
     </span>,
   ]
   const rightProgramDetailsList2: JSX.Element[] = [
     <span key={0}>
       <span className="font-bold">12 godzin office hour, </span>
       czyli grupowych konsultacji reklamowych{" "}
-      <span className="font-bold">o łącznej wartości 3900 złotych</span>
+      <span className="font-bold">
+        o łącznej wartości (cena w przygotowaniu) złotych
+      </span>
     </span>,
     <span key={1}>
       <span className="font-bold">
-        6 bonusów o łącznej wartości 1529 złotych
+        6 bonusów o łącznej wartości (cena w przygotowaniu) złotych
       </span>
       <br />
     </span>,
