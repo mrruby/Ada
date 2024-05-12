@@ -3,7 +3,6 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import AboutBanner2 from "components/AboutBanner2"
-import References from "components/References"
 import Questions from "components/Questions"
 import MastermindBanner from "components/MastermindBanner"
 import MastermindSteps from "components/MastermindSteps"
@@ -16,6 +15,7 @@ import MastermindAgenda from "components/MastermindAgenda"
 import MastermindPrice from "components/MastermindPrice"
 import MastermindFAQ from "components/MastermindFAQ"
 import MentoringForm from "components/MentoringForm"
+import ReferencesMentoring from "components/ReferencesMentoring"
 
 const MastermindPage = (): JSX.Element => {
   return (
@@ -23,6 +23,7 @@ const MastermindPage = (): JSX.Element => {
       <MastermindBanner version={1} />
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MastermindInfo1 />
+        <ReferencesMentoring title2 />
         <MastermindWhy1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
@@ -31,7 +32,7 @@ const MastermindPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MastermindSteps version={1} />
         <MastermindWhy2 />
-        <References title2 />
+        <ReferencesMentoring title1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MastermindInfo2 />

@@ -61,7 +61,7 @@ const MentoringPage = (): JSX.Element => {
         <MentoringAbout />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring />
+        <ReferencesMentoring title1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-wave-element">
         <MentoringBanner version={3} />

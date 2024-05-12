@@ -64,6 +64,36 @@ const MastermindInfo1 = (): JSX.Element => {
         zmiany, ale również niepewność — skąd masz wiedzieć, czy to, co robisz,
         ma sens?
       </h3>
+      <div className="max-w-[1124px] mx-auto mt-14">
+        <h2 className="text-[20px] lg:text-adaTitle font-bold  border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
+          Pewnie wiesz, że...
+        </h2>
+        <p className="lg:text-adaBase pt-[24px] font-medium leading-tight">
+          {" "}
+          ...działania organiczne są ograniczone. Oczywiście możesz tworzyć
+          posty, projektować karuzele, nagrywać rolki i patrzeć, jak po kilku
+          godzinach zostają przykryte przez inne materiały.
+        </p>
+        <p className="lg:text-adaBase pt-[24px] font-medium leading-tight">
+          {" "}
+          W ten sposób pozyskasz jednego klienta, drugiego, trzeciego, ale jeśli
+          chcesz iść w dziesiątki czy setki, ❌ zamiast przeznaczać wiele na
+          tworzenie kolejnych postów ✅ zbuduj przemyślany lejek marketingowy i
+          wdrażaj płatne promocje przemyślanych treści.
+        </p>
+        <p className="lg:text-adaBase pt-[24px] font-medium leading-tight pb-10">
+          {" "}
+          Chyba nie muszę Ci mówić, która opcja jest przyszłościowa, można ją
+          skalować i optymalizować jej potencjał? 😉
+        </p>
+        <h2 className="text-[20px] lg:text-adaTitle font-bold w-[140px] md:w-[300px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
+          Dlatego...
+        </h2>
+        <p className="lg:text-adaBase pt-[24px] font-medium leading-tight">
+          przygotowałam dla Ciebie program mentoringowy{" "}
+          <span className="font-bold">„Ogarnij swoje adsy!”</span>
+        </p>
+      </div>
     </div>
   )
 }

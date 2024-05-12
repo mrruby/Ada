@@ -8,14 +8,17 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
     {
       text: "Start! Układamy swój lejek, analizujemy ścieżkę swojego biznesu.",
       number: "1",
+      text2: <p className="font-bold pt-2">6 czerwca 10:30-13:00</p>,
     },
     {
-      text: "Grafiki & teksty: jak je przygotować? Spotkanie z ekspertkami z mojego zespołu!",
+      text: "Grafiki & teksty: jak je przygotować? Spotkanie z copywriterką i graficzką!",
       number: "2",
+      text2: <p className="font-bold pt-2">13 czerwca 10:30-13:00</p>,
     },
     {
       text: "Kampanie na obserwacje na IG/FB: jak pozyskiwać wartościowych odbiorców?",
       number: "3",
+      text2: <p className="font-bold pt-2">20 czerwca 10:30-13:00</p>,
     },
   ]
 
@@ -23,14 +26,17 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
     {
       text: "Lead magnet i newsletter: jak stworzyć kampanie reklamowe na zapis do newslettera?",
       number: "4",
+      text2: <p className="font-bold pt-2">27 czerwca 10:30-13:00</p>,
     },
     {
       text: "Strona www: kampanie reklamowe na Twoją stronę internetową",
       number: "5",
+      text2: <p className="font-bold pt-2">4 lipca 10:30-13:00</p>,
     },
     {
       text: "Remarketing: wszystko, co musisz wiedzieć o najskuteczniejszych kampaniach reklamowych",
       number: "6",
+      text2: <p className="font-bold pt-2">11 lipca 10:30-13:00</p>,
     },
   ]
 
@@ -342,7 +348,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             Certyfikat ukończenia programu dla każdej uczestniczki!
           </span>
           <br />
-          Warunkiem otrzymania certyfikatu jest obecność na co najmniej 7
+          Warunkiem otrzymania certyfikatu jest obecność na co najmniej 4
           spotkaniach w środy i ustawienie każdego omawianego na programie
           mentoringowym typu kampanii.
         </>
@@ -367,6 +373,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
                   key={index}
                   text={feature.text}
                   number={feature.number}
+                  text2={feature.text2}
                   styleText="font-medium"
                 />
               ))}
@@ -377,10 +384,35 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
                   key={index}
                   text={feature.text}
                   number={feature.number}
+                  text2={feature.text2}
                   styleText="font-medium"
                 />
               ))}
             </div>
+          </div>
+          <div className="text-[100px]">🎁</div>
+          <div className="md:text-adaSubtitleThird py-3 px-10 bg-ada-pink2 font-bold max-w-fit mx-auto mb-14">
+            Czekają też na Ciebie bonusy:
+          </div>
+          <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[30px] flex-wrap">
+            {bonusDataFirtRow.map((feature, index) => (
+              <BonusBox
+                key={index}
+                text={feature.text}
+                text2={feature.text2}
+                image={feature.image}
+              />
+            ))}
+          </div>
+          <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[50px] flex-wrap">
+            {bonusDataSecondRow.map((feature, index) => (
+              <BonusBox
+                key={index}
+                text={feature.text}
+                text2={feature.text2}
+                image={feature.image}
+              />
+            ))}
           </div>
         </section>
       )}

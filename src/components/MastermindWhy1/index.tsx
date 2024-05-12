@@ -12,13 +12,6 @@ const MastermindWhy1 = (): JSX.Element => {
     >
       <div className="relative flex flex-col md:flex-row gap-[60px] xl:gap-[90px] items-center w-full justify-center">
         <div className="lg:w-[736px] pt-[60px] lg:pt-[76px] z-0">
-          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[140px] md:w-[300px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
-            Dlatego...
-          </h2>
-          <p className="lg:text-adaBase lg:w-[574px] pt-[24px] font-medium leading-tight">
-            przygotowałam dla Ciebie program mentoringowy{" "}
-            <span className="font-bold">„Ogarnij swoje adsy!”</span>
-          </p>
           <p className="lg:text-adaBase lg:w-[530px] pt-10 font-medium leading-tight">
             To bezpieczna przestrzeń, w której:
           </p>
