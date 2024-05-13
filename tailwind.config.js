@@ -23,6 +23,8 @@ module.exports = {
         linear3: "linear-gradient(180deg, #EEDCF6 0%, #FFF 100%)",
         linear4: "linear-gradient(270deg, #EEDCF6 0%, #FFF 100%)",
         linear5: "linear-gradient(180deg, #F4DCE8 0%, #FFF 50%, #F4DCE8 100%);",
+        linear6:
+          "linear-gradient(180deg,  #EEDCF6 0%, #FFF 50%, #EEDCF6 100%);",
       },
       backgroundPosition: {
         bgPosition: "0px 310px",

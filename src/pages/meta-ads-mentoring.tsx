@@ -40,7 +40,7 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MentoringWhy />
       </MaxWithBgColorContainer>
-      <Opinions />
+      <Opinions title1 />
       <div className="h-[300px] bg-wave absolute top-[4380px] w-screen"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MentoringWhy2 />

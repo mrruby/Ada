@@ -104,11 +104,9 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 <h3 className={listItemTitleClass}>realne case’y</h3>
                 <p className={listItemDesClass}>
                   Pracujemy na przykładach z życia wziętych: Twoich oraz innych
-                  uczestniczek.{" "}
-                  <span className="underline">
-                    Dość teoretycznych przykładów, które nie mają nic wspólnego
-                    z rzeczywistością. Przyszedł czas na praktykę i efekty.{" "}
-                  </span>
+                  uczestniczek. Dość teoretycznych przykładów, które nie mają
+                  nic wspólnego z rzeczywistością. Przyszedł czas na praktykę i
+                  efekty.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement

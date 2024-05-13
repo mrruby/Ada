@@ -97,7 +97,7 @@ const MastermindFAQ = (): JSX.Element => {
           text={
             <span className="font-bold">Umawiam się na wirtualną kawkę!</span>
           }
-          sectionId="zostaw-maila"
+          url="https://koalendar.com/e/ogarnij-swoje-adsy"
           textSize="md:text-adaSubtitle"
           btnStyle="md:w-[540px] bg-white border-b-4 border-ada-pink"
           iconCalender

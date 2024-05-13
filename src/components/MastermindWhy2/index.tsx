@@ -32,7 +32,7 @@ const MastermindWhy2 = (): JSX.Element => {
           text={
             <span className="font-bold">Chcę porozmawiać o programie!</span>
           }
-          sectionId="zostaw-maila"
+          url="https://koalendar.com/e/ogarnij-swoje-adsy"
           textSize="md:text-adaSubtitle border-b-4 border-ada-pink"
           btnStyle="md:w-[450px]"
         />
