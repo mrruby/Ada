@@ -4,7 +4,7 @@ import { Button } from "helpers/Button"
 
 const MastermindWhy2 = (): JSX.Element => {
   return (
-    <div className="flex flex-col md:flex-row gap-[60px] xl:gap-[90px] items-center w-full justify-center mx-3">
+    <div className="flex flex-col md:flex-row gap-[60px] xl:gap-[90px] items-center w-full justify-center mx-3 pb-10">
       <div className="min-w-[507px] md:ml-[-130px]">
         <StaticImage
           src={"../../images/ada_mastermind2.webp"}
@@ -21,22 +21,20 @@ const MastermindWhy2 = (): JSX.Element => {
           Czy to dla Ciebie?{" "}
         </h2>
         <p className="lg:text-adaDesc lg:w-[574px] pt-10 font-medium leading-tight pb-9">
-          W każdej edycji jest tylko 7-10 miejsc. <br /> Zanim zdecydujesz się
-          dołączyć, zaproponuję Ci krótkie spotkanie, podczas którego wspólnie
-          porozmawiamy o Twoim udziale w programie mentoringowym. Chcę
-          dowiedzieć się, jakie są Twoje oczekiwania i poznać lepiej Twój
-          biznes!
+          W tej edycji jest tylko 5-7 miejsc.
+          <br /> Zanim zdecydujesz się dołączyć, zaproponuję Ci krótkie
+          spotkanie, podczas którego wspólnie porozmawiamy o Twoim udziale w
+          programie mentoringowym. Chcę dowiedzieć się, jakie są Twoje
+          oczekiwania i poznać lepiej Twój biznes!
         </p>
         <Button
           type="button"
           text={
-            <span className="font-bold">
-              Daj znać, gdy otworzysz zapisy na rozmowy!
-            </span>
+            <span className="font-bold">Chcę porozmawiać o programie!</span>
           }
-          sectionId="zostaw-maila"
+          url="https://koalendar.com/e/ogarnij-swoje-adsy"
           textSize="md:text-adaSubtitle border-b-4 border-ada-pink"
-          btnStyle="md:w-[620px]"
+          btnStyle="md:w-[450px]"
         />
       </div>
     </div>

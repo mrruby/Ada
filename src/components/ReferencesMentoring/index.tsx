@@ -9,6 +9,12 @@ import { StaticImage } from "gatsby-plugin-image"
 type IReferencesList = {
   image: JSX.Element
 }
+
+type IReferences = {
+  title1?: boolean
+  title2?: boolean
+}
+
 const referencesList: IReferencesList[] = [
   {
     image: (
@@ -75,6 +81,32 @@ const referencesList: IReferencesList[] = [
       />
     ),
   },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinia6typ2.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
+        placeholder="none"
+        width={363}
+        height={514}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinia7typ2.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
+        placeholder="none"
+        width={363}
+        height={514}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
 ]
 
 const responsive = {
@@ -118,16 +150,29 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
   )
 }
 
-const ReferencesMentoring = (): JSX.Element => {
+const ReferencesMentoring = ({ title1, title2 }: IReferences): JSX.Element => {
   return (
     <div className="pt-[40px]">
-      <h3 className="mx-auto md:max-w-[1140px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
-        TAK mówią osoby, z którymi współpracowałam{" "}
-      </h3>
-      <h3 className="mx-auto md:max-w-[790px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
-        przy kampaniach reklamowych
-      </h3>
-
+      {title1 && (
+        <>
+          <h3 className="mx-auto md:max-w-[1140px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            TAK mówią osoby, z którymi współpracowałam{" "}
+          </h3>
+          <h3 className="mx-auto md:max-w-[790px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            przy kampaniach reklamowych
+          </h3>
+        </>
+      )}
+      {title2 && (
+        <>
+          <h3 className="mx-auto md:max-w-[1000px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            Dzięki niemu docieranie do nowych klientów{" "}
+          </h3>
+          <h3 className="mx-auto md:max-w-[500px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            może wyglądać tak:
+          </h3>
+        </>
+      )}
       <div className="max-h-[600px] mx-auto mt-5">
         <Carousel
           responsive={responsive}

@@ -13,33 +13,28 @@ const MastermindInfo2 = (): JSX.Element => {
       </span>
     </span>,
     <span key={1}>
-      jesteś w stanie przeznaczyć{" "}
-      <span className="font-bold">minimum 700 zł </span>miesięcznie na budżet
-      reklamowy Meta,
-    </span>,
-    <span key={2}>
       zależy Ci na osiąganiu lepszych wyników dzięki kampaniom reklamowym,
     </span>,
-    <span key={3}>
+    <span key={2}>
       chcesz{" "}
       <span className="font-bold">
         rozwijać swoją wiedzę, umiejętności i biznes,{" "}
       </span>
     </span>,
-    <span key={4}>
+    <span key={3}>
       skuteczny marketing to patrzenie na liczby + kreatywna głowa i chcesz
       działać w ten sposób,
     </span>,
-    <span key={5}>
+    <span key={4}>
       możesz regularnie przeznaczyć czas na kampanie — zdajesz sobie sprawę, że
       tutaj nie wystarczy zerknięcie z doskoku,
     </span>,
-    <span key={6}>
+    <span key={5}>
       <span className="font-bold">znasz podstawową obsługę </span>Managera
       reklam — nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza,
       gdzie kliknąć, aby ustawić kampanię i stworzyć zestaw reklam to must have,
     </span>,
-    <span key={7}>
+    <span key={6}>
       jesteś gotowa na{" "}
       <span className="font-bold">
         pracę, testowanie, analizę, modyfikacje{" "}
@@ -63,8 +58,8 @@ const MastermindInfo2 = (): JSX.Element => {
       <span className="font-bold">
         że 100 zł wrzucone do Managera Reklam wystarczy.
       </span>{" "}
-      Niestety, to za mało — minimalny budżet, przy którym zbudujesz lejek z
-      pomocą kampanii to 700 zł,
+      Niestety, to za mało — minimalny budżet, przy którym zbudujesz lejek i
+      Twoje możliwości finansowe omówimy na wirtualnej kawce,
     </span>,
     <span key={3}>
       wiesz, że{" "}
