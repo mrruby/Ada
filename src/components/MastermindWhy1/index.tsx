@@ -11,14 +11,7 @@ const MastermindWhy1 = (): JSX.Element => {
       id="mastermind-info"
     >
       <div className="relative flex flex-col md:flex-row gap-[60px] xl:gap-[90px] items-center w-full justify-center">
-        <div className="lg:w-[736px] pt-[60px] lg:pt-[76px] z-0">
-          <h2 className="text-[20px] lg:text-adaTitle font-bold w-[140px] md:w-[300px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
-            Dlatego...
-          </h2>
-          <p className="lg:text-adaBase lg:w-[574px] pt-[24px] font-medium leading-tight">
-            przygotowałam dla Ciebie program mentoringowy{" "}
-            <span className="font-bold">„Ogarnij swoje adsy!”</span>
-          </p>
+        <div className="lg:w-[736px] pt-[20px] lg:pt-[40px] z-0">
           <p className="lg:text-adaBase lg:w-[530px] pt-10 font-medium leading-tight">
             To bezpieczna przestrzeń, w której:
           </p>
@@ -84,14 +77,10 @@ const MastermindWhy1 = (): JSX.Element => {
         </h3>
         <Button
           type="button"
-          text={
-            <span className="font-bold">
-              Chcę dołączyć! Zapisuję się na listę zainteresowanych!
-            </span>
-          }
-          sectionId="zostaw-maila"
+          text={<span className="font-bold">Chcę dołączyć!</span>}
+          url="https://koalendar.com/e/ogarnij-swoje-adsy"
           textSize="md:text-adaSubtitle font-bold"
-          btnStyle="md:w-[700px] px-0 border-b-4 border-ada-pink"
+          btnStyle="md:w-[300px] px-0 border-b-4 border-ada-pink"
           iconCalender
         />
       </div>

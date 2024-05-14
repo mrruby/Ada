@@ -9,14 +9,10 @@ const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
         <div className="mt-20">
           <Button
             type="button"
-            text={
-              <span className="font-bold">
-                Zapisuję się na listę osób zainteresowanych!
-              </span>
-            }
-            sectionId="zostaw-maila"
+            text={<span className="font-bold">Chcę dołączyć!</span>}
+            url="https://koalendar.com/e/ogarnij-swoje-adsy"
             textSize="md:text-adaSubtitle"
-            btnStyle="md:w-[480px] border-b-4 border-ada-pink"
+            btnStyle="md:w-[280px] border-b-4 border-ada-pink"
             iconCalender
           />
         </div>

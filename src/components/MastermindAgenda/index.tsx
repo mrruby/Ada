@@ -104,11 +104,9 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 <h3 className={listItemTitleClass}>realne case’y</h3>
                 <p className={listItemDesClass}>
                   Pracujemy na przykładach z życia wziętych: Twoich oraz innych
-                  uczestniczek.{" "}
-                  <span className="underline">
-                    Dość teoretycznych przykładów, które nie mają nic wspólnego
-                    z rzeczywistością. Przyszedł czas na praktykę i efekty.{" "}
-                  </span>
+                  uczestniczek. Dość teoretycznych przykładów, które nie mają
+                  nic wspólnego z rzeczywistością. Przyszedł czas na praktykę i
+                  efekty.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -155,8 +153,8 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 <p className={listItemDesClass}>
                   Gdy dołączysz do programu, umówimy się na konsultację 1:1 —
                   zajrzę do Twojego konta reklamowego i pokażę Ci, jak ogarnąć
-                  ustawienia. Dzięki temu na pierwszym spotkaniu będziesz gotowa
-                  do działania z reklamami.
+                  ustawienia. Dzięki temu gdy na 3 spotkaniu mentoringowym
+                  zaczniemy ustawiać reklamy, będziesz 100% gotowa do działania!
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -185,12 +183,13 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="right"
               >
-                <h3 className={listItemTitleClass}>office hours</h3>
+                <h3 className={listItemTitleClass}>6 godzin office hours</h3>
                 <p className={listItemDesClass}>
-                  Raz w tygodniu możesz wskoczyć na moje “okienko” i zadać mi
-                  dowolne pytanie. Dzięki office hours również między
-                  spotkaniami jest szansa na to, aby obgadać kampanie wspólnie
-                  na żywo i szybko uzyskać odpowiedź!
+                  W każdy wtorek od 11 czerwca do 16 lipca o 10:30 możesz
+                  wskoczyć na godzinne „okienko” i zadać dowolne pytanie.
+                  Dyżuruję ja i specjalistki z mojego zespołu (poznasz je
+                  tutaj). Dzięki office hours możesz skonsultować kampanie
+                  również pomiędzy czwartkowymi spotkaniami.
                 </p>
               </VerticalTimelineElement>
             </VerticalTimeline>

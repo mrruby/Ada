@@ -84,8 +84,8 @@ const ContactForm = (): JSX.Element => {
             handlowych). Podanie danych osobowych jest dobrowolne. Zostałem
             poinformowany, że przysługuje mi prawo dostępu do swoich danych,
             możliwości ich poprawiania, zadania zaprzestania ich przetwarzania.
-            Administratorem danych jest GetBold Agency z siedzibą w 41-500
-            Chorzów ul. Żołnierzy Września 79/6.
+            Administratorem danych jest Slow Marketing Adrianna Promis-Urbas z
+            siedzibą w 47-400 Racibórz, Ul. Mała 2.
           </label>
         </div>
         <ReCAPTCHA

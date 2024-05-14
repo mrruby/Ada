@@ -3,7 +3,6 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import AboutBanner2 from "components/AboutBanner2"
-import References from "components/References"
 import Questions from "components/Questions"
 import MastermindBanner from "components/MastermindBanner"
 import MastermindSteps from "components/MastermindSteps"
@@ -15,14 +14,18 @@ import MastermindInfo3 from "components/MastermindInfo3"
 import MastermindAgenda from "components/MastermindAgenda"
 import MastermindPrice from "components/MastermindPrice"
 import MastermindFAQ from "components/MastermindFAQ"
-import MentoringForm from "components/MentoringForm"
+import Opinions from "components/Opinions"
+import ReferencesMentoring from "components/ReferencesMentoring"
 
 const MastermindPage = (): JSX.Element => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
       <MastermindBanner version={1} />
-      <MaxWithBgColorContainer bgColor="bg-linear3">
+      <MaxWithBgColorContainer bgColor="bg-linear6">
         <MastermindInfo1 />
+      </MaxWithBgColorContainer>
+      <Opinions title2 />
+      <MaxWithBgColorContainer bgColor="bg-linear3">
         <MastermindWhy1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
@@ -31,7 +34,7 @@ const MastermindPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MastermindSteps version={1} />
         <MastermindWhy2 />
-        <References title2 />
+        <ReferencesMentoring title1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MastermindInfo2 />
@@ -49,9 +52,6 @@ const MastermindPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MastermindFAQ />
       </MaxWithBgColorContainer>
-      <div className="mt-16 mb-10" id="zostaw-maila">
-        <MentoringForm version={2} />
-      </div>
     </Layout>
   )
 }

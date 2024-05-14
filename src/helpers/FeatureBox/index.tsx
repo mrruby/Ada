@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 interface Props {
   text: string | JSX.Element
-  text2?: string
+  text2?: string | JSX.Element
   number?: string
   styleText?: string
   styleParagraph?: string
