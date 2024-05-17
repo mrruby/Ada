@@ -356,6 +356,153 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
     },
   ]
 
+  const bonusDataFirtRow2 = [
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/www.svg"}
+            alt=""
+            placeholder="none"
+            width={89}
+            height={83}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">Hot Jar + strona</span> <br />w jaki
+          sposób WWW może mieć wpływ na skuteczność Twoich kampanii i co warto
+          poprawić (nagranie wideo)
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 197 zł</span>
+        </>
+      ),
+    },
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"./../../images/canva.webp"}
+            alt=""
+            placeholder="none"
+            width={81}
+            height={83}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">Canva: </span> <br /> tips & tricks
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 97 zł</span>
+        </>
+      ),
+    },
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/docs.svg"}
+            alt=""
+            placeholder="none"
+            width={130}
+            height={110}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">Dobre praktyki na Instagramie</span>{" "}
+          <br /> (dokument pdf)
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 97 zł</span>
+        </>
+      ),
+    },
+  ]
+
+  const bonusDataSecondRow2 = [
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/docs2.svg"}
+            alt=""
+            placeholder="none"
+            width={102}
+            height={97}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">
+            Jak tworzyć materiały reklamowe dla branży beauty?
+          </span>{" "}
+          (dokument pdf)
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 397 zł</span>
+        </>
+      ),
+    },
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/certyfikat.svg"}
+            alt=""
+            placeholder="none"
+            width={116}
+            height={89}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">
+            Certyfikat ukończenia programu dla każdej uczestniczki!
+          </span>
+          <br />
+          Warunkiem otrzymania certyfikatu jest obecność na co najmniej 4
+          spotkaniach w środy i ustawienie każdego omawianego na programie
+          mentoringowym typu kampanii.
+        </>
+      ),
+    },
+  ]
+
   return (
     <>
       {version === 1 && (
@@ -395,7 +542,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             Czekają też na Ciebie bonusy:
           </div>
           <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[30px] flex-wrap">
-            {bonusDataFirtRow.map((feature, index) => (
+            {bonusDataFirtRow2.map((feature, index) => (
               <BonusBox
                 key={index}
                 text={feature.text}
@@ -405,7 +552,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             ))}
           </div>
           <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[50px] flex-wrap">
-            {bonusDataSecondRow.map((feature, index) => (
+            {bonusDataSecondRow2.map((feature, index) => (
               <BonusBox
                 key={index}
                 text={feature.text}

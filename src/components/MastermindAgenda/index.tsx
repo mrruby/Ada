@@ -40,8 +40,8 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
               >
                 <h3 className={listItemTitleClass}>15 godzin spotkań!</h3>
                 <p className={listItemDesClass}>
-                  Spotykamy się 6 razy na 2,5 godziny na Google Meets. Co dwa
-                  tygodnie przez 3 miesiące! W tym czasie tworzysz, wdrażasz i
+                  Spotykamy się 6 razy na 2,5 godziny na Google Meets. Co
+                  tydzień przez 1,5 miesiąca. W tym czasie tworzysz, wdrażasz i
                   obserwujesz wyniki swoich kampanii pod moim okiem.
                 </p>
               </VerticalTimelineElement>
