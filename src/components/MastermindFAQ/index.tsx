@@ -59,9 +59,9 @@ const MastermindFAQ = (): JSX.Element => {
         "Dbam o przemyślaną rekrutację uczestniczek programu, dlatego zanim zdecydujesz się dołączyć, chcę umówić się z Tobą na 20/30-minutowe spotkanie online (tzw. „wirtualną kawkę”), na której porozmawiamy o Twoich potrzebach i udziale w programie. Wirtualne kawki są niezobowiązujące, a dają Tobie i mi pewność, że Twój udział w programie mentoringowym zaboostuje Twój biznes.",
     },
     {
-      question: "✓ Do kiedy mogę dołączyć do programu?",
+      question: "Do kiedy mogę dołączyć do programu?",
       answer:
-        "Zbieram chętnych do 24 maja lub do momentu zarezerwowania wszystkich miejsc. Podejmij decyzję i startujemy już na początku czerwca!",
+        "Zbieram chętnych do 31 maja lub do momentu zarezerwowania wszystkich miejsc. Podejmij decyzję i startujemy już na początku czerwca!",
     },
   ]
   const renderList = (list: ListItem[]) => {
