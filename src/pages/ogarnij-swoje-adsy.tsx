@@ -16,10 +16,12 @@ import MastermindPrice from "components/MastermindPrice"
 import MastermindFAQ from "components/MastermindFAQ"
 import Opinions from "components/Opinions"
 import ReferencesMentoring from "components/ReferencesMentoring"
+import MentoringCountdown from "components/MentoringCountdown"
 
 const MastermindPage = (): JSX.Element => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
+      <MentoringCountdown />
       <MastermindBanner version={1} />
       <MaxWithBgColorContainer bgColor="bg-linear6">
         <MastermindInfo1 />
