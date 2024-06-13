@@ -22,4 +22,15 @@ export interface ILayoutElements {
   waves4?: boolean
   waves5?: boolean
   waves6?: boolean
+  sun1?: boolean
+  sun2?: boolean
+  sun3?: boolean
+  sun4?: boolean
+  sun5?: boolean
+  flaming?: boolean
+  flaps?: boolean
+  sunglasses?: boolean
+  ball1?: boolean
+  ball2?: boolean
+  arrow?: boolean
 }

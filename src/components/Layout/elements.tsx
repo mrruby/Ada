@@ -23,6 +23,17 @@ import {
   Waves4,
   Waves5,
   Waves6,
+  Sun1,
+  Sun2,
+  Sun3,
+  Sun4,
+  Sun5,
+  Flaming,
+  Flaps,
+  Sunglasses,
+  Ball1,
+  Ball2,
+  Arrow,
 } from "../../helpers/LayoutElements/index"
 import { ILayoutElements } from "../../utils/types/layoutElements"
 
@@ -50,6 +61,17 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   waves4,
   waves5,
   waves6,
+  sun1,
+  sun2,
+  sun3,
+  sun4,
+  sun5,
+  flaming,
+  flaps,
+  sunglasses,
+  ball1,
+  ball2,
+  arrow,
 }) => {
   return (
     <>
@@ -186,6 +208,72 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
         <Waves6
           mobileTop="hidden lg:flex lg:top-[4800px]"
           mobileRight="right-0"
+        />
+      )}
+      {sun1 && (
+        <Sun1
+          mobileTop="hidden xl:flex lg:top-[860px]"
+          mobileLeft="left-[-160px]"
+        />
+      )}
+      {sun2 && (
+        <Sun2
+          mobileTop="hidden xl:flex lg:top-[1200px]"
+          mobileRight="right-[-150px]"
+        />
+      )}
+      {sun3 && (
+        <Sun3
+          mobileTop="hidden xl:flex lg:top-[1560px]"
+          mobileLeft="left-[-160px]"
+        />
+      )}
+      {sun4 && (
+        <Sun4
+          mobileTop="hidden xl:flex lg:top-[4360px]"
+          mobileLeft="left-[-160px]"
+        />
+      )}
+      {sun5 && (
+        <Sun5
+          mobileTop="hidden xl:flex lg:top-[4660px]"
+          mobileRight="right-[-150px]"
+        />
+      )}
+      {flaming && (
+        <Flaming
+          mobileTop="hidden xl:flex lg:top-[-30px]"
+          mobileRight="right-[-150px]"
+        />
+      )}
+      {flaps && (
+        <Flaps
+          mobileTop="hidden xl:flex lg:top-[2160px]"
+          mobileLeft="left-[-160px]"
+        />
+      )}
+      {sunglasses && (
+        <Sunglasses
+          mobileTop="hidden xl:flex lg:top-[2760px]"
+          mobileRight="right-[-150px]"
+        />
+      )}
+      {ball1 && (
+        <Ball1
+          mobileTop="hidden xl:flex lg:top-[3360px]"
+          mobileLeft="left-[-160px]"
+        />
+      )}
+      {ball2 && (
+        <Ball2
+          mobileTop="hidden xl:flex lg:top-[3660px]"
+          mobileRight="right-[-150px]"
+        />
+      )}
+      {arrow && (
+        <Arrow
+          mobileTop="hidden xl:flex lg:top-[500px]"
+          mobileRight="right-[40vw]"
         />
       )}
     </>

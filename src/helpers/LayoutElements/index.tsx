@@ -598,7 +598,290 @@ export const Waves6: React.FC<Props> = ({
 }) => {
   return (
     <img
-      src="../assets/waves6.svg"
+      src="../assets/sun.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Sun1: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/sun.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Sun2: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/sun.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+export const Sun3: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/sun.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+export const Sun4: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/sun.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+export const Sun5: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/sun.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Flaming: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/flaming.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Flaps: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/flaps.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Sunglasses: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/sunglasses.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Ball1: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/ball1.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Ball2: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/ball2.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}
+
+export const Arrow: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/arrowWebinar.svg"
       alt=""
       aria-hidden
       className={`absolute ${top && top} ${right && right} ${left && left} ${

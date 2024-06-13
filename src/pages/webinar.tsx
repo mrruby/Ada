@@ -19,10 +19,10 @@ const WebinarPage = (): JSX.Element => {
       flowerBlue5={true}
     >
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <WebinarBanner />
+        <WebinarBanner version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <WebinarAbout />
+        <WebinarAbout version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <References title5 />
