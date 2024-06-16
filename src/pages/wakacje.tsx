@@ -39,6 +39,8 @@ const MasterclassPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <HolidayInfo version={2} />
       </MaxWithBgColorContainer>
+      <div className="h-[300px] bg-wave absolute top-[3480px] w-screen -z-50"></div>
+      <MentoringBanner version={5} />
       <MaxWithBgColorContainer>
         <ReferencesMentoring title1 />
       </MaxWithBgColorContainer>
@@ -48,7 +50,7 @@ const MasterclassPage = (): JSX.Element => {
 }
 
 export const Head = () => (
-  <SEO title="Warsztat - Niech reklamy pracują na Twoje wakacje!" />
+  <SEO title="Warsztat - Niech kampanie pracują na moje wakacje!" />
 )
 
 export default MasterclassPage

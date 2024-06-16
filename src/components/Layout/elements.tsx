@@ -212,19 +212,19 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {sun1 && (
         <Sun1
-          mobileTop="hidden xl:flex lg:top-[860px]"
+          mobileTop="hidden xl:flex lg:top-[560px]"
           mobileLeft="left-[-160px]"
         />
       )}
       {sun2 && (
         <Sun2
-          mobileTop="hidden xl:flex lg:top-[1200px]"
+          mobileTop="hidden xl:flex lg:top-[1000px]"
           mobileRight="right-[-150px]"
         />
       )}
       {sun3 && (
         <Sun3
-          mobileTop="hidden xl:flex lg:top-[1560px]"
+          mobileTop="hidden xl:flex lg:top-[1260px]"
           mobileLeft="left-[-160px]"
         />
       )}
@@ -236,7 +236,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {sun5 && (
         <Sun5
-          mobileTop="hidden xl:flex lg:top-[4660px]"
+          mobileTop="hidden xl:flex lg:top-[3760px]"
           mobileRight="right-[-150px]"
         />
       )}
@@ -248,25 +248,25 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {flaps && (
         <Flaps
-          mobileTop="hidden xl:flex lg:top-[2160px]"
+          mobileTop="hidden xl:flex lg:top-[1860px]"
           mobileLeft="left-[-160px]"
         />
       )}
       {sunglasses && (
         <Sunglasses
-          mobileTop="hidden xl:flex lg:top-[2760px]"
+          mobileTop="hidden xl:flex lg:top-[2360px]"
           mobileRight="right-[-150px]"
         />
       )}
       {ball1 && (
         <Ball1
-          mobileTop="hidden xl:flex lg:top-[3360px]"
+          mobileTop="hidden xl:flex lg:top-[2860px]"
           mobileLeft="left-[-160px]"
         />
       )}
       {ball2 && (
         <Ball2
-          mobileTop="hidden xl:flex lg:top-[3660px]"
+          mobileTop="hidden xl:flex lg:top-[3060px]"
           mobileRight="right-[-150px]"
         />
       )}

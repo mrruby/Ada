@@ -15,17 +15,19 @@ const HolidayForm = (): JSX.Element => {
         </p>
         <p className="pt-4">Zarezerwuj miejsce na warsztacie:</p>
       </div>
-      <div className="flex flex-col md:flex-row gap-0 py-6">
-        <StaticImage
-          loading="eager"
-          src={"../../images/mentoring.webp"}
-          alt="Ada Promis - hero"
-          placeholder="none"
-          width={766}
-          height={818}
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-        />
+      <div className="flex flex-col md:flex-row py-6">
+        <div className="md:min-w-[560px]">
+          <StaticImage
+            loading="eager"
+            src={"../../images/mentoring.webp"}
+            alt="Ada Promis - hero"
+            placeholder="none"
+            width={448}
+            height={500}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </div>
         <WebinarForm />
       </div>
       <div className="md:text-adaSubtitle font-bold">

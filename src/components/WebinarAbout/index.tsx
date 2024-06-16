@@ -53,13 +53,13 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 2 && (
-        <div className="flex flex-col items-center max-w-[806px] gap-4">
+        <div className="flex flex-col items-center max-w-[806px] gap-4 pt-10">
           <StaticImage
             src={"../../images/ada_wakacje.webp"}
             alt="Ada Promis"
             placeholder="none"
-            width={757}
-            height={601}
+            width={428}
+            height={340}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -69,18 +69,18 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           <h3 className="md:text-adaSubtitleSecondary text-center pt-8 font-bold md:border-b-[20px] border-ada-light-pink md:leading-[0px]">
             Nazywam się Ada Promis
           </h3>
-          <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
             Mam za sobą epizod pracy w audycie finansowym, ale moim powołaniem
             chyba od zawsze był <span className="font-bold">marketing!</span>
           </p>
-          <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
             I tak od stażu w agencji marketingowej do swojej działalności: dziś
             pod szyldem GetBold! obsługuję klientów z Europy, w tym z Polski i
             na moim liczniku wybiło już{" "}
             <span className="font-bold">ponad 1 mln budżetów reklamowych</span>
             wydanych w ramach Meta Ads.
           </p>
-          <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
             Zaczynałam na etacie.{" "}
             <span className="font-bold">
               Teraz prowadzę butikową agencję reklamową
@@ -89,7 +89,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             obaw, że moja firma runie. Nawet więcej! Po ostatnim tygodniowym
             urlopie zastałam ją w lepszym stanie niż przed moją nieobecnością.
           </p>
-          <p className="md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
             Niech zgadnę:{" "}
             <span className="font-bold">
               czy Ty też marzysz, aby Twój biznes zarabiał, gdy Ty cieszysz się

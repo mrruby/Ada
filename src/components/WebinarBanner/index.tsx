@@ -75,26 +75,28 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 2 && (
-        <div className="mt-[120px] mb-[50px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 pb-4 md:py-16">
+        <div className="mt-[80px] mb-[50px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 pb-4 md:py-16">
           <div className="flex flex-col md:flex-row justify-between max-w-[1350px] mx-auto">
             <div className="flex flex-col justify-center max-w-[600px] gap-4">
-              <h1 className="text-adaSubtitle md:text-adaSubtitleThird font-bold tracking-wider leading-none">
-                Niech reklamy pracują na Twoje{" "}
-                <span className="text-ada-yellow"> wakacje!</span>
+              <h1 className="text-adaSubtitle md:text-adaTitle2 font-bold tracking-wider leading-none">
+                Niech kampanie <br /> pracują na <br />
+                <span className="text-ada-yellow">moje wakacje!</span>
               </h1>
-              <h2 className="md:text-adaSubtitle pb-2 pt-2">
-                <span className="font-bold">Warsztat na żywo za 0 zł:</span>{" "}
-                układamy lejek reklamowy na lato
-                <br />
+              <h2 className="md:text-adaSubtitle pt-2">
+                <span className="font-bold">
+                  Warsztat kreatywny na żywo za 0 zł:
+                </span>{" "}
+                <br />5 reklam, które musisz przetestować w to lato{" "}
               </h2>
-              <h2 className="md:text-adaSubtitle pb-3 pt-2 font-bold">
+              <h2 className="md:text-adaSubtitle font-bold">
                 Termin: 26.06 o 18:00
               </h2>
               <Button
                 type="button"
                 text={
-                  <span className="font-bold">
-                    Rozkręcam mój biznes dzięki reklamom!
+                  <span className="font-bold uppercase">
+                    Chcę zarabiać nawet
+                    <br /> na wakacjach!
                   </span>
                 }
                 sectionId="zostaw-maila"
