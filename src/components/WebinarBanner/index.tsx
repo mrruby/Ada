@@ -91,18 +91,6 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
               <h2 className="md:text-adaSubtitle font-bold">
                 Termin: 26.06 o 18:00
               </h2>
-              <Button
-                type="button"
-                text={
-                  <span className="font-bold uppercase">
-                    Chcę zarabiać nawet
-                    <br /> na wakacjach!
-                  </span>
-                }
-                sectionId="zostaw-maila"
-                textSize="md:text-adaSubtitle"
-                btnStyle="uppercase md:w-[480px] bg-ada-pink2 tracking-[2.90px] h-[100px] shadow-xl mx-auto"
-              />
             </div>
           </div>
         </div>

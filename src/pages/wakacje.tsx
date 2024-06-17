@@ -8,6 +8,7 @@ import WebinarAbout from "components/WebinarAbout"
 import HolidayInfo from "components/HolidayInfo"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import MentoringBanner from "components/MentoringBanner"
+import HolidayFormTop from "components/HolidayFormTop"
 
 const MasterclassPage = (): JSX.Element => {
   return (
@@ -27,6 +28,7 @@ const MasterclassPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <WebinarBanner version={2} />
       </MaxWithBgColorContainer>
+      <HolidayFormTop />
       <MaxWithBgColorContainer>
         <WebinarAbout version={2} />
       </MaxWithBgColorContainer>

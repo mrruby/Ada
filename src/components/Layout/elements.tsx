@@ -272,8 +272,8 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {arrow && (
         <Arrow
-          mobileTop="hidden xl:flex lg:top-[500px]"
-          mobileRight="right-[40vw]"
+          mobileTop="hidden xl:flex lg:top-[650px] "
+          mobileRight="right-[10vw]"
         />
       )}
     </>
