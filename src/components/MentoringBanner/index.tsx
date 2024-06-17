@@ -58,6 +58,29 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
           />
         </>
       )}
+      {version === 4 && (
+        <>
+          <h2 className="md:text-adaSubtitle font-bold">
+            Przyjdź na 2-godzinny{" "}
+            <span className="text-ada-pink3">bezpłatny</span> warsztat kreatywny
+          </h2>
+        </>
+      )}
+      {version === 5 && (
+        <div className="my-[-50px]">
+          <Button
+            type="button"
+            text={
+              <span className="font-bold uppercase">
+                Chcę zarabiać nawet <br /> na wakacjach!
+              </span>
+            }
+            textSize="md:text-adaSubtitleSecondary"
+            btnStyle="md:w-[600px] md:h-[130px] bg-ada-pink2 my-20 mx-auto"
+            sectionId="zostaw-maila"
+          />
+        </div>
+      )}
     </div>
   )
 }

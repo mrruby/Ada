@@ -9,6 +9,7 @@ module.exports = {
           grey: "rgba(37, 50, 116, 0.20);",
           "light-pink": "#EEDCF6",
           "dark-pink": "#ABA3AF",
+          yellow: "#FFB800",
           purple: "#A361B4",
           pink: "#F2A7B2",
           pink2: "#FFD3EB",

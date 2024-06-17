@@ -28,6 +28,17 @@ type LayoutElements = {
   waves5?: boolean
   waves6?: boolean
   showHeader?: boolean
+  sun1?: boolean
+  sun2?: boolean
+  sun3?: boolean
+  sun4?: boolean
+  sun5?: boolean
+  flaming?: boolean
+  flaps?: boolean
+  sunglasses?: boolean
+  ball1?: boolean
+  ball2?: boolean
+  arrow?: boolean
 }
 
 type Props = {
@@ -58,6 +69,17 @@ const defaultProps: LayoutElements = {
   waves4: false,
   waves5: false,
   waves6: false,
+  sun1: false,
+  sun2: false,
+  sun3: false,
+  sun4: false,
+  sun5: false,
+  flaming: false,
+  flaps: false,
+  sunglasses: false,
+  ball1: false,
+  ball2: false,
+  arrow: false,
 }
 
 const Layout: React.FC<Props> = ({
