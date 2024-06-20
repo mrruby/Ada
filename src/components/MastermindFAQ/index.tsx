@@ -94,13 +94,10 @@ const MastermindFAQ = (): JSX.Element => {
         </h3>
         <Button
           type="button"
-          text={
-            <span className="font-bold">Umawiam się na wirtualną kawkę!</span>
-          }
-          url="https://koalendar.com/e/ogarnij-swoje-adsy"
+          text={<span className="font-bold">Chcę dołączyć!</span>}
+          sectionId="zostaw-maila"
           textSize="md:text-adaSubtitle"
-          btnStyle="md:w-[540px] bg-white border-b-4 border-ada-pink"
-          iconCalender
+          btnStyle="md:w-[240px] bg-white border-b-4 border-ada-pink"
         />
       </div>
     </div>
