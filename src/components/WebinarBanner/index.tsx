@@ -1,6 +1,7 @@
 import React from "react"
 import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import CountdownTimer from "helpers/CountdownTimer"
 
 const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
   return (
@@ -90,6 +91,40 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
               </h2>
               <h2 className="md:text-adaSubtitle font-bold">
                 Termin: 26.06 o 18:00
+              </h2>
+            </div>
+          </div>
+        </div>
+      )}
+      {version === 3 && (
+        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2">
+          <div className="flex flex-col gap-4 items-center">
+            <h2 className="text-adaBase font-bold text-center animate-bounce uppercase">
+              Na dołączenie do warsztatów zostało:{" "}
+            </h2>
+            <CountdownTimer targetDate={new Date("2024-06-28T18:00:00")} />
+          </div>
+          <div className="flex flex-col md:flex-row justify-between max-w-[1350px] mx-auto">
+            <div className="xl:ml-[-300px] md:-mt-20">
+              <StaticImage
+                loading="eager"
+                src={"../../images/chill.webp"}
+                alt="Ada Promis - hero"
+                placeholder="none"
+                width={555}
+                height={596}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div className="flex flex-col justify-center max-w-[800px] gap-4 md:-mt-20">
+              <h1 className="text-adaSubtitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
+                ADSY&<span className="text-ada-yellow">CHILL</span>
+              </h1>
+              <h2 className="md:text-adaSubtitle pt-2">
+                czyli poznaj mój sposób na dochodowy, stabilny biznes,
+                <br /> który zarabia dla Ciebie gdy śpisz i czilujesz na
+                wakacjach.
               </h2>
             </div>
           </div>

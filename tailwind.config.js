@@ -14,6 +14,8 @@ module.exports = {
           pink: "#F2A7B2",
           pink2: "#FFD3EB",
           pink3: "#BA93DF",
+          pink4: "#F7E5EE",
+          pink5: "#FEB0DB",
           white: "#FFFFFF",
           white40: "#FFFFFF66",
         },
@@ -32,6 +34,7 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        lemon: ["Lemon", "serif"],
       },
       fontSize: {
         adaNav: "0.9375rem",

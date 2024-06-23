@@ -1,6 +1,6 @@
 import React from "react"
 
-const IconText = (): JSX.Element => {
+const IconText = ({ version }: { version: number }): JSX.Element => {
   const leftList = [
     {
       icon: "🔥",
@@ -47,28 +47,106 @@ const IconText = (): JSX.Element => {
     },
   ]
 
+  const leftList2 = [
+    {
+      icon: "😱",
+      text: "Pół roku temu zaplanowałaś 2024 rok, ale wyszło jak zawsze — rzeczywistość?",
+    },
+    {
+      icon: "🤔",
+      text: "Zastanawiasz się, jak sprzedawać swoje produkty/usługi bez ciągłej obecności w mediach społecznościowych?",
+    },
+    {
+      icon: "😔",
+      text: "Przygotowałaś świetne posty, merytoryczne treści, a zobaczyła je zaledwie garstka Twoich obserwujących?",
+    },
+    {
+      icon: "😎",
+      text: "Szukasz systemu, który działa w tle, kiedy Ty spędzasz czas z rodziną, odpoczywasz lub oglądasz serial?",
+    },
+  ]
+
+  const rightList2 = [
+    {
+      icon: "🔥",
+      text: "Słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
+    },
+    {
+      icon: "😬",
+      text: "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że „umiesz za mało”",
+    },
+    {
+      icon: "🤑",
+      text: "Chciałabyś oferować swoim klientom szerszy zakres usług, aby móc podnosić stawki i dyktować warunki?",
+    },
+    {
+      icon: "🤯",
+      text: "Myślałaś, że przecież reklamy można ‘tak łatwo wyklikać’, a potem weszłaś do menadżera reklam i poczułaś chaos?",
+    },
+  ]
+
   return (
     <section>
-      <div className="mx-auto pb-10 mt-10">
-        <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
-          <ul className="gap-10 md:gap-[120px] ">
-            {leftList.map((item, index) => (
-              <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
-                <span className="text-adaSubtitle"> {item.icon}</span>
-                <span className="md:text-adaBase">{item.text}</span>
-              </li>
-            ))}
-          </ul>
-          <ul className="gap-10 md:gap-[120px] ">
-            {rightList.map((item, index) => (
-              <li className="flex gap-4 max-w-[560px] pb-8 px-3" key={index}>
-                <span className="text-adaSubtitle"> {item.icon}</span>
-                <span className="md:text-adaBase">{item.text}</span>
-              </li>
-            ))}
-          </ul>
+      {version === 1 && (
+        <div className="mx-auto pb-10 mt-10">
+          <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
+            <ul className="gap-10 md:gap-[120px] ">
+              {leftList.map((item, index) => (
+                <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
+                  <span className="text-adaSubtitle"> {item.icon}</span>
+                  <span className="md:text-adaBase">{item.text}</span>
+                </li>
+              ))}
+            </ul>
+            <ul className="gap-10 md:gap-[120px] ">
+              {rightList.map((item, index) => (
+                <li className="flex gap-4 max-w-[560px] pb-8 px-3" key={index}>
+                  <span className="text-adaSubtitle"> {item.icon}</span>
+                  <span className="md:text-adaBase">{item.text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
+      )}
+      {version === 2 && (
+        <div className="mx-auto pb-10 mt-10">
+          <h2 className="text-adaSubtitle lg:text-adaSubtitleThird font-bold bg-ada-light-pink shadow-xl lg:max-w-[740px] px-8 h-[124px] mx-auto flex items-center justify-center">
+            Czy Ty też tak masz?
+          </h2>
+          <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
+            <ul className="gap-10 md:gap-[120px] ">
+              {leftList2.map((item, index) => (
+                <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
+                  <span className="text-adaSubtitle"> {item.icon}</span>
+                  <span>{item.text}</span>
+                </li>
+              ))}
+            </ul>
+            <ul className="gap-10 md:gap-[120px]">
+              {rightList2.map((item, index) => (
+                <li className="flex gap-4 max-w-[580px] pb-3 px-3" key={index}>
+                  <span className="text-adaSubtitle"> {item.icon}</span>
+                  <span>{item.text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="max-w-[780px] text-center py-[50px] mx-auto ">
+            <h3 className="md:text-adaSubtitleSecondary font-bold pb-10">
+              W TWOJEJ GŁOWIE POJAWIŁA SIĘ MYŚL:
+              <span className="text-ada-purple">„KURCZE, NO TAK!”?</span>{" "}
+            </h3>
+            <p className="text-adaDesc">
+              To znak, że dzięki{" "}
+              <span className="font-bold">masterclassom</span> przybliżysz się
+              do życia, w którym pracujesz tak, jak lubisz i zarabiasz dzięki
+              temu naprawdę <span className="font-bold">fajne pieniądze</span>{" "}
+              💸
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import { Button } from "helpers/Button"
 import { Accordion } from "helpers/Accordion"
+import CountdownTimer from "helpers/CountdownTimer"
 
 interface ListItem {
   question: string
@@ -142,6 +143,73 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     },
   ]
 
+  const leftList3: ListItem[] = [
+    {
+      question: "Czy Adsy&chill są dla mnie?",
+      answer: (
+        <>
+          Adsy&chill to wiedza dla osób, które chcą zautomatyzować i rozkręcić
+          działania na swoim. Są idealne dla osób, które mają niewielką (lub
+          żadną) wiedzę o kampaniach reklamowych. Chcesz postawić pierwszą
+          kampanię reklamową z prawdziwego zdarzenia? Adsy&chill są dla Ciebie!
+        </>
+      ),
+    },
+    {
+      question: "Czy dostanę fakturę?",
+      answer: (
+        <>
+          Tak, faktura trafi na maila podanego po zakupie chwilę po zakończeniu
+          transakcji.
+        </>
+      ),
+    },
+    {
+      question: "Dlaczego tak tanio?",
+      answer: (
+        <>
+          Masz rację — kursy prowadzenia reklam potrafią kosztować od 1000 zł
+          wzwyż. Masterclass dostajesz w niższej cenie, bo wiem, że wiele
+          przedsiębiorczyń waha się nad rozpoczęciem działań reklamowych, ale
+          powstrzymuje je wysoka cena, jaką musiałyby wydać na start.
+          Masterclass to instrukcja ustawienia pełnoprawnych kampanii
+          reklamowych od podstaw. Jeśli poczujesz, że to coś dla Ciebie,
+          kampanie ustawione dzięki masterclassom będą działać, a Ty w tym
+          czasie zdobędziesz wiedzę o strategii kampanii reklamowych.
+        </>
+      ),
+    },
+  ]
+
+  const rightList3: ListItem[] = [
+    {
+      question: "Czy muszę mieć doświadczenie z reklamami?",
+      answer: (
+        <>
+          Nie musisz 😊 Podczas masterclassów poprowadzę Cię za rękę przez
+          menadżera reklam. Jedyne, co musisz mieć, aby w pełni skorzystać z
+          masterclassów to menadżer firmy. Jeśli go nie masz, głowa do góry! Po
+          dołączeniu do masterclassów dostaniesz możliwość skorzystania z
+          mini-kursu „Przygotuj swój menadżer firmy”. Z nim ułożysz swojego
+          menadżera firmy od zera 😊
+        </>
+      ),
+    },
+    {
+      question: "Kiedy i jak dostanę dostęp?",
+      answer: <>Dostęp dostaniesz na maila od razu po zakupie.</>,
+    },
+    {
+      question: "Ile mam czasu na zapoznanie się z masterclassami?",
+      answer: (
+        <>
+          12 miesięcy. Masterclassy będą dostępne na platformie z dostępem 24/7.
+          Korzystaj, ile chcesz!
+        </>
+      ),
+    },
+  ]
+
   const renderList = (list: ListItem[]) => {
     return list.map((item, index) => (
       <Accordion key={index} question={item.question} answer={item.answer} />
@@ -240,6 +308,40 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               btnStyle="md:w-[340px] bg-ada-pink2"
             />
           </div>
+        </>
+      )}
+      {version === 3 && (
+        <>
+          <h2 className="text-adaBase font-bold text-center animate-bounce uppercase mt-10">
+            Na dołączenie do warsztatów zostało:{" "}
+          </h2>
+          <CountdownTimer targetDate={new Date("2024-06-28T18:00:00")} />
+          <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
+            <div className="pt-[60px] lg:pt-[76px]">
+              <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce text-center mx-auto">
+                FAQ
+              </h2>
+              <div className="pt-[30px] flex flex-col flex-wrap lg:flex-row lg:gap-[60px]">
+                <ul className="gap-10 md:gap-[120px] ">
+                  {renderList(leftList3)}
+                </ul>
+                <ul className="gap-10 md:gap-[140px]">
+                  {renderList(rightList3)}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <Button
+            type="button"
+            text={
+              <span className="font-bold">
+                Zwiększam sprzedaż z Adsy&chill!{" "}
+              </span>
+            }
+            url="/"
+            textSize="md:text-adaSubtitleSecondary"
+            btnStyle="md:w-[810px] bg-ada-pink2 mb-10 lg:mb-[80px]"
+          />
         </>
       )}
     </div>
