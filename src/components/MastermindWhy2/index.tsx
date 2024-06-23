@@ -29,12 +29,10 @@ const MastermindWhy2 = (): JSX.Element => {
         </p>
         <Button
           type="button"
-          text={
-            <span className="font-bold">Chcę porozmawiać o programie!</span>
-          }
-          url="https://koalendar.com/e/ogarnij-swoje-adsy"
+          text={<span className="font-bold">Chcę dołączyć!</span>}
+          sectionId="zostaw-maila"
           textSize="md:text-adaSubtitle border-b-4 border-ada-pink"
-          btnStyle="md:w-[450px]"
+          btnStyle="md:w-[250px]"
         />
       </div>
     </div>
