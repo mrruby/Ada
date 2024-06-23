@@ -185,11 +185,19 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
               >
                 <h3 className={listItemTitleClass}>6 godzin office hours</h3>
                 <p className={listItemDesClass}>
-                  W każdy wtorek od 11 czerwca do 16 lipca o 10:30 możesz
-                  wskoczyć na godzinne „okienko” i zadać dowolne pytanie.
-                  Dyżuruję ja i specjalistki z mojego zespołu (poznasz je
-                  tutaj). Dzięki office hours możesz skonsultować kampanie
-                  również pomiędzy czwartkowymi spotkaniami.
+                  Co tydzień możesz wskoczyć na godzinne „okienko” i zadać
+                  dowolne pytanie. Dyżuruję ja i specjalistki z mojego zespołu ({" "}
+                  <span
+                    className="underline cursor-pointer"
+                    onClick={() =>
+                      scrollToSection(document.getElementById("team"))
+                    }
+                  >
+                    poznasz je tutaj
+                  </span>
+                  ). Dzięki office hours możesz skonsultować kampanie również
+                  pomiędzy spotkaniami tematycznymi. To czas kiedy możesz zadać
+                  pytanie na każdy temat.
                 </p>
               </VerticalTimelineElement>
             </VerticalTimeline>
@@ -370,10 +378,10 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
               >
                 <h3 className={listItemTitleClass2}>12 godzin office hour </h3>
                 <p className={listItemDesClass}>
-                  W każdy roboczy poniedziałek podczas trwania programu w
-                  godzinach 10:00-11:00 odbywa się office hour, czyli godzina
-                  wspólnych rozkmin reklamowych. Podczas office hour odpowiadamy
-                  na pytania, z którymi nie chcesz czekać do spotkania, wspólnie
+                  Raz na tydzień podczas trwania programu w godzinach
+                  10:00-11:00 odbywa się office hour, czyli godzina wspólnych
+                  rozkmin reklamowych. Podczas office hour odpowiadamy na
+                  pytania, z którymi nie chcesz czekać do spotkania, wspólnie
                   analizujemy kampanie, grafiki czy teksty reklamowe.
                   <br />
                   Na office hour zamiennie dyżurują: specjalistka od Meta adsów

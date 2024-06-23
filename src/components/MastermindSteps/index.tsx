@@ -8,17 +8,14 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
     {
       text: "Start! Układamy swój lejek, analizujemy ścieżkę swojego biznesu.",
       number: "1",
-      text2: <p className="font-bold pt-2">6 czerwca 10:30-13:00</p>,
     },
     {
       text: "Grafiki & teksty: jak je przygotować? Spotkanie z copywriterką i graficzką!",
       number: "2",
-      text2: <p className="font-bold pt-2">13 czerwca 10:30-13:00</p>,
     },
     {
       text: "Kampanie na obserwacje na IG/FB: jak pozyskiwać wartościowych odbiorców?",
       number: "3",
-      text2: <p className="font-bold pt-2">20 czerwca 10:30-13:00</p>,
     },
   ]
 
@@ -26,17 +23,14 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
     {
       text: "Lead magnet i newsletter: jak stworzyć kampanie reklamowe na zapis do newslettera?",
       number: "4",
-      text2: <p className="font-bold pt-2">27 czerwca 10:30-13:00</p>,
     },
     {
       text: "Strona www: kampanie reklamowe na Twoją stronę internetową",
       number: "5",
-      text2: <p className="font-bold pt-2">4 lipca 10:30-13:00</p>,
     },
     {
       text: "Remarketing: wszystko, co musisz wiedzieć o najskuteczniejszych kampaniach reklamowych",
       number: "6",
-      text2: <p className="font-bold pt-2">11 lipca 10:30-13:00</p>,
     },
   ]
 

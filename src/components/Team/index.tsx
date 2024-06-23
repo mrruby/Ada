@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Team = (): JSX.Element => {
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center" id="team">
       <div className="mx-auto text-center pb-6">
         <h3 className="md:text-adaSubtitleThird leading-3 font-bold md:border-b-[30px] border-ada-pink2 mt-6 text-center max-w-[844px]">
           Na spotkaniach będziesz miała okazję
