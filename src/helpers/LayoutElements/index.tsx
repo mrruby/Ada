@@ -892,3 +892,29 @@ export const Arrow: React.FC<Props> = ({
     />
   )
 }
+
+export const ArrowMasterclass: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/arrowMasterclass.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
+    />
+  )
+}

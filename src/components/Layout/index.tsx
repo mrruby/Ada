@@ -39,6 +39,7 @@ type LayoutElements = {
   ball1?: boolean
   ball2?: boolean
   arrow?: boolean
+  arrowMasterclass?: boolean
 }
 
 type Props = {
@@ -80,6 +81,7 @@ const defaultProps: LayoutElements = {
   ball1: false,
   ball2: false,
   arrow: false,
+  arrowMasterclass: false,
 }
 
 const Layout: React.FC<Props> = ({

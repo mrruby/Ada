@@ -34,6 +34,7 @@ import {
   Ball1,
   Ball2,
   Arrow,
+  ArrowMasterclass,
 } from "../../helpers/LayoutElements/index"
 import { ILayoutElements } from "../../utils/types/layoutElements"
 
@@ -72,6 +73,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   ball1,
   ball2,
   arrow,
+  arrowMasterclass,
 }) => {
   return (
     <>
@@ -274,6 +276,12 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
         <Arrow
           mobileTop="hidden xl:flex lg:top-[650px] "
           mobileRight="right-[10vw]"
+        />
+      )}
+      {arrowMasterclass && (
+        <ArrowMasterclass
+          mobileTop="hidden xl:flex lg:top-[500px] "
+          mobileRight="right-[50vw]"
         />
       )}
     </>
