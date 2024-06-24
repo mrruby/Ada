@@ -88,6 +88,52 @@ body {
   }
 }
 
+.bg-wave2 {
+  background-image: url("../../static/assets/wave2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: rotate 6s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.bg-wave2-element {
+  position: relative;
+}
+.bg-wave2-element::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 400px;
+  background-image: url("../../static/assets/wave2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  animation: rotate 6s infinite;
+}
+
+@media (max-width: 768px) {
+  .bg-wave2,
+  .bg-wave2-element::before {
+    background-size: contain;
+  }
+}
+
 .vertical-timeline::before {
   background-color: #253274 !important;
 }

@@ -90,7 +90,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 <br />5 reklam, które musisz przetestować w to lato{" "}
               </h2>
               <h2 className="md:text-adaSubtitle font-bold">
-                Termin: 26.06 o 18:00
+                Termin: 30.06 o 18:00
               </h2>
             </div>
           </div>
@@ -104,7 +104,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
             </h2>
             <CountdownTimer targetDate={new Date("2024-06-28T18:00:00")} />
           </div>
-          <div className="flex flex-col md:flex-row justify-between max-w-[1350px] mx-auto">
+          <div className="flex flex-col md:flex-row justify-between xl:max-w-[1350px] mx-auto">
             <div className="xl:ml-[-300px] md:-mt-20">
               <StaticImage
                 loading="eager"

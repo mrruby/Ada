@@ -299,7 +299,17 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 sectionId="zostaw-maila"
               />
             </div>
-            <div className="max-w-[460px] flex flex-col items-center">
+            <div className="max-w-[460px] flex flex-col items-center relative">
+              <div className="absolute left-[40px] top-[-60px]">
+                <StaticImage
+                  src={"../../images/crown.svg"}
+                  alt=""
+                  placeholder="none"
+                  width={134}
+                  height={99}
+                  style={{ width: "134px", height: "99px" }}
+                />
+              </div>
               <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold bg-ada-purple mb-4 text-white">
                 Pakiet VIP
               </h2>

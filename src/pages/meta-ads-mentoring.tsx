@@ -33,7 +33,7 @@ const MentoringPage = (): JSX.Element => {
       flowerBlue11={true}
     >
       <MastermindBanner version={2} />
-      <IconText />
+      <IconText version={1} />
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={1} />
       </MaxWithBgColorContainer>

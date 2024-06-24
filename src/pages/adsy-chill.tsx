@@ -14,10 +14,22 @@ import MasterclassesInfo from "components/MasterclassesInfo"
 
 const AdsyAndChill = (): JSX.Element => {
   return (
-    <Layout>
+    <Layout
+      arrowMasterclass={true}
+      flowerBlue2={true}
+      flowerBlue4={true}
+      flowerBlue5={true}
+      flowerBlue6={true}
+      flowerBlue7={true}
+      flowerBlue8={true}
+      flowerBlue9={true}
+      flowerBlue10={true}
+      flowerBlue11={true}
+    >
       <MaxWithBgColorContainer>
         <WebinarBanner version={3} />
       </MaxWithBgColorContainer>
+      <div className="h-[300px] bg-wave2 absolute top-[700px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <IconText version={2} />
       </MaxWithBgColorContainer>
@@ -45,6 +57,7 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={3} />
       </MaxWithBgColorContainer>
+      <div className="h-[300px] bg-wave2 absolute top-[9100px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={7} />
       </MaxWithBgColorContainer>
@@ -54,6 +67,7 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassAgenda version={4} />
       </MaxWithBgColorContainer>
+      <div className="h-[300px] bg-wave2 absolute top-[11150px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassFAQ version={3} />
       </MaxWithBgColorContainer>
