@@ -78,10 +78,9 @@ const MastermindWhy1 = (): JSX.Element => {
         <Button
           type="button"
           text={<span className="font-bold">Chcę dołączyć!</span>}
-          url="https://koalendar.com/e/ogarnij-swoje-adsy"
+          sectionId="zostaw-maila"
           textSize="md:text-adaSubtitle font-bold"
           btnStyle="md:w-[300px] px-0 border-b-4 border-ada-pink"
-          iconCalender
         />
       </div>
     </div>

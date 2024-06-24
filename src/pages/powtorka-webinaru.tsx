@@ -34,7 +34,7 @@ const WebinarReplayPage = (): JSX.Element => {
           </p>
         </div>
       </MaxWithBgColorContainer>
-      <IconText />
+      <IconText version={1} />
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={1} />
       </MaxWithBgColorContainer>

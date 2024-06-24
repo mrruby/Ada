@@ -57,7 +57,7 @@ const MasterclassPage = (): JSX.Element => {
         <References title4 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MasterclassAgenda />
+        <MasterclassAgenda version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink2">
         <MasterclassInfo4 />
@@ -69,7 +69,7 @@ const MasterclassPage = (): JSX.Element => {
         <MasterclassInfo5 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassPreparing />
+        <MasterclassPreparing version={1} />
       </MaxWithBgColorContainer>
       <MasterclassTime2 />
       <MasterclassFAQ version={1} />

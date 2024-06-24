@@ -3,7 +3,7 @@ import { Button } from "helpers/Button"
 
 interface ListItem {
   question: string
-  answer: string | JSX.Element
+  answer?: string | JSX.Element
 }
 
 const MastermindFAQ = (): JSX.Element => {
@@ -15,7 +15,7 @@ const MastermindFAQ = (): JSX.Element => {
     {
       question: "Kiedy będą odbywać się spotkania?",
       answer:
-        "Spotykamy się co czwartek od 10:30 do 13:00. We wtorki o 10:30 odbywają się godzinne konsultacje office hour, na które zawsze możesz przyjść z pytaniami. Nie są obowiązkowe, ale uczestniczki poprzednich edycji przyznają, że warto na nie przychodzić nawet jeśli nie ma się pytań :)",
+        "Spotykamy się raz w tygodniu na 2,5-godzinne spotkania tematyczne. Ponadto, w trakcie programu możesz uczestniczyć w godzinnych sesjach office hours oraz umówić się na indywidualną konsultację, której termin ustalimy wspólnie.",
     },
     {
       question: "Czy spotkania będą nagrywane?",
@@ -54,21 +54,19 @@ const MastermindFAQ = (): JSX.Element => {
         "Na konsultacjach (jeszcze przed pierwszym spotkaniem w ramach mentoringu) poukładamy Twój menedżer reklam, piksel i ustawimy zabezpieczenia. Przekonasz się, że techniczne tematy nie są takie straszne, jak się wydają.",
     },
     {
-      question: "Jak mogę dołączyć do programu?",
-      answer:
-        "Dbam o przemyślaną rekrutację uczestniczek programu, dlatego zanim zdecydujesz się dołączyć, chcę umówić się z Tobą na 20/30-minutowe spotkanie online (tzw. „wirtualną kawkę”), na której porozmawiamy o Twoich potrzebach i udziale w programie. Wirtualne kawki są niezobowiązujące, a dają Tobie i mi pewność, że Twój udział w programie mentoringowym zaboostuje Twój biznes.",
-    },
-    {
-      question: "Do kiedy mogę dołączyć do programu?",
-      answer:
-        "Zbieram chętnych do 31 maja lub do momentu zarezerwowania wszystkich miejsc. Podejmij decyzję i startujemy już na początku czerwca!",
+      question:
+        "Zapisz się na listę osób zainteresowanych! Dzięki temu pierwsza dowiesz się o kolejnej edycji programu.",
     },
   ]
   const renderList = (list: ListItem[]) => {
     return list.map((item, index) => (
       <li className={listItemClass} key={index}>
         <h3 className={listItemQuestionClass}>{item.question}</h3>
-        <p className={listItemAnswerClass}> &#10003; {item.answer}</p>
+        {item.answer ? (
+          <p className={listItemAnswerClass}> &#10003; {item.answer}</p>
+        ) : (
+          ""
+        )}
       </li>
     ))
   }
@@ -95,11 +93,13 @@ const MastermindFAQ = (): JSX.Element => {
         <Button
           type="button"
           text={
-            <span className="font-bold">Umawiam się na wirtualną kawkę!</span>
+            <span className="font-bold">
+              Zapisuję się na listę osób zainteresowanych programem
+            </span>
           }
-          url="https://koalendar.com/e/ogarnij-swoje-adsy"
-          textSize="md:text-adaSubtitle"
-          btnStyle="md:w-[540px] bg-white border-b-4 border-ada-pink"
+          sectionId="zostaw-maila"
+          textSize="md:text-adaSubtitle uppercase"
+          btnStyle="md:w-[560px] bg-white border-b-4 border-ada-pink"
           iconCalender
         />
       </div>

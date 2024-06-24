@@ -81,6 +81,30 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
           />
         </div>
       )}
+      {version === 6 && (
+        <>
+          <Button
+            type="button"
+            text={
+              <span className="font-bold">
+                To o Tobie? <br /> Sprawdź szczegóły 👇
+              </span>
+            }
+            textSize="md:text-adaSubtitleSecondary"
+            btnStyle="md:w-[504px] md:h-[120px] bg-ada-pink2 my-20 mx-auto"
+            sectionId="zostaw-maila"
+          />
+        </>
+      )}
+      {version === 7 && (
+        <>
+          <h2 className="md:text-adaTitle font-bold uppercase text-center">
+            Co będzie się działo
+            <br />
+            po zakupie?
+          </h2>
+        </>
+      )}
     </div>
   )
 }

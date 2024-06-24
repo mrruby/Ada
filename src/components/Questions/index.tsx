@@ -19,7 +19,7 @@ const questionsList: IQuestionsList[] = [
   {
     question: "Kiedy odbywają się spotkania?",
     answer:
-      "Spotykamy się co tydzień w czwartek od 10:30 do 13:00 na spotkanie tematyczne. Podczas trwania programu możesz wziąć udział w office hours w każdy wtorek od 10:30 do 11:30 oraz umówić się na konsultację indywidualną (termin ustalimy wspólnie).",
+      "Spotykamy się raz na tydzień na 2,5 godziny na spotkania tematyczne. Do tego podczas trwania programu możesz wziąć udział w office hours, które trwają godzinkę oraz umówić się na konsultację indywidualną (termin ustalimy wspólnie).",
   },
   {
     question:

@@ -33,4 +33,5 @@ export interface ILayoutElements {
   ball1?: boolean
   ball2?: boolean
   arrow?: boolean
+  arrowMasterclass?: boolean
 }
