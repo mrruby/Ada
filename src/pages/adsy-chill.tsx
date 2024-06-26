@@ -17,19 +17,22 @@ const AdsyAndChill = (): JSX.Element => {
     <Layout
       arrowMasterclass={true}
       flowerBlue2={true}
-      flowerBlue4={true}
       flowerBlue5={true}
-      flowerBlue6={true}
       flowerBlue7={true}
       flowerBlue8={true}
       flowerBlue9={true}
       flowerBlue10={true}
       flowerBlue11={true}
+      sun6={true}
+      sunglasses2={true}
+      flaps2={true}
+      ball3={true}
+      drinks={true}
     >
       <MaxWithBgColorContainer>
         <WebinarBanner version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[300px] bg-wave2 absolute top-[700px] w-screen z-0"></div>
+      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[970px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <IconText version={2} />
       </MaxWithBgColorContainer>
@@ -42,22 +45,25 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <ReferencesMentoring title1 />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+      <MaxWithBgColorContainer bgColor="bg-ada-pink4 mt-5">
         <MasterclassAgenda version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MentoringBanner version={6} />
       </MaxWithBgColorContainer>
+      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5650px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={1} />
       </MaxWithBgColorContainer>
+      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[6990px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MasterclassesInfo version={2} />
       </MaxWithBgColorContainer>
+      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[8500px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[300px] bg-wave2 absolute top-[9100px] w-screen z-0"></div>
+      <div className="h-[300px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[9950px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={7} />
       </MaxWithBgColorContainer>
@@ -67,7 +73,7 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassAgenda version={4} />
       </MaxWithBgColorContainer>
-      <div className="h-[300px] bg-wave2 absolute top-[11150px] w-screen z-0"></div>
+      <div className="h-[300px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[12450px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassFAQ version={3} />
       </MaxWithBgColorContainer>

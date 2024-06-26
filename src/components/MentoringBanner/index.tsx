@@ -92,7 +92,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
             }
             textSize="md:text-adaSubtitleSecondary"
             btnStyle="md:w-[504px] md:h-[120px] bg-ada-pink2 my-20 mx-auto"
-            sectionId="zostaw-maila"
+            sectionId="pricing"
           />
         </>
       )}

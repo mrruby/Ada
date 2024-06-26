@@ -312,10 +312,11 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 3 && (
         <>
-          <h2 className="text-adaBase font-bold text-center animate-bounce uppercase mt-10">
-            Na dołączenie do warsztatów zostało:{" "}
+          <h2 className="lg:text-adaSubtitleThird font-bold text-center animate-bounce uppercase mt-10 pb-4">
+            Na dołączenie <br />
+            do warsztatów zostało:{" "}
           </h2>
-          <CountdownTimer targetDate={new Date("2024-06-28T18:00:00")} />
+          <CountdownTimer targetDate={new Date("2024-07-05T10:00:00")} />
           <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
             <div className="pt-[60px] lg:pt-[76px]">
               <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce text-center mx-auto">
@@ -335,12 +336,13 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             type="button"
             text={
               <span className="font-bold">
-                Zwiększam sprzedaż z Adsy&chill!{" "}
+                Zwiększam sprzedaż <br />
+                <span className="text-ada-yellow">Adsy&chill!</span>
               </span>
             }
-            url="/"
+            sectionId="pricing"
             textSize="md:text-adaSubtitleSecondary"
-            btnStyle="md:w-[810px] bg-ada-pink2 mb-10 lg:mb-[80px]"
+            btnStyle="md:w-[500px] bg-ada-purple mb-10 lg:mb-[120px] text-white"
           />
         </>
       )}

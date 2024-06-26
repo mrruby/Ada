@@ -97,34 +97,37 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 3 && (
-        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2">
-          <div className="flex flex-col gap-4 items-center">
+        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[862px]">
+          {/* timer na ostatnie 48h promocji */}
+          {/* <div className="flex flex-col gap-4 items-center">
             <h2 className="text-adaBase font-bold text-center animate-bounce uppercase">
               Na dołączenie do warsztatów zostało:{" "}
             </h2>
-            <CountdownTimer targetDate={new Date("2024-06-28T18:00:00")} />
-          </div>
+            <CountdownTimer targetDate={new Date("2024-07-05T10:00:00")} />
+          </div> */}
           <div className="flex flex-col md:flex-row justify-between xl:max-w-[1350px] mx-auto">
-            <div className="xl:ml-[-300px] md:-mt-20">
+            <div className="xl:ml-[-300px] md:-mt-6">
               <StaticImage
                 loading="eager"
                 src={"../../images/chill.webp"}
                 alt="Ada Promis - hero"
                 placeholder="none"
-                width={555}
-                height={596}
+                width={754}
+                height={782}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
             </div>
-            <div className="flex flex-col justify-center max-w-[800px] gap-4 md:-mt-20">
+            <div className="flex flex-col justify-center max-w-[800px] gap-4 md:-mt-60">
+              <h2 className="text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
               <h1 className="text-adaSubtitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
                 ADSY&<span className="text-ada-yellow">CHILL</span>
               </h1>
               <h2 className="md:text-adaSubtitle pt-2">
-                czyli poznaj mój sposób na dochodowy, stabilny biznes,
-                <br /> który zarabia dla Ciebie gdy śpisz i czilujesz na
-                wakacjach.
+                Przygotuj się na sprzedaż w ostatnim kwartale roku jeszcze{" "}
+                <span className="font-bold">w to lato!</span> Ustawiaj i
+                automatyzuj kampanie reklamowe{" "}
+                <span className="font-bold">i zdobywaj klientów.</span>
               </h2>
             </div>
           </div>

@@ -21,9 +21,16 @@ const listItems2 = [
 const listItems3 = [
   "zaplanować kampanie reklamowe na wakacje",
   "wykorzystać automatyzację w reklamach i oszczędzać czas",
-  "wykorzystać znane ‘hot’ narzędzie, które jest na topie i na pewno Ty też widzisz je wszędzie",
-  "krok po kroku ustawić 3 typy kampanii reklamowych: z wykorzystaniem manychata, na budowanie listy mailingowej, remarketingowe & sprzedażowe",
 ]
+
+const listItems3A = (
+  <>
+    krok po kroku ustawić 3 typy kampanii reklamowych:
+    <br />- z wykorzystaniem bezpłatnego narzędzia Make,
+    <br />- budujące stabilną i kaloryczną listę mailingową,
+    <br />- sprzedażowe: remarketingowe!,
+  </>
+)
 
 const listItems4 = [
   "nie masz czasu na długie spotkania i miesiące nauki,",
@@ -45,9 +52,9 @@ const listItems6 = [
   "Zdobędziesz konkretną wiedzę o reklamach z instrukcją krok po kroku i wskazaniem palcem co i jak.",
   "Dostajesz możliwość odtworzenia nagrania w dowolnym czasie.",
   "Korzystasz z masterclassów przez 12 miesięcy tyle razy, ile potrzebujesz.",
-  "Nauczysz się ustawiać kampanie reklamowe od podstaw — nawet jeśli jeszcze nigdy tego nie robiłaś.,",
+  "Nauczysz się ustawiać kampanie reklamowe od podstaw — nawet jeśli jeszcze nigdy tego nie robiłaś.",
   "To najniższa możliwa cena. W sprzedaży regularnej dostęp do jednego masterclassu będzie kosztował 199 złotych. Nigdy nie będzie taniej niż teraz.",
-  "Tylko teraz dostajesz dostęp do Q&A na żywo.",
+  "Tylko teraz dostajesz dostęp do Q&A na żywo oraz możliwość skorzystania z konsultacji indywidualnej ze mną. Standardowo możliwość konsultacji jest dostępna jedynie dla osób, które uczestniczyły w moim programie mentoringowym!",
 ]
 
 const plusBasicList = [
@@ -58,13 +65,13 @@ const plusBasicList = [
 ]
 const minusBasicList = [
   "Sesja Q&A na żywo",
-  "Konsultacja 1:1 na Google Meets (60 minut) o wartości 650 złotych",
+  "Konsultacja 1:1 na Google Meets (60 minut)",
 ]
 
 const plusVIPList = [
   "Dostęp do masterclassu „Ustaw reklamę z manychatem“",
   "Dostęp do masterclassu „Ustaw reklamę na listę mailingową”",
-  "Dostęp do masterclassu „Ustaw reklamę na sprzedaż””",
+  "Dostęp do masterclassu „Ustaw reklamę na sprzedaż”",
   "Dostęp do grupy na Facebooku",
   "Sesja Q&A na żywo",
   "Konsultacja 1:1 na Google Meets (60 minut) o wartości 650 złotych",
@@ -145,8 +152,10 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               <p className="pt-6 md:text-adaDesc">
                 Przygotowałam ten produkt z myślą o przedsiębiorczyniach i
                 freelancerkach, które chcą zbudować stabilny proces pozyskiwania
-                klientów dzięki reklamom. Wiem, że dobrze przygotowane kampanie
-                reklamowe zarabiają prawie same.
+                klientów dzięki reklamom.
+                <br />
+                Wiem, że dobrze przygotowane kampanie reklamowe zarabiają prawie
+                same.
               </p>
               <p className="pt-6 md:text-adaDesc">
                 W tym czasie Ty możesz chillować tak, jak lubisz. <br />
@@ -178,38 +187,52 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               to niezawodny sposób na wejście w świat kampanii <br />
               reklamowych. <span className="font-bold">Dowiesz się jak:</span>
             </p>
-            <ul className="flex flex-wrap gap-[10px] max-w-[1200px] mx-auto justify-center mb-10 pt-4">
-              {listItems3.map((item, index) => (
-                <li
-                  key={index}
-                  className="flex flex-col items-center md:flex-row max-w-[480px] md:min-w-[480px] md:text-adaDesc"
-                >
-                  <div className="animate-spin-slow">
-                    <StaticImage
-                      src={"../../images/flower-blue.svg"}
-                      alt="Ada Promis"
-                      placeholder="none"
-                      width={80}
-                      height={80}
-                      style={{ width: "80px", height: "80px" }}
-                    />
-                  </div>
-                  {item}
-                </li>
-              ))}
+            <ul className="flex flex-col md:flex-row">
+              <div className="flex flex-wrap gap-[10px] max-w-[1200px] mx-auto justify-center mb-10 pt-4">
+                {listItems3.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex flex-col items-center md:flex-row max-w-[480px] md:min-w-[480px] md:text-adaDesc"
+                  >
+                    <div className="animate-spin-slow">
+                      <StaticImage
+                        src={"../../images/flower-blue.svg"}
+                        alt="Ada Promis"
+                        placeholder="none"
+                        width={80}
+                        height={80}
+                        style={{ width: "80px", height: "80px" }}
+                      />
+                    </div>
+                    {item}
+                  </li>
+                ))}
+              </div>
+              <li className="flex flex-col items-center md:items-start md:flex-row max-w-[480px] md:min-w-[580px] md:text-adaDesc pt-10">
+                <div className="animate-spin-slow">
+                  <StaticImage
+                    src={"../../images/flower-blue.svg"}
+                    alt="Ada Promis"
+                    placeholder="none"
+                    width={80}
+                    height={80}
+                    style={{ width: "80px", height: "80px" }}
+                  />
+                </div>{" "}
+                {listItems3A}
+              </li>
             </ul>
           </div>
           <h3 className="md:text-adaSubtitle font-bold uppercase mx-auto max-w-[600px] text-center">
-            To jak, wchodzisz do gry po{" "}
-            <span className="text-ada-purple">nowych klientów,</span> których
-            zdobędziesz dzięki reklamom?
+            Przeprowadzę Cię przez proces krok po kroku. To jak:{" "}
+            <span className="text-ada-yellow">działamy i czilujemy?</span>
           </h3>
           <Button
             type="button"
             text={<span className="font-bold uppercase">Chcę ADSY&CHILL!</span>}
             textSize="md:text-adaSubtitle"
             btnStyle="md:w-[410px] md:h-[90px] bg-ada-pink2 my-10 mx-auto"
-            sectionId="zostaw-maila"
+            sectionId="pricing"
           />
         </div>
       )}
@@ -268,15 +291,19 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 4 && (
         <div
-          className="w-full flex flex-col px-3 pb-2 items-center mb-5 md:pt-12"
-          id="price"
+          className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12"
+          id="pricing"
         >
           <div className="flex flex-col md:flex-row gap-10">
             <div className="max-w-[460px] flex flex-col items-center">
               <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold bg-white mb-4">
                 Pakiet BASIC
               </h2>
-              <ul className="flex flex-col gap-[10px] mx-auto mb-10">
+              <p className="text-center font-bold text-adaBase pt-4">
+                Cena: 407 zł zamiast{" "}
+                <span className="line-through">597 zł</span>
+              </p>
+              <ul className="flex flex-col gap-[10px] mx-auto my-6">
                 {plusBasicList.map((item, index) => (
                   <li key={index} className="flex flex-col md:flex-row">
                     <div className="mr-2">✅</div>
@@ -290,13 +317,12 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                   </li>
                 ))}
               </ul>
-              <p className="text-center font-bold text-adaBase">Cena: 427 zł</p>
               <Button
                 type="button"
                 text={<span className="font-bold uppercase">korzystam</span>}
                 textSize="md:text-adaSubtitle"
                 btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 my-10 mx-auto"
-                sectionId="zostaw-maila"
+                url=""
               />
             </div>
             <div className="max-w-[460px] flex flex-col items-center relative">
@@ -313,7 +339,11 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold bg-ada-purple mb-4 text-white">
                 Pakiet VIP
               </h2>
-              <ul className="flex flex-col gap-[10px] mx-auto mb-10">
+              <p className="text-center font-bold text-adaBase pt-4">
+                Cena: 876 zł zamiast{" "}
+                <span className="line-through">1066 zł</span>
+              </p>
+              <ul className="flex flex-col gap-[10px] mx-auto my-6">
                 {plusVIPList.map((item, index) => (
                   <li key={index} className="flex flex-col md:flex-row">
                     <div className="mr-2">✅</div>
@@ -321,13 +351,12 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                   </li>
                 ))}
               </ul>
-              <p className="text-center font-bold text-adaBase">Cena: 876 zł</p>
               <Button
                 type="button"
                 text={<span className="font-bold uppercase">korzystam</span>}
                 textSize="md:text-adaSubtitle"
                 btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 my-10 mx-auto"
-                sectionId="zostaw-maila"
+                url=""
               />
             </div>
           </div>
@@ -336,7 +365,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               Dlaczego jeszcze warto dołączyć?
             </h2>
             <ul className="flex flex-col gap-[10px] mx-auto mb-10">
-              {listItems5.map((item, index) => (
+              {listItems6.map((item, index) => (
                 <li
                   key={index}
                   className="flex flex-col items-center md:flex-row max-w-[880px] xl:min-w-[880px] md:text-adaDesc"

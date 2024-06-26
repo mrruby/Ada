@@ -27,11 +27,16 @@ export interface ILayoutElements {
   sun3?: boolean
   sun4?: boolean
   sun5?: boolean
+  sun6?: boolean
   flaming?: boolean
   flaps?: boolean
+  flaps2?: boolean
   sunglasses?: boolean
+  sunglasses2?: boolean
   ball1?: boolean
   ball2?: boolean
+  ball3?: boolean
+  drinks?: boolean
   arrow?: boolean
   arrowMasterclass?: boolean
 }
