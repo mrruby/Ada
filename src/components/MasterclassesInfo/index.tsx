@@ -56,7 +56,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
           people="1115"
           roas="9,92"
           image={
-            <div className="md:absolute left-[-18vw] top-[180px]">
+            <div className="md:absolute left-[-12vw] top-[180px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass1.webp"}
@@ -179,7 +179,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
           people="1115"
           roas="17,90"
           image={
-            <div className="md:absolute xl:left-[-8vw] top-[88px]">
+            <div className="md:absolute xl:left-[-8vw] top-[134px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass3.webp"}
