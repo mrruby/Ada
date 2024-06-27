@@ -13,7 +13,7 @@ const listItems2 = [
   "Otrzymasz także dostęp do zamkniętej grupy na Facebooku, w której możesz zadawać pytania i rozmawiać o wynikach swoich reklam.",
   "4 godziny - tyle potrzebujesz na przerobienie pierwszego masterclassu i ustawienie pierwszej kampanii. Działasz wtedy, kiedy chcesz.",
   "Po miesiącu - masz gotowy, hulający lejek reklamowych. Psst! Im szybciej wdrożysz kampanie, tym szybciej zobaczysz wyniki 😉",
-  "Rozwiewaj wątpliwości i pytaj na grupie. Dostęp do niejjest nieograniczony!!",
+  "Rozwiewaj wątpliwości i pytaj na grupie. Dostęp do niej jest nieograniczony!",
 ]
 
 const MasterclassPreparing = ({

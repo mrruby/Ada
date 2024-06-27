@@ -58,7 +58,7 @@ export const MasterclassInfo: React.FC<Props> = ({
   return (
     <div className="w-full py-5 md:py-20 px-2 relative">
       {image}
-      <div className=" max-w-[740px]  flex flex-col items-center mx-auto">
+      <div className="max-w-[740px]  flex flex-col items-center mx-auto">
         <h2 className="text-adaSubtitle lg:text-adaSubtitleThird font-bold uppercase">
           {title}
         </h2>
@@ -95,8 +95,8 @@ export const MasterclassInfo: React.FC<Props> = ({
           />
         </div>
       </div>
+      <div className="mx-auto flex justify-center">{imageInfo}</div>
       <div className="mx-auto max-w-[800px]">
-        {imageInfo}
         <table>
           <tr className="flex flex-col md:table-row">
             <td className="md:max-w-[500px]">

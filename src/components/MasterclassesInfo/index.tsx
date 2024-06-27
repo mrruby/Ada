@@ -47,20 +47,20 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
           forWhomInfo={forWhomInfo}
           btn="Case study z kampanii z listą mailową"
           btnUrl=""
-          purpose="różne grupy zimne bazując na zainteresowaniach, lookalike, grupa ciepła"
-          cost="4532,13 zł"
+          purpose="kampania z celem zapis na listę mailową. Po dołączeniu subskrybenci otrzymują one time offer na dostęp do platformy kursowej"
+          cost="6892,61 zł"
           time="2 miesiące"
-          amount="18 x 2499 zł"
+          amount="28 x 2499 zł"
           groups="różne grupy zimne bazując na zainteresowaniach, lookalike, grupa ciepła"
-          value="44 982 zł"
-          people="1115"
-          roas="9,92"
+          value="69 972 zł"
+          people="1949"
+          roas="10,15"
           image={
             <div className="md:absolute left-[-12vw] top-[180px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass1.webp"}
-                alt="Ada Promis - hero"
+                alt="Ada Promis"
                 placeholder="none"
                 width={525}
                 height={706}
@@ -74,10 +74,10 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass1Info.webp"}
-                alt="Ada Promis - hero"
+                alt="Ada Promis - masterclass"
                 placeholder="none"
-                width={1188}
-                height={152}
+                width={1056}
+                height={201}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -127,7 +127,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass2.webp"}
-                alt="Ada Promis - hero"
+                alt="Ada Promis"
                 placeholder="none"
                 width={425}
                 height={572}
@@ -141,10 +141,10 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass2Info.webp"}
-                alt="Ada Promis - hero"
+                alt="Ada Promis - masterclass"
                 placeholder="none"
-                width={1140}
-                height={132}
+                width={1099}
+                height={93}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -173,9 +173,9 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
           purpose="kampania sprzedażowa podczas akcji promocyjnej (remarketing)"
           cost="203,72 zł"
           time="5 dni"
-          amount="20"
+          amount="21"
           groups="osoby zapisane na newsletter (kampania na listę mailową here!👋) oraz osoby odwiedzające sklep w ostatnim miesiącu"
-          value="3645,80 zł"
+          value="3900,80 zł"
           people="1115"
           roas="17,90"
           image={
@@ -183,7 +183,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass3.webp"}
-                alt="Ada Promis - hero"
+                alt="Ada Promis"
                 placeholder="none"
                 width={357}
                 height={707}
@@ -197,10 +197,10 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass3Info.webp"}
-                alt="Ada Promis - hero"
+                alt="Ada Promis - masterclass"
                 placeholder="none"
-                width={960}
-                height={170}
+                width={1081}
+                height={161}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />

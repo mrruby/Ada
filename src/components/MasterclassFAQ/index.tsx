@@ -156,11 +156,32 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       ),
     },
     {
-      question: "Czy dostanę fakturę?",
+      question: "Kiedy i jak dostanę dostęp?",
+      answer: <>Dostęp dostaniesz na maila od razu po zakupie.</>,
+    },
+
+    {
+      question: "Czy muszę mieć doświadczenie z reklamami?",
       answer: (
         <>
-          Tak, faktura trafi na maila podanego po zakupie chwilę po zakończeniu
-          transakcji.
+          Nie musisz 😊 Podczas masterclassów poprowadzę Cię za rękę przez
+          menadżera reklam. Jedyne, co musisz mieć, aby w pełni skorzystać z
+          masterclassów to menadżer firmy. Jeśli go nie masz, głowa do góry! Po
+          dołączeniu do masterclassów dostaniesz możliwość skorzystania z
+          mini-kursu „Przygotuj swój menadżer firmy”. Z nim ułożysz swojego
+          menadżera firmy od zera 😊
+        </>
+      ),
+    },
+  ]
+
+  const rightList3: ListItem[] = [
+    {
+      question: "Ile mam czasu na zapoznanie się z masterclassami?",
+      answer: (
+        <>
+          12 miesięcy. Masterclassy będą dostępne na platformie z dostępem 24/7.
+          Korzystaj, ile chcesz!
         </>
       ),
     },
@@ -179,32 +200,12 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
         </>
       ),
     },
-  ]
-
-  const rightList3: ListItem[] = [
     {
-      question: "Czy muszę mieć doświadczenie z reklamami?",
+      question: "Czy dostanę fakturę?",
       answer: (
         <>
-          Nie musisz 😊 Podczas masterclassów poprowadzę Cię za rękę przez
-          menadżera reklam. Jedyne, co musisz mieć, aby w pełni skorzystać z
-          masterclassów to menadżer firmy. Jeśli go nie masz, głowa do góry! Po
-          dołączeniu do masterclassów dostaniesz możliwość skorzystania z
-          mini-kursu „Przygotuj swój menadżer firmy”. Z nim ułożysz swojego
-          menadżera firmy od zera 😊
-        </>
-      ),
-    },
-    {
-      question: "Kiedy i jak dostanę dostęp?",
-      answer: <>Dostęp dostaniesz na maila od razu po zakupie.</>,
-    },
-    {
-      question: "Ile mam czasu na zapoznanie się z masterclassami?",
-      answer: (
-        <>
-          12 miesięcy. Masterclassy będą dostępne na platformie z dostępem 24/7.
-          Korzystaj, ile chcesz!
+          Tak, faktura trafi na maila podanego po zakupie chwilę po zakończeniu
+          transakcji.
         </>
       ),
     },
@@ -337,7 +338,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             text={
               <span className="font-bold">
                 Zwiększam sprzedaż <br />
-                <span className="text-ada-yellow">Adsy&chill!</span>
+                <span className="text-ada-yellow">Adsy&Chill!</span>
               </span>
             }
             sectionId="pricing"

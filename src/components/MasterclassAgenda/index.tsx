@@ -58,7 +58,7 @@ const listItems6 = [
 ]
 
 const plusBasicList = [
-  "Dostęp do masterclassu „Ustaw reklamę z manychatem“",
+  "Dostęp do masterclassu „Ułatw sobie reklamy z automatyzacją”",
   "Dostęp do masterclassu „Ustaw reklamę na listę mailingową”",
   "Dostęp do masterclassu „Ustaw reklamę na sprzedaż”",
   "Dostęp do grupy na Facebooku",
@@ -69,7 +69,7 @@ const minusBasicList = [
 ]
 
 const plusVIPList = [
-  "Dostęp do masterclassu „Ustaw reklamę z manychatem“",
+  "Dostęp do masterclassu „Ułatw sobie reklamy z automatyzacją”",
   "Dostęp do masterclassu „Ustaw reklamę na listę mailingową”",
   "Dostęp do masterclassu „Ustaw reklamę na sprzedaż”",
   "Dostęp do grupy na Facebooku",
@@ -188,11 +188,11 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               reklamowych. <span className="font-bold">Dowiesz się jak:</span>
             </p>
             <ul className="flex flex-col md:flex-row">
-              <div className="flex flex-wrap gap-[10px] max-w-[1200px] mx-auto justify-center mb-10 pt-4">
+              <div className="flex flex-col gap-[10px] mx-auto justify-center mb-10 pt-4">
                 {listItems3.map((item, index) => (
                   <li
                     key={index}
-                    className="flex flex-col items-center md:flex-row max-w-[480px] md:min-w-[480px] md:text-adaDesc"
+                    className="flex flex-col items-center md:flex-row max-w-[480px] md:text-adaDesc"
                   >
                     <div className="animate-spin-slow">
                       <StaticImage
@@ -300,7 +300,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 Pakiet BASIC
               </h2>
               <p className="text-center font-bold text-adaBase pt-4">
-                Cena: 407 zł zamiast{" "}
+                Cena: 427 zł zamiast{" "}
                 <span className="line-through">597 zł</span>
               </p>
               <ul className="flex flex-col gap-[10px] mx-auto my-6">
@@ -325,7 +325,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 url=""
               />
             </div>
-            <div className="max-w-[460px] flex flex-col items-center relative">
+            <div className="max-w-[520px] flex flex-col items-center relative">
               <div className="absolute left-[40px] top-[-60px]">
                 <StaticImage
                   src={"../../images/crown.svg"}

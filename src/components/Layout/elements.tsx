@@ -272,7 +272,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {flaps2 && (
         <Flaps2
-          mobileTop="hidden xl:flex lg:top-[8870px]"
+          mobileTop="hidden xl:flex lg:top-[8970px]"
           mobileRight="right-[-150px]"
         />
       )}
@@ -308,7 +308,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {drinks && (
         <Drinks
-          mobileTop="hidden xl:flex lg:top-[12060px]"
+          mobileTop="hidden xl:flex lg:top-[12280px]"
           mobileLeft="left-[-40px]"
         />
       )}
