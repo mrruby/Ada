@@ -105,8 +105,8 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
             </h2>
             <CountdownTimer targetDate={new Date("2024-07-05T10:00:00")} />
           </div> */}
-          <div className="flex flex-col md:flex-row justify-between xl:max-w-[1350px] mx-auto">
-            <div className="xl:ml-[-300px] md:-mt-6">
+          <div className="flex flex-col xl:flex-row justify-between xl:max-w-[1350px] mx-auto">
+            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6">
               <StaticImage
                 loading="eager"
                 src={"../../images/chill.webp"}
@@ -118,7 +118,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 quality={100}
               />
             </div>
-            <div className="flex flex-col justify-center max-w-[800px] gap-4  mt-8 md:-mt-60 mb-3">
+            <div className="flex flex-col justify-center max-w-[800px] gap-4 mt-8 xl:-mt-60 mb-3">
               <h2 className="text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
               <h1 className="text-adaTitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
                 ADSY<span className="text-ada-orange">&</span>
