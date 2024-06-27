@@ -118,17 +118,17 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 quality={100}
               />
             </div>
-            <div className="flex flex-col justify-center max-w-[800px] gap-4 md:-mt-60">
+            <div className="flex flex-col justify-center max-w-[800px] gap-4  mt-8 md:-mt-60 mb-3">
               <h2 className="text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
-              <h1 className="text-adaSubtitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
+              <h1 className="text-adaTitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
                 ADSY<span className="text-ada-orange">&</span>
                 <span className="text-ada-yellow">CHILL</span>
               </h1>
               <h2 className="md:text-adaSubtitle pt-2">
                 Przygotuj się na sprzedaż w ostatnim kwartale roku jeszcze{" "}
-                <span className="font-bold">w to lato!</span> Ustawiaj i
-                automatyzuj kampanie reklamowe{" "}
-                <span className="font-bold">i zdobywaj klientów.</span>
+                <span className="font-bold">w to lato!</span> Ustawiaj
+                i&nbsp;automatyzuj kampanie reklamowe{" "}
+                <span className="font-bold">i&nbsp;zdobywaj klientów.</span>
               </h2>
             </div>
           </div>

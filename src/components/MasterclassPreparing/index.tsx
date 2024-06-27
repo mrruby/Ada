@@ -95,7 +95,7 @@ const MasterclassPreparing = ({
                 <br /> pakiet dla siebie:
               </span>
             }
-            textSize="md:text-adaSubtitle"
+            textSize="text-adaSubtitle"
             btnStyle="md:w-[410px] md:h-[90px] bg-ada-pink2 my-10 mx-auto"
             sectionId="pricing"
           />

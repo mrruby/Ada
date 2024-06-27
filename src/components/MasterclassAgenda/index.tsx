@@ -229,8 +229,10 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
           </h3>
           <Button
             type="button"
-            text={<span className="font-bold uppercase">Chcę ADSY&CHILL!</span>}
-            textSize="md:text-adaSubtitle"
+            text={
+              <span className="font-extrabold uppercase">Chcę ADSY&CHILL!</span>
+            }
+            textSize="text-adaSubtitle"
             btnStyle="md:w-[410px] md:h-[90px] bg-ada-pink2 my-10 mx-auto"
             sectionId="pricing"
           />
@@ -319,9 +321,11 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               </ul>
               <Button
                 type="button"
-                text={<span className="font-bold uppercase">korzystam</span>}
-                textSize="md:text-adaSubtitle"
-                btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 my-10 mx-auto"
+                text={
+                  <span className="font-extrabold uppercase">korzystam</span>
+                }
+                textSize="text-adaSubtitle"
+                btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
                 url=""
               />
             </div>
@@ -353,9 +357,11 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               </ul>
               <Button
                 type="button"
-                text={<span className="font-bold uppercase">korzystam</span>}
-                textSize="md:text-adaSubtitle"
-                btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 my-10 mx-auto"
+                text={
+                  <span className="font-extrabold uppercase">korzystam</span>
+                }
+                textSize="text-adaSubtitle"
+                btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
                 url=""
               />
             </div>
