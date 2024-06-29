@@ -97,7 +97,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 3 && (
-        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[862px]">
+        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
           {/* timer na ostatnie 48h promocji */}
           {/* <div className="flex flex-col gap-4 items-center">
             <h2 className="text-adaBase font-bold text-center animate-bounce uppercase">
@@ -125,10 +125,10 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 <span className="text-ada-yellow">CHILL</span>
               </h1>
               <h2 className="md:text-adaSubtitle pt-2">
-                Przygotuj się na sprzedaż w ostatnim kwartale roku jeszcze{" "}
-                <span className="font-bold">w to lato!</span> Ustawiaj
-                i&nbsp;automatyzuj kampanie reklamowe{" "}
-                <span className="font-bold">i&nbsp;zdobywaj klientów.</span>
+                Przygotuj się na sprzedaż{" "}
+                <span className="font-bold">jeszcze w to lato!</span> Ustawiaj,
+                automatyzuj kampanie reklamowe{" "}
+                <span className="font-bold">i przyciągaj klientów.</span>
               </h2>
             </div>
           </div>

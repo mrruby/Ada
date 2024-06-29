@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import TypingAnimation from "helpers/TypingAnimation"
 
 const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
   return (
@@ -100,7 +101,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 3 && (
-        <div className="flex flex-col items-center max-w-[806px] gap-4 pt-10">
+        <div className="flex flex-col items-center max-w-[806px] gap-4">
           <StaticImage
             src={"../../images/chill3.webp"}
             alt="Ada Promis"
@@ -110,9 +111,10 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
-          <h2 className="text-adaSubtitle uppercase md:text-[80px] font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]">
-            Cześć!
-          </h2>
+          <TypingAnimation
+            text="     Cześć!"
+            textStyle="text-adaSubtitle uppercase md:text-[80px] font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]"
+          />
           <h3 className="md:text-adaSubtitleSecondary pt-8 font-bold md:border-b-[20px] border-ada-light-pink md:leading-[0px]">
             Nazywam się Adrianna Promis-Urbas
           </h3>

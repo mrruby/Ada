@@ -149,15 +149,17 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       answer: (
         <>
           Adsy&chill to wiedza dla osób, które chcą zautomatyzować i rozkręcić
-          działania na swoim. Są idealne dla osób, które mają niewielką (lub
-          żadną) wiedzę o kampaniach reklamowych. Chcesz postawić pierwszą
+          działania na swoim. Są idealne nawet dla osób, które mają niewielką
+          (lub żadną) wiedzę o kampaniach reklamowych. Chcesz postawić pierwszą
           kampanię reklamową z prawdziwego zdarzenia? Adsy&chill są dla Ciebie!
         </>
       ),
     },
     {
       question: "Kiedy i jak dostanę dostęp?",
-      answer: <>Dostęp dostaniesz na maila od razu po zakupie.</>,
+      answer: (
+        <>To jest przedsprzedaż: dostęp do masterclassów dostaniesz 10.07.</>
+      ),
     },
 
     {
@@ -167,9 +169,9 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           Nie musisz 😊 Podczas masterclassów poprowadzę Cię za rękę przez
           menadżera reklam. Jedyne, co musisz mieć, aby w pełni skorzystać z
           masterclassów to menadżer firmy. Jeśli go nie masz, głowa do góry! Po
-          dołączeniu do masterclassów dostaniesz możliwość skorzystania z
-          mini-kursu „Przygotuj swój menadżer firmy”. Z nim ułożysz swojego
-          menadżera firmy od zera 😊
+          dołączeniu do masterclassów dostaniesz możliwość zakupu mini-kursu
+          „Przygotuj swój menedżer firmy”. Z nim ułożysz swojego menedżera firmy
+          od zera 😊
         </>
       ),
     },
@@ -315,7 +317,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
         <>
           <h2 className="lg:text-adaSubtitleThird font-bold text-center animate-bounce uppercase mt-10 pb-4">
             Na dołączenie <br />
-            do warsztatów zostało:{" "}
+            do przedsprzedaży zostało:{" "}
           </h2>
           <CountdownTimer targetDate={new Date("2024-07-05T10:00:00")} />
           <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">

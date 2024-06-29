@@ -155,11 +155,11 @@ const ReferencesMentoring = ({ title1, title2 }: IReferences): JSX.Element => {
     <div className="pt-[40px]">
       {title1 && (
         <>
-          <h3 className="mx-auto md:max-w-[1140px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
-            TAK mówią osoby, z którymi współpracowałam{" "}
+          <h3 className="mx-auto md:max-w-[900px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            TAK mówią osoby, które uczyłam
           </h3>
-          <h3 className="mx-auto md:max-w-[790px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
-            przy kampaniach reklamowych
+          <h3 className="mx-auto md:max-w-[600px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            prowadzenia reklam:
           </h3>
         </>
       )}

@@ -28,7 +28,7 @@ const listItems3A = (
     krok po kroku ustawić 3 typy kampanii reklamowych:
     <br />- z wykorzystaniem bezpłatnego narzędzia Make,
     <br />- budujące stabilną i kaloryczną listę mailingową,
-    <br />- sprzedażowe: remarketingowe!,
+    <br />- sprzedażowe: remarketingowe!
   </>
 )
 
@@ -141,7 +141,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 2 && (
         <div
-          className="w-full flex flex-col px-3 pb-2 items-center mb-[40px] md:pt-12"
+          className="w-full flex flex-col px-3 pb-2 items-center md:pt-12"
           id="dlaczego"
         >
           <div className="flex flex-col md:flex-row md:gap-20">
