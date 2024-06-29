@@ -77,7 +77,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             I tak od stażu w agencji marketingowej do swojej działalności: dziś
             pod szyldem GetBold! obsługuję klientów z Europy, w tym z Polski i
             na moim liczniku wybiło już{" "}
-            <span className="font-bold">ponad 1 mln budżetów reklamowych</span>
+            <span className="font-bold">ponad 1 mln budżetów reklamowych </span>
             wydanych w ramach Meta Ads.
           </p>
           <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
@@ -127,7 +127,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             </span>{" "}
             dziś pod szyldem GetBold! obsługuję klientów z Europy, w tym z
             Polski i na moim liczniku wybiło już{" "}
-            <span className="font-bold">ponad 1 mln budżetów reklamowych</span>
+            <span className="font-bold">ponad 1 mln budżetów reklamowych </span>
             wydanych w ramach Meta Ads.
           </p>
           <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">

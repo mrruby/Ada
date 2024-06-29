@@ -156,11 +156,32 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       ),
     },
     {
-      question: "Czy dostanę fakturę?",
+      question: "Kiedy i jak dostanę dostęp?",
+      answer: <>Dostęp dostaniesz na maila od razu po zakupie.</>,
+    },
+
+    {
+      question: "Czy muszę mieć doświadczenie z reklamami?",
       answer: (
         <>
-          Tak, faktura trafi na maila podanego po zakupie chwilę po zakończeniu
-          transakcji.
+          Nie musisz 😊 Podczas masterclassów poprowadzę Cię za rękę przez
+          menadżera reklam. Jedyne, co musisz mieć, aby w pełni skorzystać z
+          masterclassów to menadżer firmy. Jeśli go nie masz, głowa do góry! Po
+          dołączeniu do masterclassów dostaniesz możliwość skorzystania z
+          mini-kursu „Przygotuj swój menadżer firmy”. Z nim ułożysz swojego
+          menadżera firmy od zera 😊
+        </>
+      ),
+    },
+  ]
+
+  const rightList3: ListItem[] = [
+    {
+      question: "Ile mam czasu na zapoznanie się z masterclassami?",
+      answer: (
+        <>
+          12 miesięcy. Masterclassy będą dostępne na platformie z dostępem 24/7.
+          Korzystaj, ile chcesz!
         </>
       ),
     },
@@ -179,32 +200,12 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
         </>
       ),
     },
-  ]
-
-  const rightList3: ListItem[] = [
     {
-      question: "Czy muszę mieć doświadczenie z reklamami?",
+      question: "Czy dostanę fakturę?",
       answer: (
         <>
-          Nie musisz 😊 Podczas masterclassów poprowadzę Cię za rękę przez
-          menadżera reklam. Jedyne, co musisz mieć, aby w pełni skorzystać z
-          masterclassów to menadżer firmy. Jeśli go nie masz, głowa do góry! Po
-          dołączeniu do masterclassów dostaniesz możliwość skorzystania z
-          mini-kursu „Przygotuj swój menadżer firmy”. Z nim ułożysz swojego
-          menadżera firmy od zera 😊
-        </>
-      ),
-    },
-    {
-      question: "Kiedy i jak dostanę dostęp?",
-      answer: <>Dostęp dostaniesz na maila od razu po zakupie.</>,
-    },
-    {
-      question: "Ile mam czasu na zapoznanie się z masterclassami?",
-      answer: (
-        <>
-          12 miesięcy. Masterclassy będą dostępne na platformie z dostępem 24/7.
-          Korzystaj, ile chcesz!
+          Tak, faktura trafi na maila podanego po zakupie chwilę po zakończeniu
+          transakcji.
         </>
       ),
     },
@@ -312,10 +313,11 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 3 && (
         <>
-          <h2 className="text-adaBase font-bold text-center animate-bounce uppercase mt-10">
-            Na dołączenie do warsztatów zostało:{" "}
+          <h2 className="lg:text-adaSubtitleThird font-bold text-center animate-bounce uppercase mt-10 pb-4">
+            Na dołączenie <br />
+            do warsztatów zostało:{" "}
           </h2>
-          <CountdownTimer targetDate={new Date("2024-06-28T18:00:00")} />
+          <CountdownTimer targetDate={new Date("2024-07-05T10:00:00")} />
           <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
             <div className="pt-[60px] lg:pt-[76px]">
               <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce text-center mx-auto">
@@ -335,12 +337,13 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             type="button"
             text={
               <span className="font-bold">
-                Zwiększam sprzedaż z Adsy&chill!{" "}
+                Zwiększam sprzedaż <br />
+                <span className="text-ada-yellow">Adsy&Chill!</span>
               </span>
             }
-            url="/"
+            sectionId="pricing"
             textSize="md:text-adaSubtitleSecondary"
-            btnStyle="md:w-[810px] bg-ada-pink2 mb-10 lg:mb-[80px]"
+            btnStyle="md:w-[500px] bg-ada-purple mb-10 lg:mb-[120px] text-white"
           />
         </>
       )}

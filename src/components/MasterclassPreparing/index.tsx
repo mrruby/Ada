@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 
 const listItems = [
   "Kliknij w link, który dostaniesz w mailu i upewnij się, że jesteś zalogowana na Youtube, aby móc zadawać pytania na spotkaniu!",
@@ -8,10 +9,11 @@ const listItems = [
 ]
 
 const listItems2 = [
-  "Dostaniesz maila z dostępem do masterclassów i do grupy na Facebooku - od razu po zakupie.",
+  "To jest przedsprzedaż - dostęp do nagrania otrzymujesz 10.07. Od tego dnia możesz przerabiać materiały do woli przez następne 12 miesięcy - kiedy chcesz i ile razy chcesz!",
+  "Otrzymasz także dostęp do zamkniętej grupy na Facebooku, w której możesz zadawać pytania i rozmawiać o wynikach swoich reklam.",
   "4 godziny - tyle potrzebujesz na przerobienie pierwszego masterclassu i ustawienie pierwszej kampanii. Działasz wtedy, kiedy chcesz.",
-  "Po X miesiącach - masz gotowy, hulający lejek reklamowych. Psst! Im szybciej wdrożysz kampanie, tym szybciej zobaczysz wyniki 😉",
-  "Rozwiewaj wątpliwości i pytaj na grupie. Masz do niej dostęp przez XX - korzystaj do woli!",
+  "Po miesiącu - masz gotowy, hulający lejek reklamowych. Psst! Im szybciej wdrożysz kampanie, tym szybciej zobaczysz wyniki 😉",
+  "Rozwiewaj wątpliwości i pytaj na grupie. Dostęp do niej jest nieograniczony!",
 ]
 
 const MasterclassPreparing = ({
@@ -63,7 +65,7 @@ const MasterclassPreparing = ({
         </div>
       )}
       {version === 2 && (
-        <div className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-2">
+        <div className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-2 relative">
           <ul className="flex flex-col gap-8 md:gap-12 pb-10 md:pb-[100px]">
             {listItems2.map((item, index) => (
               <li
@@ -77,6 +79,37 @@ const MasterclassPreparing = ({
               </li>
             ))}
           </ul>
+          <p className="md:text-adaBase">
+            <span className="font-bold">Jeśli wybierasz pakiet VIP </span>-
+            5.07. prześlę Ci wszystkie informacje o sesji Q&A.
+          </p>
+          <p className="md:text-adaBase">
+            Czeka też na Ciebie konsultacja w ciągu 3 miesięcy od daty
+            dołączenia.
+          </p>
+          <Button
+            type="button"
+            text={
+              <span className="font-bold">
+                Wybierz najlepszy
+                <br /> pakiet dla siebie:
+              </span>
+            }
+            textSize="text-adaSubtitle"
+            btnStyle="md:w-[410px] md:h-[90px] bg-ada-pink2 my-10 mx-auto"
+            sectionId="pricing"
+          />
+          <div className="md:absolute right-0 bottom-12">
+            <StaticImage
+              src={"../../images/preapering.webp"}
+              alt=""
+              placeholder="none"
+              width={250}
+              height={270}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+          </div>
         </div>
       )}
     </>

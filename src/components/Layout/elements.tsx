@@ -28,11 +28,16 @@ import {
   Sun3,
   Sun4,
   Sun5,
+  Sun6,
   Flaming,
   Flaps,
+  Flaps2,
   Sunglasses,
+  Sunglasses2,
   Ball1,
   Ball2,
+  Ball3,
+  Drinks,
   Arrow,
   ArrowMasterclass,
 } from "../../helpers/LayoutElements/index"
@@ -67,11 +72,16 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   sun3,
   sun4,
   sun5,
+  sun6,
   flaming,
   flaps,
+  flaps2,
   sunglasses,
+  sunglasses2,
   ball1,
   ball2,
+  ball3,
+  drinks,
   arrow,
   arrowMasterclass,
 }) => {
@@ -242,6 +252,12 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
           mobileRight="right-[-150px]"
         />
       )}
+      {sun6 && (
+        <Sun6
+          mobileTop="hidden xl:flex lg:top-[100px]"
+          mobileLeft="left-[6vw]"
+        />
+      )}
       {flaming && (
         <Flaming
           mobileTop="hidden xl:flex lg:top-[-30px]"
@@ -254,10 +270,22 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
           mobileLeft="left-[-160px]"
         />
       )}
+      {flaps2 && (
+        <Flaps2
+          mobileTop="hidden xl:flex lg:top-[8970px]"
+          mobileRight="right-[-150px]"
+        />
+      )}
       {sunglasses && (
         <Sunglasses
           mobileTop="hidden xl:flex lg:top-[2360px]"
           mobileRight="right-[-150px]"
+        />
+      )}
+      {sunglasses2 && (
+        <Sunglasses2
+          mobileTop="hidden xl:flex lg:top-[7470px]"
+          mobileRight="left-[-150px]"
         />
       )}
       {ball1 && (
@@ -272,6 +300,18 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
           mobileRight="right-[-150px]"
         />
       )}
+      {ball3 && (
+        <Ball3
+          mobileTop="hidden xl:flex lg:top-[6160px]"
+          mobileRight="right-[-150px]"
+        />
+      )}
+      {drinks && (
+        <Drinks
+          mobileTop="hidden xl:flex lg:top-[12280px]"
+          mobileLeft="left-[-40px]"
+        />
+      )}
       {arrow && (
         <Arrow
           mobileTop="hidden xl:flex lg:top-[650px] "
@@ -280,8 +320,8 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {arrowMasterclass && (
         <ArrowMasterclass
-          mobileTop="hidden xl:flex lg:top-[500px] "
-          mobileRight="right-[50vw]"
+          mobileTop="hidden xl:flex lg:top-[700px] "
+          mobileRight="right-[40vw]"
         />
       )}
     </>

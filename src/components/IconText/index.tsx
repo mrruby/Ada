@@ -68,20 +68,21 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
 
   const rightList2 = [
     {
-      icon: "🔥",
-      text: "Słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
+      icon: "🤯",
+      text: "Myślałaś, że przecież reklamy można ‘tak łatwo wyklikać’, a potem weszłaś do menadżera reklam i poczułaś chaos?",
     },
     {
       icon: "😬",
       text: "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że „umiesz za mało”",
     },
     {
-      icon: "🤑",
-      text: "Chciałabyś oferować swoim klientom szerszy zakres usług, aby móc podnosić stawki i dyktować warunki?",
+      icon: "🥵",
+      text: "Twoje dotychczasowe reklamy nie przynosiły pożądanych efektów?",
     },
+
     {
-      icon: "🤯",
-      text: "Myślałaś, że przecież reklamy można ‘tak łatwo wyklikać’, a potem weszłaś do menadżera reklam i poczułaś chaos?",
+      icon: "🤔",
+      text: "Albo tak naprawdę nie wiesz, czego możesz oczekiwać po wynikach z reklamy?",
     },
   ]
 

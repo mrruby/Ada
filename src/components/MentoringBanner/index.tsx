@@ -92,13 +92,13 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
             }
             textSize="md:text-adaSubtitleSecondary"
             btnStyle="md:w-[504px] md:h-[120px] bg-ada-pink2 my-20 mx-auto"
-            sectionId="zostaw-maila"
+            sectionId="pricing"
           />
         </>
       )}
       {version === 7 && (
         <>
-          <h2 className="md:text-adaTitle font-bold uppercase text-center">
+          <h2 className="text-adaSubtitle md:text-adaTitle font-bold uppercase text-center">
             Co będzie się działo
             <br />
             po zakupie?

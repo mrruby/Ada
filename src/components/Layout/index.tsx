@@ -33,11 +33,16 @@ type LayoutElements = {
   sun3?: boolean
   sun4?: boolean
   sun5?: boolean
+  sun6?: boolean
   flaming?: boolean
   flaps?: boolean
+  flaps2?: boolean
   sunglasses?: boolean
+  sunglasses2?: boolean
   ball1?: boolean
   ball2?: boolean
+  ball3?: boolean
+  drinks?: boolean
   arrow?: boolean
   arrowMasterclass?: boolean
 }
@@ -75,11 +80,16 @@ const defaultProps: LayoutElements = {
   sun3: false,
   sun4: false,
   sun5: false,
+  sun6: false,
   flaming: false,
   flaps: false,
+  flaps2: false,
   sunglasses: false,
+  sunglasses2: false,
   ball1: false,
   ball2: false,
+  ball3: false,
+  drinks: false,
   arrow: false,
   arrowMasterclass: false,
 }
