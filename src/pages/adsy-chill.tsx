@@ -32,7 +32,7 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <WebinarBanner version={3} />
       </MaxWithBgColorContainer>
-      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[970px] w-screen z-0"></div>
+      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[880px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <IconText version={2} />
       </MaxWithBgColorContainer>

@@ -326,7 +326,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 }
                 textSize="text-adaSubtitle"
                 btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
-                url=""
+                url="https://sklep.adrianna.com.pl/product/adsy-chill-pakiet-basic"
               />
             </div>
             <div className="max-w-[520px] flex flex-col items-center relative">
@@ -362,7 +362,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 }
                 textSize="text-adaSubtitle"
                 btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
-                url=""
+                url="https://sklep.adrianna.com.pl/product/adsy-chill-pakiet-vip"
               />
             </div>
           </div>

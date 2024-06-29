@@ -25,6 +25,7 @@ interface Props {
   imageInfo?: JSX.Element
   btnStyle?: string
   btnMargin?: string
+  sectionId?: string
 }
 
 const h4Style = "bg-ada-pink5 font-bold md:text-adaDesc w-fit py-1 pr-1"
@@ -54,6 +55,7 @@ export const MasterclassInfo: React.FC<Props> = ({
   imageInfo,
   btnStyle,
   btnMargin,
+  sectionId,
 }) => {
   return (
     <div className="w-full py-5 md:py-20 px-2 relative">
@@ -92,6 +94,7 @@ export const MasterclassInfo: React.FC<Props> = ({
             textSize="md:text-adaSubtitle"
             btnStyle={`md:w-[400px] md:h-[80px] bg-ada-pink5 mx-auto ${btnMargin}`}
             url={btnUrl}
+            sectionId={sectionId}
           />
         </div>
       </div>
