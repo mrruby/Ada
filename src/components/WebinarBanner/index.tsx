@@ -89,9 +89,6 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 </span>{" "}
                 <br />5 reklam, które musisz przetestować w to lato{" "}
               </h2>
-              <h2 className="md:text-adaSubtitle font-bold">
-                Termin: 30.06 o 18:00
-              </h2>
             </div>
           </div>
         </div>
