@@ -36,7 +36,7 @@ const MasterclassPage = (): JSX.Element => {
       waves4={true}
       waves5={true}
       waves6={true}
-      showHeader={false}
+      showHeaderAndFooter={false}
     >
       <MasterclassTime1 />
       <MasterclassBanner />

@@ -101,7 +101,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
             <CountdownTimer targetDate={new Date("2024-07-05T10:00:00")} />
           </div> */}
           <div className="flex flex-col xl:flex-row justify-between xl:max-w-[1350px] mx-auto">
-            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6">
+            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[300px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/chill.webp"}

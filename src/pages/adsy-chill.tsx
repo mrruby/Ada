@@ -15,6 +15,7 @@ import MasterclassesInfo from "components/MasterclassesInfo"
 const AdsyAndChill = (): JSX.Element => {
   return (
     <Layout
+      showHeaderAndFooter={false}
       arrowMasterclass={true}
       flowerBlue2={true}
       flowerBlue5={true}
@@ -32,7 +33,7 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <WebinarBanner version={3} />
       </MaxWithBgColorContainer>
-      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[880px] w-screen z-0"></div>
+      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[840px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <IconText version={2} />
       </MaxWithBgColorContainer>
