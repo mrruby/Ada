@@ -11,6 +11,7 @@ import MasterclassPreparing from "components/MasterclassPreparing"
 import MentoringBanner from "components/MentoringBanner"
 import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassesInfo from "components/MasterclassesInfo"
+import CountdownTimer from "helpers/CountdownTimer"
 
 const AdsyAndChill = (): JSX.Element => {
   return (
@@ -28,6 +29,12 @@ const AdsyAndChill = (): JSX.Element => {
       ball3={true}
       drinks={true}
     >
+      <div className="flex flex-col items-center mt-8">
+        <h2 className="lg:text-adaSubtitleThird font-bold text-center animate-bounce uppercase mt-10 pb-4">
+          DO KOŃCA PRZEDSPRZEDAŻY POZOSTAŁO..
+        </h2>
+        <CountdownTimer targetDate={new Date("2024-07-05T18:00:00")} />
+      </div>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <div className="flex flex-col items-center mt-16">
           <iframe
@@ -38,7 +45,7 @@ const AdsyAndChill = (): JSX.Element => {
           ></iframe>
         </div>
       </MaxWithBgColorContainer>
-      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[650px] w-screen z-0"></div>
+      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[820px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <IconText version={2} />
       </MaxWithBgColorContainer>

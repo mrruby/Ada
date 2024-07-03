@@ -320,7 +320,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {arrowMasterclass && (
         <ArrowMasterclass
-          mobileTop="hidden xl:flex lg:top-[500px] "
+          mobileTop="hidden xl:flex lg:top-[800px] "
           mobileRight="right-[40vw]"
         />
       )}
