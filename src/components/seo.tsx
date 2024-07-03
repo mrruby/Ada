@@ -3,10 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 
 type Props = {
   description?: string
+  script?: string
   title: string
 }
 
-const SEO = ({ description, title }: Props): JSX.Element => {
+const SEO = ({ description, title, script }: Props): JSX.Element => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -42,6 +43,7 @@ const SEO = ({ description, title }: Props): JSX.Element => {
         name="facebook-domain-verification"
         content="lghw23ob63nz7oal7ll1jo6ys8txt3"
       />
+      {script && <script>{script}</script>}
     </>
   )
 }
