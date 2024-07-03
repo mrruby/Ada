@@ -46,7 +46,7 @@ const MentoringAbout = (): JSX.Element => {
             loading="eager"
             src={"../../images/mentoring.webp"}
             alt="Ada Promis - hero"
-            placeholder="none"
+            placeholder="blurred"
             width={766}
             height={818}
             formats={["auto", "webp", "avif"]}
@@ -97,7 +97,7 @@ const MentoringAbout = (): JSX.Element => {
             loading="eager"
             src={"../../images/justyna.png"}
             alt="Justyna Król"
-            placeholder="none"
+            placeholder="blurred"
             width={290}
             height={290}
             formats={["auto", "webp", "avif"]}
@@ -120,7 +120,7 @@ const MentoringAbout = (): JSX.Element => {
             loading="eager"
             src={"../../images/dorota.png"}
             alt="Dorota Woźniak"
-            placeholder="none"
+            placeholder="blurred"
             width={290}
             height={290}
             formats={["auto", "webp", "avif"]}
@@ -145,7 +145,7 @@ const MentoringAbout = (): JSX.Element => {
             loading="eager"
             src={"../../images/marianna.png"}
             alt="Marianna Ciniak"
-            placeholder="none"
+            placeholder="blurred"
             width={290}
             height={290}
             formats={["auto", "webp", "avif"]}

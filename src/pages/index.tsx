@@ -34,7 +34,7 @@ const IndexPage = (): JSX.Element => {
             <StaticImage
               src={"../images/contact.webp"}
               alt="Ada Promis - hero"
-              placeholder="none"
+              placeholder="blurred"
               width={600}
               height={600}
             />

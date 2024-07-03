@@ -39,7 +39,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja1.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={431}
                 height={276}
               />
@@ -48,7 +48,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja2.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={432}
                 height={79}
               />
@@ -57,7 +57,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja3.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={425}
                 height={111}
               />
@@ -66,7 +66,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja4.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={537}
                 height={83}
               />
@@ -75,7 +75,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja5.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={537}
                 height={83}
               />
@@ -84,7 +84,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja6.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={537}
                 height={130}
               />
@@ -93,7 +93,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja7.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={537}
                 height={83}
               />
@@ -104,7 +104,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja1.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={431}
                 height={276}
               />
@@ -113,7 +113,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja2.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={432}
                 height={79}
               />
@@ -122,7 +122,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja3.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={425}
                 height={111}
               />
@@ -131,7 +131,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja4.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={537}
                 height={83}
               />
@@ -140,7 +140,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja5.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={537}
                 height={83}
               />
@@ -149,7 +149,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja6.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={537}
                 height={130}
               />
@@ -158,7 +158,7 @@ const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
               <StaticImage
                 src="../../images/referencja7.webp"
                 alt=""
-                placeholder="none"
+                placeholder="blurred"
                 width={537}
                 height={83}
               />

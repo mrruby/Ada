@@ -10,7 +10,7 @@ const MasterclassInfo3 = (): JSX.Element => {
           <StaticImage
             src={"../../images/warsztaty.webp"}
             alt="Ada Promis - hero"
-            placeholder="none"
+            placeholder="blurred"
             width={440}
             height={432}
             formats={["auto", "webp", "avif"]}

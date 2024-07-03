@@ -40,7 +40,7 @@ const TextBanner = ({
             <StaticImage
               src={"../../images/instagram.svg"}
               alt="Ada Promis"
-              placeholder="none"
+              placeholder="blurred"
               width={29}
               height={29}
             />
@@ -49,7 +49,7 @@ const TextBanner = ({
             <StaticImage
               src={"../../images/facebook.svg"}
               alt="Ada Promis"
-              placeholder="none"
+              placeholder="blurred"
               width={29}
               height={29}
             />
@@ -58,7 +58,7 @@ const TextBanner = ({
             <StaticImage
               src={"../../images/website.svg"}
               alt="Ada Promis"
-              placeholder="none"
+              placeholder="blurred"
               width={39}
               height={32}
             />

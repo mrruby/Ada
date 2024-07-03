@@ -67,7 +67,7 @@ const MentoringWhy2 = (): JSX.Element => {
           loading="eager"
           src={"../../images/ada_about2.webp"}
           alt="Ada Promis - hero"
-          placeholder="none"
+          placeholder="blurred"
           width={380}
           height={380}
           formats={["auto", "webp", "avif"]}
@@ -84,7 +84,7 @@ const MentoringWhy2 = (): JSX.Element => {
           loading="eager"
           src={"../../images/arrowdown.svg"}
           alt=""
-          placeholder="none"
+          placeholder="blurred"
           width={56}
           height={48}
           formats={["auto", "webp", "avif"]}

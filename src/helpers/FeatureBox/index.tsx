@@ -36,7 +36,7 @@ export const FeatureBox: React.FC<Props> = ({
           <StaticImage
             src={"../../images/flower-white-pink.svg"}
             alt="Blue Flower Ada Promis"
-            placeholder="none"
+            placeholder="blurred"
             width={150}
             height={150}
           />
@@ -46,7 +46,7 @@ export const FeatureBox: React.FC<Props> = ({
           <StaticImage
             src={"../../images/flower-white.svg"}
             alt="White Flower Ada Promis"
-            placeholder="none"
+            placeholder="blurred"
             width={96}
             height={108}
           />

@@ -25,7 +25,7 @@ const ThankBanner2 = (): JSX.Element => {
         <StaticImage
           src={"../../images/ada_thank.webp"}
           alt="Ada Promis - hero"
-          placeholder="none"
+          placeholder="blurred"
           width={640}
           height={640}
           formats={["auto", "webp", "avif"]}
@@ -36,7 +36,7 @@ const ThankBanner2 = (): JSX.Element => {
         <StaticImage
           src={"../../images/instagram.webp"}
           alt="Ada Promis - instagram"
-          placeholder="none"
+          placeholder="blurred"
           width={400}
           height={610}
           formats={["auto", "webp", "avif"]}

@@ -35,7 +35,7 @@ const EbookPage = (): JSX.Element => {
             <StaticImage
               src={"../images/ada_ebook.webp"}
               alt="Ada Promis - Ebook"
-              placeholder="none"
+              placeholder="blurred"
               width={650}
               height={650}
             />

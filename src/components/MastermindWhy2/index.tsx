@@ -9,7 +9,7 @@ const MastermindWhy2 = (): JSX.Element => {
         <StaticImage
           src={"../../images/ada_mastermind2.webp"}
           alt="Ada Promis - hero"
-          placeholder="none"
+          placeholder="blurred"
           width={507}
           height={644}
           formats={["auto", "webp", "avif"]}

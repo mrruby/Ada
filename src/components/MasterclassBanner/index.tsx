@@ -10,7 +10,7 @@ const MasterclassBanner = (): JSX.Element => {
           loading="eager"
           src={"../../images/masterclass.webp"}
           alt="Ada Promis - hero"
-          placeholder="none"
+          placeholder="blurred"
           width={479}
           height={672}
           formats={["auto", "webp", "avif"]}

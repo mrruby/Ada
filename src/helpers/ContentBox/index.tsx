@@ -23,7 +23,7 @@ export const ContentBox: React.FC<ContentBoxProps> = ({
         <StaticImage
           src={"../../images/flower-blue.svg"}
           alt="Blue Flower Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={150}
           height={150}
         />

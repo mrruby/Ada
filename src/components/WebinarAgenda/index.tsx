@@ -39,7 +39,7 @@ const WebinarAgenda = (): JSX.Element => {
               <StaticImage
                 src={"../../images/check.svg"}
                 alt="Ada Promis"
-                placeholder="none"
+                placeholder="blurred"
                 width={42}
                 height={44}
                 style={{ width: "42px", height: "44px" }}
@@ -72,7 +72,7 @@ const WebinarAgenda = (): JSX.Element => {
               <StaticImage
                 src={"../../images/check.svg"}
                 alt="Ada Promis"
-                placeholder="none"
+                placeholder="blurred"
                 width={42}
                 height={44}
                 style={{ width: "42px", height: "44px" }}

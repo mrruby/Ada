@@ -24,7 +24,7 @@ const AdaBanner = (): JSX.Element => {
         <StaticImage
           src={"../../images/contact-ada.png"}
           alt="Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={465}
           height={360}
         />
@@ -32,7 +32,7 @@ const AdaBanner = (): JSX.Element => {
           <StaticImage
             src={"../../images/three-flowers.svg"}
             alt="Ada Promis"
-            placeholder="none"
+            placeholder="blurred"
             width={100}
             height={300}
           />

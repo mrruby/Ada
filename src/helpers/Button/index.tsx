@@ -47,7 +47,7 @@ export const Button: React.FC<Props> = ({
         <StaticImage
           src={"../../images/calendar.svg"}
           alt=""
-          placeholder="none"
+          placeholder="blurred"
           width={24}
           height={24}
           className="ml-1 md:ml-4 md:mt-[5px]"
@@ -57,7 +57,7 @@ export const Button: React.FC<Props> = ({
         <StaticImage
           src={"../../images/calendar.svg"}
           alt=""
-          placeholder="none"
+          placeholder="blurred"
           width={48}
           height={48}
           className="w-[24px] md:w-[48px] ml-4 md:mt-[10px]"

@@ -15,7 +15,7 @@ export const PuzzleBox: React.FC<Props> = ({ text, btnText, url }) => {
         <StaticImage
           src={"./../../images/puzzle.png"}
           alt="Blue Flower Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={180}
           height={125}
         />

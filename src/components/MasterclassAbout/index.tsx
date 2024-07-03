@@ -8,7 +8,7 @@ const MasterclassAbout = (): JSX.Element => {
         <StaticImage
           src={"../../images/hello.webp"}
           alt="Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={522}
           height={383}
           formats={["auto", "webp", "avif"]}
@@ -45,7 +45,7 @@ const MasterclassAbout = (): JSX.Element => {
         <StaticImage
           src={"../../images/ada.webp"}
           alt="Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={383}
           height={376}
           formats={["auto", "webp", "avif"]}
@@ -74,7 +74,7 @@ const MasterclassAbout = (): JSX.Element => {
         <StaticImage
           src={"../../images/diagram.webp"}
           alt="Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={266}
           height={196}
           formats={["auto", "webp", "avif"]}

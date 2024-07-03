@@ -10,7 +10,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           <StaticImage
             src={"../../images/hello2.webp"}
             alt="Ada Promis"
-            placeholder="none"
+            placeholder="blurred"
             width={418}
             height={306}
             formats={["auto", "webp", "avif"]}
@@ -58,7 +58,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           <StaticImage
             src={"../../images/ada_wakacje.webp"}
             alt="Ada Promis"
-            placeholder="none"
+            placeholder="blurred"
             width={428}
             height={340}
             formats={["auto", "webp", "avif"]}
@@ -105,7 +105,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           <StaticImage
             src={"../../images/chill3.webp"}
             alt="Ada Promis"
-            placeholder="none"
+            placeholder="blurred"
             width={584}
             height={427}
             formats={["auto", "webp", "avif"]}

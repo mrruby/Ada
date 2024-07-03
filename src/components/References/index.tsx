@@ -24,7 +24,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia1.webp"}
         alt="Opinia o współpracy z Adą Promis - Ziołowa Wyspa"
-        placeholder="none"
+        placeholder="blurred"
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
@@ -37,7 +37,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia2.webp"}
         alt="Opinia o współpracy z Adą Promis - Natalia Plewniok"
-        placeholder="none"
+        placeholder="blurred"
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
@@ -50,7 +50,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia3.webp"}
         alt="Opinia o współpracy z Adą Promis - Aleksandra Adamczyk"
-        placeholder="none"
+        placeholder="blurred"
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
@@ -63,7 +63,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia4.webp"}
         alt="Opinia o współpracy z Adą Promis - Stan Skupienia"
-        placeholder="none"
+        placeholder="blurred"
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
@@ -76,7 +76,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia5.webp"}
         alt="Opinia o współpracy z Adą Promis - Creatownia Studio"
-        placeholder="none"
+        placeholder="blurred"
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}

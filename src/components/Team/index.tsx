@@ -18,7 +18,7 @@ const Team = (): JSX.Element => {
           loading="eager"
           src={"../../images/justyna.png"}
           alt="Justyna Król"
-          placeholder="none"
+          placeholder="blurred"
           width={290}
           height={290}
           formats={["auto", "webp", "avif"]}
@@ -41,7 +41,7 @@ const Team = (): JSX.Element => {
           loading="eager"
           src={"../../images/dorota.png"}
           alt="Dorota Woźniak"
-          placeholder="none"
+          placeholder="blurred"
           width={290}
           height={290}
           formats={["auto", "webp", "avif"]}
@@ -66,7 +66,7 @@ const Team = (): JSX.Element => {
           loading="eager"
           src={"../../images/marianna.png"}
           alt="Marianna Ciniak"
-          placeholder="none"
+          placeholder="blurred"
           width={290}
           height={290}
           formats={["auto", "webp", "avif"]}

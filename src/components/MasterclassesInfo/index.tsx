@@ -62,7 +62,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                 loading="eager"
                 src={"../../images/masterclass1.webp"}
                 alt="Ada Promis"
-                placeholder="none"
+                placeholder="blurred"
                 width={525}
                 height={706}
                 formats={["auto", "webp", "avif"]}
@@ -76,7 +76,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                 loading="eager"
                 src={"../../images/masterclass1Info.webp"}
                 alt="Ada Promis - masterclass"
-                placeholder="none"
+                placeholder="blurred"
                 width={1056}
                 height={201}
                 formats={["auto", "webp", "avif"]}
@@ -131,7 +131,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                   loading="eager"
                   src={"../../images/masterclass2.webp"}
                   alt="Ada Promis"
-                  placeholder="none"
+                  placeholder="blurred"
                   width={425}
                   height={572}
                   formats={["auto", "webp", "avif"]}
@@ -145,7 +145,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                   loading="eager"
                   src={"../../images/masterclass2Info.webp"}
                   alt="Ada Promis - masterclass"
-                  placeholder="none"
+                  placeholder="blurred"
                   width={1099}
                   height={93}
                   formats={["auto", "webp", "avif"]}
@@ -192,7 +192,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                   loading="eager"
                   src={"../../images/masterclass3.webp"}
                   alt="Ada Promis"
-                  placeholder="none"
+                  placeholder="blurred"
                   width={357}
                   height={707}
                   formats={["auto", "webp", "avif"]}
@@ -206,7 +206,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                   loading="eager"
                   src={"../../images/masterclass3Info.webp"}
                   alt="Ada Promis - masterclass"
-                  placeholder="none"
+                  placeholder="blurred"
                   width={1081}
                   height={161}
                   formats={["auto", "webp", "avif"]}

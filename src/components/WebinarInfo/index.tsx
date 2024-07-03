@@ -21,7 +21,7 @@ const WebinarInfo = (): JSX.Element => {
         loading="eager"
         src={"../../images/ada_mastermind2.webp"}
         alt="Ada Promis - hero"
-        placeholder="none"
+        placeholder="blurred"
         width={393}
         height={460}
         formats={["auto", "webp", "avif"]}

@@ -148,7 +148,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/www.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={89}
             height={83}
             formats={["auto", "webp", "avif"]}
@@ -177,7 +177,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/raport.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={87}
             height={84}
             formats={["auto", "webp", "avif"]}
@@ -208,7 +208,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/szablon.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={71}
             height={84}
             formats={["auto", "webp", "avif"]}
@@ -240,7 +240,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"./../../images/canva.webp"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={81}
             height={83}
             formats={["auto", "webp", "avif"]}
@@ -270,7 +270,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/docs.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={130}
             height={110}
             formats={["auto", "webp", "avif"]}
@@ -298,7 +298,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/docs2.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={102}
             height={97}
             formats={["auto", "webp", "avif"]}
@@ -328,7 +328,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/certyfikat.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={116}
             height={89}
             formats={["auto", "webp", "avif"]}
@@ -358,7 +358,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/www.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={89}
             height={83}
             formats={["auto", "webp", "avif"]}
@@ -387,7 +387,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"./../../images/canva.webp"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={81}
             height={83}
             formats={["auto", "webp", "avif"]}
@@ -414,7 +414,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/docs.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={130}
             height={110}
             formats={["auto", "webp", "avif"]}
@@ -445,7 +445,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/docs2.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={102}
             height={97}
             formats={["auto", "webp", "avif"]}
@@ -475,7 +475,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             loading="eager"
             src={"../../images/certyfikat.svg"}
             alt=""
-            placeholder="none"
+            placeholder="blurred"
             width={116}
             height={89}
             formats={["auto", "webp", "avif"]}

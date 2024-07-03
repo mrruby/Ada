@@ -11,7 +11,7 @@ const AboutBanner = (): JSX.Element => {
         <StaticImage
           src={"../../images/ada_about.webp"}
           alt="Ada Promis - hero"
-          placeholder="none"
+          placeholder="blurred"
           width={521}
           height={644}
           formats={["auto", "webp", "avif"]}

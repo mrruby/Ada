@@ -42,7 +42,7 @@ const MasterclassPreparing = ({
             <StaticImage
               src={"../../images/document.webp"}
               alt="Ada Promis"
-              placeholder="none"
+              placeholder="blurred"
               width={159}
               height={170}
               formats={["auto", "webp", "avif"]}
@@ -103,7 +103,7 @@ const MasterclassPreparing = ({
             <StaticImage
               src={"../../images/preapering.webp"}
               alt=""
-              placeholder="none"
+              placeholder="blurred"
               width={250}
               height={270}
               formats={["auto", "webp", "avif"]}

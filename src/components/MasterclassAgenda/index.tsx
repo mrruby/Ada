@@ -99,7 +99,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                   <StaticImage
                     src={"../../images/flower-blue.svg"}
                     alt="Ada Promis"
-                    placeholder="none"
+                    placeholder="blurred"
                     width={80}
                     height={80}
                     style={{ width: "80px", height: "80px" }}
@@ -127,7 +127,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                   <StaticImage
                     src={"../../images/check.svg"}
                     alt="Ada Promis"
-                    placeholder="none"
+                    placeholder="blurred"
                     width={44}
                     height={46}
                     style={{ width: "44px", height: "46px" }}
@@ -170,7 +170,6 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 loading="eager"
                 src={"../../images/chill2.webp"}
                 alt="Ada Promis - chill"
-                placeholder="none"
                 width={466}
                 height={721}
                 formats={["auto", "webp", "avif"]}
@@ -198,7 +197,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                       <StaticImage
                         src={"../../images/flower-blue.svg"}
                         alt="Ada Promis"
-                        placeholder="none"
+                        placeholder="blurred"
                         width={80}
                         height={80}
                         style={{ width: "80px", height: "80px" }}
@@ -213,7 +212,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                   <StaticImage
                     src={"../../images/flower-blue.svg"}
                     alt="Ada Promis"
-                    placeholder="none"
+                    placeholder="blurred"
                     width={80}
                     height={80}
                     style={{ width: "80px", height: "80px" }}
@@ -258,7 +257,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                     <StaticImage
                       src={"../../images/check.svg"}
                       alt="Ada Promis"
-                      placeholder="none"
+                      placeholder="blurred"
                       width={44}
                       height={46}
                       style={{ width: "44px", height: "46px" }}
@@ -278,7 +277,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                     <StaticImage
                       src={"../../images/check.svg"}
                       alt="Ada Promis"
-                      placeholder="none"
+                      placeholder="blurred"
                       width={44}
                       height={46}
                       style={{ width: "44px", height: "46px" }}
@@ -334,7 +333,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 <StaticImage
                   src={"../../images/crown.svg"}
                   alt=""
-                  placeholder="none"
+                  placeholder="blurred"
                   width={134}
                   height={99}
                   style={{ width: "134px", height: "99px" }}
@@ -380,7 +379,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                     <StaticImage
                       src={"../../images/check.svg"}
                       alt="Ada Promis"
-                      placeholder="none"
+                      placeholder="blurred"
                       width={44}
                       height={46}
                       style={{ width: "44px", height: "46px" }}

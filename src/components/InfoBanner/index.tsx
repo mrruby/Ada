@@ -11,7 +11,7 @@ const InfoBanner = (): JSX.Element => {
         <StaticImage
           src={"../../images/info_materials.webp"}
           alt="Ada Promis - materials"
-          placeholder="none"
+          placeholder="blurred"
           width={360}
           height={200}
           formats={["auto", "webp", "avif"]}
@@ -26,7 +26,7 @@ const InfoBanner = (): JSX.Element => {
         <StaticImage
           src={"../../images/info_about.webp"}
           alt="Ada Promis - about"
-          placeholder="none"
+          placeholder="blurred"
           width={360}
           height={200}
           formats={["auto", "webp", "avif"]}
@@ -41,7 +41,7 @@ const InfoBanner = (): JSX.Element => {
         <StaticImage
           src={"../../images/info_shop.webp"}
           alt="Ada Promis - shop"
-          placeholder="none"
+          placeholder="blurred"
           width={360}
           height={200}
           formats={["auto", "webp", "avif"]}

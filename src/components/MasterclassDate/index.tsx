@@ -82,7 +82,7 @@ const MasterclassDate1 = (): JSX.Element => {
               <StaticImage
                 src={"../../images/check.svg"}
                 alt="Ada Promis"
-                placeholder="none"
+                placeholder="blurred"
                 width={44}
                 height={46}
                 style={{ width: "44px", height: "46px" }}

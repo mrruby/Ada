@@ -14,7 +14,7 @@ const Products = (): JSX.Element => {
         <StaticImage
           src={"../../images/ada_hero.webp"}
           alt="Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={300}
           height={300}
         />
@@ -30,7 +30,7 @@ const Products = (): JSX.Element => {
         <StaticImage
           src={"../../images/ada-kampanie.webp"}
           alt="Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={300}
           height={300}
         />

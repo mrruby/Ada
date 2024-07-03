@@ -22,7 +22,7 @@ export const MasterclassInfoSection: React.FC<Props> = ({ title, list }) => {
                 <StaticImage
                   src={"../../images/flower-blue.svg"}
                   alt="Ada Promis"
-                  placeholder="none"
+                  placeholder="blurred"
                   width={100}
                   height={100}
                   style={{ width: "100px", height: "100px" }}

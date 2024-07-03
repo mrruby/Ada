@@ -83,7 +83,7 @@ const BlogPage = (): JSX.Element => {
             <StaticImage
               src={"../images/ada_blog.webp"}
               alt="Ada Promis - hero"
-              placeholder="none"
+              placeholder="blurred"
               width={680}
               height={740}
               formats={["auto", "webp", "avif"]}

@@ -19,7 +19,7 @@ export const KnowledgeBox: React.FC<Props> = ({ text, btnText, url, type }) => {
         <StaticImage
           src={"../../images/flower-white-pink.svg"}
           alt="Blue Flower Ada Promis"
-          placeholder="none"
+          placeholder="blurred"
           width={150}
           height={150}
         />

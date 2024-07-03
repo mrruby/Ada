@@ -21,7 +21,7 @@ const HolidayForm = (): JSX.Element => {
             loading="eager"
             src={"../../images/mentoring.webp"}
             alt="Ada Promis - hero"
-            placeholder="none"
+            placeholder="blurred"
             width={448}
             height={500}
             formats={["auto", "webp", "avif"]}

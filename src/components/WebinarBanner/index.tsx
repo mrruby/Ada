@@ -13,7 +13,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
               loading="eager"
               src={"../../images/contact.webp"}
               alt="Ada Promis - hero"
-              placeholder="none"
+              placeholder="blurred"
               width={540}
               height={540}
               formats={["auto", "webp", "avif"]}
@@ -106,7 +106,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 loading="eager"
                 src={"../../images/chill.webp"}
                 alt="Ada Promis - hero"
-                placeholder="none"
+                placeholder="blurred"
                 width={754}
                 height={782}
                 formats={["auto", "webp", "avif"]}

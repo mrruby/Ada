@@ -11,7 +11,7 @@ const MentoringWhy = (): JSX.Element => {
           <StaticImage
             src={"../../images/ada_flower.webp"}
             alt="Ada Promis - hero"
-            placeholder="none"
+            placeholder="blurred"
             width={609}
             height={644}
             formats={["auto", "webp", "avif"]}

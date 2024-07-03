@@ -21,7 +21,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia1typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Monika Gajek"
-        placeholder="none"
+        placeholder="blurred"
         width={363}
         height={514}
         formats={["auto", "webp", "avif"]}
@@ -34,7 +34,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia2typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Juila Boryczka"
-        placeholder="none"
+        placeholder="blurred"
         width={344}
         height={514}
         formats={["auto", "webp", "avif"]}
@@ -47,7 +47,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia3typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Martyna Sitarz"
-        placeholder="none"
+        placeholder="blurred"
         width={363}
         height={514}
         formats={["auto", "webp", "avif"]}
@@ -60,7 +60,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia4typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Izabela Ścisłowska"
-        placeholder="none"
+        placeholder="blurred"
         width={342}
         height={514}
         formats={["auto", "webp", "avif"]}
@@ -73,7 +73,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia5typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
-        placeholder="none"
+        placeholder="blurred"
         width={363}
         height={514}
         formats={["auto", "webp", "avif"]}
@@ -86,7 +86,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia6typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
-        placeholder="none"
+        placeholder="blurred"
         width={363}
         height={514}
         formats={["auto", "webp", "avif"]}
@@ -99,7 +99,7 @@ const referencesList: IReferencesList[] = [
       <StaticImage
         src={"../../images/opinia7typ2.webp"}
         alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
-        placeholder="none"
+        placeholder="blurred"
         width={363}
         height={514}
         formats={["auto", "webp", "avif"]}
