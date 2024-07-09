@@ -301,8 +301,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 Pakiet BASIC
               </h2>
               <p className="text-center font-bold text-adaBase pt-4">
-                Cena: 427 zł zamiast{" "}
-                <span className="line-through">597 zł</span>
+                Cena: 597 zł
               </p>
               <ul className="flex flex-col gap-[10px] mx-auto my-6">
                 {plusBasicList.map((item, index) => (
@@ -343,8 +342,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 Pakiet VIP
               </h2>
               <p className="text-center font-bold text-adaBase pt-4">
-                Cena: 876 zł zamiast{" "}
-                <span className="line-through">1066 zł</span>
+                Cena: 1066 zł
               </p>
               <ul className="flex flex-col gap-[10px] mx-auto my-6">
                 {plusVIPList.map((item, index) => (

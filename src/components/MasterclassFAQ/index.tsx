@@ -158,7 +158,10 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     {
       question: "Kiedy i jak dostanę dostęp?",
       answer: (
-        <>To jest przedsprzedaż: dostęp do masterclassów dostaniesz 10.07.</>
+        <>
+          Dostęp do masterclassów dostaniesz 10.07. na maila podanego przy
+          zakupie.
+        </>
       ),
     },
 
@@ -315,11 +318,6 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 3 && (
         <>
-          <h2 className="lg:text-adaSubtitleThird font-bold text-center animate-bounce uppercase mt-10 pb-4">
-            Na dołączenie <br />
-            do przedsprzedaży zostało:{" "}
-          </h2>
-          <CountdownTimer targetDate={new Date("2024-07-05T10:00:00")} />
           <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
             <div className="pt-[60px] lg:pt-[76px]">
               <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce text-center mx-auto">

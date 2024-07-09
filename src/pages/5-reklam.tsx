@@ -29,12 +29,6 @@ const AdsyAndChill = (): JSX.Element => {
       ball3={true}
       drinks={true}
     >
-      <div className="flex flex-col items-center mt-8">
-        <h2 className="lg:text-adaSubtitleThird font-bold text-center animate-bounce uppercase mt-10 pb-4">
-          DO KOŃCA PRZEDSPRZEDAŻY POZOSTAŁO..
-        </h2>
-        <CountdownTimer targetDate={new Date("2024-07-05T18:00:00")} />
-      </div>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <div className="flex flex-col items-center mt-16">
           <iframe

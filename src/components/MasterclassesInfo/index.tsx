@@ -22,10 +22,9 @@ const efects3 = [
 
 const forWhomInfo = (
   <>
-    To jest przedsprzedaż - dostęp do nagrania otrzymujesz{" "}
-    <span className="font-bold">10.07.</span>. Od tego dnia możesz przerabiać
-    materiały do woli przez następne 12 miesięcy - kiedy chcesz i ile razy
-    chcesz!
+    Dostęp do nagrania otrzymujesz <span className="font-bold">10.07.</span>. Od
+    tego dnia możesz przerabiać materiały do woli przez następne 12 miesięcy -
+    kiedy chcesz i ile razy chcesz!
   </>
 )
 
