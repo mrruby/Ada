@@ -9,7 +9,6 @@ interface Props {
   forWhom: string
   forWhomInfo: string | JSX.Element
   btn: string
-  btnUrl: string
   purpose: string
   cost: string
   time: string
@@ -39,7 +38,6 @@ export const MasterclassInfo: React.FC<Props> = ({
   forWhom,
   forWhomInfo,
   btn,
-  btnUrl,
   purpose,
   cost,
   time,
@@ -88,14 +86,9 @@ export const MasterclassInfo: React.FC<Props> = ({
           <p className="pt-4">{forWhomInfo}</p>
         </div>
         <div className={`${btnStyle} my-20`}>
-          <Button
-            type="button"
-            text={<span className="font-bold">{btn}</span>}
-            textSize="md:text-adaSubtitle"
-            btnStyle={`md:w-[400px] md:h-[80px] bg-ada-pink5 mx-auto ${btnMargin}`}
-            url={btnUrl}
-            sectionId={sectionId}
-          />
+          <div className={`w-screen md:h-[80px] flex justify-center items-center bg-ada-pink5 mx-auto ${btnMargin}`}>
+            <span className="font-extrabold md:text-adaSubtitleSecondary">{btn}</span>
+          </div>
         </div>
       </div>
       <div className="mx-auto flex justify-center">{imageInfo}</div>

@@ -29,6 +29,7 @@ import {
   Sun4,
   Sun5,
   Sun6,
+  Sun7,
   Flaming,
   Flaps,
   Flaps2,
@@ -73,6 +74,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   sun4,
   sun5,
   sun6,
+  sun7,
   flaming,
   flaps,
   flaps2,
@@ -254,8 +256,14 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {sun6 && (
         <Sun6
-          mobileTop="hidden xl:flex lg:top-[100px]"
+          mobileTop="hidden xl:flex lg:top-[-50px]"
           mobileLeft="left-[6vw]"
+        />
+      )}
+      {sun7 && (
+        <Sun7
+         mobileTop="hidden xl:flex lg:top-[11180px]"
+         mobileRight="right-[-150px]"
         />
       )}
       {flaming && (
@@ -308,7 +316,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {drinks && (
         <Drinks
-          mobileTop="hidden xl:flex lg:top-[12280px]"
+          mobileTop="hidden xl:flex lg:top-[11580px]"
           mobileLeft="left-[-40px]"
         />
       )}

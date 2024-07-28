@@ -763,6 +763,32 @@ export const Sun6: React.FC<Props> = ({
   )
 }
 
+export const Sun7: React.FC<Props> = ({
+  top,
+  right,
+  left,
+  bottom,
+  mobileTop,
+  mobileRight,
+  mobileLeft,
+  mobileBottom,
+  rotate = "0deg",
+  width = "40px",
+}) => {
+  return (
+    <img
+      src="../assets/sun2.svg"
+      alt=""
+      aria-hidden
+      className={`absolute ${top && top} ${right && right} ${left && left} ${
+        bottom && bottom
+      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
+        mobileLeft && mobileLeft
+      } ${mobileBottom && mobileBottom} w-[${width}] `}
+    />
+  )
+}
+
 export const Flaming: React.FC<Props> = ({
   top,
   right,

@@ -54,7 +54,6 @@ const listItems6 = [
   "Korzystasz z masterclassów przez 12 miesięcy tyle razy, ile potrzebujesz.",
   "Nauczysz się ustawiać kampanie reklamowe od podstaw — nawet jeśli jeszcze nigdy tego nie robiłaś.",
   "To najniższa możliwa cena. W sprzedaży regularnej dostęp do jednego masterclassu będzie kosztował 199 złotych. Nigdy nie będzie taniej niż teraz.",
-  "Tylko teraz dostajesz dostęp do Q&A na żywo oraz możliwość skorzystania z konsultacji indywidualnej ze mną. Standardowo możliwość konsultacji jest dostępna jedynie dla osób, które uczestniczyły w moim programie mentoringowym!",
 ]
 
 const plusBasicList = [
@@ -296,13 +295,10 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
           id="pricing"
         >
           <div className="flex flex-col md:flex-row gap-10">
-            <div className="max-w-[460px] flex flex-col items-center">
-              <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold bg-white mb-4">
-                Pakiet BASIC
+            <div className="max-w-[560px] flex flex-col items-center">
+              <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold mb-4">
+              Co dostaniesz <br/> w Adsy&Chill?              
               </h2>
-              <p className="text-center font-bold text-adaBase pt-4">
-                Cena: 597 zł
-              </p>
               <ul className="flex flex-col gap-[10px] mx-auto my-6">
                 {plusBasicList.map((item, index) => (
                   <li key={index} className="flex flex-col md:flex-row">
@@ -310,13 +306,10 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                     {item}
                   </li>
                 ))}
-                {minusBasicList.map((item, index) => (
-                  <li key={index} className="flex flex-col  md:flex-row">
-                    <div className="mr-2">❌</div>
-                    {item}
-                  </li>
-                ))}
               </ul>
+              <p className="text-center font-bold text-adaBase pt-4">
+                Cena: 597 zł
+              </p>
               <Button
                 type="button"
                 text={
@@ -325,41 +318,6 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 textSize="text-adaSubtitle"
                 btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
                 url="https://sklep.adrianna.com.pl/product/adsy-chill-pakiet-basic"
-              />
-            </div>
-            <div className="max-w-[520px] flex flex-col items-center relative">
-              <div className="absolute left-[40px] top-[-60px]">
-                <StaticImage
-                  src={"../../images/crown.svg"}
-                  alt=""
-                  placeholder="blurred"
-                  width={134}
-                  height={99}
-                  style={{ width: "134px", height: "99px" }}
-                />
-              </div>
-              <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold bg-ada-purple mb-4 text-white">
-                Pakiet VIP
-              </h2>
-              <p className="text-center font-bold text-adaBase pt-4">
-                Cena: 1066 zł
-              </p>
-              <ul className="flex flex-col gap-[10px] mx-auto my-6">
-                {plusVIPList.map((item, index) => (
-                  <li key={index} className="flex flex-col md:flex-row">
-                    <div className="mr-2">✅</div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Button
-                type="button"
-                text={
-                  <span className="font-extrabold uppercase">korzystam</span>
-                }
-                textSize="text-adaSubtitle"
-                btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
-                url="https://sklep.adrianna.com.pl/product/adsy-chill-pakiet-vip"
               />
             </div>
           </div>

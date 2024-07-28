@@ -2,6 +2,7 @@ import React from "react"
 import { Button } from "helpers/Button"
 import { Accordion } from "helpers/Accordion"
 import CountdownTimer from "helpers/CountdownTimer"
+import ReferencesSmall from "components/ReferencesSmall"
 
 interface ListItem {
   question: string
@@ -159,12 +160,10 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "Kiedy i jak dostanę dostęp?",
       answer: (
         <>
-          Dostęp do masterclassów dostaniesz 10.07. na maila podanego przy
-          zakupie.
+          Dostęp dostaniesz na maila od razu po zakupie.
         </>
       ),
     },
-
     {
       question: "Czy muszę mieć doświadczenie z reklamami?",
       answer: (
@@ -175,6 +174,19 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           dołączeniu do masterclassów dostaniesz możliwość zakupu mini-kursu
           „Przygotuj swój menedżer firmy”. Z nim ułożysz swojego menedżera firmy
           od zera 😊
+        </>
+      ),
+    },
+    {
+      question: "Jakie wyniki osiągnę dzięki masterclassom?",
+      answer: (
+        <>
+          Cóż będę dużo mówić… osoby, które zdecydowały się na adsy&chill w przedsprzedaży, mówią tak:
+          <br/><br/>
+          - “pozyskuję leady w koszcie 2-3 zł dzięki automatyzacji z MAKE” <br/>
+          - “ROAS w okolicy 5 przy sprzedaży taniego produktu” <br/>
+          - “wczoraj odpaliłam reklamę na warsztaty online i już rozeszły się prawie wszystkie miejsca” <br/><br/>
+          Tak, Ty też możesz tak powiedzieć za kilka dni. Wystarczy, że solidnie zapoznasz się z materiałem Adsy&Chill i wdrożysz kampanie na swoim koncie reklamowym 🤩
         </>
       ),
     },
@@ -211,6 +223,14 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
         <>
           Tak, faktura trafi na maila podanego po zakupie chwilę po zakończeniu
           transakcji.
+        </>
+      ),
+    },
+    {
+      question: "Co mówią osoby, które już przerobiły masterclassy?",
+      answer: (
+        <>
+          <ReferencesSmall/>
         </>
       ),
     },
@@ -338,12 +358,12 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             text={
               <span className="font-bold">
                 Zwiększam sprzedaż <br />
-                <span className="text-ada-yellow">Adsy&Chill!</span>
+                <span className="text-ada-orange">Adsy&Chill!</span>
               </span>
             }
             sectionId="pricing"
             textSize="md:text-adaSubtitleSecondary"
-            btnStyle="md:w-[500px] bg-ada-purple mb-10 lg:mb-[120px] text-white"
+            btnStyle="md:w-[500px] bg-ada-light-pink mb-10 lg:mb-[120px]"
           />
         </>
       )}

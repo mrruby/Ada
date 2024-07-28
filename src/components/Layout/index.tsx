@@ -34,6 +34,7 @@ type LayoutElements = {
   sun4?: boolean
   sun5?: boolean
   sun6?: boolean
+  sun7?: boolean
   flaming?: boolean
   flaps?: boolean
   flaps2?: boolean

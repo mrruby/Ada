@@ -20,21 +20,13 @@ const efects3 = [
   "Zarabiasz na kampaniach reklamowych.",
 ]
 
-const forWhomInfo = (
-  <>
-    Dostęp do nagrania otrzymujesz <span className="font-bold">10.07.</span>. Od
-    tego dnia możesz przerabiać materiały do woli przez następne 12 miesięcy -
-    kiedy chcesz i ile razy chcesz!
-  </>
-)
-
 const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
   return (
     <>
       {version === 1 && (
         <MasterclassInfo
           title="Masterclass 1"
-          subtitle1="(lista mailowa)"
+          subtitle1="Ustaw reklamę na listę mailingową"
           subtitle2={
             <>
               Nauczysz się, jak ustawić kampanię, której <br /> celem jest
@@ -43,9 +35,8 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
           }
           efects={efects1}
           forWhom="To może być Twoja pierwsza kampania Meta Ads. Zapraszam też osoby, które ustawiały już proste kampanie i chcą nauczyć się bardziej skomplikowanych działań reklamowych!"
-          forWhomInfo={forWhomInfo}
+          forWhomInfo=""
           btn="Case study z kampanii z listą mailową"
-          btnUrl=""
           sectionId="masterclass-2"
           purpose="kampania z celem zapis na listę mailową. Po dołączeniu subskrybenci otrzymują one time offer na dostęp do platformy kursowej"
           cost="6892,61 zł"
@@ -62,8 +53,8 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                 src={"../../images/masterclass1.webp"}
                 alt="Ada Promis"
                 placeholder="blurred"
-                width={525}
-                height={706}
+                width={447}
+                height={781}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -89,7 +80,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
         <div id="masterclass-2">
           <MasterclassInfo
             title="Masterclass 2"
-            subtitle1="(MaKE)"
+            subtitle1="Ułatw sobie reklamy z automatyzacją"
             subtitle2={
               <>
                 Nauczysz się,{" "}
@@ -102,9 +93,8 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             }
             efects={efects2}
             forWhom="To może być Twoje pierwsze spotkanie z formularzami i MAKE. Zapraszam też osoby, które mają już za sobą pierwsze kampanie z formularzami i chcą nauczyć się je automatyzować."
-            forWhomInfo={forWhomInfo}
+            forWhomInfo=""
             btn="Case study z kampanii z formularzem Facebooka"
-            btnUrl=""
             sectionId="masterclass-3"
             purpose="zbieranie zapisów na webinar"
             cost="128,58 zł"
@@ -125,14 +115,14 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               </p>
             }
             image={
-              <div className="md:absolute xl:right-[-3vw] top-[220px]">
+              <div className="md:absolute xl:right-[-10vw] top-[80px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/masterclass2.webp"}
                   alt="Ada Promis"
                   placeholder="blurred"
-                  width={425}
-                  height={572}
+                  width={503}
+                  height={598}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />
@@ -159,7 +149,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
         <div id="masterclass-3">
           <MasterclassInfo
             title="Masterclass 3"
-            subtitle1="(remarketing & sprzedaż)"
+            subtitle1="Ustaw reklamę na sprzedaż"
             subtitle2={
               <>
                 Nauczysz się: jak ustawić
@@ -172,11 +162,8 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             }
             efects={efects3}
             forWhom="Kampanie sprzedażowe to wisienka na torcie. Zadziałają najlepiej, jeśli prowadzisz już kampanie na wcześniejszych etapach lejka. Moja rada: zacznij od masterclassów o MAKE & liście mailowej, a potem wróć do tego masterclassu."
-            forWhomInfo={forWhomInfo}
+            forWhomInfo=""
             btn="Case study z kampanii sprzedażowej"
-            btnUrl=""
-            btnStyle="xl:bg-ada-pink5 xl:min-w-[60vw] xl:ml-[-40vw] flex justify-right h-[80px] xl:mt-20"
-            btnMargin="xl:mr-[0vw]"
             purpose="kampania sprzedażowa podczas akcji promocyjnej (remarketing)"
             cost="203,72 zł"
             time="5 dni"
@@ -186,14 +173,14 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             people="1115"
             roas="17,90"
             image={
-              <div className="md:absolute xl:left-[-8vw] top-[134px]">
+              <div className="md:absolute xl:left-[-11vw] top-[14px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/masterclass3.webp"}
                   alt="Ada Promis"
                   placeholder="blurred"
-                  width={357}
-                  height={707}
+                  width={418}
+                  height={733}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />

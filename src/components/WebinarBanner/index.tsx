@@ -119,12 +119,23 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 ADSY<span className="text-ada-orange">&</span>
                 <span className="text-ada-yellow">CHILL</span>
               </h1>
-              <h2 className="md:text-adaSubtitle pt-2">
+              <h2 className="md:text-adaSubtitle pt-2 mb-8">
                 Przygotuj się na sprzedaż{" "}
-                <span className="font-bold">jeszcze w to lato!</span> Ustawiaj,
+                <span className="font-bold">w to lato!</span> Ustawiaj,
                 automatyzuj kampanie reklamowe{" "}
-                <span className="font-bold">i przyciągaj klientów.</span>
+                <span className="font-bold">i zdobywaj klientów.</span>
               </h2>
+              <Button
+                type="button"
+                text={
+                  <span className="font-bold">
+                    Sprawdzam <br /> Adsy&Chill
+                  </span>
+                }
+                sectionId="masterclasses"
+                textSize="md:text-adaSubtitle"
+                btnStyle="uppercase md:w-[480px] bg-ada-pink tracking-[2.90px] h-[100px] shadow-xl mx-auto"
+              />
             </div>
           </div>
         </div>
