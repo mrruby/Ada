@@ -45,7 +45,7 @@ const AdsyAndChill = (): JSX.Element => {
         <WebinarAbout version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title1 />
+        <ReferencesMentoring title3  version="2"/>
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4 mt-5">
         <MasterclassAgenda version={3} />
@@ -65,7 +65,7 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[300px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[9850px] w-screen z-0"></div>
+      <div className="h-[300px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[9650px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={7} />
       </MaxWithBgColorContainer>

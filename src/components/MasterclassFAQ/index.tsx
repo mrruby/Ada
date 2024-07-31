@@ -356,14 +356,13 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           <Button
             type="button"
             text={
-              <span className="font-bold">
-                Zwiększam sprzedaż <br />
-                <span className="text-ada-orange">Adsy&Chill!</span>
+              <span className=" font-extrabold">
+                Zwiększam sprzedaż <span className="text-ada-orange">Adsy&Chill!</span>
               </span>
             }
             sectionId="pricing"
             textSize="md:text-adaSubtitleSecondary"
-            btnStyle="md:w-[500px] bg-ada-light-pink mb-10 lg:mb-[120px]"
+            btnStyle="md:w-[500px] bg-ada-light-pink mb-10 lg:mb-[120px] md:leading-[36px] md:h-[120px]"
           />
         </>
       )}

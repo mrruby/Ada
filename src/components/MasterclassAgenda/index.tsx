@@ -53,15 +53,15 @@ const listItems6 = [
   "Dostajesz możliwość odtworzenia nagrania w dowolnym czasie.",
   "Korzystasz z masterclassów przez 12 miesięcy tyle razy, ile potrzebujesz.",
   "Nauczysz się ustawiać kampanie reklamowe od podstaw — nawet jeśli jeszcze nigdy tego nie robiłaś.",
-  "To najniższa możliwa cena. W sprzedaży regularnej dostęp do jednego masterclassu będzie kosztował 199 złotych. Nigdy nie będzie taniej niż teraz.",
 ]
 
 const plusBasicList = [
-  "Dostęp do masterclassu „Ułatw sobie reklamy z automatyzacją”",
-  "Dostęp do masterclassu „Ustaw reklamę na listę mailingową”",
-  "Dostęp do masterclassu „Ustaw reklamę na sprzedaż”",
-  "Dostęp do grupy na Facebooku",
+  <p>Masterclassu<span className="font-bold">{" "}„Ustaw reklamę na listę mailingową”</span></p>,
+  <p>Masterclassu<span className="font-bold">{" "}„Ułatw sobie reklamy z automatyzacją”</span></p>,
+  <p>Masterclassu<span className="font-bold">{" "}„Ustaw reklamę na sprzedaż”</span></p>,
+  <p className="font-bold">Grupy na Facebooku</p>,
 ]
+
 const minusBasicList = [
   "Sesja Q&A na żywo",
   "Konsultacja 1:1 na Google Meets (60 minut)",
@@ -295,11 +295,12 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
           id="pricing"
         >
           <div className="flex flex-col md:flex-row gap-10">
-            <div className="max-w-[560px] flex flex-col items-center">
+            <div className="max-w-[560px] flex flex-col">
               <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold mb-4">
               Co dostaniesz <br/> w Adsy&Chill?              
               </h2>
-              <ul className="flex flex-col gap-[10px] mx-auto my-6">
+              <h3 className="text-adaBase lg:text-adaSubtitle py-5">Dostęp do:</h3>
+              <ul className="flex flex-col gap-[10px] mx-auto mb-6">
                 {plusBasicList.map((item, index) => (
                   <li key={index} className="flex flex-col md:flex-row">
                     <div className="mr-2">✅</div>
@@ -310,15 +311,17 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               <p className="text-center font-bold text-adaBase pt-4">
                 Cena: 597 zł
               </p>
-              <Button
+              <div className="flex justify-center">              
+                <Button
                 type="button"
                 text={
                   <span className="font-extrabold uppercase">korzystam</span>
                 }
                 textSize="text-adaSubtitle"
-                btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
+                btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink" 
                 url="https://sklep.adrianna.com.pl/product/adsy-chill-pakiet-basic"
-              />
+              /></div>
+
             </div>
           </div>
           <div>

@@ -12,8 +12,7 @@ const listItems2 = [
   "Od razu po zakupie otrzymujesz dostęp do masterclassów na platformie kursowej. Możesz przerabiać materiały do woli przez następne 12 miesięcy - kiedy chcesz i ile razy chcesz!",
   "Dostajesz także dostęp do zamkniętej grupy na Facebooku, w której możesz zadawać pytania i rozmawiać o wynikach swoich reklam.",
   "4 godziny - tyle potrzebujesz na przerobienie pierwszego masterclassu i ustawienie pierwszej kampanii. Działasz wtedy, kiedy chcesz.",
-  "Po miesiącu - masz gotowy, hulający lejek reklamowych. Psst! Im szybciej wdrożysz kampanie, tym szybciej zobaczysz wyniki 😉",
-  "Rozwiewaj wątpliwości i pytaj na grupie. Dostęp do niej jest nieograniczony!"
+  "Po miesiącu - masz gotowy, hulający lejek reklamowych. Psst! Im szybciej wdrożysz kampanie, tym szybciej zobaczysz wyniki 😉"
 ]
 
 const MasterclassPreparing = ({
@@ -66,7 +65,7 @@ const MasterclassPreparing = ({
       )}
       {version === 2 && (
         <div className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-2 relative">
-          <ul className="flex flex-col gap-8 md:gap-12 pb-10 md:pb-[100px]">
+          <ul className="flex flex-col gap-8 md:gap-12 pb-10 md:pb-[50px]">
             {listItems2.map((item, index) => (
               <li
                 key={index}
@@ -79,7 +78,7 @@ const MasterclassPreparing = ({
               </li>
             ))}
           </ul>
-          <div className="md:absolute right-0 bottom-12">
+          <div className="flex justify-center">
             <StaticImage
               src={"../../images/preapering2.webp"}
               alt=""
