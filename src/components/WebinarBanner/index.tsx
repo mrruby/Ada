@@ -93,13 +93,54 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 3 && (
         <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
-          {/* timer na ostatnie 48h promocji */}
-          {/* <div className="flex flex-col gap-4 items-center">
+          <div className="flex flex-col xl:flex-row justify-between xl:max-w-[1350px] mx-auto">
+            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[300px]">
+              <StaticImage
+                loading="eager"
+                src={"../../images/chill.webp"}
+                alt="Ada Promis - hero"
+                placeholder="blurred"
+                width={754}
+                height={782}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div className="flex flex-col justify-center max-w-[800px] gap-4 mt-8 xl:-mt-60 mb-3">
+              <h2 className="text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
+              <h1 className="text-adaTitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
+                ADSY<span className="text-ada-orange">&</span>
+                <span className="text-ada-yellow">CHILL</span>
+              </h1>
+              <h2 className="md:text-adaSubtitle pt-2 mb-8">
+                Przygotuj się na sprzedaż{" "}
+                <span className="font-bold">w to lato!</span> Ustawiaj,
+                automatyzuj kampanie reklamowe{" "}
+                <span className="font-bold">i zdobywaj klientów.</span>
+              </h2>
+              <Button
+                type="button"
+                text={
+                  <span className="font-bold">
+                    Sprawdzam <br /> Adsy&Chill
+                  </span>
+                }
+                sectionId="masterclasses"
+                textSize="md:text-adaSubtitle"
+                btnStyle="uppercase md:w-[480px] bg-ada-pink2 tracking-[2.90px] h-[100px] shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+      {version === 4 && (
+        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
+          <div className="flex flex-col gap-4 items-center">
             <h2 className="text-adaBase font-bold text-center animate-bounce uppercase">
               Na dołączenie do warsztatów zostało:{" "}
             </h2>
-            <CountdownTimer targetDate={new Date("2024-07-05T10:00:00")} />
-          </div> */}
+            <CountdownTimer targetDate={new Date("2024-08-05T10:00:00")} />
+          </div>
           <div className="flex flex-col xl:flex-row justify-between xl:max-w-[1350px] mx-auto">
             <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[300px]">
               <StaticImage
