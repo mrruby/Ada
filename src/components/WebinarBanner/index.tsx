@@ -93,8 +93,8 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 3 && (
         <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
-          <div className="flex flex-col xl:flex-row justify-between xl:max-w-[1350px] mx-auto">
-            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[300px]">
+          <div className="flex justify-between xl:max-w-[1350px] mx-auto">
+            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[170px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/chill.webp"}
@@ -106,13 +106,13 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 quality={100}
               />
             </div>
-            <div className="flex flex-col justify-center max-w-[800px] gap-4 mt-8 xl:-mt-60 mb-3">
-              <h2 className="text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
-              <h1 className="text-adaTitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
+            <div className="flex flex-col justify-center max-w-[800px] gap-4 md:mt-8 xl:-mt-60 mb-3">
+              <h2 className="hidden md:blpck text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
+              <h1 className="text-adaSubtitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
                 ADSY<span className="text-ada-orange">&</span>
                 <span className="text-ada-yellow">CHILL</span>
               </h1>
-              <h2 className="md:text-adaSubtitle pt-2 mb-8">
+              <h2 className="text-adaMin md:text-adaSubtitle md:pt-2 md:mb-8">
                 Przygotuj się na sprzedaż{" "}
                 <span className="font-bold">w to lato!</span> Ustawiaj,
                 automatyzuj kampanie reklamowe{" "}
@@ -122,12 +122,12 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 type="button"
                 text={
                   <span className="font-bold">
-                    Sprawdzam <br /> Adsy&Chill
+                    Sprawdzam Adsy&Chill
                   </span>
                 }
                 sectionId="masterclasses"
-                textSize="md:text-adaSubtitle"
-                btnStyle="uppercase md:w-[480px] bg-ada-pink2 tracking-[2.90px] h-[100px] shadow-xl"
+                textSize="text-[10px] md:text-adaSubtitle"
+                btnStyle="uppercase max-w-[187px] md:w-[480px] bg-ada-pink2 md:tracking-[2.90px] md:h-[100px] shadow-xl"
               />
             </div>
           </div>
