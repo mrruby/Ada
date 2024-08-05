@@ -107,7 +107,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
               />
             </div>
             <div className="flex flex-col justify-center max-w-[800px] gap-4 md:mt-8 xl:-mt-60 mb-3">
-              <h2 className="hidden md:blpck text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
+              <h2 className="hidden md:block text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
               <h1 className="text-adaSubtitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
                 ADSY<span className="text-ada-orange">&</span>
                 <span className="text-ada-yellow">CHILL</span>
@@ -126,8 +126,8 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                   </span>
                 }
                 sectionId="masterclasses"
-                textSize="text-[10px] md:text-adaSubtitle"
-                btnStyle="uppercase max-w-[187px] md:w-[480px] bg-ada-pink2 md:tracking-[2.90px] md:h-[100px] shadow-xl"
+                textSize="text-adaMin md:text-adaSubtitle"
+                btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-pink2 md:tracking-[2.90px] md:h-[100px] shadow-xl"
               />
             </div>
           </div>

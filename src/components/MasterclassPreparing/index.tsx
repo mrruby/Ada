@@ -28,7 +28,7 @@ const MasterclassPreparing = ({
             {listItems.map((item, index) => (
               <li
                 key={index}
-                className="flex flex-col md:flex-row items-center text-adaBase max-w-[580px]"
+                className="flex flex-col md:flex-row items-center ,text-adaMin md:text-adaBase max-w-[580px]"
               >
                 <div className="w-[87px] h-[87px] bg-white rounded-[50px] mr-4 flex-shrink-0 flex justify-center items-center font-bold text-[64px]">
                   {index + 1}
@@ -69,7 +69,7 @@ const MasterclassPreparing = ({
             {listItems2.map((item, index) => (
               <li
                 key={index}
-                className="flex flex-col md:flex-row items-center text-adaBase max-w-[880px]"
+                className="flex flex-col md:flex-row items-center text-adaMin md:text-adaBase max-w-[880px]"
               >
                 <div className="w-[87px] h-[87px] bg-ada-pink2 rounded-[50px] mr-4 flex-shrink-0 flex justify-center items-center font-bold text-[64px]">
                   {index + 1}

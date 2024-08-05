@@ -344,10 +344,10 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
                 FAQ
               </h2>
               <div className="pt-[30px] flex flex-col flex-wrap lg:flex-row lg:gap-[60px]">
-                <ul className="gap-10 md:gap-[120px] ">
+                <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
                   {renderList(leftList3)}
                 </ul>
-                <ul className="gap-10 md:gap-[140px]">
+                <ul className="gap-10 md:gap-[140px] text-adaMin md:text-adaStandard">
                   {renderList(rightList3)}
                 </ul>
               </div>

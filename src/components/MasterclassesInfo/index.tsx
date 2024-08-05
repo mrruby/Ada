@@ -103,7 +103,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             groups="grupy zimne związane z profilem działalności klientki — pracownicy korporacji, mamy"
             costOfContacts="4,95 zł"
             addInfo={
-              <p className="pt-10">
+              <p className="pt-10 text-adaMin md:text-adaStandard">
                 Równolegle przeprowadziłam kampanię, w której zapis na webinar
                 odbywał się przez standardowy formularz na stronie. Koszt zapisu
                 wyniósł 7,09 zł. Bez strony WWW, z darmowym i prostym w obsłudze

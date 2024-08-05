@@ -145,10 +145,10 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
         >
           <div className="flex flex-col md:flex-row md:gap-20">
             <div className="max-w-[780px]">
-              <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-pink2 shadow-xl lg:max-w-[640px] px-8 h-[84px] mx-auto flex items-center justify-center">
+              <h2 className="text-adaStandard lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-pink2 shadow-xl lg:max-w-[640px] px-8 py-4 md:h-[84px] mx-auto flex items-center justify-center">
                 Dlaczego ADSY&CHILL?
               </h2>
-              <p className="pt-6 md:text-adaDesc">
+              <p className="pt-6 text-adaMin md:text-adaDesc">
                 Przygotowałam ten produkt z myślą o przedsiębiorczyniach i
                 freelancerkach, które chcą zbudować stabilny proces pozyskiwania
                 klientów dzięki reklamom.
@@ -156,7 +156,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 Wiem, że dobrze przygotowane kampanie reklamowe zarabiają prawie
                 same.
               </p>
-              <p className="pt-6 md:text-adaDesc">
+              <p className="pt-6 text-adaMin md:text-adaDesc">
                 W tym czasie Ty możesz chillować tak, jak lubisz. <br />
                 <span className="font-bold">
                   W końcu nie po to rzucałaś etat, aby spędzać 8 godzin dziennie
@@ -178,10 +178,10 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
           </div>
 
           <div>
-            <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-pink2 shadow-xl lg:max-w-[740px] px-8 h-[84px] mx-auto flex items-center justify-center">
+            <h2 className="text-adaMin lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-pink2 shadow-xl lg:max-w-[740px] px-8 py-4 md:h-[84px] mx-auto flex items-center justify-center">
               MASTERCLASSY ADSY&CHILL
             </h2>
-            <p className="text-center md:text-adaDesc pt-4">
+            <p className="text-center text-adaMin md:text-adaDesc pt-4">
               to niezawodny sposób na wejście w świat kampanii <br />
               reklamowych. <span className="font-bold">Dowiesz się jak:</span>
             </p>
@@ -190,7 +190,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 {listItems3.map((item, index) => (
                   <li
                     key={index}
-                    className="flex flex-col items-center md:flex-row max-w-[480px] md:text-adaDesc"
+                    className="flex flex-col items-center md:flex-row max-w-[480px] text-adaMin md:text-adaDesc"
                   >
                     <div className="animate-spin-slow">
                       <StaticImage
@@ -206,7 +206,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                   </li>
                 ))}
               </div>
-              <li className="flex flex-col items-center md:items-start md:flex-row max-w-[480px] md:min-w-[580px] md:text-adaDesc pt-10">
+              <li className="flex flex-col items-center md:items-start md:flex-row max-w-[480px] md:min-w-[580px] text-adaMin md:text-adaDesc pt-10 mb-8">
                 <div className="animate-spin-slow">
                   <StaticImage
                     src={"../../images/flower-blue.svg"}
@@ -221,7 +221,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               </li>
             </ul>
           </div>
-          <h3 className="md:text-adaSubtitle font-bold uppercase mx-auto max-w-[600px] text-center">
+          <h3 className="text-adaMin md:text-adaSubtitle font-bold uppercase mx-auto max-w-[600px] text-center">
             Przeprowadzę Cię przez proces krok po kroku. To jak:{" "}
             <span className="text-ada-yellow">działamy i czilujemy?</span>
           </h3>
@@ -238,10 +238,10 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 3 && (
         <div
-          className="w-full flex flex-col px-3 pb-2 items-center mb-5 md:pt-12"
+          className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12"
           id="dlaczego"
         >
-          <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary pb-10">
+          <h2 className="text-adaStandard lg:text-adaSubtitleSecondary pb-10">
             <span className="font-bold">Adsy&chill</span> to idealna opcja dla
             Ciebie, jeśli:
           </h2>
@@ -250,7 +250,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               {listItems4.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col items-center md:flex-row max-w-[680px] xl:min-w-[480px] md:text-adaDesc"
+                  className="flex flex-col items-center md:flex-row max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc mx-auto"
                 >
                   <div className="mr-2">
                     <StaticImage
@@ -270,7 +270,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               {listItems5.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col items-center md:flex-row max-w-[680px] xl:min-w-[480px] md:text-adaDesc"
+                  className="flex flex-col items-center md:flex-row max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc"
                 >
                   <div className="mr-2">
                     <StaticImage
@@ -299,10 +299,10 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold mb-4">
               Co dostaniesz <br/> w Adsy&Chill?              
               </h2>
-              <h3 className="text-adaBase lg:text-adaSubtitle py-5">Dostęp do:</h3>
+              <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle py-5">Dostęp do:</h3>
               <ul className="flex flex-col gap-[10px] mx-auto mb-6">
                 {plusBasicList.map((item, index) => (
-                  <li key={index} className="flex flex-col md:flex-row">
+                  <li key={index} className="flex flex-col md:flex-row text-adaMin md:text-adaStandard">
                     <div className="mr-2">✅</div>
                     {item}
                   </li>
@@ -332,7 +332,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               {listItems6.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col items-center md:flex-row max-w-[880px] xl:min-w-[880px] md:text-adaDesc"
+                  className="flex flex-col items-center md:flex-row max-w-[880px] xl:min-w-[880px] text-adaMin md:text-adaDesc"
                 >
                   <div className="mr-2">
                     <StaticImage

@@ -73,7 +73,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
     },
     {
       icon: "😬",
-      text: "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że „umiesz za mało”",
+      text: "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że „umiesz za mało”?",
     },
     {
       icon: "🥵",
@@ -111,34 +111,35 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 2 && (
-        <div className="mx-auto md:pb-10 md:mt-10">
-          <h2 className="text-adaSubtitle lg:text-adaSubtitleThird font-bold bg-white shadow-xl lg:max-w-[740px] px-10 mx-auto flex items-center justify-center">
+        <div className="mx-auto md:pb-10 mt-4 md:mt-10">
+          <h2 className="text-adaStandard lg:text-adaSubtitleThird font-bold bg-white shadow-xl lg:max-w-[740px] px-10 mx-auto flex items-center justify-center">
             Czy Ty też tak masz?
           </h2>
           <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
             <ul className="gap-10 md:gap-[120px] ">
               {leftList2.map((item, index) => (
                 <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
-                  <span className="text-adaSubtitle"> {item.icon}</span>
-                  <span>{item.text}</span>
+                  <span className="text-adaMin md:text-adaSubtitle"> {item.icon}</span>
+                  <span className="text-adaMin md:text-adaStandard">{item.text}</span>
                 </li>
               ))}
             </ul>
             <ul className="gap-10 md:gap-[120px]">
               {rightList2.map((item, index) => (
                 <li className="flex gap-4 max-w-[580px] pb-3 px-3" key={index}>
-                  <span className="text-adaSubtitle"> {item.icon}</span>
-                  <span>{item.text}</span>
+                  <span className="text-adaMin md:text-adaSubtitle"> {item.icon}</span>
+                  <span className="text-adaMin md:text-adaStandard">
+                  {item.text}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="max-w-[780px] text-center py-[50px] mx-auto ">
-            <h3 className="md:text-adaSubtitleSecondary font-bold pb-10">
-              W TWOJEJ GŁOWIE POJAWIŁA SIĘ MYŚL:
-              <span className="text-ada-purple">„KURCZE, NO TAK!”?</span>{" "}
+            <h3 className="text-adaMin md:text-adaSubtitleSecondary font-bold pb-10">
+              W TWOJEJ GŁOWIE POJAWIŁA SIĘ MYŚL:{" "}
+              <span className="text-ada-purple">„KURCZE, NO TAK!”?</span>
             </h3>
-            <p className="text-adaDesc">
+            <p className="text-adaMin md:text-adaDesc">
               To znak, że dzięki{" "}
               <span className="font-bold">masterclassom</span> przybliżysz się
               do życia, w którym pracujesz tak, jak lubisz i zarabiasz dzięki
