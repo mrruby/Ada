@@ -38,6 +38,7 @@ module.exports = {
         lemon: ["Lemon", "serif"],
       },
       fontSize: {
+        adaMin: "0.625rem",
         adaNav: "0.9375rem",
         adaDesc: "1.125rem",
         adaBase: "1.25rem",

@@ -112,7 +112,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 2 && (
         <div className="mx-auto md:pb-10 md:mt-10">
-          <h2 className="text-adaSubtitle lg:text-adaSubtitleThird font-bold bg-ada-light-pink shadow-xl lg:max-w-[740px] px-8 mx-auto flex items-center justify-center">
+          <h2 className="text-adaSubtitle lg:text-adaSubtitleThird font-bold bg-white shadow-xl lg:max-w-[740px] px-10 mx-auto flex items-center justify-center">
             Czy Ty też tak masz?
           </h2>
           <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">

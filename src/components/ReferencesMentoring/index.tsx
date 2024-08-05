@@ -13,6 +13,9 @@ type IReferencesList = {
 type IReferences = {
   title1?: boolean
   title2?: boolean
+  title3?: boolean
+  version?: "1" | "2"
+
 }
 
 const referencesList: IReferencesList[] = [
@@ -109,6 +112,48 @@ const referencesList: IReferencesList[] = [
   },
 ]
 
+const referencesList2: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy1.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={387}
+        height={387}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy2.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={387}
+        height={387}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy3.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={387}
+        height={387}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
+
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1440 },
@@ -150,7 +195,9 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
   )
 }
 
-const ReferencesMentoring = ({ title1, title2 }: IReferences): JSX.Element => {
+const ReferencesMentoring = ({ title1, title2, title3, version = "1" }: IReferences): JSX.Element => {
+  const selectedList = version === "2" ? referencesList2 : referencesList;
+
   return (
     <div className="pt-[40px]">
       {title1 && (
@@ -173,6 +220,16 @@ const ReferencesMentoring = ({ title1, title2 }: IReferences): JSX.Element => {
           </h3>
         </>
       )}
+      {title3 && (
+        <>
+          <h3 className="mx-auto md:max-w-[1200px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            Tak mówią osoby, którym pomogłam rozkręcić
+          </h3>
+          <h3 className="mx-auto md:max-w-[800px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+            biznes dzięki reklamom!
+          </h3>
+        </>
+      )}
       <div className="max-h-[600px] mx-auto mt-5">
         <Carousel
           responsive={responsive}
@@ -183,7 +240,7 @@ const ReferencesMentoring = ({ title1, title2 }: IReferences): JSX.Element => {
           autoPlay
           autoPlaySpeed={2000}
         >
-          {referencesList.map((reference, index) => (
+          {selectedList.map((reference, index) => (
             <Reference key={index} image={reference.image} />
           ))}
         </Carousel>
