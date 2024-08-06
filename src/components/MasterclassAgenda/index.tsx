@@ -128,7 +128,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
             {listItems2.map((item, index) => (
               <li
                 key={index}
-                className="flex flex-col md:flex-row gap-2 items-center px-2 max-w-[800px] md:text-adaBase"
+                className="flex flex-row gap-2 items-center px-2 max-w-[800px] md:text-adaBase"
               >
                 <div>
                   <StaticImage
@@ -278,7 +278,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               {listItems5.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-row items-start md:flex-row max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc"
+                  className="flex flex-row items-start max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc"
                 >
                   <div className="mr-2">
                     <StaticImage
@@ -314,7 +314,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 {plusBasicList.map((item, index) => (
                   <li
                     key={index}
-                    className="flex flex-col md:flex-row text-adaMin md:text-adaStandard"
+                    className="flex flex-row text-adaMin md:text-adaStandard"
                   >
                     <div className="mr-2">✅</div>
                     {item}
@@ -345,7 +345,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               {listItems6.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col items-center md:flex-row max-w-[880px] xl:min-w-[880px] text-adaMin md:text-adaDesc"
+                  className="flex flex-row items-center max-w-[880px] xl:min-w-[880px] text-adaMin md:text-adaDesc"
                 >
                   <div className="mr-2">
                     <StaticImage
