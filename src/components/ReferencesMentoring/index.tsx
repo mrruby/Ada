@@ -222,10 +222,10 @@ const ReferencesMentoring = ({ title1, title2, title3, version = "1" }: IReferen
       )}
       {title3 && (
         <>
-          <h3 className="mx-auto md:max-w-[1200px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+          <h3 className="mx-auto md:max-w-[1200px] text-center text-adaStandard md:text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
             Tak mówią osoby, którym pomogłam rozkręcić
           </h3>
-          <h3 className="mx-auto md:max-w-[800px] text-center text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
+          <h3 className="mx-auto md:max-w-[800px] text-center text-adaStandard md:text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
             biznes dzięki reklamom!
           </h3>
         </>

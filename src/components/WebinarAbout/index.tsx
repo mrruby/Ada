@@ -115,14 +115,14 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             text="     Cześć!"
             textStyle="text-adaSubtitle uppercase md:text-[80px] font-extrabold animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]"
           />
-          <h3 className="md:text-adaSubtitleSecondary pt-8 font-bold md:border-b-[20px] border-ada-light-pink md:leading-[0px]">
+          <h3 className="text-adaMin md:text-adaSubtitleSecondary pt-8 font-bold md:border-b-[20px] border-ada-light-pink md:leading-[0px]">
             Nazywam się Adrianna Promis-Urbas
           </h3>
-          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
             Mam za sobą epizod pracy w audycie finansowym, ale moim powołaniem
             chyba od zawsze był <span className="font-bold">marketing!</span>
           </p>
-          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
             I tak{" "}
             <span className="font-bold">
               od stażu w agencji marketingowej do swojej działalności:
@@ -132,13 +132,13 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             <span className="font-bold">ponad 1 mln budżetów reklamowych </span>
             wydanych w ramach Meta Ads.
           </p>
-          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
             W czasie mojej kariery marketingowej przeszłam od osoby, która
             pracuje na etacie i szuka możliwości rozwoju do{" "}
             <span className="font-bold">przedsiębiorczyni,</span>
             która szuka sposobów na skuteczną promocję swojego biznesu.
           </p>
-          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
             Gdy zaczynałam przygodę z marketingiem, szukałam{" "}
             <span className="font-bold">sprawdzonych</span> źródeł wiedzy o
             reklamach. Byłam w miejscu, w którym{" "}
@@ -149,7 +149,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             <span className="font-bold"> wartość</span> oferuję i co można
             zyskać, pracując ze mną.
           </p>
-          <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
             Dzięki temu wiem, czego możesz potrzebować{" "}
             <span className="font-bold">
               Ty — marketerko, pracowniczko, freelancerko, przedsiębiorczynio!

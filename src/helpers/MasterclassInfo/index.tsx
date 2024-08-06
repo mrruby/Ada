@@ -27,8 +27,9 @@ interface Props {
   sectionId?: string
 }
 
-const h4Style = "bg-ada-pink5 font-bold md:text-adaDesc w-fit py-1 pr-1"
-const pStyle = "mt-1 pr-4"
+const h4Style =
+  "bg-ada-pink5 font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1 "
+const pStyle = "mt-1 pr-4 text-adaMin md:text-adaStandard"
 
 export const MasterclassInfo: React.FC<Props> = ({
   title,
@@ -68,9 +69,12 @@ export const MasterclassInfo: React.FC<Props> = ({
         <p className="pt-2 text-center">{subtitle2}</p>
         <div className="pt-4 md:max-w-[40vw]">
           <h3 className="font-bold md:text-adaDesc pb-4 mt-10">Efekty:</h3>
-          <ul className="flex flex-col gap-[10px] mx-auto mb-10">
+          <ul className="flex flex-row gap-[10px] mx-auto mb-10">
             {efects.map((item, index) => (
-              <li key={index} className="flex flex-col md:flex-row">
+              <li
+                key={index}
+                className="flex flex-col md:flex-row text-adaMin md:text-adaStandard"
+              >
                 <span className="mr-2">✅</span>
                 {item}
               </li>
@@ -79,15 +83,19 @@ export const MasterclassInfo: React.FC<Props> = ({
         </div>
         <div className="md:max-w-[40vw]">
           <h3 className="font-bold md:text-adaDesc pb-4">Poziom trudności:</h3>
-          <p className="flex flex-col md:flex-row">
+          <p className="flex flex-col md:flex-row text-adaMin md:text-adaStandard">
             <span className="mr-2">✅</span>
             {forWhom}
           </p>
           <p className="pt-4">{forWhomInfo}</p>
         </div>
         <div className={`${btnStyle} my-20`}>
-          <div className={`w-screen md:h-[80px] flex justify-center items-center bg-ada-pink5 mx-auto ${btnMargin}`}>
-            <span className="font-extrabold md:text-adaSubtitleSecondary">{btn}</span>
+          <div
+            className={`w-screen md:h-[80px] flex justify-center items-center bg-ada-pink5 mx-auto ${btnMargin}`}
+          >
+            <span className="font-extrabold md:text-adaSubtitleSecondary">
+              {btn}
+            </span>
           </div>
         </div>
       </div>
