@@ -56,9 +56,17 @@ const listItems6 = [
 ]
 
 const plusBasicList = [
-  <p>Masterclassu<span className="font-bold">{" "}„Ustaw reklamę na listę mailingową”</span></p>,
-  <p>Masterclassu<span className="font-bold">{" "}„Ułatw sobie reklamy z automatyzacją”</span></p>,
-  <p>Masterclassu<span className="font-bold">{" "}„Ustaw reklamę na sprzedaż”</span></p>,
+  <p>
+    Masterclassu
+    <span className="font-bold"> „Ustaw reklamę na listę mailingową”</span>
+  </p>,
+  <p>
+    Masterclassu
+    <span className="font-bold"> „Ułatw sobie reklamy z automatyzacją”</span>
+  </p>,
+  <p>
+    Masterclassu<span className="font-bold"> „Ustaw reklamę na sprzedaż”</span>
+  </p>,
   <p className="font-bold">Grupy na Facebooku</p>,
 ]
 
@@ -241,16 +249,16 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
           className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12"
           id="dlaczego"
         >
-          <h2 className="text-adaStandard lg:text-adaSubtitleSecondary pb-10">
+          <h2 className="text-adaStandard lg:text-adaSubtitleSecondary pb-10 text-center">
             <span className="font-bold">Adsy&chill</span> to idealna opcja dla
             Ciebie, jeśli:
           </h2>
-          <div className="flex flex-col md:flex-row items-center justify-between mx-auto">
+          <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
             <ul className="flex flex-wrap gap-[10px] mx-auto mb-10">
               {listItems4.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col items-center md:flex-row max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc mx-auto"
+                  className="flex flex-row items-start max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc"
                 >
                   <div className="mr-2">
                     <StaticImage
@@ -270,7 +278,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               {listItems5.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col items-center md:flex-row max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc"
+                  className="flex flex-row items-start md:flex-row max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc"
                 >
                   <div className="mr-2">
                     <StaticImage
@@ -297,12 +305,17 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
           <div className="flex flex-col md:flex-row gap-10">
             <div className="max-w-[560px] flex flex-col">
               <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold mb-4">
-              Co dostaniesz <br/> w Adsy&Chill?              
+                Co dostaniesz <br /> w Adsy&Chill?
               </h2>
-              <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle py-5">Dostęp do:</h3>
+              <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle py-5">
+                Dostęp do:
+              </h3>
               <ul className="flex flex-col gap-[10px] mx-auto mb-6">
                 {plusBasicList.map((item, index) => (
-                  <li key={index} className="flex flex-col md:flex-row text-adaMin md:text-adaStandard">
+                  <li
+                    key={index}
+                    className="flex flex-col md:flex-row text-adaMin md:text-adaStandard"
+                  >
                     <div className="mr-2">✅</div>
                     {item}
                   </li>
@@ -311,17 +324,17 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
               <p className="text-center font-bold text-adaBase pt-4">
                 Cena: 597 zł
               </p>
-              <div className="flex justify-center">              
+              <div className="flex justify-center">
                 <Button
-                type="button"
-                text={
-                  <span className="font-extrabold uppercase">korzystam</span>
-                }
-                textSize="text-adaSubtitle"
-                btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink" 
-                url="https://sklep.adrianna.com.pl/product/adsy-chill-pakiet-basic"
-              /></div>
-
+                  type="button"
+                  text={
+                    <span className="font-extrabold uppercase">korzystam</span>
+                  }
+                  textSize="text-adaSubtitle"
+                  btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
+                  url="https://sklep.adrianna.com.pl/product/adsy-chill-pakiet-basic"
+                />
+              </div>
             </div>
           </div>
           <div>
