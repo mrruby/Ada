@@ -1,8 +1,8 @@
 import { createStorefrontApiClient } from "@shopify/storefront-api-client"
 
 const client = createStorefrontApiClient({
-  storeDomain: process.env.SHOPIFY_STORE_DOMAIN!,
-  publicAccessToken: process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!,
+  storeDomain: process.env.GATSBY_SHOPIFY_STORE_DOMAIN!,
+  publicAccessToken: process.env.GATSBY_SHOPIFY_STOREFRONT_ACCESS_TOKEN!,
   apiVersion: "2024-07",
 })
 
