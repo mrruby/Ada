@@ -262,8 +262,8 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {sun7 && (
         <Sun7
-         mobileTop="hidden xl:flex lg:top-[11180px]"
-         mobileRight="right-[-150px]"
+          mobileTop="hidden xl:flex lg:top-[11180px]"
+          mobileRight="right-[-150px]"
         />
       )}
       {flaming && (

@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import { createCartAndRedirectToCheckout } from "utils/shopify"
 
 const listItems = [
   "Ada, ile czasu muszę przeznaczyć na udział w 3-miesięcznym programie?",
@@ -325,15 +326,26 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 Cena: 597 zł
               </p>
               <div className="flex justify-center">
-                <Button
+                <button
+                  onClick={async () => {
+                    try {
+                      const checkoutUrl = await createCartAndRedirectToCheckout(
+                        "49088728006997",
+                        1
+                      )
+                      window.location.href = checkoutUrl
+                    } catch (error) {
+                      console.error(
+                        "Error creating cart and redirecting to checkout:",
+                        error
+                      )
+                    }
+                  }}
                   type="button"
-                  text={
-                    <span className="font-extrabold uppercase">korzystam</span>
-                  }
-                  textSize="text-adaSubtitle"
-                  btnStyle="md:w-[300px] md:h-[60px] bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink"
-                  url="https://sklep.adrianna.com.pl/product/adsy-chill-pakiet-basic"
-                />
+                  className="bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink font-medium px-5 py-1.5 hover:bg-ada-pink hover:shadow-xl"
+                >
+                  <span className="font-extrabold uppercase">korzystam</span>
+                </button>
               </div>
             </div>
           </div>
