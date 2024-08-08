@@ -1,14 +1,28 @@
 import React from "react"
-import { createCartAndRedirectToCheckout } from "utils/shopify"
 
 const BuyChillButton = (): JSX.Element => {
   const handleClick = async () => {
     try {
-      const checkoutUrl = await createCartAndRedirectToCheckout(
-        "49088728006997",
-        1
-      )
-      window.location.href = checkoutUrl
+      const response = await fetch("/api/create-cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          productVariantId: "49088728006997",
+          quantity: 1,
+        }),
+      })
+
+      const result = await response.json()
+      if (response.ok) {
+        window.location.href = result.checkoutUrl
+      } else {
+        console.error(
+          "Error creating cart and redirecting to checkout:",
+          result.error
+        )
+      }
     } catch (error) {
       console.error("Error creating cart and redirecting to checkout:", error)
     }
