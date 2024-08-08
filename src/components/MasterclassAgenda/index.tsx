@@ -1,8 +1,11 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
-import { createCartAndRedirectToCheckout } from "utils/shopify"
-import BuyChillButton from "components/BuyChillButton"
+import loadable from "@loadable/component"
+
+const LoadableBuyChillButton: React.ComponentType = loadable(
+  () => import("../BuyChillButton")
+)
 
 const listItems = [
   "Ada, ile czasu muszę przeznaczyć na udział w 3-miesięcznym programie?",
@@ -327,7 +330,7 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 Cena: 597 zł
               </p>
               <div className="flex justify-center">
-                <BuyChillButton />
+                <LoadableBuyChillButton />
               </div>
             </div>
           </div>
