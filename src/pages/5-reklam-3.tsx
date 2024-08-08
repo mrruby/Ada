@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import WebinarBanner from "components/WebinarBanner"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import IconText from "components/IconText"
 import WebinarAbout from "components/WebinarAbout"
@@ -11,12 +10,10 @@ import MasterclassPreparing from "components/MasterclassPreparing"
 import MentoringBanner from "components/MentoringBanner"
 import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassesInfo from "components/MasterclassesInfo"
-import MasterclassTime3 from "components/MasterclassTime3"
 
 const AdsyAndChill = (): JSX.Element => {
   return (
     <Layout
-      showHeaderAndFooter={false}
       flowerBlue2={true}
       flowerBlue5={true}
       flowerBlue7={true}
@@ -25,16 +22,22 @@ const AdsyAndChill = (): JSX.Element => {
       flowerBlue10={true}
       flowerBlue11={true}
       sun6={true}
-      sun7={true}
       sunglasses2={true}
       flaps2={true}
       ball3={true}
       drinks={true}
     >
-      <MaxWithBgColorContainer>
-        <WebinarBanner version={4} />
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <div className="flex flex-col items-center mt-16">
+          <iframe
+            className="w-full max-w-[1000px] aspect-video"
+            src={
+              "https://www.youtube.com/embed/vse0cr-Yk0o?si=k67c3Q0fVMesMFzb"
+            }
+          ></iframe>
+        </div>
       </MaxWithBgColorContainer>
-      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[920px] w-screen z-0"></div>
+      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[820px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <IconText version={2} />
       </MaxWithBgColorContainer>
@@ -45,7 +48,7 @@ const AdsyAndChill = (): JSX.Element => {
         <WebinarAbout version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title3  version="2"/>
+        <ReferencesMentoring title3 version="2" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4 mt-5">
         <MasterclassAgenda version={3} />
@@ -53,11 +56,14 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <MentoringBanner version={6} />
       </MaxWithBgColorContainer>
-      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5480px] w-screen z-0" id="masterclasses"></div>
+      <div
+        className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5380px] w-screen z-0"
+        id="masterclasses"
+      ></div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={1} />
       </MaxWithBgColorContainer>
-      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[6920px] w-screen z-0"></div>
+      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[6890px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MasterclassesInfo version={2} />
       </MaxWithBgColorContainer>
@@ -65,7 +71,7 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[300px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[9750px] w-screen z-0"></div>
+      <div className="h-[300px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[9650px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={7} />
       </MaxWithBgColorContainer>
@@ -75,28 +81,13 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassAgenda version={4} />
       </MaxWithBgColorContainer>
-      <div className="h-[300px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[11990px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassTime3/>
         <MasterclassFAQ version={3} />
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
 
-export const Head = () => (
-  <SEO
-    title="Adsy&chill"
-    script={`
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:5046108,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    `}
-  />
-)
+export const Head = () => <SEO title="Adsy&chill 5 reklam oto" />
+
 export default AdsyAndChill
