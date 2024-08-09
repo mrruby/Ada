@@ -30,11 +30,6 @@ const HolidayForm = (): JSX.Element => {
         </div>
         <WebinarForm />
       </div>
-      <div className="md:text-adaSubtitle font-bold">
-        <p>Pssst! Warto dołączyć na żywo, aby wziąć udział w sesji Q&A.</p>
-        <p>Nie możesz w tym terminie?</p>
-        <p>Zapisz się, a po warsztatach dostaniesz nagranie.</p>
-      </div>
     </section>
   )
 }
