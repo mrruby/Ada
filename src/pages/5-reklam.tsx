@@ -32,7 +32,7 @@ const AdsyAndChill = (): JSX.Element => {
           <iframe
             className="w-full max-w-[1000px] aspect-video"
             src={
-              "https://www.youtube.com/embed/vse0cr-Yk0o?si=k67c3Q0fVMesMFzb"
+              "https://www.youtube.com/embed/uAdIHSK6S_8?si=kYitYjNrItAMWOu9"
             }
           ></iframe>
         </div>
