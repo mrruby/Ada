@@ -32,9 +32,11 @@ const BuyChillButton = (): JSX.Element => {
     <button
       onClick={handleClick}
       type="button"
-      className="bg-ada-pink2 mt-2 mb-20 md:my-10 mx-auto border-b-4 border-ada-pink font-medium px-5 py-1.5 hover:bg-ada-pink hover:shadow-xl"
+      className="bg-ada-pink2 mt-4 mb-24 md:my-12 mx-auto border-b-8 border-ada-pink font-bold px-8 py-3 hover:bg-ada-pink hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"
     >
-      <span className="font-extrabold uppercase">korzystam</span>
+      <span className="font-extrabold uppercase text-lg md:text-xl lg:text-2xl">
+        Korzystam
+      </span>
     </button>
   )
 }
