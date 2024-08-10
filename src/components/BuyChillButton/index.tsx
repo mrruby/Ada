@@ -3,6 +3,7 @@ import React from "react"
 const BuyChillButton = (): JSX.Element => {
   const handleClick = async () => {
     try {
+      const discountCode = localStorage.getItem("discountCode")
       const response = await fetch("/api/create-cart", {
         method: "POST",
         headers: {
@@ -11,6 +12,7 @@ const BuyChillButton = (): JSX.Element => {
         body: JSON.stringify({
           productVariantId: "49088728006997",
           quantity: 1,
+          discountCode,
         }),
       })
 

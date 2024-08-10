@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
@@ -10,8 +10,22 @@ import MasterclassPreparing from "components/MasterclassPreparing"
 import MentoringBanner from "components/MentoringBanner"
 import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassesInfo from "components/MasterclassesInfo"
+import CountdownTimer from "helpers/CountdownTimer"
+import { checkAndGenerateDiscountCode } from "../utils/api"
 
 const AdsyAndChill = (): JSX.Element => {
+  const [endsAt, setEndsAt] = useState<string | null>(null)
+
+  useEffect(() => {
+    const fetchEndsAt = async () => {
+      const storedEndsAt = localStorage.getItem("endsAt")
+      const endsAt =
+        storedEndsAt || (await checkAndGenerateDiscountCode("49088728006997"))
+      setEndsAt(endsAt)
+    }
+    fetchEndsAt()
+  }, [])
+
   return (
     <Layout
       flowerBlue2={true}
@@ -28,6 +42,11 @@ const AdsyAndChill = (): JSX.Element => {
       drinks={true}
     >
       <MaxWithBgColorContainer bgColor="bg-linear2">
+        {endsAt && (
+          <div className=" flex justify-center pt-10">
+            <CountdownTimer targetDate={new Date(endsAt)} />
+          </div>
+        )}
         <div className="flex flex-col items-center mt-16">
           <iframe
             className="w-full max-w-[1000px] aspect-video"

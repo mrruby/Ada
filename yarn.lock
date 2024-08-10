@@ -2290,6 +2290,13 @@
   resolved "https://registry.yarnpkg.com/@react-dnd/shallowequal/-/shallowequal-2.0.0.tgz#a3031eb54129f2c66b2753f8404266ec7bf67f0a"
   integrity sha512-Pc/AFTdwZwEKJxFJvlxrSmGe/di+aAOBn60sremrpLo6VI/6cmiUYNNwlI5KNYttg7uypzA3ILPMPgxB2GYZEg==
 
+"@shopify/admin-api-client@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@shopify/admin-api-client/-/admin-api-client-1.0.1.tgz#f7168fe9528e84bca28cf8076fd5c4bc19e1a7dc"
+  integrity sha512-eyTr8p3dtq/J6goWA2Sh66ejZH1FnIF/9vY23nqDFJDboNZLUNvbZ+t7roBasw1n5mYn1Jy5NYzjZHpbIJSl1g==
+  dependencies:
+    "@shopify/graphql-client" "^1.1.0"
+
 "@shopify/graphql-client@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@shopify/graphql-client/-/graphql-client-1.1.0.tgz#2885a597bb86bb6372b0ffb5d615e71e8e4b7265"
