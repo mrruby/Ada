@@ -12,6 +12,7 @@ import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassesInfo from "components/MasterclassesInfo"
 import CountdownTimer from "helpers/CountdownTimer"
 import { checkAndGenerateDiscountCode } from "../utils/api"
+import { Button } from "helpers/Button"
 
 const AdsyAndChill = (): JSX.Element => {
   const [endsAt, setEndsAt] = useState<string | null>(null)
@@ -19,10 +20,18 @@ const AdsyAndChill = (): JSX.Element => {
   useEffect(() => {
     const fetchEndsAt = async () => {
       const storedEndsAt = localStorage.getItem("endsAt")
-      const endsAt =
+      const isExpired = storedEndsAt && new Date(storedEndsAt) < new Date()
+
+      if (isExpired && typeof window !== "undefined") {
+        window.location.href = "/5-reklam"
+        return
+      }
+
+      const newEndsAt =
         storedEndsAt || (await checkAndGenerateDiscountCode("49088728006997"))
-      setEndsAt(endsAt)
+      setEndsAt(newEndsAt)
     }
+
     fetchEndsAt()
   }, [])
 
@@ -40,13 +49,9 @@ const AdsyAndChill = (): JSX.Element => {
       flaps2={true}
       ball3={true}
       drinks={true}
+      showHeaderAndFooter={false}
     >
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        {endsAt && (
-          <div className=" flex justify-center pt-10">
-            <CountdownTimer targetDate={new Date(endsAt)} />
-          </div>
-        )}
         <div className="flex flex-col items-center mt-16">
           <iframe
             className="w-full max-w-[1000px] aspect-video"
@@ -55,6 +60,21 @@ const AdsyAndChill = (): JSX.Element => {
             }
           ></iframe>
         </div>
+        {endsAt && (
+          <div className="flex flex-col items-center pt-10">
+            <CountdownTimer
+              text="Skorzystaj z oferty specjalnej przez"
+              targetDate={new Date(endsAt)}
+            />
+            <Button
+              type="button"
+              text={<span className="font-extrabold uppercase">SPRAWDZAM</span>}
+              textSize="text-adaSubtitle"
+              btnStyle="md:w-[410px] md:h-[90px] bg-ada-pink2 my-10"
+              sectionId="pricing"
+            />
+          </div>
+        )}
       </MaxWithBgColorContainer>
       <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[1020px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
@@ -98,7 +118,7 @@ const AdsyAndChill = (): JSX.Element => {
         <MasterclassPreparing version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassAgenda version={4} />
+        <MasterclassAgenda version={4} endsAt={endsAt} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MasterclassFAQ version={3} />

@@ -2,6 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import BuyChillButton from "components/BuyChillButton"
+import CountdownTimer from "helpers/CountdownTimer"
 
 const listItems = [
   "Ada, ile czasu muszę przeznaczyć na udział w 3-miesięcznym programie?",
@@ -85,7 +86,13 @@ const plusVIPList = [
   "Konsultacja 1:1 na Google Meets (60 minut) o wartości 650 złotych",
 ]
 
-const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
+const MasterclassAgenda = ({
+  version,
+  endsAt,
+}: {
+  version: number
+  endsAt?: string | null
+}): JSX.Element => {
   return (
     <>
       {version === 1 && (
@@ -303,6 +310,14 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
           className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12"
           id="pricing"
         >
+          {endsAt && (
+            <div className="flex flex-col items-center pt-10">
+              <CountdownTimer
+                text="Skorzystaj z oferty specjalnej przez"
+                targetDate={new Date(endsAt)}
+              />
+            </div>
+          )}
           <div className="flex flex-col md:flex-row gap-10">
             <div className="max-w-[560px] flex flex-col">
               <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold mb-4">
@@ -323,7 +338,15 @@ const MasterclassAgenda = ({ version }: { version: number }): JSX.Element => {
                 ))}
               </ul>
               <p className="text-center font-bold text-adaBase pt-4">
-                Cena: 597 zł
+                Cena:{" "}
+                {endsAt && (
+                  <>
+                    <span className="line-through">597 zł</span>{" "}
+                  </>
+                )}
+                <span className={endsAt ? "text-adaSubtitle" : ""}>
+                  {endsAt ? "497 zł" : "597 zł"}
+                </span>
               </p>
               <div className="flex justify-center">
                 <BuyChillButton />

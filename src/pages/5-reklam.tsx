@@ -26,6 +26,7 @@ const AdsyAndChill = (): JSX.Element => {
       flaps2={true}
       ball3={true}
       drinks={true}
+      showHeaderAndFooter={false}
     >
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <div className="flex flex-col items-center mt-16">
