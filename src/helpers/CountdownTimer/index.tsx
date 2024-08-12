@@ -46,7 +46,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
 
   return (
     <div className="flex flex-col items-center">
-      {text && <p className="mb-2 text-xl">{text}</p>}
+      {text && <p className="mb-2 text-2xl font-bold">✨ {text} ✨</p>}
       <div className="flex w-full gap-8 lg:max-w-[660px] justify-around bg-ada-light-pink px-4 py-2">
         <TimeSegment label="GODZIN" value={timeLeft.hours} />
         <TimeSegment label="MINUT" value={timeLeft.minutes} />
