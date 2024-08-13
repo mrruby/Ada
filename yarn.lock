@@ -6365,13 +6365,14 @@ gatsby-plugin-facebook-pixel@^1.0.8:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-facebook-pixel/-/gatsby-plugin-facebook-pixel-1.0.8.tgz#8f5aa6816ddf1cf451c372464fa3f873d7dae288"
   integrity sha512-oJfTMJxAv5AF2sganhtaq3+6GZ2W2s6/RjQxVsRUxUWMxhrtW6YeMsayAh1bVPgVQ8boJ0QyftipXe7fyq4BCA==
 
-gatsby-plugin-google-gtag@^5.13.1:
+gatsby-plugin-google-analytics@^5.13.1:
   version "5.13.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-5.13.1.tgz#81b294f2ab12dad5ba5e9946e4b78cd315676bbc"
-  integrity sha512-aaJKIDwUWwhooJnalse1uvcusBmCwCVK33pp1IrDU02E7IohMen3eR5TsjLbfKO7Z+SbfKJEqUoi/r0ozrJarA==
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-5.13.1.tgz#6406e8b52a5df67ca3978a1d6f6ca661a7f6ac61"
+  integrity sha512-6TzvUPW7CBpfpSIqpcvaRwRKTYgM3CKqSnfyRIY16vlAKYkAtZLXm3PkIbg0+mM+WzY6GRnAoeXqRkXJv0FK9A==
   dependencies:
     "@babel/runtime" "^7.20.13"
     minimatch "^3.1.2"
+    web-vitals "^1.1.2"
 
 gatsby-plugin-google-tagmanager@^5.13.1:
   version "5.13.1"
