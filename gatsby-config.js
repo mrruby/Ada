@@ -68,9 +68,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-scroll-reveal`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "G-8LX78J4XMN",
+        trackingIds: ["G-8LX78J4XMN"],
       },
     },
     {
