@@ -50,13 +50,13 @@ const PuzzleContains = (): JSX.Element => {
       <h2 className="font-bold text-adaSubtitle text-ada-blue mt-8 mb-4 max-w-sm">
         TO WSZYSTKO DOSTANIESZ CAŁKOWICIE BEZPŁATNIE!
       </h2>
-      {/* <Button
+      <Button
         type="button"
         text={<span className="font-bold">MUSZĘ WZIĄĆ W TYM UDZIAŁ!</span>}
-        sectionId="masterclasses"
+        sectionId="puzzle-end"
         textSize="md:text-adaSubtitle"
         btnStyle="uppercase md:w-[480px] bg-ada-pink2 tracking-[2.90px] h-[100px] shadow-xl mx-4 md:mx-0"
-      /> */}
+      />
     </div>
   )
 }

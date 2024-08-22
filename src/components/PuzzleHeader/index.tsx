@@ -8,7 +8,7 @@ import React from "react"
 const PuzzleBanner = (): JSX.Element => {
   return (
     <div className="relative">
-      <div className="mt-20 mb-10 flex flex-col max-w-3xl text-center mx-auto relative">
+      <div className="mt-20 mb-10 flex flex-col items-center md:items-start max-w-3xl text-center mx-auto relative">
         <h1 className="text-adaTitle font-extrabold tracking-wider leading-tight text-ada-blue mb-4 text-left">
           UŁÓŻ <span className="text-ada-pink5">PUZZLE</span> SWOJEGO BIZNESU Z
           REKLAMAMI!
@@ -25,14 +25,13 @@ const PuzzleBanner = (): JSX.Element => {
         <div className="max-w-sm">
           <PuzzleForm />
         </div>
-        {/* <Button
+        <Button
           type="button"
           text={<span className="font-bold">Startujemy już 2 września!</span>}
-          sectionId="masterclasses"
+          sectionId="puzzle-end"
           textSize="md:text-adaSubtitle"
           btnStyle="uppercase md:w-[480px] bg-ada-pink2 tracking-[2.90px] h-[100px] shadow-xl mx-4 md:mx-0"
-        /> */}
-
+        />
         <PuzzleBlue top="hidden md:block top-14" right="-right-40" />
         <PuzzlePink top=" hidden lg:block top-14" left="-left-60" />
       </div>

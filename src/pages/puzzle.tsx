@@ -3,8 +3,8 @@ import Layout from "components/Layout"
 import SEO from "components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import PuzzleBanner from "components/PuzzleHeader"
-import HolidayFormTop from "components/HolidayFormTop"
 import PuzzleContains from "components/PuzzleContains"
+import PuzzleEnd from "components/PuzzleEnd"
 
 const PuzzlePage = (): JSX.Element => {
   return (
@@ -12,9 +12,13 @@ const PuzzlePage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <PuzzleBanner />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave2 absolute top-[1100px] w-screen z-50"></div>
+      <div className="h-[200px] bg-wave2 absolute top-[1020px] w-screen z-50"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <PuzzleContains />
+      </MaxWithBgColorContainer>
+      <div className="h-[200px] bg-wave2 absolute top-[2220px] w-screen z-50"></div>
+      <MaxWithBgColorContainer>
+        <PuzzleEnd />
       </MaxWithBgColorContainer>
     </Layout>
   )
