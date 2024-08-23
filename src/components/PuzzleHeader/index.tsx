@@ -21,7 +21,7 @@ const PuzzleBanner = (): JSX.Element => {
           Naucz się, jak zrozumieć dane o swoich odbiorcach i zaprojektować
           kampanię, która przekształci ich w Twoich klientów
         </p>
-        <div className="max-w-sm">
+        <div className="max-w-sm md:pl-4">
           <PuzzleForm />
         </div>
         <h3 className="text-adaSubtitle md:text-adaSubtitleThird leading-3 font-bold md:border-b-[30px] border-ada-pink2 mt-6 text-center max-w-[844px] ">
