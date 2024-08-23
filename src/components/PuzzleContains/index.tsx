@@ -1,7 +1,4 @@
-import WebinarForm from "components/WebinarForm"
-import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
-import { PuzzleBlue, PuzzlePink } from "helpers/LayoutElements"
 import React from "react"
 
 const PuzzleContainsItem: React.FC<{

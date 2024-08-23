@@ -1,5 +1,4 @@
 import PuzzleForm from "components/PuzzleForm"
-import WebinarForm from "components/WebinarForm"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import { PuzzleBlue, PuzzlePink } from "helpers/LayoutElements"
@@ -32,17 +31,8 @@ const PuzzleBanner = (): JSX.Element => {
           textSize="md:text-adaSubtitle"
           btnStyle="uppercase md:w-[480px] bg-ada-pink2 tracking-[2.90px] h-[100px] shadow-xl mx-4 md:mx-0"
         />
-        <PuzzleBlue top="hidden md:block top-14" right="-right-40" />
-        <PuzzlePink top=" hidden lg:block top-14" left="-left-60" />
-      </div>
-      <div className="absolute right-0 bottom-0 hidden md:block -z-50">
-        <StaticImage
-          src={"../../images/ada_puzzle.webp"}
-          alt="Ada Promis - hero"
-          placeholder="blurred"
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-        />
+        <PuzzleBlue top="hidden md:block top-10" right="-right-40" />
+        <PuzzlePink top=" hidden lg:block top-10" left="-left-60" />
       </div>
     </div>
   )

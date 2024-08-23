@@ -5,10 +5,20 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import PuzzleBanner from "components/PuzzleHeader"
 import PuzzleContains from "components/PuzzleContains"
 import PuzzleEnd from "components/PuzzleEnd"
+import { StaticImage } from "gatsby-plugin-image"
 
 const PuzzlePage = (): JSX.Element => {
   return (
     <Layout>
+      <div className="absolute right-0 top-[70px] hidden lg:block -z-50">
+        <StaticImage
+          src={"../images/ada_puzzle.webp"}
+          alt="Ada Promis - hero"
+          placeholder="blurred"
+          formats={["auto", "webp", "avif"]}
+          quality={100}
+        />
+      </div>
       <MaxWithBgColorContainer>
         <PuzzleBanner />
       </MaxWithBgColorContainer>
