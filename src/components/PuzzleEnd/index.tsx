@@ -31,7 +31,7 @@ const PuzzleEnd = (): JSX.Element => {
           className="w-full md:w-1/3"
         />
         <StaticImage
-          src="../../images/puzzle-opinion-2.webp"
+          src="../../images/puzzle-opinion-3.webp"
           alt="Ada Promis - opinion 3"
           placeholder="blurred"
           formats={["auto", "webp", "avif"]}
