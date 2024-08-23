@@ -7,6 +7,7 @@ import PuzzleContains from "components/PuzzleContains"
 import PuzzleEnd from "components/PuzzleEnd"
 import { StaticImage } from "gatsby-plugin-image"
 import PuzzleDesire from "components/PuzzleDesire"
+import PuzzleDays from "components/PuzzleDays"
 
 const PuzzlePage = (): JSX.Element => {
   return (
@@ -41,7 +42,11 @@ const PuzzlePage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <PuzzleDesire />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave2 absolute top-[2800px] w-screen z-50 hidden lg:block"></div>
+      <div className="h-[200px] bg-wave2 absolute top-[3600px] w-screen z-50 hidden lg:block"></div>
+      <MaxWithBgColorContainer bgColor="bg-ada-pink4">
+        <PuzzleDays />
+      </MaxWithBgColorContainer>
+      <div className="h-[200px] bg-wave2 absolute top-[4300px] w-screen z-50 hidden lg:block"></div>
       <MaxWithBgColorContainer>
         <PuzzleEnd />
       </MaxWithBgColorContainer>
