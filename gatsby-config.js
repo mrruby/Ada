@@ -8,12 +8,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: "187660469934129",
-      },
-    },
-    {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: `adrianna-1`,
@@ -47,12 +41,6 @@ module.exports = {
         path: `${__dirname}/src/values/legal`,
       },
     },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-TC7CLB2",
-      },
-    },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
@@ -67,18 +55,7 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-scroll-reveal`,
-    {
-      resolve: "gatsby-plugin-google-gtag",
-      options: {
-        trackingIds: ["G-8LX78J4XMN"],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-TC7CLB2",
-      },
-    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -89,6 +66,24 @@ module.exports = {
         background_color: "#FFFFFF",
         theme_color: "#EEDCF6",
         display: `standalone`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "187660469934129",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-TC7CLB2",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: ["G-8LX78J4XMN"],
       },
     },
   ],
