@@ -95,7 +95,7 @@ const PuzzleDays: React.FC = () => {
           />
         ))}
       </div>
-      <div className="flex justify-center w-full my-10">
+      <div className="flex justify-center w-full my-10 z-10">
         <Button
           type="button"
           text={

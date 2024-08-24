@@ -24,9 +24,9 @@ const PuzzleBanner = (): JSX.Element => {
         <div className="max-w-sm md:pl-4">
           <PuzzleForm />
         </div>
-        <h3 className="text-adaSubtitle md:text-adaSubtitleThird leading-3 font-bold md:border-b-[30px] border-ada-pink2 mt-6 text-center max-w-[844px] ">
+        <h2 className="text-adaSubtitle md:text-adaSubtitleThird leading-3 font-bold md:border-b-[30px] border-ada-pink2 mt-6 text-center max-w-[844px] ">
           STARTUJEMY JUŻ 2 WRZEŚNIA!
-        </h3>
+        </h2>
         <PuzzleBlue top="hidden md:block top-10" right="-right-40" />
         <PuzzlePink top=" hidden lg:block top-10" left="-left-60" />
       </div>
