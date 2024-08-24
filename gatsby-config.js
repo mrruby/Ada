@@ -68,26 +68,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-scroll-reveal`,
     {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [
-          `https://fonts.googleapis.com`,
-          `https://fonts.gstatic.com`,
-        ],
-        web: [
-          {
-            name: `Montserrat`,
-            file: `https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap`,
-          },
-          {
-            name: `Lemon`,
-            file: `https://fonts.googleapis.com/css2?family=Lemon&display=swap`,
-          },
-        ],
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: ["G-8LX78J4XMN"],
