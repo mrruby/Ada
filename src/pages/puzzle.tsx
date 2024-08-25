@@ -9,6 +9,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import PuzzleDesire from "components/PuzzleDesire"
 import PuzzleDays from "components/PuzzleDays"
 import PuzzleAttention from "components/PuzzleAttention"
+import PuzzleGood from "components/PuzzleGood"
 
 const PuzzlePage = (): JSX.Element => {
   return (
@@ -47,7 +48,18 @@ const PuzzlePage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <PuzzleDays />
         <PuzzleAttention />
+        <PuzzleGood />
       </MaxWithBgColorContainer>
+      <div className="absolute left-0 top-[4200px] hidden lg:block z-50">
+        <StaticImage
+          src={"../images/ada_puzzle_good.webp"}
+          alt="Ada Promis - puzzle good"
+          placeholder="blurred"
+          width={500}
+          formats={["auto", "webp", "avif"]}
+          quality={100}
+        />
+      </div>
       <div className="h-[200px] bg-wave2 absolute top-[4900px] w-screen z-50 hidden lg:block"></div>
       <MaxWithBgColorContainer>
         <PuzzleEnd />
