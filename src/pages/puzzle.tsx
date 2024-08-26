@@ -48,7 +48,7 @@ const PuzzlePage = (): JSX.Element => {
         top="top-[4200px]"
         left="left-0"
       />
-      <MaxWithBgColorContainer bgColor="bg-ada-pink4">
+      <MaxWithBgColorContainer bgColor="bg-linear">
         <PuzzleDays />
         <PuzzleAttention />
         <PuzzleGood />

@@ -2,6 +2,7 @@ import React from "react"
 import Footer from "../Footer"
 import Header from "../Header"
 import { LayoutElements } from "../Layout/elements"
+import "animate.css/animate.compat.css"
 
 type LayoutElements = {
   flowerBlue?: boolean

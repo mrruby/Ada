@@ -2,8 +2,8 @@ const path = require("path")
 
 module.exports = {
   siteMetadata: {
-    title: `adrianna.com.pl`,
-    description: `Social Media i podcast Phrasówka`,
+    title: `Adrianna Promis Urbas - zbuduj ze mną dochodowe kampanie reklamowe`,
+    description: `Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny: praktykuję slow marketing, przemyślany, wartościowy, zbudowany na relacjach`,
     author: `Adrianna Promis`,
   },
   plugins: [
