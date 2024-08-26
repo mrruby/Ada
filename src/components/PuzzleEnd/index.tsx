@@ -6,11 +6,11 @@ const PuzzleEnd = (): JSX.Element => {
   return (
     <div
       id="puzzle-end"
-      className="mb-10 flex flex-col max-w-3xl items-center text-center mx-auto"
+      className="mb-10 flex flex-col max-w-4xl items-center text-center mx-auto"
     >
       <PuzzleForm />
 
-      <h2 className="text-adaSubtitleThird font-bold text-ada-blue mb-6">
+      <h2 className="text-adaSubtitleThird max-w-3xl font-bold text-ada-blue mb-6">
         Nie mogę się doczekać Twoich efektów!
       </h2>
       <div className="flex flex-col md:flex-row justify-center items-center gap-4">
