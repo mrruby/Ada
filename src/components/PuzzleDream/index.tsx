@@ -10,8 +10,8 @@ const PuzzleDream: React.FC = () => {
           gdy nie pracujesz...
         </p>
         <p className="mt-4 text-adaBase">
-          odbierz dostęp do <span className="font-bold">3 miniszkoleni</span> i
-          w <span className="font-bold">5 dni</span> stwórz pod moim okiem
+          odbierz dostęp do <span className="font-bold">3 miniszkoleń</span> i w{" "}
+          <span className="font-bold">5 dni</span> stwórz pod moim okiem
           strukturę swojej pierwszej dochodowej kampanii reklamowej
         </p>
       </div>
