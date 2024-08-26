@@ -26,7 +26,6 @@ type LayoutElements = {
   waves3?: boolean
   waves4?: boolean
   waves5?: boolean
-  waves6?: boolean
   showHeaderAndFooter?: boolean
   sun1?: boolean
   sun2?: boolean
@@ -75,7 +74,6 @@ const defaultProps: LayoutElements = {
   waves3: false,
   waves4: false,
   waves5: false,
-  waves6: false,
   sun1: false,
   sun2: false,
   sun3: false,

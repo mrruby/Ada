@@ -22,7 +22,6 @@ import {
   Waves3,
   Waves4,
   Waves5,
-  Waves6,
   Sun1,
   Sun2,
   Sun3,
@@ -67,7 +66,6 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   waves3,
   waves4,
   waves5,
-  waves6,
   sun1,
   sun2,
   sun3,
@@ -216,12 +214,6 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
         <Waves5
           mobileTop="hidden xl:flex xl:top-[4260px]"
           mobileLeft="left-0"
-        />
-      )}
-      {waves6 && (
-        <Waves6
-          mobileTop="hidden lg:flex lg:top-[4800px]"
-          mobileRight="right-0"
         />
       )}
       {sun1 && (

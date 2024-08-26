@@ -21,7 +21,6 @@ export interface ILayoutElements {
   waves3?: boolean
   waves4?: boolean
   waves5?: boolean
-  waves6?: boolean
   sun1?: boolean
   sun2?: boolean
   sun3?: boolean

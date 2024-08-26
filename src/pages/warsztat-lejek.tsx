@@ -35,7 +35,7 @@ const MasterclassPage = (): JSX.Element => {
       waves3={true}
       waves4={true}
       waves5={true}
-      waves6={true}
+      sun1={true}
       showHeaderAndFooter={false}
     >
       <MasterclassTime1 />

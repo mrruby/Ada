@@ -15,7 +15,18 @@ interface Props {
   width?: string
 }
 
-export const FlowerBlue: React.FC<Props> = ({
+const ImageComponent: React.FC<
+  Props & {
+    src: string
+    alt: string
+    zIndex?: string
+    maxWidth?: string
+    widthValue?: number
+    heightValue?: number
+  }
+> = ({
+  src,
+  alt,
   top,
   right,
   left,
@@ -26,1103 +37,215 @@ export const FlowerBlue: React.FC<Props> = ({
   mobileBottom,
   rotate = "0deg",
   width = "40px",
+  zIndex = "z-40",
+  maxWidth = "",
+  widthValue,
+  heightValue,
 }) => {
   return (
     <img
-      src="../assets/flower-left-blue.svg"
-      alt="Blue Flower - Ada Promis"
+      src={src}
+      alt={alt}
       aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-0 w-[${width}] max-w-[140px]`}
+      className={`absolute ${top || ""} ${right || ""} ${left || ""} ${
+        bottom || ""
+      } ${mobileTop || ""} ${mobileRight || ""} ${mobileLeft || ""} ${
+        mobileBottom || ""
+      } ${zIndex} w-[${width}] ${maxWidth}`}
+      width={widthValue}
+      height={heightValue}
     />
   )
 }
 
-export const StarPink: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../../../../assets/star-right-pink.svg"
-      alt="Pink Star - Ada Promis"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-0 w-[${width}] max-w-[140px]`}
-    />
-  )
-}
+export const FlowerBlue: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="../assets/flower-left-blue.svg"
+    alt="Blue Flower - Ada Promis"
+    {...props}
+    maxWidth="max-w-[140px]"
+    zIndex="z-0"
+  />
+)
 
-export const FlowerWhite: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/flower-right-white.svg"
-      alt="White Flower - Ada Promis"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const StarPink: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/star-right-pink.svg"
+    alt="Pink Star - Ada Promis"
+    {...props}
+    maxWidth="max-w-[140px]"
+    zIndex="z-0"
+  />
+)
 
-export const PuzzleBlue: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/puzzle-blue.svg"
-      alt="Puzzle blue"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const FlowerWhite: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/flower-right-white.svg"
+    alt="White Flower - Ada Promis"
+    {...props}
+  />
+)
 
-export const PuzzlePink: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/puzzle-pink.svg"
-      alt="Puzzle pink"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const PuzzleBlue: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/puzzle-blue.svg" alt="Puzzle blue" {...props} />
+)
 
-export const TwoBlueFlowers: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/two-flowers.svg"
-      alt="Two Flowers - Ada Promis"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20 opacity-0 lg:opacity-100`}
-      width={230}
-      height={300}
-    />
-  )
-}
+export const SmallPuzzlePink: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/small-puzzle.svg" alt="Puzzle pink" {...props} />
+)
 
-export const FlowerBlue2: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-bottom.svg"
-      alt="Blue Flower - Ada Promis"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
+export const PuzzlePink: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/puzzle-pink.svg" alt="Puzzle pink" {...props} />
+)
 
-export const FlowerBlue3: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt="Blue Flower - Ada Promis"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
+export const TwoBlueFlowers: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/two-flowers.svg"
+    alt="Two Flowers - Ada Promis"
+    {...props}
+    zIndex="z-20 opacity-0 lg:opacity-100"
+    widthValue={230}
+    heightValue={300}
+  />
+)
 
-export const FlowerBlue4: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
-export const FlowerBlue5: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
-export const FlowerBlue6: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
-export const FlowerBlue7: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
+export const FlowerBlue2: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/flower-bottom.svg"
+    alt="Blue Flower - Ada Promis"
+    {...props}
+    zIndex="z-20"
+    widthValue={150}
+    heightValue={150}
+  />
+)
 
-export const FlowerBlue8: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
+export const FlowerBlue3: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/flower-blue.svg"
+    alt="Blue Flower - Ada Promis"
+    {...props}
+    zIndex="z-20"
+    widthValue={150}
+    heightValue={150}
+  />
+)
 
-export const FlowerBlue9: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
+const FlowerBlueTemplate: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/flower-blue.svg"
+    alt=""
+    {...props}
+    zIndex="z-20"
+    widthValue={150}
+    heightValue={150}
+  />
+)
 
-export const FlowerBlue10: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
+export const FlowerBlue4 = FlowerBlueTemplate
+export const FlowerBlue5 = FlowerBlueTemplate
+export const FlowerBlue6 = FlowerBlueTemplate
+export const FlowerBlue7 = FlowerBlueTemplate
+export const FlowerBlue8 = FlowerBlueTemplate
+export const FlowerBlue9 = FlowerBlueTemplate
+export const FlowerBlue10 = FlowerBlueTemplate
+export const FlowerBlue11 = FlowerBlueTemplate
 
-export const FlowerBlue11: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/flower-blue.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20`}
-      width={150}
-      height={150}
-    />
-  )
-}
+export const TwoBlueFlowers2: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/two-flowers.svg"
+    alt="Two Flowers - Ada Promis"
+    {...props}
+    zIndex="z-20 opacity-0 lg:opacity-100"
+    widthValue={230}
+    heightValue={300}
+  />
+)
 
-export const TwoBlueFlowers2: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-}) => {
-  return (
-    <img
-      src="../assets/two-flowers.svg"
-      alt="Two Flowers - Ada Promis"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-20 opacity-0 lg:opacity-100`}
-      width={230}
-      height={300}
-    />
-  )
-}
+export const FlowerWhite2: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/flower-right-white.svg"
+    alt="White Flower - Ada Promis"
+    {...props}
+  />
+)
 
-export const FlowerWhite2: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/flower-right-white.svg"
-      alt="White Flower - Ada Promis"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const FlowerWhite3: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/flower-right-white.svg"
+    alt="White Flower - Ada Promis"
+    {...props}
+  />
+)
 
-export const FlowerWhite3: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/flower-right-white.svg"
-      alt="White Flower - Ada Promis"
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+const WavesTemplate: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/waves1.svg" alt="" {...props} />
+)
 
-export const Waves1: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/waves1.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Waves1 = WavesTemplate
+export const Waves2 = WavesTemplate
+export const Waves3 = WavesTemplate
+export const Waves4 = WavesTemplate
+export const Waves5 = WavesTemplate
 
-export const Waves2: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/waves2.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+const SunTemplate: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/sun.svg" alt="" {...props} />
+)
 
-export const Waves3: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/waves3.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Sun1 = SunTemplate
+export const Sun2 = SunTemplate
+export const Sun3 = SunTemplate
+export const Sun4 = SunTemplate
+export const Sun5 = SunTemplate
 
-export const Waves4: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/waves4.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Sun6: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/sun2.svg" alt="" {...props} zIndex="-z-20" />
+)
 
-export const Waves5: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/waves5.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Sun7: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/sun2.svg" alt="" {...props} />
+)
 
-export const Waves6: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sun.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Flaming: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/flaming.svg" alt="" {...props} />
+)
 
-export const Sun1: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sun.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Flaps: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/flaps.svg" alt="" {...props} />
+)
 
-export const Sun2: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sun.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
-export const Sun3: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sun.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
-export const Sun4: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sun.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
-export const Sun5: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sun.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Flaps2: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/flaps.svg" alt="" {...props} />
+)
 
-export const Sun6: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sun2.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} -z-20 w-[${width}] `}
-    />
-  )
-}
+export const Sunglasses: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/sunglasses.svg" alt="" {...props} />
+)
 
-export const Sun7: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sun2.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} w-[${width}] `}
-    />
-  )
-}
+export const Sunglasses2: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/sunglasses.svg" alt="" {...props} />
+)
 
-export const Flaming: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/flaming.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Ball1: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/ball1.svg" alt="" {...props} />
+)
 
-export const Flaps: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/flaps.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Ball2: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/ball2.svg" alt="" {...props} />
+)
 
-export const Flaps2: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/flaps.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Ball3: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/ball2.svg" alt="" {...props} />
+)
 
-export const Sunglasses: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sunglasses.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Drinks: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/drinks.svg" alt="" {...props} />
+)
 
-export const Sunglasses2: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/sunglasses.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const Arrow: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/arrowWebinar.svg" alt="" {...props} />
+)
 
-export const Ball1: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/ball1.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
-
-export const Ball2: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/ball2.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
-
-export const Ball3: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/ball2.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
-
-export const Drinks: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/drinks.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
-
-export const Arrow: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/arrowWebinar.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
-
-export const ArrowMasterclass: React.FC<Props> = ({
-  top,
-  right,
-  left,
-  bottom,
-  mobileTop,
-  mobileRight,
-  mobileLeft,
-  mobileBottom,
-  rotate = "0deg",
-  width = "40px",
-}) => {
-  return (
-    <img
-      src="../assets/arrowMasterclass.svg"
-      alt=""
-      aria-hidden
-      className={`absolute ${top && top} ${right && right} ${left && left} ${
-        bottom && bottom
-      } ${mobileTop && mobileTop} ${mobileRight && mobileRight} ${
-        mobileLeft && mobileLeft
-      } ${mobileBottom && mobileBottom} z-40 w-[${width}] `}
-    />
-  )
-}
+export const ArrowMasterclass: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/arrowMasterclass.svg" alt="" {...props} />
+)
