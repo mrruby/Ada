@@ -1,5 +1,5 @@
 import PuzzleForm from "components/PuzzleForm"
-import { StaticImage } from "gatsby-plugin-image"
+import PuzzleOpinions from "components/PuzzleOpinions"
 import React from "react"
 
 const PuzzleEnd = (): JSX.Element => {
@@ -13,32 +13,7 @@ const PuzzleEnd = (): JSX.Element => {
       <h2 className="text-adaSubtitleThird max-w-3xl font-bold text-ada-blue mb-6">
         Nie mogę się doczekać Twoich efektów!
       </h2>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-        <StaticImage
-          src="../../images/puzzle-opinion-1.webp"
-          alt="Ada Promis - opinion 1"
-          placeholder="blurred"
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-          className="w-full md:w-1/3"
-        />
-        <StaticImage
-          src="../../images/puzzle-opinion-2.webp"
-          alt="Ada Promis - opinion 2"
-          placeholder="blurred"
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-          className="w-full md:w-1/3"
-        />
-        <StaticImage
-          src="../../images/puzzle-opinion-3.webp"
-          alt="Ada Promis - opinion 3"
-          placeholder="blurred"
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-          className="w-full md:w-1/3"
-        />
-      </div>
+      <PuzzleOpinions />
     </div>
   )
 }

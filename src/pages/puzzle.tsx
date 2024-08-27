@@ -12,6 +12,7 @@ import PuzzleAttention from "components/PuzzleAttention"
 import PuzzleGood from "components/PuzzleGood"
 import PuzzleDream from "components/PuzzleDream"
 import PuzzlePerfect from "components/PuzzlePerfect"
+import PuzzleSame from "components/PuzzleSame"
 
 const PuzzlePage = (): JSX.Element => {
   return (
@@ -53,24 +54,29 @@ const PuzzlePage = (): JSX.Element => {
         <PuzzleAttention />
         <PuzzleGood />
       </MaxWithBgColorContainer>
+
+      <div className="h-[200px] bg-wave2 absolute top-[4900px] w-screen z-50 hidden lg:block" />
+      <MaxWithBgColorContainer bgColor="bg-linear3">
+        <PuzzleSame />
+      </MaxWithBgColorContainer>
       <StaticImageComponent
         name="ada_table.webp"
-        alt="Ada Promis - puzzle couch"
+        alt="Ada Promis - puzzle table"
         width={250}
-        top="top-[4655px]"
+        top="top-[6014px]"
         right="right-0"
       />
       <MaxWithBgColorContainer bgColor="bg-ada-pink2">
         <PuzzlePerfect />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave2 absolute top-[6350px] w-screen z-50 hidden lg:block" />
       <StaticImageComponent
         name="ada_couch.webp"
         alt="Ada Promis - puzzle couch"
         width={500}
-        top="top-[5220px]"
+        top="top-[6560px]"
         left="left-0"
       />
+      <div className="h-[200px] bg-wave2 absolute top-[7700px] w-screen z-50 hidden lg:block" />
       <MaxWithBgColorContainer>
         <PuzzleDream />
         <PuzzleEnd />
