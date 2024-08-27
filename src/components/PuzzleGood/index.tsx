@@ -4,7 +4,7 @@ const PuzzleGood: React.FC = () => {
   const paragraphClasses = "text-ada-blue text-lg mb-4"
 
   return (
-    <div className="mt-20 mb-10 flex flex-col max-w-xl lg:max-w-3xl items-start px-4 md:ml-auto xl:mr-20 xl:mr-60">
+    <div className="mt-20 mb-10 flex flex-col max-w-xl lg:max-w-3xl items-start px-4 mx-auto lg:pl-60 2xl:pl-0 xl:mr-20 xl:mr-60">
       <div className="w-full">
         <p className={paragraphClasses}>
           Jeśli to brzmi jak Ty, prawdopodobnie robisz wszystko „dobrze”. Jednak
