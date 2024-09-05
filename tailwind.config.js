@@ -10,7 +10,10 @@ module.exports = {
           "light-pink": "#EEDCF6",
           "dark-pink": "#ABA3AF",
           yellow: "#FFB800",
+          yellow2: "#FCD444",
           orange: "#F3661F",
+          orange2: "#FEC884",
+          orange3: "#FFBEA3",
           purple: "#A361B4",
           pink: "#F2A7B2",
           pink2: "#FFD3EB",
@@ -19,6 +22,8 @@ module.exports = {
           pink5: "#FEB0DB",
           white: "#FFFFFF",
           white40: "#FFFFFF66",
+          brown: "#9B3118",
+          black: "#000000",
         },
       },
       backgroundImage: {
@@ -29,6 +34,7 @@ module.exports = {
         linear5: "linear-gradient(180deg, #F4DCE8 0%, #FFF 50%, #F4DCE8 100%);",
         linear6:
           "linear-gradient(180deg,  #EEDCF6 0%, #FFF 50%, #EEDCF6 100%);",
+        linear7: "linear-gradient(0deg, #FFBEA3 0%, #FFFFFF 100%)",
       },
       backgroundPosition: {
         bgPosition: "0px 310px",
@@ -44,7 +50,7 @@ module.exports = {
         adaDesc: "1.125rem",
         adaBase: "1.25rem",
         adaSubtitle: "1.5rem",
-        adaSubtitleSecondary: "2.0625rem",
+        adaSubtitleSecondary: "2rem",
         adaSubtitleThird: "2.5rem",
         adaTitle: "3rem",
         adaTitle2: "3.75rem",

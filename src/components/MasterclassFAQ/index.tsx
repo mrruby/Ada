@@ -236,6 +236,88 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     },
   ]
 
+  const autumnList: ListItem[] = [
+    {
+      question: "Pewnie teraz zastanawiasz się...",
+      answer: (
+        <>
+          Według raportu Digital 2023: Poland przeciętny użytkownik Internetu spędza w nim 6 godzin i 42 minuty dziennie, w tym 2 godziny w mediach społecznościowych. Pewnie Tobie też raz na jakiś czas zdarza się zapomnieć i spędzić kilka godzin z telefonem w ręce? ;) W czasie programu spotykamy się na 2,5 godziny raz na 2 tygodnie. To prawie 19 razy mniej niż czas, który spędzasz w sieci. Przyznaj: czas na wspólnej pracy nad reklamami to dużo lepiej wykorzystany czas niż scrollowanie Instagrama?
+        </>
+      ),
+    },
+    {
+      question: "Kiedy odbywają się spotkania?",
+      answer: (
+        <>
+          Co 2 czwartek o 10:00 odbywają się spotkania na ustawianie kampanii, na których wspólnie przechodzimy przez wszystkie ustawienia kampanii.
+          Spotykamy się w każdy wtorek o 10:30 na office hour, na których omawiamy bieżące pytania i aktualne kampanie.
+          <br/>
+          W zależności od pakietu masz do dyspozycji konsultacje indywidualne - termin ustalimy wspólnie.
+        </>
+      ),
+    },
+    {
+      question: "Czy wiem wystarczająco dużo o reklamach, aby wziąć udział w mentoringu?",
+      answer: (
+        <>
+         Poziom wiedzy i doświadczenia uczestniczek jest różny i to jest dodatkowa wartość naszych spotkań! Dzięki temu uczestniczki mają swobodę dzielenia się wiedzą i zdobywania nowych umiejętności. Nie ukrywam, że program jest skierowany do osób, które mają już doświadczenie w ustawianiu reklam. Wystarczy, że wiesz, gdzie kliknąć, aby stworzyć kampanię i wiesz, gdzie szukać ustawień grupy docelowej. Jeśli możesz o sobie powiedzieć: „coś już wyklikałam w managerze reklam”, dołącz!
+        </>
+      ),
+    },
+    {
+      question: "Co jeśli nie będę mogła pojawić się na którymś spotkaniu?",
+      answer: (
+        <>
+        Spotkania, na których ustawiamy kampanie reklamowe, będą nagrywane i udostępnione tylko dla osób uczestniczących w programie. Jeśli nie dotrzesz na któreś spotkanie, będziesz mogła nadrobić materiał. Z   zadaniem pytań nie musisz czekać do kolejnego spotkania — będziesz mogła zadać je na dedykowanej grupie na Facebooku, gdzie będziemy w stałym kontakcie!       
+        </>
+      ),
+    },
+    {
+      question: "Jaki budżet muszę przygotować na reklamy?",
+      answer: (
+        <>
+         Dobre pytanie! Oczywiście, aby prowadzić kampanie reklamowe, musimy wpłacić pieniądze na konto reklamowe. Wysokość budżetu zaczyna się od kilkuset złotych miesięcznie… ale na szczęście nie wszystko zależy od budżetu! Twoje możliwości finansowe przedyskutujemy na wirtualnej kawce. Możesz się na nią umówić <a href="https://koalendar.com/e/ogarnij-swoje-adsy"  target="_blank" className="underline">tutaj.</a>
+        </>
+      ),
+    },
+    {
+      question: "Dla kogo jest program mentoringowy „Ogarnij swoje adsy”?",
+      answer: (
+        <>
+        Program to przestrzeń dla przedsiębiorczyń i solopreneurek. Dlatego to nie tylko szansa na omówienie kampanii, ale również wspólne rozwiązywanie problemów, które spotykamy, prowadząc własne biznesy.
+        </>
+      ),
+    },
+    {
+      question: "Czy na pewno będzie czas dla mnie?",
+      answer: (
+      <>
+        Tak, na każdym office hour możesz wskoczyć na „gorące krzesełko” i przedstawić swój problem, zadać pytania.  
+        <br/>
+        ❌ To NIE są spotkania, na których jedna osoba mówi, a druga słucha.
+        <br/>
+        ✅ To są spotkania, na których każdy może zabrać głos i znaleźć przestrzeń dla siebie.      
+      </>
+      ),
+    },
+    {
+      question: "Nie umiem w techniczne rzeczy, czy dam sobie radę?",
+      answer: (
+      <>
+      Oczywiście! Jeśli wolisz wsparcie 1:1, wybierz pakiet z konsultacjami, na których pokażemy Ci jak poukładać menedżer reklam, piksel i ustawimy zabezpieczenia. Przekonasz się, że techniczne tematy nie są takie straszne, jak się wydają.
+      </>
+      ),
+    },
+    {
+      question: "Dlaczego warto uczyć się prowadzić kampanie reklamowe samodzielnie?",
+      answer: (
+      <>
+      Nie oszukujmy się — zlecenie kampanii specjalistom jest super, ale nie każdy ma taki budżet. Zlecenie reklam kosztuje od 1500 zł netto wzwyż, a do tego jeszcze budżet reklamowy. Na szczęście z odpowiednim wsparciem na start możesz prowadzić kampanie reklamowe samodzielnie! A jeśli któregoś dnia zdecydujesz, że chcesz zlecić reklamy, będziesz miała wiedzę, aby wybrać najlepszych specjalistów.
+      </>
+      ),
+    },
+  ]
+
   const renderList = (list: ListItem[]) => {
     return list.map((item, index) => (
       <Accordion key={index} question={item.question} answer={item.answer} />
@@ -364,6 +446,20 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             textSize="md:text-adaSubtitleSecondary"
             btnStyle="md:w-[500px] bg-ada-light-pink mb-10 lg:mb-[120px] md:leading-[36px] md:h-[120px]"
           />
+        </>
+      )}
+      {version === 4 && (
+      <>
+          <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center text-ada-black">
+            <div className="pt-[60px] lg:pt-[76px]">
+              <h2 className="text-[20px] lg:text-adaTitle font-bold lg:mb-2 animate-bounce text-center mx-auto">
+                FAQ
+              </h2>
+                <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
+                  {renderList(autumnList)}
+                </ul>
+                 </div>
+          </div>
         </>
       )}
     </div>

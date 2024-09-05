@@ -55,7 +55,7 @@ const AboutBanner2 = (): JSX.Element => {
         </div>
       </div>
       <div className="pt-10">
-        <Team />
+        <Team version={1}/>
       </div>
     </div>
   )
