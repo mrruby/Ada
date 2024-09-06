@@ -250,15 +250,15 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
             </ul>
           </div>
         </div>
-      <div className="w-full flex flex-col px-3 py-2 pb-10 text-ada-black">
-      <div className="max-w-[1124px] mx-auto mt-14">
-        <div className="flex flex-col md:flex-row">
+      <div className="w-full flex flex-col px-3 py-2 text-ada-black">
+      <div className="mx-auto mt-14">
+        <div className="flex flex-col md:flex-row justify-between w-full">
         <StaticImage
                 loading="eager"
                 src={"../../images/ada-a.webp"}
                 alt="Ada Promis"
-                width={557}
-                height={837}
+                width={814}
+                height={814}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -275,12 +275,24 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
         </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row">
-          <div>
-          <h2 className="text-[20px] lg:text-adaTitle font-bold  animate-bounce">
+        <div className="flex flex-col md:flex-row justify-between w-full">
+          <div className="max-w-[163px]">
+          <StaticImage
+                loading="eager"
+                src={"../../images/coffee.svg"}
+                alt="Ada Promis"
+                width={163}
+                height={199}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+                class="lg:ml-[-100px]"
+              />
+          </div>
+        <div className="max-w-[750px] lg:ml-[-300px]">
+        <h2 className="text-[20px] lg:text-adaTitle font-bold  animate-bounce">
           Dlatego...
         </h2>
-        <p className="lg:text-adaBase pt-[24px] font-medium leading-tight pb-4">
+        <p className="lg:text-adaBase pt-[24px] font-medium leading-tight pb-10">
           przygotowałam dla Ciebie program mentoringowy{" "}
           <span className="font-bold">„Ogarnij swoje adsy!”</span> w którym nauczysz się tworzyć od podstaw skuteczne kampanie reklamowe i osiągać rezultaty, o jakich dotąd tylko marzyłaś!
         </p>
@@ -300,10 +312,11 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                 loading="eager"
                 src={"../../images/ada-a2.webp"}
                 alt="Ada Promis"
-                width={557}
-                height={837}
+                width={430}
+                height={578}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
+                class="lg:mr-[-200px]"
               />
         </div>
       </div>

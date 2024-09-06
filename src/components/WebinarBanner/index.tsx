@@ -183,7 +183,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 5 && (
         <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
-          <div className="flex justify-between xl:max-w-[1350px] mx-auto">
+          <div className="flex flex-col md:flex-row justify-between xl:max-w-[1350px] mx-auto">
             <div className="flex flex-col justify-center max-w-[900px] gap-4 md:mt-8 xl:-mt-60 mb-3 text-ada-black">
               <h2 className="uppercase text-adaSubtitle md:text-adaTitle3 text-ada-yellow2 font-extrabold">              
                 <span className="text-ada-orange">Ogarnij </span>
@@ -216,14 +216,14 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
               />
             </div>
-            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[170px]">
+            <div className="mr-[-10vw] xl:mr-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px]">
               <StaticImage
                 loading="eager"
-                src={"../../images/ada-a2.webp"}
+                src={"../../images/autumn.webp"}
                 alt="Ada Promis - hero"
                 placeholder="blurred"
-                width={754}
-                height={782}
+                width={801}
+                height={856}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -261,7 +261,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
               />
             </div>
-            <div className="mr-[-10vw] xl:mr-[-300px] md:mt-[-300px] lg:max-w-none md:max-w-[500px] max-w-[170px]">
+            <div className="mr-[-10vw] xl:mr-[-300px] md:mt-[-300px] lg:max-w-none md:max-w-[500px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/ada-autumn.webp"}
