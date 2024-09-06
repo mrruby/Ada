@@ -161,6 +161,29 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           </p>
         </div>
       )}
+      {version === 4 && (
+        <div className="flex flex-col items-center max-w-[806px] gap-4 text-ada-black">
+          <TypingAnimation
+            text="Cześć!"
+            textStyle="text-adaSubtitle uppercase md:text-[80px] font-extrabold animate-bounce text-ada-orange md:leading-[0px]"
+          />
+          <h3 className="text-adaMin md:text-adaSubtitleSecondary pt-8 font-bold md:leading-[0px] pb-6">
+            Nazywam się Adrianna Promis-Urbas
+          </h3>
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
+          Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z zamiłowania — kreatywną duszą. Mam za sobą epizod pracy w audycie finansowym, ale <span className="font-bold">moim powołaniem chyba od zawsze był marketing!</span>
+          </p>
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
+          I tak od stażu w agencji marketingowej do swojej działalności: dziś pod szyldem GetBold! obsługuję klientów z Europy, w tym z Polski i na moim liczniku wybiło <span className="font-bold">już ponad 2 000 000 złotych budżetów reklamowych wydanych w ramach Meta Ads. </span>
+          </p>
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
+          Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny: praktykuję slow marketing, przemyślany, wartościowy, zbudowany na relacjach.
+          </p>
+          <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
+          <span className="font-bold">W programie „Ogarnij swoje adsy!”</span> skupimy się Twoim koncie reklamowym! Zdradzę Ci moje tipy i zaoszczędzę dobre kilka lat samodzielnego klikania w menedżerze reklam.
+          </p>
+        </div>
+      )}
     </div>
   )
 }

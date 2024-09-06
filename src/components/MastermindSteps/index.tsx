@@ -140,6 +140,81 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
     },
   ]
 
+  const featuresDataFirtstRow3 = [
+    {
+      number: "1",
+      text: (
+        <>
+         Start! 
+          <br />
+          <span className="font-medium">
+          Układamy swój lejek, analizujemy ścieżkę swojego biznesu.
+          </span>
+        </>
+      ),
+    },
+    {
+      number: "2",
+      text: (
+        <>
+          Grafiki & teksty:
+          <br />
+          <span className="font-medium">
+          jak je przygotować? Spotkanie z copywriterką i graficzką!
+          </span>
+        </>
+      ),
+    },
+    {
+      number: "3",
+      text: (
+        <>
+          Kampanie na obserwacje na IG/FB:
+          <br />
+          <span className="font-medium">
+          jak pozyskiwać wartościowych odbiorców?         
+          </span>
+        </>
+      ),
+    },
+  ]
+
+  const featuresDataSecondRow3 = [
+    {
+      number: "4",
+      text: (
+        <>
+          Lead magnet i newsletter:
+          <br />
+          <span className="font-medium">jak stworzyć kampanie reklamowe na zapis do newslettera?</span>
+        </>
+      ),
+    },
+    {
+      number: "5",
+      text: (
+        <>
+         Strona www:
+          <br />
+          <span className="font-medium">
+          kampanie reklamowe na Twoją stronę internetową
+          </span>
+        </>
+      ),
+    },
+    {
+      number: "6",
+      text: (
+        <>
+          Remarketing: <br />
+          <span className="font-medium">
+          wszystko, co musisz wiedzieć o najskuteczniejszych kampaniach reklamowych
+          </span>
+        </>
+      ),
+    },
+  ]
+
   const bonusDataFirtRow = [
     {
       image: (
@@ -497,6 +572,183 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
     },
   ]
 
+  const bonusDataFirtRow3 = [
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/www2.svg"}
+            alt=""
+            placeholder="blurred"
+            width={127}
+            height={127}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          Szkolenie:<span className="font-bold"> “Hot Jar + strona”</span>
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 197 zł</span>
+        </>
+      ),
+    },
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"./../../images/canva2.svg"}
+            alt=""
+            placeholder="blurred"
+            width={112}
+            height={115}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">Poradnik: “Canva </span> <br /> tips & tricks”
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 97 zł</span>
+        </>
+      ),
+    },
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/ebookinsta.svg"}
+            alt=""
+            placeholder="blurred"
+            width={160}
+            height={113}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">Ebook: </span>{" "}
+          “Dobre praktyki na Instagramie”
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 97 zł</span>
+        </>
+      ),
+    },
+  ]
+
+  const bonusDataSecondRow3 = [
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/ebook2.svg"}
+            alt=""
+            placeholder="blurred"
+            width={109}
+            height={109}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">
+          E-book: 
+          </span>{" "}
+          „Slow Marketing a reklama na Facebooku i Instagramie” 
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 179 zł</span>
+        </>
+      ),
+    },
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/ebook2.svg"}
+            alt=""
+            placeholder="blurred"
+            width={109}
+            height={109}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">
+          E-book: 
+          </span>{" "}
+          “Jak tworzyć materiały reklamowe dla branży beauty?” 
+        </>
+      ),
+      text2: (
+        <>
+          o wartości
+          <span className="font-bold"> 397 zł</span>
+        </>
+      ),
+    },
+    {
+      image: (
+        <>
+          <StaticImage
+            loading="eager"
+            src={"../../images/help.svg"}
+            alt=""
+            placeholder="blurred"
+            width={100}
+            height={107}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </>
+      ),
+      text: (
+        <>
+          <span className="font-bold">
+          Pełna wsparcia i entuzjazmu społeczność przedsiębiorczych kobiet
+          </span>{" "}
+        </>
+      ),
+      text2: (
+        <>
+          wartość:
+          <span className="font-bold"> bezcenna!</span>
+        </>
+      ),
+    },
+  ]
+
   return (
     <>
       {version === 1 && (
@@ -607,6 +859,65 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             </div>
             <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[50px] flex-wrap">
               {bonusDataSecondRow.map((feature, index) => (
+                <BonusBox
+                  key={index}
+                  text={feature.text}
+                  text2={feature.text2}
+                  image={feature.image}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {version === 3 && (
+        <section className="text-center pt-10 pb-4" id="steps">
+          <h2 className="font-bold max-w-[740px] text-adaTitle lg:text-adaTitle2 text-ada-white bg-ada-orange uppercase mx-auto">
+            Nad czym będziemy
+            pracować?
+          </h2>
+          <div className="flex flex-col mx-auto items-center justify-center pb-10 text-ada-black">
+            <div className="flex flex-col lg:flex-row justify-center flex-wrap xl:flex-nowrap">
+              {featuresDataFirtstRow3.map((feature, index) => (
+                <FeatureBox
+                  key={index}
+                  text={feature.text}
+                  number={feature.number}
+                  styleText="font-bold max-w-[310px]"
+                  styleParagraph="pt-4"
+                  flowerColor="yellow"
+                />
+              ))}
+            </div>
+            <div className="flex flex-col lg:flex-row justify-center flex-wrap mt-10">
+              {featuresDataSecondRow3.map((feature, index) => (
+                <FeatureBox
+                  key={index}
+                  text={feature.text}
+                  number={feature.number}
+                  styleText="font-bold max-w-[320px]"
+                  flowerColor="yellow"
+                />
+              ))}
+            </div>
+          </div>
+          <div className="pt-10 py-16">
+            <div className="text-[64px]">🎁</div>
+            <div className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[710px] text-ada-black">
+            Czekają też na Ciebie bonusy, które dostarczą Ci dodatkowych narzędzi do osiągnięcia sukcesu w reklamie online:
+            </div>
+            <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[40px] flex-wrap text-ada-black">
+              {bonusDataFirtRow3.map((feature, index) => (
+                <BonusBox
+                  key={index}
+                  text={feature.text}
+                  text2={feature.text2}
+                  image={feature.image}
+                />
+              ))}
+            </div>
+            <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[40px] flex-wrap text-ada-black">
+              {bonusDataSecondRow3.map((feature, index) => (
                 <BonusBox
                   key={index}
                   text={feature.text}

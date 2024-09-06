@@ -12,50 +12,61 @@ import MastermindInfo1 from "components/MastermindInfo1"
 import MastermindInfo2 from "components/MastermindInfo2"
 import MastermindInfo3 from "components/MastermindInfo3"
 import MastermindAgenda from "components/MastermindAgenda"
-import MastermindPrice from "components/MastermindPrice"
-import MastermindFAQ from "components/MastermindFAQ"
+import Team from "components/Team"
+import MasterclassAgenda from "components/MasterclassAgenda"
 import Opinions from "components/Opinions"
-import ReferencesMentoring from "components/ReferencesMentoring"
-import MentoringForm from "components/MentoringForm"
+import MentoringBanner from "components/MentoringBanner"
+import IconText from "components/IconText"
+import WebinarBanner from "components/WebinarBanner"
+import MasterclassFAQ from "components/MasterclassFAQ"
+import WebinarAbout from "components/WebinarAbout"
 
 const MastermindPage = (): JSX.Element => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
-      <MastermindBanner version={1} />
-      <MaxWithBgColorContainer bgColor="bg-linear6">
-        <MastermindInfo1 />
+      <WebinarBanner version={5} />
+      <MaxWithBgColorContainer bgColor="bg-linear7">
+        <IconText version={3} />
       </MaxWithBgColorContainer>
-      <Opinions title2 />
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindWhy1 />
+      <MaxWithBgColorContainer>
+        <WebinarAbout version={4}/>
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindAgenda version={1} />
+      <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
+        <MentoringBanner version={8} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindSteps version={1} />
-        <MastermindWhy2 />
-        <ReferencesMentoring title1 />
+      <MaxWithBgColorContainer>
+        <Team version={2}/>
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindInfo2 />
-        <Questions />
+      <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
+        <MentoringBanner version={9} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <AboutBanner2 />
+      <MaxWithBgColorContainer>
+        <MasterclassAgenda version={8} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindInfo3 version={1} />
+      <MaxWithBgColorContainer>
+        <MastermindAgenda version={3} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindPrice version={1} />
+      <MaxWithBgColorContainer bgColor="bg-linear7">
+        <MastermindSteps version={3} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindFAQ />
+      <MaxWithBgColorContainer>
+        <MasterclassAgenda version={6} />
+        <MasterclassAgenda version={7} />
+        <MastermindInfo3 version={3}/>
       </MaxWithBgColorContainer>
-      <div className="mt-16 mb-10" id="zostaw-maila">
-        <MentoringForm version={2} />
-      </div>
+      <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
+        <MentoringBanner version={10} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <MasterclassAgenda version={5} />
+        <MasterclassAgenda version={9} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
+        <WebinarBanner version={6} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <MasterclassFAQ version={4} />
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }

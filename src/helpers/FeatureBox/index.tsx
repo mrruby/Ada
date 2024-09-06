@@ -7,7 +7,7 @@ interface Props {
   number?: string
   styleText?: string
   styleParagraph?: string
-  flowerColor?: "blue" | "white"
+  flowerColor?: "blue" | "white" | "yellow"
 }
 
 export const FeatureBox: React.FC<Props> = ({
@@ -19,10 +19,11 @@ export const FeatureBox: React.FC<Props> = ({
   flowerColor = "blue",
 }) => {
   const isBlueFlower = flowerColor === "blue"
+  const isYellowFlower = flowerColor === "yellow"
 
   return (
     <div className="flex flex-col items-center pt-[-30px] relative lg:min-w-[240px]">
-      {isBlueFlower ? (
+      {isBlueFlower || isYellowFlower ? (
         <p className="absolute text-adaDesc font-semibold top-[60px] z-10">
           {number}
         </p>
@@ -36,6 +37,16 @@ export const FeatureBox: React.FC<Props> = ({
           <StaticImage
             src={"../../images/flower-white-pink.svg"}
             alt="Blue Flower Ada Promis"
+            placeholder="blurred"
+            width={150}
+            height={150}
+          />
+        </div>
+      ) : isYellowFlower ? (
+        <div className="animate-spin-slow mb-[-10px]">
+          <StaticImage
+            src={"../../images/floweryellow.svg"}
+            alt="Yellow Flower Ada Promis"
             placeholder="blurred"
             width={150}
             height={150}
