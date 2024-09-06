@@ -249,3 +249,19 @@ export const Arrow: React.FC<Props> = (props) => (
 export const ArrowMasterclass: React.FC<Props> = (props) => (
   <ImageComponent src="/assets/arrowMasterclass.svg" alt="" {...props} />
 )
+
+export const Leaves1: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/leaves1.svg" alt="" {...props} />
+)
+export const Leaves2: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/leaves2.svg" alt="" {...props} />
+)
+export const Leaves3: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/leaves3.svg" alt="" {...props} />
+)
+export const Leaves4: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/leaves4.svg" alt="" {...props} />
+)
+export const Leaves5: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/leaves5.svg" alt="" {...props} />
+)

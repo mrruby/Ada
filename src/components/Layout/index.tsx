@@ -46,6 +46,21 @@ type LayoutElements = {
   drinks?: boolean
   arrow?: boolean
   arrowMasterclass?: boolean
+  leaves1?: boolean
+  leaves2?: boolean
+  leaves3?: boolean
+  leaves4?: boolean
+  leaves5?: boolean
+  leaves6?: boolean
+  leaves7?: boolean
+  leaves8?: boolean
+  leaves9?: boolean
+  leaves10?: boolean
+  leaves11?: boolean
+  leaves12?: boolean
+  leaves13?: boolean
+  leaves14?: boolean
+  leaves15?: boolean
 }
 
 type Props = {
@@ -92,6 +107,21 @@ const defaultProps: LayoutElements = {
   drinks: false,
   arrow: false,
   arrowMasterclass: false,
+  leaves1: false,
+  leaves2: false,
+  leaves3: false,
+  leaves4: false,
+  leaves5: false,
+  leaves6: false,
+  leaves7: false,
+  leaves8: false,
+  leaves9: false,
+  leaves10: false,
+  leaves11: false,
+  leaves12: false,
+  leaves13: false,
+  leaves14: false,
+  leaves15: false,
 }
 
 const Layout: React.FC<Props> = ({

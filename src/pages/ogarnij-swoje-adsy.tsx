@@ -16,7 +16,7 @@ import MastermindAgenda from "components/MastermindAgenda"
 
 const MastermindPage = (): JSX.Element => {
   return (
-    <Layout flowerWhite2={true} flowerWhite3={true}>
+    <Layout leaves1={true} leaves2={true} leaves3={true} leaves4={true} leaves5={true} leaves6={true} leaves7={true} leaves8={true} leaves9={true} leaves10={true} leaves11={true} leaves12={true} leaves13={true} leaves14={true} leaves15={true}>
       <WebinarBanner version={5} />
       <MaxWithBgColorContainer bgColor="bg-linear7">
         <IconText version={3} />
@@ -25,16 +25,16 @@ const MastermindPage = (): JSX.Element => {
         <WebinarAbout version={4} />
       </MaxWithBgColorContainer>
       <div className="h-[200px] bg-wave3 absolute top-[1600px] w-screen hidden lg:block" />
-      <div className="h-[200px] bg-wave3 absolute top-[3350px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[3350px] 2xl:top-[3500px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
         <MentoringBanner version={8} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave3 absolute top-[5050px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[5050px] 2xl:top-[5350px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer>
         <Team version={2} />
         <ReferencesMentoring title4 version="3" />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-leaves absolute top-[5950px] w-screen hidden lg:block" />
+      <div className="h-[270px] bg-leaves absolute top-[5500px] 2xl:top-[5750px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
         <MentoringBanner version={9} />
       </MaxWithBgColorContainer>
@@ -44,22 +44,23 @@ const MastermindPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <MastermindAgenda version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave3 absolute top-[8850px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[8850px] 2xl:top-[9180px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer bgColor="bg-linear7">
         <MastermindSteps version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave3 absolute top-[9750px] w-screen hidden lg:block" />
-      <div className="h-[200px] bg-wave3 absolute top-[10800px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[9750px] 2xl:top-[9990px]  w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[10800px] 2xl:top-[10900px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[11450px] 2xl:top-[11520px] w-screen hidden lg:block" />
+      <div className="h-[270px] bg-leaves absolute top-[12020px] 2xl:top-[12120px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer>
         <MasterclassAgenda version={6} />
         <MasterclassAgenda version={7} />
         <MastermindInfo3 version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-leaves absolute top-[11400px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
         <MentoringBanner version={10} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave3 absolute top-[13250px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[13280px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer>
         <MasterclassAgenda version={5} />
         <MasterclassAgenda version={9} />

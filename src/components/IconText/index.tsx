@@ -353,7 +353,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                   height={578}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
-                  class="lg:mr-[-200px]"
+                  class="lg:mr-[-200px] lg:mb-[-8px]"
                 />
               </div>
             </div>
