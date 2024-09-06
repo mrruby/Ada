@@ -70,41 +70,124 @@ const listItems8 = [
 ]
 
 const listItems9 = [
-  <p><span className="font-bold">podkręcisz wyniki swojego biznesu</span> i nauczysz się docierać do osób zainteresowanych ofertą, którą reklamujesz</p>,
-  <p><span className="font-bold">stworzysz bardziej zaawansowane kampanie reklamowe</span> i dowiesz się, jak je optymalizować, aby — a jakże! — zarabiać więcej</p>,
-  <p>wybierzesz najlepsze materiały do reklam<span className="font-bold"> — stworzysz chwytliwe grafiki i błyskotliwe teksty reklamowe</span></p>,
+  <p>
+    <span className="font-bold">podkręcisz wyniki swojego biznesu</span> i
+    nauczysz się docierać do osób zainteresowanych ofertą, którą reklamujesz
+  </p>,
+  <p>
+    <span className="font-bold">
+      stworzysz bardziej zaawansowane kampanie reklamowe
+    </span>{" "}
+    i dowiesz się, jak je optymalizować, aby — a jakże! — zarabiać więcej
+  </p>,
+  <p>
+    wybierzesz najlepsze materiały do reklam
+    <span className="font-bold">
+      {" "}
+      — stworzysz chwytliwe grafiki i błyskotliwe teksty reklamowe
+    </span>
+  </p>,
 ]
 
 const listItems10 = [
-  <p><span className="font-bold">zrozumiesz ścieżkę Twojego klienta</span> i dowiesz się, co zrobić, jeśli kampanie nie działają
-</p>,
-  <p>zderzysz swoje wątpliwości z osobami, które mają podobne problemy w zdobywaniu nowych klientów i przekonasz się, że <span className="font-bold">rozwiązanie jest bliżej niż myślisz </span>— wystarczy wiedzieć, gdzie go szukać!</p>,
+  <p>
+    <span className="font-bold">zrozumiesz ścieżkę Twojego klienta</span> i
+    dowiesz się, co zrobić, jeśli kampanie nie działają
+  </p>,
+  <p>
+    zderzysz swoje wątpliwości z osobami, które mają podobne problemy w
+    zdobywaniu nowych klientów i przekonasz się, że{" "}
+    <span className="font-bold">rozwiązanie jest bliżej niż myślisz </span>—
+    wystarczy wiedzieć, gdzie go szukać!
+  </p>,
 ]
 
 const plusListItems1 = [
-  <p><span className="font-bold">Twoje cele w kampaniach reklamowych to:</span> pozyskanie obserwujących, zbudowanie listy newsletterowej, sprzedaż produktów i usług</p>,
-  <p>zależy Ci na <span className="font-bold">osiąganiu lepszych wyników</span> dzięki kampaniom reklamowym</p>,
-  <p>chcesz <span className="font-bold">rozwijać swoją wiedzę, umiejętności i biznes</span></p>,
-  <p><span className="font-bold">skuteczny marketing to patrzenie na liczby + kreatywna głowa</span> i chcesz działać w ten sposób</p>,
+  <p>
+    <span className="font-bold">Twoje cele w kampaniach reklamowych to:</span>{" "}
+    pozyskanie obserwujących, zbudowanie listy newsletterowej, sprzedaż
+    produktów i usług
+  </p>,
+  <p>
+    zależy Ci na <span className="font-bold">osiąganiu lepszych wyników</span>{" "}
+    dzięki kampaniom reklamowym
+  </p>,
+  <p>
+    chcesz{" "}
+    <span className="font-bold">
+      rozwijać swoją wiedzę, umiejętności i biznes
+    </span>
+  </p>,
+  <p>
+    <span className="font-bold">
+      skuteczny marketing to patrzenie na liczby + kreatywna głowa
+    </span>{" "}
+    i chcesz działać w ten sposób
+  </p>,
 ]
 
 const plusListItems2 = [
-  <p><span className="font-bold">możesz regularnie przeznaczyć czas na kampanie</span> — zdajesz sobie sprawę, że tutaj nie wystarczy zerknięcie z doskoku</p>,
-  <p><span className="font-bold">znasz podstawową obsługę Managera reklam</span> — nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza, gdzie kliknąć, aby ustawić kampanię i stworzyć zestaw reklam to must have</p>,
-  <p><span className="font-bold">jesteś gotowa na pracę, testowanie, analizę, modyfikacje, świętowanie</span> (tak, na to też przyjdzie czas, gdy zobaczysz rosnące wyniki)</p>,
-  <p><span className="font-bold">nie chcesz lub nie masz budżetu,</span> aby zlecić kampanie reklamowe agencji lub freelancerowi</p>,
+  <p>
+    <span className="font-bold">
+      możesz regularnie przeznaczyć czas na kampanie
+    </span>{" "}
+    — zdajesz sobie sprawę, że tutaj nie wystarczy zerknięcie z doskoku
+  </p>,
+  <p>
+    <span className="font-bold">znasz podstawową obsługę Managera reklam</span>{" "}
+    — nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza, gdzie
+    kliknąć, aby ustawić kampanię i stworzyć zestaw reklam to must have
+  </p>,
+  <p>
+    <span className="font-bold">
+      jesteś gotowa na pracę, testowanie, analizę, modyfikacje, świętowanie
+    </span>{" "}
+    (tak, na to też przyjdzie czas, gdy zobaczysz rosnące wyniki)
+  </p>,
+  <p>
+    <span className="font-bold">nie chcesz lub nie masz budżetu,</span> aby
+    zlecić kampanie reklamowe agencji lub freelancerowi
+  </p>,
 ]
 
 const minusListItems1 = [
-  <p>masz nadzieję, że<span className="font-bold"> wyniki zrobią się „same” </span>w menadżerze reklam</p>,
-  <p><span className="font-bold">nie masz czasu</span> na regularną pracę nad kampaniami, przygotowywanie materiałów i optymalizację</p>,
-  <p><span className="font-bold">myślisz, że 100 zł wrzucone do Managera Reklam wystarczy</span> Niestety, to za mało — minimalny budżet, przy którym zbudujesz lejek i Twoje możliwości finansowe omówimy na wirtualnej kawce</p>,
+  <p>
+    masz nadzieję, że
+    <span className="font-bold"> wyniki zrobią się „same” </span>w menadżerze
+    reklam
+  </p>,
+  <p>
+    <span className="font-bold">nie masz czasu</span> na regularną pracę nad
+    kampaniami, przygotowywanie materiałów i optymalizację
+  </p>,
+  <p>
+    <span className="font-bold">
+      myślisz, że 100 zł wrzucone do Managera Reklam wystarczy
+    </span>{" "}
+    Niestety, to za mało — minimalny budżet, przy którym zbudujesz lejek i Twoje
+    możliwości finansowe omówimy na wirtualnej kawce
+  </p>,
 ]
 
 const minusListItems2 = [
-  <p>wiesz, że<span className="font-bold"> Ty wszystko zrobisz najlepiej</span> j i nie interesują Cię inne perspektywy</p>,
-  <p><span className="font-bold">nigdy nie widziałaś na oczy menadżera reklam,</span> albo słyszysz o nim pierwszy raz - w takim wypadku proponuję, abyś najbliższe miesiące spędziła na przeklikaniu się przez system i dołączyła do kolejnej edycji</p>,
-  <p>jesteś super wymiataczką <span className="font-bold">— tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz. Brawo!</span></p>,
+  <p>
+    wiesz, że<span className="font-bold"> Ty wszystko zrobisz najlepiej</span> j
+    i nie interesują Cię inne perspektywy
+  </p>,
+  <p>
+    <span className="font-bold">
+      nigdy nie widziałaś na oczy menadżera reklam,
+    </span>{" "}
+    albo słyszysz o nim pierwszy raz - w takim wypadku proponuję, abyś
+    najbliższe miesiące spędziła na przeklikaniu się przez system i dołączyła do
+    kolejnej edycji
+  </p>,
+  <p>
+    jesteś super wymiataczką{" "}
+    <span className="font-bold">
+      — tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz. Brawo!
+    </span>
+  </p>,
 ]
 
 const plusBasicList = [
@@ -144,7 +227,7 @@ const pakietStandardList = [
   "E-book „Jak tworzyć materiały reklamowe dla branży beauty?”",
   "E-book „Slow Marketing a reklama na Facebooku i Instagramie”",
   "Społeczność",
-  "Certyfikat"
+  "Certyfikat",
 ]
 
 const minusBasicList = [
@@ -466,9 +549,7 @@ const MasterclassAgenda = ({
                   key={index}
                   className="flex flex-row items-start max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc"
                 >
-                  <div className="mr-2">
-                  ✅
-                  </div>
+                  <div className="mr-2">✅</div>
                   {item}
                 </li>
               ))}
@@ -479,26 +560,23 @@ const MasterclassAgenda = ({
                   key={index}
                   className="flex flex-row items-start max-w-[680px] xl:min-w-[480px] text-adaMin md:text-adaDesc"
                 >
-                  <div className="mr-2">
-                  ✅
-                  </div>
+                  <div className="mr-2">✅</div>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
           <h2 className="text-adaStandard lg:text-adaSubtitleSecondary pb-10 font-bold uppercase text-center">
-          ...abyś lepiej niż kiedykolwiek zadbała o swój biznes i przepływ klientów!
+            ...abyś lepiej niż kiedykolwiek zadbała o swój biznes i przepływ
+            klientów!
           </h2>
         </div>
       )}
       {version === 6 && (
-        <div
-          className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black"
-        >
-        <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
-              Program jest dla Ciebie, jeśli…
-            </h2>
+        <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
+          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
+            Program jest dla Ciebie, jeśli…
+          </h2>
           <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
             <ul className="flex flex-wrap gap-[10px] mx-auto mb-10">
               {plusListItems1.map((item, index) => (
@@ -526,7 +604,7 @@ const MasterclassAgenda = ({
                   key={index}
                   className="flex flex-row items-start max-w-[640px] xl:min-w-[400px] text-adaMin md:text-adaDesc"
                 >
-                <div className="mr-5">
+                  <div className="mr-5">
                     <StaticImage
                       src={"../../images/plus.svg"}
                       alt="Ada Promis"
@@ -544,12 +622,10 @@ const MasterclassAgenda = ({
         </div>
       )}
       {version === 7 && (
-        <div
-          className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black"
-        >
-        <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
-        NIE jest dla Ciebie, jeśli…
-            </h2>
+        <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
+          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
+            NIE jest dla Ciebie, jeśli…
+          </h2>
           <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
             <ul className="flex flex-wrap gap-[10px] mx-auto mb-10">
               {minusListItems1.map((item, index) => (
@@ -557,7 +633,7 @@ const MasterclassAgenda = ({
                   key={index}
                   className="flex flex-row items-start max-w-[640px] xl:min-w-[400px] text-adaMin md:text-adaDesc"
                 >
-              <div className="mr-3">
+                  <div className="mr-3">
                     <StaticImage
                       src={"../../images/minus.svg"}
                       alt="Ada Promis"
@@ -577,7 +653,7 @@ const MasterclassAgenda = ({
                   key={index}
                   className="flex flex-row items-start max-w-[640px] xl:min-w-[400px] text-adaMin md:text-adaDesc"
                 >
-               <div className="mr-3">
+                  <div className="mr-3">
                     <StaticImage
                       src={"../../images/minus.svg"}
                       alt="Ada Promis"
@@ -595,9 +671,7 @@ const MasterclassAgenda = ({
         </div>
       )}
       {version === 8 && (
-        <div
-          className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black"
-        > 
+        <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
           <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
             <ul className="flex flex-wrap gap-[10px] mx-auto mb-10">
               {listItems9.map((item, index) => (
@@ -605,8 +679,8 @@ const MasterclassAgenda = ({
                   key={index}
                   className="flex flex-row items-start max-w-[760px] xl:min-w-[400px] text-adaMin md:text-adaDesc"
                 >
-              <div className="mr-3">
-              <StaticImage
+                  <div className="mr-3">
+                    <StaticImage
                       src={"../../images/check2.svg"}
                       alt="Ada Promis"
                       placeholder="blurred"
@@ -625,8 +699,8 @@ const MasterclassAgenda = ({
                   key={index}
                   className="flex flex-row items-start max-w-[760px] xl:min-w-[400px] text-adaMin md:text-adaDesc"
                 >
-               <div className="mr-3">
-               <StaticImage
+                  <div className="mr-3">
+                    <StaticImage
                       src={"../../images/check2.svg"}
                       alt="Ada Promis"
                       placeholder="blurred"
@@ -640,25 +714,69 @@ const MasterclassAgenda = ({
               ))}
             </ul>
           </div>
-          <div className="mx-auto pb-14 flex flex-col items-center">
-          <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[600px] text-ada-black text-center">
-            TAK mówią osoby, które uczyłam prowadzenia reklam:
-          </h3>
-          {/* tu opinie */}
-          <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[710px] text-ada-black text-center">
-           To jak, dołączasz do programu „Ogarnij swoje adsy!” i robisz krok w stronę zdobywania nowych klientów dzięki kampaniom reklamowym?
-          </h3>
-          <Button
-                type="button"
-                text={
-                  <span className="font-bold">
-                  Chcę dołączyć!
-                  </span>
-                }
-                sectionId="offert"
-                textSize="text-adaMin md:text-adaSubtitleThird"
-                btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
-              />
+          <div className="w-full pb-14 flex flex-col items-center">
+            <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[600px] text-ada-black text-center">
+              TAK mówią osoby, które uczyłam prowadzenia reklam:
+            </h3>
+            <div className="flex flex-col w-full gap-4 mb-16">
+              <div className="flex flex-col md:flex-row w-full gap-4">
+                <div className="w-full md:w-1/4">
+                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/OcNvKSZY3pw?si=jnOOnZj_3AMT45Pm"
+                      title="Opinia Pauliny"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/4">
+                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/3e7_3u5qCOE?si=J7idNw3AY5LHV65v"
+                      title="Opinia Ani"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/4">
+                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/NiJW4JKFcWU?si=K980c-Ut0Epu7LFC"
+                      title="Opinia Darii"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/4">
+                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/EBI4ydBG75g?si=fox74kh2bokEbGzk"
+                      title="Opinia Emilii"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[710px] text-ada-black text-center">
+              To jak, dołączasz do programu „Ogarnij swoje adsy!” i robisz krok
+              w stronę zdobywania nowych klientów dzięki kampaniom reklamowym?
+            </h3>
+            <Button
+              type="button"
+              text={<span className="font-bold">Chcę dołączyć!</span>}
+              sectionId="offert"
+              textSize="text-adaMin md:text-adaSubtitleThird"
+              btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
+            />
           </div>
         </div>
       )}
@@ -671,123 +789,124 @@ const MasterclassAgenda = ({
             Jak dołączyć?
           </h2>
           <h3 className="text-adaDesc font-bold text-center text-ada-brown animate-bounce uppercase pb-10">
-            Wybierz dla siebie pakiet uczestnictwa, który najbardziej Ci odpowiada:
+            Wybierz dla siebie pakiet uczestnictwa, który najbardziej Ci
+            odpowiada:
           </h3>
           <div className="flex flex-col md:flex-row justify-between">
-          <div className="flex flex-col md:flex-row gap-10 text-ada-black">
-            <div className="max-w-[415px] flex flex-col">
-              <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-orange2">
-                Pakiet <br/>start
-              </h3>
-              <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-orange2">
-                {pakietStartList.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex flex-row text-adaMin md:text-adaStandard font-medium"
-                  >
-                    <div className="mr-2">✅</div>
-                    {item}
+            <div className="flex flex-col md:flex-row gap-10 text-ada-black">
+              <div className="max-w-[415px] flex flex-col">
+                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-orange2">
+                  Pakiet <br />
+                  start
+                </h3>
+                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-orange2">
+                  {pakietStartList.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex flex-row text-adaMin md:text-adaStandard font-medium"
+                    >
+                      <div className="mr-2">✅</div>
+                      {item}
+                    </li>
+                  ))}
+                  <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
+                    <span className="mr-2">❌</span>Certyfikat
                   </li>
-                ))}
-                <li className="flex flex-row text-adaMin md:text-adaStandard font-medium"><span className="mr-2">❌</span>Certyfikat</li>
-                <li className="flex flex-row text-adaMin md:text-adaStandard font-medium"><span className="mr-2">❌</span>KONSULTACJE 1:1</li>
-              </ul>
-              <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-orange2">
-                 2700 zł netto <br/>
-                <span className="font-medium">
-                Płatność w ratach: <br/>
-                </span>
-                4 x 675 zł netto
-              </p>
-              <Button
-                type="button"
-                text={
-                  <span className="font-bold">
-                  Chcę dołączyć!                  
-                </span>
-                }
-                url="https://koalendar.com/e/ogarnij-swoje-adsy"
-                textSize="text-adaMin md:text-adaBase"
-                btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange3 my-2"
-              />
+                  <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
+                    <span className="mr-2">❌</span>KONSULTACJE 1:1
+                  </li>
+                </ul>
+                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-orange2">
+                  2700 zł netto <br />
+                  <span className="font-medium">
+                    Płatność w ratach: <br />
+                  </span>
+                  4 x 675 zł netto
+                </p>
+                <Button
+                  type="button"
+                  text={<span className="font-bold">Chcę dołączyć!</span>}
+                  url="https://koalendar.com/e/ogarnij-swoje-adsy"
+                  textSize="text-adaMin md:text-adaBase"
+                  btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange3 my-2"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-10 text-ada-black">
+              <div className="max-w-[415px] flex flex-col md:mx-8">
+                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-yellow2">
+                  Pakiet <br />
+                  Standard
+                </h3>
+                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-yellow2">
+                  {pakietStandardList.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex flex-row text-adaMin md:text-adaStandard font-medium"
+                    >
+                      <div className="mr-2">✅</div>
+                      {item}
+                    </li>
+                  ))}
+                  <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
+                    <span className="mr-2 text-adaDesc font-bold">2</span>
+                    KONSULTACJE 1:1 
+                  </li>
+                </ul>
+                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-yellow2">
+                  3000 zł netto <br />
+                  <span className="font-medium">
+                    Płatność w ratach: <br />
+                  </span>
+                  4 x 750 zł netto
+                </p>
+                <Button
+                  type="button"
+                  text={<span className="font-bold">Chcę dołączyć!</span>}
+                  url="https://koalendar.com/e/ogarnij-swoje-adsy"
+                  textSize="text-adaMin md:text-adaBase"
+                  btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange my-2"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-10 text-ada-black">
+              <div className="max-w-[415px] flex flex-col">
+                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-orange2">
+                  Pakiet <br />
+                  VIP
+                </h3>
+                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-orange2">
+                  {pakietStandardList.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex flex-row text-adaMin md:text-adaStandard font-medium"
+                    >
+                      <div className="mr-2">✅</div>
+                      {item}
+                    </li>
+                  ))}
+                  <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
+                    <span className="mr-2 text-adaDesc font-bold">4</span>
+                    KONSULTACJE 1:1 
+                  </li>
+                </ul>
+                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-orange2">
+                  4000 zł netto <br />
+                  <span className="font-medium">
+                    Płatność w ratach: <br />
+                  </span>
+                  4 x 1000 zł netto
+                </p>
+                <Button
+                  type="button"
+                  text={<span className="font-bold">Chcę dołączyć!</span>}
+                  url="https://koalendar.com/e/ogarnij-swoje-adsy"
+                  textSize="text-adaMin md:text-adaBase"
+                  btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange3 my-2"
+                />
+              </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-10 text-ada-black">
-            <div className="max-w-[415px] flex flex-col md:mx-8">
-              <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-yellow2">
-                Pakiet <br/>Standard
-              </h3>
-              <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-yellow2">
-                {pakietStandardList.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex flex-row text-adaMin md:text-adaStandard font-medium"
-                  >
-                    <div className="mr-2">✅</div>
-                    {item}
-                  </li>
-                ))}
-                <li className="flex flex-row text-adaMin md:text-adaStandard font-medium"><span className="mr-2 text-adaDesc font-bold">2</span>KONSULTACJE 1:1 </li>
-              </ul>
-              <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-yellow2">
-                3000 zł netto <br/>
-                <span className="font-medium">
-                Płatność w ratach: <br/>
-                </span>
-                4 x 750 zł netto
-              </p>
-              <Button
-                type="button"
-                text={
-                  <span className="font-bold">
-                  Chcę dołączyć!                  
-                </span>
-                }
-                url="https://koalendar.com/e/ogarnij-swoje-adsy"
-                textSize="text-adaMin md:text-adaBase"
-                btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange my-2"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-10 text-ada-black">
-            <div className="max-w-[415px] flex flex-col">
-              <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-orange2">
-                Pakiet <br/>VIP
-              </h3>
-              <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-orange2">
-                {pakietStandardList.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex flex-row text-adaMin md:text-adaStandard font-medium"
-                  >
-                    <div className="mr-2">✅</div>
-                    {item}
-                  </li>
-                ))}
-               <li className="flex flex-row text-adaMin md:text-adaStandard font-medium"><span className="mr-2 text-adaDesc font-bold">4</span>KONSULTACJE 1:1 </li>
-              </ul>
-              <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-orange2">
-                 4000 zł netto <br/>
-                <span className="font-medium">
-                Płatność w ratach: <br/>
-                </span>
-                4 x 1000 zł netto
-              </p>
-              <Button
-                type="button"
-                text={
-                  <span className="font-bold">
-                  Chcę dołączyć!                  
-                </span>
-                }
-                url="https://koalendar.com/e/ogarnij-swoje-adsy"
-                textSize="text-adaMin md:text-adaBase"
-                btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange3 my-2"
-              />
-            </div>
-          </div>
-          </div>
-
         </div>
       )}
     </>

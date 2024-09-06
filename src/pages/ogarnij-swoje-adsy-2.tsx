@@ -1,22 +1,22 @@
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import AboutBanner2 from "components/AboutBanner2"
-import Questions from "components/Questions"
+import MastermindAgenda from "components/MastermindAgenda"
 import MastermindBanner from "components/MastermindBanner"
-import MastermindSteps from "components/MastermindSteps"
-import MastermindWhy1 from "components/MastermindWhy1"
-import MastermindWhy2 from "components/MastermindWhy2"
+import MastermindFAQ from "components/MastermindFAQ"
 import MastermindInfo1 from "components/MastermindInfo1"
 import MastermindInfo2 from "components/MastermindInfo2"
 import MastermindInfo3 from "components/MastermindInfo3"
-import MastermindAgenda from "components/MastermindAgenda"
 import MastermindPrice from "components/MastermindPrice"
-import MastermindFAQ from "components/MastermindFAQ"
-import Opinions from "components/Opinions"
-import ReferencesMentoring from "components/ReferencesMentoring"
+import MastermindSteps from "components/MastermindSteps"
+import MastermindWhy1 from "components/MastermindWhy1"
+import MastermindWhy2 from "components/MastermindWhy2"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MentoringForm from "components/MentoringForm"
+import Opinions from "components/Opinions"
+import Questions from "components/Questions"
+import ReferencesMentoring from "components/ReferencesMentoring"
 
 const MastermindPage = (): JSX.Element => {
   return (
@@ -38,7 +38,7 @@ const MastermindPage = (): JSX.Element => {
         <ReferencesMentoring title1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MastermindInfo2/>
+        <MastermindInfo2 />
         <Questions />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear3">

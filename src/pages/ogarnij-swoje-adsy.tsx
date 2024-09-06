@@ -1,18 +1,18 @@
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import MastermindSteps from "components/MastermindSteps"
-import MastermindInfo3 from "components/MastermindInfo3"
-import MastermindAgenda from "components/MastermindAgenda"
-import Team from "components/Team"
-import MasterclassAgenda from "components/MasterclassAgenda"
-import MentoringBanner from "components/MentoringBanner"
 import IconText from "components/IconText"
-import WebinarBanner from "components/WebinarBanner"
+import MastermindAgenda from "components/MastermindAgenda"
+import MastermindInfo3 from "components/MastermindInfo3"
+import MastermindSteps from "components/MastermindSteps"
+import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassFAQ from "components/MasterclassFAQ"
-import WebinarAbout from "components/WebinarAbout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MentoringBanner from "components/MentoringBanner"
 import ReferencesMentoring from "components/ReferencesMentoring"
+import Team from "components/Team"
+import WebinarAbout from "components/WebinarAbout"
+import WebinarBanner from "components/WebinarBanner"
 
 const MastermindPage = (): JSX.Element => {
   return (
@@ -22,7 +22,7 @@ const MastermindPage = (): JSX.Element => {
         <IconText version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <WebinarAbout version={4}/>
+        <WebinarAbout version={4} />
       </MaxWithBgColorContainer>
       <div className="h-[200px] bg-wave3 absolute top-[1610px] w-screen hidden lg:block" />
       <div className="h-[200px] bg-wave3 absolute top-[3610px] w-screen hidden lg:block" />
@@ -31,7 +31,7 @@ const MastermindPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <div className="h-[200px] bg-wave3 absolute top-[5310px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer>
-        <Team version={2}/>
+        <Team version={2} />
         <ReferencesMentoring title4 version="3" />
       </MaxWithBgColorContainer>
       <div className="h-[200px] bg-leaves absolute top-[5780px] w-screen hidden lg:block" />
@@ -53,7 +53,7 @@ const MastermindPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <MasterclassAgenda version={6} />
         <MasterclassAgenda version={7} />
-        <MastermindInfo3 version={3}/>
+        <MastermindInfo3 version={3} />
       </MaxWithBgColorContainer>
       <div className="h-[200px] bg-leaves absolute top-[11400px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
