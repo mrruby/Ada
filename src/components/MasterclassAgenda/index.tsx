@@ -640,6 +640,26 @@ const MasterclassAgenda = ({
               ))}
             </ul>
           </div>
+          <div className="mx-auto pb-14 flex flex-col items-center">
+          <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[600px] text-ada-black text-center">
+            TAK mówią osoby, które uczyłam prowadzenia reklam:
+          </h3>
+          {/* tu opinie */}
+          <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[710px] text-ada-black text-center">
+           To jak, dołączasz do programu „Ogarnij swoje adsy!” i robisz krok w stronę zdobywania nowych klientów dzięki kampaniom reklamowym?
+          </h3>
+          <Button
+                type="button"
+                text={
+                  <span className="font-bold">
+                  Chcę dołączyć!
+                  </span>
+                }
+                sectionId="offert"
+                textSize="text-adaMin md:text-adaSubtitleThird"
+                btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
+              />
+          </div>
         </div>
       )}
       {version === 9 && (

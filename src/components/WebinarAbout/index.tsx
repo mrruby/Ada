@@ -162,12 +162,12 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 4 && (
-        <div className="flex flex-col items-center max-w-[806px] gap-4 text-ada-black">
+        <div className="flex flex-col items-center max-w-[806px] gap-4 text-ada-black mt-[100px]">
           <TypingAnimation
             text="Cześć!"
             textStyle="text-adaSubtitle uppercase md:text-[80px] font-extrabold animate-bounce text-ada-orange md:leading-[0px]"
           />
-          <h3 className="text-adaMin md:text-adaSubtitleSecondary pt-8 font-bold md:leading-[0px] pb-6">
+          <h3 className="text-adaMin md:text-adaSubtitleSecondary pt-8 mt-4 font-bold md:leading-[0px] pb-6">
             Nazywam się Adrianna Promis-Urbas
           </h3>
           <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">

@@ -876,7 +876,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             Nad czym będziemy
             pracować?
           </h2>
-          <div className="flex flex-col mx-auto items-center justify-center pb-10 text-ada-black">
+          <div className="flex flex-col mx-auto items-center justify-center pb-10 text-ada-black md:pt-8">
             <div className="flex flex-col lg:flex-row justify-center flex-wrap xl:flex-nowrap">
               {featuresDataFirtstRow3.map((feature, index) => (
                 <FeatureBox

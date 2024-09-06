@@ -43,13 +43,13 @@ export const FeatureBox: React.FC<Props> = ({
           />
         </div>
       ) : isYellowFlower ? (
-        <div className="animate-spin-slow mb-[-10px]">
+        <div className="animate-spin-slow">
           <StaticImage
             src={"../../images/floweryellow.svg"}
             alt="Yellow Flower Ada Promis"
             placeholder="blurred"
-            width={150}
-            height={150}
+            width={134}
+            height={151}
           />
         </div>
       ) : (

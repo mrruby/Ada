@@ -165,7 +165,7 @@ body {
   right: 0;
   bottom: 0;
   height: 400px;
-  background-image: url("../../static/assets/wave2.webp");
+  background-image: url("../../static/assets/wave3.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -179,6 +179,53 @@ body {
     background-size: contain;
   }
 }
+
+.bg-leaves {
+  background-image: url("../../static/assets/leaves.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: rotate 6s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.bg-leaves-element {
+  position: relative;
+}
+.bg-leaves-element::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 400px;
+  background-image: url("../../static/assets/leaves.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  animation: rotate 6s infinite;
+}
+
+@media (max-width: 768px) {
+  .bg-leaves,
+  .bg-leaves-element::before {
+    background-size: contain;
+  }
+}
+
 
 .vertical-timeline::before {
   background-color: #000000 !important;

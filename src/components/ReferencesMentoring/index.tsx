@@ -14,7 +14,8 @@ type IReferences = {
   title1?: boolean
   title2?: boolean
   title3?: boolean
-  version?: "1" | "2"
+  title4?: boolean
+  version?: "1" | "2" | "3"
 
 }
 
@@ -154,6 +155,100 @@ const referencesList2: IReferencesList[] = [
   },
 ]
 
+const referencesList3: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/slider1.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={463}
+        height={296}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/slider2.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={464}
+        height={85}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/slider3.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={456}
+        height={119}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/slider4.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={577}
+        height={89}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/slider5.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={577}
+        height={89}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/slider6.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={577}
+        height={140}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/slider7.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={577}
+        height={89}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
+
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1440 },
@@ -195,8 +290,10 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
   )
 }
 
-const ReferencesMentoring = ({ title1, title2, title3, version = "1" }: IReferences): JSX.Element => {
-  const selectedList = version === "2" ? referencesList2 : referencesList;
+const ReferencesMentoring = ({ title1, title2, title3, title4, version = "1" }: IReferences): JSX.Element => {
+  const selectedList =
+    version === "2" ? referencesList2 :
+    version === "3" ? referencesList3 : referencesList;
 
   return (
     <div className="pt-[40px]">
@@ -230,7 +327,14 @@ const ReferencesMentoring = ({ title1, title2, title3, version = "1" }: IReferen
           </h3>
         </>
       )}
-      <div className="max-h-[600px] mx-auto mt-5">
+      {title4 && (
+        <>
+          <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-brown pb-4">
+          Z nami nauka prowadzenia reklam <br/> dla Twojego biznesu będzie wyglądać tak:
+          </h2>
+        </>
+      )}
+      <div className="max-h-[600px] mx-auto mt-5 pb-4">
         <Carousel
           responsive={responsive}
           infinite={true}
