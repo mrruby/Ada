@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import AboutBanner2 from "components/AboutBanner2"
-import MastermindAgenda from "components/MastermindAgenda"
 import MastermindBanner from "components/MastermindBanner"
 import MastermindFAQ from "components/MastermindFAQ"
 import MastermindInfo1 from "components/MastermindInfo1"
@@ -17,6 +16,7 @@ import MentoringForm from "components/MentoringForm"
 import Opinions from "components/Opinions"
 import Questions from "components/Questions"
 import ReferencesMentoring from "components/ReferencesMentoring"
+import MastermindAgenda from "components/MastermindAgenda"
 
 const MastermindPage = (): JSX.Element => {
   return (
