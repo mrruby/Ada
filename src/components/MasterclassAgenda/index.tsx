@@ -714,37 +714,56 @@ const MasterclassAgenda = ({
               ))}
             </ul>
           </div>
-          <div className="mx-auto pb-14 flex flex-col items-center">
+          <div className="w-full pb-14 flex flex-col items-center">
             <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[600px] text-ada-black text-center">
               TAK mówią osoby, które uczyłam prowadzenia reklam:
             </h3>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full">
-              <div className="w-full md:w-1/3">
-                <iframe
-                  className="w-full aspect-video"
-                  src="https://www.youtube.com/embed/OcNvKSZY3pw?si=jnOOnZj_3AMT45Pm"
-                  title="Opinia Pauliny"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="w-full md:w-1/3">
-                <iframe
-                  className="w-full aspect-video"
-                  src="https://www.youtube.com/embed/3e7_3u5qCOE?si=J7idNw3AY5LHV65v"
-                  title="Opinia Ani"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="w-full md:w-1/3">
-                <iframe
-                  className="w-full aspect-video"
-                  src="https://www.youtube.com/embed/NiJW4JKFcWU?si=K980c-Ut0Epu7LFC"
-                  title="Opinia Darii"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+            <div className="flex flex-col w-full gap-4 mb-16">
+              <div className="flex flex-col md:flex-row w-full gap-4">
+                <div className="w-full md:w-1/4">
+                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/OcNvKSZY3pw?si=jnOOnZj_3AMT45Pm"
+                      title="Opinia Pauliny"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/4">
+                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/3e7_3u5qCOE?si=J7idNw3AY5LHV65v"
+                      title="Opinia Ani"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/4">
+                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/NiJW4JKFcWU?si=K980c-Ut0Epu7LFC"
+                      title="Opinia Darii"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/4">
+                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/EBI4ydBG75g?si=fox74kh2bokEbGzk"
+                      title="Opinia Emilii"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
               </div>
             </div>
             <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[710px] text-ada-black text-center">
