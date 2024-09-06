@@ -157,25 +157,25 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
   ]
 
   const listItemClass2 =
-    "text-[15px] lg:text-adaSubtitleSecondary font-bold bg-ada-yellow2 max-w-fit p-2"
+    "text-[15px] lg:text-[1.75rem] font-bold bg-ada-yellow2 inline-block px-2 py-1"
 
   const leftProgramDetailsList3: JSX.Element[] = [
     <div key={0}>
       <p className={listItemClass2}>🎥 6 szkoleń:</p>
       <p className="mt-2">
-      video dotyczących lejka reklamowego (1 szkolenie), kreacji reklamowych (1 szkolenie) oraz kampanii reklamowych (4 szkolenia)
+        video dotyczących lejka reklamowego (1 szkolenie), kreacji reklamowych
+        (1 szkolenie) oraz kampanii reklamowych (4 szkolenia)
       </p>
     </div>,
     <div key={1}>
       <p className={listItemClass2}>💻 8 spotkań:</p>
-      <p className="mt-2">
-      w czasie rzeczywistym na ustawianie reklamy + Q&A      
-      </p>
+      <p className="mt-2">w czasie rzeczywistym na ustawianie reklamy + Q&A</p>
     </div>,
-     <div key={2}>
+    <div key={2}>
       <p className={listItemClass2}>💼 16 spotkań office hours:</p>
       <p className="mt-2">
-      na których możesz szybko rozwiązać problemy z reklamami lub zoptymalizować je pod czujnym okiem mojego zespołu
+        na których możesz szybko rozwiązać problemy z reklamami lub
+        zoptymalizować je pod czujnym okiem mojego zespołu
       </p>
     </div>,
   ]
@@ -183,20 +183,19 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
   const rightProgramDetailsList3: JSX.Element[] = [
     <div key={0}>
       <p className={listItemClass2}>💪 bieżący kontakt</p>
-      <p className="mt-2">
-      i wsparcie na grupie na Facebooku
-      </p>
+      <p className="mt-2">i wsparcie na grupie na Facebooku</p>
     </div>,
     <div key={1}>
       <p className={listItemClass2}>👀 nagrania</p>
       <p className="mt-2">
-      ze wszystkich spotkań na żywo dostępne bez ograniczeń      
+        ze wszystkich spotkań na żywo dostępne bez ograniczeń
       </p>
     </div>,
-     <div key={2}>
+    <div key={2}>
       <p className={listItemClass2}>🔥 nielimitowane konsultacje</p>
       <p className="mt-2">
-      Twoich kampanii, tekstów, grafik i pomysłów na reklamy ze mną i całym zespołem
+        Twoich kampanii, tekstów, grafik i pomysłów na reklamy ze mną i całym
+        zespołem
       </p>
     </div>,
   ]
@@ -317,7 +316,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
         <>
           <div className="pt-[60px] lg:pt-[150px] lg:pb-10 text-ada-black">
             <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase">
-              Co dostajesz <br/> w ramach programu?
+              Co dostajesz <br /> w ramach programu?
             </h2>
             <div className="flex flex-col md:flex-row justify-between">
               <ul className="lg:max-w-[510px] pt-6 lg:mr-8">

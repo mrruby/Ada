@@ -24,7 +24,7 @@ const MastermindPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <WebinarAbout version={4} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave3 absolute top-[1610px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[1600px] w-screen hidden lg:block" />
       <div className="h-[200px] bg-wave3 absolute top-[3610px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
         <MentoringBanner version={8} />
@@ -44,22 +44,22 @@ const MastermindPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <MastermindAgenda version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave3 absolute top-[8450px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[9200px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer bgColor="bg-linear7">
         <MastermindSteps version={3} />
       </MaxWithBgColorContainer>
       <div className="h-[200px] bg-wave3 absolute top-[10100px] w-screen hidden lg:block" />
-      <div className="h-[200px] bg-wave3 absolute top-[10750px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[10900px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer>
         <MasterclassAgenda version={6} />
         <MasterclassAgenda version={7} />
         <MastermindInfo3 version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-leaves absolute top-[11400px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-leaves absolute top-[11450px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer bgColor="bg-ada-yellow2">
         <MentoringBanner version={10} />
       </MaxWithBgColorContainer>
-      <div className="h-[200px] bg-wave3 absolute top-[12600px] w-screen hidden lg:block" />
+      <div className="h-[200px] bg-wave3 absolute top-[13300px] w-screen hidden lg:block" />
       <MaxWithBgColorContainer>
         <MasterclassAgenda version={5} />
         <MasterclassAgenda version={9} />

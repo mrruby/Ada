@@ -160,17 +160,26 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
             <ul className="gap-10 md:gap-[120px] ">
               {leftList2.map((item, index) => (
                 <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
-                  <span className="text-adaMin md:text-adaSubtitle"> {item.icon}</span>
-                  <span className="text-adaMin md:text-adaStandard">{item.text}</span>
+                  <span className="text-adaMin md:text-adaSubtitle">
+                    {" "}
+                    {item.icon}
+                  </span>
+                  <span className="text-adaMin md:text-adaStandard">
+                    {item.text}
+                  </span>
                 </li>
               ))}
             </ul>
             <ul className="gap-10 md:gap-[120px]">
               {rightList2.map((item, index) => (
                 <li className="flex gap-4 max-w-[580px] pb-3 px-3" key={index}>
-                  <span className="text-adaMin md:text-adaSubtitle"> {item.icon}</span>
+                  <span className="text-adaMin md:text-adaSubtitle">
+                    {" "}
+                    {item.icon}
+                  </span>
                   <span className="text-adaMin md:text-adaStandard">
-                  {item.text}</span>
+                    {item.text}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -193,7 +202,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
       {version === 3 && (
         <>
           <div className="flex flex-col md:flex-row md:gap-20">
-          <div className="md:mt-[-150px] md:ml-[-200px]">
+            <div className="md:mt-[-150px] md:ml-[-200px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/ada-why.webp"}
@@ -209,118 +218,146 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                 Dzięki reklamom:
               </h2>
               <p className="pt-6 text-adaMin md:text-adaDesc text-ada-black">
-              🙃 Dotrzesz do nowych klientów, nawet gdy śpisz lub spędzasz czas z rodziną
+                🙃 Dotrzesz do nowych klientów, nawet gdy śpisz lub spędzasz
+                czas z rodziną
               </p>
               <p className="pt-6 text-adaMin md:text-adaDesc text-ada-black">
-              💸 Zbudujesz stabilność swojej firmy dzięki lepszym wynikom reklamowym
+                💸 Zbudujesz stabilność swojej firmy dzięki lepszym wynikom
+                reklamowym
               </p>
               <p className="pt-6 text-adaMin md:text-adaDesc text-ada-black">
-              🚀 Nauczysz się tworzyć skuteczne kampanie reklamowe bez potrzeby zatrudniania agencji
+                🚀 Nauczysz się tworzyć skuteczne kampanie reklamowe bez
+                potrzeby zatrudniania agencji
               </p>
               <p className="pt-6 text-adaMin md:text-adaBase font-bold text-ada-black">
-              W programie mentoringowym nauczysz się tworzyć kampanie reklamowe od zera.
+                W programie mentoringowym nauczysz się tworzyć kampanie
+                reklamowe od zera.
               </p>
             </div>
           </div>
           <div className="mx-auto md:pb-10 text-ada-black">
-          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
-          Dla kogo jest <br/>
-          ten program?
+            <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
+              Dla kogo jest <br />
+              ten program?
             </h2>
-          <h2 className="text-adaStandard lg:text-adaSubtitleSecondary font-bold px-10 mx-auto flex items-center justify-center">
-          Ten program jest idealny dla Ciebie, jeśli:          
-          </h2>
-          <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
-            <ul className="gap-10 md:gap-[120px] ">
-              {leftList3.map((item, index) => (
-                <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
-                  <span className="text-adaMin md:text-adaSubtitle"> {item.icon}</span>
-                  <span className="text-adaMin md:text-adaStandard">{item.text}</span>
-                </li>
-              ))}
-            </ul>
-            <ul className="gap-10 md:gap-[120px]">
-              {rightList3.map((item, index) => (
-                <li className="flex gap-4 max-w-[580px] pb-3 px-3" key={index}>
-                  <span className="text-adaMin md:text-adaSubtitle"> {item.icon}</span>
-                  <span className="text-adaMin md:text-adaStandard">
-                  {item.text}</span>
-                </li>
-              ))}
-            </ul>
+            <h2 className="text-adaStandard lg:text-adaSubtitleSecondary font-bold px-10 mx-auto flex items-center justify-center">
+              Ten program jest idealny dla Ciebie, jeśli:
+            </h2>
+            <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
+              <ul className="gap-10 md:gap-[120px] ">
+                {leftList3.map((item, index) => (
+                  <li
+                    className="flex gap-4 max-w-[560px] pb-4 px-3"
+                    key={index}
+                  >
+                    <span className="text-adaMin md:text-adaSubtitle">
+                      {" "}
+                      {item.icon}
+                    </span>
+                    <span className="text-adaMin md:text-adaStandard">
+                      {item.text}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <ul className="gap-10 md:gap-[120px]">
+                {rightList3.map((item, index) => (
+                  <li
+                    className="flex gap-4 max-w-[580px] pb-3 px-3"
+                    key={index}
+                  >
+                    <span className="text-adaMin md:text-adaSubtitle">
+                      {" "}
+                      {item.icon}
+                    </span>
+                    <span className="text-adaMin md:text-adaStandard">
+                      {item.text}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-      <div className="w-full flex flex-col px-3 py-2 text-ada-black">
-      <div className="mx-auto mt-14">
-        <div className="flex flex-col md:flex-row justify-between w-full">
-        <StaticImage
-                loading="eager"
-                src={"../../images/ada-a.webp"}
-                alt="Ada Promis"
-                width={814}
-                height={814}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            <div className="max-w-[750px]">
-              <h2 className="text-[20px] lg:text-adaTitle font-bold  animate-bounce">Pewnie wiesz, że...</h2>
-              <p className="lg:text-adaBase pt-[24px] font-medium leading-tight">Działania organiczne są ograniczone. Oczywiście możesz tworzyć posty, projektować karuzele, nagrywać rolki i patrzeć, jak po kilku godzinach zostają przykryte przez inne materiały.</p>
-          <p className="lg:text-adaBase pt-[24px] font-medium leading-tight">
-          W ten sposób pozyskasz jednego klienta, drugiego, trzeciego, ale jeśli chcesz iść w dziesiątki czy setki… <br/>
-          ❌ zamiast przeznaczać wiele czasu na tworzenie kolejnych postów  <br/>
-          ✅ zbuduj przemyślany lejek marketingowy i wdrażaj płatne promocje przemyślanych treści.
-        </p>
-        <p className="lg:text-adaBase pt-[24px] font-medium leading-tight pb-10">
-          Chyba nie muszę Ci mówić, która opcja jest przyszłościowa, można ją skalować i optymalizować jej potencjał? 😉
-        </p>
+          <div className="w-full flex flex-col px-3 py-2 text-ada-black">
+            <div className="mx-auto mt-14">
+              <div className="flex flex-col md:flex-row justify-between w-full">
+                <StaticImage
+                  loading="eager"
+                  src={"../../images/ada-a.webp"}
+                  alt="Ada Promis"
+                  width={814}
+                  height={814}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
+                <div className="max-w-[750px]">
+                  <h2 className="text-[20px] lg:text-adaTitle font-bold  animate-bounce">
+                    Pewnie wiesz, że...
+                  </h2>
+                  <p className="lg:text-adaBase pt-[24px] font-medium leading-tight">
+                    Działania organiczne są ograniczone. Oczywiście możesz
+                    tworzyć posty, projektować karuzele, nagrywać rolki i
+                    patrzeć, jak po kilku godzinach zostają przykryte przez inne
+                    materiały.
+                  </p>
+                  <p className="lg:text-adaBase pt-[24px] font-medium leading-tight">
+                    W ten sposób pozyskasz jednego klienta, drugiego, trzeciego,
+                    ale jeśli chcesz iść w dziesiątki czy setki… <br />
+                    ❌ zamiast przeznaczać wiele czasu na tworzenie kolejnych
+                    postów <br />✅ zbuduj przemyślany lejek marketingowy i
+                    wdrażaj płatne promocje przemyślanych treści.
+                  </p>
+                  <p className="lg:text-adaBase pt-[24px] font-medium leading-tight pb-10">
+                    Chyba nie muszę Ci mówić, która opcja jest przyszłościowa,
+                    można ją skalować i optymalizować jej potencjał? 😉
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row justify-between w-full">
+                <div className="max-w-[163px]">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/coffee.svg"}
+                    alt="Ada Promis"
+                    width={163}
+                    height={199}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                    class="lg:ml-[-100px]"
+                  />
+                </div>
+                <div className="max-w-[750px] md:ml-20">
+                  <h2 className="text-[20px] lg:text-adaTitle font-bold  animate-bounce">
+                    Dlatego...
+                  </h2>
+                  <p className="lg:text-adaBase pt-[24px] font-medium leading-tight pb-10">
+                    przygotowałam dla Ciebie program mentoringowy{" "}
+                    <span className="font-bold">„Ogarnij swoje adsy!”</span> w
+                    którym nauczysz się tworzyć od podstaw skuteczne kampanie
+                    reklamowe i osiągać rezultaty, o jakich dotąd tylko
+                    marzyłaś!
+                  </p>
+                  <Button
+                    type="button"
+                    text={<span className="font-bold">Wchodzę w to!</span>}
+                    sectionId="offert"
+                    textSize="text-adaMin md:text-adaSubtitleThird"
+                    btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
+                  />
+                </div>
+                <StaticImage
+                  loading="eager"
+                  src={"../../images/ada-a2.webp"}
+                  alt="Ada Promis"
+                  width={430}
+                  height={578}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                  class="lg:mr-[-200px]"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col md:flex-row justify-between w-full">
-          <div className="max-w-[163px]">
-          <StaticImage
-                loading="eager"
-                src={"../../images/coffee.svg"}
-                alt="Ada Promis"
-                width={163}
-                height={199}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-                class="lg:ml-[-100px]"
-              />
-          </div>
-        <div className="max-w-[750px] lg:ml-[-300px]">
-        <h2 className="text-[20px] lg:text-adaTitle font-bold  animate-bounce">
-          Dlatego...
-        </h2>
-        <p className="lg:text-adaBase pt-[24px] font-medium leading-tight pb-10">
-          przygotowałam dla Ciebie program mentoringowy{" "}
-          <span className="font-bold">„Ogarnij swoje adsy!”</span> w którym nauczysz się tworzyć od podstaw skuteczne kampanie reklamowe i osiągać rezultaty, o jakich dotąd tylko marzyłaś!
-        </p>
-        <Button
-                type="button"
-                text={
-                  <span className="font-bold">
-                  Wchodzę w to!
-                  </span>
-                }
-                sectionId="offert"
-                textSize="text-adaMin md:text-adaSubtitleThird"
-                btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
-              />
-          </div>
-          <StaticImage
-                loading="eager"
-                src={"../../images/ada-a2.webp"}
-                alt="Ada Promis"
-                width={430}
-                height={578}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-                class="lg:mr-[-200px]"
-              />
-        </div>
-      </div>
-    </div>
         </>
       )}
     </section>
