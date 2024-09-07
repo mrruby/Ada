@@ -575,7 +575,7 @@ const MasterclassAgenda = ({
       {version === 6 && (
         <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
           <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
-            Program jest <br/> dla Ciebie, jeśli…
+            Program jest <br /> dla Ciebie, jeśli…
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
             <ul className="flex flex-wrap gap-[10px] mx-auto mb-10">
@@ -833,31 +833,34 @@ const MasterclassAgenda = ({
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-10 text-ada-black">
-              <div className="max-w-[415px] flex flex-col md:mx-8">
-                <div className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-yellow2 py-2 relative">
-                  <span className="text-ada-orange text-adaMin md:text-adaStandard">Najkorzystniejsza cena</span><br/>
+              <div className="max-w-[415px] flex flex-col md:mx-8 relative">
+                <div className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-yellow2 py-2 ">
+                  <span className="text-ada-orange text-adaMin md:text-adaStandard">
+                    Najkorzystniejsza cena
+                  </span>
+                  <br />
                   <h3>
-                  Pakiet <br />
-                  Standard
-                </h3>
-                <StaticImage
-                      src={"../../images/sunflower.svg"}
-                      alt="Ada Promis"
-                      placeholder="blurred"
-                      width={60}
-                      height={60}
-                      style={{ width: "60px", height: "60px" }}
-                      className="absolute top-[-25px] left-[-25px]"
-                    />
-                <StaticImage
-                      src={"../../images/sunflower.svg"}
-                      alt="Ada Promis"
-                      placeholder="blurred"
-                      width={60}
-                      height={60}
-                      style={{ width: "60px", height: "60px" }}
-                      className="absolute top-[-25px] right-[-25px]"
-                    />
+                    Pakiet <br />
+                    Standard
+                  </h3>
+                  <StaticImage
+                    src="../../images/sunflower.svg"
+                    alt="Sunflower"
+                    placeholder="blurred"
+                    width={60}
+                    height={60}
+                    style={{ width: "60px", height: "60px" }}
+                    className="absolute top-[-25px] left-[-25px]"
+                  />
+                  <StaticImage
+                    src="../../images/sunflower.svg"
+                    alt="Sunflower"
+                    placeholder="blurred"
+                    width={60}
+                    height={60}
+                    style={{ width: "60px", height: "60px" }}
+                    className="absolute top-[-25px] right-[-25px]"
+                  />
                 </div>
                 <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-yellow2">
                   {pakietStandardList.map((item, index) => (
