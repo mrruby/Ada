@@ -832,8 +832,8 @@ const MasterclassAgenda = ({
                 />
               </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-10 text-ada-black">
-              <div className="max-w-[415px] flex flex-col md:mx-8 relative">
+            <div className="flex flex-col md:flex-row gap-10 text-ada-black relative">
+              <div className="max-w-[415px] flex flex-col md:mx-8">
                 <div className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-yellow2 py-2 ">
                   <span className="text-ada-orange text-adaMin md:text-adaStandard">
                     Najkorzystniejsza cena
@@ -843,24 +843,24 @@ const MasterclassAgenda = ({
                     Pakiet <br />
                     Standard
                   </h3>
-                  <StaticImage
-                    src="../../images/sunflower.svg"
-                    alt="Sunflower"
-                    placeholder="blurred"
-                    width={60}
-                    height={60}
-                    style={{ width: "60px", height: "60px" }}
-                    className="absolute top-[-25px] left-[-25px]"
-                  />
-                  <StaticImage
-                    src="../../images/sunflower.svg"
-                    alt="Sunflower"
-                    placeholder="blurred"
-                    width={60}
-                    height={60}
-                    style={{ width: "60px", height: "60px" }}
-                    className="absolute top-[-25px] right-[-25px]"
-                  />
+                  <div className="absolute -top-4 left-0">
+                    <StaticImage
+                      src="../../images/sunflower.svg"
+                      alt="Sunflower"
+                      placeholder="blurred"
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+                  <div className="absolute -top-4 right-0">
+                    <StaticImage
+                      src="../../images/sunflower.svg"
+                      alt="Sunflower"
+                      placeholder="blurred"
+                      width={60}
+                      height={60}
+                    />
+                  </div>
                 </div>
                 <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-yellow2">
                   {pakietStandardList.map((item, index) => (
