@@ -40,6 +40,11 @@ import {
   Drinks,
   Arrow,
   ArrowMasterclass,
+  Leaves1,
+  Leaves2,
+  Leaves3,
+  Leaves4,
+  Leaves5
 } from "../../helpers/LayoutElements/index"
 import { ILayoutElements } from "../../utils/types/layoutElements"
 
@@ -84,6 +89,21 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
   drinks,
   arrow,
   arrowMasterclass,
+  leaves1,
+  leaves2,
+  leaves3,
+  leaves4,
+  leaves5,
+  leaves6,
+  leaves7,
+  leaves8,
+  leaves9,
+  leaves10,
+  leaves11,
+  leaves12,
+  leaves13,
+  leaves14,
+  leaves15,
 }) => {
   return (
     <>
@@ -323,6 +343,96 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
           mobileTop="hidden xl:flex lg:top-[800px] "
           mobileRight="right-[40vw]"
         />
+      )}
+      {leaves1 && (
+        <Leaves1
+          mobileTop="hidden xl:flex lg:top-[200px] "
+          mobileLeft="left-[0px]"
+        />
+      )}
+      {leaves2 && (
+        <Leaves2
+          mobileTop="hidden xl:flex lg:top-[850px] "
+          mobileRight="right-[-40px]"
+        />
+      )}
+      {leaves3 && (
+        <Leaves3
+          mobileTop="hidden xl:flex lg:top-[1800px]"
+          mobileLeft="left-[0px]"
+        />
+      )}
+      {leaves4 && (
+       <Leaves2
+        mobileTop="hidden xl:flex lg:top-[2100px]"
+        mobileRight="right-[-40px]"
+      />
+      )}
+      {leaves5 && (
+        <Leaves3
+          mobileTop="hidden xl:flex lg:top-[4400px]"
+          mobileLeft="left-[0px]"
+        />
+      )}
+      {leaves6 && (
+       <Leaves2
+        mobileTop="hidden xl:flex lg:top-[4700px]"
+         mobileRight="right-[-40px]"
+      />
+      )}
+      {leaves7 && (
+        <Leaves4
+          mobileTop="hidden xl:flex lg:top-[4900px]"
+          mobileLeft="left-[-30px]"
+        />
+      )}
+      {leaves8 && (
+        <Leaves3
+          mobileTop="hidden xl:flex lg:top-[7800px]"
+          mobileLeft="left-[0px]"
+        />
+      )}
+      {leaves9 && (
+       <Leaves2
+        mobileTop="hidden xl:flex lg:top-[8100px]"
+         mobileRight="right-[-40px]"
+      />
+      )}
+      {leaves10 && (
+        <Leaves4
+          mobileTop="hidden xl:flex lg:top-[8700px]"
+          mobileLeft="left-[-30px]"
+        />
+      )}
+      {leaves11 && (
+       <Leaves5
+        mobileTop="hidden xl:flex lg:top-[8550px]"
+         mobileRight="right-[-40px]"
+      />
+      )}
+      {leaves12 && (
+       <Leaves3
+       mobileTop="hidden xl:flex lg:top-[10200px]"
+       mobileLeft="left-[-30px]"
+     />
+      )}
+      {leaves13 && (
+       <Leaves2
+       mobileTop="hidden xl:flex lg:top-[10360px]"
+        mobileRight="right-[-40px]"
+     />
+      )}
+      {leaves14 && (
+         <Leaves4
+         mobileTop="hidden xl:flex lg:top-[10600px]"
+         mobileLeft="left-[-30px]"
+       />
+      )}
+      {leaves15 && (
+        <Leaves4
+        mobileTop="hidden xl:flex lg:top-[14400px]"
+        mobileLeft="left-[-30px]"
+      />
       )}
     </>
   )

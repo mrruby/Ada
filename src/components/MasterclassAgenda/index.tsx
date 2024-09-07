@@ -575,7 +575,7 @@ const MasterclassAgenda = ({
       {version === 6 && (
         <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
           <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
-            Program jest dla Ciebie, jeśli…
+            Program jest <br /> dla Ciebie, jeśli…
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
             <ul className="flex flex-wrap gap-[10px] mx-auto mb-10">
@@ -795,7 +795,7 @@ const MasterclassAgenda = ({
           <div className="flex flex-col md:flex-row justify-between">
             <div className="flex flex-col md:flex-row gap-10 text-ada-black">
               <div className="max-w-[415px] flex flex-col">
-                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-orange2">
+                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-orange2 py-2">
                   Pakiet <br />
                   start
                 </h3>
@@ -832,12 +832,36 @@ const MasterclassAgenda = ({
                 />
               </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-10 text-ada-black">
+            <div className="flex flex-col md:flex-row gap-10 text-ada-black relative">
               <div className="max-w-[415px] flex flex-col md:mx-8">
-                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-yellow2">
-                  Pakiet <br />
-                  Standard
-                </h3>
+                <div className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-yellow2 py-2 ">
+                  <span className="text-ada-orange text-adaMin md:text-adaStandard">
+                    Najkorzystniejsza cena
+                  </span>
+                  <br />
+                  <h3>
+                    Pakiet <br />
+                    Standard
+                  </h3>
+                  <div className="absolute -top-4 left-0">
+                    <StaticImage
+                      src="../../images/sunflower.svg"
+                      alt="Sunflower"
+                      placeholder="blurred"
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+                  <div className="absolute -top-4 right-0">
+                    <StaticImage
+                      src="../../images/sunflower.svg"
+                      alt="Sunflower"
+                      placeholder="blurred"
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+                </div>
                 <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-yellow2">
                   {pakietStandardList.map((item, index) => (
                     <li

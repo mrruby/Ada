@@ -39,4 +39,19 @@ export interface ILayoutElements {
   drinks?: boolean
   arrow?: boolean
   arrowMasterclass?: boolean
+  leaves1?: boolean
+  leaves2?: boolean
+  leaves3?: boolean
+  leaves4?: boolean
+  leaves5?: boolean
+  leaves6?: boolean
+  leaves7?: boolean
+  leaves8?: boolean
+  leaves9?: boolean
+  leaves10?: boolean
+  leaves11?: boolean
+  leaves12?: boolean
+  leaves13?: boolean
+  leaves14?: boolean
+  leaves15?: boolean
 }
