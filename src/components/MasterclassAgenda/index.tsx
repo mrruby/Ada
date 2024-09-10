@@ -720,50 +720,40 @@ const MasterclassAgenda = ({
             </h3>
             <div className="flex flex-col w-full gap-4 mb-16">
               <div className="flex flex-col md:flex-row w-full gap-4">
-                <div className="w-full md:w-1/4">
-                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
-                    <iframe
-                      src="https://www.youtube.com/embed/OcNvKSZY3pw?si=jnOOnZj_3AMT45Pm"
-                      title="Opinia Pauliny"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute top-0 left-0 w-full h-full"
-                    ></iframe>
+                {[
+                  {
+                    src: "Z1kNvVbH0Fo?si=Cy50UinrlhTXrsrt",
+                    title: "Opinia Darii",
+                  },
+                  {
+                    src: "7lzW5EFaw0s?si=Wth13qSXVyTrqDwp",
+                    title: "Opinia Izy",
+                  },
+                  {
+                    src: "Sn_ABVhbia0?si=w0U17jQsCyyrq15e",
+                    title: "Opinia Emili",
+                  },
+                  {
+                    src: "nLC4Ak_uQNA?si=AcsToMv-vdQsw3jd",
+                    title: "Opinia Ani",
+                  },
+                  {
+                    src: "JCRyTa6yyj8?si=37-xABtP7b0ufhWY",
+                    title: "Opinia Pauliny",
+                  },
+                ].map((video, index) => (
+                  <div key={index} className="w-full md:w-1/5">
+                    <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${video.src}`}
+                        title={video.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute top-0 left-0 w-full h-full md:w-full md:h-full sm:w-3/4 sm:h-3/4"
+                      ></iframe>
+                    </div>
                   </div>
-                </div>
-                <div className="w-full md:w-1/4">
-                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
-                    <iframe
-                      src="https://www.youtube.com/embed/3e7_3u5qCOE?si=J7idNw3AY5LHV65v"
-                      title="Opinia Ani"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute top-0 left-0 w-full h-full"
-                    ></iframe>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/4">
-                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
-                    <iframe
-                      src="https://www.youtube.com/embed/NiJW4JKFcWU?si=K980c-Ut0Epu7LFC"
-                      title="Opinia Darii"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute top-0 left-0 w-full h-full"
-                    ></iframe>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/4">
-                  <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
-                    <iframe
-                      src="https://www.youtube.com/embed/EBI4ydBG75g?si=fox74kh2bokEbGzk"
-                      title="Opinia Emilii"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute top-0 left-0 w-full h-full"
-                    ></iframe>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
             <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[710px] text-ada-black text-center">
