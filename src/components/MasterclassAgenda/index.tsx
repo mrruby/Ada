@@ -726,7 +726,7 @@ const MasterclassAgenda = ({
                     title: "Opinia Darii",
                   },
                   {
-                    src: "7lzW5EFaw0s?si=Wth13qSXVyTrqDwp",
+                    src: "SacKtmdmsBw?si=E5aguD-GVeT4J9XF",
                     title: "Opinia Izy",
                   },
                   {
