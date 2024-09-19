@@ -741,8 +741,12 @@ const MasterclassAgenda = ({
                     src: "JCRyTa6yyj8?si=37-xABtP7b0ufhWY",
                     title: "Opinia Pauliny",
                   },
+                  {
+                    src: "ZPS6rnQovOM?si=Rg0TT2rjhmSK6ylI",
+                    title: "Opinia Magdy",
+                  },
                 ].map((video, index) => (
-                  <div key={index} className="w-full md:w-1/5">
+                  <div key={index} className="w-full md:w-1/6">
                     <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
                       <iframe
                         src={`https://www.youtube.com/embed/${video.src}`}
