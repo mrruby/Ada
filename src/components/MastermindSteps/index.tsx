@@ -872,7 +872,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 3 && (
         <section className="text-center pt-10 pb-4" id="steps">
-          <h2 className="font-bold max-w-[740px] text-adaTitle lg:text-adaTitle2 text-ada-white bg-ada-orange uppercase mx-auto">
+          <h2 className="font-bold max-w-[740px] text-adaTitle lg:text-adaTitle2 text-ada-white bg-ada-purple uppercase mx-auto">
             Nad czym będziemy pracować?
           </h2>
           <div className="flex flex-col mx-auto items-center justify-center pb-10 text-ada-black md:pt-8">

@@ -694,7 +694,7 @@ const MasterclassAgenda = ({
               text={<span className="font-bold">Chcę dołączyć!</span>}
               sectionId="offert"
               textSize="text-adaMin md:text-adaSubtitleThird"
-              btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
+              btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-purple text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
             />
           </div>
         </div>
@@ -704,21 +704,21 @@ const MasterclassAgenda = ({
           className="w-full flex flex-col px-3 py-2 items-center mb-3 md:mb-[300px] md:pt-12"
           id="offert"
         >
-          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown animate-bounce uppercase pb-2">
+          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-purple animate-bounce uppercase pb-2">
             Jak dołączyć?
           </h2>
-          <h3 className="text-adaDesc font-bold text-center text-ada-brown animate-bounce uppercase pb-10">
+          <h3 className="text-adaDesc font-bold text-center text-ada-purple animate-bounce uppercase pb-10">
             Wybierz dla siebie pakiet uczestnictwa, który najbardziej Ci
             odpowiada:
           </h3>
           <div className="flex flex-col md:flex-row justify-between">
             <div className="flex flex-col md:flex-row gap-10 text-ada-black">
               <div className="max-w-[415px] flex flex-col">
-                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-orange2 py-2">
+                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-purple text-ada-white py-2">
                   Pakiet <br />
                   start
                 </h3>
-                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-orange2">
+                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-purple text-ada-white">
                   {pakietStartList.map((item, index) => (
                     <li
                       key={index}
@@ -735,7 +735,7 @@ const MasterclassAgenda = ({
                     <span className="mr-2">❌</span>KONSULTACJE 1:1
                   </li>
                 </ul>
-                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-orange2">
+                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-purple text-ada-white">
                   3321 zł brutto <br />
                   <span className="font-medium">
                     Płatność w ratach: <br />
@@ -747,14 +747,14 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange3 my-2"
+                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purple my-2"
                 />
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-10 text-ada-black relative">
               <div className="max-w-[415px] flex flex-col md:mx-8">
-                <div className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-yellow2 py-2 ">
-                  <span className="text-ada-orange text-adaMin md:text-adaStandard">
+                <div className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-purple text-ada-white py-2 ">
+                  <span className="text-adaMin md:text-adaStandard">
                     Najkorzystniejsza cena
                   </span>
                   <br />
@@ -762,26 +762,8 @@ const MasterclassAgenda = ({
                     Pakiet <br />
                     Standard
                   </h3>
-                  <div className="absolute -top-4 left-0">
-                    <StaticImage
-                      src="../../images/sunflower.svg"
-                      alt="Sunflower"
-                      placeholder="blurred"
-                      width={60}
-                      height={60}
-                    />
-                  </div>
-                  <div className="absolute -top-4 right-0">
-                    <StaticImage
-                      src="../../images/sunflower.svg"
-                      alt="Sunflower"
-                      placeholder="blurred"
-                      width={60}
-                      height={60}
-                    />
-                  </div>
                 </div>
-                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-yellow2">
+                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-purple text-ada-white">
                   {pakietStandardList.map((item, index) => (
                     <li
                       key={index}
@@ -796,7 +778,7 @@ const MasterclassAgenda = ({
                     KONSULTACJE 1:1
                   </li>
                 </ul>
-                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-yellow2">
+                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-purple text-ada-white">
                   3690 zł brutto <br />
                   <span className="font-medium">
                     Płatność w ratach: <br />
@@ -808,17 +790,17 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange my-2"
+                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purple my-2"
                 />
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-10 text-ada-black">
               <div className="max-w-[415px] flex flex-col">
-                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-orange2">
+                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-purple text-ada-white">
                   Pakiet <br />
                   VIP
                 </h3>
-                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-orange2">
+                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-purple text-ada-white">
                   {pakietStandardList.map((item, index) => (
                     <li
                       key={index}
@@ -833,7 +815,7 @@ const MasterclassAgenda = ({
                     KONSULTACJE 1:1
                   </li>
                 </ul>
-                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-orange2">
+                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-purple text-ada-white">
                   4920 zł brutto <br />
                   <span className="font-medium">
                     Płatność w ratach: <br />
@@ -845,7 +827,7 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-black w-full md:tracking-[2.90px] bg-ada-orange3 my-2"
+                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purple my-2"
                 />
               </div>
             </div>

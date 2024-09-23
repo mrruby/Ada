@@ -108,24 +108,24 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
       {version === 8 && (
         <>
           <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-brown">
-          Na spotkaniach będziesz <br />
-          miała okazję poznać też:
+            Na spotkaniach będziesz <br />
+            miała okazję poznać też:
           </h2>
         </>
       )}
-     {version === 9 && (
+      {version === 9 && (
         <>
-          <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-brown">
-          Program mentoringowy „Ogarnij swoje adsy” <br /> to bezpieczna przestrzeń,
-          w której:
+          <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-purple">
+            Program mentoringowy „Ogarnij swoje adsy" <br /> to bezpieczna
+            przestrzeń, w której:
           </h2>
         </>
       )}
-           {version === 10 && (
+      {version === 10 && (
         <>
           <h2 className="text-adaSubtitle md:text-adaTitle font-bold uppercase text-center text-ada-black">
-          Co zmieni się w Twoim  <br />
-          biznesie po mentoringu?
+            Co zmieni się w Twoim <br />
+            biznesie po mentoringu?
           </h2>
         </>
       )}

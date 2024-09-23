@@ -183,8 +183,8 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         <div className="px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
           <div className="flex flex-col md:flex-row justify-between xl:max-w-[1350px] mx-auto">
             <div className="flex flex-col justify-center max-w-[900px] gap-4 md:mt-8 xl:-mt-60 mb-3 text-ada-black">
-              <h2 className="uppercase text-adaSubtitle md:text-adaTitle3 text-ada-yellow2 font-extrabold">
-                <span className="text-ada-orange">Ogarnij </span>
+              <h2 className="uppercase text-adaSubtitle md:text-adaTitle3 text-ada-purple font-extrabold">
+                <span className="text-ada-purple">Ogarnij </span>
                 swoje adsy!
               </h2>
               <h2 className="text-adaDesc md:text-adaSubtitle tracking-wider leading-none">
@@ -209,7 +209,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 }
                 sectionId="offert"
                 textSize="text-adaMin md:text-adaBase"
-                btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
+                btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-purple text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
               />
             </div>
             <div className="mr-[-10vw] xl:mr-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px]">

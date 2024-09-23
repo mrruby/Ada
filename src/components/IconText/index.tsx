@@ -212,7 +212,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
               />
             </div>
             <div className="max-w-[680px] px-2">
-              <h2 className="text-adaStandard lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-orange text-white w-screen px-8 py-4 md:h-[84px] flex items-centerr">
+              <h2 className="text-adaStandard lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-purple text-white w-screen px-8 py-4 md:h-[84px] flex items-center">
                 Dzięki reklamom w programie mentoringowym:
               </h2>
               <p className="pt-6 text-adaMin md:text-adaDesc text-ada-black">
@@ -235,7 +235,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
             </div>
           </div>
           <div className="mx-auto md:pb-10 text-ada-black">
-            <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
+            <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-purple lg:mb- animate-bounce uppercase pb-10">
               Dla kogo jest <br />
               ten program?
             </h2>
@@ -329,7 +329,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                     text={<span className="font-bold">Wchodzę w to!</span>}
                     sectionId="offert"
                     textSize="text-adaMin md:text-adaSubtitleThird"
-                    btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
+                    btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-purple text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
                   />
                 </div>
                 <StaticImage

@@ -15,9 +15,9 @@ const listItemClass = "leading-tight bg-transparent"
 const listItemTitleClass = "text-[15px] lg:text-adaDesc font-bold -mb-2"
 const listItemDesClass = "text-[15px] lg:text-adaDesc"
 const listItemTitleClass2 =
-  "text-[15px] lg:text-adaSubtitle uppercase text-ada-pink3 font-bold"
+  "text-[15px] lg:text-adaSubtitle uppercase text-ada-purple font-bold"
 const listItemTitleClass3 =
-  "text-[15px] lg:text-adaSubtitle uppercase text-ada-orange font-bold"
+  "text-[15px] lg:text-adaSubtitle uppercase text-ada-purple font-bold"
 
 const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
   return (
