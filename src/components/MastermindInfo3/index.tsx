@@ -226,28 +226,6 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
               zapłacić w 2 ratach po 1350 zł netto.
             </p>
           </div>
-          <div className="pt-[60px] lg:pt-[76px]">
-            <h2 className="text-[20px] lg:text-adaTitle font-bold w-[250px] md:w-[800px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
-              Co zmieni się w Twoim biznesie
-            </h2>
-            <h2 className="text-[20px] lg:text-adaTitle font-bold w-[250px] md:w-[450px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
-              po mentoringu?
-            </h2>
-            <ul className="md:max-w-[1084px] pt-6">
-              {whatYouGetList.map((item, index) => (
-                <li key={index} className={listItemClass}>
-                  &#10003; {item}
-                </li>
-              ))}
-              <li className={listItemClass}>
-                ...abyś lepiej niż kiedykolwiek
-                <span className="font-bold">
-                  {" "}
-                  zadbała o swój biznes i przepływ klientów!
-                </span>
-              </li>
-            </ul>
-          </div>
         </>
       )}
       {version === 2 && (

@@ -14,7 +14,7 @@ export const BonusBox: React.FC<Props> = ({
   image,
 }) => {
   return (
-    <div className="flex flex-col items-center relative lg:min-w-[240px] md:max-w-[416px] px-3">
+    <div className="flex flex-col items-center relative lg:min-w-[240px] md:max-w-[300px] px-3">
       {image}
       <p className={`text-center pt-4 leading-snug ${styleText}`}>{text}</p>
       {text2 && (

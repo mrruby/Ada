@@ -107,7 +107,9 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
               />
             </div>
             <div className="flex flex-col justify-center max-w-[800px] gap-4 md:mt-8 xl:-mt-60 mb-3">
-              <h2 className="hidden md:block text-adaSubtitle md:text-adaBig">MASTERCLASSY</h2>
+              <h2 className="hidden md:block text-adaSubtitle md:text-adaBig">
+                MASTERCLASSY
+              </h2>
               <h1 className="text-adaSubtitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
                 ADSY<span className="text-ada-orange">&</span>
                 <span className="text-ada-yellow">CHILL</span>
@@ -120,11 +122,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
               </h2>
               <Button
                 type="button"
-                text={
-                  <span className="font-bold">
-                    Sprawdzam Adsy&Chill
-                  </span>
-                }
+                text={<span className="font-bold">Sprawdzam Adsy&Chill</span>}
                 sectionId="masterclasses"
                 textSize="text-adaMin md:text-adaSubtitle"
                 btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-pink2 md:tracking-[2.90px] md:h-[100px] shadow-xl"
@@ -182,33 +180,31 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 5 && (
-        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
+        <div className="px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
           <div className="flex flex-col md:flex-row justify-between xl:max-w-[1350px] mx-auto">
             <div className="flex flex-col justify-center max-w-[900px] gap-4 md:mt-8 xl:-mt-60 mb-3 text-ada-black">
-              <h2 className="uppercase text-adaSubtitle md:text-adaTitle3 text-ada-yellow2 font-extrabold">              
+              <h2 className="uppercase text-adaSubtitle md:text-adaTitle3 text-ada-yellow2 font-extrabold">
                 <span className="text-ada-orange">Ogarnij </span>
-                 swoje adsy!
+                swoje adsy!
               </h2>
               <h2 className="text-adaDesc md:text-adaSubtitle tracking-wider leading-none">
-              Program mentoringowy dla przedsiębiorczych kobiet
+                Twoja mapa do realnych i skutecznych reklam
               </h2>
               <div className="max-w-[650px] pt-6 md:text-adaBase">
-              <p className="pb-10">
-              Uwolnij potencjał swojego biznesu dzięki skutecznym reklamom na Facebooku i Instagramie!
-              </p>
-              <p className="pb-2">
-              Czy marzysz o tym, by Twoje produkty i usługi trafiały do większej liczby klientów?              
-              </p>
-              <p className="pb-10">
-                <span className="font-bold">Dołącz do programu „Ogarnij swoje adsy!” </span>
-                i osiągaj wyniki, które przekroczą Twoje najśmielsze oczekiwania!              
-              </p>
-            </div>
+                <p className="pb-10">
+                  Liczby + kreatywność = najlepszy kwartał w Twojej firmie
+                </p>
+                <p className="pb-10">
+                  Dołącz do programu mentoringowego "Ogarnij Swoje Adsy" i spędź
+                  następne 4 miesiące ze wsparciem strategicznym zespołu
+                  marketingowego.
+                </p>
+              </div>
               <Button
                 type="button"
                 text={
                   <span className="font-bold">
-                  Sprawdzam, bo chcę zarabiać więcej dzięki reklamom!
+                    Sprawdzam, bo chcę zarabiać więcej dzięki reklamom!
                   </span>
                 }
                 sectionId="offert"
@@ -235,31 +231,36 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2">
           <div className="flex flex-col md:flex-row justify-between xl:max-w-[1350px] mx-auto">
             <div className="flex flex-col justify-center max-w-[900px] gap-4 md:mt-8 xl:-mt-60 mb-3 text-ada-black">
-            <div className="max-w-[650px] pt-6 md:text-adaBase font-medium">
-              <p className="md:pt-40 pb-5 font-bold">
-              Chcesz upewnić się, że ten program jest dla Ciebie? Potrzebujesz potwierdzić, czy reklamy w Twoim biznesie zadziałają? 
-              </p>
-              <p className="pb-5 font-bold">
-                 Masz jeszcze inne pytania?
-              </p>
-              <p className="pb-5">
-                 Spotkaj się ze mną na wirtualną kawkę, czyli 20-30 minutowe spotkanie na Google Meets, na którym porozmawiamy o Twoim udziale w programie mentoringowym.             
-              </p>
-              <p className="pb-5">
-                Wirtualne kawki są obowiązkowe - chcę poznać Wasze biznesy i mieć pewność, że każda uczestniczka skorzysta podczas programu mentoringowego.      
-              </p>
-            </div>
-              <Button
-                type="button"
-                text={
-                  <span className="font-bold">
-                  Umawiam wirtualną kawkę!                  
-                </span>
-                }
-                url="https://koalendar.com/e/ogarnij-swoje-adsy"
-                textSize="text-adaMin md:text-adaBase"
-                btnStyle="uppercase w-[187px] md:w-[490px] bg-ada-orange text-ada-white md:tracking-[2.90px] md:h-[100px] shadow-xl"
-              />
+              <div className="max-w-[650px] pt-6 md:text-adaBase font-medium">
+                <p className="md:pt-40 pb-5 font-bold">
+                  Chcesz upewnić się, że ten program jest dla Ciebie?
+                  Potrzebujesz potwierdzić, czy reklamy w Twoim biznesie
+                  zadziałają?
+                </p>
+                <p className="pb-5 font-bold">Masz jeszcze inne pytania?</p>
+                <p className="pb-5">
+                  Spotkaj się ze mną na wirtualną kawkę, czyli 20-30 minutowe
+                  spotkanie na Google Meets, na którym porozmawiamy o Twoim
+                  udziale w programie mentoringowym.
+                </p>
+                <p className="pb-5">
+                  Wirtualne kawki są obowiązkowe - chcę poznać Wasze biznesy i
+                  mieć pewność, że każda uczestniczka skorzysta podczas programu
+                  mentoringowego.
+                </p>
+              </div>
+              <div className="mt-10">
+                <CountdownTimer
+                  text="DOŁĄCZ PRZED STARTEM 4 EDYCJI"
+                  targetDate={new Date("2024-09-30T10:00:00")}
+                />
+              </div>
+              <iframe
+                src="https://koalendar.com/e/ogarnij-swoje-adsy?embed=true"
+                width="100%"
+                height="800px"
+                frameborder="0"
+              ></iframe>
             </div>
             <div className="mr-[-10vw] xl:mr-[-300px] md:mt-[-300px] lg:max-w-none md:max-w-[500px]">
               <StaticImage

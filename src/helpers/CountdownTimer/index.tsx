@@ -23,11 +23,12 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
 }) => {
   const calculateTimeLeft = () => {
     const difference = +targetDate - +new Date()
-    let timeLeft = { hours: 0, minutes: 0, seconds: 0 }
+    let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 }
 
     if (difference > 0) {
       timeLeft = {
-        hours: Math.floor(difference / (1000 * 60 * 60)),
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       }
@@ -54,6 +55,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
         </p>
       )}
       <div className="flex w-full gap-2 sm:gap-4 md:gap-8 lg:max-w-[660px] justify-around bg-ada-light-pink px-2 sm:px-4 py-2">
+        <TimeSegment label="DNI" value={timeLeft.days} />
         <TimeSegment label="GODZIN" value={timeLeft.hours} />
         <TimeSegment label="MINUT" value={timeLeft.minutes} />
         <TimeSegment label="SEKUND" value={timeLeft.seconds} />

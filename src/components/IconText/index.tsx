@@ -87,11 +87,10 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
       text: "Albo tak naprawdę nie wiesz, czego możesz oczekiwać po wynikach z reklamy?",
     },
   ]
-
-  const leftList3 = [
+  const iconTextList = [
     {
-      icon: "🔥",
-      text: "Budujesz markę osobistą i chcesz być bardziej widoczna w social mediach",
+      icon: "💼",
+      text: "Masz swój biznes - sprzedajesz produkty cyfrowe, usługi lub produkty fizyczne",
     },
     {
       icon: "👀",
@@ -99,15 +98,12 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
     },
     {
       icon: "💰",
-      text: "Chcesz wypromować swój e-book, webinar, kurs online lub rozkręcić sklep",
+      text: "Chcesz wypromować e-book, webinar lub kurs online i wreszcie przebić szklany sufit swoich przychodów",
     },
     {
-      icon: "👀",
+      icon: "🤔",
       text: "Przerobiłaś już milion kursów o reklamach, ale dalej nie wiesz, jak je prowadzić i jak na nich zarabiać",
     },
-  ]
-
-  const rightList3 = [
     {
       icon: "🤯",
       text: "Masz dość walki z algorytmem Instagrama i Facebooka",
@@ -120,12 +116,14 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
       icon: "💎",
       text: "Wiesz, że wiele osób chętnie skorzystałoby z Twojej oferty i szukasz sposobu, aby do nich dotrzeć",
     },
-
     {
       icon: "😩",
       text: "Przekopałaś już całego Facebooka w poszukiwaniu nowych klientów, ale zamiast spektakularnych efektów czujesz zmęczenie i rezygnację…",
     },
   ]
+
+  const leftList3 = iconTextList.slice(0, 4)
+  const rightList3 = iconTextList.slice(4)
 
   return (
     <section>
@@ -215,11 +213,12 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
             </div>
             <div className="max-w-[680px] px-2">
               <h2 className="text-adaStandard lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-orange text-white w-screen px-8 py-4 md:h-[84px] flex items-centerr">
-                Dzięki reklamom:
+                Dzięki reklamom w programie mentoringowym:
               </h2>
               <p className="pt-6 text-adaMin md:text-adaDesc text-ada-black">
-                🙃 Dotrzesz do nowych klientów, nawet gdy śpisz lub spędzasz
-                czas z rodziną
+                🧭 Otrzymasz kompas do działania na następne 4 miesiące:
+                poprowadzę Cię przez rękę przez świat kont reklamowych,
+                wskaźników i kreacji
               </p>
               <p className="pt-6 text-adaMin md:text-adaDesc text-ada-black">
                 💸 Zbudujesz stabilność swojej firmy dzięki lepszym wynikom
@@ -227,7 +226,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
               </p>
               <p className="pt-6 text-adaMin md:text-adaDesc text-ada-black">
                 🚀 Nauczysz się tworzyć skuteczne kampanie reklamowe bez
-                potrzeby zatrudniania agencji
+                potrzeby zatrudniania agencji i zobowiązujących umów
               </p>
               <p className="pt-6 text-adaMin md:text-adaBase font-bold text-ada-black">
                 W programie mentoringowym nauczysz się tworzyć kampanie
@@ -314,18 +313,6 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                 </div>
               </div>
               <div className="flex flex-col md:flex-row justify-between w-full">
-                <div className="max-w-[163px]">
-                  <StaticImage
-                    loading="eager"
-                    src={"../../images/coffee.svg"}
-                    alt="Ada Promis"
-                    width={163}
-                    height={199}
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
-                    class="lg:ml-[-100px]"
-                  />
-                </div>
                 <div className="max-w-[750px] md:ml-20">
                   <h2 className="text-[20px] lg:text-adaTitle font-bold  animate-bounce">
                     Dlatego...
@@ -349,8 +336,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                   loading="eager"
                   src={"../../images/ada-a2.webp"}
                   alt="Ada Promis"
-                  width={430}
-                  height={578}
+                  width={320}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                   class="lg:mr-[-200px] lg:mb-[-8px]"

@@ -69,39 +69,6 @@ const listItems8 = [
   "Przestaniesz się frustrować przepalonym budżetem",
 ]
 
-const listItems9 = [
-  <p>
-    <span className="font-bold">podkręcisz wyniki swojego biznesu</span> i
-    nauczysz się docierać do osób zainteresowanych ofertą, którą reklamujesz
-  </p>,
-  <p>
-    <span className="font-bold">
-      stworzysz bardziej zaawansowane kampanie reklamowe
-    </span>{" "}
-    i dowiesz się, jak je optymalizować, aby — a jakże! — zarabiać więcej
-  </p>,
-  <p>
-    wybierzesz najlepsze materiały do reklam
-    <span className="font-bold">
-      {" "}
-      — stworzysz chwytliwe grafiki i błyskotliwe teksty reklamowe
-    </span>
-  </p>,
-]
-
-const listItems10 = [
-  <p>
-    <span className="font-bold">zrozumiesz ścieżkę Twojego klienta</span> i
-    dowiesz się, co zrobić, jeśli kampanie nie działają
-  </p>,
-  <p>
-    zderzysz swoje wątpliwości z osobami, które mają podobne problemy w
-    zdobywaniu nowych klientów i przekonasz się, że{" "}
-    <span className="font-bold">rozwiązanie jest bliżej niż myślisz </span>—
-    wystarczy wiedzieć, gdzie go szukać!
-  </p>,
-]
-
 const plusListItems1 = [
   <p>
     <span className="font-bold">Twoje cele w kampaniach reklamowych to:</span>{" "}
@@ -672,48 +639,6 @@ const MasterclassAgenda = ({
       )}
       {version === 8 && (
         <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
-          <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
-            <ul className="flex flex-wrap gap-[10px] mx-auto mb-10">
-              {listItems9.map((item, index) => (
-                <li
-                  key={index}
-                  className="flex flex-row items-start max-w-[760px] xl:min-w-[400px] text-adaMin md:text-adaDesc"
-                >
-                  <div className="mr-3">
-                    <StaticImage
-                      src={"../../images/check2.svg"}
-                      alt="Ada Promis"
-                      placeholder="blurred"
-                      width={44}
-                      height={46}
-                      style={{ width: "44px", height: "46px" }}
-                    />
-                  </div>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <ul className="flex flex-wrap gap-[10px] max-w-[800px] mx-auto mb-10">
-              {listItems10.map((item, index) => (
-                <li
-                  key={index}
-                  className="flex flex-row items-start max-w-[760px] xl:min-w-[400px] text-adaMin md:text-adaDesc"
-                >
-                  <div className="mr-3">
-                    <StaticImage
-                      src={"../../images/check2.svg"}
-                      alt="Ada Promis"
-                      placeholder="blurred"
-                      width={44}
-                      height={46}
-                      style={{ width: "44px", height: "46px" }}
-                    />
-                  </div>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
           <div className="w-full pb-14 flex flex-col items-center">
             <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[600px] text-ada-black text-center">
               TAK mówią osoby, które uczyłam prowadzenia reklam:
@@ -811,11 +736,11 @@ const MasterclassAgenda = ({
                   </li>
                 </ul>
                 <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-orange2">
-                  2700 zł netto <br />
+                  3321 zł brutto <br />
                   <span className="font-medium">
                     Płatność w ratach: <br />
                   </span>
-                  4 x 675 zł netto
+                  4 x 850 zł brutto
                 </p>
                 <Button
                   type="button"
@@ -868,15 +793,15 @@ const MasterclassAgenda = ({
                   ))}
                   <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
                     <span className="mr-2 text-adaDesc font-bold">2</span>
-                    KONSULTACJE 1:1 
+                    KONSULTACJE 1:1
                   </li>
                 </ul>
                 <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-yellow2">
-                  3000 zł netto <br />
+                  3690 zł brutto <br />
                   <span className="font-medium">
                     Płatność w ratach: <br />
                   </span>
-                  4 x 750 zł netto
+                  4 x 920 zł brutto
                 </p>
                 <Button
                   type="button"
@@ -905,15 +830,15 @@ const MasterclassAgenda = ({
                   ))}
                   <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
                     <span className="mr-2 text-adaDesc font-bold">4</span>
-                    KONSULTACJE 1:1 
+                    KONSULTACJE 1:1
                   </li>
                 </ul>
                 <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-orange2">
-                  4000 zł netto <br />
+                  4920 zł brutto <br />
                   <span className="font-medium">
                     Płatność w ratach: <br />
                   </span>
-                  4 x 1000 zł netto
+                  4 x 1230 zł brutto
                 </p>
                 <Button
                   type="button"

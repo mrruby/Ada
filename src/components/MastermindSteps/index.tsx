@@ -145,10 +145,10 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       number: "1",
       text: (
         <>
-         Start! 
+          Start!
           <br />
           <span className="font-medium">
-          Układamy swój lejek, analizujemy ścieżkę swojego biznesu.
+            Układamy swój lejek, analizujemy ścieżkę swojego biznesu.
           </span>
         </>
       ),
@@ -160,7 +160,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           Grafiki & teksty:
           <br />
           <span className="font-medium">
-          jak je przygotować? Spotkanie z copywriterką i graficzką!
+            jak je przygotować? Spotkanie z copywriterką i graficzką!
           </span>
         </>
       ),
@@ -172,7 +172,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           Kampanie na obserwacje na IG/FB:
           <br />
           <span className="font-medium">
-          jak pozyskiwać wartościowych odbiorców?         
+            jak pozyskiwać wartościowych odbiorców?
           </span>
         </>
       ),
@@ -186,7 +186,9 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         <>
           Lead magnet i newsletter:
           <br />
-          <span className="font-medium">jak stworzyć kampanie reklamowe na zapis do newslettera?</span>
+          <span className="font-medium">
+            jak stworzyć kampanie reklamowe na zapis do newslettera?
+          </span>
         </>
       ),
     },
@@ -194,10 +196,10 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       number: "5",
       text: (
         <>
-         Strona www:
+          Strona www:
           <br />
           <span className="font-medium">
-          kampanie reklamowe na Twoją stronę internetową
+            kampanie reklamowe na Twoją stronę internetową
           </span>
         </>
       ),
@@ -208,7 +210,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         <>
           Remarketing: <br />
           <span className="font-medium">
-          wszystko, co musisz wiedzieć o najskuteczniejszych kampaniach reklamowych
+            wszystko, co musisz wiedzieć o najskuteczniejszych kampaniach
+            reklamowych
           </span>
         </>
       ),
@@ -617,7 +620,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       ),
       text: (
         <>
-          <span className="font-bold">Poradnik: “Canva </span> <br /> tips & tricks”
+          <span className="font-bold">Poradnik: “Canva </span> <br /> tips &
+          tricks”
         </>
       ),
       text2: (
@@ -644,8 +648,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       ),
       text: (
         <>
-          <span className="font-bold">Ebook: </span>{" "}
-          “Dobre praktyki na Instagramie”
+          <span className="font-bold">Ebook: </span> “Dobre praktyki na
+          Instagramie”
         </>
       ),
       text2: (
@@ -675,10 +679,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       ),
       text: (
         <>
-          <span className="font-bold">
-          E-book: 
-          </span>{" "}
-          „Slow Marketing a reklama na Facebooku i Instagramie” 
+          <span className="font-bold">E-book:</span> „Slow Marketing a reklama
+          na Facebooku i Instagramie”
         </>
       ),
       text2: (
@@ -705,10 +707,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       ),
       text: (
         <>
-          <span className="font-bold">
-          E-book: 
-          </span>{" "}
-          “Jak tworzyć materiały reklamowe dla branży beauty?” 
+          <span className="font-bold">E-book:</span> “Jak tworzyć materiały
+          reklamowe dla branży beauty?”
         </>
       ),
       text2: (
@@ -736,7 +736,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       text: (
         <>
           <span className="font-bold">
-          Pełna wsparcia i entuzjazmu społeczność przedsiębiorczych kobiet
+            Pełna wsparcia i entuzjazmu społeczność przedsiębiorczych kobiet
           </span>{" "}
         </>
       ),
@@ -873,8 +873,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       {version === 3 && (
         <section className="text-center pt-10 pb-4" id="steps">
           <h2 className="font-bold max-w-[740px] text-adaTitle lg:text-adaTitle2 text-ada-white bg-ada-orange uppercase mx-auto">
-            Nad czym będziemy
-            pracować?
+            Nad czym będziemy pracować?
           </h2>
           <div className="flex flex-col mx-auto items-center justify-center pb-10 text-ada-black md:pt-8">
             <div className="flex flex-col lg:flex-row justify-center flex-wrap xl:flex-nowrap">
@@ -903,8 +902,9 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           </div>
           <div className="pt-10 py-16">
             <div className="text-[64px]">🎁</div>
-            <div className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[710px] text-ada-black">
-            Czekają też na Ciebie bonusy, które dostarczą Ci dodatkowych narzędzi do osiągnięcia sukcesu w reklamie online:
+            <div className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-5xl text-ada-black">
+              Czekają też na Ciebie bonusy, które dostarczą Ci dodatkowych
+              narzędzi do osiągnięcia sukcesu w reklamie online:
             </div>
             <div className="flex flex-col justify-center md:flex-row gap-4 md:gap-[40px] flex-wrap text-ada-black">
               {bonusDataFirtRow3.map((feature, index) => (

@@ -400,7 +400,7 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
           <h2 className="text-adaSubtitle lg:text-adaTitle2 font-bold text-center uppercase text-ada-black">
             W programie
           </h2>
-          <div className="pt-[30px] pb-[60px] px-3 text-ada-black">
+          <div className="pt-[30px] px-3 text-ada-black">
             <VerticalTimeline>
               <VerticalTimelineElement
                 className={listItemClass}
