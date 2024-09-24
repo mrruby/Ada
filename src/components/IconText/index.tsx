@@ -211,8 +211,8 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                 quality={100}
               />
             </div>
-            <div className="max-w-[680px] px-2">
-              <h2 className="text-adaStandard lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-purple text-white w-screen px-8 py-4 md:h-[84px] flex items-center">
+            <div className="max-w-3xl px-2 ">
+              <h2 className="md:mt-40 text-adaStandard lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-purple text-white w-screen py-4 pl-4 pr-10 md:h-[84px] flex items-center">
                 Dzięki reklamom w programie mentoringowym:
               </h2>
               <p className="pt-6 text-adaMin md:text-adaDesc text-ada-black">

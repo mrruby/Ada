@@ -16,7 +16,6 @@ type IReferences = {
   title3?: boolean
   title4?: boolean
   version?: "1" | "2" | "3"
-
 }
 
 const referencesList: IReferencesList[] = [
@@ -290,10 +289,19 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
   )
 }
 
-const ReferencesMentoring = ({ title1, title2, title3, title4, version = "1" }: IReferences): JSX.Element => {
+const ReferencesMentoring = ({
+  title1,
+  title2,
+  title3,
+  title4,
+  version = "1",
+}: IReferences): JSX.Element => {
   const selectedList =
-    version === "2" ? referencesList2 :
-    version === "3" ? referencesList3 : referencesList;
+    version === "2"
+      ? referencesList2
+      : version === "3"
+      ? referencesList3
+      : referencesList
 
   return (
     <div className="pt-[40px]">
@@ -329,8 +337,8 @@ const ReferencesMentoring = ({ title1, title2, title3, title4, version = "1" }: 
       )}
       {title4 && (
         <>
-          <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-brown pb-4">
-          Z nami nauka prowadzenia reklam <br/> dla Twojego biznesu będzie wyglądać tak:
+          <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-purple-800 pb-4">
+            A przecież Twoja nauka reklam może wyglądać tak:
           </h2>
         </>
       )}

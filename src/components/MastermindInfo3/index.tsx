@@ -157,7 +157,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
   ]
 
   const listItemClass2 =
-    "text-[15px] lg:text-[1.75rem] font-bold bg-ada-yellow2 inline-block px-2 py-1"
+    "text-[15px] lg:text-[1.75rem] font-bold bg-ada-pink3 inline-block px-2 py-1"
 
   const leftProgramDetailsList3: JSX.Element[] = [
     <div key={0}>
@@ -204,7 +204,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     <div className="w-full flex flex-col px-3 items-center">
       {version === 1 && (
         <>
-          <div className="pt-[60px] lg:pt-[150px]">
+          <div className="pt-[60px] lg:pt-0">
             <h2 className="text-adaDesc lg:text-adaTitle font-bold md:w-[878px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce">
               Co dostajesz w ramach programu?
             </h2>
@@ -230,7 +230,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 2 && (
         <>
-          <div className="pt-[60px] lg:pt-[150px]">
+          <div className="pt-[60px] lg:pt-0">
             <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase">
               Co dostajesz w ramach programu?
             </h2>
@@ -292,8 +292,8 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 3 && (
         <>
-          <div className="pt-[60px] lg:pt-[150px] lg:pb-10 text-ada-black">
-            <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase">
+          <div className="pt-[60px] lg:pt-0 lg:pb-10 text-ada-black">
+            <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-purple-800 lg:mb- animate-bounce uppercase">
               Co dostajesz <br /> w ramach programu?
             </h2>
             <div className="flex flex-col md:flex-row justify-between">

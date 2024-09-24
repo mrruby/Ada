@@ -884,7 +884,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
                   number={feature.number}
                   styleText="font-bold max-w-[310px]"
                   styleParagraph="pt-4"
-                  flowerColor="yellow"
+                  flowerColor="white"
                 />
               ))}
             </div>
@@ -895,7 +895,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
                   text={feature.text}
                   number={feature.number}
                   styleText="font-bold max-w-[320px]"
-                  flowerColor="yellow"
+                  flowerColor="white"
                 />
               ))}
             </div>

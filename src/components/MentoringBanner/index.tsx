@@ -107,7 +107,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 8 && (
         <>
-          <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-brown">
+          <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-purple">
             Na spotkaniach będziesz <br />
             miała okazję poznać też:
           </h2>
@@ -116,8 +116,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
       {version === 9 && (
         <>
           <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-purple">
-            Program mentoringowy „Ogarnij swoje adsy" <br /> to bezpieczna
-            przestrzeń, w której:
+            TAK mówią osoby, które uczestniczyły w programie:
           </h2>
         </>
       )}

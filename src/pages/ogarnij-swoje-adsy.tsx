@@ -30,6 +30,7 @@ const MastermindPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <WebinarAbout version={4} />
+        <ReferencesMentoring title4 version="3" />
       </MaxWithBgColorContainer>
       <div className="h-[200px] bg-wave2 absolute top-[1700px] w-screen hidden lg:block" />
       <div className="h-[200px] bg-wave2 absolute top-[3300px] 2xl:top-[3500px] w-screen hidden lg:block" />
@@ -50,11 +51,7 @@ const MastermindPage = (): JSX.Element => {
         <MasterclassAgenda version={7} />
         <MastermindInfo3 version={3} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear2">
-        <MentoringBanner version={10} />
-      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <MasterclassAgenda version={5} />
         <MasterclassAgenda version={9} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
@@ -65,7 +62,6 @@ const MastermindPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <Team version={2} />
-        <ReferencesMentoring title4 version="3" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MasterclassFAQ version={4} />

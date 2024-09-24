@@ -194,7 +194,6 @@ const pakietStandardList = [
   "E-book „Jak tworzyć materiały reklamowe dla branży beauty?”",
   "E-book „Slow Marketing a reklama na Facebooku i Instagramie”",
   "Społeczność",
-  "Certyfikat",
 ]
 
 const minusBasicList = [
@@ -540,8 +539,8 @@ const MasterclassAgenda = ({
         </div>
       )}
       {version === 6 && (
-        <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
-          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
+        <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 text-ada-black">
+          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-purple lg:mb- animate-bounce uppercase pb-10">
             Program jest <br /> dla Ciebie, jeśli…
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
@@ -589,8 +588,8 @@ const MasterclassAgenda = ({
         </div>
       )}
       {version === 7 && (
-        <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
-          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-brown lg:mb- animate-bounce uppercase pb-10">
+        <div className="w-full flex flex-col px-3 pb-2 items-center mb-5  text-ada-black">
+          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center text-ada-purple lg:mb- animate-bounce uppercase pb-10">
             NIE jest dla Ciebie, jeśli…
           </h2>
           <div className="flex flex-col md:flex-row items-start justify-between mx-auto">
@@ -640,9 +639,6 @@ const MasterclassAgenda = ({
       {version === 8 && (
         <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
           <div className="w-full pb-14 flex flex-col items-center">
-            <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[600px] text-ada-black text-center">
-              TAK mówią osoby, które uczyłam prowadzenia reklam:
-            </h3>
             <div className="flex flex-col w-full gap-4 mb-16">
               <div className="flex flex-col md:flex-row w-full gap-4">
                 {[
@@ -729,9 +725,6 @@ const MasterclassAgenda = ({
                     </li>
                   ))}
                   <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
-                    <span className="mr-2">❌</span>Certyfikat
-                  </li>
-                  <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
                     <span className="mr-2">❌</span>KONSULTACJE 1:1
                   </li>
                 </ul>
@@ -747,7 +740,7 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purple my-2"
+                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purp my-2"
                 />
               </div>
             </div>
@@ -790,7 +783,7 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purple my-2"
+                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purp my-2"
                 />
               </div>
             </div>
@@ -827,7 +820,7 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purple my-2"
+                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purp my-2"
                 />
               </div>
             </div>
