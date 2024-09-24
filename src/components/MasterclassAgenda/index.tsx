@@ -740,7 +740,7 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purp my-2"
+                  btnStyle="uppercase text-ada-purple w-full md:tracking-[2.90px] bg-ada-orange4 my-2"
                 />
               </div>
             </div>
@@ -783,7 +783,7 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purp my-2"
+                  btnStyle="uppercase text-ada-purple w-full md:tracking-[2.90px] bg-ada-orange4 my-2"
                 />
               </div>
             </div>
@@ -820,7 +820,7 @@ const MasterclassAgenda = ({
                   text={<span className="font-bold">Chcę dołączyć!</span>}
                   url="https://koalendar.com/e/ogarnij-swoje-adsy"
                   textSize="text-adaMin md:text-adaBase"
-                  btnStyle="uppercase text-ada-white w-full md:tracking-[2.90px] bg-ada-purp my-2"
+                  btnStyle="uppercase text-ada-purple w-full md:tracking-[2.90px] bg-ada-orange4 my-2"
                 />
               </div>
             </div>

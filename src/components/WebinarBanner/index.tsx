@@ -228,25 +228,23 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 6 && (
-        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2">
+        <div className="lg:mt-[-80px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2">
           <div className="flex flex-col md:flex-row justify-between xl:max-w-[1350px] mx-auto">
             <div className="flex flex-col justify-center max-w-[900px] gap-4 md:mt-8 xl:-mt-60 mb-3 text-ada-black">
               <div className="max-w-[650px] pt-6 md:text-adaBase font-medium">
                 <p className="md:pt-40 pb-5 font-bold">
-                  Chcesz upewnić się, że ten program jest dla Ciebie?
-                  Potrzebujesz potwierdzić, czy reklamy w Twoim biznesie
-                  zadziałają?
+                Jakie są następne kroki, jeśli myślisz o dołączeniu? 
                 </p>
-                <p className="pb-5 font-bold">Masz jeszcze inne pytania?</p>
-                <p className="pb-5">
-                  Spotkaj się ze mną na wirtualną kawkę, czyli 20-30 minutowe
-                  spotkanie na Google Meets, na którym porozmawiamy o Twoim
-                  udziale w programie mentoringowym.
+                <p className="pb-5 font-bold">Jak możesz się upewnić, że program jest dla Ciebie? 
                 </p>
                 <p className="pb-5">
-                  Wirtualne kawki są obowiązkowe - chcę poznać Wasze biznesy i
-                  mieć pewność, że każda uczestniczka skorzysta podczas programu
-                  mentoringowego.
+                Spotkaj się ze mną na wirtualną kawkę, czyli 20-30 minutowe, totalnie niezobowiązujące spotkanie online, na którym porozmawiamy o Twoim udziale w programie mentoringowym. 
+                </p>
+                <p className="pb-5">
+                To spotkanie jest obowiązkowe i bezpłatne - chcę poznać Twój biznes i mieć pewność, że ja i mój zespół pomożemy Ci ogarnąć skuteczne, strategiczne i działające reklamy! 
+                </p>
+                <p className="pb-5">
+                Wystarczy, że wybierzesz termin z kalendarza poniżej! 
                 </p>
               </div>
               <div className="mt-10">
@@ -262,7 +260,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 frameborder="0"
               ></iframe>
             </div>
-            <div className="mr-[-10vw] xl:mr-[-300px] md:mt-[-300px] lg:max-w-none md:max-w-[500px]">
+            <div className="mr-[-10vw] xl:mr-[-300px] md:mt-[-250px] lg:max-w-none md:max-w-[500px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/ada-autumn.webp"}
