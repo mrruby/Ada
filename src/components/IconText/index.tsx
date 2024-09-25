@@ -200,7 +200,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
       {version === 3 && (
         <>
           <div className="flex flex-col md:flex-row md:gap-20">
-            <div className="md:mt-[-150px] md:ml-[-200px]">
+            <div className="md:mt-[-180px] md:ml-[-200px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/ada-why.webp"}
@@ -211,7 +211,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                 quality={100}
               />
             </div>
-            <div className="max-w-3xl px-2 ">
+            <div className="max-w-4xl px-2 mr-4">
               <h2 className="md:mt-40 text-adaStandard lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-purple text-white w-screen py-4 pl-4 pr-10 md:h-[84px] flex items-center">
                 Dzięki reklamom w programie mentoringowym:
               </h2>
