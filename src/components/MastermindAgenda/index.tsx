@@ -227,10 +227,10 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="left"
               >
-                <h3 className={listItemTitleClass2}>22,5 godziny spotkań!</h3>
+                <h3 className={listItemTitleClass2}>11 szkoleń wideo
+                </h3>
                 <p className={listItemDesClass}>
-                  Spotykamy się 9 razy na 2,5 godziny na Google Meets. Co
-                  tydzień przez 3 miesiące (termin do ustalenia).
+                W tym czasie tworzysz, wdrażasz i obserwujesz wyniki swoich kampanii pod moim okiem.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -240,12 +240,10 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="right"
               >
-                <h3 className={listItemTitleClass2}>temat przewodni</h3>
+                <h3 className={listItemTitleClass2}>12 godzin spotkań grupowych z ustawiania reklam
+                </h3>
                 <p className={listItemDesClass}>
-                  Każde spotkanie ma temat przewodni, który pomoże Ci stworzyć
-                  kampanie reklamowe na całej ścieżce klienta, a nie tylko na
-                  poziomie menadżera reklam. Listę tematów spotkań sprawdzisz
-                  tutaj.
+                Spotykamy się 12 razy na 1,5 godziny na Google Meets. 
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -259,10 +257,40 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="left"
               >
-                <h3 className={listItemTitleClass2}>kameralna grupa</h3>
+                <h3 className={listItemTitleClass2}>warsztaty z pisania tekstów reklamowych i warsztaty z tworzenia grafik
+                </h3>
                 <p className={listItemDesClass}>
-                  Spotykamy się w gronie 7-10 osób, aby każda z uczestniczek
-                  mogła swobodnie zabrać głos i omówić swoje case’y.
+                Specjalne spotkania z copywriterką Justyną i graficzką Dorotą, na których przećwiczysz swoje skille tworzenia kreacji reklamowych i dostaniesz bezcenny feedback.
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className={listItemClass}
+                iconStyle={{ display: "none" }}
+                contentStyle={{ background: "transparent", boxShadow: "none" }}
+                contentArrowStyle={{ display: "none" }}
+                position="right"
+              >
+                <h3 className={listItemTitleClass2}>21 godzin office hours
+                </h3>
+                <p className={listItemDesClass}>
+                Co tydzień możesz wskoczyć grupowe konsultacje i zadać dowolne pytanie. Dyżuruję ja i specjalistki z mojego zespołu (poznasz je tutaj). Dzięki office hours możesz skonsultować kampanie również pomiędzy spotkaniami tematycznymi. To czas kiedy możesz zadać pytanie na każdy temat około reklamowy.
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className={listItemClass}
+                iconStyle={{ display: "none" }}
+                contentStyle={{
+                  background: "transparent",
+                  boxShadow: "none",
+                  textAlign: "right",
+                }}
+                contentArrowStyle={{ display: "none" }}
+                position="left"
+              >
+                <h3 className={listItemTitleClass2}>temat przewodni
+                </h3>
+                <p className={listItemDesClass}>
+                Każde spotkanie ma temat przewodni, który pomoże Ci stworzyć kampanie reklamowe na całej ścieżce klienta, a nie tylko na poziomie menadżera reklam. Listę tematów spotkań sprawdzisz tutaj.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -274,10 +302,7 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
               >
                 <h3 className={listItemTitleClass2}>realne case’y</h3>
                 <p className={listItemDesClass}>
-                  Pracujemy na przykładach z życia wziętych: Twoich oraz innych
-                  uczestniczek. ❌ Dość teoretycznych przykładów, które nie mają
-                  nic wspólnego z rzeczywistością. ✅ Poznajesz różne branże i
-                  zdobywasz doświadczenie, które przekłada się na wyniki.
+                Pracujemy na przykładach z życia wziętych: Twoich oraz innych uczestniczek. ❌ Dość teoretycznych przykładów, które nie mają nic wspólnego z rzeczywistością. ✅ Poznajesz różne branże i zdobywasz doświadczenie, które przekłada się na wyniki.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -293,42 +318,7 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
               >
                 <h3 className={listItemTitleClass2}>Q&A</h3>
                 <p className={listItemDesClass}>
-                  Na każdym spotkaniu jest czas na pytania! Możesz pytać o
-                  kampanie, pokazać nam swoje konto reklamowe i dowiedzieć się,
-                  jakie rozwiązania możesz wdrożyć.
-                </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className={listItemClass}
-                iconStyle={{ display: "none" }}
-                contentStyle={{ background: "transparent", boxShadow: "none" }}
-                contentArrowStyle={{ display: "none" }}
-                position="right"
-              >
-                <h3 className={listItemTitleClass2}>nagrania ze spotkań</h3>
-                <p className={listItemDesClass}>
-                  Nagramy każde spotkanie. Zawsze możesz do niego wrócić lub
-                  nadrobić materiał później.
-                </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className={listItemClass}
-                iconStyle={{ display: "none" }}
-                contentStyle={{
-                  background: "transparent",
-                  boxShadow: "none",
-                  textAlign: "right",
-                }}
-                contentArrowStyle={{ display: "none" }}
-                position="left"
-              >
-                <h3 className={listItemTitleClass2}>audyt konta reklamowego</h3>
-                <p className={listItemDesClass}>
-                  W ramach programu czeka na Ciebie spotkanie indywidualne, na
-                  którym zrobimy audyt konta reklamowego! Możesz udostępnić
-                  ekran lub nadać mi czasowe dostępy reklamowe, a po spotkaniu
-                  dostaniesz listę zmian do wdrożenia + sugestie grup
-                  docelowych, do których warto kierować reklamy.
+                Na każdym spotkaniu jest czas na pytania! Możesz pytać o kampanie, pokazać nam swoje konto reklamowe i dowiedzieć się, jakie rozwiązania możesz wdrożyć.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -339,13 +329,10 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 position="right"
               >
                 <h3 className={listItemTitleClass2}>
-                  grupa na Facebooku <br />z czatem grupowym
+                nagrania ze spotkań
                 </h3>
                 <p className={listItemDesClass}>
-                  Jesteśmy w bieżącym kontakcie — nie musisz czekać z pytaniami
-                  do konsultacji, możesz odezwać się na wspólnej grupie na
-                  Facebooku. To miejsce na rozmowy marketingowe i biznesowe oraz
-                  networking!
+                Nagramy każde spotkanie. Zawsze możesz do niego wrócić lub nadrobić materiał później.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -360,15 +347,10 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 position="left"
               >
                 <h3 className={listItemTitleClass2}>
-                  konsultacja indywidualnA – 60 minut
+                audyt konta reklamowego
                 </h3>
                 <p className={listItemDesClass}>
-                  Do wykorzystania w dowolnym momencie trwania programu, na
-                  której omówimy wybrany przez Ciebie temat. Możemy wspólnie
-                  zajrzeć w ustawienia menadżera reklam, przygotować konto
-                  reklamowe do prowadzenia reklam, ustawić pierwszą kampanię czy
-                  przeanalizować wskaźniki uruchomionych kampanii. Opcji jest
-                  mnóstwo – Ty wybierasz!
+                W ramach programu czeka na Ciebie spotkanie indywidualne, na którym zrobimy audyt konta reklamowego! Możesz udostępnić ekran lub nadać mi czasowe dostępy reklamowe, a po spotkaniu dostaniesz listę zmian do wdrożenia + sugestie grup docelowych, do których warto kierować reklamy.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -378,17 +360,27 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="right"
               >
-                <h3 className={listItemTitleClass2}>12 godzin office hour </h3>
+                <h3 className={listItemTitleClass2}>konsultacje indywidualne</h3>
                 <p className={listItemDesClass}>
-                  Raz na tydzień podczas trwania programu w godzinach
-                  10:00-11:00 odbywa się office hour, czyli godzina wspólnych
-                  rozkmin reklamowych. Podczas office hour odpowiadamy na
-                  pytania, z którymi nie chcesz czekać do spotkania, wspólnie
-                  analizujemy kampanie, grafiki czy teksty reklamowe.
-                  <br />
-                  Na office hour zamiennie dyżurują: specjalistka od Meta adsów
-                  (czyli ja, Ada, twórczyni całego zamieszania), copywriterka
-                  Justyna i graficzka Dorota.
+                W zależności od wybranego pakietu dostajesz dostęp do konsultacji 1:1 ze mną lub specjalistkami z mojego zespołu. Omówimy Twoje reklamy, newsletter, komunikację, strategię reklamową… - temat zależy od Ciebie!
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className={listItemClass}
+                iconStyle={{ display: "none" }}
+                contentStyle={{
+                  background: "transparent",
+                  boxShadow: "none",
+                  textAlign: "right",
+                }}
+                contentArrowStyle={{ display: "none" }}
+                position="left"
+              >
+                <h3 className={listItemTitleClass2}>
+                grupa na Facebooku i dedykowany komunikator
+                </h3>
+                <p className={listItemDesClass}>
+                Jesteśmy w bieżącym kontakcie — nie musisz czekać z pytaniami do office hours, odpowiadamy w każdy dzień roboczy. To miejsca na rozmowy marketingowe i biznesowe oraz networking!
                 </p>
               </VerticalTimelineElement>
             </VerticalTimeline>

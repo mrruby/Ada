@@ -45,16 +45,6 @@ const MentoringWhy = (): JSX.Element => {
         </div>
       </div>
       <div className="flex flex-col mx-auto lg:text-adaBase text-center">
-        <p className="pb-6">
-          Pożądane umiejętności, nowi klienci, dochodowa oferta. <br />
-          <span className="font-bold">
-            Tak może wyglądać Twoja praca za 3 miesiące, ale…
-          </span>
-        </p>
-        <p className="pb-6 max-w-[860px] mx-auto">
-          ...tylko, jeśli nauczysz się prowadzić kampanie reklamowe, które
-          przyciągają odbiorców na każdym etapie lejka marketingowego!
-        </p>
         <p className="pb-20 max-w-[860px] mx-auto">
           <span className="font-bold">
             Dlatego przygotowałam dla Ciebie program „Meta Ads Masters
@@ -67,17 +57,14 @@ const MentoringWhy = (): JSX.Element => {
           type="button"
           text={
             <span className="font-bold">
-              Zapisuję się na listę osób zainteresowanych programem!
+              Yay! Chcę dołączyć!
             </span>
           }
           sectionId="zapisz-sie"
           textSize="md:text-adaSubtitle uppercase"
-          btnStyle="md:w-[810px] bg-ada-pink2 md:h-[110px] mx-auto"
+          btnStyle="md:w-[600px] bg-ada-pink2 md:h-[50px] mx-auto"
           iconCalender
         />
-        <div className="mt-16 mb-10" id="zapisz-sie">
-          <MentoringForm version={1} />
-        </div>
       </div>
       <div className="flex flex-col mx-auto text-center pt-5 md:pt-[100px]">
         <div className="text-adaBase lg:text-adaTitle font-bold lg:mb-2 lg:h-[68px] mx-auto  text-center animated-border2">

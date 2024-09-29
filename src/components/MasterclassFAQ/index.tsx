@@ -57,37 +57,41 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
 
   const leftList2: ListItem[] = [
     {
-      question: "Kiedy będą odbywać się spotkania?",
+      question: "Czy znajdę czas na udział w spotkaniach?",
       answer: (
         <>
-          ✓ Spotkania tematycznie w ramach programu mentoringowego odbywają się
-          co tydzień lub co 2 tygodnie. Terminy są elastyczne! Jeśli nie będzie
-          pasował Ci któryś z nich, grupowo przedyskutujemy zmianę na inny :)
+          ✓ Według raportu Digital 2023: Poland przeciętny użytkownik Internetu spędza w nim 6 godzin i 42 minuty dziennie, w tym 2 godziny w mediach społecznościowych. Pewnie Tobie też raz na jakiś czas zdarza się zapomnieć i spędzić kilka godzin z telefonem w ręce? ;)
           <br />
-          Raz w tygodniu widzimy się również na office hours, czyli grupowych
-          konsultacjach, na których wspólnie zaglądamy do Waszych menadżerów
-          reklam i odpowiadamy na pytania.
+          W czasie programu spotykamy się na 1,5 godziny raz na 2 tygodnie. To 30 razy mniej niż czas, który spędzasz w sieci. Przyznaj: czas na wspólnej pracy nad reklamami jest dużo lepiej wykorzystany niż godziny przeznaczone na scrollowanie Instagrama?
+        </>
+      ),
+    },
+    {
+      question: "Kiedy odbywają się spotkania?",
+      answer: (
+        <>
+          ✓ Co 2 wtorek w godzinach 12:00-13:00 odbywają się spotkania na ustawianie kampanii, na których wspólnie przechodzimy przez wszystkie ustawienia w menadżerze reklam. Spotykamy się też w każdy czwartek o 12:00-13:00 na office hour, na których omawiamy bieżące pytania i aktualne kampanie.
+          <br />
+          W zależności od pakietu masz do dyspozycji konsultacje indywidualne - termin ustalimy wspólnie.
         </>
       ),
     },
     {
       question: "Czy spotkania będą nagrywane?",
-      answer:
-        "✓ Tak, każde spotkanie będzie nagrane i udostępnione uczestniczkom spotkania. Jeśli nie możesz dołączyć na żywo, nadrobisz materiał później.",
-    },
-    {
-      question: "Kto weźmie udział w programie mentoringowym?",
       answer: (
         <>
-          ✓Program to przestrzeń dla Social Media Managerek, Specjalistek ds.
-          marketingu i Wirtualnych Asystentek. Jednym słowem: dla osób, które
-          pracują online i chcą poszerzyć zakres swoich usług o prowadzenie
-          kampanii reklamowych.
-          <br />
-          Podczas spotkań nie tylko nauczysz się prowadzić kampanie reklamowe!
-          Uczestniczki poprzednich edycji chwalą możliwość rozmowy z osobami,
-          które w codziennej pracy spotykają się z podobnymi wyzwaniami.
+          ✓ Tak, każde spotkanie będzie nagrane i udostępnione uczestniczkom spotkania. Jeśli nie możesz dołączyć na żywo, nadrobisz materiał później.
         </>
+      ),
+    },
+    {
+      question: "Dla kogo jest ten program mentoringowy?",
+      answer: (
+        <>
+          ✓ Program to przestrzeń dla social media managerek, specjalistek ds. marketingu i wirtualnych asystentek. Jednym słowem: dla osób, które pracują online i chcą poszerzyć zakres swoich usług o prowadzenie kampanii reklamowych.
+          <br />
+          Podczas spotkań nie tylko nauczysz się prowadzić kampanie reklamowe! Uczestniczki poprzednich edycji chwalą możliwość rozmowy z osobami, które w codziennej pracy spotykają się z podobnymi wyzwaniami.
+          </>
       ),
     },
   ]
@@ -97,31 +101,18 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "Czy na pewno będzie czas dla mnie?",
       answer: (
         <>
-          ✓ Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
-          przedstawić swój problem, zadać pytania. Spotykamy się w grupie
-          maksymalnie 7 osób, aby każdy znalazł czas dla siebie. <br /> ❌ To
-          NIE są spotkania, na których jedna osoba mówi, a druga słucha. <br />{" "}
-          ✅ To są spotkania, na których każdy może zabrać głos i znaleźć
-          przestrzeń dla siebie.
+          ✓ Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i przedstawić swój problem, zadać pytania. Spotykamy się w kameralnych grupach, aby każdy znalazł czas na swoje pytania i pokazanie swojego konta reklamowego.
+          <br /> ❌ To NIE są spotkania, na których jedna osoba mówi, a druga słucha. <br />✅ To są spotkania, na których każdy może zabrać głos i znaleźć przestrzeń dla siebie.
         </>
       ),
     },
     {
-      question: "Nie umiem w techniczne rzeczy, czy dam sobie radę?",
+      question: "Nie umiem w rzeczy techniczne, czy dam sobie radę?",
       answer: (
         <>
-          ✓ Oczywiście! W czasie programu przekonasz się, że techniczne tematy
-          nie są takie straszne, jak się wydają. Pierwsze spotkanie w całości
-          poświęcimy tematom dotyczącym ustawień menadżera reklam oraz dobrym
-          praktykom we współpracy z klientem. Dowiesz się, jak sprawnie ustawić
-          kwestie techniczne i wytłumaczyć klientowi, czego od niego
-          potrzebujesz.
+          ✓ Oczywiście! W czasie programu przekonasz się, że techniczne tematy nie są takie straszne, jak się wydają. Pierwsze spotkanie w całości poświęcimy tematom dotyczącym ustawień menadżera reklam oraz dobrym praktykom we współpracy z klientem. Dowiesz się, jak sprawnie ustawić kwestie techniczne i wytłumaczyć klientowi, czego od niego potrzebujesz.
           <br />
-          <span className="font-bold">
-            Zawsze możesz też wpaść na office hour,
-          </span>{" "}
-          czyli konsultacje grupowe, które odbywają się raz w tygodniu, aby
-          rozwiać wątpliwości i zyskać wsparcie w technicznych tematach!
+          Zawsze możesz też wpaść na office hour, czyli konsultacje grupowe, które odbywają się raz w tygodniu, aby rozwiać wątpliwości i zyskać wsparcie w technicznych tematach!
         </>
       ),
     },
@@ -129,17 +120,35 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "Jak mogę sfinansować udział w programie?",
       answer: (
         <>
-          ✓ Jeśli pracujesz na etacie, Twój udział w programie może sfinansować
-          pracodawca!{" "}
+          ✓ Jeśli pracujesz na etacie, Twój udział w programie może sfinansować pracodawca!{" "}
           <a
             href="https://drive.google.com/file/d/1WlAQAXhvwK5eS7hOqsJV1cOjAwpaMqRQ/view"
             className="underline"
           >
             Pobierz
           </a>{" "}
-          gotowy wniosek z informacjami o programie i wynegocjuj pieniądze na
-          swój rozwój.
+          gotowy wniosek z informacjami o programie i wynegocjuj pieniądze na swój rozwój.
         </>
+      ),
+    },
+    {
+      question: "Mam inne pytanie, gdzie mogę je zadać?",
+      answer: (
+        <>
+          ✓ Idealną okazją do zadawania pytań i rozmowy o Twoich potrzebach i oczekiwaniach są wirtualne kawki! Możesz też napisać do mnie na maila:
+          <a
+            href="mailto:adrianna@getbold.agency"
+            className="underline"
+          >
+            adrianna@getbold.agency
+          </a>{" "}
+          lub na Instagramie   <a
+            href="https://www.instagram.com/adapromis/"
+            className="underline"
+          >
+            @adapromis
+          </a>{" "}.
+          </>
       ),
     },
   ]
@@ -365,7 +374,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">
             <div className="pt-[60px] lg:pt-[76px]">
               <h3 className="text-adaSubtitle lg:text-adaTitle text-ada-grey uppercase text-center font-bold">
-                Masz pytania?
+                Masz pytania?  My mamy odpowiedzi!
               </h3>
               <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce text-center mx-auto">
                 FAQ
@@ -389,18 +398,6 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               aby przez kolejne miesiące widzieć systematyczny wzrost wyników,
               czy czekasz do kolejnej edycji?
             </h4>
-            <Button
-              type="button"
-              text={
-                <span className="font-bold uppercase">
-                  Wyślij mi informacje o kolejnej edycji programu!
-                </span>
-              }
-              sectionId="zostaw-maila"
-              textSize="md:text-adaSubtitleSecondary"
-              btnStyle="md:w-[810px] bg-ada-pink2"
-              iconCalender
-            />
           </div>
           <div className="flex flex-col items-center text-center gap-6 pb-10 md:pb-[118px]">
             <h3 className="md:text-adaSubtitle max-w-[1024px] mx-auto font-medium pt-[90px]">
@@ -415,6 +412,9 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               textSize="md:text-adaSubtitle"
               btnStyle="md:w-[340px] bg-ada-pink2"
             />
+            <h3 className="md:text-adaSubtitle max-w-[1024px] mx-auto font-medium pt-[90px]">
+                    PS Pamiętaj, że inwestycja w siebie to najlepsza inwestycja. Twoi przyszli klienci już na Ciebie czekają!
+            </h3>
           </div>
         </>
       )}

@@ -6,23 +6,23 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
   const leftList = [
     {
       icon: "🔥",
-      text: "Słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
+      text: "słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
     },
     {
       icon: "👶",
-      text: "Ustawiasz już pierwsze kampanie dla swoich klientów, ale czujesz, że błądzisz jak dziecko we mgle?",
+      text: "ustawiasz już pierwsze kampanie dla swoich klientów, ale czujesz, że błądzisz jak dziecko we mgle?",
     },
     {
       icon: "💸",
-      text: "Ogarniasz podstawy, ale czujesz, że budżet reklamowy trochę przecieka Ci przez palce?",
+      text: "ogarniasz podstawy, ale czujesz, że budżet reklamowy trochę przecieka Ci przez palce?",
     },
     {
       icon: "💎",
-      text: "Chciałabyś dotrzeć do nowych odbiorców i skutecznie przekonać ich do skorzystania z oferty, którą reklamujesz?",
+      text: "chciałabyś dotrzeć do nowych odbiorców i skutecznie przekonać ich do skorzystania z oferty, którą reklamujesz?",
     },
     {
       icon: "👀",
-      text: "Słyszysz narzekanie, że zasięgi powinny być większe? W głębi duszy czujesz, że sam zasięg nie wystarczy? ",
+      text: "słyszysz narzekanie, że zasięgi powinny być większe? W głębi duszy czujesz, że sam zasięg nie wystarczy?",
     },
   ]
 
@@ -33,19 +33,19 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
     },
     {
       icon: "👀",
-      text: "Potrzebujesz spojrzenia z zewnątrz i wyjścia z bańki marketingowej, do której trafiłaś?",
+      text: "potrzebujesz spojrzenia z zewnątrz i wyjścia z bańki marketingowej, do której trafiłaś?",
     },
     {
       icon: "‍👩‍🎓",
-      text: "Chcesz się rozwijać, ale kursy video i e-booki nie pozwalają Ci na konfrontowanie wiedzy z wynikami oraz przemyślaną praktykę?",
+      text: "chcesz się rozwijać, ale kursy video i e-booki nie pozwalają Ci na konfrontowanie wiedzy z wynikami oraz przemyślaną praktyką?",
     },
     {
       icon: "💰",
-      text: "Chcesz tworzyć skuteczne i bardziej zaawansowane lejki reklamowe, za które Twoi klienci będą Cię świetnie wynagradzać?",
+      text: "chcesz tworzyć skuteczne i bardziej zaawansowane lejki reklamowe, za które Twoi klienci będą Cię świetnie wynagradzać?",
     },
     {
       icon: "👀",
-      text: "Chcesz wiedzieć, jak sprawić, aby oprócz dotarcia do klienta wywołać akcję?",
+      text: "chcesz wiedzieć, jak sprawić, aby oprócz dotarcia do klienta wywołać akcję?",
     },
   ]
 
@@ -128,7 +128,10 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
   return (
     <section>
       {version === 1 && (
-        <div className="mx-auto pb-10 mt-10">
+        <div className="mx-auto pb-10 mt-10" id="offert">
+          <h2 className="text-adaStandard lg:text-adaSubtitleThird font-bold bg-white shadow-xl lg:max-w-7xl px-10 mx-auto flex items-center justify-center">
+          Zastanawiasz się czy Meta Ads Masters Mentoring jest dla Ciebie? A czy…
+          </h2>
           <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
             <ul className="gap-10 md:gap-[120px] ">
               {leftList.map((item, index) => (
