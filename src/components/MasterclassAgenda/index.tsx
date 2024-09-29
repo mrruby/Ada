@@ -196,6 +196,24 @@ const pakietStandardList = [
   "Społeczność",
 ]
 
+const pakieBasicList = [
+  "11 szkoleń wideo",
+  "18 godzin szkoleń grupowych z tworzenia reklam",
+  "warsztaty z pisania tekstów reklamowych i warsztaty z tworzenia grafik",
+  "21 spotkań grupowych office hours",
+  "bez konsultacji",
+]
+
+const pakietProList = [
+  "11 szkoleń wideo",
+  "18 godzin szkoleń grupowych z tworzenia reklam",
+  "warsztaty z pisania tekstów reklamowych i warsztaty z tworzenia grafik",
+  "21 spotkań grupowych office hours",
+  "4 x konsultacje 1:1",
+  "spotkania mastermind (udział w maksymalnie 4 - osobowych grupach)",
+  "certyfikat uczestnictwa",
+]
+
 const minusBasicList = [
   "Sesja Q&A na żywo",
   "Konsultacja 1:1 na Google Meets (60 minut)",
@@ -825,6 +843,100 @@ const MasterclassAgenda = ({
               </div>
             </div>
           </div>
+        </div>
+      )}
+      {version === 10 && (
+        <div
+          className="w-full flex flex-col px-3 py-2 items-center mb-3 md:mb-[100px] md:pt-12"
+          id="offert"
+        >
+          <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center animate-bounce uppercase pb-2">
+            Jak dołączyć?
+          </h2>
+          <h3 className="text-adaDesc font-bold text-center animate-bounce uppercase pb-10">
+            Wybierz dla siebie pakiet uczestnictwa, który najbardziej Ci
+            odpowiada:
+          </h3>
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="flex flex-col md:flex-row gap-10 text-ada-black">
+              <div className="max-w-[415px] flex flex-col">
+                <h3 className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-purple text-ada-white py-2">
+                  Pakiet <br />
+                  Basic
+                </h3>
+                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-purple text-ada-white">
+                  {pakieBasicList.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex flex-row text-adaMin md:text-adaStandard font-medium"
+                    >
+                      <div className="mr-2">✅</div>
+                      {item}
+                    </li>
+                  ))}
+                  <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
+                    <span className="mr-2">❌</span>bez konsultacji
+                  </li>
+                </ul>
+                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-purple text-ada-white">
+                760 zł x 6 
+                </p>
+                <Button
+                  type="button"
+                  text={<span className="font-bold">Chcę dołączyć!</span>}
+                  url="https://koalendar.com/e/ogarnij-swoje-adsy"
+                  textSize="text-adaMin md:text-adaBase"
+                  btnStyle="uppercase text-ada-purple w-full md:tracking-[2.90px] bg-ada-orange4 my-2"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-10 text-ada-black relative">
+              <div className="max-w-[415px] flex flex-col md:mx-8">
+                <div className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-purple text-ada-white py-2 ">
+                  <h3>
+                    Pakiet <br />
+                    Pro
+                  </h3>
+                </div>
+                <ul className="flex flex-col gap-[10px] mx-auto my-2 p-5 border-black border-[1px] bg-ada-purple text-ada-white">
+                  {pakietProList.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex flex-row text-adaMin md:text-adaStandard font-medium"
+                    >
+                      <div className="mr-2">✅</div>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-purple text-ada-white">
+                980 zł x 6
+                </p>
+                <Button
+                  type="button"
+                  text={<span className="font-bold">Chcę dołączyć!</span>}
+                  url="https://koalendar.com/e/ogarnij-swoje-adsy"
+                  textSize="text-adaMin md:text-adaBase"
+                  btnStyle="uppercase text-ada-purple w-full md:tracking-[2.90px] bg-ada-orange4 my-2"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="pt-20">
+            <p className="lg:text-adaDesc font-bold text-center animate-bounce pb-10">
+            Zastanawiasz się, który pakiet wybrać?
+          </p>
+          <p className="lg:text-adaDesc text-center animate-bounce pb-10">
+             Chcesz upewnić się, że ten program jest dla Ciebie? Potrzebujesz potwierdzić, czy reklamy w Twoim biznesie zadziałają?         
+          </p>
+          <p className="lg:text-adaDesc text-center animate-bounce pb-10">
+          Masz jeszcze inne pytania?          
+          </p>
+          <p className="lg:text-adaDesc text-center animate-bounce pb-10">
+          Spotkaj się ze mną na wirtualną kawkę, czyli 20-30 minutowe spotkanie na Google Meets, na którym porozmawiamy o Twoim udziale w programie mentoringowym.          </p>
+          <p className="lg:text-adaDesc text-center animate-bounce pb-10">
+          Wirtualne kawki są obowiązkowe - chcę poznać Wasze biznesy i mieć pewność, że każda uczestniczka skorzysta podczas programu mentoringowego.          </p>
+            </div>
         </div>
       )}
     </>

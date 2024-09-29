@@ -7,24 +7,23 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
     <div className="mx-auto px-3 py-10 flex flex-col text-center">
       {version === 1 && (
         <>
-          <TypingAnimation
-            text="Wiesz, jak to działa, prawda?"
-            textStyle="md:text-adaTitle3 text-ada-white uppercase font-bold"
-          />
+          <h2 className="md:text-adaTitle text-ada-white uppercase font-bold">
+              Jeśli odpowiedziałaś „TAK” na którekolwiek z tych pytań, Meta Ads Masters Mentoring jest właśnie dla Ciebie!
+          </h2>
+          <p className="md:pt-6 max-w-[1000px] mx-auto md:text-adaBase font-medium">
+          Meta Ads Masters Mentoring to intensywny, 6-miesięczny program transformacyjny, stworzony z myślą o marketerkach i wirtualnych asystentkach, które chcą wznieść swoje umiejętności reklamowe na nowy poziom. To nie jest zwykły kurs online - to kompleksowe doświadczenie edukacyjne, które łączy w sobie:
+          </p>
           <ul className="md:pt-6 max-w-[800px] mx-auto md:text-adaBase font-medium">
-            <li className="pb-4">
-              🙃 Pracujesz jako marketerka na etacie lub freelance i chcesz, aby
-              Twoi klienci byli zadowoleni?
-            </li>
-            <li className="pb-4">
-              💸 Chcą pozyskać dla siebie nowych klientów, bo oni oznaczają dla
-              nich dodatkowy zysk, a dla Ciebie premię?
-            </li>
-            <li>
-              🚀 Możesz zapewnić im rozgłos i konwersje dzięki przemyślanym
-              reklamom!
-            </li>
+            <li className="pb-2">● praktyczną wiedzę </li>
+            <li className="pb-2">● indywidualne podejście </li>
+            <li className="pb-2">● realne doświadczenie </li>
+            <li className="pb-2">● wsparcie społeczności </li>
+            <li className="pb-2">● ciągły rozwój </li>
+            <li className="pb-2">● multidyscyplinarne podejście </li>
+            <li className="pb-2">● ponadprzeciętne wyniki </li>
           </ul>
+          <p className="md:pt-6 max-w-[1000px] mx-auto md:text-adaBase font-medium">
+          Po ukończeniu programu będziesz gotowa, aby projektować i prowadzić skuteczne kampanie reklamowe oparte na solidnych fundamentach i sprawdzonych technikach.          </p>
         </>
       )}
       {version === 2 && (

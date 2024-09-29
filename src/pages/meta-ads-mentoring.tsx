@@ -17,6 +17,8 @@ import MasterclassFAQ from "components/MasterclassFAQ"
 import IconText from "components/IconText"
 import Opinions from "components/Opinions"
 import MentoringForm from "components/MentoringForm"
+import Team from "components/Team"
+import MasterclassAgenda from "components/MasterclassAgenda"
 
 const MentoringPage = (): JSX.Element => {
   return (
@@ -60,6 +62,12 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <MentoringAbout />
       </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+        <MentoringBanner version={8} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <Team version={2} />
+      </MaxWithBgColorContainer> 
       <MaxWithBgColorContainer>
         <ReferencesMentoring title1 />
       </MaxWithBgColorContainer>
@@ -69,15 +77,12 @@ const MentoringPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <MastermindInfo3 version={2} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MastermindPrice version={2} />
+      <MaxWithBgColorContainer>
+        <MasterclassAgenda version={10} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MasterclassFAQ version={2} />
       </MaxWithBgColorContainer>
-      <div className="mt-16 mb-10" id="zostaw-maila">
-        <MentoringForm version={1} />
-      </div>
     </Layout>
   )
 }

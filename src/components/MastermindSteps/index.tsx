@@ -76,20 +76,19 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         </>
       ),
     },
+  ]
+
+  const featuresDataSecondRow2 = [
     {
       number: "5",
       text: (
         <>
-          Teksty: <br />
-          <span className="font-medium">
-            jak pozyskiwać wartościowych odbiorców?
-          </span>
+          Teksty:
+          <br />
+          <span className="font-medium">jak pozyskiwać wartościowych odbiorców?</span>
         </>
       ),
     },
-  ]
-
-  const featuresDataSecondRow2 = [
     {
       number: "6",
       text: (
@@ -104,11 +103,10 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       number: "7",
       text: (
         <>
-          Lead magnet i newsletter:
+          Bonus:
           <br />
           <span className="font-medium">
-            jak stworzyć kampanie reklamowe na zapis do newslettera?
-          </span>
+          jak tworzyć video reklamowe, które przyciąga uwagę?</span>
         </>
       ),
     },
@@ -116,24 +114,54 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       number: "8",
       text: (
         <>
-          Konwersje <br />
+         Lead magnet i newsletter: <br />
           <span className="font-medium">
-            kampanie na www i kampanie sprzedażowe{" "}
+          jak stworzyć kampanie reklamowe na zapis do newslettera?
+          </span>
+        </>
+      ),
+    },
+  ]
+
+  const featuresDataThirdRow3 = [
+    {
+      number: "9",
+      text: (
+        <>
+          Konwersje:
+          <br />
+          <span className="font-medium">kampanie na www i kampanie sprzedażowe</span>
+        </>
+      ),
+    },
+    {
+      number: "10",
+      text: (
+        <>
+          Kampanie reklamowe z celem kontakt 
+          <br />
+          <span className="font-medium">
+          - pozyskanie nr telefonów/wiadomości/leadów
           </span>
         </>
       ),
     },
     {
-      number: "9",
+      number: "11",
       text: (
         <>
           Optymalizacja: <br />
           <span className="font-medium">
-            co robić, gdy kampania nie działa i na jakie wskaźniki zwrócić
-            uwagę? +{" "}
-          </span>{" "}
-          <br />
-          Automatyzacje
+          co robić, gdy kampania nie działa i na jakie wskaźniki zwrócić uwagę?
+          </span>
+        </>
+      ),
+    },
+    {
+      number: "12",
+      text: (
+        <>
+         Automatyzacje <br />
           <span className="font-medium"> w kampaniach reklamowych</span>
         </>
       ),
@@ -417,12 +445,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       text: (
         <>
           <span className="font-bold">
-            Certyfikat ukończenia programu dla każdej uczestniczki!
+          Pełna wsparcia i entuzjazmu społeczność przedsiębiorczych kobiet. Wartość: bezcenna!
           </span>
-          <br />
-          Warunkiem otrzymania certyfikatu jest obecność na co najmniej 4
-          spotkaniach w środy i ustawienie każdego omawianego na programie
-          mentoringowym typu kampanii.
         </>
       ),
     },
@@ -832,6 +856,17 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
             </div>
             <div className="flex flex-col lg:flex-row justify-center flex-wrap mt-10">
               {featuresDataSecondRow2.map((feature, index) => (
+                <FeatureBox
+                  key={index}
+                  text={feature.text}
+                  number={feature.number}
+                  styleText="font-bold max-w-[320px]"
+                  flowerColor="white"
+                />
+              ))}
+            </div>
+            <div className="flex flex-col lg:flex-row justify-center flex-wrap mt-10">
+              {featuresDataThirdRow3.map((feature, index) => (
                 <FeatureBox
                   key={index}
                   text={feature.text}

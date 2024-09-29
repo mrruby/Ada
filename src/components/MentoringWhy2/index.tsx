@@ -63,36 +63,9 @@ const MentoringWhy2 = (): JSX.Element => {
   return (
     <section id="solution">
       <div className="flex flex-col items-center text-center">
-        <StaticImage
-          loading="eager"
-          src={"../../images/ada_about2.webp"}
-          alt="Ada Promis - hero"
-          placeholder="blurred"
-          width={380}
-          height={380}
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-        />
-        <h3 className="md:text-adaSubtitleThird font-bold max-w-[940px] mx-auto my-6">
-          <span className="text-ada-pink3">
-            Rozwiązaniem jest program mentoringowy{" "}
-          </span>
-          <br />
-          „Meta Ads Masters Mentoring!”
-        </h3>
-        <StaticImage
-          loading="eager"
-          src={"../../images/arrowdown.svg"}
-          alt=""
-          placeholder="blurred"
-          width={56}
-          height={48}
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-        />
-        <div className="text-adaDesc lg:text-adaTitle font-bold lg:h-[68px] lg:mt-20 mx-auto  text-center animated-border lg:mb-2">
+        <div className="text-adaDesc lg:text-adaTitle font-bold lg:mt-20 mx-auto  text-center lg:mb-2">
           <h2 className="z-10 sticky px-2">
-            To bezpieczna przestrzeń, w której:
+          Gdy dołączysz do programu mentoringowego Meta Ads Masters Mentoring. To bezpieczna przestrzeń, w której:          
           </h2>
         </div>
         <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4 pb-10 px-3">

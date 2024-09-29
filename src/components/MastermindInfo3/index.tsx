@@ -114,38 +114,25 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
       <span className="font-bold">9 spotkań</span> w czasie rzeczywistym
       <span className="font-bold">
         {" "}
-        po 2,5 godziny o łącznej wartości (cena w przygotowaniu) złotych
+        w czasie rzeczywistym po 2,5 godziny
       </span>
     </span>,
     <span key={1}>
-      <span className="font-bold">60-minutowa konsultacja indywidualna</span> do
-      wykorzystania w dowolnym momencie trwania kampanii{" "}
-      <span className="font-bold">
-        o wartości (cena w przygotowaniu) złotych
+      <span>konsultacje indywidualne do wykorzystania w dowolnym momencie trwania programu (w zależności od pakietu)
       </span>
     </span>,
     <span key={2}>
-      <span className="font-bold">bieżący kontakt i wsparcie na grupie</span> na
-      Facebooku oraz czacie na Messegerze lub Instagramie (kanał do ustalenia w
-      pierwszym tygodniu trwania programu)
-      <span className="font-bold">
-        {" "}
-        o wartości (cena w przygotowaniu) złotych
+      <span>bieżący kontakt i wsparcie na grupie na Facebooku oraz dedykowanym komunikatorze 
       </span>
     </span>,
   ]
   const rightProgramDetailsList2: JSX.Element[] = [
     <span key={0}>
-      <span className="font-bold">12 godzin office hour, </span>
-      czyli grupowych konsultacji reklamowych{" "}
-      <span className="font-bold">
-        o łącznej wartości (cena w przygotowaniu) złotych
+      <span>21 godzin office hour, czyli grupowych konsultacji reklamowych 
       </span>
     </span>,
     <span key={1}>
-      <span className="font-bold">
-        6 bonusów o łącznej wartości (cena w przygotowaniu) złotych
-      </span>
+      7 bonusów o łącznej wartości ponad 1000 zł złotych
       <br />
     </span>,
     <span key={2}>
@@ -230,9 +217,42 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 2 && (
         <>
+            <div className="pt-[60px] lg:pt-[76px] pb-[100px]">
+            <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase max-w-[500px] mx-auto">
+              W programie
+            </h2>
+            <div className="flex flex-col md:flex-row justify-between pt-4">
+              <ul className="lg:max-w-[500px] pt-6">
+                {leftProgramDetailsList2.map((item, index) => (
+                  <div className="flex gap-4">
+                    <span className="text-[44px] font-extrabold">&#10003;</span>
+                    <li key={index} className={listItemClass}>
+                      {item}
+                    </li>
+                  </div>
+                ))}
+              </ul>
+              <ul className="lg:max-w-[500px] pt-6">
+                {rightProgramDetailsList2.map((item, index) => (
+                  <div className="flex gap-4">
+                    <span className="text-[44px] font-extrabold">&#10003;</span>
+                    <li key={index} className={listItemClass}>
+                      {item}
+                    </li>
+                  </div>
+                ))}
+              </ul>
+            </div>
+            <p className="text-[15px] lg:text-adaDesc leading-tight font-medium py-2 m-auto">
+            ...abyś lepiej niż kiedykolwiek zadbała o swoje zarobki i biznesy swoich klientów!
+            </p>
+          </div>
           <div className="pt-[60px] lg:pt-0">
             <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase">
-              Co dostajesz w ramach programu?
+            Co zyskasz, uczestnicząc
+            </h2>
+            <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase">
+            w Meta Ads Masters Mentoring?
             </h2>
             <div className="flex flex-col md:flex-row justify-between">
               <ul className="lg:max-w-[500px] pt-6">
@@ -260,33 +280,9 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
                 ))}
               </ul>
             </div>
-          </div>
-          <div className="pt-[60px] lg:pt-[76px] pb-[100px]">
-            <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase max-w-[500px] mx-auto">
-              W programie
-            </h2>
-            <div className="flex flex-col md:flex-row justify-between pt-4">
-              <ul className="lg:max-w-[500px] pt-6">
-                {leftProgramDetailsList2.map((item, index) => (
-                  <div className="flex gap-4">
-                    <span className="text-[44px] font-extrabold">&#10003;</span>
-                    <li key={index} className={listItemClass}>
-                      {item}
-                    </li>
-                  </div>
-                ))}
-              </ul>
-              <ul className="lg:max-w-[500px] pt-6">
-                {rightProgramDetailsList2.map((item, index) => (
-                  <div className="flex gap-4">
-                    <span className="text-[44px] font-extrabold">&#10003;</span>
-                    <li key={index} className={listItemClass}>
-                      {item}
-                    </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
+            <p className="text-[15px] lg:text-adaDesc leading-tight font-medium py-2 m-auto">
+            …i zaczniesz zarabiać lepsze pieniądze, pracując mądrzej, a nie więcej!
+            </p>
           </div>
         </>
       )}
