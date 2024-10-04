@@ -50,16 +50,12 @@ const MentoringWhy = (): JSX.Element => {
             Dlatego przygotowałam dla Ciebie program „Meta Ads Masters
             Mentoring”{" "}
           </span>
-          podczas którego w 3 miesiące nauczysz się, jak prowadzić skuteczne
+          podczas którego w 6 miesięcy nauczysz się, jak prowadzić skuteczne
           kampanie reklamowe. 🚀
         </p>
         <Button
           type="button"
-          text={
-            <span className="font-bold">
-              Yay! Chcę dołączyć!
-            </span>
-          }
+          text={<span className="font-bold">Yay! Chcę dołączyć!</span>}
           sectionId="zapisz-sie"
           textSize="md:text-adaSubtitle uppercase"
           btnStyle="md:w-[600px] bg-ada-pink2 md:h-[50px] mx-auto"

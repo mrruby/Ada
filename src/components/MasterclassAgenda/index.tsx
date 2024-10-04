@@ -3,6 +3,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import BuyChillButton from "components/BuyChillButton"
 import CountdownTimer from "helpers/CountdownTimer"
+import OpinionVideos from "components/OpinionVideos"
+import WebinarBanner from "components/WebinarBanner"
 
 const listItems = [
   "Ada, ile czasu muszę przeznaczyć na udział w 3-miesięcznym programie?",
@@ -201,7 +203,6 @@ const pakieBasicList = [
   "18 godzin szkoleń grupowych z tworzenia reklam",
   "warsztaty z pisania tekstów reklamowych i warsztaty z tworzenia grafik",
   "21 spotkań grupowych office hours",
-  "bez konsultacji",
 ]
 
 const pakietProList = [
@@ -657,50 +658,9 @@ const MasterclassAgenda = ({
       {version === 8 && (
         <div className="w-full flex flex-col px-3 pb-2 items-center mb-5 pt-4 md:pt-12 text-ada-black">
           <div className="w-full pb-14 flex flex-col items-center">
-            <div className="flex flex-col w-full gap-4 mb-16">
-              <div className="flex flex-col md:flex-row w-full gap-4">
-                {[
-                  {
-                    src: "Z1kNvVbH0Fo?si=Cy50UinrlhTXrsrt",
-                    title: "Opinia Darii",
-                  },
-                  {
-                    src: "J4kR8n9RFL0?si=bln8IYpvFBcSFqKE",
-                    title: "Opinia Izy",
-                  },
-                  {
-                    src: "Sn_ABVhbia0?si=w0U17jQsCyyrq15e",
-                    title: "Opinia Emili",
-                  },
-                  {
-                    src: "nLC4Ak_uQNA?si=AcsToMv-vdQsw3jd",
-                    title: "Opinia Ani",
-                  },
-                  {
-                    src: "JCRyTa6yyj8?si=37-xABtP7b0ufhWY",
-                    title: "Opinia Pauliny",
-                  },
-                  {
-                    src: "ZPS6rnQovOM?si=Rg0TT2rjhmSK6ylI",
-                    title: "Opinia Magdy",
-                  },
-                ].map((video, index) => (
-                  <div key={index} className="w-full md:w-1/6">
-                    <div className="relative pb-[177.78%] h-0 overflow-hidden max-w-full">
-                      <iframe
-                        src={`https://www.youtube.com/embed/${video.src}`}
-                        title={video.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="absolute top-0 left-0 w-full h-full md:w-full md:h-full sm:w-3/4 sm:h-3/4"
-                      ></iframe>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <OpinionVideos />
             <h3 className="md:text-adaSubtitle py-3 px-10 font-bold mx-auto mb-14 max-w-[710px] text-ada-black text-center">
-              To jak, dołączasz do programu „Ogarnij swoje adsy!” i robisz krok
+              To jak, dołączasz do programu „Ogarnij swoje adsy!" i robisz krok
               w stronę zdobywania nowych klientów dzięki kampaniom reklamowym?
             </h3>
             <Button
@@ -876,21 +836,22 @@ const MasterclassAgenda = ({
                   ))}
                   <li className="flex flex-row text-adaMin md:text-adaStandard font-medium">
                     <span className="mr-2">❌</span>bez konsultacji
+                    indywidualnych
                   </li>
                 </ul>
                 <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-purple text-ada-white">
-                760 zł x 6 
+                  760 zł x 6
                 </p>
                 <Button
                   type="button"
                   text={<span className="font-bold">Chcę dołączyć!</span>}
-                  url="https://koalendar.com/e/ogarnij-swoje-adsy"
+                  url="https://www.mailingr.co/c/meta-ads-masters-basic-YeW7"
                   textSize="text-adaMin md:text-adaBase"
                   btnStyle="uppercase text-ada-purple w-full md:tracking-[2.90px] bg-ada-orange4 my-2"
                 />
               </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-10 text-ada-black relative">
+            <div className="flex flex-col md:flex-row gap-10 text-ada-black relative mb-60">
               <div className="max-w-[415px] flex flex-col md:mx-8">
                 <div className="text-adaMin md:text-adaBase lg:text-adaSubtitle uppercase w-full text-center font-bold border-black border-[1px] bg-ada-purple text-ada-white py-2 ">
                   <h3>
@@ -910,33 +871,18 @@ const MasterclassAgenda = ({
                   ))}
                 </ul>
                 <p className="text-center font-bold text-adaMin md:text-adaStandard uppercase p-2 border-black border-[1px] bg-ada-purple text-ada-white">
-                980 zł x 6
+                  980 zł x 6
                 </p>
                 <Button
                   type="button"
                   text={<span className="font-bold">Chcę dołączyć!</span>}
-                  url="https://koalendar.com/e/ogarnij-swoje-adsy"
+                  url="https://www.mailingr.co/c/meta-ads-masters-mentoring-pro-N9Nw"
                   textSize="text-adaMin md:text-adaBase"
                   btnStyle="uppercase text-ada-purple w-full md:tracking-[2.90px] bg-ada-orange4 my-2"
                 />
               </div>
             </div>
           </div>
-          <div className="pt-20">
-            <p className="lg:text-adaDesc font-bold text-center animate-bounce pb-10">
-            Zastanawiasz się, który pakiet wybrać?
-          </p>
-          <p className="lg:text-adaDesc text-center animate-bounce pb-10">
-             Chcesz upewnić się, że ten program jest dla Ciebie? Potrzebujesz potwierdzić, czy reklamy w Twoim biznesie zadziałają?         
-          </p>
-          <p className="lg:text-adaDesc text-center animate-bounce pb-10">
-          Masz jeszcze inne pytania?          
-          </p>
-          <p className="lg:text-adaDesc text-center animate-bounce pb-10">
-          Spotkaj się ze mną na wirtualną kawkę, czyli 20-30 minutowe spotkanie na Google Meets, na którym porozmawiamy o Twoim udziale w programie mentoringowym.          </p>
-          <p className="lg:text-adaDesc text-center animate-bounce pb-10">
-          Wirtualne kawki są obowiązkowe - chcę poznać Wasze biznesy i mieć pewność, że każda uczestniczka skorzysta podczas programu mentoringowego.          </p>
-            </div>
         </div>
       )}
     </>

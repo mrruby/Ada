@@ -14,6 +14,7 @@ import WebinarAbout from "components/WebinarAbout"
 import WebinarBanner from "components/WebinarBanner"
 import MastermindAgenda from "components/MastermindAgenda"
 import CountdownTimer from "helpers/CountdownTimer"
+import NextSteps from "components/NextSteps"
 
 const MastermindPage = (): JSX.Element => {
   return (
@@ -55,7 +56,7 @@ const MastermindPage = (): JSX.Element => {
         <MasterclassAgenda version={9} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
-        <WebinarBanner version={6} />
+        <NextSteps koalendarLink="https://koalendar.com/e/ogarnij-swoje-adsy" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={8} />

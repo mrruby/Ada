@@ -85,7 +85,9 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         <>
           Teksty:
           <br />
-          <span className="font-medium">jak pozyskiwać wartościowych odbiorców?</span>
+          <span className="font-medium">
+            jak pozyskiwać wartościowych odbiorców?
+          </span>
         </>
       ),
     },
@@ -95,7 +97,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         <>
           Grafiki do kampanii reklamowych:
           <br />
-          <span className="font-medium">tips & trick + Q&A z graficzką</span>
+          <span className="font-medium">tips & tricks + Q&A z graficzką</span>
         </>
       ),
     },
@@ -106,7 +108,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           Bonus:
           <br />
           <span className="font-medium">
-          jak tworzyć video reklamowe, które przyciąga uwagę?</span>
+            jak tworzyć video reklamowe, które przyciąga uwagę?
+          </span>
         </>
       ),
     },
@@ -114,9 +117,9 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       number: "8",
       text: (
         <>
-         Lead magnet i newsletter: <br />
+          Lead magnet i newsletter: <br />
           <span className="font-medium">
-          jak stworzyć kampanie reklamowe na zapis do newslettera?
+            jak stworzyć kampanie reklamowe na zapis do newslettera?
           </span>
         </>
       ),
@@ -130,7 +133,9 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         <>
           Konwersje:
           <br />
-          <span className="font-medium">kampanie na www i kampanie sprzedażowe</span>
+          <span className="font-medium">
+            kampanie na www i kampanie sprzedażowe
+          </span>
         </>
       ),
     },
@@ -138,10 +143,10 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       number: "10",
       text: (
         <>
-          Kampanie reklamowe z celem kontakt 
+          Kampanie reklamowe z celem kontakt
           <br />
           <span className="font-medium">
-          - pozyskanie nr telefonów/wiadomości/leadów
+            - pozyskanie numerów telefonów/wiadomości/leadów
           </span>
         </>
       ),
@@ -152,7 +157,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
         <>
           Optymalizacja: <br />
           <span className="font-medium">
-          co robić, gdy kampania nie działa i na jakie wskaźniki zwrócić uwagę?
+            co robić, gdy kampania nie działa i na jakie wskaźniki zwrócić
+            uwagę?
           </span>
         </>
       ),
@@ -161,7 +167,7 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       number: "12",
       text: (
         <>
-         Automatyzacje <br />
+          Automatyzacje <br />
           <span className="font-medium"> w kampaniach reklamowych</span>
         </>
       ),
@@ -445,7 +451,8 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
       text: (
         <>
           <span className="font-bold">
-          Pełna wsparcia i entuzjazmu społeczność przedsiębiorczych kobiet. Wartość: bezcenna!
+            Pełna wsparcia i entuzjazmu społeczność przedsiębiorczych kobiet.
+            Wartość: bezcenna!
           </span>
         </>
       ),
@@ -790,7 +797,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
                   key={index}
                   text={feature.text}
                   number={feature.number}
-                  text2={feature.text2}
                   styleText="font-medium"
                 />
               ))}
@@ -801,7 +807,6 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
                   key={index}
                   text={feature.text}
                   number={feature.number}
-                  text2={feature.text2}
                   styleText="font-medium"
                 />
               ))}
@@ -841,41 +846,23 @@ const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
           <h2 className="px-6 text-adaTitle font-bold animate-bounce uppercase">
             pracować?
           </h2>
-          <div className="flex flex-col mx-auto items-center justify-center pb-10">
-            <div className="flex flex-col lg:flex-row justify-center flex-wrap xl:flex-nowrap">
-              {featuresDataFirtstRow2.map((feature, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mx-auto max-w-7xl pb-10">
+            {[
+              ...featuresDataFirtstRow2,
+              ...featuresDataSecondRow2,
+              ...featuresDataThirdRow3,
+            ].map((feature, index) => (
+              <div className="w-full max-w-[320px] mx-auto">
                 <FeatureBox
                   key={index}
                   text={feature.text}
                   number={feature.number}
-                  styleText="font-bold max-w-[310px]"
+                  styleText="font-bold"
                   styleParagraph="pt-4"
                   flowerColor="white"
                 />
-              ))}
-            </div>
-            <div className="flex flex-col lg:flex-row justify-center flex-wrap mt-10">
-              {featuresDataSecondRow2.map((feature, index) => (
-                <FeatureBox
-                  key={index}
-                  text={feature.text}
-                  number={feature.number}
-                  styleText="font-bold max-w-[320px]"
-                  flowerColor="white"
-                />
-              ))}
-            </div>
-            <div className="flex flex-col lg:flex-row justify-center flex-wrap mt-10">
-              {featuresDataThirdRow3.map((feature, index) => (
-                <FeatureBox
-                  key={index}
-                  text={feature.text}
-                  number={feature.number}
-                  styleText="font-bold max-w-[320px]"
-                  flowerColor="white"
-                />
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
           <div className="pt-10 py-16">
             <div className="text-[100px]">🎁</div>

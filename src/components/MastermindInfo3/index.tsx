@@ -98,8 +98,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     <span key={2}>
       Będziesz spokojna, że pieniądze, które Twoi klienci zainwestowali w
       reklamy{" "}
-      <span className="font-bold"> pracują na siebie, nawet gdy śpisz</span>{" "}
-      odpowiednimi klientami.
+      <span className="font-bold"> pracują na siebie, nawet gdy śpisz.</span>
     </span>,
     <span key={3}>
       <span className="font-bold">
@@ -111,24 +110,26 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
 
   const leftProgramDetailsList2: JSX.Element[] = [
     <span key={0}>
-      <span className="font-bold">9 spotkań</span> w czasie rzeczywistym
-      <span className="font-bold">
-        {" "}
-        w czasie rzeczywistym po 2,5 godziny
-      </span>
+      <span className="font-bold">12 praktycznych spotkań grupowych</span> z
+      ustawiania kampanii na żywo
     </span>,
     <span key={1}>
-      <span>konsultacje indywidualne do wykorzystania w dowolnym momencie trwania programu (w zależności od pakietu)
+      <span>
+        konsultacje indywidualne do wykorzystania w dowolnym momencie trwania
+        programu (w zależności od pakietu)
       </span>
     </span>,
     <span key={2}>
-      <span>bieżący kontakt i wsparcie na grupie na Facebooku oraz dedykowanym komunikatorze 
+      <span>
+        bieżący kontakt i wsparcie na grupie na Facebooku oraz dedykowanym
+        komunikatorze
       </span>
     </span>,
   ]
   const rightProgramDetailsList2: JSX.Element[] = [
     <span key={0}>
-      <span>21 godzin office hour, czyli grupowych konsultacji reklamowych 
+      <span>
+        21 godzin office hour, czyli grupowych konsultacji reklamowych
       </span>
     </span>,
     <span key={1}>
@@ -217,7 +218,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version === 2 && (
         <>
-            <div className="pt-[60px] lg:pt-[76px] pb-[100px]">
+          <div className="pt-[60px] lg:pt-[76px] pb-[100px]">
             <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase max-w-[500px] mx-auto">
               W programie
             </h2>
@@ -244,15 +245,16 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
               </ul>
             </div>
             <p className="text-[15px] lg:text-adaDesc leading-tight font-medium py-2 m-auto">
-            ...abyś lepiej niż kiedykolwiek zadbała o swoje zarobki i biznesy swoich klientów!
+              ...abyś lepiej niż kiedykolwiek zadbała o swoje zarobki i biznesy
+              swoich klientów!
             </p>
           </div>
           <div className="pt-[60px] lg:pt-0">
             <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase">
-            Co zyskasz, uczestnicząc
+              Co zyskasz, uczestnicząc
             </h2>
             <h2 className="text-adaDesc lg:text-adaTitle font-bold text-center border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce uppercase">
-            w Meta Ads Masters Mentoring?
+              w Meta Ads Masters Mentoring?
             </h2>
             <div className="flex flex-col md:flex-row justify-between">
               <ul className="lg:max-w-[500px] pt-6">
@@ -281,7 +283,8 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
               </ul>
             </div>
             <p className="text-[15px] lg:text-adaDesc leading-tight font-medium py-2 m-auto">
-            …i zaczniesz zarabiać lepsze pieniądze, pracując mądrzej, a nie więcej!
+              …i zaczniesz zarabiać lepsze pieniądze, pracując mądrzej, a nie
+              więcej!
             </p>
           </div>
         </>

@@ -65,7 +65,7 @@ const MentoringWhy2 = (): JSX.Element => {
       <div className="flex flex-col items-center text-center">
         <div className="text-adaDesc lg:text-adaTitle font-bold lg:mt-20 mx-auto  text-center lg:mb-2">
           <h2 className="z-10 sticky px-2">
-          Gdy dołączysz do programu mentoringowego Meta Ads Masters Mentoring. To bezpieczna przestrzeń, w której:          
+            Meta Ads Masters Mentoring to bezpieczna przestrzeń, w której:
           </h2>
         </div>
         <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4 pb-10 px-3">

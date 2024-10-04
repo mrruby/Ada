@@ -18,6 +18,9 @@ import Opinions from "components/Opinions"
 import Team from "components/Team"
 import MasterclassAgenda from "components/MasterclassAgenda"
 import PasswordProtectedContent from "components/PasswordProtectedContent"
+import OpinionVideos from "components/OpinionVideos"
+import WebinarBanner from "components/WebinarBanner"
+import NextSteps from "components/NextSteps"
 
 const MentoringPage = (): JSX.Element => {
   return (
@@ -42,8 +45,14 @@ const MentoringPage = (): JSX.Element => {
         <MaxWithBgColorContainer bgColor="bg-linear2">
           <MentoringWhy />
         </MaxWithBgColorContainer>
+        <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+          <MentoringBanner version={9} />
+        </MaxWithBgColorContainer>
+        <MaxWithBgColorContainer>
+          <OpinionVideos />
+        </MaxWithBgColorContainer>
         <Opinions title1 />
-        <div className="h-[300px] bg-wave absolute top-[3780px] w-screen"></div>
+        <div className="h-[300px] bg-wave absolute top-[4080px] w-screen"></div>
         <MaxWithBgColorContainer bgColor="bg-linear3">
           <MentoringWhy2 />
         </MaxWithBgColorContainer>
@@ -79,6 +88,9 @@ const MentoringPage = (): JSX.Element => {
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer>
           <MasterclassAgenda version={10} />
+        </MaxWithBgColorContainer>
+        <MaxWithBgColorContainer>
+          <NextSteps koalendarLink="https://koalendar.com/e/meta-ads-master-mentoring " />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-linear2">
           <MasterclassFAQ version={2} />

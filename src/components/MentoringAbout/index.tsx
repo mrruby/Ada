@@ -15,18 +15,21 @@ const MentoringAbout = (): JSX.Element => {
           </h3>
         </div>
         <div className="flex flex-col lg:flex-row md:pt-[40px] px-3">
-          <StaticImage
-            loading="eager"
-            src={"../../images/mentoring.webp"}
-            alt="Ada Promis - hero"
-            placeholder="blurred"
-            width={766}
-            height={818}
-            formats={["auto", "webp", "avif"]}
-            quality={100}
-          />
+          <div className="hidden xl:block">
+            <StaticImage
+              loading="eager"
+              src={"../../images/mentoring.webp"}
+              alt="Ada Promis - hero"
+              placeholder="blurred"
+              width={766}
+              height={900}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+              className="w-full h-auto"
+            />
+          </div>
           <div className="max-w-[400px] lg:max-w-[810px] pt-6">
-            <p className="pb-8 md:text-adaBase">
+            <p className="pb-16 md:text-adaBase">
               Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z
               zamiłowania — kreatywną duszą. Mam za sobą epizod pracy w audycie
               finansowym, ale moim powołaniem chyba od zawsze był marketing!
@@ -48,8 +51,8 @@ const MentoringAbout = (): JSX.Element => {
             </p>
             <p className="pb-8 md:text-adaBase">
               W programie{" "}
-              <span className="font-bold">„Ogarnij swoje adsy!”</span> skupię
-              się Twoich kontach reklamowych! Zdradzę Ci{" "}
+              <span className="font-bold">Meta Ads Masters Mentoring</span>{" "}
+              skupimy się kontach reklamowych Twoich klientów! Zdradzę Ci{" "}
               <span className="font-bold">moje tipy</span> i zaoszczędzę dobre
               kilka lat samodzielnego klikania w menedżerze reklam.
             </p>

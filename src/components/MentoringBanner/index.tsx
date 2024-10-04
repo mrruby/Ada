@@ -1,29 +1,39 @@
 import React from "react"
 import { Button } from "helpers/Button"
-import TypingAnimation from "helpers/TypingAnimation"
+import Slider from "../Slider"
 
 const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
+  const sliderItems = [
+    "praktyczną wiedzę",
+    "indywidualne podejście",
+    "realne doświadczenie",
+    "wsparcie społeczności",
+    "ciągły rozwój",
+    "multidyscyplinarne podejście",
+    "ponadprzeciętne wyniki",
+  ]
+
   return (
     <div className="mx-auto px-3 py-10 flex flex-col text-center">
       {version === 1 && (
         <>
           <h2 className="md:text-adaTitle text-ada-white uppercase font-bold">
-              Jeśli odpowiedziałaś „TAK” na którekolwiek z tych pytań, Meta Ads Masters Mentoring jest właśnie dla Ciebie!
+            Jeśli odpowiedziałaś „TAK" na którekolwiek z tych pytań, Meta Ads
+            Masters Mentoring jest właśnie dla Ciebie!
           </h2>
           <p className="md:pt-6 max-w-[1000px] mx-auto md:text-adaBase font-medium">
-          Meta Ads Masters Mentoring to intensywny, 6-miesięczny program transformacyjny, stworzony z myślą o marketerkach i wirtualnych asystentkach, które chcą wznieść swoje umiejętności reklamowe na nowy poziom. To nie jest zwykły kurs online - to kompleksowe doświadczenie edukacyjne, które łączy w sobie:
+            Meta Ads Masters Mentoring to intensywny, 6-miesięczny program
+            transformacyjny, stworzony z myślą o marketerkach i wirtualnych
+            asystentkach, które chcą wznieść swoje umiejętności reklamowe na
+            nowy poziom. To nie jest zwykły kurs online - to kompleksowe
+            doświadczenie edukacyjne, które łączy w sobie:
           </p>
-          <ul className="md:pt-6 max-w-[800px] mx-auto md:text-adaBase font-medium">
-            <li className="pb-2">● praktyczną wiedzę </li>
-            <li className="pb-2">● indywidualne podejście </li>
-            <li className="pb-2">● realne doświadczenie </li>
-            <li className="pb-2">● wsparcie społeczności </li>
-            <li className="pb-2">● ciągły rozwój </li>
-            <li className="pb-2">● multidyscyplinarne podejście </li>
-            <li className="pb-2">● ponadprzeciętne wyniki </li>
-          </ul>
+          <Slider items={sliderItems} />
           <p className="md:pt-6 max-w-[1000px] mx-auto md:text-adaBase font-medium">
-          Po ukończeniu programu będziesz gotowa, aby projektować i prowadzić skuteczne kampanie reklamowe oparte na solidnych fundamentach i sprawdzonych technikach.          </p>
+            Po ukończeniu programu będziesz gotowa, aby projektować i prowadzić
+            skuteczne kampanie reklamowe oparte na solidnych fundamentach i
+            sprawdzonych technikach.
+          </p>
         </>
       )}
       {version === 2 && (

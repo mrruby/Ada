@@ -227,10 +227,10 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="left"
               >
-                <h3 className={listItemTitleClass2}>11 szkoleń wideo
-                </h3>
+                <h3 className={listItemTitleClass2}>11 szkoleń wideo</h3>
                 <p className={listItemDesClass}>
-                W tym czasie tworzysz, wdrażasz i obserwujesz wyniki swoich kampanii pod moim okiem.
+                  W tym czasie tworzysz, wdrażasz i obserwujesz wyniki swoich
+                  kampanii pod moim okiem.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -240,10 +240,11 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="right"
               >
-                <h3 className={listItemTitleClass2}>12 godzin spotkań grupowych z ustawiania reklam
+                <h3 className={listItemTitleClass2}>
+                  12 godzin spotkań grupowych z ustawiania reklam
                 </h3>
                 <p className={listItemDesClass}>
-                Spotykamy się 12 razy na 1,5 godziny na Google Meets. 
+                  Spotykamy się 12 razy na 1,5 godziny na Google Meets.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -257,10 +258,14 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="left"
               >
-                <h3 className={listItemTitleClass2}>warsztaty z pisania tekstów reklamowych i warsztaty z tworzenia grafik
+                <h3 className={listItemTitleClass2}>
+                  warsztaty z pisania tekstów reklamowych i warsztaty z
+                  tworzenia grafik
                 </h3>
                 <p className={listItemDesClass}>
-                Specjalne spotkania z copywriterką Justyną i graficzką Dorotą, na których przećwiczysz swoje skille tworzenia kreacji reklamowych i dostaniesz bezcenny feedback.
+                  Specjalne spotkania z copywriterką Justyną i graficzką Dorotą,
+                  na których przećwiczysz swoje skille tworzenia kreacji
+                  reklamowych i dostaniesz bezcenny feedback.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -270,10 +275,22 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="right"
               >
-                <h3 className={listItemTitleClass2}>21 godzin office hours
-                </h3>
+                <h3 className={listItemTitleClass2}>21 godzin office hours</h3>
                 <p className={listItemDesClass}>
-                Co tydzień możesz wskoczyć grupowe konsultacje i zadać dowolne pytanie. Dyżuruję ja i specjalistki z mojego zespołu (poznasz je tutaj). Dzięki office hours możesz skonsultować kampanie również pomiędzy spotkaniami tematycznymi. To czas kiedy możesz zadać pytanie na każdy temat około reklamowy.
+                  Co tydzień możesz wskoczyć grupowe konsultacje i zadać dowolne
+                  pytanie. Dyżuruję ja i specjalistki z mojego zespołu (poznasz
+                  je{" "}
+                  <span
+                    className="underline cursor-pointer"
+                    onClick={() =>
+                      scrollToSection(document.getElementById("team"))
+                    }
+                  >
+                    tutaj
+                  </span>
+                  ). Dzięki office hours możesz skonsultować kampanie również
+                  pomiędzy spotkaniami tematycznymi. To czas kiedy możesz zadać
+                  pytanie na każdy temat około reklamowy.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -287,10 +304,19 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="left"
               >
-                <h3 className={listItemTitleClass2}>temat przewodni
-                </h3>
+                <h3 className={listItemTitleClass2}>temat przewodni</h3>
                 <p className={listItemDesClass}>
-                Każde spotkanie ma temat przewodni, który pomoże Ci stworzyć kampanie reklamowe na całej ścieżce klienta, a nie tylko na poziomie menadżera reklam. Listę tematów spotkań sprawdzisz tutaj.
+                  Każde spotkanie ma temat przewodni, który pomoże Ci stworzyć
+                  kampanie reklamowe na całej ścieżce klienta, a nie tylko na
+                  poziomie menadżera reklam. Listę tematów spotkań sprawdzisz{" "}
+                  <span
+                    className="underline cursor-pointer"
+                    onClick={() =>
+                      scrollToSection(document.getElementById("steps"))
+                    }
+                  >
+                    tutaj.
+                  </span>
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -302,7 +328,10 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
               >
                 <h3 className={listItemTitleClass2}>realne case’y</h3>
                 <p className={listItemDesClass}>
-                Pracujemy na przykładach z życia wziętych: Twoich oraz innych uczestniczek. ❌ Dość teoretycznych przykładów, które nie mają nic wspólnego z rzeczywistością. ✅ Poznajesz różne branże i zdobywasz doświadczenie, które przekłada się na wyniki.
+                  Pracujemy na przykładach z życia wziętych: Twoich oraz innych
+                  uczestniczek. ❌ Dość teoretycznych przykładów, które nie mają
+                  nic wspólnego z rzeczywistością. ✅ Poznajesz różne branże i
+                  zdobywasz doświadczenie, które przekłada się na wyniki.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -318,7 +347,9 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
               >
                 <h3 className={listItemTitleClass2}>Q&A</h3>
                 <p className={listItemDesClass}>
-                Na każdym spotkaniu jest czas na pytania! Możesz pytać o kampanie, pokazać nam swoje konto reklamowe i dowiedzieć się, jakie rozwiązania możesz wdrożyć.
+                  Na każdym spotkaniu jest czas na pytania! Możesz pytać o
+                  kampanie, pokazać nam swoje konto reklamowe i dowiedzieć się,
+                  jakie rozwiązania możesz wdrożyć.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -328,11 +359,27 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 contentArrowStyle={{ display: "none" }}
                 position="right"
               >
+                <h3 className={listItemTitleClass2}>nagrania ze spotkań</h3>
+                <p className={listItemDesClass}>
+                  Nagramy każde spotkanie. Zawsze możesz do niego wrócić lub
+                  nadrobić materiał później.
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className={listItemClass}
+                iconStyle={{ display: "none" }}
+                contentStyle={{ background: "transparent", boxShadow: "none" }}
+                contentArrowStyle={{ display: "none" }}
+                position="left"
+              >
                 <h3 className={listItemTitleClass2}>
-                nagrania ze spotkań
+                  konsultacje indywidualne
                 </h3>
                 <p className={listItemDesClass}>
-                Nagramy każde spotkanie. Zawsze możesz do niego wrócić lub nadrobić materiał później.
+                  W zależności od wybranego pakietu dostajesz dostęp do
+                  konsultacji 1:1 ze mną lub specjalistkami z mojego zespołu.
+                  Omówimy Twoje reklamy, newsletter, komunikację, strategię
+                  reklamową… - temat zależy od Ciebie!
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -344,43 +391,15 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                   textAlign: "right",
                 }}
                 contentArrowStyle={{ display: "none" }}
-                position="left"
-              >
-                <h3 className={listItemTitleClass2}>
-                audyt konta reklamowego
-                </h3>
-                <p className={listItemDesClass}>
-                W ramach programu czeka na Ciebie spotkanie indywidualne, na którym zrobimy audyt konta reklamowego! Możesz udostępnić ekran lub nadać mi czasowe dostępy reklamowe, a po spotkaniu dostaniesz listę zmian do wdrożenia + sugestie grup docelowych, do których warto kierować reklamy.
-                </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className={listItemClass}
-                iconStyle={{ display: "none" }}
-                contentStyle={{ background: "transparent", boxShadow: "none" }}
-                contentArrowStyle={{ display: "none" }}
                 position="right"
               >
-                <h3 className={listItemTitleClass2}>konsultacje indywidualne</h3>
-                <p className={listItemDesClass}>
-                W zależności od wybranego pakietu dostajesz dostęp do konsultacji 1:1 ze mną lub specjalistkami z mojego zespołu. Omówimy Twoje reklamy, newsletter, komunikację, strategię reklamową… - temat zależy od Ciebie!
-                </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className={listItemClass}
-                iconStyle={{ display: "none" }}
-                contentStyle={{
-                  background: "transparent",
-                  boxShadow: "none",
-                  textAlign: "right",
-                }}
-                contentArrowStyle={{ display: "none" }}
-                position="left"
-              >
                 <h3 className={listItemTitleClass2}>
-                grupa na Facebooku i dedykowany komunikator
+                  grupa na Facebooku i dedykowany komunikator
                 </h3>
                 <p className={listItemDesClass}>
-                Jesteśmy w bieżącym kontakcie — nie musisz czekać z pytaniami do office hours, odpowiadamy w każdy dzień roboczy. To miejsca na rozmowy marketingowe i biznesowe oraz networking!
+                  Jesteśmy w bieżącym kontakcie — nie musisz czekać z pytaniami
+                  do office hours, odpowiadamy w każdy dzień roboczy. To miejsca
+                  na rozmowy marketingowe i biznesowe oraz networking!
                 </p>
               </VerticalTimelineElement>
             </VerticalTimeline>
@@ -444,11 +463,20 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
               >
                 <h3 className={listItemTitleClass3}>16 godzin office hours</h3>
                 <p className={listItemDesClass}>
-                  Co tydzień możesz wskoczyć na godzinne „okienko” i zadać
+                  Co tydzień możesz wskoczyć na godzinne „okienko" i zadać
                   dowolne pytanie. Dyżuruję ja i specjalistki z mojego zespołu
-                  (poznasz je tutaj). Dzięki office hours możesz skonsultować
-                  kampanie również pomiędzy spotkaniami tematycznymi. To czas
-                  kiedy możesz zadać pytanie na każdy temat.
+                  (poznasz je{" "}
+                  <span
+                    className="underline cursor-pointer"
+                    onClick={() =>
+                      scrollToSection(document.getElementById("team"))
+                    }
+                  >
+                    tutaj
+                  </span>
+                  ). Dzięki office hours możesz skonsultować kampanie również
+                  pomiędzy spotkaniami tematycznymi. To czas kiedy możesz zadać
+                  pytanie na każdy temat.
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
@@ -462,8 +490,16 @@ const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
                 <p className={listItemDesClass}>
                   Każde spotkanie ma temat przewodni, który pomoże Ci ulepszyć
                   Twoje kampanie reklamowe na całej ścieżce klienta, a nie tylko
-                  na poziomie Managera Reklam. Listę tematów spotkań sprawdzisz
-                  tutaj.
+                  na poziomie Managera Reklam. Listę tematów spotkań sprawdzisz{" "}
+                  <span
+                    className="underline cursor-pointer"
+                    onClick={() =>
+                      scrollToSection(document.getElementById("steps"))
+                    }
+                  >
+                    tutaj
+                  </span>
+                  .
                 </p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
