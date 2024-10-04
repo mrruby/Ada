@@ -5,7 +5,7 @@ type SliderProps = {
   interval?: number
 }
 
-const Slider: React.FC<SliderProps> = ({ items, interval = 1500 }) => {
+const Slider: React.FC<SliderProps> = ({ items, interval = 2500 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -25,11 +25,7 @@ const Slider: React.FC<SliderProps> = ({ items, interval = 1500 }) => {
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          <span
-            className={`text-adaBase md:text-adaSubtitle font-medium ${
-              index % 2 === 0 ? "text-ada-pink2" : "text-ada-purple"
-            }`}
-          >
+          <span className="text-adaBase md:text-adaSubtitle font-medium text-ada-purple">
             {item}
           </span>
         </div>

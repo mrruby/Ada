@@ -24,19 +24,13 @@ const NextSteps: React.FC<NextStepsProps> = ({ koalendarLink }) => {
               o Twoim udziale w programie mentoringowym.
             </p>
             <p className="pb-5">
-              To spotkanie jest obowiązkowe i bezpłatne - chcę poznać Twój
+              To spotkanie jest niezobowiązujące i bezpłatne - chcę poznać Twój
               biznes i mieć pewność, że ja i mój zespół pomożemy Ci ogarnąć
               skuteczne, strategiczne i działające reklamy!
             </p>
             <p className="pb-5">
               Wystarczy, że wybierzesz termin z kalendarza poniżej!
             </p>
-          </div>
-          <div className="mt-10">
-            <CountdownTimer
-              text="DOŁĄCZ PRZED STARTEM 4 EDYCJI"
-              targetDate={new Date("2024-09-30T10:00:00")}
-            />
           </div>
           <iframe
             src={`${koalendarLink}?embed=true`}

@@ -56,7 +56,7 @@ const MentoringWhy = (): JSX.Element => {
         <Button
           type="button"
           text={<span className="font-bold">Yay! Chcę dołączyć!</span>}
-          sectionId="zapisz-sie"
+          sectionId="offert"
           textSize="md:text-adaSubtitle uppercase"
           btnStyle="md:w-[600px] bg-ada-pink2 md:h-[50px] mx-auto"
           iconCalender

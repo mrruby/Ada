@@ -128,9 +128,10 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
   return (
     <section>
       {version === 1 && (
-        <div className="mx-auto pb-10 mt-10" id="offert">
+        <div className="mx-auto pb-10 mt-10">
           <h2 className="text-adaStandard lg:text-adaSubtitleThird font-bold bg-white shadow-xl lg:max-w-7xl px-10 mx-auto flex items-center justify-center">
-          Zastanawiasz się czy Meta Ads Masters Mentoring jest dla Ciebie? A czy…
+            Zastanawiasz się czy Meta Ads Masters Mentoring jest dla Ciebie? A
+            czy…
           </h2>
           <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
             <ul className="gap-10 md:gap-[120px] ">

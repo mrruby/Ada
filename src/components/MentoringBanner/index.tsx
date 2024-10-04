@@ -47,7 +47,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
             }
             textSize="md:text-adaSubtitleThird"
             btnStyle="md:w-[840px] md:h-[170px] bg-ada-pink2 my-20 mx-auto"
-            sectionId="zostaw-maila"
+            sectionId="offert"
           />
         </>
       )}
@@ -63,7 +63,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
             }
             textSize="md:text-adaSubtitleThird"
             btnStyle="md:w-[840px] md:h-[170px] bg-ada-pink2 mt-20 mx-auto"
-            sectionId="zostaw-maila"
+            sectionId="offert"
           />
         </>
       )}
