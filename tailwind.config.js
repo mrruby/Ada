@@ -64,6 +64,7 @@ module.exports = {
         blink: "blink 1s both infinite",
         "spin-slow": "spin 4s linear infinite",
         bounce: "custombounce 1.5s ease-in-out",
+        bounce2: "bounce 1s infinite",
         marquee: "marquee 120s linear infinite",
         marquee2: "marquee 120s linear infinite",
       },
@@ -89,8 +90,25 @@ module.exports = {
           "40%": { transform: "translateY(-10px)" },
           "60%": { transform: "translateY(-4px)" },
         },
+        bounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".animation-delay-200": {
+          "animation-delay": "200ms",
+        },
+        ".animation-delay-400": {
+          "animation-delay": "400ms",
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 }
