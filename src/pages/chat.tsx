@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from "react"
+import { v4 as uuidv4 } from "uuid"
 import { ChatWindow } from "../components/ChatWindow"
 import Layout from "components/Layout"
 import SEO from "components/seo"
 
-type ChatMessage = {
+type Message = {
   role: "user" | "assistant"
   content: string
 }
 
-const AIChatPage: React.FC = () => {
-  const [messages, setMessages] = useState<ChatMessage[]>([])
+const ChatPage: React.FC = () => {
+  const [messages, setMessages] = useState<Message[]>([])
   const [isLoading, setIsLoading] = useState(false)
+  const [sessionId, setSessionId] = useState("")
+
+  useEffect(() => {
+    setSessionId(uuidv4())
+  }, [])
 
   const handleSendMessage = async (message: string) => {
     setIsLoading(true)
-    const newUserMessage: ChatMessage = { role: "user", content: message }
+    const newUserMessage: Message = { role: "user", content: message }
 
     const updatedMessages = [...messages, newUserMessage]
     setMessages(updatedMessages)
@@ -22,26 +28,31 @@ const AIChatPage: React.FC = () => {
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: updatedMessages }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages: updatedMessages,
+          sessionId: sessionId,
+        }),
       })
 
-      const data = await response.json()
+      if (!response.ok) {
+        throw new Error("Network response was not ok")
+      }
 
-      setMessages((prevMessages) => [
-        ...prevMessages,
+      const data = await response.json()
+      setMessages([
+        ...updatedMessages,
         { role: "assistant", content: data.response },
       ])
     } catch (error) {
       console.error("Error:", error)
+      // Handle error (e.g., show an error message to the user)
     } finally {
       setIsLoading(false)
     }
   }
-
-  useEffect(() => {
-    console.log("Loading state:", isLoading)
-  }, [isLoading])
 
   return (
     <Layout>
@@ -55,4 +66,4 @@ const AIChatPage: React.FC = () => {
   )
 }
 
-export default AIChatPage
+export default ChatPage

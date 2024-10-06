@@ -9,6 +9,7 @@ import {
 import { PromptTemplate } from "@langchain/core/prompts"
 import { StringOutputParser } from "@langchain/core/output_parsers"
 import ebook from "../utils/ebook.json"
+import { storeNewMessages } from "./utils"
 
 let chain: RunnableSequence | null = null
 
@@ -85,7 +86,11 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" })
   }
 
-  const { messages } = req.body
+  const { messages, sessionId } = req.body
+
+  if (!Array.isArray(messages) || !sessionId) {
+    return res.status(400).json({ error: "Invalid request body" })
+  }
 
   try {
     const qaChain = await initializeChain()
@@ -96,6 +101,7 @@ export default async function handler(
     }
 
     const question = messages[messages.length - 1].content
+
     const chatHistory = messages
       .slice(0, -1)
       .map((m: { content: string }) => m.content)
@@ -108,6 +114,11 @@ export default async function handler(
     })
 
     res.status(200).json({ response })
+
+    const allMessages = [...messages, { role: "assistant", content: response }]
+    await storeNewMessages(sessionId, allMessages).catch((error) => {
+      console.error("Error storing messages:", error)
+    })
   } catch (error) {
     console.error("Error:", error)
     res.status(500).json({
