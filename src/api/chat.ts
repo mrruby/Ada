@@ -9,7 +9,7 @@ import {
 import { PromptTemplate } from "@langchain/core/prompts"
 import { StringOutputParser } from "@langchain/core/output_parsers"
 import ebook from "../utils/ebook.json"
-import { storeNewMessages } from "./utils"
+import { storeNewMessages } from "../utils/api"
 
 let chain: RunnableSequence | null = null
 
