@@ -88,65 +88,45 @@ export default async function handler(
   req: GatsbyFunctionRequest,
   res: GatsbyFunctionResponse
 ) {
-  console.log("Received request:", req.method, req.url)
-
   if (req.method !== "POST") {
-    console.log("Method not allowed:", req.method)
     return res.status(405).json({ error: "Method not allowed" })
   }
 
   const { messages, sessionId } = req.body
-  console.log("Request body:", { messages, sessionId })
 
   if (!Array.isArray(messages) || !sessionId) {
-    console.log("Invalid request body:", { messages, sessionId })
     return res.status(400).json({ error: "Invalid request body" })
   }
 
   try {
-    console.log("Initializing chain...")
     const qaChain = await initializeChain()
 
     if (!qaChain) {
-      console.error("Failed to initialize chain")
       return res.status(500).json({ error: "Failed to initialize chain" })
     }
-    console.log("Chain initialized successfully")
 
     const question = messages[messages.length - 1].content
-    console.log("Extracted question:", question)
 
     const chatHistory = messages
       .slice(0, -1)
       .map((m: { content: string }) => m.content)
       .join("\n")
-    console.log("Chat history prepared")
 
-    console.log("Invoking qaChain...")
     const response = await qaChain.invoke({
       output_language: "Polish",
       question,
       chat_history: chatHistory,
     })
-    console.log("qaChain response received:", response)
-
-    res.status(200).json({ response })
-    console.log("Response sent to client")
 
     const allMessages = [...messages, { role: "assistant", content: response }]
-    console.log("Preparing to store messages")
 
-    try {
-      console.log("Storing new messages...")
-      await storeNewMessages({
-        supabase,
-        sessionId,
-        messages: allMessages,
-      })
-      console.log("Messages stored successfully")
-    } catch (error) {
-      console.error("Error storing messages:", error)
-    }
+    await storeNewMessages({
+      supabase,
+      sessionId,
+      messages: allMessages,
+    })
+
+    res.status(200).json({ response })
   } catch (error) {
     console.error("Error in handler:", error)
     res.status(500).json({
