@@ -2,7 +2,7 @@ import React from "react"
 
 const OpinionVideos: React.FC = () => {
   const videos = [
-    { src: "zMf5FHKuy8g?si=8j4q1U_J9f_uGTnf", title: "Cudowna opinia" },
+    { src: "zMf5FHKuy8g?si=8j4q1U_J9f_uGTnf", title: "Opinia Dominiki" },
     { src: "J4kR8n9RFL0?si=bln8IYpvFBcSFqKE", title: "Opinia Izy" },
     { src: "Sn_ABVhbia0?si=w0U17jQsCyyrq15e", title: "Opinia Emili" },
     { src: "nLC4Ak_uQNA?si=AcsToMv-vdQsw3jd", title: "Opinia Ani" },
