@@ -1,9 +1,4 @@
-import { createClient } from "@supabase/supabase-js"
-
-const supabase = createClient(
-  process.env.SUPABASE_URL ?? "",
-  process.env.SUPABASE_ANON_KEY ?? ""
-)
+import { SupabaseClient } from "@supabase/supabase-js"
 
 type Message = {
   role: string
@@ -26,10 +21,15 @@ export const validateMessages = (messages: any[]): boolean =>
       typeof message === "object" && "role" in message && "content" in message
   )
 
-export const storeNewMessages = async (
-  sessionId: string,
+export const storeNewMessages = async ({
+  supabase,
+  sessionId,
+  messages,
+}: {
+  supabase: SupabaseClient
+  sessionId: string
   messages: Message[]
-): Promise<void> => {
+}): Promise<void> => {
   const logError = (message: string, error: unknown): void =>
     console.error(message, error)
   const logInfo = (message: string): void => console.log(message)

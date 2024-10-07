@@ -10,6 +10,12 @@ import { PromptTemplate } from "@langchain/core/prompts"
 import { StringOutputParser } from "@langchain/core/output_parsers"
 import ebook from "../utils/ebook.json"
 import { storeNewMessages } from "../utils/api"
+import { createClient } from "@supabase/supabase-js"
+
+const supabase = createClient(
+  process.env.SUPABASE_URL ?? "",
+  process.env.SUPABASE_ANON_KEY ?? ""
+)
 
 let chain: RunnableSequence | null = null
 
@@ -116,9 +122,16 @@ export default async function handler(
     res.status(200).json({ response })
 
     const allMessages = [...messages, { role: "assistant", content: response }]
-    await storeNewMessages(sessionId, allMessages).catch((error) => {
-      console.error("Error storing messages:", error)
-    })
+
+    try {
+      await storeNewMessages({
+        supabase,
+        sessionId,
+        messages: allMessages,
+      })
+    } catch (error) {
+      console.error("Error:", error)
+    }
   } catch (error) {
     console.error("Error:", error)
     res.status(500).json({
