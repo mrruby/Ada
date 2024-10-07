@@ -35,6 +35,7 @@ export const storeNewMessages = async ({
   const logInfo = (message: string): void => console.log(message)
 
   try {
+    console.log("Fetching existing messages for session:", sessionId)
     const { data: existingMessages, error: fetchError } = await supabase
       .from("messages")
       .select("content")
@@ -45,14 +46,17 @@ export const storeNewMessages = async ({
       return
     }
 
+    console.log("Existing messages fetched:", existingMessages?.length)
     const existingContents = new Set(existingMessages?.map((m) => m.content))
     const newMessages = messages.filter((m) => !existingContents.has(m.content))
 
+    console.log("New messages to store:", newMessages.length)
     if (newMessages.length === 0) {
       logInfo("No new messages to store")
       return
     }
 
+    console.log("Inserting new messages into database")
     const { error: insertError } = await supabase.from("messages").insert(
       newMessages.map((m) => ({
         session_id: sessionId,
@@ -68,6 +72,7 @@ export const storeNewMessages = async ({
     }
   } catch (error) {
     logError("Unexpected error in storeNewMessages:", error)
+    console.log("Error details:", error)
   }
 }
 
