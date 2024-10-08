@@ -11,6 +11,8 @@ import { StringOutputParser } from "@langchain/core/output_parsers"
 import ebook from "../utils/ebook.json"
 import { storeNewMessages } from "../utils/api"
 import { createClient } from "@supabase/supabase-js"
+import { CONDENSE_TEMPLATE } from "../prompts/condensePrompt"
+import { ANSWER_TEMPLATE } from "../prompts/answerPrompt"
 
 const supabase = createClient(
   process.env.SUPABASE_URL ?? "",
@@ -39,20 +41,6 @@ async function initializeChain() {
   )
 
   const retriever = vectorStore.asRetriever()
-
-  const CONDENSE_TEMPLATE = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question related to marketing. If the question is not related to marketing, respond with "To pytanie nie dotyczy marketingu.".
-
-  Chat History:
-  {chat_history}
-  Follow Up Input: {question}
-  Standalone marketing question or rejection:`
-
-  const ANSWER_TEMPLATE = `You are an AI assistant specialized in answering marketing questions only. If the question is not related to marketing, politely inform the user that you can only answer marketing-related questions. Please provide an informative and relevant response related to marketing based on the following context. Always answer in Polish language.
-
-  {context}
-
-  Question: {question}
-  Marketing-focused Answer in Polish or polite rejection:`
 
   const condensePrompt = PromptTemplate.fromTemplate(CONDENSE_TEMPLATE)
   const answerPrompt = PromptTemplate.fromTemplate(ANSWER_TEMPLATE)
