@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import Markdown from "markdown-to-jsx"
 import { LoadingDots } from "../LoadingDots"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 
 type Message = {
   role: "user" | "assistant"
@@ -36,8 +37,23 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
   const renderMessageContent = () => {
     if (messages.length === 0 && !isLoading) {
       return (
-        <div className="flex items-center justify-center h-full text-gray-500">
-          Rozpocznij rozmowę, wpisując wiadomość poniżej.
+        <div className="flex flex-col items-center justify-center h-full text-ada-blue text-center p-4">
+          <h2 className="text-adaBase lg:text-adaTitle font-bold mb-4 border-b-[16px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px]">
+            Witaj w czacie slowmarketingowym!
+          </h2>
+          <p className="lg:text-adaBase pt-6 font-medium leading-tight pb-4">
+            Cały czas go ulepszamy, a już teraz śmiało pytaj o:
+          </p>
+          <ul className="lg:text-adaBase pt-4 font-medium leading-tight pb-4">
+            <li>✅ Pytania związane z marketingiem</li>
+            <li>✅ Strategie marketingowe</li>
+            <li>✅ Techniki promocji</li>
+            <li>✅ Analizę rynku</li>
+            <li>✅ Budowanie marki</li>
+          </ul>
+          <p className="lg:text-adaBase pt-4 font-bold leading-tight">
+            Chętnie pomoże! 🚀
+          </p>
         </div>
       )
     }
