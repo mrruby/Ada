@@ -23,10 +23,9 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia1typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Monika Gajek"
+        alt="Opinia o programie mentoringowym Meta Ads - Martyna Baran"
         placeholder="blurred"
-        width={363}
-        height={514}
+        height={800}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -36,10 +35,8 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia2typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Juila Boryczka"
+        alt="Opinia o programie mentoringowym Meta Ads - Ania Stobnicka"
         placeholder="blurred"
-        width={344}
-        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -49,10 +46,8 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia3typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Martyna Sitarz"
+        alt="Opinia o programie mentoringowym Meta Ads - Kasia Szust"
         placeholder="blurred"
-        width={363}
-        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -62,10 +57,8 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia4typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Izabela Ścisłowska"
+        alt="Opinia o programie mentoringowym Meta Ads - Agnieszka Sosik-Grzyb"
         placeholder="blurred"
-        width={342}
-        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -75,10 +68,8 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia5typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
+        alt="Opinia o programie mentoringowym Meta Ads - Martyna Sitarz"
         placeholder="blurred"
-        width={363}
-        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -88,23 +79,8 @@ const referencesList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/opinia6typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
+        alt="Opinia o programie mentoringowym Meta Ads - Magda Kostrzewska"
         placeholder="blurred"
-        width={363}
-        height={514}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinia7typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Anna Ziętara"
-        placeholder="blurred"
-        width={363}
-        height={514}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
