@@ -17,9 +17,7 @@ import IconText from "components/IconText"
 import Opinions from "components/Opinions"
 import Team from "components/Team"
 import MasterclassAgenda from "components/MasterclassAgenda"
-import PasswordProtectedContent from "components/PasswordProtectedContent"
 import OpinionVideos from "components/OpinionVideos"
-import WebinarBanner from "components/WebinarBanner"
 import NextSteps from "components/NextSteps"
 
 const MentoringPage = (): JSX.Element => {
@@ -36,66 +34,64 @@ const MentoringPage = (): JSX.Element => {
       flowerBlue10={true}
       flowerBlue11={true}
     >
-      <PasswordProtectedContent password="VIP">
-        <MastermindBanner version={2} />
-        <IconText version={1} />
-        <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-          <MentoringBanner version={1} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-linear2">
-          <MentoringWhy />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-          <MentoringBanner version={9} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer>
-          <OpinionVideos />
-        </MaxWithBgColorContainer>
-        <Opinions title1 />
-        <div className="h-[300px] bg-wave absolute top-[4080px] w-screen"></div>
-        <MaxWithBgColorContainer bgColor="bg-linear3">
-          <MentoringWhy2 />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer>
-          <MastermindAgenda version={2} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-linear3">
-          <MastermindSteps version={2} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-linear2">
-          <MentoringInfo />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-wave-element">
-          <MentoringBanner version={2} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-linear3">
-          <MentoringAbout />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-          <MentoringBanner version={8} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer>
-          <Team version={2} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer>
-          <ReferencesMentoring title1 />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-wave-element">
-          <MentoringBanner version={3} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer>
-          <MastermindInfo3 version={2} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer>
-          <MasterclassAgenda version={10} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer>
-          <NextSteps koalendarLink="https://koalendar.com/e/meta-ads-master-mentoring " />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-linear2">
-          <MasterclassFAQ version={2} />
-        </MaxWithBgColorContainer>
-      </PasswordProtectedContent>
+      <MastermindBanner version={2} />
+      <IconText version={1} />
+      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+        <MentoringBanner version={1} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <MentoringWhy />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+        <MentoringBanner version={9} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <OpinionVideos />
+      </MaxWithBgColorContainer>
+      <Opinions title1 />
+      <div className="h-[300px] bg-wave absolute top-[4080px] w-screen"></div>
+      <MaxWithBgColorContainer bgColor="bg-linear3">
+        <MentoringWhy2 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <MastermindAgenda version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear3">
+        <MastermindSteps version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <MentoringInfo />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-wave-element">
+        <MentoringBanner version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear3">
+        <MentoringAbout />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+        <MentoringBanner version={8} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <Team version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <ReferencesMentoring title1 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-wave-element">
+        <MentoringBanner version={3} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <MastermindInfo3 version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <MasterclassAgenda version={10} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <NextSteps koalendarLink="https://koalendar.com/e/meta-ads-master-mentoring " />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <MasterclassFAQ version={2} />
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }
