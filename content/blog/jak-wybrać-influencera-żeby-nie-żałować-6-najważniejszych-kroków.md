@@ -9,16 +9,17 @@ tags:
   - instagram
 date: 2021-11-09T15:17:08.032Z
 ---
+
 ### Influencer marketing to szybko rozwijająca się gałąź marketingu, która często gra główną rolę w strategii marki. Mimo to, wielu właścicieli firm już na początku stwierdza: u mnie to nie zadziała. A przecież sukces w influencer marketingu zależy od wybrania odpowiedniej osoby. 
 
 ![napis influencer](/img/diggity-marketing-QFZ_72_NxIQ-unsplash.webp?nf_resize=smartcrop&w=300&h=400 "influencer")
 
 **Z tego wpisu dowiesz się, kim są ci słynni „influencerzy” oraz na co zwrócić uwagę, by wybrać tego idealnego. Sprawdź sam i przekonaj się:**
 
-* **jak dopasować influencera do produktu,**
-* **jakie są zalety mikroinfluencerów,**
-* **czemu same lajki (prawie) nic nie znaczą,**
-* **i dlaczego sukcesu należy się bać.**
+- **jak dopasować influencera do produktu,**
+- **jakie są zalety mikroinfluencerów,**
+- **czemu same lajki (prawie) nic nie znaczą,**
+- **i dlaczego sukcesu należy się bać.**
 
 ## Influencer, czyli kto?
 
@@ -36,15 +37,15 @@ Jeśli produkujesz odzież sportową lub butelki termiczne, wybierz influencera,
 
 ### 2. Sprawdź inne współprace influencera
 
-Zobacz, jakiego rodzaju produkty promował dotychczas influencer, w jaki sposób je prezentował i z jakim odbiorem widzów spotykały się jego rekomendacje. To ważne w jakim „towarzystwie” będzie pokazany Twój produkt. Nie możesz też dopuścić do sytuacji, w której Twój produkt lub usługa wykluczają się z innymi, reklamowanymi wcześniej przez influencera. 
+Zobacz, jakiego rodzaju produkty promował dotychczas influencer, w jaki sposób je prezentował i z jakim odbiorem widzów spotykały się jego rekomendacje. To ważne w jakim „towarzystwie” będzie pokazany Twój produkt. Nie możesz też dopuścić do sytuacji, w której Twój produkt lub usługa wykluczają się z innymi, reklamowanymi wcześniej przez influencera.
 
-Warto sprawdzić również, jak często dana osoba decyduje się na płatne współprace. Im ich więcej, tym mniej przestrzeni dla Twojego produktu. 
+Warto sprawdzić również, jak często dana osoba decyduje się na płatne współprace. Im ich więcej, tym mniej przestrzeni dla Twojego produktu.
 
 ### 3. Patrz nie tylko na lajki
 
-Liczba obserwujących to jedno, jednak równie ważna jest zaangażowana społeczność – analizy kampanii często potwierdzają, że tzw. mikroinfluencerzy, posiadający mniejsze grono zaangażowanych odbiorców, często wypadają lepiej od wielkich „graczy” (biorąc pod uwagę stosunek kosztów kampanii do jej efektów). Aby mieć pewność, zawsze możesz poprosić influencera o statystyki konta. 
+Liczba obserwujących to jedno, jednak równie ważna jest zaangażowana społeczność – analizy kampanii często potwierdzają, że tzw. mikroinfluencerzy, posiadający mniejsze grono zaangażowanych odbiorców, często wypadają lepiej od wielkich „graczy” (biorąc pod uwagę stosunek kosztów kampanii do jej efektów). Aby mieć pewność, zawsze możesz poprosić influencera o statystyki konta.
 
-Korzystanie z usług mikroinfluencerów to też świetna opcja dla tych, którzy mają ograniczony budżet lub chcą mniejszym kosztem przetestować zasadność, czy influencer marketing rzeczywiście ma sens w przypadku ich produktu. 
+Korzystanie z usług mikroinfluencerów to też świetna opcja dla tych, którzy mają ograniczony budżet lub chcą mniejszym kosztem przetestować zasadność, czy influencer marketing rzeczywiście ma sens w przypadku ich produktu.
 
 ### 4. Zwróć uwagę na jakość reakcji 
 
@@ -54,7 +55,7 @@ Pamiętaj, by sprawdzić też, czy i w jaki sposób na komentarze reaguje influe
 
 ### 5. Bądź fair wobec prawa
 
-Pamiętaj o tym, że współpraca musi być w odpowiedni sposób oznaczona. Inaczej przypomni o tym poirytowana społeczność wybranego influencera lub... UOKiK, który niedawno zapowiedział weryfikację profili pod kątem odpowiednich oznaczeń, uznając ich brak za nieuczciwą względem konsumentów praktykę. 
+Pamiętaj o tym, że współpraca musi być w odpowiedni sposób oznaczona. Inaczej przypomni o tym poirytowana społeczność wybranego influencera lub... UOKiK, który niedawno zapowiedział weryfikację profili pod kątem odpowiednich oznaczeń, uznając ich brak za nieuczciwą względem konsumentów praktykę.
 
 ### 6. Bój się… sukcesu 
 

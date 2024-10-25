@@ -29,7 +29,7 @@ const BlogPage = ({
   data: {
     markdownRemark: {
       rawMarkdownBody,
-      frontmatter: { description, title, date, tags },
+      frontmatter: { title, date, tags },
       fields: { slug },
     },
   },

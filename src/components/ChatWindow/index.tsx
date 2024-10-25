@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import Markdown from "markdown-to-jsx"
 import { LoadingDots } from "../LoadingDots"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 
 type Message = {
   role: "user" | "assistant"

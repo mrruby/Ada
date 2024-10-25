@@ -44,7 +44,6 @@ W zakresie profilów w mediach społecznościowych związanych z naszą stroną 
 - [Facebook](https://pl-pl.facebook.com/privacy/explanation),
 - [Instagram](https://help.instagram.com/519522125107875),
 
-
 - **2:<a name="_page1_x70.90_y316.38"></a> Z kim możesz kontaktować się w sprawie przetwarzania danych osobowych?**
 
 W ramach wdrożenia systemu ochrony danych osobowych w naszej organizacji podjęliśmy decyzję o niewyznaczaniu inspektora ochrony danych osobowych z uwagi na fakt, że w naszej sytuacji nie jest to obowiązkowe.
@@ -245,7 +244,6 @@ Zakres przetwarzanych danych opisaliśmy w odniesieniu do każdego celu przetwar
 - informacje zawarte w korespondencji,
 - Informacje Anonimowe.
 
-
 - **5:<a name="_page6_x70.90_y371.51"></a> Czym są „Informacje Anonimowe”?**
 
 Korzystamy z narzędzi, które gromadzą na Twój temat szereg informacji związanych z korzystaniem z naszej strony. Chodzi w szczególności o następujące informacje:
@@ -436,7 +434,6 @@ Odpowiedź na to pytanie znajduje się w wielu miejscach niniejszej Polityki pry
 - [Facebook Ads Settings](https://www.facebook.com/ads/settings);
 - [HotJar Opt-out](https://www.hotjar.com/legal/compliance/opt-out);
 
-
 - **21:<a name="_page13_x70.90_y353.70"></a> Czy jest jeszcze coś, o czym powinieneś wiedzieć?**
 
 Jak widzisz, tematyka przetwarzania danych osobowych, wykorzystywania plików cookies i zarządzania ogólnie pojętą prywatnością jest dość skomplikowana. Dołożyliśmy wszelkich starań, by niniejszy dokument dostarczył Ci jak najdalej idącej wiedzy w ważnych dla Ciebie kwestiach. Jeżeli cokolwiek jest dla Ciebie niejasne, chcesz dowiedzieć się więcej lub po prostu porozmawiać o Twojej prywatności, napisz do nas na adres adrianna@getbold.agency
@@ -444,9 +441,6 @@ Jak widzisz, tematyka przetwarzania danych osobowych, wykorzystywania plików co
 - **22:<a name="_page13_x70.90_y493.05"></a> Czy ta Polityka prywatności może podlegać zmianom?**
 
 Tak, możemy modyfikować tę Politykę prywatności, w szczególności ze względu na zmiany technologiczne oraz zmiany przepisów prawa. Jeżeli jesteś zarejestrowanym użytkownikiem, o każdej zmianie Polityki prywatności otrzymasz wiadomość. Zmiany Polityki prywatności zaczynają obowiązywać najwcześniej po 7 dniach. Wszystkie archiwalne wersje Polityki prywatności podlinkowane są poniżej.
-
-
-
 
 **<a name="_page14_x70.90_y56.70"></a> Załącznik do Polityki prywatności**
 

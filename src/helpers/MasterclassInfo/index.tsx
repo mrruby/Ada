@@ -1,4 +1,3 @@
-import { Button } from "helpers/Button"
 import React from "react"
 
 interface Props {
@@ -54,7 +53,6 @@ export const MasterclassInfo: React.FC<Props> = ({
   imageInfo,
   btnStyle,
   btnMargin,
-  sectionId,
 }) => {
   return (
     <div className="w-full py-5 md:py-20 px-2 relative">

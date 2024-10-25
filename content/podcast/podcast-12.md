@@ -9,9 +9,8 @@ explicit: false
 description: "Chciałabym Wam przybliżyć moje osobiste i autorskie porównanie:
   podróże autostopem do pracy w marketingu."
 ---
+
 Podcast #12
-
-
 
 Dzień dobry, cześć i czołem. To ja – Ada, a to jest dwunasty odcinek Phrasówki. Wybory mamy za sobą, wieczór wyborczy pełen emocji, rozczarowań, łez, płaczu, śmiechu, wręczanych kwiatów i wymawianych podziękowań jest już oficjalnie zakończony. Stwierdziłam, że mój podcast chyba nie odnajdzie się w dzisiejszej ścianie postów dotyczących zadowolenia, niezadowolenia, pakowania się do innego kraju itd. Oczywiście nie odbierzcie mnie źle – każdy ma święte prawo do wyrażania swojej opinii, o tyle o ile jeszcze mieści się ona w ramach zdrowego rozsądku, kultury i poszanowania do drugiego człowieka. Natomiast nie ukrywam, że gdy otworzyłam dzisiaj rano Facebooka to mój feed był bardzo, ale to bardzo monotematyczny. Dlatego też, aby dodać Wam nieco oddechu od tych wszystkich rozmów przy kawie na temat tego… stary, ale masakra, co to się znowu podziało… dzisiaj chciałabym Wam opowiedzieć o może nieco bardziej przyjemnym temacie. Chciałabym Wam opowiedzieć o jednej z największych i najlepszych przygód w moim życiu, jaką była podróż autostopem. I podzielić się kilkoma przemyśleniami, które przyszły mi do głowy w „trasie”. Chciałabym też Wam przybliżyć moje osobiste i autorskie porównanie: podróże autostopem do pracy w marketingu. Oraz to, dlaczego moim zdaniem, każdy kto w swojej pracy: ma kontakt z ludźmi; zajmuje się mediami społecznościowymi; buduje markę (swoją lub czyjąś); działa – chce zrozumieć ludzi; chce coś sprzedać lub dowiedzieć się również nieco więcej o samym sobie – dlaczego każdy z Was powinien się na taką podróż zdecydować (o ile oczywiście czuje się na siłach).
 

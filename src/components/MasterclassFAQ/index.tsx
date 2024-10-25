@@ -216,8 +216,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           Cóż będę dużo mówić… osoby, które zdecydowały się na adsy&chill w
           przedsprzedaży, mówią tak:
           <br />
-          <br />
-          - “pozyskuję leady w koszcie 2-3 zł dzięki automatyzacji z MAKE”{" "}
+          <br />- “pozyskuję leady w koszcie 2-3 zł dzięki automatyzacji z MAKE”{" "}
           <br />
           - “ROAS w okolicy 5 przy sprzedaży taniego produktu” <br />
           - “wczoraj odpaliłam reklamę na warsztaty online i już rozeszły się
@@ -346,6 +345,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             href="https://koalendar.com/e/ogarnij-swoje-adsy"
             target="_blank"
             className="underline"
+            rel="noreferrer"
           >
             tutaj.
           </a>

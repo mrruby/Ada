@@ -8,6 +8,7 @@ episodeNumber: 2
 explicit: false
 description: "FaceApp: korzyści i zagrożenia. Jak chronić swoją prywatność w internecie?"
 ---
+
 Podcast #2
 
 <muzyka z familiady>
@@ -16,11 +17,11 @@ Oczywiście, że Was wkręcam – to nie jest dżingiel mojego podcastu, ale tak
 
 O czym posłuchasz w dzisiejszym odcinku?
 
-* FaceApp - korzyści i zagrożenia,
-* czym różni się FaceApp od innych aplikacji tego typu,
-* jak chronić swoją prywatność w internecie,
-* jak Instagram zaczyna walczyć z botami,
-* ile zajmują reklamy w Krakowie.
+- FaceApp - korzyści i zagrożenia,
+- czym różni się FaceApp od innych aplikacji tego typu,
+- jak chronić swoją prywatność w internecie,
+- jak Instagram zaczyna walczyć z botami,
+- ile zajmują reklamy w Krakowie.
 
 Tematem głównym tego odcinka (ponieważ będzie również kilka tematów pobocznych) jest coś, co w sumie samo mi się narzuciło poprzez totalne zalanie mojej facebookowej tablicy zdjęciami specjalnie postarzonych ludzi. Było to za pośrednictwem aplikacji o nazwie FaceApp, która wywołała sporo kontrowersji. A więc spróbujemy sobie to dzisiaj poukładać i zobaczyć tak naprawdę, na czym stoją osoby, które tę aplikację ściągnęły oraz czy jest to jedyna tego typu aplikacja, która ma dostęp do naszych zdjęć.
 

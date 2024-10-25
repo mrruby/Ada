@@ -8,11 +8,13 @@ episodeNumber: 11
 explicit: false
 description: Recenzuję profile partii politycznych na Facebooku - na żywo!
 ---
+
 Podcast #11
 
 Dzień dobry, cześć i czołem. To ja Ada, a to jest jedenasty odcinek Phrasówki. Tak jest – nazwa jest zmieniona, ale może i nie koniecznie. Po prostu phrasówka pozostała jako samodzielny byt i człon. Postanowiła być samodzielną, niezależną kobietą i nikt jej nie będzie zarzucał czy ma być poniedziałkowa, czy ma być środowa. A tak między nami – oczywiście postaram się przynajmniej raz w tygodniu zaskakiwać Was nowym odcinkiem podcastu. Czasem po prostu zdarzają się sytuacje, które niekoniecznie mi pozwalają na to, aby podcast był opublikowany w poniedziałek i chciałam to po części dostosować do siebie, aby nie czuć tak ogromnej presji, jaką czułam ostatnio (a właściwie w każdą niedzielę wieczorem).
 
 W dzisiejszym odcinku opowiem:\
+
 - skąd wzięła się nazwa: Phrasówka,\
 - jaki wynik miałam w Latarniku wyborczym,\
 - jak partie polityczne komunikują się z wyborcami przed wyborami.

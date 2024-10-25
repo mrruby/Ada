@@ -2,7 +2,6 @@ import React from "react"
 import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
 import CountdownTimer from "helpers/CountdownTimer"
-import NextSteps from "components/NextSteps"
 
 const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
   return (
@@ -196,9 +195,9 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                   Liczby + kreatywność = najlepszy kwartał w Twojej firmie
                 </p>
                 <p className="pb-10">
-                  Dołącz do programu mentoringowego "Ogarnij Swoje Adsy" i spędź
-                  następne 4 miesiące ze wsparciem strategicznym zespołu
-                  marketingowego.
+                  Dołącz do programu mentoringowego &quot;Ogarnij Swoje
+                  Adsy&quot; i spędź następne 4 miesiące ze wsparciem
+                  strategicznym zespołu marketingowego.
                 </p>
               </div>
               <Button

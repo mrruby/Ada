@@ -8,19 +8,17 @@ type Props = {
 }
 
 const SEO = ({ description, title, script }: Props): JSX.Element => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
         }
       }
-    `
-  )
+    }
+  `)
 
   const metaDescription = description || site.siteMetadata.description
   const image = "https://adrianna.com.pl/img/og_mastermind.webp"

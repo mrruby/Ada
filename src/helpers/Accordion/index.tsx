@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-import { Button } from "helpers/Button"
-
 type AccordionProps = {
   question: string
   answer: string | JSX.Element

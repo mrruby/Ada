@@ -11,6 +11,7 @@ tags:
   - ""
 date: 2021-09-09T14:02:01.961Z
 ---
+
 # Cześć! Dziś porozmawiajmy na temat bariery kreatywnej i o tym, jak sobie z nią poradzić!
 
 Zawsze byłam pod wrażeniem, gdy Carrie Bradshaw po całym weekendzie randek, wyjść ze znajomymi oraz serii ciekawych towarzyskich zdarzeń siadała do komputera i niczym wirtuoz na pianinie pisała piękny tekst, publikowany na łamach jej własnej kolumny w New York Observer. 😉

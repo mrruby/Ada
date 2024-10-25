@@ -21,14 +21,14 @@ type Podcast = {
   }
 }
 
-type Podcasts = {
+type PodcastsType = {
   allMarkdownRemark: { edges: Podcast[] }
 }
 
 const PodcastsPage = (): JSX.Element => {
   const {
     allMarkdownRemark: { edges },
-  }: Podcasts = useStaticQuery(graphql`
+  }: PodcastsType = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
         filter: { fields: { slug: { regex: "/podcast/" } } }

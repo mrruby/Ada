@@ -82,7 +82,7 @@ const Team = ({ version }: { version: number }): JSX.Element => {
                 Miłośniczka automatyzacji i psycholożka to be! Jeśli chcesz
                 poprawić swoją stronę www, dowiedzieć się jak być bardziej
                 efektywną i co robić, kiedy ilość drobnych tasków przytłacza,
-                I'm your girl!
+                I&apos;m your girl!
               </p>
             </div>
           </div>
@@ -158,7 +158,7 @@ const Team = ({ version }: { version: number }): JSX.Element => {
                 Miłośniczka automatyzacji i psycholożka to be! Jeśli chcesz
                 poprawić swoją stronę www, dowiedzieć się jak być bardziej
                 efektywną i co robić, kiedy ilość drobnych tasków przytłacza,
-                I'm your girl!
+                I&apos;m your girl!
               </p>
             </div>
           </div>

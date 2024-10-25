@@ -11,7 +11,6 @@ import MasterclassPreparing from "components/MasterclassPreparing"
 import MentoringBanner from "components/MentoringBanner"
 import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassesInfo from "components/MasterclassesInfo"
-import CountdownTimer from "helpers/CountdownTimer"
 
 const AdsyAndChill = (): JSX.Element => {
   return (
@@ -45,7 +44,7 @@ const AdsyAndChill = (): JSX.Element => {
         <WebinarAbout version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title3  version="2"/>
+        <ReferencesMentoring title3 version="2" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4 mt-5">
         <MasterclassAgenda version={3} />
@@ -53,7 +52,10 @@ const AdsyAndChill = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <MentoringBanner version={6} />
       </MaxWithBgColorContainer>
-      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5380px] w-screen z-0" id="masterclasses"></div>
+      <div
+        className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5380px] w-screen z-0"
+        id="masterclasses"
+      ></div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={1} />
       </MaxWithBgColorContainer>

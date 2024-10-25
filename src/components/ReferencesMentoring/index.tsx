@@ -243,7 +243,7 @@ const responsive = {
   },
 }
 
-const CustomLeftArrow = ({ onClick, ...rest }: any) => {
+const CustomLeftArrow = ({ onClick }: any) => {
   return (
     <div
       className={`absolute max-h-[400px] top-0 md:top-[160px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
@@ -254,7 +254,7 @@ const CustomLeftArrow = ({ onClick, ...rest }: any) => {
   )
 }
 
-const CustomRightArrow = ({ onClick, ...rest }: any) => {
+const CustomRightArrow = ({ onClick }: any) => {
   return (
     <div
       className={`absolute max-h-[400px] top-0 md:top-[160px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
@@ -276,8 +276,8 @@ const ReferencesMentoring = ({
     version === "2"
       ? referencesList2
       : version === "3"
-      ? referencesList3
-      : referencesList
+        ? referencesList3
+        : referencesList
 
   return (
     <div className="pt-[40px]">

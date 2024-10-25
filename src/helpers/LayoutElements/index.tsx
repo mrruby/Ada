@@ -35,7 +35,6 @@ const ImageComponent: React.FC<
   mobileRight,
   mobileLeft,
   mobileBottom,
-  rotate = "0deg",
   width = "40px",
   zIndex = "z-40",
   maxWidth = "",

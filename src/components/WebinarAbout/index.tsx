@@ -29,8 +29,8 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           </p>
           <p className="pt-8 pb-4 md:text-adaBase tracking-wider leading-none">
             <span className="font-bold">
-              Prowadzę dochodowe kampanie Meta Ads dla klientów
-            </span>{" "}
+              Prowadzę dochodowe kampanie Meta Ads dla klientów<span> </span>
+            </span>
             z Europy, w tym z Polski i na moim liczniku wybiło już ponad{" "}
             <span className="font-bold">1 mln budżetów reklamowych </span>
             wydanych w ramach Meta Ads.
@@ -173,7 +173,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
             Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z
             zamiłowania — kreatywną duszą. Mam za sobą epizod pracy w audycie
-            finansowym, ale{" "}
+            finansowym, ale<> </>
             <span className="font-bold">
               moim powołaniem chyba od zawsze był marketing!
             </span>

@@ -10,6 +10,7 @@ description: "W tym podcaście przeczytacie o: kampaniach dezinformacyjnych oraz
   smogu informacyjnym; tym jak przesiewać docierające do Nas informacje i
   filtrach percepcji."
 ---
+
 Podcast #7
 
 <muzyka>
@@ -17,6 +18,7 @@ Podcast #7
 Hej wszystkim. Tutaj Ada. To jest siódmy odcinek podcastu, czyli ten po którym statystycznie największa ilość podcasterów rezygnuje z dalszego prowadzenia i działania. Wyobraźcie sobie, że jakby na złość (albo właśnie z tego powodu) dzisiaj rano mikrofon zupełnie nie chciał mi działać. Nagrywam różnie: czasem wieczorem, czasem bardzo późno nocy. Głównie dlatego, że nie chcę żeby były słyszane w tle jakieś różne dźwięki (np. ze strony sąsiadów, przychodzące maile czy dzwony wybijające godzinę w Raciborzu). A dziś to nagrywanie jakoś tak zupełnie nie chciało pójść po mojej myśli. Mam nadzieję, że to nie jest żaden znak. Mimo wszystko (oczywiście) uparłam się i nagrywam. Nie martwcie się – mam jeszcze sporo do powiedzenia. Liczę na to, że w moim przypadku ten odcinek siódmy nie będzie ostatnim. Natomiast nie będzie on dzisiaj taką typową prasówką: nadal będę obracać się w tematach, które przydarzyły się w ciągu kilku ostatnich dni (niekoniecznie w świecie social media, ale po prostu na świecie). Są to sprawy smutne i przygnębiające, jednak zawsze możemy z tego wyciągnąć wartością lekcję na przyszłość. Dlatego też chciałabym zachęcić Was do tego, żebyście przeanalizowali sposób, w jaki odbieracie informacje oraz wiadomości i zastanowili się nad tym czy nie warto udać się na (ostatnio tak bardzo popularną w wersji sokowej albo pudełkowej diety) detoks informacyjny. Albo może bardziej chodzi mi o takie ustalenie zasad, które pomogą wam uporządkować sobie życie. Mam też dla Was dzisiaj całkiem sporo statystyk i nowych pojęć, także na pewno będzie się działo.
 
 W tym podcaście przeczytacie o:\
+
 - kampaniach dezinformacyjnych oraz smogu informacyjnym,\
 - tym jak przesiewać docierające do Nas informacje,\
 - filtrach percepcji.

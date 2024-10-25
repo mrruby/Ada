@@ -9,6 +9,7 @@ tags:
   - facebook ads
 date: 2021-06-10T09:46:04.973Z
 ---
+
 # **Cześć!**
 
 ## W dzisiejszym wpisie omawiam 5 najważniejszych czynników, które koniecznie musisz przeanalizować przed rozpoczęciem działań z pomocą Facebook Ads! ✌🏻

@@ -10,20 +10,21 @@ description: W tym odcinku opowiem Wam o tym, jakie są moje odczucia związane 
   użytkowaniem aplikacji TikTok i dlaczego to właśnie ona jest przyszłością.
   Szczególnie jeśli chodzi o reklamę.
 ---
+
 Podcast #4
 
 W tym miejscu powinien lecieć dżingiel, który sprawi, że będziesz kojarzył/kojarzyła tę konkretną ścieżkę muzyczną z moim podcastem. Dżingla nie ma – jestem ja i witam serdecznie każdego słuchacza. Jest to odcinek czwarty Phrasówki i wyjątkowy, bo usłyszycie go zapewne pierwszy raz we wtorek, a dokładniej we wtorkowe przedpołudnie. Niestety, tak jak pisałam na Facebooku: poniedziałek pokonał mnie w 100%. Jakbym miała opisać to dokładnie, to powiedziałabym, że poniedziałek przejechał mnie walcem, a właściwie: poniedziałek rozjechał mnie walcem. Tak chyba będzie troszkę bardziej dokładnie. Mam nadzieję, że nie jestem sama, jeśli chodzi o takie dni i okażecie w stosunku do mnie nieco wyrozumiałości. No, ale słuchajcie – nie będziemy odpuszczać. Stanęłam właśnie przed dylematem mniej więcej takim, jak wtedy, kiedy na studiach czekało się do pełnej godziny, żeby zacząć się uczyć. Ale tym razem się udało – ja nie czekałam do następnego poniedziałku i jestem z Wami dziś.
 
 W dzisiejszym podcaście przeczytacie o:
 
-* fenomenie TikToka,
-* grupie docelowej TikToka,
-* nowej wersji aplikacji Vine,
-* reklamach na TikToku,
-* współpracy Ikei z National Geographic,
-* karze finansowej dla Eksito,
-* zakupach w H&M bez pieniędzy,
-* krytycznych możliwościach w Centrum Sztuki Współczesnej Zamek Ujazdowski.
+- fenomenie TikToka,
+- grupie docelowej TikToka,
+- nowej wersji aplikacji Vine,
+- reklamach na TikToku,
+- współpracy Ikei z National Geographic,
+- karze finansowej dla Eksito,
+- zakupach w H&M bez pieniędzy,
+- krytycznych możliwościach w Centrum Sztuki Współczesnej Zamek Ujazdowski.
 
 W tym odcinku opowiem Wam o tym, jakie są moje odczucia związane z użytkowaniem aplikacji TikTok i dlaczego to właśnie ona jest przyszłością. Szczególnie jeśli chodzi o reklamę. Z racji tego, że uwielbiam porównania kulinarne i zdecydowanie chcę je kontynuować: Instagram to taki bigos, a TikTok to będą… ostrygi albo owoce morza. Dokładniej chodzi mi o coś takiego, o co możesz spytać się znajomego: Ej… jadłeś kiedyś przegrzebki? i w sumie to nic takiego, jeśli nie jadł. No bo wcale nie musiał. No, ale nie zapytasz się, czy jadł bigos. Halo! Szanujmy się. Każdy jadł bigos. I każdy zna bigos. Ale owoce morza (i wcale nie chcę tutaj podkreślić wykwintności tego dania, czy też ceny) to taka rzecz, której nie wszyscy próbowali. I część ludzi je pokocha, a część znienawidzi. I to bardzo. Podążając za tą metaforą – zamówiłam sobie cały talerz przysmaków morza. To jest kilka tygodni temu, kiedy wiedziałam już, że będę o TikToku albo mówić, albo pisać- zainstalowałam sobie tę aplikację. Testowałam, o co w tym wszystkim chodzi: scrollowałam, sprawdzałam efekty, słuchałam muzyczki, nagrywałam też swoje własne TikToki i obserwowałam pojawiające się trendy tj. tysiąc pięćset sto dziewięćset wersji tej samej piosenki, na której najpierw jesteś bez makijażu, a potem jest takie fancy przejście i jesteś już w makijażu. Zresztą te przejścia są bardzo popularne i wielu użytkowników ogląda TikToka właśnie dla tych animacji i dodatkowych przejść, które są też czasochłonne. Ja to wszystko widziałam. I mówię sobie: Ok, dobra. Przetestowałaś – wystarczy. Usuwasz TikToka. No i co? I nadal mam go na telefonie. Na tym właśnie polega jeden z największych haczyków tej aplikacji. Ona, jako aplikacja opierająca się na kontencie wideo (muszę podkreślić, że na contencie krótkiego wideo, bo to ma ogromny wpływ) wciąga użytkownika i to bardzo. Aby oglądać filmy nie musisz, tak naprawdę, mieć tam żadnego konta. Możesz po prostu przeglądać najpopularniejsze TikToki, możesz być takim biernym obserwatorem: nie musisz nic wgrywać, nagrywać, pisać. Możesz być i sam decydujesz: czy idziesz dalej, czy nie. Ja właśnie w taki sposób z ciekawości stałam się przeciętnym użytkownikiem TikToka, który spędza w tej aplikacji aż pięćdziesiąt dwie minuty dziennie. To naprawdę, naprawdę dużo.
 

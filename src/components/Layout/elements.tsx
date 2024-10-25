@@ -44,7 +44,7 @@ import {
   Leaves2,
   Leaves3,
   Leaves4,
-  Leaves5
+  Leaves5,
 } from "../../helpers/LayoutElements/index"
 import { ILayoutElements } from "../../utils/types/layoutElements"
 
@@ -363,10 +363,10 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
         />
       )}
       {leaves4 && (
-       <Leaves2
-        mobileTop="hidden xl:flex lg:top-[2100px]"
-        mobileRight="right-[-40px]"
-      />
+        <Leaves2
+          mobileTop="hidden xl:flex lg:top-[2100px]"
+          mobileRight="right-[-40px]"
+        />
       )}
       {leaves5 && (
         <Leaves3
@@ -375,10 +375,10 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
         />
       )}
       {leaves6 && (
-       <Leaves2
-        mobileTop="hidden xl:flex lg:top-[4700px]"
-         mobileRight="right-[-40px]"
-      />
+        <Leaves2
+          mobileTop="hidden xl:flex lg:top-[4700px]"
+          mobileRight="right-[-40px]"
+        />
       )}
       {leaves7 && (
         <Leaves4
@@ -393,10 +393,10 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
         />
       )}
       {leaves9 && (
-       <Leaves2
-        mobileTop="hidden xl:flex lg:top-[8100px]"
-         mobileRight="right-[-40px]"
-      />
+        <Leaves2
+          mobileTop="hidden xl:flex lg:top-[8100px]"
+          mobileRight="right-[-40px]"
+        />
       )}
       {leaves10 && (
         <Leaves4
@@ -405,34 +405,34 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
         />
       )}
       {leaves11 && (
-       <Leaves5
-        mobileTop="hidden xl:flex lg:top-[8550px]"
-         mobileRight="right-[-40px]"
-      />
+        <Leaves5
+          mobileTop="hidden xl:flex lg:top-[8550px]"
+          mobileRight="right-[-40px]"
+        />
       )}
       {leaves12 && (
-       <Leaves3
-       mobileTop="hidden xl:flex lg:top-[10200px]"
-       mobileLeft="left-[-30px]"
-     />
+        <Leaves3
+          mobileTop="hidden xl:flex lg:top-[10200px]"
+          mobileLeft="left-[-30px]"
+        />
       )}
       {leaves13 && (
-       <Leaves2
-       mobileTop="hidden xl:flex lg:top-[10360px]"
-        mobileRight="right-[-40px]"
-     />
+        <Leaves2
+          mobileTop="hidden xl:flex lg:top-[10360px]"
+          mobileRight="right-[-40px]"
+        />
       )}
       {leaves14 && (
-         <Leaves4
-         mobileTop="hidden xl:flex lg:top-[10600px]"
-         mobileLeft="left-[-30px]"
-       />
+        <Leaves4
+          mobileTop="hidden xl:flex lg:top-[10600px]"
+          mobileLeft="left-[-30px]"
+        />
       )}
       {leaves15 && (
         <Leaves4
-        mobileTop="hidden xl:flex lg:top-[14400px]"
-        mobileLeft="left-[-30px]"
-      />
+          mobileTop="hidden xl:flex lg:top-[14400px]"
+          mobileLeft="left-[-30px]"
+        />
       )}
     </>
   )

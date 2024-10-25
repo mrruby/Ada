@@ -5,9 +5,7 @@ type Props = {
   markdown: string
 }
 
-const LegalLayout = ({
-  markdown,
-}: Props): JSX.Element => {
+const LegalLayout = ({ markdown }: Props): JSX.Element => {
   const overrides = {
     h2: {
       props: {

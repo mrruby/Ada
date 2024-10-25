@@ -8,6 +8,7 @@ episodeNumber: 8
 explicit: false
 description: "Dziś porozmawiamy o Creative Studio na Facebooku! "
 ---
+
 Podcast #8
 
 Hej wszystkim. Nazywam się Ada, a to jest podcast Poniedziałkowa phrasówka. Dla tych, którzy są tutaj po raz pierwszy – mamy odcinek ósmy. Jest to podcast, w którym w każdy poniedziałek rano przekazuję Wam informacje związane z tym, co się dzieje w mediach społecznościowych i w kwestiach marketingowych. Tak abyście byli na bieżąco i nie musieli przeglądać piętnastu tysięcy sześćset siedemdziesięciu dwóch stron, tylko mogli spokojnie i wygodnie założyć słuchawki na uszy, zrobić swoją ulubioną kawę i poświęcić kilkanaście minut na to, aby być na bieżąco.
@@ -17,6 +18,7 @@ Mamy dzisiaj 2 września. Pogoda u mnie jest nieco deszczowa, natomiast pewnie j
 W każdym razie z kwestii istotnych – siedzę aktualnie przed moim nowym mikrofonem, którego unboxing pokazywałam Wam w zeszły weekend. Mam nadzieję, że słychać mnie dobrze i jakość dźwięku jest dla Was w porządku. Jeżeli chcecie – dajcie mi znać, będzie to na pewno dla mnie ważna uwaga, jeśli chodzi o jakość dźwięku. Natomiast muszę powiedzieć, że myślę, że na ten moment się polubimy. Przede wszystkim podoba mi się to, że mikrofon jest bardzo poręczny i mogę go tak naprawdę zabrać ze sobą wszędzie. Dzięki czemu, jeśli mam wygodne miejsce do nagrywania, to niekoniecznie musi być ono w moim domu. I to jest super.
 
 W dzisiejszym odcinku opowiem wam o:\
+
 - Creative Studio,\
 - zmianach przy rejestracji na Facebooku,\
 - historii pani, która nie je mięsa,\

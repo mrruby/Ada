@@ -9,13 +9,13 @@ explicit: false
 description: "Jakie wnioski wyciągnęłam podczas podsumowania moich
   dotychczasowych przygód z podcastowaniem? "
 ---
+
 Podcast #10
-
-
 
 Dzień dobry, cześć i czołem. Bardzo miło mi dla Was nagrywać po tej dwutygodniowej przerwie. To jest dziesiąty odcinek Poniedziałkowej phrasówki.Nazywam się Ada i cieszę się, że mnie słuchacie. Nie ukrywam, że moment, w którym zdecydowałam się na to, że będę nagrywać podcast to był taki trochę moment w moim życiu kiedy poczułam, że teraz to już naprawdę muszę mieć coś swojego. Wiem, że o tym już trochę wspominałam zarówno w odcinkach, jak i na Instagramie czy na Facebooku, ale wtedy pomimo tego, że zawsze lubiłam pisać nie zdawałam sobie sprawy, jak bardzo ta rzecz zmieni mnie i moje życie. I to w sumie już po dziesięciu krótkich odcinkach. Jeszcze co prawda nie ma mnie w przyszłym sezonie Tańca z Gwiazdami i nie reklamuję Hello Body czy tam Natural Mojo, ale pod względem tego słynnego i obśmianego rozwoju osobistego myślę, że zmieniło to naprawdę wiele. I tak na wypadek, gdyby było tutaj kilka osób, które są w tym momencie na etapie przemyśleń nad rozpoczęciem pisania swojego własnego bloga, nagrywania podcastu czy czegokolwiek, co wam przyjdzie do głowy (w końcu the sky’s the limit), to mam nadzieję, że dzisiejszym odcinkiem troszkę Was ośmielę i zachęcę do działania.
 
 W dzisiejszym odcinku opowiem Wam:\
+
 - jakie wnioski wyciągnęłam po podsumowaniu podcastów,\
 - jakie planuję zmiany w podcastach,\
 - o nowym języku, który wprowadził Microsoft,\

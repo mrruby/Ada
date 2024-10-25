@@ -10,16 +10,17 @@ description: Odcinek namber łan! Dziś kilka słów o akcji 'Cała Polska czyta
   Lenorowi', wpływowych influencerach, magicznej liczbie 30 tysięcy i
   polecankach.
 ---
+
 Podcast #1
 
 Spodziewaliście się dżingla? Otóż nic bardziej mylnego. Nadal nie zdecydowałam się na żadną ścieżkę dźwiękową, która bardziej pasuje do tego podcastu. Więc pogadam sobie przez kilkanaście sekund i jedziemy dalej.
 
 W dzisiejszym odcinku posłuchacie/przeczytacie o:
 
-* odpowiedzialności za umieszczane informacje w sieci
-* funkcji Restrict na Instagramie
-* testach A/B na Facebooku i Instagramie
-* zmianach w reklamach na Allegro
+- odpowiedzialności za umieszczane informacje w sieci
+- funkcji Restrict na Instagramie
+- testach A/B na Facebooku i Instagramie
+- zmianach w reklamach na Allegro
 
 A więc: cześć, dzień dobry. Witam Was w pierwszym odcinku poniedziałkowej prasówki. Ja nazywam się Ada i przygotowałam ten podcast z myślą o tych, którzy w poniedziałkowe poranki chcą posłuchać sobie czegoś na luzie o marketingu, z naciskiem na social media. Od czasu do czasu z dodatkiem informacji o pracy zdalnej i innych różnych różnościach (w zależnościach od tego, co aktualnie krąży mi po głowie). Mam nadzieję, że jesteście już zaopatrzeni w kawę, albo herbatkę, albo yerbę, albo chociaż szklankę wody, bo warto się nawadniać. Ja również, a więc zaczynamy.
 
@@ -49,7 +50,7 @@ Okej. Mamy to. To już koniec na dziś. Dziękuję Wam bardzo za to, że ze mną
 
 Polecane linki:
 
-* [Konto Tamary Gonzales.](https://www.instagram.com/tamaragonzalezperea)
-* [Raport Social Press.](<* <https://socialpress.pl/2019/07/madre-marki-wiedza-ze-zasieg-influencera-to-nie-wszystko-wywiad-z-janina-bak-janina-daily?fbclid=IwAR2Ij1G6ZFKtPwULpTn066oPVJwntcmPCJzIXSdcetSrUSWKJNFu6Zx7PLc>>)
-* [Blog Janina Daily.](https://janinadaily.com)
-* [Profil Pieing.](https://www.instagram.com/pieing/)
+- [Konto Tamary Gonzales.](https://www.instagram.com/tamaragonzalezperea)
+- [Raport Social Press.](<\* <https://socialpress.pl/2019/07/madre-marki-wiedza-ze-zasieg-influencera-to-nie-wszystko-wywiad-z-janina-bak-janina-daily?fbclid=IwAR2Ij1G6ZFKtPwULpTn066oPVJwntcmPCJzIXSdcetSrUSWKJNFu6Zx7PLc>>)
+- [Blog Janina Daily.](https://janinadaily.com)
+- [Profil Pieing.](https://www.instagram.com/pieing/)

@@ -71,7 +71,7 @@ const responsive = {
   },
 }
 
-const CustomLeftArrow = ({ onClick, ...rest }: any) => {
+const CustomLeftArrow = ({ onClick }: any) => {
   return (
     <div
       className={`absolute max-h-[400px] top-0 md:top-[60px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
@@ -82,7 +82,7 @@ const CustomLeftArrow = ({ onClick, ...rest }: any) => {
   )
 }
 
-const CustomRightArrow = ({ onClick, ...rest }: any) => {
+const CustomRightArrow = ({ onClick }: any) => {
   return (
     <div
       className={`absolute max-h-[400px] top-0 md:top-[60px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
@@ -97,19 +97,19 @@ const ReferencesSmall = (): JSX.Element => {
   return (
     <div className="max-h-[600px] mx-auto max-w-[360px] md:max-w-screen">
       <Carousel
-      responsive={responsive}
-      infinite={true}
-      customLeftArrow={<CustomLeftArrow />}
-      customRightArrow={<CustomRightArrow />}
-      ssr={true}
-      autoPlay
-      autoPlaySpeed={2000}
+        responsive={responsive}
+        infinite={true}
+        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={<CustomRightArrow />}
+        ssr={true}
+        autoPlay
+        autoPlaySpeed={2000}
       >
         {referencesList.map((reference, index) => (
-        <Reference key={index} image={reference.image} />
-      ))}
+          <Reference key={index} image={reference.image} />
+        ))}
       </Carousel>
-  </div>
+    </div>
   )
 }
 

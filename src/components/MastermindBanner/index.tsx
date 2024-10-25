@@ -61,19 +61,22 @@ const MastermindBanner = ({ version }: { version: number }): JSX.Element => {
           <div className="row-start-1 col-start-1 grid relative pt-20 md:pt-20 tracking-[0.05em]">
             <div className="mx-auto flex flex-col items-start px-3">
               <h1 className="text-adaBase lg:text-adaTitle font-bold leading-tight animate-bounce pb-6 max-w-4xl">
-              Chcesz zwiększyć swoje zarobki, pracując mądrzej, a nie ciężej?
+                Chcesz zwiększyć swoje zarobki, pracując mądrzej, a nie ciężej?
               </h1>
               <p className="max-w-[680px] font-medium text-[14px] md:text-adaBase leading-tight">
-              Meta Ads Masters Mentoring: Twoja droga do mistrzostwa w reklamach!
+                Meta Ads Masters Mentoring: Twoja droga do mistrzostwa w
+                reklamach!
               </p>
               <p className="py-[30px] max-w-[661px] font-medium text-[14px] md:text-adaBase leading-tight">
-              Dołącz do programu mentoringowego Meta Ads Masters Mentoring, prowadź samodzielnie kampanie reklamowe na Facebooku oraz Instagramie i zarabiaj.
+                Dołącz do programu mentoringowego Meta Ads Masters Mentoring,
+                prowadź samodzielnie kampanie reklamowe na Facebooku oraz
+                Instagramie i zarabiaj.
               </p>
               <Button
                 type="button"
                 text={
                   <span className="font-bold">
-                   Chcę dowiedzieć się więcej o programie!
+                    Chcę dowiedzieć się więcej o programie!
                   </span>
                 }
                 sectionId="offert"

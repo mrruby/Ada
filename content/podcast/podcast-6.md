@@ -10,20 +10,21 @@ description: Mam dla Was sporo nowości, a także informacji na temat testów,
   które będą prowadzone w aplikacjach, dzięki czemu będziecie wiedzieć o
   planowanych zmianach nieco wcześniej niż inni.
 ---
+
 Podcast #6
 
 Hej, hej social-mediowe świry. Hehe :) Hej wszyscy Ci, którzy słuchają tego podcastu z ciekawości. Hej wszystkim, którzy znają mnie z mojego liceum. Hej wszystkim, którzy znają mnie z Facebooka. I hej tym, którzy nie potrafią wpasować się w żadną z tych grup. Bardzo się cieszę, że tu ze mną jesteście. A to jest szósty odcinek poniedziałkowej Phrasówki. Tak – mamy poniedziałek rano. I działamy. Coach Ada i słuchamy.
 
 W dzisiejszym odcinku przeczytacie:
 
-* o kolejnych działaniach Facebooka w walce z fake newsami,
-* o zmianach w ustawieniach grup na Facebooku,
-* dlaczego firmy gastronomiczne powinny mieć swój profil na Facebooku,
-* jaką kawiarnię otwiera Facebook,
-* o FaceUp programie,
-* o nowych testach na Instagramie,
-* jak zmieni się LinkedIn,
-* dlaczego żubr zniknie z kampanii reklamowych.
+- o kolejnych działaniach Facebooka w walce z fake newsami,
+- o zmianach w ustawieniach grup na Facebooku,
+- dlaczego firmy gastronomiczne powinny mieć swój profil na Facebooku,
+- jaką kawiarnię otwiera Facebook,
+- o FaceUp programie,
+- o nowych testach na Instagramie,
+- jak zmieni się LinkedIn,
+- dlaczego żubr zniknie z kampanii reklamowych.
 
 Mam dla Was sporo nowości, a także informacji na temat testów, które będą prowadzone w aplikacjach, dzięki czemu będziecie wiedzieć o planowanych zmianach nieco wcześniej niż inni. Natomiast tak jak to bywa w kwestii testów – nie jesteśmy jeszcze na 100% pewni, czy one na pewno wejdą w użytkowanie każdego z nas. No bo testy to testy. Kilka miesięcy temu Mark Zuckenberg ogłosił, że chce wprowadzić na Facebooku zakładkę zawierającą wiadomości ze świata. Znajdowałyby się w niej wyłącznie sprawdzone i wiarygodne informacje od światowych wydawców. Jest to część zapowiadanej walki z fake newsami, o których mówiłam w poprzednim odcinku (numer pięć). Kilka dni temu, dzięki publikacji w World Street Journal dowiedzieliśmy się, że portal aktualnie prowadzi rozmowy z serwisami informacjami dotyczące opłat za licencję do tych treści. Nie jest to jednak w 100% potwierdzona informacja, jako że Facebook odmówił komentarza w tej sprawie. Dla Ciebie i dla mnie (jako dla użytkowników portalu) oznacza to tyle, że być może za jakiś czas nie będziemy musieli się przeklikiwać na onet i wp w poszukiwaniu newsów, tylko będziemy mieli ku temu przeznaczoną osobną zakładkę. Jestem ciekawa, jak to będzie wyglądało w Polsce i czy to zostanie w ogóle u nas wprowadzone. Więc w efekcie chodzi po prostu o to, żebyśmy spędzili więcej czasu na Facebooku i nie wchodzili na żadne inne zewnętrzne źródła.
 

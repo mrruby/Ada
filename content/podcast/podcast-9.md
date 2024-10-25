@@ -9,13 +9,13 @@ explicit: false
 description: "W ostatnią sobotę miałam okazję stanąć na scenie TEDxKatowice.
   Dowiedz się, jak mi poszło! "
 ---
+
 Podcast #9
-
-
 
 Dzień dobry, cześć i czołem. Dzisiaj jest deszczowy poniedziałek, po deszczowym weekendzie, także mam nadzieję, że każdy z Was ma ze sobą kubek lub filiżankę czegoś, co Was obudzi, czyli wody z cytryną, zielonej herbaty, kawy albo na przykład grzanego wina. Jak wiadomo to od nas zależy, jaką drogę wybierzemy. Nazywam się Ada, a to jest dziewiąty odcinek Poniedziałkowej Phrasówki, czyli podcastu, który chyba już na zawsze zostanie bez dżingla, ponieważ nadal nie potrafię się na żaden zdecydować. Mam nadzieję, że weekend minął Wam wspaniale. Jeżeli ktoś chciałby się podzielić ze mną tym, co przez te ostatnie dwa dni robił – to bardzo chętnie posłucham. Zostawcie mi komentarz na fejsie lub na Instagramie – gdzie tam Wam pasuje.
 
 W dzisiejszym odcinku opowiem Wam o:\
+
 - moim wystąpieniu na TEDxKatowice,\
 - Facebook Dating,\
 - Deep fake,\
