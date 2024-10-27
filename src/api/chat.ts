@@ -1,5 +1,6 @@
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
-import { OpenAIEmbeddings, ChatOpenAI } from "@langchain/openai"
+import { OpenAIEmbeddings } from "@langchain/openai"
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai"
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters"
 import { MemoryVectorStore } from "langchain/vectorstores/memory"
 import {
@@ -25,9 +26,10 @@ async function initializeChain() {
   if (chain) return chain
   const textContent = JSON.stringify(ebook)
 
-  const model = new ChatOpenAI({
-    model: "gpt-4o-mini",
-    apiKey: process.env.OPENAI_API_KEY,
+  const model = new ChatGoogleGenerativeAI({
+    model: "gemini-1.5-flash-latest",
+    maxOutputTokens: 2048,
+    apiKey: process.env.GOOGLE_API_KEY,
   })
 
   const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000 })

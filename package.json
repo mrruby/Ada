@@ -6,6 +6,7 @@
   "author": "Adrianna Promis <adrianna@getbold.agency>",
   "dependencies": {
     "@langchain/core": "^0.3.15",
+    "@langchain/google-genai": "^0.1.0",
     "@shopify/admin-api-client": "^1.0.3",
     "@shopify/storefront-api-client": "^1.0.2",
     "@supabase/supabase-js": "^2.45.6",
