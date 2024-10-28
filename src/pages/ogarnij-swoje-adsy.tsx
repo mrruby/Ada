@@ -19,12 +19,6 @@ import NextSteps from "components/NextSteps"
 const MastermindPage = (): JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <div className="mt-10">
-        <CountdownTimer
-          text="DOŁĄCZ PRZED STARTEM 4 EDYCJI"
-          targetDate={new Date("2024-09-30T10:00:00")}
-        />
-      </div>
       <WebinarBanner version={5} />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <IconText version={3} />
