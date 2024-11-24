@@ -19,6 +19,7 @@ import Team from "components/Team"
 import MasterclassAgenda from "components/MasterclassAgenda"
 import OpinionVideos from "components/OpinionVideos"
 import NextSteps from "components/NextSteps"
+import MentoringForm from "components/MentoringForm"
 
 const MentoringPage = (): JSX.Element => {
   return (
@@ -91,6 +92,7 @@ const MentoringPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MasterclassFAQ version={2} />
+        <MentoringForm version={1}/>
       </MaxWithBgColorContainer>
     </Layout>
   )
