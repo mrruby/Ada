@@ -86,5 +86,25 @@ module.exports = {
         trackingIds: ["G-8LX78J4XMN"],
       },
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: "G-8LX78J4XMN", 
+          cookieName: "gatsby-gdpr-google-analytics", 
+          anonymize: true, 
+        },
+        googleTagManager: {
+          trackingId: "GTM-TC7CLB2",
+          cookieName: "gatsby-gdpr-google-tagmanager",
+          dataLayerName: "dataLayer",
+        },
+        facebookPixel: {
+          pixelId: "187660469934129",
+          cookieName: "gatsby-gdpr-facebook-pixel",
+        },
+        environments: ["production", "development"],
+      },
+    },
   ],
 }

@@ -13,7 +13,7 @@ import Team from "components/Team"
 import WebinarAbout from "components/WebinarAbout"
 import WebinarBanner from "components/WebinarBanner"
 import MastermindAgenda from "components/MastermindAgenda"
-import CountdownTimer from "helpers/CountdownTimer"
+import MentoringForm from "components/MentoringForm"
 import NextSteps from "components/NextSteps"
 
 const MastermindPage = (): JSX.Element => {
@@ -60,6 +60,7 @@ const MastermindPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MasterclassFAQ version={4} />
+        <MentoringForm version={2}/>
       </MaxWithBgColorContainer>
     </Layout>
   )
