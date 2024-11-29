@@ -69,21 +69,23 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-facebook-pixel`,
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        pixelId: "187660469934129",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-TC7CLB2",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-gtag",
-      options: {
-        trackingIds: ["G-8LX78J4XMN"],
+        googleAnalytics: {
+          trackingId: "G-8LX78J4XMN",
+          cookieName: "gatsby-gdpr-google-analytics",
+          anonymize: true,
+        },
+        googleTagManager: {
+          trackingId: "GTM-TC7CLB2",
+          cookieName: "gatsby-gdpr-google-tagmanager",
+          dataLayerName: "dataLayer",
+        },
+        facebookPixel: {
+          pixelId: "187660469934129",
+          cookieName: "gatsby-gdpr-facebook-pixel",
+        },
+        environments: ["production", "development"],
       },
     },
   ],
