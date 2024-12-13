@@ -2,7 +2,11 @@ import { Button } from "helpers/Button"
 import React from "react"
 import ReCAPTCHA from "react-google-recaptcha"
 
-const ContactForm = (): JSX.Element => {
+type ContactFormProps = {
+  source?: string
+}
+
+const ContactForm = ({ source = "default" }: ContactFormProps): JSX.Element => {
   const inputStyles =
     "border-1 border-ada-blue mb-4 p-4 text-ada-blue w-full text-center hover:shadow-xl"
 
@@ -12,8 +16,8 @@ const ContactForm = (): JSX.Element => {
         className="flex flex-col items-center px-10 pb-[40px] lg:pb-[120px]"
         method="POST"
         data-netlify="true"
-        name="contact-page"
         data-netlify-recaptcha="true"
+        name="contact-page"
         netlify-honeypot="bot-field"
         aria-label="Formularz kontaktowy"
       >
@@ -22,6 +26,12 @@ const ContactForm = (): JSX.Element => {
           type="hidden"
           name="form-name"
           value="contact-page"
+          aria-hidden="true"
+        />
+        <input
+          type="hidden"
+          name="form-source"
+          value={source}
           aria-hidden="true"
         />
         <div className="flex flex-col md:flex-row w-full md:gap-[40px]">

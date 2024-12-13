@@ -5,12 +5,21 @@ import SEO from "components/seo"
 import ContactForm from "components/ContactForm"
 import ContactFormHeader from "components/ContactFormHeader"
 
-const ContactPage = (): JSX.Element => {
+type ContactPageProps = {
+  location: {
+    search: string
+  }
+}
+
+const ContactPage = ({ location }: ContactPageProps): JSX.Element => {
+  const params = new URLSearchParams(location.search)
+  const source = params.get("source") || "Ada"
+
   return (
     <Layout>
       <ContactFormHeader />
       <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="pt-[50px]">
-        <ContactForm />
+        <ContactForm source={source} />
       </MaxWithBgColorContainer>
     </Layout>
   )
