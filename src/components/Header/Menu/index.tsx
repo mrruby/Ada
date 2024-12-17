@@ -49,51 +49,55 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
   return (
     <>
       <nav
-        aria-hidden={!open}
         className={`md:hidden flex flex-col items-center justify-center ${
-          open ? " translate-x-0 h-screen" : "-translate-x-full h-0"
+          open ? "translate-x-0 h-screen" : "-translate-x-full h-0"
         } transition-transform duration-300 ease-in-out`}
       >
-        <Link to={"/"}>
-          <StaticImage
-            src={"../../../images/logo.webp"}
-            alt="Ada Promis"
-            placeholder="blurred"
-            formats={["auto", "webp", "avif"]}
-            width={35}
-            height={35}
-            quality={95}
-          />
-        </Link>
-        {links.map((link, index) => {
-          return link.subMenu ? (
-            <div key={index} className="flex flex-col mx-auto">
-              <button className={mentoringLinkClass} onClick={handleMenuToggle}>
-                {link.text}
-              </button>
-              <div className="flex flex-col bg-ada-light-pink px-6">
-                {isOpen &&
-                  link.subMenu.map((subLink) => (
-                    <NavLink
-                      key={subLink.text}
-                      to={subLink.to}
-                      text={subLink.text}
-                      className={submenuLinkClass}
-                    />
-                  ))}
-              </div>
-            </div>
-          ) : (
-            <NavLink
-              key={index}
-              to={link.to}
-              text={link.text}
-              className={
-                link.text === "mentoring" ? mentoringLinkClass : linkClass
-              }
+        <div aria-hidden={!open}>
+          <Link to={"/"}>
+            <StaticImage
+              src={"../../../images/logo.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
+              formats={["auto", "webp", "avif"]}
+              width={35}
+              height={35}
+              quality={95}
             />
-          )
-        })}
+          </Link>
+          {links.map((link, index) => {
+            return link.subMenu ? (
+              <div key={index} className="flex flex-col mx-auto">
+                <button
+                  className={mentoringLinkClass}
+                  onClick={handleMenuToggle}
+                >
+                  {link.text}
+                </button>
+                <div className="flex flex-col bg-ada-light-pink px-6">
+                  {isOpen &&
+                    link.subMenu.map((subLink) => (
+                      <NavLink
+                        key={subLink.text}
+                        to={subLink.to}
+                        text={subLink.text}
+                        className={submenuLinkClass}
+                      />
+                    ))}
+                </div>
+              </div>
+            ) : (
+              <NavLink
+                key={index}
+                to={link.to}
+                text={link.text}
+                className={
+                  link.text === "mentoring" ? mentoringLinkClass : linkClass
+                }
+              />
+            )
+          })}
+        </div>
       </nav>
       <Burger open={open} setOpen={setOpen} />
     </>

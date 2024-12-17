@@ -45,7 +45,6 @@ const ImageComponent: React.FC<
     <img
       src={src}
       alt={alt}
-      aria-hidden
       className={`absolute ${top || ""} ${right || ""} ${left || ""} ${
         bottom || ""
       } ${mobileTop || ""} ${mobileRight || ""} ${mobileLeft || ""} ${
@@ -133,7 +132,7 @@ export const FlowerBlue3: React.FC<Props> = (props) => (
 const FlowerBlueTemplate: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/flower-blue.svg"
-    alt=""
+    alt="Decorative blue flower"
     {...props}
     zIndex="z-20"
     widthValue={150}
@@ -178,7 +177,11 @@ export const FlowerWhite3: React.FC<Props> = (props) => (
 )
 
 const WavesTemplate: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/waves1.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/waves1.svg"
+    alt="Decorative wave pattern"
+    {...props}
+  />
 )
 
 export const Waves1 = WavesTemplate
@@ -188,7 +191,7 @@ export const Waves4 = WavesTemplate
 export const Waves5 = WavesTemplate
 
 const SunTemplate: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/sun.svg" alt="" {...props} />
+  <ImageComponent src="/assets/sun.svg" alt="Decorative sun" {...props} />
 )
 
 export const Sun1 = SunTemplate
@@ -198,69 +201,114 @@ export const Sun4 = SunTemplate
 export const Sun5 = SunTemplate
 
 export const Sun6: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/sun2.svg" alt="" {...props} zIndex="-z-20" />
+  <ImageComponent
+    src="/assets/sun2.svg"
+    alt="Decorative sun"
+    {...props}
+    zIndex="-z-20"
+  />
 )
 
 export const Sun7: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/sun2.svg" alt="" {...props} />
+  <ImageComponent src="/assets/sun2.svg" alt="Decorative sun" {...props} />
 )
 
 export const Flaming: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/flaming.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/flaming.svg"
+    alt="Decorative flamingo"
+    {...props}
+  />
 )
 
 export const Flaps: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/flaps.svg" alt="" {...props} />
+  <ImageComponent src="/assets/flaps.svg" alt="Decorative flaps" {...props} />
 )
 
 export const Flaps2: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/flaps.svg" alt="" {...props} />
+  <ImageComponent src="/assets/flaps.svg" alt="Decorative flaps" {...props} />
 )
 
 export const Sunglasses: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/sunglasses.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/sunglasses.svg"
+    alt="Decorative sunglasses"
+    {...props}
+  />
 )
 
 export const Sunglasses2: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/sunglasses.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/sunglasses.svg"
+    alt="Decorative sunglasses"
+    {...props}
+  />
 )
 
 export const Ball1: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/ball1.svg" alt="" {...props} />
+  <ImageComponent src="/assets/ball1.svg" alt="Decorative ball" {...props} />
 )
 
 export const Ball2: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/ball2.svg" alt="" {...props} />
+  <ImageComponent src="/assets/ball2.svg" alt="Decorative ball" {...props} />
 )
 
 export const Ball3: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/ball2.svg" alt="" {...props} />
+  <ImageComponent src="/assets/ball2.svg" alt="Decorative ball" {...props} />
 )
 
 export const Drinks: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/drinks.svg" alt="" {...props} />
+  <ImageComponent src="/assets/drinks.svg" alt="Decorative drinks" {...props} />
 )
 
 export const Arrow: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/arrowWebinar.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/arrowWebinar.svg"
+    alt="Decorative arrow"
+    {...props}
+  />
 )
 
 export const ArrowMasterclass: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/arrowMasterclass.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/arrowMasterclass.svg"
+    alt="Decorative arrow"
+    {...props}
+  />
 )
 
 export const Leaves1: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/leaves1.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/leaves1.svg"
+    alt="Decorative leaves"
+    {...props}
+  />
 )
 export const Leaves2: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/leaves2.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/leaves2.svg"
+    alt="Decorative leaves"
+    {...props}
+  />
 )
 export const Leaves3: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/leaves3.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/leaves3.svg"
+    alt="Decorative leaves"
+    {...props}
+  />
 )
 export const Leaves4: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/leaves4.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/leaves4.svg"
+    alt="Decorative leaves"
+    {...props}
+  />
 )
 export const Leaves5: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/leaves5.svg" alt="" {...props} />
+  <ImageComponent
+    src="/assets/leaves5.svg"
+    alt="Decorative leaves"
+    {...props}
+  />
 )
