@@ -33,25 +33,59 @@ const defaultCookies: CookieOption[] = [
   },
 ]
 
-const Cookies = (): JSX.Element => {
-  const [preferences, setPreferences] = useState<CookiePreferences>(
-    defaultCookies.reduce(
-      (acc, cookie) => ({ ...acc, [cookie.name]: true }),
-      {}
-    )
-  )
+const getCookie = (name: string): string | null => {
+  const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"))
+  return match ? match[2] : null
+}
+
+const setCookie = (name: string, value: string, days = 365) => {
+  const date = new Date()
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+  document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`
+}
+
+const Cookies = (): JSX.Element | null => {
+  const [preferences, setPreferences] = useState<CookiePreferences>({})
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const enabledCookies = defaultCookies.filter(
-      (cookie) => preferences[cookie.name]
-    )
-    if (enabledCookies.length > 0) {
-      initializeAndTrack(location)
+    // Check if any of the gatsby-gdpr cookies are set
+    const analyticsCookie = getCookie("gatsby-gdpr-google-analytics")
+    const tagManagerCookie = getCookie("gatsby-gdpr-google-tagmanager")
+    const facebookPixelCookie = getCookie("gatsby-gdpr-facebook-pixel")
+
+    const anySet =
+      analyticsCookie !== null ||
+      tagManagerCookie !== null ||
+      facebookPixelCookie !== null
+
+    if (anySet) {
+      // Preferences are already chosen, do not show banner
+      setIsVisible(false)
+      // We could also reconstruct preferences from these cookies if needed
+    } else {
+      // No preferences set yet, show banner and default all to true (or false if you prefer)
+      const initialPrefs = defaultCookies.reduce(
+        (acc, cookie) => ({ ...acc, [cookie.name]: true }),
+        {}
+      )
+      setPreferences(initialPrefs)
+      setIsVisible(true)
     }
-  }, [preferences])
+  }, [])
 
   const handleToggle = (name: string) => {
-    setPreferences((prev) => ({ ...prev, [name]: !prev[name] }))
+    setPreferences((prev) => ({
+      ...prev,
+      [name]: !prev[name],
+    }))
+  }
+
+  const savePreferences = (newPrefs: CookiePreferences) => {
+    // Save each cookie based on user preference
+    defaultCookies.forEach((cookie) => {
+      setCookie(cookie.cookieName, newPrefs[cookie.name] ? "true" : "false")
+    })
   }
 
   const handleAcceptAll = () => {
@@ -60,11 +94,21 @@ const Cookies = (): JSX.Element => {
       {}
     )
     setPreferences(newPreferences)
+    savePreferences(newPreferences)
     initializeAndTrack(location)
+    setIsVisible(false)
   }
 
   const handleAcceptSelected = () => {
-    initializeAndTrack(location)
+    // If user chooses selected cookies:
+    // Save what is currently in `preferences`
+    savePreferences(preferences)
+
+    // If at least one is true, we initialize and track
+    if (Object.values(preferences).some((val) => val)) {
+      initializeAndTrack(location)
+    }
+    setIsVisible(false)
   }
 
   const handleDeny = () => {
@@ -73,12 +117,17 @@ const Cookies = (): JSX.Element => {
       {}
     )
     setPreferences(newPreferences)
+    savePreferences(newPreferences)
+    // Not calling initializeAndTrack because we denied everything
+    setIsVisible(false)
   }
+
+  if (!isVisible) return null
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-ada-white shadow-lg">
-      <div className="max-w-[1080px] mx-auto p-4">
-        <div className="grid grid-cols-[1fr_auto] gap-4">
+      <div className="max-w-full mx-auto p-4 md:max-w-[1080px]">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4">
           <div>
             <div className="mb-4">
               <h4 className="text-lg font-medium mb-2 text-ada-blue">
@@ -101,7 +150,7 @@ const Cookies = (): JSX.Element => {
               </p>
             </div>
 
-            <div className="flex flex-row gap-4 mt-4">
+            <div className="flex flex-col sm:flex-row gap-4 mt-4">
               {defaultCookies.map((cookie) => (
                 <div key={cookie.name} className="flex items-start gap-2">
                   <label className="relative inline-flex items-center cursor-pointer">
@@ -116,7 +165,9 @@ const Cookies = (): JSX.Element => {
                       peer-checked:after:translate-x-full after:content-[''] 
                       after:absolute after:top-[2px] after:left-[2px] 
                       after:bg-ada-white after:rounded-full after:h-4 after:w-4 
-                      after:transition-all ${preferences[cookie.name] ? "bg-ada-purple" : ""}`}
+                      after:transition-all ${
+                        preferences[cookie.name] ? "bg-ada-purple" : ""
+                      }`}
                     />
                   </label>
                   <div>
