@@ -1,5 +1,7 @@
 import React from "react"
 import BannerBox from "./BannerBox"
+import Section from "../shared/Section"
+import Typography from "../shared/Typography"
 
 const bannerContent = [
   {
@@ -30,14 +32,14 @@ const bannerContent = [
 
 const MagicBanner1 = () => {
   return (
-    <section className="bg-white text-black px-4 py-8 md:py-12">
+    <Section bgColor="bg-white" className="text-black">
       <div className="max-w-4xl mx-auto mb-8 md:mb-20">
-        <h2 className="text-xl md:text-3xl font-bold">
+        <Typography variant="h2">
           Jeśli czujesz, że coraz trudniej Ci wybić się w Internecie, zapisz się
           na webinar i...
-        </h2>
+        </Typography>
       </div>
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         {bannerContent.map((item, i) => (
           <BannerBox
             key={i}
@@ -49,7 +51,7 @@ const MagicBanner1 = () => {
           />
         ))}
       </div>
-    </section>
+    </Section>
   )
 }
 

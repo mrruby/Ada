@@ -1,5 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import Section from "../shared/Section"
+import Typography from "../shared/Typography"
 
 const MagicApproachSection = () => {
   const columns = [
@@ -9,12 +11,12 @@ const MagicApproachSection = () => {
   ]
 
   return (
-    <section className="py-8 md:py-12 px-4">
-      <div className="max-w-5xl mx-auto relative">
-        <h2 className="text-xl md:text-3xl font-bold text-black leading-snug mb-6">
+    <Section>
+      <div className="relative">
+        <Typography variant="h2" className="text-black leading-snug mb-6">
           To jak, chcesz poznać zupełnie nowe podejście do prowadzenia
           skutecznych reklam? Przyjdź i dowiedz się:
-        </h2>
+        </Typography>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {columns.map((text, index) => (
@@ -27,14 +29,14 @@ const MagicApproachSection = () => {
                 height={40}
                 className="absolute top-1 -left-14"
               />
-              <p className="text-sm md:text-base text-white leading-relaxed max-w-60">
+              <Typography variant="body" className="text-white max-w-60">
                 {text}
-              </p>
+              </Typography>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
 
