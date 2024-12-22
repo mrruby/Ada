@@ -69,41 +69,44 @@ const MagicTitle = (): JSX.Element => {
         {/* Right image (phone mockup) */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <div className="relative max-w-[280px] sm:max-w-[400px]">
-            <StaticImage
-              loading="eager"
-              src="../../images/phoneAda.webp"
-              alt="Ada w telefonie"
-              placeholder="blurred"
-              width={400}
-              height={600}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-              className="z-10"
-            />
+            <div className="z-10">
+              <StaticImage
+                loading="eager"
+                src="../../images/phoneAda.webp"
+                alt="Ada w telefonie"
+                placeholder="blurred"
+                width={400}
+                height={600}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
 
-            <StaticImage
-              loading="eager"
-              src="../../images/pinkCircle.webp"
-              alt="Różowe kółko"
-              placeholder="blurred"
-              width={80}
-              height={80}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-              className="absolute top-5 left-[-40px] sm:left-[-20px] z-20"
-            />
+            <div className="absolute top-5 left-[-40px] sm:left-[-20px] z-20">
+              <StaticImage
+                loading="eager"
+                src="../../images/pinkCircle.webp"
+                alt="Różowe kółko"
+                placeholder="blurred"
+                width={80}
+                height={80}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
 
-            <StaticImage
-              loading="eager"
-              src="../../images/yellowCircle.webp"
-              alt="Żółte kółko"
-              placeholder="blurred"
-              width={80}
-              height={80}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-              className="absolute bottom-10 right-[-30px] sm:right-0 z-20"
-            />
+            <div className="absolute bottom-10 right-[-30px] sm:right-0 z-20">
+              <StaticImage
+                loading="eager"
+                src="../../images/yellowCircle.webp"
+                alt="Żółte kółko"
+                placeholder="blurred"
+                width={80}
+                height={80}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
           </div>
         </div>
       </div>

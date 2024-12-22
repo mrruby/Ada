@@ -10,15 +10,16 @@ const MagicBioBanner = () => {
         {/* Left column: Circular image */}
         <div className="w-full md:w-1/3 flex-shrink-0">
           <div className="w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden mx-auto md:mx-0">
-            <StaticImage
-              src="../../images/ada_portrait.webp"
-              alt="Ada Promis-Urbas"
-              placeholder="blurred"
-              layout="fixed"
-              width={240}
-              height={240}
-              className="object-cover w-full h-full"
-            />
+            <div className="object-cover w-full h-full">
+              <StaticImage
+                src="../../images/ada_portrait.webp"
+                alt="Ada Promis-Urbas"
+                placeholder="blurred"
+                layout="fixed"
+                width={240}
+                height={240}
+              />
+            </div>
           </div>
         </div>
 
@@ -26,15 +27,16 @@ const MagicBioBanner = () => {
         <div className="w-full md:w-2/3 text-left flex flex-col gap-3 relative">
           {/* Heading with small purple icon */}
           <div className="flex items-center gap-2">
-            <StaticImage
-              src={"../../images/flower-purple.svg"}
-              alt="Purple flower icon"
-              placeholder="blurred"
-              layout="fixed"
-              width={30}
-              height={30}
-              className="absolute top-1 -left-10"
-            />
+            <div className="absolute top-1 -left-10">
+              <StaticImage
+                src={"../../images/flower-purple.svg"}
+                alt="Purple flower icon"
+                placeholder="blurred"
+                layout="fixed"
+                width={30}
+                height={30}
+              />
+            </div>
             <Typography variant="h2" className="text-black">
               Ada Promis-Urbas
             </Typography>
