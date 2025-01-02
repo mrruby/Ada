@@ -20,8 +20,11 @@ const MagicApproachSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {columns.map((text, index) => (
-            <div key={index} className="flex items-start gap-2 relative">
-              <div className="animate-spin-slow absolute top-1 -left-12">
+            <div
+              key={index}
+              className="flex items-start gap-2 relative pl-14 md:pl-0"
+            >
+              <div className="animate-spin-slow absolute top-1 left-0 md:-left-12">
                 <StaticImage
                   src="../../images/floweryellow.svg"
                   alt="Żółty kwiatek"
