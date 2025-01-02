@@ -35,8 +35,8 @@ const MagicBanner1 = () => {
     <Section bgColor="bg-white" className="text-black">
       <div className="max-w-4xl mx-auto mb-8 md:mb-20">
         <Typography variant="h2">
-          Jeśli czujesz, że coraz trudniej Ci wybić się w Internecie, zapisz się
-          na webinar i...
+          Jeśli czujesz, że coraz trudniej Ci dotrzeć do nowych klientów, zapisz
+          się na webinar i...
         </Typography>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

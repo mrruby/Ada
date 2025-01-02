@@ -15,13 +15,16 @@ const MagicDateBanner = () => {
     <Section className="mb-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left column */}
-        <div className="max-w-[300px] text-black">
+        <div className="max-w-[260px] text-black">
           <Typography variant="h2" className="mb-2">
-            DATA I GODZINA
+            <span className="text-ada-yellow3">ROZWIJAJ</span>{" "}
+            <span>SWÓJ BIZNES</span>
           </Typography>
           <Typography variant="body">
-            Przestań wyrzucać pieniądze w błoto na reklamy, które nie działają.
-            Dowiedz się, jak robić je porządnie i skutecznie już...
+            <span className="font-bold">dzięki reklamom.</span>
+            <br />I nawet z budżetem 10 zł dziennie. Bez natarczywego krzyczenia
+            "KUP!" na stories. Bez frustracji, bo zasięg organiczny znowu
+            spada...
           </Typography>
         </div>
 

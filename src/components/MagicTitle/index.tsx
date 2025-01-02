@@ -17,7 +17,7 @@ const MagicTitle = (): JSX.Element => {
     <Section
       bgColor="bg-ada-newPurple"
       className="text-white overflow-hidden sm:mt-10"
-      padding="py-8 md:py-12 px-4 md:px-8"
+      padding="py-8 md:py-0 md:pt-8 px-4 md:px-8"
       maxWidth="5xl"
     >
       <div className="flex justify-between items-center mb-8">
@@ -43,14 +43,16 @@ const MagicTitle = (): JSX.Element => {
       <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-8">
         {/* Left text column */}
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
-          <Typography variant="h1" className="mb-4 text-[#FFD600]">
-            Webinar: 3 zmiany w reklamach Twojego biznesu, które zadziałają w
-            2025 roku
+          <Typography variant="h1" className="mb-4">
+            <span className="text-ada-pink7">WEBINAR:</span>{" "}
+            <span className="text-ada-yellow3">
+              3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku
+            </span>
           </Typography>
           <Typography variant="body" className="mb-6 text-white">
-            2024 rok pokazał nam jedno – to, co działało jeszcze rok temu, dziś
+            2024 rok pokazał nam jedno - to, co działało jeszcze rok temu, dziś
             przynosi coraz słabsze rezultaty. Właścicielki marek osobistych
-            widzą to na własnej skórze – spadające zasięgi, rosnące koszty
+            widzą to na własnej skórze - spadające zasięgi, rosnące koszty
             reklam i coraz trudniejsza walka o uwagę odbiorców. Niech zgadnę: Ty
             też to czujesz?
           </Typography>
@@ -72,7 +74,7 @@ const MagicTitle = (): JSX.Element => {
             <div className="z-10">
               <StaticImage
                 loading="eager"
-                src="../../images/phoneAda.webp"
+                src="../../images/ada_purple.webp"
                 alt="Ada w telefonie"
                 placeholder="blurred"
                 width={400}
@@ -82,7 +84,7 @@ const MagicTitle = (): JSX.Element => {
               />
             </div>
 
-            <div className="absolute top-5 left-[-40px] sm:left-[-20px] z-20">
+            <div className="absolute bottom-10  left-[-40px] sm:left-[-20px] z-20">
               <StaticImage
                 loading="eager"
                 src="../../images/pinkCircle.webp"
@@ -95,7 +97,7 @@ const MagicTitle = (): JSX.Element => {
               />
             </div>
 
-            <div className="absolute bottom-10 right-[-30px] sm:right-0 z-20">
+            <div className="absolute top-40 right-[-30px] sm:right-0 z-20">
               <StaticImage
                 loading="eager"
                 src="../../images/yellowCircle.webp"

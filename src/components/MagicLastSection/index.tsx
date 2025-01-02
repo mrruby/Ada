@@ -19,8 +19,9 @@ const MagicLastSection = () => {
             <span role="img" aria-label="present">
               🎁
             </span>{" "}
-            Bonus dla obecnych na żywo: notatka graficzna z podsumowaniem
-            spotkania
+            <span className="font-bold">Bonus dla obecnych na żywo:</span>
+            <br />
+            notatka graficzna z podsumowaniem spotkania
           </Typography>
         </div>
         <div className="w-full md:w-1/2">

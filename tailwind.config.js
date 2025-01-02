@@ -23,6 +23,7 @@ module.exports = {
           pink4: "#F7E5EE",
           pink5: "#FEB0DB",
           pink6: "#FFD1F0",
+          pink7: "#FF00A6",
           white: "#FFFFFF",
           white40: "#FFFFFF66",
           brown: "#9B3118",
