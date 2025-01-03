@@ -12,8 +12,9 @@ const MagicLastSection = () => {
             Przestań eksperymentować
           </Typography>
           <Typography variant="body" className="mb-6">
-            Dowiedz się, jakie zmiany naprawdę zadziałają w 2025 roku i wyprzedź
-            konkurencję, która nadal tkwi w starych schematach.
+            Dowiedz się, jakie zmiany naprawdę zadziałają w 2025 roku, nawet
+            jeśli masz niewielki budżet na reklamy i tylko kilka godzin
+            tygodniowo.
           </Typography>
           <Typography variant="body">
             <span role="img" aria-label="present">
