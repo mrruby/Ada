@@ -36,7 +36,7 @@ const MasterclassPage = (): JSX.Element => {
 }
 
 export const Head = () => (
-  <SEO title="Warsztat - Niech kampanie pracują na moje wakacje!" />
+  <SEO title="WEBINAR: 3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku" />
 )
 
 export default MasterclassPage
