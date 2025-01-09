@@ -3,12 +3,12 @@ import Layout from "components/Layout"
 import SEO from "components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicTitle from "components/MagicTitle"
-import HolidayFormTop from "components/HolidayFormTop"
 import MagicBanner1 from "components/MagicBanner"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicBioBanner from "components/MagicBioBanner"
 import MagicApproachSection from "components/MagicApproachSection"
 import MagicLastSection from "components/MagicLastSection"
+import ReferencesMentoring from "components/ReferencesMentoring"
 
 const MasterclassPage = (): JSX.Element => {
   return (
@@ -18,6 +18,9 @@ const MasterclassPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MagicBanner1 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <ReferencesMentoring title3 version="2" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MagicDateBanner />
@@ -36,7 +39,10 @@ const MasterclassPage = (): JSX.Element => {
 }
 
 export const Head = () => (
-  <SEO title="WEBINAR: 3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku" />
+  <SEO
+    title="WEBINAR: 3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku"
+    image="https://adrianna.com.pl/img/ada_purple.webp"
+  />
 )
 
 export default MasterclassPage

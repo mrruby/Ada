@@ -2,6 +2,7 @@ import React from "react"
 import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import magicFormWide from "../../values/forms/magic-form-wide.html"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
@@ -50,22 +51,22 @@ const MagicTitle = (): JSX.Element => {
             </span>
           </Typography>
           <Typography variant="body" className="mb-6 text-white">
-            2024 rok pokazał nam jedno - to, co działało jeszcze rok temu, dziś
-            przynosi coraz słabsze rezultaty. Właścicielki marek osobistych
-            widzą to na własnej skórze - spadające zasięgi, rosnące koszty
-            reklam i coraz trudniejsza walka o uwagę odbiorców. Niech zgadnę: Ty
-            też to czujesz?
+            Zmień te 3 rzeczy, aby Twoja marka wystrzeliła z reklamami w 2025
+            roku!
           </Typography>
 
           <Button
             type="button"
-            text={<span className="font-bold">Tak! 🙌</span>}
+            text={<span className="font-bold">Zapisuję się! 🙌</span>}
             sectionId="webinar-form"
             textSize="text-sm md:text-base"
             btnStyle="uppercase bg-ada-pink2 text-ada-black 
                         font-semibold tracking-wide h-[48px] md:h-[60px] 
                         px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"
           />
+          <div className="my-4">
+            <div dangerouslySetInnerHTML={{ __html: magicFormWide }} />
+          </div>
         </div>
 
         {/* Right image (phone mockup) */}

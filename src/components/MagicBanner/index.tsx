@@ -8,36 +8,30 @@ const bannerContent = [
     circleKey: "purpleCircle",
     iconKey: "calendarIcon",
     bgColor: "bg-ada-yellow3",
-    title: "poznaj",
     description:
-      "konkretne sposoby na reklamy, które sprawdzą się w nadchodzącym roku (szczególnie dla marek osobistych)",
+      "w 2024 widziałaś spadki zasięgów, a chcesz w 2025 roku sprzedawać swoje produkty cyfrowe i programy mentoringowe?",
   },
   {
     circleKey: "yellowCircle",
     iconKey: "questions",
     bgColor: "bg-ada-pink6",
-    title: "odkryj",
     description:
-      "dlaczego samodzielna nauka robienia reklam z kolejnych kursów i e-booków już nie działa – i co warto zrobić zamiast tego",
+      "zainwestowałaś budżet reklamowy, a zobaczyłaś gorsze rezultaty reklam niż oczekiwane?",
   },
   {
     circleKey: "pinkCircleFull",
     iconKey: "heart",
     bgColor: "bg-ada-purple2",
-    title: "dowiedz się",
     description:
-      "jak budować zaangażowaną społeczność wokół swojej marki (zdradzę szczegóły dotyczące zamkniętej grupy mentoringowej)",
+      "dwoiłaś się i troiłaś nad nagrywaniem stories oraz rolek, a chcesz widzieć zaangażowanie i efekty, bez wiecznej pogoni za algorytmem?",
   },
 ]
 
 const MagicBanner1 = () => {
   return (
     <Section bgColor="bg-white" className="text-black">
-      <div className="max-w-4xl mx-auto mb-8 md:mb-20">
-        <Typography variant="h2">
-          Jeśli czujesz, że coraz trudniej Ci dotrzeć do nowych klientów, zapisz
-          się na webinar i...
-        </Typography>
+      <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center">
+        <Typography variant="h2">Czy Ty też masz tak, że...</Typography>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         {bannerContent.map((item, i) => (
@@ -46,7 +40,6 @@ const MagicBanner1 = () => {
             circleKey={item.circleKey}
             iconKey={item.iconKey}
             bgColor={item.bgColor}
-            title={item.title}
             description={item.description}
           />
         ))}

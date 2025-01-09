@@ -5,17 +5,17 @@ import Typography from "../shared/Typography"
 
 const MagicApproachSection = () => {
   const columns = [
-    "Dlaczego przyszłość należy do społeczności i spersonalizowanego wsparcia (zamiast masowych rozwiązań)?",
-    "Jak zdobyć wsparcie całego działu marketingu, nie zatrudniając sztabu specjalistów?",
-    "Jak skutecznie wykorzystywać nowe funkcje menadżera reklam, by osiągać lepsze wyniki (bez względu na to, z jakiej wersji korzystałaś wcześniej)?",
+    "jak poznać remedium na spadające zasięgi, które przynosi realną sprzedaż i efekty",
+    "jak skutecznie wykorzystywać menedżera reklam, aby osiągać lepsze wyniki",
+    "jakie trendy w reklamach przyniesie nam 2025 rok i w jaki sposób możesz wykorzystać je na korzyść swojego biznesu",
   ]
 
   return (
     <Section>
       <div className="relative">
         <Typography variant="h2" className="text-black leading-snug mb-6">
-          To jak, chcesz poznać zupełnie nowe podejście do prowadzenia
-          skutecznych reklam? Przyjdź i dowiedz się:
+          Zmęczona ciągłym myśleniem "Jak to zmienić, aby było lepiej"? Przyjdź
+          i dowiedz się:
         </Typography>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
