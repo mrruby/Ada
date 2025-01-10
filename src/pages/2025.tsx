@@ -20,7 +20,7 @@ const MasterclassPage = (): JSX.Element => {
         <MagicBanner1 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title3 version="2" />
+        <ReferencesMentoring title3 version="1" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MagicDateBanner />
