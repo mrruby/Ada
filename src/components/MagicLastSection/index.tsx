@@ -6,7 +6,7 @@ import Typography from "../shared/Typography"
 const MagicLastSection = () => {
   return (
     <Section bgColor="bg-transparent" id="webinar-form">
-      <div className="flex flex-col md:flex-row items-center gap-8">
+      <div className="flex flex-col items-center md:flex-row md:justify-between gap-8">
         <div className="w-full max-w-sm md:w-1/2 text-black">
           <Typography variant="h2" className="mb-4">
             Przestań eksperymentować
@@ -25,7 +25,7 @@ const MagicLastSection = () => {
             notatka graficzna z podsumowaniem spotkania
           </Typography>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="md:w-full md:w-1/2">
           <div dangerouslySetInnerHTML={{ __html: magicForm }} />
         </div>
       </div>
