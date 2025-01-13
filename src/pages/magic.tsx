@@ -14,19 +14,16 @@ const MasterclassPage = (): JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
-        <MagicTitle version={1} />
+        <MagicTitle version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <MagicBanner1 version={1} />
+        <MagicBanner1 version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title3 version="1" />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer>
-        <MagicDateBanner version={1} />
+        <MagicDateBanner version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink6">
-        <MagicBioBanner version={1} />
+        <MagicBioBanner version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-purple2">
         <MagicApproachSection />
@@ -40,7 +37,7 @@ const MasterclassPage = (): JSX.Element => {
 
 export const Head = () => (
   <SEO
-    title="WEBINAR: 3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku"
+    title="Magic: Poznaj… Meta Ads Girls Inside Club"
     image="https://adrianna.com.pl/img/ada_purple.webp"
   />
 )
