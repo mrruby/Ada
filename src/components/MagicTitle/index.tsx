@@ -148,12 +148,12 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
             {/* Left text column */}
             <div className="w-full md:w-1/2 mt-8 md:mt-0">
               <Typography variant="h1" className="mb-4">
-                <span className="text-ada-yellow3">
-                  Poznaj… Meta Ads Girls Inside Club
-                </span>
+                <span className="text-ada-yellow3 uppercase">
+                  Wyobraź sobie</span> <br />
+                prowadzenie biznesu bez stresu o wyniki...
               </Typography>
               <Typography variant="body" className="mb-6 text-white">
-                Społeczność stworzona dla kobiet, które chcą prowadzić skuteczne kampanie reklamowe Meta Ads - bez stresu i niepewności.
+                Witaj w MAGIC - <span className="font-bold">Marketing Ads Girls Inside Club,</span> społeczności kobiet, które budują skuteczne kampanie reklamowe. Z merytorycznym wsparciem. Bez stresu i niepewności.
               </Typography>
               <Button
                 type="button"

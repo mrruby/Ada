@@ -54,6 +54,34 @@ const magicBannerContent = [
   },
 ]
 
+const magicBannerContent2 = [
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-yellow3",
+    description: <>
+      <p><span className="text-adaSubtitleSecondary">📊</span> <br /> <span className="font-bold">Patrzysz na swoje statystyki</span><br /> i widzisz spadające zasięgi, mimo świetnych produktów? </p>
+    </>
+  },
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-purple2",
+    description: <>
+      <p><span className="text-adaSubtitleSecondary">🤝</span> <br /> <span className="font-bold">Potrzebujesz wsparcia w reklamach,</span><br /> bo wyniki nie są takie, jakich oczekiwałaś? </p>
+    </>
+  },
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-pink6",
+    description: <>
+      <p><span className="text-adaSubtitleSecondary">🤨</span> <br /> <span className="font-bold">Spędzasz godziny na tworzeniu contentu, </span><br />a efekty wciąż nie są zadowalające? </p>
+    </>,
+    height: "md:min-h-[320px] md:mt-[-30px]"
+  },
+]
+
 const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
   return (
     <>
@@ -89,6 +117,45 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
               />
             ))}
           </div>
+        </Section>
+      )}
+      {version == 3 && (
+        <Section bgColor="bg-white" className="text-black">
+          <Typography variant="h2" className="text-black leading-snug mb-6">
+            Czy Ty też masz tak, że...
+          </Typography>
+          <div
+            className="grid grid-cols-2 gap-6 md:gap-8 pt-8"
+            style={{ gridTemplateRows: 'auto auto' }}
+          >
+            <div className="flex flex-col gap-6">
+              {magicBannerContent2.slice(0, 2).map((item, i) => (
+                <BannerBox
+                  key={i}
+                  circleKey={item.circleKey}
+                  iconKey={item.iconKey}
+                  bgColor={item.bgColor}
+                  description={item.description}
+                />
+              ))}
+            </div>
+            <div className="row-span-2 flex items-center">
+              {magicBannerContent2.slice(2, 3).map((item, i) => (
+                <BannerBox
+                  key={i}
+                  circleKey={item.circleKey}
+                  iconKey={item.iconKey}
+                  bgColor={item.bgColor}
+                  description={item.description}
+                  height={item.height}
+                />
+              ))}
+            </div>
+          </div>
+          <Typography variant="body" className="text-black pt-8">
+            <span className="font-bold">Rozumiemy to.</span><br />
+            Dlatego stworzyłyśmy MAGIC - społeczność dla kobiet, które chcą skutecznie reklamować się w Meta bez ciągłego stresu o wyniki.
+          </Typography>
         </Section>
       )}
     </>

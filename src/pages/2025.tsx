@@ -26,10 +26,10 @@ const MasterclassPage = (): JSX.Element => {
         <MagicDateBanner version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink6">
-        <MagicBioBanner version={1} />
+        <MagicBioBanner />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-purple2">
-        <MagicApproachSection />
+        <MagicApproachSection version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
         <MagicLastSection />

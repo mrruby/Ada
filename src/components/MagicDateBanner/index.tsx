@@ -63,10 +63,13 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
             {/* Left column */}
             <div className="max-w-[460px] text-black">
               <Typography variant="h2" className="mb-2">
-                Co sprawia, że MAGIC jest wyjątkowy?
+                Co sprawia, że <span className="text-ada-pink7">MAGIC</span> jest wyjątkowy?
               </Typography>
-              <Typography variant="body">
-                Tutaj nie znajdziesz kolejnego kursu online. <br /> Dostajesz:
+              <Typography variant="body" className="pt-4">
+                Tutaj nie znajdziesz kolejnego kursu online. <br />
+                <span className="font-bold">
+                  Dostajesz:
+                </span>
                 <ul>
                   <li>- 2 spotkania eksperckie miesięcznie</li>
                   <li>- Nielimitowane konsultacje grupowe i dostęp 24/7</li>
