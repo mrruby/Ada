@@ -11,6 +11,7 @@ module.exports = {
           "dark-pink": "#ABA3AF",
           yellow: "#FFB800",
           yellow2: "#FCD444",
+          yellow3: "#F4E107",
           orange: "#F3661F",
           orange2: "#FEC884",
           orange3: "#FFBEA3",
@@ -29,7 +30,6 @@ module.exports = {
           brown: "#9B3118",
           black: "#000000",
           newPurple: "#3D03A1",
-          yellow3: "#F4E107",
         },
       },
       backgroundImage: {

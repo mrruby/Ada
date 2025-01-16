@@ -3,6 +3,7 @@ import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 import Card from "../shared/Card"
 import { Button } from "helpers/Button"
+import { StaticImage } from "gatsby-plugin-image"
 
 const TimeBox = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-white rounded-lg p-4 text-3xl font-bold min-w-[60px] text-center">
@@ -83,25 +84,18 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
               bgColor="bg-ada-yellow3"
               className="flex flex-col items-center justify-center"
             >
-              {/* Date/time row */}
-              <div className="flex items-center justify-center gap-2 mb-8">
-                <TimeBox>19</TimeBox>
-                <span className="text-3xl font-bold">.</span>
-                <TimeBox>01</TimeBox>
-                <TimeBox>12</TimeBox>
-                <span className="text-3xl font-bold">:</span>
-                <TimeBox>00</TimeBox>
+              <div className="z-10 md:mt-[-5rem] md:mb-[-8rem]">
+                <StaticImage
+                  loading="eager"
+                  src="../../images/ada_questions.webp"
+                  alt="Ada w telefonie"
+                  placeholder="blurred"
+                  width={400}
+                  height={600}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
               </div>
-
-              <Button
-                type="button"
-                text="Zapisuję się!"
-                sectionId="webinar-form"
-                textSize="text-sm md:text-base"
-                btnStyle="uppercase bg-ada-pink2 text-ada-black 
-                        font-semibold tracking-wide h-[48px] md:h-[60px] 
-                        px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"
-              />
             </Card>
           </>
         )}

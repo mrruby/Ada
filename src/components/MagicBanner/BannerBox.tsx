@@ -10,7 +10,7 @@ type BannerBoxProps = {
   bgColor: string
   title?: string
   description: string | JSX.Element
-  height?: string
+  styles?: string
 }
 
 const BannerBox = ({
@@ -19,15 +19,15 @@ const BannerBox = ({
   bgColor,
   title,
   description,
-  height
+  styles
 }: BannerBoxProps) => (
-  <div className="relative mt-20 md:mt-0">
+  <div className="relative md:mt-0">
     <div className="absolute left-1/2 -top-16 -translate-x-1/2 w-[90px] h-[90px]">
       <CircleImage circleKey={circleKey} />
       <IconImage iconKey={iconKey} />
     </div>
     <div
-      className={`${bgColor} rounded-3xl p-4 md:p-6 text-center flex flex-col items-center justify-center pt-16 ${height} `}
+      className={`${bgColor} rounded-3xl p-4 md:p-6 text-center flex flex-col items-center justify-center pt-16 ${styles} `}
     >
       <Typography variant="h2" className="mb-2">
         {title}</Typography>

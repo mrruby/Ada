@@ -157,7 +157,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               </Typography>
               <Button
                 type="button"
-                text={<span className="font-bold">Zapisuję się! 🙌</span>}
+                text={<span className="font-bold text-ada-pink7 uppercase">Dołączam!</span>}
                 sectionId="webinar-form"
                 textSize="text-sm md:text-base"
                 btnStyle="uppercase bg-ada-pink2 text-ada-black 

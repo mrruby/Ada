@@ -5,10 +5,10 @@ import Typography from "../shared/Typography"
 
 const MagicWhy = () => {
   return (
-    <Section bgColor="bg-transparent" id="webinar-form">
+    <Section bgColor="bg-transparent">
       <div className="flex flex-col items-center md:flex-row md:justify-between gap-8">
         <div className="w-full text-black">
-          <Typography variant="h2" className="mb-8">
+          <Typography variant="h2" className="mb-8 text-center">
             MAGIC jest dla Ciebie, jeśli:
           </Typography>
           <div className="flex flex-col md:flex-row gap-8">
