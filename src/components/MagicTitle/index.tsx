@@ -14,6 +14,13 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
     }
   }
 
+  const scrollToPackages = () => {
+    const element = document.getElementById("pakiety")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <>
       {version == 1 && (
@@ -137,17 +144,17 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               />
             </Link>
             <button
-              onClick={scrollToWebinarForm}
+              onClick={scrollToPackages}
               className="text-sm md:text-base font-semibold hover:underline"
             >
               Zgłaszam się!
             </button>
           </div>
 
-          <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-8">
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
             {/* Left text column */}
-            <div className="w-full md:w-1/2 mt-8 md:mt-0">
-              <Typography variant="h1" className="mb-4">
+            <div className="w-full md:w-1/2 mt-8">
+              <Typography variant="h1" className="mb-4 md:pt-20">
                 <span className="text-ada-yellow3 uppercase">
                   Wyobraź sobie</span> <br />
                 prowadzenie biznesu bez stresu o wyniki...
@@ -167,46 +174,14 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
             </div>
 
             {/* Right image (phone mockup) */}
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-              <div className="relative max-w-[280px] sm:max-w-[400px]">
-                <div className="z-10">
-                  <StaticImage
-                    loading="eager"
-                    src="../../images/ada_purple.webp"
-                    alt="Ada w telefonie"
-                    placeholder="blurred"
-                    width={400}
-                    height={600}
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
-                  />
-                </div>
-
-                <div className="absolute bottom-10  left-[-40px] sm:left-[-20px] z-20">
-                  <StaticImage
-                    loading="eager"
-                    src="../../images/pinkCircle.webp"
-                    alt="Różowe kółko"
-                    placeholder="blurred"
-                    width={80}
-                    height={80}
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
-                  />
-                </div>
-
-                <div className="absolute top-40 right-[-30px] sm:right-0 z-20">
-                  <StaticImage
-                    loading="eager"
-                    src="../../images/yellowCircle.webp"
-                    alt="Żółte kółko"
-                    placeholder="blurred"
-                    width={80}
-                    height={80}
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
-                  />
-                </div>
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
+              <div className="relative w-full max-w-[360px] overflow-hidden" style={{ aspectRatio: "9 / 16" }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={"https://www.youtube.com/embed/CLZZnO8mx_w"}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>

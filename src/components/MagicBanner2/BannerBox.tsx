@@ -30,7 +30,7 @@ const BannerBox = ({
         <IconImage iconKey={iconKey} />
       </div>
       <div
-        className={`${bgColor} rounded-3xl p-4 md:p-6 text-center flex flex-col items-center justify-center shadow-lg pt-16 ${styles}`}
+        className={`${bgColor} rounded-3xl p-4 md:p-6 text-center flex flex-col items-center justify-center shadow-lg md:pt-16 ${styles}`}
       >
         <Typography variant="h2" className="mb-2">
           {title}

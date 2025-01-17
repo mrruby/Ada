@@ -31,28 +31,38 @@ const bannerContent = [
 const magicBannerContent = [
   {
     circleKey: "purpleCircle",
-    iconKey: "calendarIcon",
+    iconKey: "",
     bgColor: "bg-ada-yellow3",
     title: "Pakiet BASIC",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ",
+    description: <>
+      <p className="pb-2">✅ Nieograniczony dostęp do wszystkich elementów społeczności</p>
+      <p className="pb-2"><span className="text-ada-pink7 font-bold">dla pierwszych 10 osób:</span> <br />
+        <span className="text-ada-pink7 font-bold"> 249 zł</span> brutto/miesięcznie <br />
+        <span className="text-ada-pink7 font-bold">2490 zł </span>brutto/za cały rok</p>
+      <p><span className="font-bold">następnie:</span><br />
+        <span className="font-bold"> 269 zł</span> brutto/miesięcznie<br />
+        <span className="font-bold">  2990 zł</span> brutto/za cały rokk</p>
+    </>,
+    styles: "text-start",
+    url: "https://www.mailingr.co/c/magic-pakiet-basic-rXx5"
   },
   {
     circleKey: "yellowCircle",
-    iconKey: "questions",
+    iconKey: "",
     bgColor: "bg-ada-pink6",
-    title: "Pakiet MAGIC",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ",
-  },
-  {
-    circleKey: "pinkCircleFull",
-    iconKey: "heart",
-    bgColor: "bg-ada-purple2",
     title: "Pakiet VIP",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ",
-  },
+    description: <>
+      <p className="pb-2">✅ Nieograniczony dostęp do wszystkich elementów społeczności</p>
+      <p className="pb-2"><span className="text-ada-pink7 font-bold">dla pierwszych 10 osób:</span> <br />
+        <span className="text-ada-pink7 font-bold"> 249 zł</span> brutto/miesięcznie <br />
+        <span className="text-ada-pink7 font-bold">2490 zł </span>brutto/za cały rok</p>
+      <p><span className="font-bold">następnie:</span><br />
+        <span className="font-bold"> 269 zł</span> brutto/miesięcznie<br />
+        <span className="font-bold">  2990 zł</span> brutto/za cały rokk</p>
+    </>,
+    styles: "text-start",
+    url: "https://mailingr.co/c/magic-pakiet-vip-LdSc"
+  }
 ]
 
 const magicBannerContent2 = [
@@ -133,8 +143,8 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
         </Section>
       )}
       {version == 2 && (
-        <Section bgColor="bg-white" className="text-black">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pt-8">
+        <Section bgColor="bg-white" className="text-black" id="pakiety">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pt-8">
             {magicBannerContent.map((item, i) => (
               <BannerBox
                 key={i}
@@ -143,6 +153,8 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                 bgColor={item.bgColor}
                 title={item.title}
                 description={item.description}
+                styles={item.styles}
+                url={item.url}
               />
             ))}
           </div>
@@ -182,7 +194,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
             </div>
           </div>
           <div
-            className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8"
+            className="grid md:grid-cols-2 gap-2 md:gap-8"
             style={{ gridTemplateRows: 'auto auto' }}
           >
             <div className="row-span-2 flex items-center">
@@ -220,14 +232,13 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
               type="button"
               text={<><span className="font-bold text-ada-yellow3 uppercase text-adaSubtitle">TAK!</span><br /><span className="">
                 Chcę wreszcie pokonać reklamowy chaos!</span></>}
-              sectionId="webinar-form"
+              sectionId="pakiety"
               textSize="text-sm md:text-base"
               btnStyle="bg-ada-pink7 text-ada-white
-                                font-semibold tracking-wide h-[48px] md:h-[60px] 
+                                font-semibold tracking-wide h-[48px] md:h-[80px] 
                                 px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px] mt-4 m-auto"
             />
           </div>
-
         </Section>
       )}
     </>

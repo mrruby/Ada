@@ -7,8 +7,9 @@ import MagicBanner1 from "components/MagicBanner"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicWhy from "components/MagicWhy"
 import MagicApproachSection from "components/MagicApproachSection"
-import MagicLastSection from "components/MagicLastSection"
 import ReferencesMentoring from "components/ReferencesMentoring"
+import MagicBanner2 from "components/MagicBanner2"
+import MagicBioBanner from "components/MagicBioBanner"
 
 const MasterclassPage = (): JSX.Element => {
   return (
@@ -19,8 +20,11 @@ const MasterclassPage = (): JSX.Element => {
       <MaxWithBgColorContainer>
         <MagicBanner1 version={3} />
       </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-pink7">
+        <MagicWhy part={1} />
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
-        <MagicWhy />
+        <MagicWhy part={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MagicBanner1 version={2} />
@@ -33,6 +37,15 @@ const MasterclassPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-purple2">
         <MagicApproachSection version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
+        <ReferencesMentoring title5 version="1" />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+        <MagicBanner2 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-yellow3 z-2 relative">
+        <MagicBioBanner version={2} />
       </MaxWithBgColorContainer>
     </Layout>
   )
