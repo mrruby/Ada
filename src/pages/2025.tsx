@@ -32,7 +32,7 @@ const MasterclassPage = (): JSX.Element => {
         <MagicApproachSection version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
-        <MagicLastSection />
+        <MagicLastSection version={1} />
       </MaxWithBgColorContainer>
     </Layout>
   )

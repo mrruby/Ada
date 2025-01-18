@@ -144,7 +144,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version == 2 && (
         <Section bgColor="bg-white" className="text-black" id="pakiety">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-8 pt-8">
             {magicBannerContent.map((item, i) => (
               <BannerBox
                 key={i}
@@ -235,7 +235,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
               sectionId="pakiety"
               textSize="text-sm md:text-base"
               btnStyle="bg-ada-pink7 text-ada-white
-                                font-semibold tracking-wide h-[48px] md:h-[80px] 
+                                font-semibold tracking-wide h-[80px] 
                                 px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px] mt-4 m-auto"
             />
           </div>

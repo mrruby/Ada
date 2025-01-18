@@ -10,6 +10,8 @@ import MagicApproachSection from "components/MagicApproachSection"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
+import MasterclassFAQ from "components/MasterclassFAQ"
+import MagicLastSection from "components/MagicLastSection"
 
 const MasterclassPage = (): JSX.Element => {
   return (
@@ -46,6 +48,12 @@ const MasterclassPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3 z-2 relative">
         <MagicBioBanner version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-purple2">
+        <MagicLastSection version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+        <MasterclassFAQ version={5} />
       </MaxWithBgColorContainer>
     </Layout>
   )

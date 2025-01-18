@@ -2,37 +2,39 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
+import PersonBox from "./PersonBox"
+import { Button } from "helpers/Button"
 
 const peopleContent = [
   {
     name: "Adrianna Promis-Urbas",
     description:
       "Kreatywna dusza i mózg MAGIC. Specjalizuje się w kampaniach Meta Ads i marketingu zbudowanym na relacjach.",
-    img: "",
+    img: "ada",
   },
   {
     name: "Justyna Król",
     description:
       "Socjolożka i zaklinaczka słów. Tworzy teksty reklamowe budujące autentyczne relacje między marką a klientami.",
-    img: "",
+    img: "justyna",
   },
   {
     name: "Dorota Woźniak",
     description:
       "Architektka z pasją do projektowania. Zamienia nudne reklamy w przyciągające wzrok kreacje graficzne.",
-    img: "",
+    img: "dorota",
   },
   {
     name: "Marianna Ciniak",
     description:
       "Ekspertka od automatyzacji i psycholożka. Doskonale wie, jak zautomatyzować Twój biznes i pomoże Ci to zrobić.",
-    img: "",
+    img: "marianna",
   },
   {
     name: "Nicola Kut",
     description:
       "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisty pracy. .",
-    img: "",
+    img: "nicola",
   }
 ]
 
@@ -42,7 +44,6 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
     <>
       <Section>
         {version == 1 && (
-
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative">
             {/* Left column: Circular image */}
             <div className="w-full md:w-1/3 flex-shrink-0">
@@ -96,7 +97,38 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
           <div className="text-center">
             <Typography variant="h2" className="text-ada-black">Kogo spotkasz
               w <span className="text-ada-pink7">MAGIC?</span></Typography>
-            <Typography variant="h3" className="text-ada-black"><span className="text-ada-pink7">Dołącz do społeczności kobiet, </span><br />które wspólnie rozwijają swoje biznesy i wspierają się w drodze do sukcesu w reklamach Meta.</Typography>
+            <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
+              {peopleContent.slice(0, 3).map((item, i) => (
+                <PersonBox
+                  key={i}
+                  name={item.name}
+                  description={item.description}
+                  img={item.img}
+                />
+              ))}
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 pt-8 mb-8 justify-center">
+              {peopleContent.slice(3, 5).map((item, i) => (
+                <PersonBox
+                  key={i}
+                  name={item.name}
+                  description={item.description}
+                  img={item.img}
+                />
+              ))}
+            </div>
+            <Typography variant="h3" className="text-ada-black max-w-[800px] m-auto"><span className="text-ada-pink7">Dołącz do społeczności kobiet, </span><br />które wspólnie rozwijają swoje biznesy i wspierają się w drodze do sukcesu w reklamach Meta.</Typography>
+            <div className="bg-ada-pink7 rounded-[70px] w-[70px] h-[70px] flex items-center justify-center mt-7 mx-auto">
+              <StaticImage
+                src="../../images/arrowMagic.svg"
+                alt=""
+                layout="fixed"
+                width={50}
+                height={50}
+                placeholder="blurred"
+                quality={90}
+              />
+            </div>
           </div>
         )}
       </Section>

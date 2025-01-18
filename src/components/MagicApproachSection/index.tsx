@@ -55,7 +55,7 @@ const MagicApproachSection = ({ version }: { version: number }): JSX.Element => 
             <Typography variant="h2" className="text-white leading-snug mb-6">
               <span className="font-normal">A co najważniejsze</span> - będziesz częścią społeczności przedsiębiorczych kobiet, które:
             </Typography>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pb-4">
               {columns2.map((text, index) => (
                 <div
                   key={index}

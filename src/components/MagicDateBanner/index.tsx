@@ -39,7 +39,7 @@ const magicTilesContent2 = [
   {
     colors: "bg-ada-purple2 text-ada-white",
     title: "3 godziny konsultacji",
-    description: "grupowych każdego miesiąca, na których rozwiążesz swoje największe wyzwania ",
+    description: "grupowych każdego miesiąca, na których rozwiążesz swoje największe wyzwania",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
@@ -118,7 +118,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
                 Dostajesz:
               </span>
             </Typography>
-            <div className="flex md:flex-row gap-4 md:min-w-[580px]">
+            <div className="flex flex-col md:flex-row gap-4 md:min-w-[580px]">
               <div className="grid grid-cols-1 gap-6 md:gap-2 pt-8">
                 {magicTilesContent1.map((item, i) => (
                   <MagicTile
@@ -129,7 +129,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
                   />
                 ))}
               </div>
-              <div className="grid grid-cols-1 gap-6 md:gap-2 pt-8">
+              <div className="grid grid-cols-1 gap-6 md:gap-2 md:pt-8">
                 {magicTilesContent2.map((item, i) => (
                   <MagicTile
                     key={i}

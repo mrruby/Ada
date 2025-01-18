@@ -1,35 +1,28 @@
 import React from "react"
-import BannerBox from "./BannerBox"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import BannerBox2 from "./BannerBox2"
 
 const bannerContent = [
   {
-    circleKey: "",
-    iconKey: "",
     bgColor: "bg-ada-purple2",
     description: <p><span className="font-bold">Wspólnie opracować Twój lejek reklamowy</span> na konsultacjach</p>,
     styles: "text-ada-white"
   },
   {
-    circleKey: "",
-    iconKey: "",
     bgColor: "bg-ada-pink7",
     description: <p>Dowiedzieć się, co zrobić,<span className="font-bold"> gdy Twoje konto reklamowe zostaje zablokowane</span></p>,
     styles: "text-ada-white"
   },
   {
-    circleKey: "",
-    iconKey: "",
+
     bgColor: "bg-ada-pink7",
     description: <p><span className="font-bold">Skonsultować teksty</span> i projekt <span className="font-bold">landing page</span></p>,
     styles: "text-ada-white"
   },
   {
-    circleKey: "",
-    iconKey: "",
     bgColor: "bg-ada-yellow3",
     description: <p className="font-bold">Ustawić pierwszą automatyzację w reklamach</p>,
     styles: "text-ada-white"
@@ -59,29 +52,27 @@ const MagicBanner2 = ({ }: {}): JSX.Element => {
           />
         </div>
         <div className="w-full flex justify-end">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[800px]">
-            {bannerContent.map((item, i) => (
-              <BannerBox
-                key={i}
-                circleKey={item.circleKey}
-                iconKey={item.iconKey}
-                bgColor={item.bgColor}
-                description={item.description}
-                styles={item.styles}
-              />
-            ))}
-          </div>
-          {/* <div className="">
+          <div className="flex flex-col justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[800px]">
+              {bannerContent.map((item, i) => (
+                <BannerBox2
+                  key={i}
+                  bgColor={item.bgColor}
+                  description={item.description}
+                  styles={item.styles}
+                />
+              ))}
+            </div>
             <Button
               type="button"
-              text="Działam!"
-              sectionId="webinar-form"
+              text={<span className="font-bold text-ada-white text-adaSubtitle">Działam!</span>}
+              sectionId="pakiety"
               textSize="text-sm md:text-base"
-              btnStyle="bg-ada-blue text-ada-white
-                                font-semibold tracking-wide h-[48px] md:h-[60px] 
-                                px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"
+              btnStyle="bg-blue text-ada-black 
+                      font-semibold tracking-wide h-[48px] md:h-[70px] 
+                      px-6 shadow-xl hover:opacity-90 rounded-full max-w-[430px] mx-auto mt-8"
             />
-          </div> */}
+          </div>
         </div>
       </Section>
     </>
