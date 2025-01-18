@@ -118,13 +118,13 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
               ))}
             </div>
             <Typography variant="h3" className="text-ada-black max-w-[800px] m-auto"><span className="text-ada-pink7">Dołącz do społeczności kobiet, </span><br />które wspólnie rozwijają swoje biznesy i wspierają się w drodze do sukcesu w reklamach Meta.</Typography>
-            <div className="bg-ada-pink7 rounded-[70px] w-[70px] h-[70px] flex items-center justify-center mt-7 mx-auto">
+            <div className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto">
               <StaticImage
                 src="../../images/arrowMagic.svg"
                 alt=""
                 layout="fixed"
-                width={50}
-                height={50}
+                width={20}
+                height={20}
                 placeholder="blurred"
                 quality={90}
               />

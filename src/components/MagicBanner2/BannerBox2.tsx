@@ -20,16 +20,8 @@ const BannerBox2 = ({
 }: BannerBox2Props) => {
   const content = (
     <div className="relative md:mt-0">
-      <div className="absolute left-1/2 -top-8 md:-top-3 -translate-x-1/2">
-        <StaticImage
-          src="../../images/checkMagic.webp"
-          alt=""
-          layout="fixed"
-          width={55}
-          height={55}
-          placeholder="blurred"
-          quality={90}
-        />
+      <div className="absolute left-1/2 -top-8 md:-top-3 -translate-x-1/2 text-adaSubtitleThird">
+        ✅
       </div>
       <div
         className={`${bgColor} rounded-3xl p-4 md:p-5 text-center flex flex-col items-center justify-center shadow-lg md:pt-16 ${styles}`}
