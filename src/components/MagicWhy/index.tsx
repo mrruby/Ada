@@ -24,8 +24,8 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                 <li>✅ <span className="font-bold"> Dbasz o swój rozwój</span> osobisty i biznesowy</li>
               </ul>
               <ul className="max-w-md">
-                <li className="mb-3">✅<span className="font-bold">Szukasz społeczności</span> wspierających się kobiet w marketingu</li>
-                <li className="mb-3">✅Chcesz <span className="font-bold"> przestać eksperymentować i zacząć wdrażać sprawdzone strategie</span></li>
+                <li className="mb-3">✅ <span className="font-bold">Szukasz społeczności</span> wspierających się kobiet w marketingu</li>
+                <li className="mb-3">✅ Chcesz <span className="font-bold"> przestać eksperymentować i zacząć wdrażać sprawdzone strategie</span></li>
                 <li>✅ <span className="font-bold">Marzysz o automatyzacji procesów reklamowych,</span> które oszczędzą Twój czas</li>
               </ul>
             </div>

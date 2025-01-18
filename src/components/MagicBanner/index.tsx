@@ -41,9 +41,8 @@ const magicBannerContent = [
         <span className="text-ada-pink7 font-bold">2490 zł </span>brutto/za cały rok</p>
       <p><span className="font-bold">następnie:</span><br />
         <span className="font-bold"> 269 zł</span> brutto/miesięcznie<br />
-        <span className="font-bold">  2990 zł</span> brutto/za cały rokk</p>
+        <span className="font-bold">  2990 zł</span> brutto/za cały rok</p>
     </>,
-    styles: "text-start",
     url: "https://www.mailingr.co/c/magic-pakiet-basic-rXx5"
   },
   {
@@ -58,9 +57,8 @@ const magicBannerContent = [
         <span className="text-ada-pink7 font-bold">2490 zł </span>brutto/za cały rok</p>
       <p><span className="font-bold">następnie:</span><br />
         <span className="font-bold"> 269 zł</span> brutto/miesięcznie<br />
-        <span className="font-bold">  2990 zł</span> brutto/za cały rokk</p>
+        <span className="font-bold">  2990 zł</span> brutto/za cały rok</p>
     </>,
-    styles: "text-start",
     url: "https://mailingr.co/c/magic-pakiet-vip-LdSc"
   }
 ]
@@ -153,7 +151,6 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                 bgColor={item.bgColor}
                 title={item.title}
                 description={item.description}
-                styles={item.styles}
                 url={item.url}
               />
             ))}
@@ -194,7 +191,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
             </div>
           </div>
           <div
-            className="grid md:grid-cols-2 gap-2 md:gap-8"
+            className="grid md:grid-cols-2 gap-2 md:gap-8 pt-3 md:pt-0"
             style={{ gridTemplateRows: 'auto auto' }}
           >
             <div className="row-span-2 flex items-center">

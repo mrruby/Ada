@@ -39,7 +39,7 @@ const MagicBanner2 = ({ }: {}): JSX.Element => {
           <Typography variant="h2" className="text-ada-pink7"><span className="text-ada-black">MAGIC to Twój </span>podręczny<br /> abonament na marketing</Typography>
           <Typography variant="h3" className="text-ada-black font-medium pt-4">Jako członkini możesz na przykład:</Typography>
         </div>
-        <div className="z-1 md:absolute left-0 top-40">
+        <div className="z-1 md:absolute -left-12 top-40">
           <StaticImage
             loading="eager"
             src="../../images/ada_magic.webp"

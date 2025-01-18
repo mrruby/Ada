@@ -434,7 +434,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       answer: (
         <>
           <ul>
-            <li>- 4 intensywne sesje (60-90 min) miesięcznie</li>
+            <li>- 4 intensywne sesje (konsultacje grupowe, warsztaty, ustawianie reklamy na żywo, 60-90 min) miesięcznie</li>
             <li>- Nielimitowane konsultacje pisemne</li>
             <li>- Regularne inspiracje i praktyczne wskazówki</li>
             <li>- Aktualne informacje branżowe w formie przystępnych prasówek</li>

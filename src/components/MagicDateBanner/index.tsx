@@ -118,7 +118,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
                 Dostajesz:
               </span>
             </Typography>
-            <div className="flex flex-col md:flex-row gap-4 md:min-w-[580px]">
+            <div className="flex flex-col md:flex-row gap-4 md:min-w-[580px] relative z-10">
               <div className="grid grid-cols-1 gap-6 md:gap-2 pt-8">
                 {magicTilesContent1.map((item, i) => (
                   <MagicTile
@@ -141,7 +141,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="md:absolute -right-[200px]">
+          <div className="md:absolute -right-[280px] -z-1">
             <StaticImage
               loading="eager"
               src="../../images/ada_questions.webp"
