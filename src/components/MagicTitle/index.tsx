@@ -56,12 +56,13 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               <Typography variant="h1" className="mb-4">
                 <span className="text-ada-pink7">WEBINAR:</span>{" "}
                 <span className="text-ada-yellow3">
-                  3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku
+                  3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025
+                  roku
                 </span>
               </Typography>
               <Typography variant="body" className="mb-6 text-white">
-                Zmień te 3 rzeczy, aby Twoja marka wystrzeliła z reklamami w 2025
-                roku!
+                Zmień te 3 rzeczy, aby Twoja marka wystrzeliła z reklamami w
+                2025 roku!
               </Typography>
 
               <Button
@@ -156,15 +157,26 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
             <div className="w-full md:w-1/2 mt-8">
               <Typography variant="h1" className="mb-4 md:pt-20">
                 <span className="text-ada-yellow3 uppercase">
-                  Wyobraź sobie</span> <br />
+                  Wyobraź sobie
+                </span>{" "}
+                <br />
                 prowadzenie biznesu bez stresu o wyniki...
               </Typography>
               <Typography variant="body" className="mb-6 text-white">
-                Witaj w MAGIC - <span className="font-bold">Marketing Ads Girls Inside Club,</span> społeczności kobiet, które budują skuteczne kampanie reklamowe. Z merytorycznym wsparciem. Bez stresu i niepewności.
+                Witaj w MAGIC -{" "}
+                <span className="font-bold">
+                  Marketing Ads Girls Inside Club,
+                </span>{" "}
+                społeczności kobiet, które budują skuteczne kampanie reklamowe.
+                Z merytorycznym wsparciem. Bez stresu i niepewności.
               </Typography>
               <Button
                 type="button"
-                text={<span className="font-bold text-ada-pink7 uppercase">Dołączam!</span>}
+                text={
+                  <span className="font-bold text-ada-pink7 uppercase">
+                    Dołączam!
+                  </span>
+                }
                 sectionId="pakiety"
                 textSize="text-sm md:text-base"
                 btnStyle="uppercase bg-ada-pink2 text-ada-black 
@@ -175,7 +187,10 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
 
             {/* Right image (phone mockup) */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
-              <div className="relative w-full max-w-[360px] overflow-hidden" style={{ aspectRatio: "9 / 16" }}>
+              <div
+                className="relative w-full max-w-[360px] overflow-hidden"
+                style={{ aspectRatio: "9 / 16" }}
+              >
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
                   src={"https://www.youtube.com/embed/CLZZnO8mx_w"}
@@ -187,8 +202,6 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
           </div>
         </Section>
       )}
-
-
     </>
   )
 }

@@ -10,15 +10,9 @@ type PersonBoxProps = {
   description: string
 }
 
-const PersonBox = ({
-  img,
-  name,
-  description,
-}: PersonBoxProps) => {
+const PersonBox = ({ img, name, description }: PersonBoxProps) => {
   return (
-    <div
-      className="text-center text-ada-black flex flex-col justify-center items-center pt-4 md:max-w-[300px]"
-    >
+    <div className="text-center text-ada-black flex flex-col justify-center items-center pt-4 md:max-w-[300px]">
       <CircleImage circleKey={img} />
       <Typography variant="h3" className="mb-2 mt-2">
         {name}
@@ -26,6 +20,6 @@ const PersonBox = ({
       <p className="text-sm md:text-base leading-relaxed">{description}</p>
     </div>
   )
-};
+}
 
-export default PersonBox;
+export default PersonBox

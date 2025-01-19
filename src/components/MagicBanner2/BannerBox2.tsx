@@ -16,7 +16,7 @@ const BannerBox2 = ({
   title,
   description,
   styles,
-  url
+  url,
 }: BannerBox2Props) => {
   const content = (
     <div className="relative md:mt-0">
@@ -32,7 +32,7 @@ const BannerBox2 = ({
         <p className="text-sm md:text-base leading-relaxed">{description}</p>
       </div>
     </div>
-  );
+  )
 
   return url ? (
     <a href={url} target="_blank" rel="noopener noreferrer">
@@ -40,7 +40,7 @@ const BannerBox2 = ({
     </a>
   ) : (
     content
-  );
-};
+  )
+}
 
-export default BannerBox2;
+export default BannerBox2

@@ -92,7 +92,7 @@ const MentoringPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MasterclassFAQ version={2} />
-        <MentoringForm version={1}/>
+        <MentoringForm version={1} />
       </MaxWithBgColorContainer>
     </Layout>
   )

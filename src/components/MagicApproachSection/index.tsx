@@ -3,7 +3,11 @@ import { StaticImage } from "gatsby-plugin-image"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-const MagicApproachSection = ({ version }: { version: number }): JSX.Element => {
+const MagicApproachSection = ({
+  version,
+}: {
+  version: number
+}): JSX.Element => {
   const columns = [
     "jak poznać remedium na spadające zasięgi, które przynosi realną sprzedaż i efekty",
     "jak skutecznie wykorzystywać menedżera reklam, aby osiągać lepsze wyniki",
@@ -12,7 +16,7 @@ const MagicApproachSection = ({ version }: { version: number }): JSX.Element => 
   const columns2 = [
     "Dzielą się swoimi doświadczeniami",
     "Wspólnie rozwiązują problemy",
-    "Wspierają się w rozwoju biznesuu",
+    "Wspierają się w rozwoju biznesu",
   ]
 
   return (
@@ -21,8 +25,8 @@ const MagicApproachSection = ({ version }: { version: number }): JSX.Element => 
         <>
           <div className="relative">
             <Typography variant="h2" className="text-black leading-snug mb-6">
-              Zmęczona ciągłym myśleniem "Jak to zmienić, aby było lepiej"? Przyjdź
-              i dowiedz się:
+              Zmęczona ciągłym myśleniem "Jak to zmienić, aby było lepiej"?
+              Przyjdź i dowiedz się:
             </Typography>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -53,7 +57,8 @@ const MagicApproachSection = ({ version }: { version: number }): JSX.Element => 
         <>
           <div className="relative">
             <Typography variant="h2" className="text-white leading-snug mb-6">
-              <span className="font-normal">A co najważniejsze</span> - będziesz częścią społeczności przedsiębiorczych kobiet, które:
+              <span className="font-normal">A co najważniejsze</span> - będziesz
+              częścią społeczności przedsiębiorczych kobiet, które:
             </Typography>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pb-4 md:ml-24">
               {columns2.map((text, index) => (
@@ -97,11 +102,14 @@ const MagicApproachSection = ({ version }: { version: number }): JSX.Element => 
                   />
                 </div>
                 <Typography variant="body" className="text-black max-w-60">
-                  <span className="font-bold">Uczestniczyć w praktycznych spotkaniach</span><br /> o trendach czy automatyzacji marketingu
+                  <span className="font-bold">
+                    Uczestniczyć w praktycznych spotkaniach
+                  </span>
+                  <br /> o trendach czy automatyzacji marketingu
                 </Typography>
               </div>
               <div className="flex flex-col items-center text-center gap-2 relative md:pl-0">
-                <div >
+                <div>
                   <StaticImage
                     src="../../images/tips.svg"
                     alt=""
@@ -111,7 +119,8 @@ const MagicApproachSection = ({ version }: { version: number }): JSX.Element => 
                   />
                 </div>
                 <Typography variant="body" className="text-black max-w-60">
-                  <span className="font-bold">Poznać sprawdzone tricki</span><br /> i strategie reklamowe z różnych branż
+                  <span className="font-bold">Poznać sprawdzone tricki</span>
+                  <br /> i strategie reklamowe z różnych branż
                 </Typography>
               </div>
               <div className="flex flex-col items-center text-center gap-2 relative md:pl-0">
@@ -125,7 +134,9 @@ const MagicApproachSection = ({ version }: { version: number }): JSX.Element => 
                   />
                 </div>
                 <Typography variant="body" className="text-black max-w-60">
-                  <span className="font-bold">Dowiedzieć się, </span><br />co naprawdę działa w reklamach Meta
+                  <span className="font-bold">Dowiedzieć się, </span>
+                  <br />
+                  co naprawdę działa w reklamach Meta
                 </Typography>
               </div>
             </div>

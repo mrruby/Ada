@@ -60,7 +60,7 @@ const MastermindPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MasterclassFAQ version={4} />
-        <MentoringForm version={2}/>
+        <MentoringForm version={2} />
       </MaxWithBgColorContainer>
     </Layout>
   )

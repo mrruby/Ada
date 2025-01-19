@@ -402,30 +402,33 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     },
   ]
 
-
   const magicFAQList: ListItem[] = [
     {
       question: "🔍 Na jakiej platformie funkcjonuje MAGIC? ",
-      answer: (
-        <>
-          MAGIC działa na platformie Circle.
-        </>
-      ),
+      answer: <>MAGIC działa na platformie Circle.</>,
     },
     {
       question: "💫 Jak działa członkostwo w MAGIC?",
       answer: (
         <>
-          Możesz dołączyć do nas wybierając plan miesięczny z elastyczną opcją rezygnacji przed końcem okresu rozliczeniowego. Dołączając teraz, zyskujesz gwarancję ceny przez cały okres trwania subskrypcji. Dostępny jest też plan roczny, opłacany z góry, który daje Ci dostęp do wszystkich benefitów przez pełne 12 miesięcy - oczywiście w niższej cenie!
+          Możesz dołączyć do nas wybierając plan miesięczny z elastyczną opcją
+          rezygnacji przed końcem okresu rozliczeniowego. Dołączając teraz,
+          zyskujesz gwarancję ceny przez cały okres trwania subskrypcji.
+          Dostępny jest też plan roczny, opłacany z góry, który daje Ci dostęp
+          do wszystkich benefitów przez pełne 12 miesięcy - oczywiście w niższej
+          cenie!
         </>
       ),
     },
     {
-      question:
-        "💎 Co sprawia, że MAGIC jest wyjątkowy?",
+      question: "💎 Co sprawia, że MAGIC jest wyjątkowy?",
       answer: (
         <>
-          To tętniąca życiem, interaktywna społeczność! Uczestniczysz w spotkaniach na żywo, masz dostęp do nagrań, a program elastycznie dopasowujemy do Twoich potrzeb. W zależności od wybranego pakietu korzystasz z konsultacji grupowych i indywidualnych. To nie jest kolejny statyczny kurs - to przestrzeń ciągłego rozwoju!
+          To tętniąca życiem, interaktywna społeczność! Uczestniczysz w
+          spotkaniach na żywo, masz dostęp do nagrań, a program elastycznie
+          dopasowujemy do Twoich potrzeb. W zależności od wybranego pakietu
+          korzystasz z konsultacji grupowych i indywidualnych. To nie jest
+          kolejny statyczny kurs - to przestrzeń ciągłego rozwoju!
         </>
       ),
     },
@@ -434,10 +437,15 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       answer: (
         <>
           <ul>
-            <li>- 4 intensywne sesje (konsultacje grupowe, warsztaty, ustawianie reklamy na żywo, 60-90 min) miesięcznie</li>
+            <li>
+              - 4 intensywne sesje (konsultacje grupowe, warsztaty, ustawianie
+              reklamy na żywo, 60-90 min) miesięcznie
+            </li>
             <li>- Nielimitowane konsultacje pisemne</li>
             <li>- Regularne inspiracje i praktyczne wskazówki</li>
-            <li>- Aktualne informacje branżowe w formie przystępnych prasówek</li>
+            <li>
+              - Aktualne informacje branżowe w formie przystępnych prasówek
+            </li>
           </ul>
           <p>A to wszystko w cenie niższej niż pojedyncza konsultacja 1:1!</p>
         </>
@@ -447,7 +455,12 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "📚 Czego się nauczę?",
       answer: (
         <>
-          Skupiamy się na digital marketingu, ze szczególnym naciskiem na kampanie w Meta Ads. Dodatkowo poznasz skuteczne techniki copywritingu i zasady tworzenia przyciągających grafik. Dowiesz się, jak stworzyć własny newsletter oraz jakie narzędzia AI warto wykorzystać w swojej pracy, aby działać szybciej i skuteczniej! Wszystko, czego potrzebujesz do skutecznego marketingu online!
+          Skupiamy się na digital marketingu, ze szczególnym naciskiem na
+          kampanie w Meta Ads. Dodatkowo poznasz skuteczne techniki copywritingu
+          i zasady tworzenia przyciągających grafik. Dowiesz się, jak stworzyć
+          własny newsletter oraz jakie narzędzia AI warto wykorzystać w swojej
+          pracy, aby działać szybciej i skuteczniej! Wszystko, czego
+          potrzebujesz do skutecznego marketingu online!
         </>
       ),
     },
@@ -455,10 +468,12 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "💰 Dlaczego warto zainwestować w MAGIC?",
       answer: (
         <>
-          Otrzymujesz kompleksowe wsparcie w cenie niższej niż pojedyncza konsultacja 1:1 czy kolejny kurs, po którym zostajesz sam z notatkami, bez realnego planu działania!
+          Otrzymujesz kompleksowe wsparcie w cenie niższej niż pojedyncza
+          konsultacja 1:1 czy kolejny kurs, po którym zostajesz sam z notatkami,
+          bez realnego planu działania!
         </>
       ),
-    }
+    },
   ]
 
   const renderList = (list: ListItem[]) => {

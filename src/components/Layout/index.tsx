@@ -132,7 +132,7 @@ const Layout: React.FC<Props> = ({
 }) => {
   return (
     <div className="antialiased min-h-screen max-w-full overflow-hidden flex flex-col scroll-smooth relative text-ada-blue">
-      <Cookies/>
+      <Cookies />
       {showHeaderAndFooter && <Header />}
       {children}
       {showHeaderAndFooter && <Footer />}

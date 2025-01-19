@@ -34,33 +34,69 @@ const magicBannerContent = [
     iconKey: "",
     bgColor: "bg-ada-yellow3",
     title: "Pakiet BASIC",
-    description: <>
-      <p className="pb-2">✅ Nieograniczony dostęp do wszystkich elementów społeczności</p>
-      <p className="pb-2"><span className="text-ada-pink7 font-bold">dla pierwszych 10 osób:</span> <br />
-        <span className="text-ada-pink7 font-bold"> 249 zł</span> brutto/miesięcznie <br />
-        <span className="text-ada-pink7 font-bold">2490 zł </span>brutto/za cały rok</p>
-      <p><span className="font-bold">następnie:</span><br />
-        <span className="font-bold"> 269 zł</span> brutto/miesięcznie<br />
-        <span className="font-bold">  2990 zł</span> brutto/za cały rok</p>
-    </>,
-    url: "https://www.mailingr.co/c/magic-pakiet-basic-rXx5"
+    description: (
+      <>
+        <p className="pb-2">
+          ✅ Nieograniczony dostęp do wszystkich elementów społeczności
+        </p>
+        <p className="pb-2">
+          <span className="text-ada-pink7 font-bold">
+            dla pierwszych 10 osób:
+          </span>{" "}
+          <br />
+          <span className="text-ada-pink7 font-bold"> 249 zł</span>{" "}
+          brutto/miesięcznie <br />
+          <span className="text-ada-pink7 font-bold">2490 zł </span>brutto/za
+          cały rok
+        </p>
+        <p>
+          <span className="font-bold">następnie:</span>
+          <br />
+          <span className="font-bold"> 269 zł</span> brutto/miesięcznie
+          <br />
+          <span className="font-bold"> 2990 zł</span> brutto/za cały rok
+        </p>
+        <button
+          className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
+        >
+          WYBIERAM
+        </button>
+      </>
+    ),
+    url: "https://www.mailingr.co/c/magic-pakiet-basic-rXx5",
   },
   {
     circleKey: "yellowCircle",
     iconKey: "",
     bgColor: "bg-ada-pink6",
     title: "Pakiet VIP",
-    description: <>
-      <p className="pb-2">✅ Nieograniczony dostęp do wszystkich elementów społeczności</p>
-      <p className="pb-2"><span className="text-ada-pink7 font-bold">dla pierwszych 10 osób:</span> <br />
-        <span className="text-ada-pink7 font-bold"> 249 zł</span> brutto/miesięcznie <br />
-        <span className="text-ada-pink7 font-bold">2490 zł </span>brutto/za cały rok</p>
-      <p><span className="font-bold">następnie:</span><br />
-        <span className="font-bold"> 269 zł</span> brutto/miesięcznie<br />
-        <span className="font-bold">  2990 zł</span> brutto/za cały rok</p>
-    </>,
-    url: "https://mailingr.co/c/magic-pakiet-vip-LdSc"
-  }
+    description: (
+      <>
+        <p className="pb-2">
+          ✅ Nieograniczony dostęp do wszystkich elementów społeczności
+        </p>
+        <p className="pb-2">
+          ✅ 1 h konsultacji 1:1 miesięcznie z wybraną specjalistką
+        </p>
+        <p className="pb-2">
+          <span className="text-ada-pink7 font-bold">
+            tylko 5 miejsc:
+          </span>{" "}
+          <br />
+          <span className="text-ada-pink7 font-bold">749 zł</span>{" "}
+          brutto/miesięcznie <br />
+          <span className="text-ada-pink7 font-bold">8321 zł</span>{" "}
+          brutto/za cały rok
+        </p>
+        <button
+          className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
+        >
+          WYBIERAM
+        </button>
+      </>
+    ),
+    url: "https://mailingr.co/c/magic-pakiet-vip-LdSc",
+  },
 ]
 
 const magicBannerContent2 = [
@@ -68,26 +104,46 @@ const magicBannerContent2 = [
     circleKey: "",
     iconKey: "",
     bgColor: "bg-ada-yellow3",
-    description: <>
-      <p><span className="text-adaSubtitleSecondary">📊</span> <br /> <span className="font-bold">Patrzysz na swoje statystyki</span><br /> i widzisz spadające zasięgi, mimo świetnych produktów? </p>
-    </>
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">📊</span> <br />{" "}
+          <span className="font-bold">Patrzysz na swoje statystyki</span>
+          <br /> i widzisz spadające zasięgi, mimo świetnych produktów?{" "}
+        </p>
+      </>
+    ),
   },
   {
     circleKey: "",
     iconKey: "",
     bgColor: "bg-ada-purple2",
-    description: <>
-      <p><span className="text-adaSubtitleSecondary">🤝</span> <br /> <span className="font-bold">Potrzebujesz wsparcia w reklamach,</span><br /> bo wyniki nie są takie, jakich oczekiwałaś? </p>
-    </>
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">🤝</span> <br />{" "}
+          <span className="font-bold">Potrzebujesz wsparcia w reklamach,</span>
+          <br /> bo wyniki nie są takie, jakich oczekiwałaś?{" "}
+        </p>
+      </>
+    ),
   },
   {
     circleKey: "",
     iconKey: "",
     bgColor: "bg-ada-pink6",
-    description: <>
-      <p><span className="text-adaSubtitleSecondary">🤨</span> <br /> <span className="font-bold">Spędzasz godziny na tworzeniu contentu, </span><br />a efekty wciąż nie są zadowalające? </p>
-    </>,
-    styles: "md:min-h-[320px] md:mt-[-30px] md:min-w-[496px]"
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">🤨</span> <br />{" "}
+          <span className="font-bold">
+            Spędzasz godziny na tworzeniu contentu,{" "}
+          </span>
+          <br />a efekty wciąż nie są zadowalające?{" "}
+        </p>
+      </>
+    ),
+    styles: "md:min-h-[320px] md:mt-[-30px] md:min-w-[496px]",
   },
 ]
 
@@ -96,26 +152,50 @@ const magicBannerContent3 = [
     circleKey: "",
     iconKey: "",
     bgColor: "bg-ada-yellow3",
-    description: <>
-      <p><span className="text-adaSubtitleSecondary">😮‍💨</span> <br /> <span className="font-bold">Czujesz, że konkurencja zawsze jest o krok przed Tobą,</span><br /> mimo Twojego ciężkiego wysiłku? </p>
-    </>,
-    styles: "md:min-h-[320px] md:mt-[-30px]"
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">😮‍💨</span> <br />{" "}
+          <span className="font-bold">
+            Czujesz, że konkurencja zawsze jest o krok przed Tobą,
+          </span>
+          <br /> mimo Twojego ciężkiego wysiłku?{" "}
+        </p>
+      </>
+    ),
+    styles: "md:min-h-[320px] md:mt-[-30px]",
   },
   {
     circleKey: "",
     iconKey: "",
     bgColor: "bg-ada-purple2",
-    description: <>
-      <p><span className="text-adaSubtitleSecondary">💻</span> <br /> <span className="font-bold">Szukasz sprawdzonej wiedzy i wsparcia</span><br /> w rozwijaniu biznesu online? </p>
-    </>
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">💻</span> <br />{" "}
+          <span className="font-bold">
+            Szukasz sprawdzonej wiedzy i wsparcia
+          </span>
+          <br /> w rozwijaniu biznesu online?{" "}
+        </p>
+      </>
+    ),
   },
   {
     circleKey: "",
     iconKey: "",
     bgColor: "bg-ada-pink6",
-    description: <>
-      <p><span className="text-adaSubtitleSecondary">🤷‍♀️</span> <br /> <span className="font-bold">Poświęcasz mnóstwo czasu na media społecznościowe,</span><br /> ale nie widzisz tego przełożenia na sprzedaż? </p>
-    </>,
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">🤷‍♀️</span> <br />{" "}
+          <span className="font-bold">
+            Poświęcasz mnóstwo czasu na media społecznościowe,
+          </span>
+          <br /> ale nie widzisz tego przełożenia na sprzedaż?{" "}
+        </p>
+      </>
+    ),
   },
 ]
 
@@ -142,7 +222,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version == 2 && (
         <Section bgColor="bg-white" className="text-black" id="pakiety">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-12 pt-8 max-w-4xl mx-auto">
             {magicBannerContent.map((item, i) => (
               <BannerBox
                 key={i}
@@ -164,7 +244,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
           </Typography>
           <div
             className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8"
-            style={{ gridTemplateRows: 'auto auto' }}
+            style={{ gridTemplateRows: "auto auto" }}
           >
             <div className="flex flex-col gap-2 md:gap-6">
               {magicBannerContent2.slice(0, 2).map((item, i) => (
@@ -192,7 +272,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
           </div>
           <div
             className="grid md:grid-cols-2 gap-2 md:gap-8 pt-3 md:pt-0"
-            style={{ gridTemplateRows: 'auto auto' }}
+            style={{ gridTemplateRows: "auto auto" }}
           >
             <div className="row-span-2 flex items-center">
               {magicBannerContent3.slice(0, 1).map((item, i) => (
@@ -222,13 +302,26 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
             Rozumiemy to.
           </Typography>
           <Typography variant="body" className="text-black pt-8">
-            Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do merytorycznego wsparcia, sprawdzonych strategii i inspiracji, które realnie przekładają się na wyniki.
+            Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
+            chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie
+            działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do
+            merytorycznego wsparcia, sprawdzonych strategii i inspiracji, które
+            realnie przekładają się na wyniki.
           </Typography>
           <div className="w-full flex justify-center">
             <Button
               type="button"
-              text={<><span className="font-bold text-ada-yellow3 uppercase text-adaSubtitle">TAK!</span><br /><span className="">
-                Chcę wreszcie pokonać reklamowy chaos!</span></>}
+              text={
+                <>
+                  <span className="font-bold text-ada-yellow3 uppercase text-adaSubtitle">
+                    TAK!
+                  </span>
+                  <br />
+                  <span className="">
+                    Chcę wreszcie pokonać reklamowy chaos!
+                  </span>
+                </>
+              }
               sectionId="pakiety"
               textSize="text-sm md:text-base"
               btnStyle="bg-ada-pink7 text-ada-white

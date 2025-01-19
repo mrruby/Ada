@@ -39,7 +39,8 @@ const magicTilesContent2 = [
   {
     colors: "bg-ada-purple2 text-ada-white",
     title: "3 godziny konsultacji",
-    description: "grupowych każdego miesiąca, na których rozwiążesz swoje największe wyzwania",
+    description:
+      "grupowych każdego miesiąca, na których rozwiążesz swoje największe wyzwania",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
@@ -59,7 +60,6 @@ const magicTilesContent2 = [
 ]
 
 const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
-
   return (
     <Section className="mb-12">
       {version == 1 && (
@@ -72,9 +72,9 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
             </Typography>
             <Typography variant="body">
               <span className="font-bold">dzięki reklamom.</span>
-              <br />I nawet z budżetem 10 zł dziennie. Bez natarczywego krzyczenia
-              "KUP!" na stories. Bez frustracji, bo zasięg organiczny znowu
-              spada...
+              <br />I nawet z budżetem 10 zł dziennie. Bez natarczywego
+              krzyczenia "KUP!" na stories. Bez frustracji, bo zasięg organiczny
+              znowu spada...
             </Typography>
           </div>
 
@@ -110,13 +110,12 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
           {/* Left column */}
           <div className="text-black">
             <Typography variant="h2" className="mb-2">
-              Co sprawia, że <span className="text-ada-pink7">MAGIC</span> jest wyjątkowy?
+              Co sprawia, że <span className="text-ada-pink7">MAGIC</span> jest
+              wyjątkowy?
             </Typography>
             <Typography variant="body" className="pt-4">
               Tutaj nie znajdziesz kolejnego kursu online. <br />
-              <span className="font-bold">
-                Dostajesz:
-              </span>
+              <span className="font-bold">Dostajesz:</span>
             </Typography>
             <div className="flex flex-col md:flex-row gap-4 md:min-w-[580px] relative z-10">
               <div className="grid grid-cols-1 gap-6 md:gap-2 pt-8">
@@ -154,9 +153,8 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
             />
           </div>
         </div>
-      )
-      }
-    </Section >
+      )}
+    </Section>
   )
 }
 

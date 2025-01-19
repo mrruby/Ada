@@ -35,11 +35,10 @@ const peopleContent = [
     description:
       "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisty pracy. .",
     img: "nicola",
-  }
+  },
 ]
 
 const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
-
   return (
     <>
       <Section>
@@ -81,12 +80,13 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
               </div>
               <Typography variant="body" className="text-black">
                 Robię "brzydkie" reklamy, które generują ładne wyniki. Pracuję z
-                biznesami, które dbają o dobrostan psychiczny i fizyczny: praktykuję
-                slow marketing, przemyślany, skuteczny, zbudowany na relacjach.
+                biznesami, które dbają o dobrostan psychiczny i fizyczny:
+                praktykuję slow marketing, przemyślany, skuteczny, zbudowany na
+                relacjach.
               </Typography>
               <Typography variant="body" className="text-black">
-                Z zawodu jestem tłumaczką j. francuskiego &amp; angielskiego, a z
-                zamiłowania — kreatywną duszą. Ułatwiam i upraszczam ADSy na
+                Z zawodu jestem tłumaczką j. francuskiego &amp; angielskiego, a
+                z zamiłowania — kreatywną duszą. Ułatwiam i upraszczam ADSy na
                 Facebooku i Instagramie. Ze mną zrobisz zdecydowanie więcej niż
                 "promuj post"!
               </Typography>
@@ -95,8 +95,9 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
         )}
         {version == 2 && (
           <div className="text-center">
-            <Typography variant="h2" className="text-ada-black">Kogo spotkasz
-              w <span className="text-ada-pink7">MAGIC?</span></Typography>
+            <Typography variant="h2" className="text-ada-black">
+              Kogo spotkasz w <span className="text-ada-pink7">MAGIC?</span>
+            </Typography>
             <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
               {peopleContent.slice(0, 3).map((item, i) => (
                 <PersonBox
@@ -117,7 +118,17 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
                 />
               ))}
             </div>
-            <Typography variant="h3" className="text-ada-black max-w-[800px] m-auto"><span className="text-ada-pink7">Dołącz do społeczności kobiet, </span><br />które wspólnie rozwijają swoje biznesy i wspierają się w drodze do sukcesu w reklamach Meta.</Typography>
+            <Typography
+              variant="h3"
+              className="text-ada-black max-w-[800px] m-auto"
+            >
+              <span className="text-ada-pink7">
+                Dołącz do społeczności kobiet,{" "}
+              </span>
+              <br />
+              które wspólnie rozwijają swoje biznesy i wspierają się w drodze do
+              sukcesu w reklamach Meta.
+            </Typography>
             <div className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto">
               <StaticImage
                 src="../../images/arrowMagic.svg"

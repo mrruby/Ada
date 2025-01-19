@@ -8,36 +8,60 @@ import BannerBox2 from "./BannerBox2"
 const bannerContent = [
   {
     bgColor: "bg-ada-purple2",
-    description: <p><span className="font-bold">Wspólnie opracować Twój lejek reklamowy</span> na konsultacjach</p>,
-    styles: "text-ada-white"
+    description: (
+      <p>
+        <span className="font-bold">
+          Wspólnie opracować Twój lejek reklamowy
+        </span>{" "}
+        na konsultacjach
+      </p>
+    ),
+    styles: "text-ada-white",
   },
   {
     bgColor: "bg-ada-pink7",
-    description: <p>Dowiedzieć się, co zrobić,<span className="font-bold"> gdy Twoje konto reklamowe zostaje zablokowane</span></p>,
-    styles: "text-ada-white"
+    description: (
+      <p>
+        Dowiedzieć się, co zrobić,
+        <span className="font-bold">
+          {" "}
+          gdy Twoje konto reklamowe zostaje zablokowane
+        </span>
+      </p>
+    ),
+    styles: "text-ada-white",
   },
   {
-
     bgColor: "bg-ada-pink7",
-    description: <p><span className="font-bold">Skonsultować teksty</span> i projekt <span className="font-bold">landing page</span></p>,
-    styles: "text-ada-white"
+    description: (
+      <p>
+        <span className="font-bold">Skonsultować teksty</span> i projekt{" "}
+        <span className="font-bold">landing page</span>
+      </p>
+    ),
+    styles: "text-ada-white",
   },
   {
     bgColor: "bg-ada-yellow3",
-    description: <p className="font-bold">Ustawić pierwszą automatyzację w reklamach</p>,
-    styles: "text-ada-white"
+    description: (
+      <p className="font-bold">Ustawić pierwszą automatyzację w reklamach</p>
+    ),
+    styles: "text-ada-white",
   },
 ]
 
-
-
-const MagicBanner2 = ({ }: {}): JSX.Element => {
+const MagicBanner2 = ({}: {}): JSX.Element => {
   return (
     <>
       <Section className="text-black relative">
         <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center">
-          <Typography variant="h2" className="text-ada-pink7"><span className="text-ada-black">MAGIC to Twój </span>podręczny<br /> abonament na marketing</Typography>
-          <Typography variant="h3" className="text-ada-black font-medium pt-4">Jako członkini możesz na przykład:</Typography>
+          <Typography variant="h2" className="text-ada-pink7">
+            <span className="text-ada-black">MAGIC to Twój </span>podręczny
+            <br /> abonament na marketing
+          </Typography>
+          <Typography variant="h3" className="text-ada-black font-medium pt-4">
+            Jako członkini możesz na przykład:
+          </Typography>
         </div>
         <div className="z-1 md:absolute -left-12 top-40">
           <StaticImage
@@ -65,7 +89,11 @@ const MagicBanner2 = ({ }: {}): JSX.Element => {
             </div>
             <Button
               type="button"
-              text={<span className="font-bold text-ada-white text-adaSubtitle">Działam!</span>}
+              text={
+                <span className="font-bold text-ada-white text-adaSubtitle">
+                  Działam!
+                </span>
+              }
               sectionId="pakiety"
               textSize="text-sm md:text-base"
               btnStyle="bg-blue text-ada-black 

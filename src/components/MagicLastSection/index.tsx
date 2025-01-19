@@ -1,7 +1,7 @@
-import React from "react";
-import magicForm from "../../values/forms/magic-form.html";
-import Section from "../shared/Section";
-import Typography from "../shared/Typography";
+import React from "react"
+import magicForm from "../../values/forms/magic-form.html"
+import Section from "../shared/Section"
+import Typography from "../shared/Typography"
 import { Button } from "helpers/Button"
 
 const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
@@ -39,7 +39,11 @@ const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
         <Section bgColor="bg-transparent" id="form" className="flex">
           <Button
             type="button"
-            text={<span className="font-bold text-ada-pink7 uppercase">Sprawdzam!</span>}
+            text={
+              <span className="font-bold text-ada-pink7 uppercase">
+                Sprawdzam!
+              </span>
+            }
             sectionId="pakiety"
             textSize="md:text-adaSubtitle"
             btnStyle="uppercase bg-ada-pink2 text-ada-black 
@@ -49,7 +53,7 @@ const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
         </Section>
       )}
     </>
-  );
-};
+  )
+}
 
-export default MagicLastSection;
+export default MagicLastSection
