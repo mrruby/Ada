@@ -15,6 +15,7 @@ type IReferences = {
   title2?: boolean
   title3?: boolean
   title4?: boolean
+  title5?: boolean
   version?: "1" | "2" | "3"
 }
 
@@ -270,6 +271,7 @@ const ReferencesMentoring = ({
   title2,
   title3,
   title4,
+  title5,
   version = "1",
 }: IReferences): JSX.Element => {
   const selectedList =
@@ -316,6 +318,13 @@ const ReferencesMentoring = ({
           <h2 className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-purple-800 pb-4">
             A przecież Twoja nauka reklam może wyglądać tak:
           </h2>
+        </>
+      )}
+      {title5 && (
+        <>
+          <div className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-black pb-4">
+            Zobacz, co członkinie <span className="text-ada-pink7">MAGIC</span> mówią o nas:
+          </div>
         </>
       )}
       <div className="max-h-[600px] mx-auto mt-5 pb-4">

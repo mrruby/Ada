@@ -14,25 +14,25 @@ const MasterclassPage = (): JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
-        <MagicTitle />
+        <MagicTitle version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <MagicBanner1 />
+        <MagicBanner1 version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <ReferencesMentoring title3 version="1" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <MagicDateBanner />
+        <MagicDateBanner version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink6">
-        <MagicBioBanner />
+        <MagicBioBanner version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-purple2">
-        <MagicApproachSection />
+        <MagicApproachSection version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
-        <MagicLastSection />
+        <MagicLastSection version={1} />
       </MaxWithBgColorContainer>
     </Layout>
   )

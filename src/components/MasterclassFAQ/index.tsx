@@ -402,6 +402,65 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     },
   ]
 
+
+  const magicFAQList: ListItem[] = [
+    {
+      question: "🔍 Na jakiej platformie funkcjonuje MAGIC? ",
+      answer: (
+        <>
+          MAGIC działa na platformie Circle.
+        </>
+      ),
+    },
+    {
+      question: "💫 Jak działa członkostwo w MAGIC?",
+      answer: (
+        <>
+          Możesz dołączyć do nas wybierając plan miesięczny z elastyczną opcją rezygnacji przed końcem okresu rozliczeniowego. Dołączając teraz, zyskujesz gwarancję ceny przez cały okres trwania subskrypcji. Dostępny jest też plan roczny, opłacany z góry, który daje Ci dostęp do wszystkich benefitów przez pełne 12 miesięcy - oczywiście w niższej cenie!
+        </>
+      ),
+    },
+    {
+      question:
+        "💎 Co sprawia, że MAGIC jest wyjątkowy?",
+      answer: (
+        <>
+          To tętniąca życiem, interaktywna społeczność! Uczestniczysz w spotkaniach na żywo, masz dostęp do nagrań, a program elastycznie dopasowujemy do Twoich potrzeb. W zależności od wybranego pakietu korzystasz z konsultacji grupowych i indywidualnych. To nie jest kolejny statyczny kurs - to przestrzeń ciągłego rozwoju!
+        </>
+      ),
+    },
+    {
+      question: "🎯 Co dokładnie otrzymuję?",
+      answer: (
+        <>
+          <ul>
+            <li>- 4 intensywne sesje (konsultacje grupowe, warsztaty, ustawianie reklamy na żywo, 60-90 min) miesięcznie</li>
+            <li>- Nielimitowane konsultacje pisemne</li>
+            <li>- Regularne inspiracje i praktyczne wskazówki</li>
+            <li>- Aktualne informacje branżowe w formie przystępnych prasówek</li>
+          </ul>
+          <p>A to wszystko w cenie niższej niż pojedyncza konsultacja 1:1!</p>
+        </>
+      ),
+    },
+    {
+      question: "📚 Czego się nauczę?",
+      answer: (
+        <>
+          Skupiamy się na digital marketingu, ze szczególnym naciskiem na kampanie w Meta Ads. Dodatkowo poznasz skuteczne techniki copywritingu i zasady tworzenia przyciągających grafik. Dowiesz się, jak stworzyć własny newsletter oraz jakie narzędzia AI warto wykorzystać w swojej pracy, aby działać szybciej i skuteczniej! Wszystko, czego potrzebujesz do skutecznego marketingu online!
+        </>
+      ),
+    },
+    {
+      question: "💰 Dlaczego warto zainwestować w MAGIC?",
+      answer: (
+        <>
+          Otrzymujesz kompleksowe wsparcie w cenie niższej niż pojedyncza konsultacja 1:1 czy kolejny kurs, po którym zostajesz sam z notatkami, bez realnego planu działania!
+        </>
+      ),
+    }
+  ]
+
   const renderList = (list: ListItem[]) => {
     return list.map((item, index) => (
       <Accordion key={index} question={item.question} answer={item.answer} />
@@ -534,6 +593,20 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               </h2>
               <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
                 {renderList(autumnList)}
+              </ul>
+            </div>
+          </div>
+        </>
+      )}
+      {version === 5 && (
+        <>
+          <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center text-ada-black">
+            <div className="pt-[60px] lg:pt-[76px]">
+              <h2 className="text-[20px] lg:text-adaTitle font-bold lg:mb-2 animate-bounce text-center mx-auto">
+                FAQ
+              </h2>
+              <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
+                {renderList(magicFAQList)}
               </ul>
             </div>
           </div>
