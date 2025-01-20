@@ -49,11 +49,10 @@ const Menu = ({ open, setOpen }: Props): JSX.Element => {
   return (
     <>
       <nav
-        className={`md:hidden flex flex-col items-center justify-center ${
-          open ? "translate-x-0 h-screen" : "-translate-x-full h-0"
-        } transition-transform duration-300 ease-in-out`}
+        className={`md:hidden flex flex-col items-center justify-center ${open ? "translate-x-0 h-screen" : "-translate-x-full h-0"
+          } transition-transform duration-300 ease-in-out`}
       >
-        <div aria-hidden={!open}>
+        <div aria-hidden={!open} className="flex flex-col">
           <Link to={"/"}>
             <StaticImage
               src={"../../../images/logo.webp"}
