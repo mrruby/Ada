@@ -11,7 +11,18 @@ const TrzyZmianyNagranie = (): JSX.Element => {
                     <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
                         3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku
                     </h1>
-                    <div className="w-full max-w-4xl mb-8">
+                    <div className="block md:hidden w-full px-2 mb-8">
+                        <iframe
+                            width="100%"
+                            height="280"
+                            src="https://www.youtube.com/embed/aZ4VBHpdiTs?si=a8bh0luPTarp9xpH"
+                            title="3 zmiany w reklamach Twojego biznesu - nagranie webinar"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                    <div className="hidden md:block w-full max-w-4xl mb-8">
                         <iframe
                             width="100%"
                             height="600"
@@ -24,9 +35,9 @@ const TrzyZmianyNagranie = (): JSX.Element => {
                     </div>
                     <a
                         href="/magic"
-                        className="bg-ada-pink7 hover:bg-ada-pink7 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105"
+                        className="bg-ada-pink7 hover:bg-ada-pink7 text-white font-bold py-3 px-6 rounded-full text-adaNav md:text-lg transition duration-300 ease-in-out transform hover:scale-105"
                     >
-                        Chcę ustawiać kampanie ze świetnymi wynikami!
+                        Chcę ustawiać kampanie <br /> ze świetnymi wynikami!
                     </a>
                 </div>
             </MaxWithBgColorContainer>
