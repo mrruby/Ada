@@ -50,12 +50,12 @@ const bannerContent = [
   },
 ]
 
-const MagicBanner2 = ({}: {}): JSX.Element => {
+const MagicBanner2 = ({ }: {}): JSX.Element => {
   return (
     <>
       <Section className="text-black relative">
         <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center">
-          <Typography variant="h2" className="text-ada-pink7">
+          <Typography variant="h2" className="text-ada-pink7 animate-bounce">
             <span className="text-ada-black">MAGIC to Twój </span>podręczny
             <br /> abonament na marketing
           </Typography>

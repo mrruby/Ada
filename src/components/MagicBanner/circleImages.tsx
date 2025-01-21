@@ -6,7 +6,7 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
   switch (circleKey) {
     case "purpleCircle":
       return (
-        <div className="absolute top-0 left-0">
+        <div className="absolute top-0 left-0 animate-spin-slow">
           <StaticImage
             src="../../images/purpleCircle.webp"
             alt="Fioletowe kółko"
@@ -20,7 +20,7 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
       )
     case "yellowCircle":
       return (
-        <div className="absolute top-0 left-0">
+        <div className="absolute top-0 left-0 animate-spin-slow">
           <StaticImage
             src="../../images/yellowCircle.webp"
             alt="Żółte kółko"
@@ -34,7 +34,7 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
       )
     case "pinkCircleFull":
       return (
-        <div className="absolute top-0 left-0">
+        <div className="absolute top-0 left-0 animate-spin-slow">
           <StaticImage
             src="../../images/pinkCircleFull.webp"
             alt="Różowe kółko"

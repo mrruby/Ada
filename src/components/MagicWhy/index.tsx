@@ -7,7 +7,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
     <Section bgColor="bg-transparent">
       {part == 1 && (
         <div className="w-full text-white -mb-8">
-          <Typography variant="h1" className="mb-8 text-center">
+          <Typography variant="h1" className="mb-8 text-center animate-bounce">
             <span className="text-ada-yellow3">MAGIC </span>
             jest dla Ciebie, jeśli:
           </Typography>
