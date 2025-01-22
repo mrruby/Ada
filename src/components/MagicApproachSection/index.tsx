@@ -56,7 +56,7 @@ const MagicApproachSection = ({
       {version == 2 && (
         <>
           <div className="relative">
-            <Typography variant="h2" className="text-white leading-snug mb-6">
+            <Typography variant="h2" className="text-white leading-snug mb-6  animate-bounce">
               <span className="font-normal">A co najważniejsze</span> - będziesz
               częścią społeczności przedsiębiorczych kobiet, które:
             </Typography>
@@ -87,7 +87,7 @@ const MagicApproachSection = ({
       {version == 3 && (
         <>
           <div className="relative">
-            <Typography variant="h2" className="text-black leading-snug mb-6">
+            <Typography variant="h2" className="text-black leading-snug mb-6  animate-bounce">
               Możesz też:
             </Typography>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pt-4">

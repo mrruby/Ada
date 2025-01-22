@@ -154,7 +154,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
 
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
             {/* Left text column */}
-            <div className="w-full md:w-1/2 mt-8">
+            <div className="w-full md:w-1/2 mt-8 animate-bounce">
               <Typography variant="h1" className="mb-4 md:pt-20">
                 <span className="text-ada-yellow3 uppercase">
                   Wyobraź sobie

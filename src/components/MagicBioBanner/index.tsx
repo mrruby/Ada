@@ -95,7 +95,7 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
         )}
         {version == 2 && (
           <div className="text-center">
-            <Typography variant="h2" className="text-ada-black">
+            <Typography variant="h2" className="text-ada-black animate-bounce">
               Kogo spotkasz w <span className="text-ada-pink7">MAGIC?</span>
             </Typography>
             <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
@@ -129,7 +129,7 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
               które wspólnie rozwijają swoje biznesy i wspierają się w drodze do
               sukcesu w reklamach Meta.
             </Typography>
-            <div className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto">
+            <div className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto animate-spin-slow">
               <StaticImage
                 src="../../images/arrowMagic.svg"
                 alt=""

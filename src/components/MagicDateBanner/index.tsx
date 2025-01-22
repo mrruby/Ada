@@ -109,7 +109,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center relative">
           {/* Left column */}
           <div className="text-black">
-            <Typography variant="h2" className="mb-2">
+            <Typography variant="h2" className="mb-2 animate-bounce">
               Co sprawia, że <span className="text-ada-pink7">MAGIC</span> jest
               wyjątkowy?
             </Typography>

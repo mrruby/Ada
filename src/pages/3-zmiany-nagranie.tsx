@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "components/Layout"
 import SEO from "components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import CountdownTimer from "helpers/CountdownTimer"
 
 const TrzyZmianyNagranie = (): JSX.Element => {
     return (
@@ -11,7 +12,11 @@ const TrzyZmianyNagranie = (): JSX.Element => {
                     <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
                         3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku
                     </h1>
-                    <div className="block md:hidden w-full px-2 mb-8">
+                    <CountdownTimer
+                        text="Webinar znika za:"
+                        targetDate={new Date("2025-01-28T23:59:00")}
+                    />
+                    <div className="block md:hidden w-full px-2 mb-8 mt-4">
                         <iframe
                             width="100%"
                             height="280"
@@ -22,7 +27,7 @@ const TrzyZmianyNagranie = (): JSX.Element => {
                             allowFullScreen
                         ></iframe>
                     </div>
-                    <div className="hidden md:block w-full max-w-4xl mb-8">
+                    <div className="hidden md:block w-full max-w-4xl mb-8 mt-4">
                         <iframe
                             width="100%"
                             height="600"
