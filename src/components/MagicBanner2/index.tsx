@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 import { Button } from "helpers/Button"
@@ -51,10 +51,20 @@ const bannerContent = [
 ]
 
 const MagicBanner2 = ({ }: {}): JSX.Element => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (!hasAnimated) {
+      setHasAnimated(true);
+    }
+  };
   return (
     <>
-      <Section className="text-black relative">
-        <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center">
+      <Section className="text-black relative"
+      >
+        <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center"
+          onMouseOver={handleMouseEnter}
+        >
           <Typography variant="h2" className="text-ada-pink7 animate-bounce">
             <span className="text-ada-black">MAGIC to Twój </span>podręczny
             <br /> abonament na marketing
@@ -79,12 +89,19 @@ const MagicBanner2 = ({ }: {}): JSX.Element => {
           <div className="flex flex-col justify-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[800px]">
               {bannerContent.map((item, i) => (
-                <BannerBox2
+                <div
                   key={i}
-                  bgColor={item.bgColor}
-                  description={item.description}
-                  styles={item.styles}
-                />
+                  className={`${hasAnimated ?
+                    (i % 2 === 0 ? "lg:animate-slideInFromLeft opacity-100" : "lg:animate-slideInFromRight opacity-100")
+                    : " "
+                    }`}
+                >
+                  <BannerBox2
+                    bgColor={item.bgColor}
+                    description={item.description}
+                    styles={item.styles}
+                  />
+                </div>
               ))}
             </div>
             <Button
