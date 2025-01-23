@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import BannerBox from "./BannerBox"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
@@ -200,6 +200,14 @@ const magicBannerContent3 = [
 ]
 
 const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (!hasAnimated) {
+      setHasAnimated(true);
+    }
+  };
+
   return (
     <>
       {version == 1 && (
@@ -222,17 +230,26 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version == 2 && (
         <Section bgColor="bg-white" className="text-black" id="pakiety">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-12 pt-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-12 pt-8 max-w-4xl mx-auto"
+            onMouseOver={handleMouseEnter}
+          >
             {magicBannerContent.map((item, i) => (
-              <BannerBox
+              <div
                 key={i}
-                circleKey={item.circleKey}
-                iconKey={item.iconKey}
-                bgColor={item.bgColor}
-                title={item.title}
-                description={item.description}
-                url={item.url}
-              />
+                className={`${hasAnimated ?
+                  (i % 2 === 0 ? "lg:animate-slideInFromLeft opacity-100" : "lg:animate-slideInFromRight opacity-100")
+                  : " "}`}
+              >
+                <BannerBox
+                  key={i}
+                  circleKey={item.circleKey}
+                  iconKey={item.iconKey}
+                  bgColor={item.bgColor}
+                  title={item.title}
+                  description={item.description}
+                  url={item.url}
+                />
+              </div>
             ))}
           </div>
         </Section>
@@ -245,6 +262,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
           <div
             className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8"
             style={{ gridTemplateRows: "auto auto" }}
+            onMouseOver={handleMouseEnter}
           >
             <div className="flex flex-col gap-2 md:gap-6">
               {magicBannerContent2.slice(0, 2).map((item, i) => (
@@ -252,7 +270,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
-                  bgColor={item.bgColor}
+                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromLeft opacity-100" : " "}`}
                   description={item.description}
                 />
               ))}
@@ -263,7 +281,8 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
-                  bgColor={item.bgColor}
+                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromRight opacity-100" : ""
+                    }`}
                   description={item.description}
                   styles={item.styles}
                 />
@@ -280,7 +299,8 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
-                  bgColor={item.bgColor}
+                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromLeft opacity-100" : " "
+                    }`}
                   description={item.description}
                   styles={item.styles}
                 />
@@ -292,7 +312,8 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
-                  bgColor={item.bgColor}
+                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromRight opacity-100" : " "
+                    }`}
                   description={item.description}
                 />
               ))}
