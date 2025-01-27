@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 import Card from "../shared/Card"
@@ -60,6 +60,13 @@ const magicTilesContent2 = [
 ]
 
 const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (!hasAnimated) {
+      setHasAnimated(true);
+    }
+  };
   return (
     <Section className="mb-12">
       {version == 1 && (
@@ -106,7 +113,9 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version == 2 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center relative"
+          onMouseOver={handleMouseEnter}
+        >
           {/* Left column */}
           <div className="text-black">
             <Typography variant="h2" className="mb-2 animate-bounce">
@@ -120,22 +129,31 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
             <div className="flex flex-col md:flex-row gap-4 md:min-w-[580px] relative z-10">
               <div className="grid grid-cols-1 gap-6 md:gap-2 pt-8">
                 {magicTilesContent1.map((item, i) => (
-                  <MagicTile
-                    key={i}
-                    colors={item.colors}
-                    title={item.title}
-                    description={item.description}
-                  />
+                  <div key={i}
+                    className={`${hasAnimated ?
+                      "lg:animate-slideInFromLeft opacity-100" : " "}`}
+                  >
+                    <MagicTile
+                      colors={item.colors}
+                      title={item.title}
+                      description={item.description}
+                    />
+                  </div>
+
                 ))}
               </div>
               <div className="grid grid-cols-1 gap-6 md:gap-2 md:pt-8">
                 {magicTilesContent2.map((item, i) => (
-                  <MagicTile
-                    key={i}
-                    colors={item.colors}
-                    title={item.title}
-                    description={item.description}
-                  />
+                  <div key={i}
+                    className={`${hasAnimated ?
+                      "lg:animate-slideInFromRight opacity-100" : " "}`}
+                  >
+                    <MagicTile
+                      colors={item.colors}
+                      title={item.title}
+                      description={item.description}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
@@ -146,7 +164,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
               src="../../images/ada_questions.webp"
               alt="Ada w telefonie"
               placeholder="blurred"
-              width={600}
+              width={536}
               height={1000}
               formats={["auto", "webp", "avif"]}
               quality={100}
