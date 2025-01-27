@@ -164,7 +164,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
               src="../../images/ada_questions.webp"
               alt="Ada w telefonie"
               placeholder="blurred"
-              width={600}
+              width={536}
               height={1000}
               formats={["auto", "webp", "avif"]}
               quality={100}

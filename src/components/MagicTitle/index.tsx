@@ -193,7 +193,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               >
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
-                  src={"https://www.youtube.com/embed/CLZZnO8mx_w"}
+                  src={"https://player.vimeo.com/video/1050085535?h=b0386215c3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
