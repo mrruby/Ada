@@ -20,7 +20,7 @@ const TrzyZmianyNagranie = (): JSX.Element => {
                         <iframe
                             width="100%"
                             height="280"
-                            src="https://player.vimeo.com/video/1049315571?h=307af818f3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            src="https://www.youtube.com/embed/aZ4VBHpdiTs?si=a8bh0luPTarp9xpH"
                             title="3 zmiany w reklamach Twojego biznesu - nagranie webinar"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -31,7 +31,7 @@ const TrzyZmianyNagranie = (): JSX.Element => {
                         <iframe
                             width="100%"
                             height="600"
-                            src="https://player.vimeo.com/video/1049315571?h=307af818f3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            src="https://www.youtube.com/embed/aZ4VBHpdiTs?si=a8bh0luPTarp9xpH"
                             title="3 zmiany w reklamach Twojego biznesu - nagranie webinar"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
