@@ -232,8 +232,8 @@ const referencesList4: IReferencesList[] = [
         src={"../../images/magic1.webp"}
         alt="Opinia o Magic"
         placeholder="blurred"
-        width={480}
-        height={480}
+        width={680}
+        height={680}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -245,8 +245,8 @@ const referencesList4: IReferencesList[] = [
         src={"../../images/magic2.webp"}
         alt="Opinia o programie mentoringowym"
         placeholder="blurred"
-        width={480}
-        height={480}
+        width={680}
+        height={680}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -258,8 +258,8 @@ const referencesList4: IReferencesList[] = [
         src={"../../images/magic3.webp"}
         alt="Opinia o programie mentoringowym"
         placeholder="blurred"
-        width={480}
-        height={480}
+        width={680}
+        height={680}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />
@@ -271,8 +271,8 @@ const referencesList4: IReferencesList[] = [
         src={"../../images/magic4.webp"}
         alt="Opinia o programie mentoringowym"
         placeholder="blurred"
-        width={480}
-        height={480}
+        width={680}
+        height={680}
         formats={["auto", "webp", "avif"]}
         quality={100}
       />

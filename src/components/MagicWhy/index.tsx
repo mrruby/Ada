@@ -65,10 +65,10 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
       )}
       {part == 3 && (
         <div className="flex flex-col items-center gap-8">
-          <div className="w-full text-white -mb-8">
+          <div className="w-full text-ada-black -mb-8">
             <Typography variant="h1" className="mb-8 text-center animate-bounce">
               Jak wygląda luty w
-              <span className="text-ada-pinkk8"> MAGIC </span>
+              <span className="text-ada-pink7"> MAGIC </span>
               ?
             </Typography>
           </div>
