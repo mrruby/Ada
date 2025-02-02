@@ -6,7 +6,7 @@ import MagicTitle from "components/MagicTitle"
 import MagicBanner1 from "components/MagicBanner"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicWhy from "components/MagicWhy"
-import MagicApproachSection from "components/MagicApproachSection"
+import CountdownTimer from "helpers/CountdownTimer"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
@@ -16,6 +16,14 @@ import MagicLastSection from "components/MagicLastSection"
 const MasterclassPage = (): JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <MaxWithBgColorContainer bgColor="bg-linear2">
+        <div className="flex flex-col items-center py-12">
+          <CountdownTimer
+            text="Cena rośnie za:"
+            targetDate={new Date("2025-02-04T23:59:00")}
+          />
+        </div>
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
         <MagicTitle version={2} />
       </MaxWithBgColorContainer>
@@ -25,29 +33,30 @@ const MasterclassPage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink7">
         <MagicWhy part={1} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
+      <MaxWithBgColorContainer bgColor="">
         <MagicWhy part={2} />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer>
-        <MagicBanner1 version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
         <MagicDateBanner version={2} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-grey">
-        <MagicApproachSection version={3} />
+      <MaxWithBgColorContainer>
+        <MagicBanner1 version={2} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-purple2">
-        <MagicApproachSection version={2} />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
-        <ReferencesMentoring title5 version="1" />
+      {/* do podmiany png kalendarza */}
+      {/* <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
+        <MagicWhy part={3} />
+      </MaxWithBgColorContainer> */}
+      {/* <MaxWithBgColorContainer bgColor="bg-ada-pink7">
+        <MagicWhy part={4} />
+      </MaxWithBgColorContainer> */}
+      <MaxWithBgColorContainer bgColor="bg-ada-yellow3 z-2 relative">
+        <MagicBioBanner version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicBanner2 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3 z-2 relative">
-        <MagicBioBanner version={2} />
+        <ReferencesMentoring title5 version="1" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-purple2">
         <MagicLastSection version={2} />

@@ -1,6 +1,7 @@
 import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
+import { StaticImage } from "gatsby-plugin-image"
 
 const MagicWhy = ({ part }: { part: number }): JSX.Element => {
   return (
@@ -18,43 +19,138 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
           <div className="w-full text-black">
             <div className="flex flex-col md:flex-row gap-8">
               <ul className="max-w-md">
+                <Typography variant="h2" className="mb-8 text-center animate-bounce">
+                  🧑‍🎓 Początkujących:
+                </Typography>
                 <li className="mb-3">
-                  ✅{" "}
-                  <span className="font-bold">
-                    Zaczynasz swoją przygodę z Meta Ads
-                  </span>{" "}
-                  i potrzebujesz przewodnika
+                  ✅ dla osób, które
+                  <span className="font-bold">{" "}jeszcze nie prowadziły reklam</span>{" "}i potrzebują pewnego startu w świecie płatnej promocji
                 </li>
                 <li className="mb-3">
-                  ✅ <span className="font-bold">Już prowadzisz kampanie,</span>{" "}
-                  ale chcesz poprawić ich skuteczność
+                  ✅ dla tych, którzy <span className="font-bold">boją się, że źle klikną i stracą budżet reklamowy</span>{" "}na nieefektywnych kampaniach
+                </li>
+                <li className="mb-3">
+                  ✅ <span className="font-bold">dla przedsiębiorczyń,</span>{" "}które chcą przestać działać po omacku i poznać sprawdzone fundamenty reklam
+                </li>
+                <li className="mb-3">
+                  ✅ <span className="font-bold"> dla właścicielek biznesów,</span>{" "} które do tej pory polegały głównie na działaniach organicznych i chcą bezpiecznie wejść w reklamy
                 </li>
                 <li>
-                  ✅ <span className="font-bold"> Dbasz o swój rozwój</span>{" "}
-                  osobisty i biznesowy
+                  ✅ <span className="font-bold"> dla osób, które zlecały reklamy na zewnątrz,</span>{" "} ale chcą przejąć kontrolę nad swoim budżetem reklamowym
                 </li>
               </ul>
               <ul className="max-w-md">
+                <Typography variant="h2" className="mb-8 text-center animate-bounce">
+                  🧑‍🎓 Zaawansowanych:
+                </Typography>
                 <li className="mb-3">
-                  ✅ <span className="font-bold">Szukasz społeczności</span>{" "}
-                  wspierających się kobiet w marketingu
+                  ✅ dla tych,<span className="font-bold"> którzy zastanawiają się, jak przeskalować swój biznes</span>{" "}na następny poziom i potrzebują sprawdzonych strategii reklamowych
                 </li>
                 <li className="mb-3">
-                  ✅ Chcesz{" "}
-                  <span className="font-bold">
-                    {" "}
-                    przestać eksperymentować i zacząć wdrażać sprawdzone
-                    strategie
-                  </span>
+                  ✅ dla tych, którzy<span className="font-bold"> już prowadzą reklamy i chcą robić to lepiej,</span>{" "}osiągając wyższe ROAS
                 </li>
-                <li>
-                  ✅{" "}
-                  <span className="font-bold">
-                    Marzysz o automatyzacji procesów reklamowych,
-                  </span>{" "}
-                  które oszczędzą Twój czas
+                <li className="mb-3">
+                  ✅ dla tych, którzy<span className="font-bold"> chcą nauczyć się lepiej gospodarować budżetem</span>{" "} i optymalizować koszty pozyskania klienta
+                </li>
+                <li className="mb-3">
+                  ✅<span className="font-bold"> dla właścicielek biznesów,</span>{" "}które są gotowe na pracę z zaawansowanymi strategiami i skalowanie swoich wyników
+                </li>
+                <li className="mb-3">
+                  ✅<span className="font-bold"> dla marketerek,</span>{" "}które chcą poznać najnowsze trendy i narzędzia reklamowe, wyprzedzając konkurencję
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      )}
+      {part == 3 && (
+        <div className="flex flex-col items-center gap-8">
+          <div className="w-full text-ada-black -mb-8">
+            <Typography variant="h1" className="mb-8 text-center animate-bounce">
+              Jak wygląda luty w
+              <span className="text-ada-pink7"> MAGIC </span>
+              ?
+            </Typography>
+          </div>
+          <StaticImage
+            loading="eager"
+            src="../../images/calendarMagic.png"
+            alt=""
+            placeholder="blurred"
+            width={992}
+            height={536}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </div>
+      )}
+      {part == 4 && (
+        <div className="flex flex-col items-center gap-8 text-ada-black">
+          <Typography variant="h1" className="mb-8 text-center animate-bounce ">
+            Zobacz przykładowe pytania i odpowiedzi!
+          </Typography>
+          <div className="flex flex-col items-center gap-8 mb-8">
+            <div className="lg:-ml-80">
+              <StaticImage
+                loading="eager"
+                src="../../images/AgnieszkaPyt.webp"
+                alt=""
+                placeholder="blurred"
+                width={568}
+                height={252}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div className="-mt-12 lg:ml-[480px]">
+              <StaticImage
+                loading="eager"
+                src="../../images/AgnieszkaOdp.webp"
+                alt=""
+                placeholder="blurred"
+                width={582}
+                height={187}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-8 mb-2 lg:ml-[-560px]">
+            <StaticImage
+              loading="eager"
+              src="../../images/MagdalenaPytIOdp.webp"
+              alt=""
+              placeholder="blurred"
+              width={605}
+              height={326}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+          </div>
+          <div className="flex flex-col items-center gap-8 mb-2">
+            <div className="lg:ml-[480px] z-10 relative">
+              <StaticImage
+                loading="eager"
+                src="../../images/MonikaPyt.webp"
+                alt=""
+                placeholder="blurred"
+                width={679}
+                height={197}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div className="-mt-12 md:ml-60">
+              <StaticImage
+                loading="eager"
+                src="../../images/MonikaOdp.webp"
+                alt=""
+                placeholder="blurred"
+                width={709}
+                height={274}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
             </div>
           </div>
         </div>

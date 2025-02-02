@@ -225,6 +225,62 @@ const referencesList3: IReferencesList[] = [
   },
 ]
 
+const referencesList4: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magic1.webp"}
+        alt="Opinia o Magic"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magic2.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magic3.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magic4.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
+
+
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1440 },
@@ -324,7 +380,7 @@ const ReferencesMentoring = ({
         <>
           <div className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-black pb-4">
             Zobacz, co członkinie <span className="text-ada-pink7">MAGIC</span>{" "}
-            mówią o nas:
+            mówią o społeczności:
           </div>
         </>
       )}
@@ -338,7 +394,7 @@ const ReferencesMentoring = ({
           autoPlay
           autoPlaySpeed={2000}
         >
-          {selectedList.map((reference, index) => (
+          {referencesList4.map((reference, index) => (
             <Reference key={index} image={reference.image} />
           ))}
         </Carousel>

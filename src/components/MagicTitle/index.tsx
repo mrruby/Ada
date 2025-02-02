@@ -154,21 +154,15 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
 
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
             {/* Left text column */}
-            <div className="w-full md:w-1/2 mt-8 animate-bounce">
+            <div className="w-full md:w-1/2 mt-8 animate-bounce text-ada-yellow3">
               <Typography variant="h1" className="mb-4 md:pt-20">
-                <span className="text-ada-yellow3 uppercase">
-                  Wyobraź sobie
-                </span>{" "}
+                Marketing Ads Girls
                 <br />
-                prowadzenie biznesu bez stresu o wyniki...
+                Inside Club
+                <span className="text-ada-pink7 uppercase"> (MAGIC)</span>
               </Typography>
               <Typography variant="body" className="mb-6 text-white">
-                Witaj w MAGIC -{" "}
-                <span className="font-bold">
-                  Marketing Ads Girls Inside Club,
-                </span>{" "}
-                społeczności kobiet, które budują skuteczne kampanie reklamowe.
-                Z merytorycznym wsparciem. Bez stresu i niepewności.
+                Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod czujnym okiem profesjonalistek
               </Typography>
               <Button
                 type="button"

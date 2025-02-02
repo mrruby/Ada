@@ -8,7 +8,8 @@ type BannerBoxProps = {
   circleKey: string
   iconKey: string
   bgColor: string
-  title?: string
+  title?: string | JSX.Element
+  price?: string | JSX.Element
   description: string | JSX.Element
   styles?: string
   url?: string
@@ -19,6 +20,7 @@ const BannerBox = ({
   iconKey,
   bgColor,
   title,
+  price,
   description,
   styles,
   url,
@@ -26,18 +28,17 @@ const BannerBox = ({
   const content = (
     <div className="relative md:mt-0">
       <div className="absolute left-1/2 -top-16 -translate-x-1/2 w-[90px] h-[90px]">
+        {title}
+        {price}
         <CircleImage circleKey={circleKey} />
         <IconImage iconKey={iconKey} />
       </div>
       <div
         className={`${bgColor} rounded-3xl p-4 md:p-6 text-center flex flex-col items-center justify-center shadow-lg pt-16 ${styles}`}
       >
-        <Typography variant="h2" className="mb-2">
-          {title}
-        </Typography>
         <p className="text-sm md:text-base leading-relaxed">{description}</p>
       </div>
-    </div>
+    </div >
   )
 
   return url ? (
