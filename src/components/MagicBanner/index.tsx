@@ -40,22 +40,22 @@ const magicBannerContent = [
     description: (
       <>
         <p className="pb-2">
-          ✅nielimitowane konsultacje pisemne z ekspertkami
+          ✅ nielimitowane konsultacje pisemne z ekspertkami
         </p>
         <p className="pb-2">
-          ✅materiały szkoleniowe video z ustawiania kampanii reklamowych i nie tylko
+          ✅ materiały szkoleniowe video z ustawiania kampanii reklamowych i nie tylko
         </p>
         <p className="pb-2">
-          ✅2 prasówki z nowościami z branży w miesiącu
+          ✅ 2 prasówki z nowościami z branży w miesiącu
         </p>
         <p className="pb-2">
-          ✅udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych miesięcznie
+          ✅ udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych miesięcznie
         </p>
         <p className="pb-2">
-          ✅udział w dwóch autorskich warsztatach tematycznych w miesiącu
+          ✅ udział w dwóch autorskich warsztatach tematycznych w miesiącu
         </p>
         <p className="pb-2">
-          ✅nielimitowany dostęp do nagrań ze wszystkich spotkań
+          ✅ nielimitowany dostęp do nagrań ze wszystkich spotkań
         </p>
         <p className="pb-2">
           ❌ 1 konsultacje indywidualne (60 minut) w miesiącu
@@ -81,22 +81,22 @@ const magicBannerContent = [
     description: (
       <>
         <p className="pb-2">
-          ✅nielimitowane konsultacje pisemne z ekspertkami
+          ✅ nielimitowane konsultacje pisemne z ekspertkami
         </p>
         <p className="pb-2">
-          ✅materiały szkoleniowe video z ustawiania kampanii reklamowych i nie tylko
+          ✅ materiały szkoleniowe video z ustawiania kampanii reklamowych i nie tylko
         </p>
         <p className="pb-2">
-          ✅2 prasówki z nowościami z branży w miesiącu
+          ✅ 2 prasówki z nowościami z branży w miesiącu
         </p>
         <p className="pb-2">
-          ✅udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych miesięcznie
+          ✅ udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych miesięcznie
         </p>
         <p className="pb-2">
-          ✅udział w dwóch autorskich warsztatach tematycznych w miesiącu
+          ✅ udział w dwóch autorskich warsztatach tematycznych w miesiącu
         </p>
         <p className="pb-2">
-          ✅nielimitowany dostęp do nagrań ze wszystkich spotkań
+          ✅ nielimitowany dostęp do nagrań ze wszystkich spotkań
         </p>
         <p className="pb-2">
           ✅ 1 konsultacje indywidualne (60 minut) w miesiącu
@@ -136,8 +136,8 @@ const magicBannerContent2 = [
       <>
         <p>
           <span className="text-adaSubtitleSecondary">🤝</span> <br />{" "}
-          <span className="font-bold uppercase">Wyniki reklam nie są takie, jakich oczekiwałaś?</span>
-          <br /> Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan działania ze specjalistkami, które spędzają w Managerze Reklam 5+ godzin dziennie.
+          <span className="font-bold uppercase">Tworzysz samodzielnie teksty, maile, landingi?</span>
+          <br /> Skonsultuj swoje treści z copywriterką i zapytaj graficzki, co zrobić, aby projekt przyciągał wzrok
         </p>
       </>
     ),

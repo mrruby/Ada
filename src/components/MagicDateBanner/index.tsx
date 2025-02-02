@@ -48,7 +48,7 @@ const magicTilesContent2 = [
     description: "Społeczność przedsiębiorczych kobiet zorientowanych na sukces",
   },
   {
-    colors: "bg-ada-purple2 text-ada-white",
+    colors: "bg-ada-purple2 text-ada-white ]",
     title: "Wsparcie techniczne",
     description: "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
   },
@@ -70,7 +70,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
   return (
     <Section className="mb-12">
       {version == 1 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid gap-8 items-center">
           {/* Left column */}
           <div className="max-w-[260px] text-black">
             <Typography variant="h2" className="mb-2">
@@ -128,8 +128,8 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
             <Typography variant="body" className="pt-4 font-bold uppercase">
               Dostajesz:
             </Typography>
-            <div className="flex flex-col md:flex-row gap-4 md:min-w-[580px] relative z-10">
-              <div className="grid grid-cols-1 gap-6 md:gap-2 pt-8">
+            <div className="flex flex-col md:flex-row gap-4 md:min-w-[650px] relative z-10">
+              <div className="grid grid-cols-1 gap-6 lg:w-[320px] md:gap-2 pt-8">
                 {magicTilesContent1.map((item, i) => (
                   <div key={i}
                     className={`${hasAnimated ?
@@ -144,7 +144,7 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
 
                 ))}
               </div>
-              <div className="grid grid-cols-1 gap-6 md:gap-2 md:pt-8">
+              <div className="grid grid-cols-1 gap-6 lg:w-[320px] md:gap-2 md:pt-8">
                 {magicTilesContent2.map((item, i) => (
                   <div key={i}
                     className={`${hasAnimated ?

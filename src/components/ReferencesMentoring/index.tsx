@@ -278,32 +278,6 @@ const referencesList4: IReferencesList[] = [
       />
     ),
   },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/magic5.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={480}
-        height={480}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/magic6.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={480}
-        height={480}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
 ]
 
 

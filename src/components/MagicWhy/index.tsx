@@ -77,8 +77,8 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
             src="../../images/calendarMagic.png"
             alt=""
             placeholder="blurred"
-            width={1460}
-            height={800}
+            width={992}
+            height={536}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
@@ -88,11 +88,9 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
         <div className="flex flex-col items-center gap-8 text-ada-black">
           <Typography variant="h1" className="mb-8 text-center animate-bounce ">
             Zobacz przykładowe pytania i odpowiedzi!
-            <span className="text-ada-pinkk8"> MAGIC </span>
-            ?
           </Typography>
           <div className="flex flex-col items-center gap-8 mb-8">
-            <div className="md:-ml-40">
+            <div className="lg:-ml-80">
               <StaticImage
                 loading="eager"
                 src="../../images/AgnieszkaPyt.webp"
@@ -104,7 +102,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                 quality={100}
               />
             </div>
-            <div className="-mt-8 md:ml-40">
+            <div className="-mt-12 lg:ml-[480px]">
               <StaticImage
                 loading="eager"
                 src="../../images/AgnieszkaOdp.webp"
@@ -117,41 +115,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center gap-8 mb-2">
-            <StaticImage
-              loading="eager"
-              src="../../images/Magdalena-pytanie.webp"
-              alt=""
-              placeholder="blurred"
-              width={645}
-              height={129}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
-            <div className="-mt-10 md:ml-60">
-              <StaticImage
-                loading="eager"
-                src="../../images/MagdalenaOdp1.webp"
-                alt=""
-                placeholder="blurred"
-                width={496}
-                height={171}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-            <div className="-mt-6 md:ml-60">
-              <StaticImage
-                loading="eager"
-                src="../../images/MagdalenaOdp2.webp"
-                alt=""
-                placeholder="blurred"
-                width={496}
-                height={361}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
+          <div className="flex flex-col items-center gap-8 mb-2 lg:ml-[-560px]">
             <StaticImage
               loading="eager"
               src="../../images/MagdalenaPytIOdp.webp"
@@ -164,7 +128,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
             />
           </div>
           <div className="flex flex-col items-center gap-8 mb-2">
-            <div className="md:-ml-40">
+            <div className="lg:ml-[480px] z-10 relative">
               <StaticImage
                 loading="eager"
                 src="../../images/MonikaPyt.webp"
@@ -176,7 +140,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                 quality={100}
               />
             </div>
-            <div className="-mt-10 md:ml-60">
+            <div className="-mt-12 md:ml-60">
               <StaticImage
                 loading="eager"
                 src="../../images/MonikaOdp.webp"
