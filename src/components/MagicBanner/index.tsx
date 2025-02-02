@@ -33,28 +33,32 @@ const magicBannerContent = [
     circleKey: "purpleCircle",
     iconKey: "",
     bgColor: "bg-ada-yellow3",
-    title: "Pakiet BASIC",
+    price: <div className="absolute text-ada-pink8 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[5px] w-[100px]">
+      <p className="text-ada-white line-through">349 zł</p><p>269 zł</p><p>mies.</p></div>,
+    title: <div className="absolute text-ada-pink7 flex gap-[110px] text-adaSubtitleSecondary font-bold ml-[-120px] top-5">
+      <p>Pakiet</p><p>BASIC</p></div>,
     description: (
       <>
         <p className="pb-2">
-          ✅ Nieograniczony dostęp do wszystkich elementów społeczności
+          ✅nielimitowane konsultacje pisemne z ekspertkami
         </p>
         <p className="pb-2">
-          <span className="text-ada-pink7 font-bold">
-            dla pierwszych 10 osób:
-          </span>{" "}
-          <br />
-          <span className="text-ada-pink7 font-bold"> 249 zł</span>{" "}
-          brutto/miesięcznie <br />
-          <span className="text-ada-pink7 font-bold">2490 zł </span>brutto/za
-          cały rok
+          ✅materiały szkoleniowe video z ustawiania kampanii reklamowych i nie tylko
         </p>
-        <p>
-          <span className="font-bold">następnie:</span>
-          <br />
-          <span className="font-bold"> 269 zł</span> brutto/miesięcznie
-          <br />
-          <span className="font-bold"> 2990 zł</span> brutto/za cały rok
+        <p className="pb-2">
+          ✅2 prasówki z nowościami z branży w miesiącu
+        </p>
+        <p className="pb-2">
+          ✅udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych miesięcznie
+        </p>
+        <p className="pb-2">
+          ✅udział w dwóch autorskich warsztatach tematycznych w miesiącu
+        </p>
+        <p className="pb-2">
+          ✅nielimitowany dostęp do nagrań ze wszystkich spotkań
+        </p>
+        <p className="pb-2">
+          ❌ 1 konsultacje indywidualne (60 minut) w miesiącu
         </p>
         <button
           className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
@@ -68,25 +72,34 @@ const magicBannerContent = [
   {
     circleKey: "yellowCircle",
     iconKey: "",
-    bgColor: "bg-ada-pink6",
-    title: "Pakiet VIP",
+    bgColor: "bg-ada-purple2",
+    price: <div className="absolute text-ada-purple2 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[5px] w-[100px]">
+      <p className="text-ada-black line-through">999 zł</p><p>749 zł</p><p>mies.</p></div>,
+    title: <div className="absolute text-ada-pink7 flex gap-[110px] text-adaSubtitleSecondary font-bold ml-[-120px] top-5">
+      <p>Pakiet</p><p>VIP</p>
+    </div>,
     description: (
       <>
         <p className="pb-2">
-          ✅ Nieograniczony dostęp do wszystkich elementów społeczności
+          ✅nielimitowane konsultacje pisemne z ekspertkami
         </p>
         <p className="pb-2">
-          ✅ 1 h konsultacji 1:1 miesięcznie z wybraną specjalistką
+          ✅materiały szkoleniowe video z ustawiania kampanii reklamowych i nie tylko
         </p>
         <p className="pb-2">
-          <span className="text-ada-pink7 font-bold">
-            tylko 5 miejsc:
-          </span>{" "}
-          <br />
-          <span className="text-ada-pink7 font-bold">749 zł</span>{" "}
-          brutto/miesięcznie <br />
-          <span className="text-ada-pink7 font-bold">8321 zł</span>{" "}
-          brutto/za cały rok
+          ✅2 prasówki z nowościami z branży w miesiącu
+        </p>
+        <p className="pb-2">
+          ✅udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych miesięcznie
+        </p>
+        <p className="pb-2">
+          ✅udział w dwóch autorskich warsztatach tematycznych w miesiącu
+        </p>
+        <p className="pb-2">
+          ✅nielimitowany dostęp do nagrań ze wszystkich spotkań
+        </p>
+        <p className="pb-2">
+          ✅ 1 konsultacje indywidualne (60 minut) w miesiącu
         </p>
         <button
           className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
@@ -108,8 +121,9 @@ const magicBannerContent2 = [
       <>
         <p>
           <span className="text-adaSubtitleSecondary">📊</span> <br />{" "}
-          <span className="font-bold">Patrzysz na swoje statystyki</span>
-          <br /> i widzisz spadające zasięgi, mimo świetnych produktów?{" "}
+          <span className="font-bold uppercase">Twoje zasięgi spadają mimo świetnych produktów?
+          </span>
+          <br />W MAGIC nauczysz się, jak w miesiąc dotrzeć do tylu osób, do ilu docierałaś przez rok.
         </p>
       </>
     ),
@@ -117,13 +131,13 @@ const magicBannerContent2 = [
   {
     circleKey: "",
     iconKey: "",
-    bgColor: "bg-ada-purple2",
+    bgColor: "bg-ada-purple2 text-ada-white",
     description: (
       <>
         <p>
           <span className="text-adaSubtitleSecondary">🤝</span> <br />{" "}
-          <span className="font-bold">Potrzebujesz wsparcia w reklamach,</span>
-          <br /> bo wyniki nie są takie, jakich oczekiwałaś?{" "}
+          <span className="font-bold uppercase">Wyniki reklam nie są takie, jakich oczekiwałaś?</span>
+          <br /> Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan działania ze specjalistkami, które spędzają w Managerze Reklam 5+ godzin dziennie.
         </p>
       </>
     ),
@@ -136,14 +150,14 @@ const magicBannerContent2 = [
       <>
         <p>
           <span className="text-adaSubtitleSecondary">🤨</span> <br />{" "}
-          <span className="font-bold">
-            Spędzasz godziny na tworzeniu contentu,{" "}
+          <span className="font-bold uppercase">
+            Wyniki reklam nie są takie, jakich oczekiwałaś?
           </span>
-          <br />a efekty wciąż nie są zadowalające?{" "}
+          <br />Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan działania ze specjalistkami, które spędzają w Managerze Reklam 5+ godzin dziennie.
         </p>
       </>
     ),
-    styles: "md:min-h-[320px] md:mt-[-30px] md:min-w-[496px]",
+    styles: "md:min-h-[390px] md:mt-[-30px] md:min-w-[496px]",
   },
 ]
 
@@ -151,48 +165,48 @@ const magicBannerContent3 = [
   {
     circleKey: "",
     iconKey: "",
-    bgColor: "bg-ada-yellow3",
-    description: (
-      <>
-        <p>
-          <span className="text-adaSubtitleSecondary">😮‍💨</span> <br />{" "}
-          <span className="font-bold">
-            Czujesz, że konkurencja zawsze jest o krok przed Tobą,
-          </span>
-          <br /> mimo Twojego ciężkiego wysiłku?{" "}
-        </p>
-      </>
-    ),
-    styles: "md:min-h-[320px] md:mt-[-30px]",
-  },
-  {
-    circleKey: "",
-    iconKey: "",
-    bgColor: "bg-ada-purple2",
-    description: (
-      <>
-        <p>
-          <span className="text-adaSubtitleSecondary">💻</span> <br />{" "}
-          <span className="font-bold">
-            Szukasz sprawdzonej wiedzy i wsparcia
-          </span>
-          <br /> w rozwijaniu biznesu online?{" "}
-        </p>
-      </>
-    ),
-  },
-  {
-    circleKey: "",
-    iconKey: "",
     bgColor: "bg-ada-pink6",
     description: (
       <>
         <p>
-          <span className="text-adaSubtitleSecondary">🤷‍♀️</span> <br />{" "}
-          <span className="font-bold">
-            Poświęcasz mnóstwo czasu na media społecznościowe,
+          <span className="text-adaSubtitleSecondary">😮‍💨</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Czujesz, że tracisz budżet reklamowy?
           </span>
-          <br /> ale nie widzisz tego przełożenia na sprzedaż?{" "}
+          <br /> Skonsultuj optymalizację budżetu w zależności od etapu lejka i branży.
+        </p>
+      </>
+    ),
+    styles: "md:min-h-[390px] md:mt-[-30px]",
+  },
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-yellow3",
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">💻</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Twoje konto reklamowe zostało zablokowane?
+          </span>
+          <br />Dowiedz się, co zrobić w takiej sytuacji, nawet gdy support Mety rozkłada ręce
+        </p>
+      </>
+    ),
+  },
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-purple2 text-ada-white",
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">🤷‍♀️</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Spędzasz godziny na tworzeniu contentu, a efekty wciąż nie są zadowalające?
+          </span>
+          <br /> Zamiast tworzyć nieskończone ilości treści na IG, dowiedz się jak wykorzystać algorytm Mety na korzyść swojego biznesu.
         </p>
       </>
     ),
@@ -245,6 +259,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
                   bgColor={item.bgColor}
+                  price={item.price}
                   title={item.title}
                   description={item.description}
                   url={item.url}
@@ -256,8 +271,8 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version == 3 && (
         <Section bgColor="bg-white" className="text-black">
-          <Typography variant="h2" className="text-black leading-snug mb-6">
-            Czy Ty też masz tak, że...
+          <Typography variant="h2" className="text-black leading-snug mb-6 text-center">
+            Rozpoznajesz te sytuacje?
           </Typography>
           <div
             className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8"
@@ -323,11 +338,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
             Rozumiemy to.
           </Typography>
           <Typography variant="body" className="text-black pt-8">
-            Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
-            chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie
-            działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do
-            merytorycznego wsparcia, sprawdzonych strategii i inspiracji, które
-            realnie przekładają się na wyniki.
+            Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do merytorycznego wsparcia, sprawdzonych strategii i inspiracji, które realnie przekładają się na wyniki.
           </Typography>
           <div className="w-full flex justify-center">
             <Button

@@ -16,46 +16,46 @@ const magicTilesContent1 = [
   {
     colors: "bg-ada-pink8 text-ada-purple2",
     title: "Inspirujące warsztaty tematyczne",
-    description: "co miesiąc - zawsze na czasie!",
+    description: "2 specjalistyczne sesje miesięcznie - głęboko merytoryczne, zawsze na czasie!",
   },
   {
     colors: "bg-ada-purple2 text-ada-white",
-    title: "Stały dostęp do zespołu ekspertów",
-    description: "copywriter, grafik, strateg",
+    title: "Stały dostęp do zespołu 5 ekspertek",
+    description: "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
     title: "Wsparcie techniczne",
-    description: "przy wdrażaniu rozwiązań",
+    description: "nielimitowane konsultacje pisemne przy wdrażaniu konkretnych rozwiązań reklamowych",
   },
   {
     colors: "bg-ada-purple2 text-ada-white",
-    title: "Comiesięczne wyzwania",
-    description: "motywujące do działania",
+    title: "Prasówki marketingowe",
+    description: "najświeższe nowinki ze świata marketingu wprost z raportów i od ekspertów z branży",
   },
 ]
 
 const magicTilesContent2 = [
   {
     colors: "bg-ada-purple2 text-ada-white",
-    title: "3 godziny konsultacji",
+    title: "3 godziny konsultacji grupowych",
     description:
-      "grupowych każdego miesiąca, na których rozwiążesz swoje największe wyzwania",
+      "spotkania, na których problemy stają się dziecinnie prostą zabawą",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
-    title: "Regularne sesje Q&A",
-    description: "gdzie rozwiejemy wszystkie Twoje wątpliwości",
+    title: "Wsparcie i motywacja",
+    description: "Społeczność przedsiębiorczych kobiet zorientowanych na sukces",
   },
   {
     colors: "bg-ada-purple2 text-ada-white",
-    title: "Możliwość konsultacji",
-    description: "jeden na jeden z ekspertami",
+    title: "Wsparcie techniczne",
+    description: "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
-    title: "Pierwszeństwo w dostępie",
-    description: "do nowych szkoleń i materiałów",
+    title: "Ekskluzywny dostęp",
+    description: "Najnowsze autorskie szkolenia i materiały dostępne w tylko w MAGIC",
   },
 ]
 
@@ -123,8 +123,10 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
               wyjątkowy?
             </Typography>
             <Typography variant="body" className="pt-4">
-              Tutaj nie znajdziesz kolejnego kursu online. <br />
-              <span className="font-bold">Dostajesz:</span>
+              Tutaj nie znajdziesz kolejnego kursu online. To Twój podręczny abonament na marketing!
+            </Typography>
+            <Typography variant="body" className="pt-4 font-bold uppercase">
+              Dostajesz:
             </Typography>
             <div className="flex flex-col md:flex-row gap-4 md:min-w-[580px] relative z-10">
               <div className="grid grid-cols-1 gap-6 md:gap-2 pt-8">
