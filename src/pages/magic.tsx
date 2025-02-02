@@ -46,9 +46,9 @@ const MasterclassPage = (): JSX.Element => {
       {/* <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
         <MagicWhy part={3} />
       </MaxWithBgColorContainer> */}
-      <MaxWithBgColorContainer bgColor="bg-ada-pink7">
+      {/* <MaxWithBgColorContainer bgColor="bg-ada-pink7">
         <MagicWhy part={4} />
-      </MaxWithBgColorContainer>
+      </MaxWithBgColorContainer> */}
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3 z-2 relative">
         <MagicBioBanner version={2} />
       </MaxWithBgColorContainer>
