@@ -33,12 +33,13 @@ const magicBannerContent = [
     circleKey: "purpleCircle",
     iconKey: "",
     bgColor: "bg-ada-yellow3",
-    price: <div className="absolute text-ada-pink8 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[5px] w-[100px]">
-      <p className="text-ada-white line-through">349 zł</p><p>269 zł</p><p>mies.</p></div>,
-    title: <div className="absolute text-ada-pink7 flex gap-[110px] text-adaSubtitleSecondary font-bold ml-[-120px] top-5">
-      <p>Pakiet</p><p>BASIC</p></div>,
+    price: <div className="absolute text-ada-pink8 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[20px] w-[100px]">
+      <p>333 zł</p><p>mies.</p></div>,
     description: (
       <>
+        <div className="text-ada-pink7 font-bold  md:text-adaSubtitle mt-2 mb-4">
+          <p>społeczność + nagrania</p>
+        </div>
         <p className="pb-2">
           ✅ nielimitowane konsultacje pisemne z ekspertkami
         </p>
@@ -49,16 +50,13 @@ const magicBannerContent = [
           ✅ 2 prasówki z nowościami z branży w miesiącu
         </p>
         <p className="pb-2">
-          ✅ udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych miesięcznie
+          ❌ udział w dwóch 1,5 -godzinnych sesjach konsultacji grupowych miesięcznie
         </p>
         <p className="pb-2">
-          ✅ udział w dwóch autorskich warsztatach tematycznych w miesiącu
+          ❌ udział w dwóch autorskich warsztatach tematycznych w miesiącu
         </p>
         <p className="pb-2">
-          ✅ nielimitowany dostęp do nagrań ze wszystkich spotkań
-        </p>
-        <p className="pb-2">
-          ❌ 1 konsultacje indywidualne (60 minut) w miesiącu
+          ❌ nielimitowany dostęp do nagrań ze wszystkich spotkań
         </p>
         <button
           className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
@@ -73,13 +71,13 @@ const magicBannerContent = [
     circleKey: "yellowCircle",
     iconKey: "",
     bgColor: "bg-ada-purple2",
-    price: <div className="absolute text-ada-purple2 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[5px] w-[100px]">
-      <p className="text-ada-black line-through">999 zł</p><p>749 zł</p><p>mies.</p></div>,
-    title: <div className="absolute text-ada-pink7 flex gap-[110px] text-adaSubtitleSecondary font-bold ml-[-120px] top-5">
-      <p>Pakiet</p><p>VIP</p>
-    </div>,
+    price: <div className="absolute text-ada-purple2 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[20px] w-[100px]">
+      <p>429 zł</p><p>mies.</p></div>,
     description: (
       <>
+        <div className="text-ada-pink7 font-bold  md:text-adaSubtitle mt-2 mb-4">
+          <p>społeczność + konsultacje</p><p>+ warsztaty + spotkania</p>
+        </div>
         <p className="pb-2">
           ✅ nielimitowane konsultacje pisemne z ekspertkami
         </p>
@@ -97,9 +95,6 @@ const magicBannerContent = [
         </p>
         <p className="pb-2">
           ✅ nielimitowany dostęp do nagrań ze wszystkich spotkań
-        </p>
-        <p className="pb-2">
-          ✅ 1 konsultacje indywidualne (60 minut) w miesiącu
         </p>
         <button
           className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
@@ -260,7 +255,6 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   iconKey={item.iconKey}
                   bgColor={item.bgColor}
                   price={item.price}
-                  title={item.title}
                   description={item.description}
                   url={item.url}
                 />
