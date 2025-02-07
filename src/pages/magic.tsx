@@ -16,14 +16,6 @@ import MagicLastSection from "components/MagicLastSection"
 const MasterclassPage = (): JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <MaxWithBgColorContainer bgColor="bg-linear2">
-        <div className="flex flex-col items-center py-12">
-          <CountdownTimer
-            text="Cena rośnie za:"
-            targetDate={new Date("2025-02-04T23:59:00")}
-          />
-        </div>
-      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
         <MagicTitle version={2} />
       </MaxWithBgColorContainer>
