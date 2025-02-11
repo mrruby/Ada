@@ -66,7 +66,7 @@ const magicBannerContent = [
         </button>
       </>
     ),
-    url: "https://mailingr.co/c/magic-pakiet-vip-LdSc",
+    url: "https://www.mailingr.co/c/magic-pakiet-basic-rXx5",
   },
 ]
 
