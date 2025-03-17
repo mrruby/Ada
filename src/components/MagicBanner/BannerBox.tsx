@@ -38,7 +38,7 @@ const BannerBox = ({
       >
         <p className="text-sm md:text-base leading-relaxed">{description}</p>
       </div>
-    </div >
+    </div>
   )
 
   return url ? (

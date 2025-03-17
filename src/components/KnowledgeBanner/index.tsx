@@ -10,7 +10,8 @@ const KnowledgeBanner = (): JSX.Element => {
         </h2>
         <p className="lg:text-adaSubtitle lg:w-[900px] pt-[12px] font-medium leading-tight">
           Dobrze, że tutaj jesteś, bo… <br />
-          to miejsce, w którym znajdziesz dużo dobroci specjalnie dla Ciebie!{" "}
+          to miejsce, w którym znajdziesz dużo dobroci specjalnie dla
+          Ciebie!{" "}
         </p>
       </div>
       <Button

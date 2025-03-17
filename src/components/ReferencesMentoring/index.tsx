@@ -280,7 +280,6 @@ const referencesList4: IReferencesList[] = [
   },
 ]
 
-
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1440 },

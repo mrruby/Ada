@@ -50,19 +50,19 @@ const bannerContent = [
   },
 ]
 
-const MagicBanner2 = ({ }: {}): JSX.Element => {
-  const [hasAnimated, setHasAnimated] = useState(false);
+const MagicBanner2 = ({}: {}): JSX.Element => {
+  const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleMouseEnter = () => {
     if (!hasAnimated) {
-      setHasAnimated(true);
+      setHasAnimated(true)
     }
-  };
+  }
   return (
     <>
-      <Section className="text-black relative"
-      >
-        <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center"
+      <Section className="text-black relative">
+        <div
+          className="max-w-4xl mx-auto mb-8 md:mb-20 text-center"
           onMouseOver={handleMouseEnter}
         >
           <Typography variant="h2" className="text-ada-pink7 animate-bounce">
@@ -91,10 +91,13 @@ const MagicBanner2 = ({ }: {}): JSX.Element => {
               {bannerContent.map((item, i) => (
                 <div
                   key={i}
-                  className={`${hasAnimated ?
-                    (i % 2 === 0 ? "lg:animate-slideInFromLeft opacity-100" : "lg:animate-slideInFromRight opacity-100")
-                    : " "
-                    }`}
+                  className={`${
+                    hasAnimated
+                      ? i % 2 === 0
+                        ? "lg:animate-slideInFromLeft opacity-100"
+                        : "lg:animate-slideInFromRight opacity-100"
+                      : " "
+                  }`}
                 >
                   <BannerBox2
                     bgColor={item.bgColor}

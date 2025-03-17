@@ -478,7 +478,13 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "Ile czasu zajmuje MAGIC?",
       answer: (
         <>
-          2-3 godziny tygodniowo, jeśli chcesz skorzystać z bieżących spotkań. Jak dużo czasu spędzisz na konsultowaniu swoich treści czy czytaniu materiałów - to zależy od Ciebie! Uspokajamy: MAGIC został stworzony z myślą o zabieganych przedsiębiorczyniach. Wszystkie spotkania są nagrywane, więc możesz z nich skorzystać w dowolnym momencie.  Wiemy, że biznes to nie 9-17. Działamy dokładnie tak samo - bez sztywnych ram czasowych!
+          2-3 godziny tygodniowo, jeśli chcesz skorzystać z bieżących spotkań.
+          Jak dużo czasu spędzisz na konsultowaniu swoich treści czy czytaniu
+          materiałów - to zależy od Ciebie! Uspokajamy: MAGIC został stworzony z
+          myślą o zabieganych przedsiębiorczyniach. Wszystkie spotkania są
+          nagrywane, więc możesz z nich skorzystać w dowolnym momencie. Wiemy,
+          że biznes to nie 9-17. Działamy dokładnie tak samo - bez sztywnych ram
+          czasowych!
         </>
       ),
     },

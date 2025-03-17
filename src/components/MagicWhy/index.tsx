@@ -19,44 +19,89 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
           <div className="w-full text-black">
             <div className="flex flex-col md:flex-row gap-8">
               <ul className="max-w-md">
-                <Typography variant="h2" className="mb-8 text-center animate-bounce">
+                <Typography
+                  variant="h2"
+                  className="mb-8 text-center animate-bounce"
+                >
                   🧑‍🎓 Początkujących:
                 </Typography>
                 <li className="mb-3">
                   ✅ dla osób, które
-                  <span className="font-bold">{" "}jeszcze nie prowadziły reklam</span>{" "}i potrzebują pewnego startu w świecie płatnej promocji
+                  <span className="font-bold">
+                    {" "}
+                    jeszcze nie prowadziły reklam
+                  </span>{" "}
+                  i potrzebują pewnego startu w świecie płatnej promocji
                 </li>
                 <li className="mb-3">
-                  ✅ dla tych, którzy <span className="font-bold">boją się, że źle klikną i stracą budżet reklamowy</span>{" "}na nieefektywnych kampaniach
+                  ✅ dla tych, którzy{" "}
+                  <span className="font-bold">
+                    boją się, że źle klikną i stracą budżet reklamowy
+                  </span>{" "}
+                  na nieefektywnych kampaniach
                 </li>
                 <li className="mb-3">
-                  ✅ <span className="font-bold">dla przedsiębiorczyń,</span>{" "}które chcą przestać działać po omacku i poznać sprawdzone fundamenty reklam
+                  ✅ <span className="font-bold">dla przedsiębiorczyń,</span>{" "}
+                  które chcą przestać działać po omacku i poznać sprawdzone
+                  fundamenty reklam
                 </li>
                 <li className="mb-3">
-                  ✅ <span className="font-bold"> dla właścicielek biznesów,</span>{" "} które do tej pory polegały głównie na działaniach organicznych i chcą bezpiecznie wejść w reklamy
+                  ✅{" "}
+                  <span className="font-bold"> dla właścicielek biznesów,</span>{" "}
+                  które do tej pory polegały głównie na działaniach organicznych
+                  i chcą bezpiecznie wejść w reklamy
                 </li>
                 <li>
-                  ✅ <span className="font-bold"> dla osób, które zlecały reklamy na zewnątrz,</span>{" "} ale chcą przejąć kontrolę nad swoim budżetem reklamowym
+                  ✅{" "}
+                  <span className="font-bold">
+                    {" "}
+                    dla osób, które zlecały reklamy na zewnątrz,
+                  </span>{" "}
+                  ale chcą przejąć kontrolę nad swoim budżetem reklamowym
                 </li>
               </ul>
               <ul className="max-w-md">
-                <Typography variant="h2" className="mb-8 text-center animate-bounce">
+                <Typography
+                  variant="h2"
+                  className="mb-8 text-center animate-bounce"
+                >
                   🧑‍🎓 Zaawansowanych:
                 </Typography>
                 <li className="mb-3">
-                  ✅ dla tych,<span className="font-bold"> którzy zastanawiają się, jak przeskalować swój biznes</span>{" "}na następny poziom i potrzebują sprawdzonych strategii reklamowych
+                  ✅ dla tych,
+                  <span className="font-bold">
+                    {" "}
+                    którzy zastanawiają się, jak przeskalować swój biznes
+                  </span>{" "}
+                  na następny poziom i potrzebują sprawdzonych strategii
+                  reklamowych
                 </li>
                 <li className="mb-3">
-                  ✅ dla tych, którzy<span className="font-bold"> już prowadzą reklamy i chcą robić to lepiej,</span>{" "}osiągając wyższe ROAS
+                  ✅ dla tych, którzy
+                  <span className="font-bold">
+                    {" "}
+                    już prowadzą reklamy i chcą robić to lepiej,
+                  </span>{" "}
+                  osiągając wyższe ROAS
                 </li>
                 <li className="mb-3">
-                  ✅ dla tych, którzy<span className="font-bold"> chcą nauczyć się lepiej gospodarować budżetem</span>{" "} i optymalizować koszty pozyskania klienta
+                  ✅ dla tych, którzy
+                  <span className="font-bold">
+                    {" "}
+                    chcą nauczyć się lepiej gospodarować budżetem
+                  </span>{" "}
+                  i optymalizować koszty pozyskania klienta
                 </li>
                 <li className="mb-3">
-                  ✅<span className="font-bold"> dla właścicielek biznesów,</span>{" "}które są gotowe na pracę z zaawansowanymi strategiami i skalowanie swoich wyników
+                  ✅
+                  <span className="font-bold"> dla właścicielek biznesów,</span>{" "}
+                  które są gotowe na pracę z zaawansowanymi strategiami i
+                  skalowanie swoich wyników
                 </li>
                 <li className="mb-3">
-                  ✅<span className="font-bold"> dla marketerek,</span>{" "}które chcą poznać najnowsze trendy i narzędzia reklamowe, wyprzedzając konkurencję
+                  ✅<span className="font-bold"> dla marketerek,</span> które
+                  chcą poznać najnowsze trendy i narzędzia reklamowe,
+                  wyprzedzając konkurencję
                 </li>
               </ul>
             </div>
@@ -66,10 +111,11 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
       {part == 3 && (
         <div className="flex flex-col items-center gap-8">
           <div className="w-full text-ada-black -mb-8">
-            <Typography variant="h1" className="mb-8 text-center animate-bounce">
-              Jak wygląda luty w
-              <span className="text-ada-pink7"> MAGIC </span>
-              ?
+            <Typography
+              variant="h1"
+              className="mb-8 text-center animate-bounce"
+            >
+              Jak wygląda luty w<span className="text-ada-pink7"> MAGIC </span>?
             </Typography>
           </div>
           <StaticImage

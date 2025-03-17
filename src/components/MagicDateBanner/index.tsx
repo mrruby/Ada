@@ -16,22 +16,26 @@ const magicTilesContent1 = [
   {
     colors: "bg-ada-pink8 text-ada-purple2",
     title: "Inspirujące warsztaty tematyczne",
-    description: "2 specjalistyczne sesje miesięcznie - głęboko merytoryczne, zawsze na czasie!",
+    description:
+      "2 specjalistyczne sesje miesięcznie - głęboko merytoryczne, zawsze na czasie!",
   },
   {
     colors: "bg-ada-purple2 text-ada-white",
     title: "Stały dostęp do zespołu 5 ekspertek",
-    description: "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach",
+    description:
+      "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
     title: "Wsparcie techniczne",
-    description: "nielimitowane konsultacje pisemne przy wdrażaniu konkretnych rozwiązań reklamowych",
+    description:
+      "nielimitowane konsultacje pisemne przy wdrażaniu konkretnych rozwiązań reklamowych",
   },
   {
     colors: "bg-ada-purple2 text-ada-white",
     title: "Prasówki marketingowe",
-    description: "najświeższe nowinki ze świata marketingu wprost z raportów i od ekspertów z branży",
+    description:
+      "najświeższe nowinki ze świata marketingu wprost z raportów i od ekspertów z branży",
   },
 ]
 
@@ -45,28 +49,31 @@ const magicTilesContent2 = [
   {
     colors: "bg-ada-pink8 text-ada-purple2",
     title: "Wsparcie i motywacja",
-    description: "Społeczność przedsiębiorczych kobiet zorientowanych na sukces",
+    description:
+      "Społeczność przedsiębiorczych kobiet zorientowanych na sukces",
   },
   {
     colors: "bg-ada-purple2 text-ada-white ]",
     title: "Wsparcie techniczne",
-    description: "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
+    description:
+      "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
     title: "Ekskluzywny dostęp",
-    description: "Najnowsze autorskie szkolenia i materiały dostępne w tylko w MAGIC",
+    description:
+      "Najnowsze autorskie szkolenia i materiały dostępne w tylko w MAGIC",
   },
 ]
 
 const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleMouseEnter = () => {
     if (!hasAnimated) {
-      setHasAnimated(true);
+      setHasAnimated(true)
     }
-  };
+  }
   return (
     <Section className="mb-12">
       {version == 1 && (
@@ -113,7 +120,8 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version == 2 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center relative"
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 items-center relative"
           onMouseOver={handleMouseEnter}
         >
           {/* Left column */}
@@ -123,7 +131,8 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
               wyjątkowy?
             </Typography>
             <Typography variant="body" className="pt-4">
-              Tutaj nie znajdziesz kolejnego kursu online. To Twój podręczny abonament na marketing!
+              Tutaj nie znajdziesz kolejnego kursu online. To Twój podręczny
+              abonament na marketing!
             </Typography>
             <Typography variant="body" className="pt-4 font-bold uppercase">
               Dostajesz:
@@ -131,9 +140,13 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
             <div className="flex flex-col md:flex-row gap-4 md:min-w-[650px] relative z-10">
               <div className="grid grid-cols-1 gap-6 lg:w-[320px] md:gap-2 pt-8">
                 {magicTilesContent1.map((item, i) => (
-                  <div key={i}
-                    className={`${hasAnimated ?
-                      "lg:animate-slideInFromLeft opacity-100" : " "}`}
+                  <div
+                    key={i}
+                    className={`${
+                      hasAnimated
+                        ? "lg:animate-slideInFromLeft opacity-100"
+                        : " "
+                    }`}
                   >
                     <MagicTile
                       colors={item.colors}
@@ -141,14 +154,17 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
                       description={item.description}
                     />
                   </div>
-
                 ))}
               </div>
               <div className="grid grid-cols-1 gap-6 lg:w-[320px] md:gap-2 md:pt-8">
                 {magicTilesContent2.map((item, i) => (
-                  <div key={i}
-                    className={`${hasAnimated ?
-                      "lg:animate-slideInFromRight opacity-100" : " "}`}
+                  <div
+                    key={i}
+                    className={`${
+                      hasAnimated
+                        ? "lg:animate-slideInFromRight opacity-100"
+                        : " "
+                    }`}
                   >
                     <MagicTile
                       colors={item.colors}

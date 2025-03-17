@@ -59,7 +59,8 @@ const Knowledge = (): JSX.Element => {
       text: (
         <>
           Pobierz mini e-booka „10 grup, do których możesz skierować kampanie,
-          aby zwiększyć wyniki” i docieraj ze swoją ofertą do odpowiednich osób.{" "}
+          aby zwiększyć wyniki” i docieraj ze swoją ofertą do odpowiednich
+          osób.{" "}
         </>
       ),
       btnText: <span className="font-bold">Pobieram! </span>,

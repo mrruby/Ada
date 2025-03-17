@@ -134,7 +134,7 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
                 src="../../images/arrowMagic.svg"
                 alt=""
                 layout="fixed"
-                width={20}
+                width={16}
                 height={20}
                 placeholder="blurred"
                 quality={90}

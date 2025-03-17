@@ -29,29 +29,33 @@ const bannerContent = [
 ]
 
 const magicBannerContent = [
-
   {
     circleKey: "yellowCircle",
     iconKey: "",
     bgColor: "bg-ada-purple2",
-    price: <div className="absolute text-ada-purple2 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[20px] w-[100px]">
-      <p>429 zł</p><p>mies.</p></div>,
+    price: (
+      <div className="absolute text-ada-purple2 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[20px] w-[100px]">
+        <p>429 zł</p>
+        <p>mies.</p>
+      </div>
+    ),
     description: (
       <>
         <div className="text-ada-white font-bold  md:text-adaSubtitle mt-2 mb-4">
-          <p>społeczność + konsultacje</p><p>+ warsztaty + spotkania</p>
+          <p>społeczność + konsultacje</p>
+          <p>+ warsztaty + spotkania</p>
         </div>
         <p className="pb-2">
           ✅ nielimitowane konsultacje pisemne z ekspertkami
         </p>
         <p className="pb-2">
-          ✅ materiały szkoleniowe video z ustawiania kampanii reklamowych i nie tylko
+          ✅ materiały szkoleniowe video z ustawiania kampanii reklamowych i nie
+          tylko
         </p>
+        <p className="pb-2">✅ 2 prasówki z nowościami z branży w miesiącu</p>
         <p className="pb-2">
-          ✅ 2 prasówki z nowościami z branży w miesiącu
-        </p>
-        <p className="pb-2">
-          ✅ udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych miesięcznie
+          ✅ udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych
+          miesięcznie
         </p>
         <p className="pb-2">
           ✅ udział w dwóch autorskich warsztatach tematycznych w miesiącu
@@ -59,9 +63,7 @@ const magicBannerContent = [
         <p className="pb-2">
           ✅ nielimitowany dostęp do nagrań ze wszystkich spotkań
         </p>
-        <button
-          className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
-        >
+        <button className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity">
           WYBIERAM
         </button>
       </>
@@ -79,9 +81,11 @@ const magicBannerContent2 = [
       <>
         <p>
           <span className="text-adaSubtitleSecondary">📊</span> <br />{" "}
-          <span className="font-bold uppercase">Twoje zasięgi spadają mimo świetnych produktów?
+          <span className="font-bold uppercase">
+            Twoje zasięgi spadają mimo świetnych produktów?
           </span>
-          <br />W MAGIC nauczysz się, jak w miesiąc dotrzeć do tylu osób, do ilu docierałaś przez rok.
+          <br />W MAGIC nauczysz się, jak w miesiąc dotrzeć do tylu osób, do ilu
+          docierałaś przez rok.
         </p>
       </>
     ),
@@ -94,8 +98,11 @@ const magicBannerContent2 = [
       <>
         <p>
           <span className="text-adaSubtitleSecondary">🤝</span> <br />{" "}
-          <span className="font-bold uppercase">Tworzysz samodzielnie teksty, maile, landingi?</span>
-          <br /> Skonsultuj swoje treści z copywriterką i zapytaj graficzki, co zrobić, aby projekt przyciągał wzrok
+          <span className="font-bold uppercase">
+            Tworzysz samodzielnie teksty, maile, landingi?
+          </span>
+          <br /> Skonsultuj swoje treści z copywriterką i zapytaj graficzki, co
+          zrobić, aby projekt przyciągał wzrok
         </p>
       </>
     ),
@@ -111,7 +118,10 @@ const magicBannerContent2 = [
           <span className="font-bold uppercase">
             Wyniki reklam nie są takie, jakich oczekiwałaś?
           </span>
-          <br />Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan działania ze specjalistkami, które spędzają w Managerze Reklam 5+ godzin dziennie.
+          <br />
+          Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan
+          działania ze specjalistkami, które spędzają w Managerze Reklam 5+
+          godzin dziennie.
         </p>
       </>
     ),
@@ -131,7 +141,8 @@ const magicBannerContent3 = [
           <span className="font-bold uppercase">
             Czujesz, że tracisz budżet reklamowy?
           </span>
-          <br /> Skonsultuj optymalizację budżetu w zależności od etapu lejka i branży.
+          <br /> Skonsultuj optymalizację budżetu w zależności od etapu lejka i
+          branży.
         </p>
       </>
     ),
@@ -148,7 +159,9 @@ const magicBannerContent3 = [
           <span className="font-bold uppercase">
             Twoje konto reklamowe zostało zablokowane?
           </span>
-          <br />Dowiedz się, co zrobić w takiej sytuacji, nawet gdy support Mety rozkłada ręce
+          <br />
+          Dowiedz się, co zrobić w takiej sytuacji, nawet gdy support Mety
+          rozkłada ręce
         </p>
       </>
     ),
@@ -162,9 +175,11 @@ const magicBannerContent3 = [
         <p>
           <span className="text-adaSubtitleSecondary">🤷‍♀️</span> <br />{" "}
           <span className="font-bold uppercase">
-            Spędzasz godziny na tworzeniu contentu, a efekty wciąż nie są zadowalające?
+            Spędzasz godziny na tworzeniu contentu, a efekty wciąż nie są
+            zadowalające?
           </span>
-          <br /> Zamiast tworzyć nieskończone ilości treści na IG, dowiedz się jak wykorzystać algorytm Mety na korzyść swojego biznesu.
+          <br /> Zamiast tworzyć nieskończone ilości treści na IG, dowiedz się
+          jak wykorzystać algorytm Mety na korzyść swojego biznesu.
         </p>
       </>
     ),
@@ -172,13 +187,13 @@ const magicBannerContent3 = [
 ]
 
 const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleMouseEnter = () => {
     if (!hasAnimated) {
-      setHasAnimated(true);
+      setHasAnimated(true)
     }
-  };
+  }
 
   return (
     <>
@@ -202,15 +217,20 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version == 2 && (
         <Section bgColor="bg-white" className="text-black" id="pakiety">
-          <div className="grid grid-cols-1 gap-20 md:gap-12 pt-8 max-w-xl mx-auto"
+          <div
+            className="grid grid-cols-1 gap-20 md:gap-12 pt-8 max-w-xl mx-auto"
             onMouseOver={handleMouseEnter}
           >
             {magicBannerContent.map((item, i) => (
               <div
                 key={i}
-                className={`${hasAnimated ?
-                  (i % 2 === 0 ? "lg:animate-slideInFromLeft opacity-100" : "lg:animate-slideInFromRight opacity-100")
-                  : " "}`}
+                className={`${
+                  hasAnimated
+                    ? i % 2 === 0
+                      ? "lg:animate-slideInFromLeft opacity-100"
+                      : "lg:animate-slideInFromRight opacity-100"
+                    : " "
+                }`}
               >
                 <BannerBox
                   key={i}
@@ -228,7 +248,10 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
       )}
       {version == 3 && (
         <Section bgColor="bg-white" className="text-black">
-          <Typography variant="h2" className="text-black leading-snug mb-6 text-center">
+          <Typography
+            variant="h2"
+            className="text-black leading-snug mb-6 text-center"
+          >
             Rozpoznajesz te sytuacje?
           </Typography>
           <div
@@ -253,8 +276,9 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
-                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromRight opacity-100" : ""
-                    }`}
+                  bgColor={`${item.bgColor} ${
+                    hasAnimated ? "lg:animate-slideInFromRight opacity-100" : ""
+                  }`}
                   description={item.description}
                   styles={item.styles}
                 />
@@ -271,8 +295,9 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
-                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromLeft opacity-100" : " "
-                    }`}
+                  bgColor={`${item.bgColor} ${
+                    hasAnimated ? "lg:animate-slideInFromLeft opacity-100" : " "
+                  }`}
                   description={item.description}
                   styles={item.styles}
                 />
@@ -284,8 +309,11 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
-                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromRight opacity-100" : " "
-                    }`}
+                  bgColor={`${item.bgColor} ${
+                    hasAnimated
+                      ? "lg:animate-slideInFromRight opacity-100"
+                      : " "
+                  }`}
                   description={item.description}
                 />
               ))}
@@ -295,7 +323,11 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
             Rozumiemy to.
           </Typography>
           <Typography variant="body" className="text-black pt-8">
-            Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do merytorycznego wsparcia, sprawdzonych strategii i inspiracji, które realnie przekładają się na wyniki.
+            Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
+            chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie
+            działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do
+            merytorycznego wsparcia, sprawdzonych strategii i inspiracji, które
+            realnie przekładają się na wyniki.
           </Typography>
           <div className="w-full flex justify-center">
             <Button
