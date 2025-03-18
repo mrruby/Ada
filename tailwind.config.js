@@ -31,6 +31,8 @@ module.exports = {
           brown: "#9B3118",
           black: "#000000",
           newPurple: "#3D03A1",
+          magicPurple: "#5D4294",
+          magicOrange: "#EE701E",
         },
       },
       backgroundImage: {
@@ -43,9 +45,7 @@ module.exports = {
           "linear-gradient(180deg,  #EEDCF6 0%, #FFF 50%, #EEDCF6 100%);",
         linear7: "linear-gradient(0deg, #FFBEA3 0%, #FFFFFF 100%)",
       },
-      backgroundPosition: {
-        bgPosition: "0px 310px",
-      },
+      backgroundPosition: { bgPosition: "0px 310px" },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         lemon: ["Lemon", "serif"],
@@ -77,14 +77,7 @@ module.exports = {
         slideInFromRight: "slideInFromRight 1.5s ease-out",
       },
       keyframes: {
-        fadeIn: {
-          "0%": {
-            opacity: "0",
-          },
-          "100%": {
-            opacity: "1",
-          },
-        },
+        fadeIn: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
@@ -103,40 +96,16 @@ module.exports = {
           "50%": { transform: "translateY(-5px)" },
         },
         slideInFromLeft: {
-          "0%": {
-            transform: "translateX(-100%)",
-            opacity: "0",
-          },
-          "50%": {
-            transform: "translateX(4%)",
-            opacity: "1",
-          },
-          "70%": {
-            transform: "translateX(-2%)",
-            opacity: "1",
-          },
-          "100%": {
-            transform: "translateX(0)",
-            opacity: "1",
-          },
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "50%": { transform: "translateX(4%)", opacity: "1" },
+          "70%": { transform: "translateX(-2%)", opacity: "1" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
         },
         slideInFromRight: {
-          "0%": {
-            transform: "translateX(100%)",
-            opacity: "0",
-          },
-          "50%": {
-            transform: "translateX(-4%)",
-            opacity: "1",
-          },
-          "70%": {
-            transform: "translateX(2%)",
-            opacity: "1",
-          },
-          "100%": {
-            transform: "translateX(0)",
-            opacity: "1",
-          },
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "50%": { transform: "translateX(-4%)", opacity: "1" },
+          "70%": { transform: "translateX(2%)", opacity: "1" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
         },
       },
     },
@@ -145,12 +114,8 @@ module.exports = {
     require("@tailwindcss/forms"),
     function ({ addUtilities }) {
       const newUtilities = {
-        ".animation-delay-200": {
-          "animation-delay": "200ms",
-        },
-        ".animation-delay-400": {
-          "animation-delay": "400ms",
-        },
+        ".animation-delay-200": { "animation-delay": "200ms" },
+        ".animation-delay-400": { "animation-delay": "400ms" },
       }
       addUtilities(newUtilities)
     },

@@ -1,9 +1,9 @@
+import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import React from "react"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import { responsive } from "values/const"
 import Question from "../../helpers/Question"
-import ArrowLeft from "../../images/arrow-left.svg"
-import ArrowRight from "../../images/arrow-right.svg"
 
 type IQuestionsList = {
   question: string
@@ -33,47 +33,6 @@ const questionsList: IQuestionsList[] = [
       "Nasze spotkania będą nagrywane i udostępnione tylko dla osób uczestniczących w programie. Jeśli nie dotrzesz na któreś spotkanie, będziesz mogła nadrobić materiał. Z zadaniem pytań nie musisz czekać do kolejnego spotkania — będziesz mogła zadać je na dedykowanej grupie na Facebooku, gdzie będziemy w stałym kontakcie!",
   },
 ]
-
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-}
-
-const CustomLeftArrow = ({ onClick }: any) => {
-  return (
-    <div
-      className={`absolute max-h-[400px] top-0 md:top-[-100px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
-      onClick={onClick}
-    >
-      <img src={ArrowLeft} alt="Left Arrow" width={16} height={25} />
-    </div>
-  )
-}
-
-const CustomRightArrow = ({ onClick }: any) => {
-  return (
-    <div
-      className={`absolute max-h-[400px] top-0 md:top-[-100px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
-      onClick={onClick}
-    >
-      <img src={ArrowRight} alt="Right Arrow" width={16} height={25} />
-    </div>
-  )
-}
 
 const Questions = (): JSX.Element => {
   return (

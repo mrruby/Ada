@@ -13,6 +13,7 @@ interface Props {
   mobileBottom?: string
   rotate?: string
   width?: string
+  zIndex?: string
 }
 
 const ImageComponent: React.FC<
@@ -38,6 +39,7 @@ const ImageComponent: React.FC<
   width = "40px",
   zIndex = "z-40",
   maxWidth = "",
+  rotate = "",
   widthValue,
   heightValue,
 }) => {
@@ -49,7 +51,7 @@ const ImageComponent: React.FC<
         bottom || ""
       } ${mobileTop || ""} ${mobileRight || ""} ${mobileLeft || ""} ${
         mobileBottom || ""
-      } ${zIndex} w-[${width}] ${maxWidth}`}
+      } ${zIndex} w-[${width}] ${maxWidth} ${rotate}`}
       width={widthValue}
       height={heightValue}
     />
@@ -309,6 +311,54 @@ export const Leaves5: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/leaves5.svg"
     alt="Decorative leaves"
+    {...props}
+  />
+)
+
+export const MagicSunDark: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-sun-dark.svg"
+    alt="Decorative sun"
+    {...props}
+  />
+)
+
+export const MagicSun: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/magic-sun.svg" alt="Decorative sun" {...props} />
+)
+
+export const MagicUnion: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-union.svg"
+    alt="Decorative union"
+    {...props}
+  />
+)
+
+export const MagicUnion2: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-union-2.svg"
+    alt="Decorative union"
+    {...props}
+  />
+)
+
+export const MagicUnionDark: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-union-dark.svg"
+    alt="Decorative union"
+    {...props}
+  />
+)
+
+export const Vector: React.FC<Props> = (props) => (
+  <ImageComponent src="/assets/vector.svg" alt="Decorative vector" {...props} />
+)
+
+export const MagicSunPink: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-sun-pink.svg"
+    alt="Magic sun pink"
     {...props}
   />
 )

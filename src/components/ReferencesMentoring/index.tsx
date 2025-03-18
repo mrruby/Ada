@@ -1,10 +1,10 @@
+import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import { responsive } from "values/const"
 import Reference from "../../helpers/Reference"
-import ArrowLeft from "../../images/arrow-left.svg"
-import ArrowRight from "../../images/arrow-right.svg"
-import { StaticImage } from "gatsby-plugin-image"
 
 type IReferencesList = {
   image: JSX.Element
@@ -16,7 +16,6 @@ type IReferences = {
   title3?: boolean
   title4?: boolean
   title5?: boolean
-  version?: "1" | "2" | "3"
 }
 
 const referencesList: IReferencesList[] = [
@@ -280,62 +279,13 @@ const referencesList4: IReferencesList[] = [
   },
 ]
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1440 },
-    items: 3,
-  },
-  desktop: {
-    breakpoint: { max: 1440, min: 1024 },
-    items: 2,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-}
-
-const CustomLeftArrow = ({ onClick }: any) => {
-  return (
-    <div
-      className={`absolute max-h-[400px] top-0 md:top-[160px] bottom-0 left-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
-      onClick={onClick}
-    >
-      <img src={ArrowLeft} alt="Left Arrow" width={16} height={25} />
-    </div>
-  )
-}
-
-const CustomRightArrow = ({ onClick }: any) => {
-  return (
-    <div
-      className={`absolute max-h-[400px] top-0 md:top-[160px] bottom-0 right-0 flex justify-center items-center p-1 opacity-70 hover:opacity-100 cursor-pointer z-20`}
-      onClick={onClick}
-    >
-      <img src={ArrowRight} alt="Right Arrow" width={16} height={25} />
-    </div>
-  )
-}
-
 const ReferencesMentoring = ({
   title1,
   title2,
   title3,
   title4,
   title5,
-  version = "1",
 }: IReferences): JSX.Element => {
-  const selectedList =
-    version === "2"
-      ? referencesList2
-      : version === "3"
-        ? referencesList3
-        : referencesList
-
   return (
     <div className="pt-[40px]">
       {title1 && (
