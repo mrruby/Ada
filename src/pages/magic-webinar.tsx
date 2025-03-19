@@ -32,10 +32,9 @@ const MagicWebinarPage = (): JSX.Element => {
     </Layout>
   )
 }
-
 export const Head = () => (
   <SEO
-    title="Magic: Poznaj… Meta Ads Girls Inside Club"
+    title="OD PASJI DO ZYSKU: Zwiększ sprzedaż bez ciągłego podnoszenia budżetu reklamowego"
     image="https://adrianna.com.pl/img/ada_purple.webp"
   />
 )

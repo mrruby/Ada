@@ -43,7 +43,8 @@ const MagicWebinar1 = (): JSX.Element => {
                   variant="h1"
                   className="text-ada-magicPurple text-3xl md:text-5xl leading-tight"
                 >
-                  Zwiększ sprzedaż bez wydawania tysięcy złotych na marketing 🚀
+                  Zwiększ sprzedaż bez ciągłego podnoszenia budżetu reklamowego
+                  🚀
                 </Typography>
               </div>
               <div className="mb-6 max-w-[520px]">
@@ -67,6 +68,7 @@ const MagicWebinar1 = (): JSX.Element => {
                     REZERWUJE MIEJSCE
                   </span>
                 }
+                sectionId="signup"
                 textSize="text-xl md:text-2xl"
                 btnStyle="bg-white hover:bg-ada-magicPurple/90 text-xl font-bold py-6 mb-6 px-12 rounded-full border-none"
               />

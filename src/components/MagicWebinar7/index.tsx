@@ -17,7 +17,7 @@ const MagicWebinar7 = (): JSX.Element => {
           <span className="text-ada-magicPurple">?</span>
         </Typography>
         <div className="bg-ada-magicOrange text-white px-4 rounded-sm">
-          <span className="font-bold text-ada-magicPurple">
+          <span className="font-bold text-pink-100">
             Zobacz, jakie wyniki możemy pomóc Ci osiągnąć:
           </span>
         </div>

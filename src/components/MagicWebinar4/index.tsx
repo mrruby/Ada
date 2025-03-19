@@ -85,6 +85,7 @@ const MagicWebinar4 = (): JSX.Element => {
         text={
           <span className="text-ada-magicPurple uppercase">CHCĘ DOŁĄCZYĆ</span>
         }
+        sectionId="signup"
         textSize="text-xl md:text-2xl"
         btnStyle="bg-white hover:bg-ada-magicPurple/90 text-xl font-bold py-6 mb-6 px-12 rounded-full border-none"
       />

@@ -35,7 +35,7 @@ const MagicWebinar10 = (): JSX.Element => {
           </div>
         </div>
 
-        <CountdownTimer targetDate={new Date("2025-03-30T18:00:00")} />
+        <CountdownTimer targetDate={new Date("2025-04-03T18:00:00")} />
 
         {/* Sign up button */}
         <Button
@@ -45,7 +45,7 @@ const MagicWebinar10 = (): JSX.Element => {
               ZAPISUJĘ SIĘ!
             </span>
           }
-          sectionId="pakiety"
+          sectionId="signup"
           textSize="text-sm md:text-base"
           btnStyle="bg-ada-magicOrange hover:bg-ada-magicOrange/90 text-xl mt-6 font-bold py-6 px-12 rounded-full border-none"
         />
