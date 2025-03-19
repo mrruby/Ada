@@ -11,7 +11,7 @@ const MagicWebinar7 = (): JSX.Element => {
     {
       image: (
         <StaticImage
-          src={"../../images/magic1.webp"}
+          src={"../../images/magic_webinar1.webp"}
           alt="Opinia o Magic"
           placeholder="blurred"
           width={680}
@@ -24,7 +24,7 @@ const MagicWebinar7 = (): JSX.Element => {
     {
       image: (
         <StaticImage
-          src={"../../images/magic2.webp"}
+          src={"../../images/magic_webinar2.webp"}
           alt="Opinia o programie mentoringowym"
           placeholder="blurred"
           width={680}
@@ -37,20 +37,7 @@ const MagicWebinar7 = (): JSX.Element => {
     {
       image: (
         <StaticImage
-          src={"../../images/magic3.webp"}
-          alt="Opinia o programie mentoringowym"
-          placeholder="blurred"
-          width={680}
-          height={680}
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-        />
-      ),
-    },
-    {
-      image: (
-        <StaticImage
-          src={"../../images/magic4.webp"}
+          src={"../../images/magic_webinar3.webp"}
           alt="Opinia o programie mentoringowym"
           placeholder="blurred"
           width={680}

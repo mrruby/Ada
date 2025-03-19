@@ -111,7 +111,7 @@ const MagicWebinar5 = (): JSX.Element => {
                   width="80px"
                   zIndex="z-0"
                   mobileTop="top-72"
-                  mobileLeft="left-10"
+                  mobileLeft="left-[50px]"
                 />
               )}
             </div>

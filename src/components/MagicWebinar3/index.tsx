@@ -21,7 +21,12 @@ const MagicWebinar3 = (): JSX.Element => {
     },
   ]
 
-  const renderAudienceItem = ({ title, description }) => (
+  interface AudienceItem {
+    title: string
+    description: string
+  }
+
+  const renderAudienceItem = ({ title, description }: AudienceItem) => (
     <div className="flex gap-3" key={title}>
       <span className="text-2xl flex-shrink-0 mt-1">✅</span>
       <div>
