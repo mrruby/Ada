@@ -6,7 +6,7 @@ import Typography from "../shared/Typography"
 
 const MagicWebinar10 = (): JSX.Element => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#5D4B8C] p-4 text-center">
+    <div className="flex flex-col items-center justify-center bg-ada-magicPurple p-4 text-center py-16">
       <div className="max-w-md w-full">
         {/* Header with spinners */}
         <div className="flex items-center justify-center gap-4 mb-12 relative">

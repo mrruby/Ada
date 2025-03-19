@@ -1,4 +1,6 @@
+import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import {
   MagicSunDark,
   MagicUnion,
@@ -8,7 +10,6 @@ import {
 } from "helpers/LayoutElements"
 import TypingAnimation from "helpers/TypingAnimation"
 import React from "react"
-import Typography from "../shared/Typography"
 
 const MagicWebinar1 = (): JSX.Element => {
   return (
@@ -27,48 +28,59 @@ const MagicWebinar1 = (): JSX.Element => {
       <div className="flex-grow bg-pink-100 px-6 md:px-12">
         <div className="container mx-auto relative">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <div className="text-ada-magicOrange text-3xl md:text-4xl font-bold mb-4">
-                <TypingAnimation
-                  text="OD PASJI DO ZYSKU:"
-                  textStyle="text-ada-magicOrange"
-                />
-              </div>
-
-              <div className="text-ada-magicPurple text-3xl md:text-5xl font-bold leading-tight mb-6">
-                <TypingAnimation
-                  text="Zwiększ sprzedaż bez wydawania tysięcy złotych na marketing 🚀 🚀"
-                  textStyle="text-ada-magicPurple"
-                />
-              </div>
-              <div className="mb-6">
+            <div className="md:w-1/2 mb-10 mt-10  md:mb-0">
+              <div className="mb-4">
                 <Typography
-                  variant="body"
-                  className="text-ada-magicOrange text-xl font-bold inline"
+                  variant="h1"
+                  className="text-ada-magicOrange text-3xl md:text-4xl"
                 >
-                  Bezpłatny webinar
-                </Typography>{" "}
-                <Typography
-                  variant="body"
-                  className="text-ada-magicPurple text-lg inline"
-                >
-                  <span>
-                    dla ambitnych przedsiębiorczyń, które wreszcie chcą przestać
-                    zgadywać i zacząć zarabiać
-                  </span>
+                  OD PASJI DO ZYSKU:
                 </Typography>
               </div>
+
+              <div className="mb-6">
+                <Typography
+                  variant="h1"
+                  className="text-ada-magicPurple text-3xl md:text-5xl leading-tight"
+                >
+                  Zwiększ sprzedaż bez wydawania tysięcy złotych na marketing 🚀
+                </Typography>
+              </div>
+              <div className="mb-6 max-w-[520px]">
+                <TypingAnimation
+                  text={[
+                    {
+                      text: "Bezpłatny webinar ",
+                      style: "text-ada-magicOrange text-xl font-bold inline",
+                    },
+                    {
+                      text: "dla ambitnych przedsiębiorczyń, które wreszcie chcą przestać zgadywać i zacząć zarabiać",
+                      style: "text-ada-magicPurple text-lg inline",
+                    },
+                  ]}
+                />
+              </div>
+              <Button
+                type="button"
+                text={
+                  <span className="text-ada-magicPurple uppercase">
+                    REZERWUJE MIEJSCE
+                  </span>
+                }
+                textSize="text-xl md:text-2xl"
+                btnStyle="bg-white hover:bg-ada-magicPurple/90 text-xl font-bold py-6 mb-6 px-12 rounded-full border-none"
+              />
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="relative w-[400px] h-[600px]">
-                <div className="z-10 absolute ">
+                <div className="z-10 absolute bottom-20">
                   <StaticImage
                     loading="eager"
                     src="../../images/ada_purple.webp"
                     alt="Ada w telefonie"
                     placeholder="blurred"
-                    width={400}
-                    height={600}
+                    width={600}
+                    height={805}
                   />
                 </div>
                 <MagicSunDark
@@ -84,19 +96,19 @@ const MagicWebinar1 = (): JSX.Element => {
                   zIndex="z-0"
                 />
                 <MagicUnion
-                  mobileTop="bottom-[80px]"
+                  mobileTop="bottom-48"
                   mobileRight="left-[-80px]"
                   width="130px"
                   zIndex="z-0"
                 />
                 <MagicUnionDark
-                  mobileBottom="bottom-0"
+                  mobileBottom="bottom-20"
                   mobileLeft="left-[50px]"
                   width="80px"
                   zIndex="z-0"
                 />
                 <Vector
-                  mobileBottom="bottom-[-10px]"
+                  mobileBottom="bottom-20"
                   mobileRight="right-0"
                   width="110px"
                   zIndex="z-20"

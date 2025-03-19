@@ -1,3 +1,4 @@
+import { Button } from "helpers/Button"
 import { MagicSunPink } from "helpers/LayoutElements"
 import React from "react"
 
@@ -78,6 +79,15 @@ const MagicWebinar4 = (): JSX.Element => {
           Nawet jeśli dopiero zaczynasz i marzysz o podboju branży.
         </span>
       </div>
+
+      <Button
+        type="button"
+        text={
+          <span className="text-ada-magicPurple uppercase">CHCĘ DOŁĄCZYĆ</span>
+        }
+        textSize="text-xl md:text-2xl"
+        btnStyle="bg-white hover:bg-ada-magicPurple/90 text-xl font-bold py-6 mb-6 px-12 rounded-full border-none"
+      />
     </div>
   )
 }

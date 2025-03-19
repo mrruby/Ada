@@ -1,12 +1,12 @@
 import { MagicSun } from "helpers/LayoutElements"
-import React from "react"
+import React, { ReactNode } from "react"
 import { CircleImage } from "../MagicBioBanner/circleImages"
 import Typography from "../shared/Typography"
 
 interface TeamMember {
   name: string
   title: string
-  description: string
+  description: ReactNode
   imageUrl: string
 }
 
@@ -15,29 +15,65 @@ const MagicWebinar5 = (): JSX.Element => {
     {
       name: "Adrianna Promis-Urbas",
       title: "Specjalistka od kampanii reklamowych z 6-letnim doświadczeniem",
-      description:
-        "Pomogłam ponad 200 kobietom zwiększyć zyski i satysfakcję z prowadzenia własnej firmy. Specjalizuję się w przekształcaniu chaotycznych działań marketingowych w precyzyjne systemy generujące przewidywalne wyniki, nawet w niepewnych warunkach rynkowych.",
+      description: (
+        <>
+          Pomogłam <span className="font-bold">ponad 200 kobietom</span>{" "}
+          zwiększyć zyski i satysfakcję z prowadzenia własnej firmy.
+          Specjalizuję się w przekształcaniu chaotycznych działań marketingowych
+          w precyzyjne{" "}
+          <span className="font-bold">
+            systemy generujące przewidywalne wyniki
+          </span>
+          , nawet w niepewnych warunkach rynkowych.
+        </>
+      ),
       imageUrl: "ada",
     },
     {
       name: "Justyna Król",
       title: "Specjalistka od reklam i copywritingu z socjologicznym zacięciem",
-      description:
-        "Stworzyłam teksty reklamowe dla kilkudziesięciu polskich marek. Specjalizuję się w przekształcaniu zwykłych komunikatów w emocjonalne historie, które budują autentyczne relacje z klientami i sprawiają, że marki stają się rozpoznawalne, lubiane i wybierane.",
+      description: (
+        <>
+          Stworzyłam teksty reklamowe dla{" "}
+          <span className="font-bold">kilkudziesięciu</span> polskich marek.
+          Specjalizuję się w przekształcaniu zwykłych komunikatów{" "}
+          <span className="font-bold">w emocjonalne historie</span>, które
+          budują autentyczne relacje z klientami i sprawiają, że{" "}
+          <span className="font-bold">marki stają się rozpoznawalne</span>,
+          lubiane i wybierane.
+        </>
+      ),
       imageUrl: "justyna",
     },
     {
       name: "Dorota Woźniak",
       title: "Projektantka graficzna i architektka z ilustratorską pasją",
-      description:
-        "Zaprojektowałam setki kreacji reklamowych. Specjalizuję się w tworzeniu profesjonalnych materiałów wizualnych dla social media i kampanii adsowych, przekształcając abstrakcyjne idee w przyciągające wzrok projekty, które realizują cele biznesowe.",
+      description: (
+        <>
+          Zaprojektowałam <span className="font-bold">setki</span> kreacji
+          reklamowych. Specjalizuję się w tworzeniu profesjonalnych materiałów
+          wizualnych{" "}
+          <span className="font-bold">
+            dla social media i kampanii adsowych
+          </span>
+          , przekształcając abstrakcyjne idee w przyciągające wzrok projekty,
+          które realizują cele biznesowe.
+        </>
+      ),
       imageUrl: "dorota",
     },
     {
       name: "Nicola Kut",
       title: "Koordynatorka projektów i aspirująca analityczka biznesowa",
-      description:
-        "Nadzoruję realizację projektów, dbając o każdy szczegół i dotrzymanie terminów. Specjalizuję się w pilnowaniu harmonogramów i zapewnianiu, że każdy element pracy jest wykonany zgodnie z planem, co pozwala całemu zespołowi działać sprawnie i efektywnie.",
+      description: (
+        <>
+          Nadzoruję realizację projektów, dbając o każdy szczegół i dotrzymanie
+          terminów. Specjalizuję się w pilnowaniu harmonogramów i zapewnianiu,
+          że każdy element pracy jest wykonany zgodnie z planem, co pozwala
+          całemu zespołowi{" "}
+          <span className="font-bold">działać sprawnie i efektywnie</span>.
+        </>
+      ),
       imageUrl: "nicola",
     },
   ]
@@ -49,24 +85,34 @@ const MagicWebinar5 = (): JSX.Element => {
           {teamMembers.map((member, index) => (
             <div
               key={member.imageUrl}
-              className={`flex flex-col items-center text-center relative ${
+              className={`flex flex-row items-start relative ${
                 index < 2 ? "pb-28" : ""
               }`}
             >
-              <div className="w-48 h-48 rounded-full overflow-hidden bg-gray-100">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 mr-4">
                 <CircleImage circleKey={member.imageUrl} />
               </div>
-              <Typography variant="h3" className="text-purple-700 mb-1">
-                {member.name}
-              </Typography>
-              <Typography variant="small" className="text-gray-600 mb-4">
-                {member.title}
-              </Typography>
-              <Typography variant="body" className="text-gray-800 max-w-md">
-                {member.description}
-              </Typography>
+              <div className="flex flex-col">
+                <Typography variant="h3" className="text-purple-700 mb-1">
+                  {member.name}
+                </Typography>
+                <Typography
+                  variant="body"
+                  className="font-semibold text-gray-600 mb-4"
+                >
+                  {member.title}
+                </Typography>
+                <Typography variant="body" className="text-gray-800">
+                  {member.description}
+                </Typography>
+              </div>
               {index < 2 && (
-                <MagicSun width="110px" zIndex="z-0" mobileTop="top-[440px]" />
+                <MagicSun
+                  width="80px"
+                  zIndex="z-0"
+                  mobileTop="top-72"
+                  mobileLeft="left-10"
+                />
               )}
             </div>
           ))}
