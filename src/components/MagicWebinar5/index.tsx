@@ -89,7 +89,7 @@ const MagicWebinar5 = (): JSX.Element => {
                 index < 2 ? "pb-28" : ""
               }`}
             >
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 mr-4">
+              <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden bg-gray-100 flex-shrink-0 mr-4">
                 <CircleImage circleKey={member.imageUrl} />
               </div>
               <div className="flex flex-col">
