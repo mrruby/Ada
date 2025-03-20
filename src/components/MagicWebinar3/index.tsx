@@ -54,10 +54,10 @@ const MagicWebinar3 = (): JSX.Element => {
                   variant="h1"
                   className="text-4xl md:text-5xl font-bold"
                 >
-                  <span className="text-ada-magicOrange">Ten webinar</span>{" "}
-                  <span className="text-ada-magicPurple">jest</span>{" "}
+                  <span className="text-ada-magicOrange">Ten</span>{" "}
+                  <span className="text-ada-magicPurple">webinar</span>{" "}
                   <span className="text-ada-magicOrange">
-                    stworzony specjalnie dla:
+                    jest stworzony specjalnie dla:
                   </span>
                 </Typography>
               </div>

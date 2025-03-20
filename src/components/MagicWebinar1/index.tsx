@@ -13,7 +13,7 @@ import React from "react"
 
 const MagicWebinar1 = (): JSX.Element => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col">
       <header className="bg-ada-magicPurple text-white py-4 px-6 md:px-12">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
@@ -43,29 +43,35 @@ const MagicWebinar1 = (): JSX.Element => {
                   variant="h1"
                   className="text-ada-magicPurple text-3xl md:text-5xl leading-tight"
                 >
-                  Zwiększ sprzedaż bez ciągłego podnoszenia budżetu reklamowego
+                  Zwiększ sprzedaż{" "}
+                  <TypingAnimation
+                    text="bez ciągłego podnoszenia budżetu reklamowego"
+                    textStyle="text-ada-magicPurple text-3xl md:text-5xl leading-tight inline"
+                  />{" "}
                   🚀
                 </Typography>
               </div>
               <div className="mb-6 max-w-[520px]">
-                <TypingAnimation
-                  text={[
-                    {
-                      text: "Bezpłatny webinar ",
-                      style: "text-ada-magicOrange text-xl font-bold inline",
-                    },
-                    {
-                      text: "dla ambitnych przedsiębiorczyń, które wreszcie chcą przestać zgadywać i zacząć zarabiać",
-                      style: "text-ada-magicPurple text-lg inline",
-                    },
-                  ]}
-                />
+                <Typography
+                  variant="body"
+                  className="text-ada-magicOrange text-xl font-bold inline"
+                >
+                  Bezpłatny webinar
+                </Typography>
+                <Typography
+                  variant="body"
+                  className="text-ada-magicPurple text-lg inline"
+                >
+                  {" "}
+                  dla ambitnych przedsiębiorczyń, które wreszcie chcą przestać
+                  zgadywać i zacząć zarabiać
+                </Typography>
               </div>
               <Button
                 type="button"
                 text={
                   <span className="text-ada-magicPurple uppercase">
-                    REZERWUJE MIEJSCE
+                    REZERWUJĘ MIEJSCE
                   </span>
                 }
                 sectionId="signup"

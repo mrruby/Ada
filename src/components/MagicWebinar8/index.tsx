@@ -16,11 +16,11 @@ const MagicWebinar8 = (): JSX.Element => {
   )
 
   return (
-    <div className="w-full bg-[#F26B21] py-16 px-4">
+    <div className="w-full bg-ada-magicOrange py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-center text-white text-4xl md:text-5xl font-bold mb-12">
           Co dostaniesz, rejestrując się{" "}
-          <span className="text-[#3F51B5]">teraz</span>:
+          <span className="text-ada-magicPurple">teraz</span>:
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

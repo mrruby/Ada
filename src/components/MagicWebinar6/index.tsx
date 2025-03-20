@@ -49,7 +49,7 @@ const MagicWebinar7 = (): JSX.Element => {
     },
   ]
   return (
-    <div className="bg-ada-magicPurple min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-ada-magicPurple py-16 px-4 sm:px-6 lg:px-8">
       <Typography variant="h2" className="font-bold max-w-xl mx-auto pb-8">
         <span className="text-pink-100">Oto co mówią </span>
         <span className="text-ada-magicOrange">przedsiębiorczynie</span>

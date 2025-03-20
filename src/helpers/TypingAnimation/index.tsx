@@ -1,32 +1,20 @@
-import React, { useEffect, useState, useCallback } from "react"
-
-interface TextSegment {
-  text: string
-  style: string
-}
+import React, { useCallback, useEffect, useState } from "react"
 
 interface Props {
-  text: string | TextSegment[]
-  textStyle?: string
+  text: string
+  textStyle: string
 }
 
-const useTypingEffect = (textContent: string | TextSegment[]) => {
-  const fullText =
-    typeof textContent === "string"
-      ? textContent
-      : textContent.map((segment) => segment.text).join("")
-
+const useTypingEffect = (text: string) => {
   const [displayedText, setDisplayedText] = useState("")
   const [cursorVisible, setCursorVisible] = useState(true)
   const [isTyping, setIsTyping] = useState(true)
-  const [currentIndex, setCurrentIndex] = useState(0)
 
   const updateTextDisplay = useCallback(
-    (index: number) => {
-      setDisplayedText(fullText.substring(0, index))
-      setCurrentIndex(index)
+    (currentIndex: number) => {
+      setDisplayedText(text.substring(0, currentIndex))
     },
-    [fullText]
+    [text]
   )
 
   const toggleCursorVisibility = useCallback((visible: boolean) => {
@@ -39,74 +27,38 @@ const useTypingEffect = (textContent: string | TextSegment[]) => {
       return
     }
 
-    let index = currentIndex
+    let currentIndex = 0
     const delay = 200
 
     const intervalId = setInterval(() => {
-      if (index > fullText.length) {
+      if (currentIndex > text.length) {
         setIsTyping(false)
         clearInterval(intervalId)
         setTimeout(() => {
           setIsTyping(true)
           toggleCursorVisibility(true)
-          index = 0
-          setCurrentIndex(0)
+          currentIndex = 0
         }, 10000)
         return
       }
-      updateTextDisplay(++index)
+      updateTextDisplay(++currentIndex)
     }, delay)
 
     return () => clearInterval(intervalId)
-  }, [
-    fullText,
-    isTyping,
-    updateTextDisplay,
-    toggleCursorVisibility,
-    currentIndex,
-  ])
+  }, [text, isTyping, updateTextDisplay, toggleCursorVisibility])
 
-  return { displayedText, cursorVisible, currentIndex }
+  return { displayedText, cursorVisible }
 }
 
 const TypingAnimation: React.FC<Props> = ({ text, textStyle }) => {
-  const { displayedText, cursorVisible, currentIndex } = useTypingEffect(text)
-
-  const renderContent = () => {
-    if (typeof text === "string") {
-      return <h3 className={textStyle}>{displayedText}</h3>
-    }
-
-    let currentPosition = 0
-    return (
-      <h3>
-        {text.map((segment, index) => {
-          const segmentLength = segment.text.length
-          const start = currentPosition
-          const end = currentPosition + segmentLength
-          currentPosition = end
-
-          const visibleText = displayedText.substring(
-            start,
-            Math.min(end, currentIndex)
-          )
-
-          return visibleText ? (
-            <span key={index} className={segment.style}>
-              {visibleText}
-            </span>
-          ) : null
-        })}
-      </h3>
-    )
-  }
+  const { displayedText, cursorVisible } = useTypingEffect(text)
 
   return (
     <div>
-      {renderContent()}
-      {typeof text === "string" && cursorVisible && (
-        <span className="animate-blink">|</span>
-      )}
+      <h3 className={textStyle}>
+        {displayedText}
+        {cursorVisible && <span className="animate-blink">|</span>}
+      </h3>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import Typography from "../shared/Typography"
 
 const MagicWebinar2 = (): JSX.Element => {
   return (
-    <div className="bg-ada-magicPurple px-6 md:px-12 min-h-screen relative">
+    <div className="bg-ada-magicPurple px-6 md:px-12 relative">
       <div className="flex justify-center">
         <MagicSun mobileBottom="top-[-50px]" width="200px" zIndex="z-10" />
       </div>

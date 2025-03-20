@@ -4,7 +4,7 @@ import React from "react"
 
 const MagicWebinar4 = (): JSX.Element => {
   return (
-    <div className="bg-ada-magicOrange p-8 md:p-12 lg:p-16 text-center relative overflow-hidden min-h-screen flex flex-col items-center justify-center">
+    <div className="bg-ada-magicOrange p-8 md:p-12 lg:p-16 text-center relative overflow-hidden flex flex-col items-center justify-center">
       {/* Top section with title */}
       <div className="flex items-center justify-center md:mb-12 relative">
         <div className="text-white w-8 h-8 md:w-12 md:h-12">
@@ -54,7 +54,7 @@ const MagicWebinar4 = (): JSX.Element => {
           <p className="text-left text-sm md:text-base">
             Sprawdzony sposób na reklamy, który nie
             <br />
-            wywołuje u Ciebie ciąr żenady
+            wywołuje u Ciebie ciar żenady
           </p>
         </div>
 
