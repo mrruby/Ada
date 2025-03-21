@@ -1,8 +1,40 @@
-import React from "react"
+import React, { useEffect } from "react"
 import magicWebinarForm from "../../values/forms/magic-webinar.html"
 import Typography from "../shared/Typography"
 
 const MagicWebinar12 = (): JSX.Element => {
+  useEffect(() => {
+    const form = document.querySelector(".ml-block-form") as HTMLFormElement
+    if (form) {
+      // Remove target attribute to avoid new tab
+      form.removeAttribute("target")
+
+      // Add a submit event listener to intercept submission
+      form.addEventListener("submit", (e) => {
+        e.preventDefault() // Prevent the default behavior
+
+        const formData = new FormData(form)
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          mode: "cors",
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Response:", data)
+            if (data.success) {
+              // Redirect on success
+              window.location.href = "https://adrianna.com.pl/thank/"
+            } else {
+              // Optionally, handle errors here
+              console.error("Submission failed:", data)
+            }
+          })
+          .catch((error) => console.error("Error:", error))
+      })
+    }
+  }, [])
+
   return (
     <section id="signup">
       <div className="flex flex-col items-center justify-center py-20 bg-ada-magicOrange p-4 text-center">
@@ -24,3 +56,4 @@ const MagicWebinar12 = (): JSX.Element => {
 }
 
 export default MagicWebinar12
+d
