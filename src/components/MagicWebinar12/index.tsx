@@ -56,4 +56,3 @@ const MagicWebinar12 = (): JSX.Element => {
 }
 
 export default MagicWebinar12
-d
