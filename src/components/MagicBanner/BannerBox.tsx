@@ -2,7 +2,6 @@
 import React from "react"
 import { CircleImage } from "./circleImages"
 import { IconImage } from "./iconImages"
-import Typography from "../shared/Typography"
 
 type BannerBoxProps = {
   circleKey: string

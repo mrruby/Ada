@@ -1,8 +1,8 @@
+import { Button } from "helpers/Button"
 import React, { useState } from "react"
-import BannerBox from "./BannerBox"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
-import { Button } from "helpers/Button"
+import BannerBox from "./BannerBox"
 
 const bannerContent = [
   {
@@ -35,7 +35,7 @@ const magicBannerContent = [
     bgColor: "bg-ada-purple2",
     price: (
       <div className="absolute text-ada-purple2 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[20px] w-[100px]">
-        <p>429 zł</p>
+        <p>269 zł</p>
         <p>mies.</p>
       </div>
     ),
@@ -63,12 +63,15 @@ const magicBannerContent = [
         <p className="pb-2">
           ✅ nielimitowany dostęp do nagrań ze wszystkich spotkań
         </p>
-        <button className="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity">
-          WYBIERAM
-        </button>
+        <Button
+          type="button"
+          text="WYBIERAM"
+          sectionId="zainteresowani-form"
+          btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
+        />
       </>
     ),
-    url: "https://www.mailingr.co/c/magic-pakiet-basic-rXx5",
+    url: undefined,
   },
 ]
 

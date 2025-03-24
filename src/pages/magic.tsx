@@ -1,16 +1,17 @@
-import React from "react"
 import Layout from "components/Layout"
-import SEO from "components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import MagicTitle from "components/MagicTitle"
 import MagicBanner1 from "components/MagicBanner"
-import MagicDateBanner from "components/MagicDateBanner"
-import MagicWhy from "components/MagicWhy"
-import ReferencesMentoring from "components/ReferencesMentoring"
 import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
-import MasterclassFAQ from "components/MasterclassFAQ"
+import MagicDateBanner from "components/MagicDateBanner"
 import MagicLastSection from "components/MagicLastSection"
+import MagicTitle from "components/MagicTitle"
+import MagicWhy from "components/MagicWhy"
+import MasterclassFAQ from "components/MasterclassFAQ"
+import ReferencesMentoring from "components/ReferencesMentoring"
+import SEO from "components/seo"
+import React from "react"
+import magicZainteresowaniForm from "values/forms/magic-zainteresowani.html"
 
 const MasterclassPage = (): JSX.Element => {
   return (
@@ -54,6 +55,14 @@ const MasterclassPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MasterclassFAQ version={5} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer>
+        <section id="zainteresowani-form">
+          <div
+            className="max-w-2xl my-24 mx-auto"
+            dangerouslySetInnerHTML={{ __html: magicZainteresowaniForm }}
+          />
+        </section>
       </MaxWithBgColorContainer>
     </Layout>
   )
