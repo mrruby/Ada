@@ -65,7 +65,7 @@ const magicBannerContent = [
         </p>
         <Button
           type="button"
-          text="WYBIERAM"
+          text="Zapisz się do listy zainteresowanych"
           sectionId="zainteresowani-form"
           btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
         />
