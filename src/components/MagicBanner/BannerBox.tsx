@@ -12,6 +12,7 @@ type BannerBoxProps = {
   description: string | JSX.Element
   styles?: string
   url?: string
+  zoom?: string
 }
 
 const BannerBox = ({
@@ -23,10 +24,13 @@ const BannerBox = ({
   description,
   styles,
   url,
+  zoom,
 }: BannerBoxProps) => {
   const content = (
     <div className="relative md:mt-0">
-      <div className="absolute left-1/2 -top-16 -translate-x-1/2 w-[90px] h-[90px]">
+      <div
+        className={`absolute left-1/2 -top-16 -translate-x-1/2 w-[90px] h-[90px] ${zoom}`}
+      >
         {title}
         {price}
         <CircleImage circleKey={circleKey} />

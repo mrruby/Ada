@@ -65,7 +65,7 @@ const magicBannerContent = [
         </p>
         <Button
           type="button"
-          text="Zapisz się do listy zainteresowanych"
+          text="Zapisz się na listę oczekujących"
           sectionId="zainteresowani-form"
           btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
         />
@@ -236,6 +236,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                 }`}
               >
                 <BannerBox
+                  zoom="scale-110"
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
