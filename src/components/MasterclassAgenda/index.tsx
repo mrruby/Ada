@@ -4,7 +4,9 @@ import { Button } from "helpers/Button"
 import BuyChillButton from "components/BuyChillButton"
 import CountdownTimer from "helpers/CountdownTimer"
 import OpinionVideos from "components/OpinionVideos"
-import WebinarBanner from "components/WebinarBanner"
+
+import metaAdsZainteresowani from "values/forms/meta-ads-zainteresowani.html"
+import ogarnijSwojeAdsyZainteresowani from "values/forms/ogarnij-swoje-adsy-zainteresowani.html"
 
 const listItems = [
   "Ada, ile czasu muszę przeznaczyć na udział w 3-miesięcznym programie?",
@@ -882,6 +884,38 @@ const MasterclassAgenda = ({
                 />
               </div>
             </div>
+          </div>
+        </div>
+      )}
+      {version === 11 && (
+        <div className="max-w-[1200px] mx-auto px-4 py-10">
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-adaSubtitle md:text-adaTitle font-bold text-center mb-8">
+              Zapisz się na listę zainteresowanych
+            </h2>
+            <p className="text-adaStandard md:text-adaSubtitle text-center mb-10">
+              Zostaw swój email, aby otrzymać informację, gdy otworzymy zapisy
+              do programu
+            </p>
+            <div
+              className="w-full max-w-[600px]"
+              dangerouslySetInnerHTML={{ __html: metaAdsZainteresowani }}
+            />
+          </div>
+        </div>
+      )}
+      {version === 12 && (
+        <div className="max-w-[1200px] mx-auto px-4 py-10">
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-adaSubtitle md:text-adaTitle font-bold text-center mb-8">
+              Zapisz się na listę zainteresowanych
+            </h2>
+            <div
+              className="w-full max-w-[600px]"
+              dangerouslySetInnerHTML={{
+                __html: ogarnijSwojeAdsyZainteresowani,
+              }}
+            />
           </div>
         </div>
       )}

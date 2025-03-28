@@ -1,20 +1,19 @@
 import React from "react"
+
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import IconText from "components/IconText"
-import MastermindInfo3 from "components/MastermindInfo3"
-import MastermindSteps from "components/MastermindSteps"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassFAQ from "components/MasterclassFAQ"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MastermindAgenda from "components/MastermindAgenda"
+import MastermindInfo3 from "components/MastermindInfo3"
+import MastermindSteps from "components/MastermindSteps"
 import MentoringBanner from "components/MentoringBanner"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import Team from "components/Team"
 import WebinarAbout from "components/WebinarAbout"
 import WebinarBanner from "components/WebinarBanner"
-import MastermindAgenda from "components/MastermindAgenda"
-import MentoringForm from "components/MentoringForm"
-import NextSteps from "components/NextSteps"
 
 const MastermindPage = (): JSX.Element => {
   return (
@@ -47,10 +46,7 @@ const MastermindPage = (): JSX.Element => {
         <MastermindInfo3 version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <MasterclassAgenda version={9} />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear2">
-        <NextSteps koalendarLink="https://koalendar.com/e/ogarnij-swoje-adsy" />
+        <MasterclassAgenda version={12} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MentoringBanner version={8} />
@@ -60,7 +56,6 @@ const MastermindPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MasterclassFAQ version={4} />
-        <MentoringForm version={2} />
       </MaxWithBgColorContainer>
     </Layout>
   )

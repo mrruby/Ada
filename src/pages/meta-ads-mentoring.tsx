@@ -1,25 +1,24 @@
 import React from "react"
+
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import MentoringBanner from "components/MentoringBanner"
-import MentoringWhy from "components/MentoringWhy"
-import MentoringWhy2 from "components/MentoringWhy2"
-import MentoringInfo from "components/MentoringInfo"
+import MasterclassAgenda from "components/MasterclassAgenda"
+import MasterclassFAQ from "components/MasterclassFAQ"
+import MastermindAgenda from "components/MastermindAgenda"
 import MastermindBanner from "components/MastermindBanner"
+import MastermindInfo3 from "components/MastermindInfo3"
 import MastermindSteps from "components/MastermindSteps"
 import MentoringAbout from "components/MentoringAbout"
-import MastermindInfo3 from "components/MastermindInfo3"
-import ReferencesMentoring from "components/ReferencesMentoring"
-import MastermindAgenda from "components/MastermindAgenda"
-import MasterclassFAQ from "components/MasterclassFAQ"
-import IconText from "components/IconText"
+import MentoringBanner from "components/MentoringBanner"
+import MentoringInfo from "components/MentoringInfo"
+import MentoringWhy from "components/MentoringWhy"
+import MentoringWhy2 from "components/MentoringWhy2"
 import Opinions from "components/Opinions"
-import Team from "components/Team"
-import MasterclassAgenda from "components/MasterclassAgenda"
 import OpinionVideos from "components/OpinionVideos"
-import NextSteps from "components/NextSteps"
-import MentoringForm from "components/MentoringForm"
+import ReferencesMentoring from "components/ReferencesMentoring"
+import Team from "components/Team"
 
 const MentoringPage = (): JSX.Element => {
   return (
@@ -85,14 +84,10 @@ const MentoringPage = (): JSX.Element => {
         <MastermindInfo3 version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <MasterclassAgenda version={10} />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer>
-        <NextSteps koalendarLink="https://koalendar.com/e/meta-ads-master-mentoring " />
+        <MasterclassAgenda version={11} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MasterclassFAQ version={2} />
-        <MentoringForm version={1} />
       </MaxWithBgColorContainer>
     </Layout>
   )
