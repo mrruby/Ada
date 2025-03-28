@@ -47,6 +47,7 @@ const MagicWebinar1 = (): JSX.Element => {
                   <TypingAnimation
                     text="bez ciągłego podnoszenia budżetu reklamowego"
                     textStyle="text-ada-magicPurple text-3xl md:text-5xl leading-tight inline"
+                    speed={100}
                   />{" "}
                   🚀
                 </Typography>

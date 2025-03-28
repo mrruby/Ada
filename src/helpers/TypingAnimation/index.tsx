@@ -3,9 +3,10 @@ import React, { useCallback, useEffect, useState } from "react"
 interface Props {
   text: string
   textStyle: string
+  speed?: number
 }
 
-const useTypingEffect = (text: string) => {
+const useTypingEffect = (text: string, speed: number = 200) => {
   const [displayedText, setDisplayedText] = useState("")
   const [cursorVisible, setCursorVisible] = useState(true)
   const [isTyping, setIsTyping] = useState(true)
@@ -28,7 +29,7 @@ const useTypingEffect = (text: string) => {
     }
 
     let currentIndex = 0
-    const delay = 200
+    const delay = speed
 
     const intervalId = setInterval(() => {
       if (currentIndex > text.length) {
@@ -45,13 +46,13 @@ const useTypingEffect = (text: string) => {
     }, delay)
 
     return () => clearInterval(intervalId)
-  }, [text, isTyping, updateTextDisplay, toggleCursorVisibility])
+  }, [text, isTyping, updateTextDisplay, toggleCursorVisibility, speed])
 
   return { displayedText, cursorVisible }
 }
 
-const TypingAnimation: React.FC<Props> = ({ text, textStyle }) => {
-  const { displayedText, cursorVisible } = useTypingEffect(text)
+const TypingAnimation: React.FC<Props> = ({ text, textStyle, speed = 200 }) => {
+  const { displayedText, cursorVisible } = useTypingEffect(text, speed)
 
   return (
     <div>
