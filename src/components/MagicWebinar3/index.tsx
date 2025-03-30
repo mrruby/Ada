@@ -67,7 +67,7 @@ const MagicWebinar3 = (): JSX.Element => {
               </div>
             </div>
 
-            <div className="absolute bottom-0 right-0">
+            <div className="relative w-full md:w-auto">
               <StaticImage
                 loading="eager"
                 src="../../images/ada_magic.webp"
@@ -75,6 +75,7 @@ const MagicWebinar3 = (): JSX.Element => {
                 placeholder="blurred"
                 width={700}
                 quality={100}
+                className="w-full md:w-auto"
               />
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 
 interface Props {
   text: string
@@ -53,13 +53,20 @@ const useTypingEffect = (text: string, speed: number = 200) => {
 
 const TypingAnimation: React.FC<Props> = ({ text, textStyle, speed = 200 }) => {
   const { displayedText, cursorVisible } = useTypingEffect(text, speed)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div>
-      <h3 className={textStyle}>
-        {displayedText}
-        {cursorVisible && <span className="animate-blink">|</span>}
-      </h3>
+    <div ref={containerRef} className="relative inline-block">
+      <div className="absolute top-0 left-0 w-full">
+        <h3 className={textStyle}>
+          {displayedText}
+          {cursorVisible && <span className="animate-blink">|</span>}
+        </h3>
+      </div>
+      {/* Hidden element to maintain height */}
+      <div className="invisible">
+        <h3 className={textStyle}>{text}</h3>
+      </div>
     </div>
   )
 }
