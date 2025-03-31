@@ -1,9 +1,9 @@
-import React from "react"
+import BuyChillButton from "components/BuyChillButton"
+import OpinionVideos from "components/OpinionVideos"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
-import BuyChillButton from "components/BuyChillButton"
 import CountdownTimer from "helpers/CountdownTimer"
-import OpinionVideos from "components/OpinionVideos"
+import React from "react"
 
 import metaAdsZainteresowani from "values/forms/meta-ads-zainteresowani.html"
 import ogarnijSwojeAdsyZainteresowani from "values/forms/ogarnij-swoje-adsy-zainteresowani.html"
@@ -888,7 +888,7 @@ const MasterclassAgenda = ({
         </div>
       )}
       {version === 11 && (
-        <div className="max-w-[1200px] mx-auto px-4 py-10">
+        <div className="max-w-[1200px] mx-auto px-4 py-10" id="offert">
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-adaSubtitle md:text-adaTitle font-bold text-center mb-8">
               Zapisz się na listę zainteresowanych
@@ -905,7 +905,7 @@ const MasterclassAgenda = ({
         </div>
       )}
       {version === 12 && (
-        <div className="max-w-[1200px] mx-auto px-4 py-10">
+        <div className="max-w-[1200px] mx-auto px-4 py-10" id="offert">
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-adaSubtitle md:text-adaTitle font-bold text-center mb-8">
               Zapisz się na listę zainteresowanych
