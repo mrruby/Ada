@@ -24,7 +24,7 @@ const MagicWebinar10 = (): JSX.Element => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="text-2xl">⏰</span>
             <Typography variant="h2" className="text-[#5D4B8C]">
-              Termin: 3.04
+              Termin: 10.04
             </Typography>
           </div>
           <div className="flex items-center justify-center gap-3">
@@ -35,7 +35,7 @@ const MagicWebinar10 = (): JSX.Element => {
           </div>
         </div>
 
-        <CountdownTimer targetDate={new Date("2025-04-03T18:00:00")} />
+        <CountdownTimer targetDate={new Date("2025-04-10T18:00:00")} />
 
         {/* Sign up button */}
         <Button

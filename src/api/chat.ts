@@ -1,19 +1,19 @@
-import { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
-import { OpenAIEmbeddings } from "@langchain/openai"
-import { ChatGoogleGenerativeAI } from "@langchain/google-genai"
-import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters"
-import { MemoryVectorStore } from "langchain/vectorstores/memory"
-import {
-  RunnableSequence,
-  RunnablePassthrough,
-} from "@langchain/core/runnables"
-import { PromptTemplate } from "@langchain/core/prompts"
 import { StringOutputParser } from "@langchain/core/output_parsers"
-import ebook from "../utils/ebook.json"
-import { storeNewMessages } from "../utils/api"
+import { PromptTemplate } from "@langchain/core/prompts"
+import {
+  RunnablePassthrough,
+  RunnableSequence,
+} from "@langchain/core/runnables"
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai"
+import { OpenAIEmbeddings } from "@langchain/openai"
+import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters"
 import { createClient } from "@supabase/supabase-js"
-import { CONDENSE_TEMPLATE } from "../prompts/condensePrompt"
+import { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
+import { MemoryVectorStore } from "langchain/vectorstores/memory"
 import { ANSWER_TEMPLATE } from "../prompts/answerPrompt"
+import { CONDENSE_TEMPLATE } from "../prompts/condensePrompt"
+import { storeNewMessages } from "../utils/api"
+import ebook from "../utils/ebook.json"
 
 const supabase = createClient(
   process.env.SUPABASE_URL ?? "",
@@ -27,7 +27,7 @@ async function initializeChain() {
   const textContent = JSON.stringify(ebook)
 
   const model = new ChatGoogleGenerativeAI({
-    model: "gemini-1.5-flash-latest",
+    model: "gemini-2.0-flash-exp",
     maxOutputTokens: 2048,
     apiKey: process.env.GOOGLE_API_KEY,
   })
