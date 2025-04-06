@@ -18,6 +18,7 @@ module.exports = {
           orange4: "#FEAB42",
           purple: "#A361B4",
           purple2: "#9C70E9",
+          purple3: "#B2A8DB",
           pink: "#F2A7B2",
           pink2: "#FFD3EB",
           pink3: "#BA93DF",
@@ -28,11 +29,13 @@ module.exports = {
           pink8: "#FFD1EF",
           white: "#FFFFFF",
           white40: "#FFFFFF66",
+          white2: "#F2F0E9",
           brown: "#9B3118",
           black: "#000000",
           newPurple: "#3D03A1",
           magicPurple: "#5D4294",
           magicOrange: "#EE701E",
+          magicGreen: "#E8F6CB"
         },
       },
       backgroundImage: {

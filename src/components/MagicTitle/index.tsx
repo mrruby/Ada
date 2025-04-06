@@ -1,7 +1,7 @@
-import React from "react"
-import { Button } from "helpers/Button"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
+import React from "react"
 import magicFormWide from "../../values/forms/magic-form-wide.html"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
@@ -70,7 +70,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                 text={<span className="font-bold">Zapisuję się! 🙌</span>}
                 sectionId="webinar-form"
                 textSize="text-sm md:text-base"
-                btnStyle="uppercase bg-ada-pink2 text-ada-black 
+                btnStyle="uppercase bg-ada-wy text-ada-black 
                       font-semibold tracking-wide h-[48px] md:h-[60px] 
                       px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"
               />
@@ -195,6 +195,69 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                   allowFullScreen
                 ></iframe>
               </div>
+            </div>
+          </div>
+        </Section>
+      )}
+      {version == 3 && (
+        <Section
+          bgColor="transparent"
+          className="text-black overflow-hidden sm:mt-10"
+          padding="py-8 md:py-0 md:pt-8 px-4 md:px-8"
+          maxWidth="5xl"
+        >
+          <div className="flex justify-between items-center mb-8">
+            <Link to={"/"}>
+              <StaticImage
+                src={"../../images/magic-logo.svg"}
+                alt="Ada Promis"
+                placeholder="blurred"
+                formats={["auto", "webp", "avif"]}
+                width={447}
+                height={151}
+                quality={95}
+              />
+            </Link>
+            <button
+              onClick={scrollToPackages}
+              className="text-sm md:text-base font-semibold hover:underline"
+            >
+              Zgłaszam się!
+            </button>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
+            <div className="w-full md:w-1/2 mt-8 animate-bounce">
+              <Typography variant="h2" className="mb-4 md:pt-20 font-normal">
+              <b>M</b>arketing <b>A</b>ds <b>G</b>irls <b>I</b>nside <b>C</b>ollective
+              </Typography>
+              <Typography variant="body" className="mb-6 font-courier">
+              Twój zewnętrzny dział marketingu, który działa tak, jak potrzebujesz
+              </Typography>
+              <Button
+                type="button"
+                text={
+                  <span className="font-normal text-ada-purple3 font-anton md:text-adaSubtitle">
+                    Chcę z Wami pracować!
+                  </span>
+                }
+                sectionId="pakiety"
+                textSize="text-sm md:text-base"
+                btnStyle="bg-ada-magicGreen
+                      tracking-wide h-[48px] md:h-[60px] 
+                      px-6 hover:opacity-90 rounded-full min-w-[130px] border-ada-magicOrange border"
+              />
+            </div>
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
+            <StaticImage
+                src={"../../images/magic-hero.webp"}
+                alt="Ada Promis"
+                placeholder="blurred"
+                formats={["auto", "webp", "avif"]}
+                width={458}
+                height={458}
+                quality={95}
+              />
             </div>
           </div>
         </Section>
