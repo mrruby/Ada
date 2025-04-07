@@ -35,7 +35,7 @@ const magicBannerContent = [
     bgColor: "bg-ada-purple2",
     price: (
       <div className="absolute text-ada-purple2 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[20px] w-[100px]">
-        <p>269 zł</p>
+        <p>333 zł</p>
         <p>mies.</p>
       </div>
     ),
