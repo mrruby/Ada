@@ -114,8 +114,6 @@ export default async function handler(
 ) {
   const { productVariantId } = req.body
 
-  console.log("productVariantId", productVariantId)
-
   const result = await createDiscount(productVariantId)
   res.status(result.statusCode).json(JSON.parse(result.body))
 }

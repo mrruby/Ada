@@ -30,7 +30,6 @@ const MagicWebinar1 = (): JSX.Element => {
         })
           .then((response) => response.json())
           .then((data) => {
-            console.log("Response:", data)
             if (data.success) {
               // Redirect on success
               window.location.href = "https://adrianna.com.pl/thank/"
