@@ -148,12 +148,12 @@ const MagicCollectiveBanner = ({
             </div>
             <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
               <StaticImage
-                src={"../../images/magic-hero.webp"}
+                src={"../../images/magic-hero2.webp"}
                 alt="Ada Promis"
                 placeholder="blurred"
                 formats={["auto", "webp", "avif"]}
-                width={458}
-                height={458}
+                width={410}
+                height={572}
                 quality={95}
               />
             </div>

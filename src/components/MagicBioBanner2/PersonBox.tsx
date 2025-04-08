@@ -12,7 +12,7 @@ type PersonBoxProps = {
 const PersonBox = ({ img, name, title, description }: PersonBoxProps) => {
   return (
     <div className="text-left text-ada-black flex justify-center items-center gap-4 pt-4 w-full">
-      <div className="w-[150px] h-[150px]">
+      <div className="w-[170px] h-[170px]">
         <CircleImage circleKey={img} />
       </div>
       <div className="max-w-[320px]">

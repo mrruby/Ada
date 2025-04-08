@@ -29,7 +29,7 @@ const peopleContent = [
         marki stają się rozpoznawalne, lubiane i wybierane.
       </>
     ),
-    img: "ada",
+    img: "justyna",
   },
   {
     name: "Dorota Woźniak",
@@ -37,12 +37,12 @@ const peopleContent = [
     description: (
       <>
         Zaprojektowałam setki kreacji reklamowych. Specjalizuję się w tworzeniu
-        profesjonalnych materiałów wizualnych dla social media  i kampanii
+        profesjonalnych materiałów wizualnych dla social media i kampanii
         adsowych, przekształcając abstrakcyjne idee w przyciągające wzrok
         projekty, które realizują cele biznesowe.
       </>
     ),
-    img: "ada",
+    img: "dorota",
   },
   {
     name: "Nicola Kut",
@@ -55,7 +55,7 @@ const peopleContent = [
         zespołowi działać sprawnie i efektywnie.
       </>
     ),
-    img: "ada",
+    img: "nicola",
   },
   {
     name: "Papajka",

@@ -251,7 +251,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
             </div>
             <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
               <StaticImage
-                src={"../../images/magic-hero.webp"}
+                src={"../../images/magic-hero1.webp"}
                 alt="Ada Promis"
                 placeholder="blurred"
                 formats={["auto", "webp", "avif"]}

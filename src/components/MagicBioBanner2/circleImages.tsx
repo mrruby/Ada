@@ -7,11 +7,11 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
     case "ada":
       return (
         <StaticImage
-          src="../../images/ada_portrait.webp"
+          src="../../images/m1.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
+          width={170}
+          height={170}
           placeholder="blurred"
           quality={90}
         />
@@ -19,11 +19,11 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
     case "justyna":
       return (
         <StaticImage
-          src="../../images/justyna_portrait.webp"
+          src="../../images/m2.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
+          width={170}
+          height={170}
           placeholder="blurred"
           quality={90}
         />
@@ -31,23 +31,11 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
     case "dorota":
       return (
         <StaticImage
-          src="../../images/dorota_portrait.webp"
+          src="../../images/m3.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
-          placeholder="blurred"
-          quality={90}
-        />
-      )
-    case "marianna":
-      return (
-        <StaticImage
-          src="../../images/marianna_portrait.webp"
-          alt=""
-          layout="fixed"
-          width={200}
-          height={200}
+          width={170}
+          height={170}
           placeholder="blurred"
           quality={90}
         />
@@ -55,11 +43,11 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
     case "nicola":
       return (
         <StaticImage
-          src="../../images/nicola_portrait.webp"
+          src="../../images/m4.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
+          width={170}
+          height={170}
           placeholder="blurred"
           quality={90}
         />
