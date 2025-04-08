@@ -229,10 +229,11 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
             <div className="w-full md:w-1/2 mt-8 animate-bounce">
               <Typography variant="h2" className="mb-4 md:pt-20 font-normal">
-              <b>M</b>arketing <b>A</b>ds <b>G</b>irls <b>I</b>nside <b>C</b>ollective
+                Marketing Ads Girls Inside Collective
               </Typography>
               <Typography variant="body" className="mb-6 font-courier">
-              Twój zewnętrzny dział marketingu, który działa tak, jak potrzebujesz
+                Twój zewnętrzny dział marketingu, który działa tak, jak
+                potrzebujesz
               </Typography>
               <Button
                 type="button"
@@ -249,7 +250,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               />
             </div>
             <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
-            <StaticImage
+              <StaticImage
                 src={"../../images/magic-hero.webp"}
                 alt="Ada Promis"
                 placeholder="blurred"

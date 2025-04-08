@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -229,7 +228,6 @@ body {
   }
 }
 
-
 .vertical-timeline::before {
   background-color: #000000 !important;
 }
@@ -361,3 +359,16 @@ body {
   z-index: -1;
 }
 
+.bg-magic-pink {
+  background-image: url("../../static/assets/pink-bg.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.bg-magic-grid {
+  background-image: url("../../static/assets/magic-grid.webp");
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}

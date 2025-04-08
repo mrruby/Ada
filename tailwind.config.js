@@ -34,8 +34,12 @@ module.exports = {
           black: "#000000",
           newPurple: "#3D03A1",
           magicPurple: "#5D4294",
+          magicPurple2: "#584596",
           magicOrange: "#EE701E",
-          magicGreen: "#E8F6CB"
+          magicGreen: "#E8F6CB",
+          magicPink: "#E6BAF4",
+          magicPink2: "#EDBCCF",
+          magicGrey: "#D9D9D9",
         },
       },
       backgroundImage: {
