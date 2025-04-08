@@ -15,7 +15,7 @@
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.21",
     "encoding": "^0.1.13",
-    "gatsby": "^5.13.6",
+    "gatsby": "^5.14.2",
     "gatsby-plugin-disqus": "^1.2.6",
     "gatsby-plugin-gdpr-cookies": "^2.0.9",
     "gatsby-plugin-image": "^3.13.1",
@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/loadable__component": "^5.13.9",
     "@types/react-animate-on-scroll": "^2.1.8",
-    "@types/react-dom": "^19.0.4",
+    "@types/react-dom": "^18.3.1",
     "@types/react-google-recaptcha": "^2.1.9",
     "@types/uuid": "^10.0.0",
     "eslint": "^9.24.0",
@@ -56,7 +56,7 @@
     "prettier": "^3.5.3",
     "rss": "^1.2.2",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.29.0"
+    "typescript-eslint": "^8.29.1"
   },
   "keywords": [
     "gatsby"
