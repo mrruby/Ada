@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
-import { v4 as uuidv4 } from "uuid"
-import { ChatWindow } from "../components/ChatWindow"
 import Layout from "components/Layout"
 import SEO from "components/seo"
+import React, { useEffect, useState } from "react"
+import { v4 as uuidv4 } from "uuid"
+import { ChatWindow } from "../components/ChatWindow"
 
 type Message = {
   role: "user" | "assistant"
@@ -26,7 +26,7 @@ const ChatPage: React.FC = () => {
     setMessages(updatedMessages)
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch("https://ada-chat.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
