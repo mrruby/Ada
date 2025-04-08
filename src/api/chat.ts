@@ -21,20 +21,28 @@ const supabase = createClient(
 let chain: RunnableSequence | null = null
 
 async function initializeChain() {
-  if (chain) return chain
+  console.log("Starting chain initialization...")
+
+  if (chain) {
+    console.log("Using cached chain")
+    return chain
+  }
 
   // Load the entire context from context.json
   const contextData = contextJson.combined
+  console.log("Context data loaded, size:", contextData.length)
 
   // Initialize the ChatGoogleGenerativeAI model
   const model = new ChatGoogleGenerativeAI({
     model: "gemini-2.5-pro-exp-03-25",
     apiKey: process.env.GOOGLE_API_KEY,
   })
+  console.log("Model initialized")
 
   // Setup the prompt templates
   const condensePrompt = PromptTemplate.fromTemplate(CONDENSE_TEMPLATE)
   const answerPrompt = PromptTemplate.fromTemplate(ANSWER_TEMPLATE)
+  console.log("Prompt templates created")
 
   // Create the chain that will produce a standalone question
   const standaloneQuestionChain = RunnableSequence.from([
@@ -42,6 +50,7 @@ async function initializeChain() {
     model,
     new StringOutputParser(),
   ])
+  console.log("Standalone question chain created")
 
   // Build the final chain
   chain = RunnableSequence.from([
@@ -58,6 +67,7 @@ async function initializeChain() {
     model,
     new StringOutputParser(),
   ])
+  console.log("Final chain built successfully")
 
   return chain
 }
@@ -66,20 +76,28 @@ export default async function handler(
   req: GatsbyFunctionRequest,
   res: GatsbyFunctionResponse
 ) {
+  console.log("Handler started, method:", req.method)
+
   if (req.method !== "POST") {
+    console.log("Invalid method:", req.method)
     return res.status(405).json({ error: "Method not allowed" })
   }
 
   const { messages, sessionId } = req.body
+  console.log("Request body received, sessionId:", sessionId)
+  console.log("Messages count:", messages?.length)
 
   if (!Array.isArray(messages) || !sessionId) {
+    console.log("Invalid request body - missing messages or sessionId")
     return res.status(400).json({ error: "Invalid request body" })
   }
 
   try {
+    console.log("Initializing QA chain...")
     const qaChain = await initializeChain()
 
     if (!qaChain) {
+      console.log("Failed to initialize chain")
       return res.status(500).json({ error: "Failed to initialize chain" })
     }
 
@@ -88,22 +106,29 @@ export default async function handler(
       .slice(0, -1)
       .map((m: { content: string }) => m.content)
       .join("\n")
+    console.log("Processing question:", question)
+    console.log("Chat history length:", chatHistory.length)
 
     // Invoke chain with the user's last question and entire chat history
+    console.log("Invoking chain...")
     const response = await qaChain.invoke({
       output_language: "Polish",
       question,
       chat_history: chatHistory,
     })
+    console.log("Chain response received, length:", response.length)
 
     const allMessages = [...messages, { role: "assistant", content: response }]
+    console.log("Preparing to store messages, total count:", allMessages.length)
 
     // Store the updated messages in supabase
+    console.log("Storing messages in Supabase...")
     await storeNewMessages({
       supabase,
       sessionId,
       messages: allMessages,
     })
+    console.log("Messages stored successfully")
 
     res.status(200).json({ response })
   } catch (error) {
