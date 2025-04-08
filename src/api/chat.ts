@@ -6,51 +6,25 @@ import {
 } from "@langchain/core/runnables"
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai"
 import { createClient } from "@supabase/supabase-js"
-import fs from "fs"
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
-import path from "path"
 import { ANSWER_TEMPLATE } from "../prompts/answerPrompt"
 import { CONDENSE_TEMPLATE } from "../prompts/condensePrompt"
 import { storeNewMessages } from "../utils/api"
-import ebook from "../utils/ebook.json"
+import contextJson from "../utils/context.json"
 
 const supabase = createClient(
   process.env.SUPABASE_URL ?? "",
   process.env.SUPABASE_ANON_KEY ?? ""
 )
 
-// We'll keep a cached chain and context data in memory to avoid repeated file reads
+// We'll keep a cached chain in memory to avoid repeated initialization
 let chain: RunnableSequence | null = null
-let combinedContext: string | null = null
-
-async function loadAllContext(): Promise<string> {
-  if (combinedContext) {
-    return combinedContext
-  }
-
-  // Read all .txt files from /values/context
-  const contextDir = path.join(process.cwd(), "src", "values", "context")
-  const txtFiles = fs.readdirSync(contextDir).filter((f) => f.endsWith(".txt"))
-
-  // Combine their contents
-  let allTxtContents = ""
-  for (const fileName of txtFiles) {
-    const filePath = path.join(contextDir, fileName)
-    const fileContents = fs.readFileSync(filePath, "utf-8")
-    allTxtContents += `\n\n${fileContents}`
-  }
-
-  // Combine with ebook JSON
-  const ebookStr = JSON.stringify(ebook)
-  combinedContext = `EBOOK DATA:\n${ebookStr}\n\nCONTEXT FILES:\n${allTxtContents}`
-  return combinedContext
-}
 
 async function initializeChain() {
   if (chain) return chain
 
-  // Load the entire context from .txt files and ebook
-  const contextData = await loadAllContext()
+  // Load the entire context from context.json
+  const contextData = contextJson.combined
 
   // Initialize the ChatGoogleGenerativeAI model
   const model = new ChatGoogleGenerativeAI({
