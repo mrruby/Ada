@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react"
 import Markdown from "markdown-to-jsx"
+import React, { useEffect, useRef, useState } from "react"
 import { LoadingDots } from "../LoadingDots"
 
 type Message = {
@@ -79,7 +79,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
         ))}
         {isLoading && (
           <div className="flex justify-start mb-4">
-            <LoadingDots />
+            <LoadingMessages />
           </div>
         )}
       </>
@@ -116,6 +116,30 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({
           </button>
         </div>
       </form>
+    </div>
+  )
+}
+
+const loadingMessages = [
+  "Przeszukujemy nasze dane",
+  "Trwa przetwarzanie Twojego pytania",
+  "Przeglądamy wszystkie nasze zasoby",
+]
+
+const LoadingMessages = () => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % loadingMessages.length)
+    }, 3000)
+    return () => clearInterval(intervalId)
+  }, [])
+
+  return (
+    <div className="bg-gray-100 text-gray-800 p-3 rounded-lg inline-block flex items-center gap-2">
+      <span>{loadingMessages[currentIndex]}</span>
+      <LoadingDots />
     </div>
   )
 }
