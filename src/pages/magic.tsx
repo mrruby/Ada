@@ -48,7 +48,7 @@ const MasterclassPage = (): JSX.Element => {
         <MagicBanner2 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3 z-2 relative">
-        <ReferencesMentoring title5 version="1" />
+        <ReferencesMentoring title5 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-purple2">
         <MagicLastSection version={2} />

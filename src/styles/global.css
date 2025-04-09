@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,6 +15,7 @@ body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .bg-meetme {
@@ -226,7 +229,6 @@ body {
   }
 }
 
-
 .vertical-timeline::before {
   background-color: #000000 !important;
 }
@@ -320,4 +322,75 @@ body {
 
 .font-lemon {
   font-family: "Lemon", serif;
+}
+
+.font-courier {
+  font-family: "Courier Prime", monospace;
+}
+
+.font-anton {
+  font-family: "Anton", sans-serif;
+}
+
+.bg-magic-banner1 {
+  background-image: url("../../static/assets/magic-banner2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.bg-magic-banner2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+@media (min-width: 1170px) {
+  .bg-magic-banner2 {
+    background-image: url("../../static/assets/magic-banner.webp");
+  }
+}
+
+.bg-magic-green {
+  background-image: url("../../static/assets/green-bg.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.bg-magic-pink {
+  background-image: url("../../static/assets/pink-bg.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+@media (min-width: 1170px) {
+  .bg-magic-pink2 {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 50vw;
+    height: 860px;
+    background-image: url("../../static/assets/pink-bg.webp");
+    background-size: calc(100% * 1.5);
+    background-position: center right;
+    z-index: 0;
+  }
+}
+
+.bg-magic-grid {
+  background-image: url("../../static/assets/magic-grid.webp");
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+
+.bg-magicWave {
+  background-image: url("../../static/assets/magicwave.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

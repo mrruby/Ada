@@ -1,4 +1,5 @@
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
+import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Carousel from "react-multi-carousel"
@@ -16,6 +17,7 @@ type IReferences = {
   title3?: boolean
   title4?: boolean
   title5?: boolean
+  title6?: boolean
 }
 
 const referencesList: IReferencesList[] = [
@@ -279,12 +281,81 @@ const referencesList4: IReferencesList[] = [
   },
 ]
 
+const referencesMagicList: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinion1.webp"}
+        alt="Opinia o Magic"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinion2.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinion3.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinion4.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinion5.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
+
 const ReferencesMentoring = ({
   title1,
   title2,
   title3,
   title4,
   title5,
+  title6,
 }: IReferences): JSX.Element => {
   return (
     <div className="pt-[40px]">
@@ -333,21 +404,48 @@ const ReferencesMentoring = ({
           </div>
         </>
       )}
-      <div className="max-h-[600px] mx-auto mt-5 pb-4">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}
-          ssr={true}
-          autoPlay
-          autoPlaySpeed={2000}
-        >
-          {referencesList4.map((reference, index) => (
-            <Reference key={index} image={reference.image} />
-          ))}
-        </Carousel>
-      </div>
+      {title6 && (
+        <>
+          <Typography
+            variant="h2"
+            className="p-2 font-anton font-normal text-center uppercase text-ada-orange"
+          >
+            Co o współpracy z nami mówią <br /> zadowolone klientki?
+          </Typography>
+          <div className="max-h-[600px] mx-auto mt-5 pb-4">
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              customLeftArrow={<CustomLeftArrow />}
+              customRightArrow={<CustomRightArrow />}
+              ssr={true}
+              autoPlay
+              autoPlaySpeed={2000}
+            >
+              {referencesMagicList.map((reference, index) => (
+                <Reference key={index} image={reference.image} />
+              ))}
+            </Carousel>
+          </div>
+        </>
+      )}
+      {!title6 && (
+        <div className="max-h-[600px] mx-auto mt-5 pb-4">
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
+            ssr={true}
+            autoPlay
+            autoPlaySpeed={2000}
+          >
+            {referencesList4.map((reference, index) => (
+              <Reference key={index} image={reference.image} />
+            ))}
+          </Carousel>
+        </div>
+      )}
     </div>
   )
 }
