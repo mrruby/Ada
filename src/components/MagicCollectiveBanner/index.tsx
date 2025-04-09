@@ -74,7 +74,7 @@ const MagicCollectiveBanner = ({
           padding="py-8 px-4 md:px-8 flex justify-centeritems-center"
         >
           <div className="mx-auto md:w-[563px] bg-magic-banner2 md:h-[444px]">
-            <div className="max-w-[438px] pt-9 md:pl-[130px]">
+            <div className="max-w-[438px] pt-8 md:pl-[130px]">
               <Typography
                 variant="h3"
                 className="md:m-5 text-ada-orange font-anton font-normal px-2 md:px-0"
