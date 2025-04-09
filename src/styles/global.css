@@ -15,6 +15,7 @@ body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .bg-meetme {
@@ -366,9 +367,30 @@ body {
   z-index: -1;
 }
 
+@media (min-width: 1170px) {
+  .bg-magic-pink2 {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 50vw;
+    height: 860px;
+    background-image: url("../../static/assets/pink-bg.webp");
+    background-size: calc(100% * 1.5);
+    background-position: center right;
+    z-index: 0;
+  }
+}
+
 .bg-magic-grid {
   background-image: url("../../static/assets/magic-grid.webp");
   background-size: contain;
   background-position: center;
   z-index: -1;
+}
+
+.bg-magicWave {
+  background-image: url("../../static/assets/magicwave.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

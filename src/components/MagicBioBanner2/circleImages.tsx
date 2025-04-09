@@ -52,6 +52,18 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           quality={90}
         />
       )
+    case "papajka":
+      return (
+        <StaticImage
+          src="../../images/m5.webp"
+          alt=""
+          layout="fixed"
+          width={170}
+          height={170}
+          placeholder="blurred"
+          quality={90}
+        />
+      )
     default:
       return null
   }

@@ -206,34 +206,27 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
           padding="py-8 md:py-0 md:pt-8 px-4 md:px-8"
           maxWidth="5xl"
         >
-          <div className="flex justify-between items-center mb-8">
-            <Link to={"/"}>
-              <StaticImage
-                src={"../../images/magic-logo.svg"}
-                alt="Ada Promis"
-                placeholder="blurred"
-                formats={["auto", "webp", "avif"]}
-                width={447}
-                height={151}
-                quality={95}
-              />
-            </Link>
-            <button
-              onClick={scrollToPackages}
-              className="text-sm md:text-base font-semibold hover:underline"
-            >
-              Zgłaszam się!
-            </button>
-          </div>
-
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
-            <div className="w-full md:w-1/2 mt-8 animate-bounce">
-              <Typography variant="h2" className="mb-4 md:pt-20 font-normal">
+            <div className="w-full md:w-1/2 mt-2 animate-bounce">
+              <div className="flex justify-between items-center">
+                <Link to={"/"}>
+                  <StaticImage
+                    src={"../../images/magic-logo.svg"}
+                    alt="Ada Promis"
+                    placeholder="blurred"
+                    formats={["auto", "webp", "avif"]}
+                    width={447}
+                    height={151}
+                    quality={95}
+                  />
+                </Link>
+              </div>
+              <Typography variant="h2" className="mb-4 md:pt-8 font-normal">
                 Marketing Ads Girls Inside Collective
               </Typography>
               <Typography variant="body" className="mb-6 font-courier">
-                Twój zewnętrzny dział marketingu, który działa tak, jak
-                potrzebujesz
+                Twój zewnętrzny dział marketingu,
+                <br /> który działa tak, jak potrzebujesz
               </Typography>
               <Button
                 type="button"
@@ -242,11 +235,19 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                     Chcę z Wami pracować!
                   </span>
                 }
-                sectionId="pakiety"
+                sectionId="umawiam-spotkanie"
                 textSize="text-sm md:text-base"
                 btnStyle="bg-ada-magicGreen
                       tracking-wide h-[48px] md:h-[60px] 
-                      px-6 hover:opacity-90 rounded-full min-w-[130px] border-ada-magicOrange border"
+                      px-6 hover:opacity-90 rounded-full min-w-[130px] border-ada-magicOrange border mb-2 md:mb-8"
+              />
+              <StaticImage
+                src={"../../images/magicArrow.svg"}
+                alt=""
+                placeholder="blurred"
+                width={22}
+                height={34}
+                className="mt-10 -ml-2"
               />
             </div>
             <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
@@ -256,7 +257,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                 placeholder="blurred"
                 formats={["auto", "webp", "avif"]}
                 width={458}
-                height={458}
+                height={498}
                 quality={95}
               />
             </div>

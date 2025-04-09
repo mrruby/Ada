@@ -1,7 +1,7 @@
+import Typography from "components/shared/Typography"
 import React from "react"
 import Section from "../shared/Section"
 import PersonBox from "./PersonBox"
-import Typography from "components/shared/Typography"
 
 const peopleContent = [
   {
@@ -23,10 +23,11 @@ const peopleContent = [
     title: "Specjalistka od reklam i copywritingu z socjologicznym zacięciem",
     description: (
       <>
-        Stworzyłam teksty reklamowe dla kilkudziesięciu polskich marek.
-        Specjalizuję się w przekształcaniu zwykłych komunikatów w emocjonalne
-        historie, które budują autentyczne relacje z klientami i sprawiają, że
-        marki stają się rozpoznawalne, lubiane i wybierane.
+        Stworzyłam teksty reklamowe dla <b>kilkudziesięciu</b> polskich marek.
+        Specjalizuję się w przekształcaniu zwykłych komunikatów{" "}
+        <b>w emocjonalne historie,</b> które budują autentyczne relacje z
+        klientami i sprawiają, że
+        <b>marki stają się rozpoznawalne,</b> lubiane i wybierane.
       </>
     ),
     img: "justyna",
@@ -36,10 +37,11 @@ const peopleContent = [
     title: "Projektantka graficzna i architektka z ilustratorską pasją",
     description: (
       <>
-        Zaprojektowałam setki kreacji reklamowych. Specjalizuję się w tworzeniu
-        profesjonalnych materiałów wizualnych dla social media i kampanii
-        adsowych, przekształcając abstrakcyjne idee w przyciągające wzrok
-        projekty, które realizują cele biznesowe.
+        Zaprojektowałam <b>setki</b> kreacji reklamowych. Specjalizuję się w
+        tworzeniu profesjonalnych materiałów wizualnych{" "}
+        <b>dla social media i kampanii adsowych,</b> przekształcając
+        abstrakcyjne idee w przyciągające wzrok projekty, które realizują cele
+        biznesowe.
       </>
     ),
     img: "dorota",
@@ -50,9 +52,9 @@ const peopleContent = [
     description: (
       <>
         Nadzoruję realizację projektów, dbając o każdy szczegół i dotrzymanie
-        terminów. Specjalizuję się w pilnowaniu harmonogramów i zapewnianiu, że
-        każdy element pracy jest wykonany zgodnie z planem, co pozwala całemu
-        zespołowi działać sprawnie i efektywnie.
+        terminów. Specjalizuję się <b>w pilnowaniu harmonogramów</b> i
+        zapewnianiu, że każdy element pracy jest wykonany zgodnie z planem, co
+        pozwala całemu zespołowi <b>działać sprawnie i efektywnie.</b>
       </>
     ),
     img: "nicola",
@@ -61,7 +63,7 @@ const peopleContent = [
     name: "Papajka",
     title: "Asystentka Nicoli",
     description: <></>,
-    img: "ada",
+    img: "papajka",
   },
 ]
 
@@ -70,7 +72,7 @@ const MagicBioBanner2 = (): JSX.Element => {
     <>
       <Section>
         <div className="text-center">
-          <div className="border-ada-orange border rounded-2xl max-w-[320px] mx-auto">
+          <div className="border-ada-orange border rounded-3xl max-w-[320px] mx-auto">
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-orange"
@@ -89,7 +91,7 @@ const MagicBioBanner2 = (): JSX.Element => {
               />
             ))}
           </div>
-          <div className="flex flex-col md:flex-row gap-4 pt-8 mb-8 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 pt-8 mb-2 justify-center">
             {peopleContent.slice(2, 4).map((item, i) => (
               <PersonBox
                 key={i}
@@ -100,8 +102,8 @@ const MagicBioBanner2 = (): JSX.Element => {
               />
             ))}
           </div>
-          <div className="flex flex-col md:flex-row gap-4 pt-8 mb-8 justify-center">
-            {peopleContent.slice(5, 6).map((item, i) => (
+          <div className="flex flex-col md:flex-row gap-4 pt-2 mb-8 justify-center">
+            {[peopleContent[4]].map((item, i) => (
               <PersonBox
                 key={i}
                 name={item.name}

@@ -1,4 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
@@ -116,7 +117,7 @@ const MagicCollectiveBanner = ({
         >
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
             <div className="w-full md:w-1/2 mt-8 animate-bounce">
-              <div className="bg-ada-magicGrey border-ada-orange border rounded-2xl max-w-[360px] mx-auto">
+              <div className="bg-ada-magicGrey border-ada-orange border rounded-3xl max-w-[360px] mx-auto">
                 <Typography
                   variant="h2"
                   className="p-2 font-anton font-normal text-center text-ada-orange"
@@ -128,35 +129,90 @@ const MagicCollectiveBanner = ({
                 Nasze usługi są idealnym rozwiązaniem <br />
                 dla przedsiębiorczyń, które:
               </Typography>
-              <ul className="max-w-[438px] mx-auto px-2 md:px-0">
-                <li className="mt-2">
-                  Prowadzą <b>ustabilizowany biznes online</b> (kursy,
-                  mentoring, usługi)
-                </li>
-                <li className="mt-2">
-                  <b>Regularnie publikują</b> treści <b>i budują</b> swoją
-                  społeczność
-                </li>
-                <li className="mt-2">
-                  Zatrudniają minimum <b>1-2 osoby</b> w swoim zespole
-                </li>
-                <li className="mt-2">
-                  <b>Są gotowe na skalowanie biznesu</b> poprzez profesjonalny
-                  marketing
-                </li>
-              </ul>
+              <div className="max-w-[438px] mx-auto px-2 md:px-0">
+                <div className="flex gap-2">
+                  <div className="w-[40px] mt-4">
+                    <StaticImage
+                      src={"../../images/magicFlower.svg"}
+                      alt=""
+                      placeholder="blurred"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <p className="mt-2">
+                    Prowadzą <b>ustabilizowany biznes online</b>
+                    <br /> (kursy, mentoring, usługi)
+                  </p>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="w-[40px] h-[40px] mt-4">
+                    <StaticImage
+                      src={"../../images/magicFlower.svg"}
+                      alt=""
+                      placeholder="blurred"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <p className="mt-2">
+                    <b>Regularnie publikują</b> treści <b>i budują</b>
+                    <br /> swoją społeczność
+                  </p>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="w-[40px] h-[40px] mt-4">
+                    <StaticImage
+                      src={"../../images/magicFlower.svg"}
+                      alt=""
+                      placeholder="blurred"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <p className="mt-2">
+                    Zatrudniają minimum <b>1-2 osoby</b> w swoim zespole
+                  </p>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="w-[40px] h-[40px] mt-4">
+                    <StaticImage
+                      src={"../../images/magicFlower.svg"}
+                      alt=""
+                      placeholder="blurred"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  <p className="mt-2">
+                    <b>Są gotowe na skalowanie biznesu</b> <br />
+                    poprzez profesjonalny marketing
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end md:-mt-6 mb-4">
               <StaticImage
                 src={"../../images/magic-hero2.webp"}
                 alt="Ada Promis"
                 placeholder="blurred"
                 formats={["auto", "webp", "avif"]}
                 width={410}
-                height={572}
+                height={592}
                 quality={95}
               />
             </div>
+          </div>
+          <div className="flex justify-center -mb-6 relative">
+            <a href="#umawiam-spotkanie">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
           </div>
         </Section>
       )}
@@ -164,9 +220,10 @@ const MagicCollectiveBanner = ({
         <Section
           bgColor=""
           className="text-black overflow-hidden sm:mt-10"
-          padding="py-8 px-4 md:px-8 flex justify-centeritems-center"
+          padding="py-8 px-4 md:px-8 flex justify-center items-center"
+          id="umawiam-spotkanie"
         >
-          <div className="mx-auto md:w-[563px] bg-magic-banner2 md:h-[444px]">
+          <div className="text-center md:text-left mx-auto md:w-[563px] bg-magic-banner2 md:h-[444px]">
             <div className="pt-9 md:pl-[130px]">
               <Typography
                 variant="body"
@@ -177,7 +234,7 @@ const MagicCollectiveBanner = ({
             </div>
             <Typography
               variant="body"
-              className="mt-20 text-center font-bold px-2 md:px-0"
+              className="md:mt-20 text-center font-bold px-2 md:px-0"
             >
               Umów bezpłatną rozmowę wstepną, podczas której:
             </Typography>
@@ -193,11 +250,25 @@ const MagicCollectiveBanner = ({
               </li>
             </ul>
           </div>
+          <div className="flex justify-center mt-4 md:-mt-8">
+            <Button
+              type="button"
+              text={
+                <span className="font-normal text-ada-white font-anton md:text-adaSubtitle uppercase">
+                  Umawiam spotkanie
+                </span>
+              }
+              url="https://calendar.app.google/C4nM6qP4wtkJYCmh9"
+              textSize="text-sm md:text-base"
+              btnStyle="bg-ada-orange tracking-wide h-[38px] md:h-[46px] 
+                       px-6 hover:opacity-90 rounded-full md:min-w-[280px]"
+            />
+          </div>
         </Section>
       )}
       {version == 5 && (
-        <Section bgColor="" className="text-black" padding="mt-6">
-          <div className="bg-white border-ada-orange border rounded-2xl max-w-[480px] mx-auto">
+        <Section bgColor="" className="text-black" padding="mt-12">
+          <div className="bg-white border-ada-orange border rounded-3xl max-w-[480px] mx-auto">
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-orange"
@@ -208,7 +279,7 @@ const MagicCollectiveBanner = ({
         </Section>
       )}
       {version == 6 && (
-        <Section bgColor="" padding="-mt-10 mb-6" className="text-black">
+        <Section bgColor="" padding="mt-2 md:-mt-4 mb-6" className="text-black">
           <div className="flex flex-col md:flex-row">
             <ul className="max-w-[438px] mx-auto px-2 md:px-0 list-disc">
               <li className="md:mb-4 md:mt-10">
@@ -230,6 +301,37 @@ const MagicCollectiveBanner = ({
                 marketingiem, Ty rozwijasz swój core business
               </li>
             </ul>
+          </div>
+        </Section>
+      )}
+      {version == 7 && (
+        <Section bgColor="" className="text-black text-center my-2">
+          <div className="bg-ada-magicGreen border border-ada-orange p-4 md:py-8 md:px-12 rounded-3xl max-w-[800px] mx-auto">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange"
+            >
+              MAGIC to nie tylko nazwa
+            </Typography>
+            <p>
+              - to <b>filozofia działania</b> oparta na współpracy, kreatywności
+              i mierzalnych efektach. <b>Skontaktuj się z nami</b> i przekonaj
+              na własne oczy.
+            </p>
+          </div>
+          <div className="flex justify-center mt-4">
+            <Button
+              type="button"
+              text={
+                <span className="text-ada-white font-bold uppercase">
+                  Chcę dowiedzieć się, jak możecie mi pomóc
+                </span>
+              }
+              sectionId="umawiam-spotkanie"
+              textSize="text-sm"
+              btnStyle="bg-ada-orange tracking-wide md:h-[46px] 
+                       px-6 hover:opacity-90 rounded-full md:min-w-[280px]"
+            />
           </div>
         </Section>
       )}
