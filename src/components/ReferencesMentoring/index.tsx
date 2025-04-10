@@ -20,211 +20,211 @@ type IReferences = {
   title6?: boolean
 }
 
-const referencesList: IReferencesList[] = [
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinia1typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Martyna Baran"
-        placeholder="blurred"
-        height={800}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinia2typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Ania Stobnicka"
-        placeholder="blurred"
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinia3typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Kasia Szust"
-        placeholder="blurred"
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinia4typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Agnieszka Sosik-Grzyb"
-        placeholder="blurred"
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinia5typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Martyna Sitarz"
-        placeholder="blurred"
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinia6typ2.webp"}
-        alt="Opinia o programie mentoringowym Meta Ads - Magda Kostrzewska"
-        placeholder="blurred"
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-]
+// const referencesList: IReferencesList[] = [
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opinia1typ2.webp"}
+//         alt="Opinia o programie mentoringowym Meta Ads - Martyna Baran"
+//         placeholder="blurred"
+//         height={800}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opinia2typ2.webp"}
+//         alt="Opinia o programie mentoringowym Meta Ads - Ania Stobnicka"
+//         placeholder="blurred"
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opinia3typ2.webp"}
+//         alt="Opinia o programie mentoringowym Meta Ads - Kasia Szust"
+//         placeholder="blurred"
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opinia4typ2.webp"}
+//         alt="Opinia o programie mentoringowym Meta Ads - Agnieszka Sosik-Grzyb"
+//         placeholder="blurred"
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opinia5typ2.webp"}
+//         alt="Opinia o programie mentoringowym Meta Ads - Martyna Sitarz"
+//         placeholder="blurred"
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opinia6typ2.webp"}
+//         alt="Opinia o programie mentoringowym Meta Ads - Magda Kostrzewska"
+//         placeholder="blurred"
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+// ]
 
-const referencesList2: IReferencesList[] = [
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opiniaAdsy1.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={387}
-        height={387}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opiniaAdsy2.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={387}
-        height={387}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opiniaAdsy3.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={387}
-        height={387}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-]
+// const referencesList2: IReferencesList[] = [
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opiniaAdsy1.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={387}
+//         height={387}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opiniaAdsy2.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={387}
+//         height={387}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/opiniaAdsy3.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={387}
+//         height={387}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+// ]
 
-const referencesList3: IReferencesList[] = [
-  {
-    image: (
-      <StaticImage
-        src={"../../images/slider1.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={463}
-        height={296}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/slider2.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={464}
-        height={85}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/slider3.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={456}
-        height={119}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/slider4.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={577}
-        height={89}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/slider5.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={577}
-        height={89}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/slider6.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={577}
-        height={140}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/slider7.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={577}
-        height={89}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-]
+// const referencesList3: IReferencesList[] = [
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/slider1.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={463}
+//         height={296}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/slider2.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={464}
+//         height={85}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/slider3.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={456}
+//         height={119}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/slider4.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={577}
+//         height={89}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/slider5.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={577}
+//         height={89}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/slider6.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={577}
+//         height={140}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+//   {
+//     image: (
+//       <StaticImage
+//         src={"../../images/slider7.webp"}
+//         alt="Opinia o programie mentoringowym"
+//         placeholder="blurred"
+//         width={577}
+//         height={89}
+//         formats={["auto", "webp", "avif"]}
+//         quality={100}
+//       />
+//     ),
+//   },
+// ]
 
 const referencesList4: IReferencesList[] = [
   {
@@ -338,6 +338,32 @@ const referencesMagicList: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/magicOpinion5.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinion6.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinion7.webp"}
         alt="Opinia o programie mentoringowym"
         placeholder="blurred"
         width={680}
