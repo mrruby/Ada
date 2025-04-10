@@ -48,7 +48,7 @@ const bannerContent = [
   {
     bgColor: "bg-ada-purple3",
     title:
-      "‍💻 Obsługa reklamMeta, TikTok, LinkedIn & konsultacje strategiczne 1:1",
+      "‍💻 Obsługa reklam Meta, TikTok, LinkedIn + konsultacje strategiczne 1:1",
     description: (
       <ul>
         <li className="mb-2">👩‍💻 Prowadzenie kampanii reklamowych</li>
@@ -65,13 +65,13 @@ const bannerContent = [
   {
     bgColor: "bg-ada-magicPink2",
     title:
-      "💌 Wdrożenie newslettera + połączenie z reklamami + prowadzenie newslettera",
+      "💌 Wdrożenie newslettera + obsługa reklam Meta, TikTok, LinkedIn + prowadzenie newslettera",
     description: (
       <ul>
         <li className="mb-2">📫 Kompleksowe wdrożenie systemu mailingowego</li>
         <li className="mb-2">🖥️ Integracja z kampaniami reklamowymi</li>
         <li className="mb-2">📯 Regularne prowadzenie komunikacji e-mail</li>
-        <li className="mb-2">📉 Analiza wyników i optymalizacja strategii</li>
+        <li className="mb-2">📊 Analiza wyników i optymalizacja strategii</li>
       </ul>
     ),
   },
@@ -130,6 +130,7 @@ const MagicBanner3 = (): JSX.Element => {
                   }`}
                 >
                   <BannerBox2
+                    styles="h-full"
                     bgColor={item.bgColor}
                     description={item.description}
                     title={item.title}

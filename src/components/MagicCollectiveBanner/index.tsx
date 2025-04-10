@@ -28,10 +28,10 @@ const MagicCollectiveBanner = ({
       {version == 1 && (
         <Section
           bgColor="bg-magic-banner1"
-          className="text-black overflow-hidden sm:mt-10 lg:backdrop:h-[756px] flex justify-center mb-6"
-          padding="py-8 px-4 md:px-8"
+          className="text-black overflow-hidden sm:mt-10 lg:backdrop:h-[756px] flex justify-center mb-6 sm:max-w-[410px] md:max-w-[510px] lg:max-w-[710px]  mx-auto"
+          padding="py-8 px-12"
         >
-          <div className="max-w-[510px] pl-[20px] md:pl-[50px]">
+          <div className="max-w-[510px] pl-[20px]">
             <Typography variant="h3" className="mt-11 font-anton font-normal">
               Prowadzisz rozwijający się biznes online.
             </Typography>
@@ -141,7 +141,7 @@ const MagicCollectiveBanner = ({
                     />
                   </div>
                   <p className="mt-2">
-                    Prowadzą <b>ustabilizowany biznes online</b>
+                    Prowadzą <b>biznes online</b>
                     <br /> (kursy, mentoring, usługi)
                   </p>
                 </div>
@@ -171,7 +171,8 @@ const MagicCollectiveBanner = ({
                     />
                   </div>
                   <p className="mt-2">
-                    Zatrudniają minimum <b>1-2 osoby</b> w swoim zespole
+                    Współpracują z <b>podwykonawcami</b>, np. wirtualnymi
+                    asystentkami
                   </p>
                 </div>
                 <div className="flex gap-2 mt-2">
@@ -267,7 +268,7 @@ const MagicCollectiveBanner = ({
         </Section>
       )}
       {version == 5 && (
-        <Section bgColor="" className="text-black" padding="mt-12">
+        <Section bgColor="" className="text-black" padding="my-12">
           <div className="bg-white border-ada-orange border rounded-3xl max-w-[480px] mx-auto">
             <Typography
               variant="h2"

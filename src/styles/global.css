@@ -347,7 +347,7 @@ body {
   z-index: -1;
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 769px) {
   .bg-magic-banner2 {
     background-image: url("../../static/assets/magic-banner.webp");
   }
