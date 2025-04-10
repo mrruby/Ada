@@ -10,12 +10,6 @@ import SEO from "components/seo"
 import React from "react"
 
 const MagicCollectivePage = (): JSX.Element => {
-  const ctaText = (
-    <>
-      Chcę ustawiać kampanie <br /> ze świetnymi wynikami!
-    </>
-  )
-
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-linear2">
@@ -23,10 +17,8 @@ const MagicCollectivePage = (): JSX.Element => {
           title="Magic: Marketing Ads Girls Inside Collective"
           countdownText="Webinar znika za:"
           countdownTargetDate={new Date("2025-04-17T23:59:00")}
-          videoId="aZ4VBHpdiTs?si=a8bh0luPTarp9xpH"
-          videoTitle="3 zmiany w reklamach Twojego biznesu - nagranie webinar"
-          ctaLink="/magic"
-          ctaText={ctaText}
+          videoId="YUEaiE7aTaE"
+          videoTitle="Magic: Marketing Ads Girls Inside Collective"
         />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white2 reltive">
