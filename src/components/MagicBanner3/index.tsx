@@ -96,7 +96,7 @@ const MagicBanner3 = (): JSX.Element => {
             placeholder="blurred"
             width={50}
             height={50}
-            className="hidden md:block animate-spin-slow"
+            className="opacity-0 md:opacity-100 animate-spin-slow"
           />
           <div className="border-ada-orange border rounded-3xl max-w-[660px]">
             <Typography
@@ -112,7 +112,7 @@ const MagicBanner3 = (): JSX.Element => {
             placeholder="blurred"
             width={50}
             height={50}
-            className="hidden md:block animate-spin-slow"
+            className="opacity-0 md:opacity-100 animate-spin-slow"
           />
         </div>
         <div className="w-full flex justify-end mt-6">

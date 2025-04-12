@@ -236,11 +236,11 @@ const MagicCollectiveBanner = ({
             </div>
             <Typography
               variant="body"
-              className="mt-4 md:mt-10 text-center font-bold px-2 md:px-0"
+              className="mt-4 md:mt-10 text-center font-bold px-8 md:px-0"
             >
               Umów bezpłatną rozmowę wstepną, podczas której:
             </Typography>
-            <ul className="max-w-[438px] mx-auto px-2 md:px-0">
+            <ul className="max-w-[438px] mx-auto px-8 md:px-0">
               <li className="md:mb-4 mt-2 md:mt-10">
                 ✅ Przeanalizujemy Twoją obecną sytuację marketingową
               </li>
@@ -283,7 +283,7 @@ const MagicCollectiveBanner = ({
       {version == 6 && (
         <Section bgColor="" padding="mt-2 md:-mt-4 mb-6" className="text-black">
           <div className="flex flex-col md:flex-row">
-            <ul className="max-w-[438px] mx-auto px-2 md:px-0 list-disc">
+            <ul className="max-w-[438px] mx-auto px-8 md:px-0 list-disc">
               <li className="md:mb-4 md:mt-10">
                 <b>Oszczędzasz czas</b> - nie musisz zarządzać marketingiem
                 samodzielnie
@@ -293,7 +293,7 @@ const MagicCollectiveBanner = ({
                 niż budowa działu in-house
               </li>
             </ul>
-            <ul className="max-w-[438px] mx-auto px-2 md:px-0 list-disc">
+            <ul className="max-w-[438px] mx-auto px-8 md:px-0 list-disc">
               <li className="md:mb-4 md:mt-10">
                 <b>Zyskujesz ekspertyzę</b> - pracujesz z zespołem specjalistów
                 z różnych dziedzin
