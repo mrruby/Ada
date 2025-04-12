@@ -221,7 +221,10 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                   />
                 </Link>
               </div>
-              <Typography variant="h2" className="mb-4 md:pt-8 font-normal">
+              <Typography
+                variant="h2"
+                className="mb-4 pt-4 md:pt-8 font-normal"
+              >
                 Marketing Ads Girls Inside Collective
               </Typography>
               <Typography variant="body" className="mb-6 font-courier">

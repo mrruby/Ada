@@ -17,7 +17,7 @@ const MagicCollectivePage = (): JSX.Element => {
         </div>
         <div className="bg-magic-pink2"></div>
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-purple3 z-10 relative">
+      <MaxWithBgColorContainer bgColor="bg-ada-purple3 z-10 relative bg-magic-banner1a">
         <MagicCollectiveBanner version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-magic-green">
@@ -29,7 +29,7 @@ const MagicCollectivePage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <MagicBioBanner2 />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-magic-grid">
+      <MaxWithBgColorContainer bgColor="bg-magic-grid relative">
         <MagicBanner3 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-magic-pink">

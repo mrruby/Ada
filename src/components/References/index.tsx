@@ -140,7 +140,7 @@ const References = ({
           </h3>
         </>
       )}
-      <div className="max-w-[600px] max-h-[720px] mx-auto mt-[-40px] md:mt-[-100px]">
+      <div className="max-h-[720px] mx-auto mt-[-40px] md:mt-[-100px]">
         <Carousel
           responsive={responsive}
           infinite={true}
