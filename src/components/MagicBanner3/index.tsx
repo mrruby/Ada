@@ -1,7 +1,7 @@
+import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import Section from "../shared/Section"
-import Typography from "../shared/Typography"
 import BannerBox2 from "./BannerBox3"
 
 const bannerContent = [
@@ -88,7 +88,7 @@ const MagicBanner3 = (): JSX.Element => {
 
   return (
     <Section className="text-black relative">
-      <div className="mb-8 md:mb-20" onMouseOver={handleMouseEnter}>
+      <div className="mb-8 md:mb-20 z-30">
         <div className="flex gap-5 justify-center">
           <StaticImage
             src={"../../images/magicSign.svg"}
@@ -96,7 +96,7 @@ const MagicBanner3 = (): JSX.Element => {
             placeholder="blurred"
             width={50}
             height={50}
-            className="hidden lg:block"
+            className="opacity-0 md:opacity-100 animate-spin-slow"
           />
           <div className="border-ada-orange border rounded-3xl max-w-[660px]">
             <Typography
@@ -112,12 +112,15 @@ const MagicBanner3 = (): JSX.Element => {
             placeholder="blurred"
             width={50}
             height={50}
-            className="hidden lg:block"
+            className="opacity-0 md:opacity-100 animate-spin-slow"
           />
         </div>
         <div className="w-full flex justify-end mt-6">
           <div className="flex flex-col justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4"
+              onMouseOver={handleMouseEnter}
+            >
               {bannerContent.map((item, i) => (
                 <div
                   key={i}
@@ -134,6 +137,7 @@ const MagicBanner3 = (): JSX.Element => {
                     bgColor={item.bgColor}
                     description={item.description}
                     title={item.title}
+                    key={i}
                   />
                 </div>
               ))}

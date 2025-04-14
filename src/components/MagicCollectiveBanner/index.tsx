@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import TypingAnimation from "helpers/TypingAnimation"
 import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
@@ -29,9 +30,9 @@ const MagicCollectiveBanner = ({
         <Section
           bgColor="bg-magic-banner1"
           className="text-black overflow-hidden sm:mt-10 lg:backdrop:h-[756px] flex justify-center mb-6 sm:max-w-[410px] md:max-w-[510px] lg:max-w-[710px]  mx-auto"
-          padding="py-8 px-12"
+          padding="py-8 px-2 md:px-12"
         >
-          <div className="max-w-[510px] pl-[20px]">
+          <div className="max-w-[510px] pl-[24px]">
             <Typography variant="h3" className="mt-11 font-anton font-normal">
               Prowadzisz rozwijający się biznes online.
             </Typography>
@@ -39,9 +40,9 @@ const MagicCollectiveBanner = ({
               variant="body"
               className="mt-2 mb-6 font-courier lg:leading-[40px]"
             >
-              Publikujesz regularnie, masz już swoją społeczność i zatrudniasz
-              1-2 osoby. Twoje działania przynoszą efekty, ale czujesz, że
-              marketing mógłby działać jeszcze lepiej.
+              Publikujesz regularnie, masz już swoją społeczność, zlecasz
+              niektóre zadania podwykonawcom (np. WA). Twoje działania przynoszą
+              efekty, ale czujesz, że marketing mógłby działać jeszcze lepiej.
             </Typography>
             <Typography
               variant="body"
@@ -73,26 +74,24 @@ const MagicCollectiveBanner = ({
           className="text-black overflow-hidden sm:mt-10"
           padding="py-8 px-4 md:px-8 flex justify-centeritems-center"
         >
-          <div className="mx-auto md:w-[563px] bg-magic-banner2 md:h-[444px]">
-            <div className="max-w-[438px] pt-8 md:pl-[130px]">
-              <Typography
-                variant="h3"
-                className="md:m-5 text-ada-orange font-anton font-normal px-2 md:px-0"
-              >
-                Dlaczego MAGIC?
-              </Typography>
+          <div className="mx-auto md:w-[563px] bg-magic-banner2 min-h-[390px] md:h-[444px]">
+            <div className="max-w-[438px] pt-6 md:pt-8 pl-[80px] md:pl-[130px]">
+              <TypingAnimation
+                text="Dlaczego MAGIC?"
+                textStyle="mt-[6px] md:m-5 text-ada-orange font-anton font-normal px-4 md:px-0 text-adaNav md:text-adaBase"
+              />
             </div>
-            <ul className="max-w-[438px] mx-auto list-disc px-2 md:px-0">
-              <li className="md:mb-4 md:mt-10">
+            <ul className="max-w-[438px] mx-auto list-disc px-10 md:px-0">
+              <li className="md:mb-4 mt-14 md:mt-6 text-adaMin md:text-adaStandard">
                 <span className="font-bold">Działamy jako Twój zespół </span>-
                 jesteśmy stałym partnerem w rozwoju Twojego biznesu
               </li>
-              <li className="md:mb-4">
+              <li className="md:mb-4 text-adaMin md:text-adaStandard">
                 <span className="font-bold">Pracujemy na poziomie premium</span>
                 - skupiamy się na długoterminowych relacjach i mierzalnych
                 rezultatach
               </li>
-              <li className="md:mb-4">
+              <li className="md:mb-4 text-adaMin md:text-adaStandard">
                 <span className="font-bold">
                   {" "}
                   Łączymy strategię z wykonaniem{" "}
@@ -100,7 +99,7 @@ const MagicCollectiveBanner = ({
                 - nie tylko doradzamy, ale przede wszystkim wdrażamy i
                 zarządzamy
               </li>
-              <li className="md:mb-8">
+              <li className="md:mb-8 text-adaMin md:text-adaStandard">
                 <span className="font-bold">Jesteśmy ADHD friendly</span>-
                 rozumiemy dynamikę kreatywnego umysłu i wspólnie z Tobą
                 wypracujemy najlepszy system współpracy
@@ -138,6 +137,7 @@ const MagicCollectiveBanner = ({
                       placeholder="blurred"
                       width={40}
                       height={40}
+                      class="animate-spin-slow"
                     />
                   </div>
                   <p className="mt-2">
@@ -153,6 +153,7 @@ const MagicCollectiveBanner = ({
                       placeholder="blurred"
                       width={40}
                       height={40}
+                      class="animate-spin-slow"
                     />
                   </div>
                   <p className="mt-2">
@@ -168,10 +169,11 @@ const MagicCollectiveBanner = ({
                       placeholder="blurred"
                       width={40}
                       height={40}
+                      class="animate-spin-slow"
                     />
                   </div>
                   <p className="mt-2">
-                    Współpracują z <b>podwykonawcami</b>, np. wirtualnymi
+                    Współpracują z <b>podwykonawcami</b>,<br /> np. wirtualnymi
                     asystentkami
                   </p>
                 </div>
@@ -183,6 +185,7 @@ const MagicCollectiveBanner = ({
                       placeholder="blurred"
                       width={40}
                       height={40}
+                      class="animate-spin-slow"
                     />
                   </div>
                   <p className="mt-2">
@@ -204,7 +207,7 @@ const MagicCollectiveBanner = ({
               />
             </div>
           </div>
-          <div className="flex justify-center -mb-6 relative">
+          <div className="flex justify-center -mb-6 relative animate-spin-slow">
             <a href="#umawiam-spotkanie">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
@@ -224,23 +227,21 @@ const MagicCollectiveBanner = ({
           padding="py-8 px-4 md:px-8 flex justify-center items-center"
           id="umawiam-spotkanie"
         >
-          <div className="text-center md:text-left mx-auto md:w-[563px] bg-magic-banner2 md:h-[444px]">
-            <div className="pt-9 md:pl-[130px]">
-              <Typography
-                variant="body"
-                className="md:m-5 text-ada-orange font-anton px-2 md:px-0 md:text-adaTitle2 font-normal"
-              >
-                Rozpocznij współpracę z MAGIC
-              </Typography>
+          <div className="text-center md:text-left mx-auto md:w-[567px] bg-magic-banner2 min-h-[370px] md:h-[444px]">
+            <div className="pt-6 md:pt-9 md:pl-[130px]">
+              <TypingAnimation
+                text="Rozpocznij współpracę z MAGIC"
+                textStyle="m-1 md:m-5 text-ada-orange font-anton px-2 md:px-0 text-adaMin md:text-adaDesc font-normal"
+              />
             </div>
             <Typography
               variant="body"
-              className="md:mt-20 text-center font-bold px-2 md:px-0"
+              className="mt-4 md:mt-10 text-center font-bold px-8 md:px-0"
             >
               Umów bezpłatną rozmowę wstepną, podczas której:
             </Typography>
-            <ul className="max-w-[438px] mx-auto px-2 md:px-0">
-              <li className="md:mb-4 md:mt-10">
+            <ul className="max-w-[438px] mx-auto px-8 md:px-0">
+              <li className="md:mb-4 mt-2 md:mt-10">
                 ✅ Przeanalizujemy Twoją obecną sytuację marketingową
               </li>
               <li className="md:mb-4">
@@ -282,7 +283,7 @@ const MagicCollectiveBanner = ({
       {version == 6 && (
         <Section bgColor="" padding="mt-2 md:-mt-4 mb-6" className="text-black">
           <div className="flex flex-col md:flex-row">
-            <ul className="max-w-[438px] mx-auto px-2 md:px-0 list-disc">
+            <ul className="max-w-[438px] mx-auto px-8 md:px-0 list-disc">
               <li className="md:mb-4 md:mt-10">
                 <b>Oszczędzasz czas</b> - nie musisz zarządzać marketingiem
                 samodzielnie
@@ -292,7 +293,7 @@ const MagicCollectiveBanner = ({
                 niż budowa działu in-house
               </li>
             </ul>
-            <ul className="max-w-[438px] mx-auto px-2 md:px-0 list-disc">
+            <ul className="max-w-[438px] mx-auto px-8 md:px-0 list-disc">
               <li className="md:mb-4 md:mt-10">
                 <b>Zyskujesz ekspertyzę</b> - pracujesz z zespołem specjalistów
                 z różnych dziedzin
@@ -306,7 +307,7 @@ const MagicCollectiveBanner = ({
         </Section>
       )}
       {version == 7 && (
-        <Section bgColor="" className="text-black text-center my-2">
+        <Section bgColor="" className="text-black text-center my-10">
           <div className="bg-ada-magicGreen border border-ada-orange p-4 md:py-8 md:px-12 rounded-3xl max-w-[800px] mx-auto">
             <Typography
               variant="h2"
@@ -331,7 +332,7 @@ const MagicCollectiveBanner = ({
               sectionId="umawiam-spotkanie"
               textSize="text-sm"
               btnStyle="bg-ada-orange tracking-wide md:h-[46px] 
-                       px-6 hover:opacity-90 rounded-full md:min-w-[280px]"
+                       px-6 hover:opacity-90 rounded-full max-w-[240px] md:min-w-[280px]"
             />
           </div>
         </Section>
