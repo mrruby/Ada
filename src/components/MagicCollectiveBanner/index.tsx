@@ -32,7 +32,7 @@ const MagicCollectiveBanner = ({
           className="text-black overflow-hidden sm:mt-10 lg:backdrop:h-[756px] flex justify-center mb-6 sm:max-w-[410px] md:max-w-[510px] lg:max-w-[710px]  mx-auto"
           padding="py-8 px-2 md:px-12"
         >
-          <div className="max-w-[510px] pl-[20px]">
+          <div className="max-w-[510px] pl-[24px]">
             <Typography variant="h3" className="mt-11 font-anton font-normal">
               Prowadzisz rozwijający się biznes online.
             </Typography>
@@ -40,9 +40,9 @@ const MagicCollectiveBanner = ({
               variant="body"
               className="mt-2 mb-6 font-courier lg:leading-[40px]"
             >
-              Publikujesz regularnie, masz już swoją społeczność i zatrudniasz
-              1-2 osoby. Twoje działania przynoszą efekty, ale czujesz, że
-              marketing mógłby działać jeszcze lepiej.
+              Publikujesz regularnie, masz już swoją społeczność, zlecasz
+              niektóre zadania podwykonawcom (np. WA). Twoje działania przynoszą
+              efekty, ale czujesz, że marketing mógłby działać jeszcze lepiej.
             </Typography>
             <Typography
               variant="body"
