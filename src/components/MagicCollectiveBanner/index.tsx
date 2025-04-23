@@ -257,10 +257,10 @@ const MagicCollectiveBanner = ({
               type="button"
               text={
                 <span className="font-normal text-ada-white font-anton md:text-adaSubtitle uppercase">
-                  Umawiam spotkanie
+                  Wypełniam ankietę!
                 </span>
               }
-              url="https://calendar.app.google/C4nM6qP4wtkJYCmh9"
+              url="https://forms.gle/21QLQXWozG9EYQvt8"
               textSize="text-sm md:text-base"
               btnStyle="bg-ada-orange tracking-wide h-[38px] md:h-[46px] 
                        px-6 hover:opacity-90 rounded-full md:min-w-[280px]"
