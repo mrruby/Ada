@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import magicWebinarForm from "../../values/forms/magic-webinar.html"
 import Typography from "../shared/Typography"
 
-const MagicWebinar12 = (): JSX.Element => {
+const MagicWebinar12 = ({ version = 1 }: { version?: number }): JSX.Element => {
   useEffect(() => {
     const form = document.querySelector(".ml-block-form") as HTMLFormElement
     if (form) {

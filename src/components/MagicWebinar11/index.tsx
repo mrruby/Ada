@@ -6,7 +6,7 @@ type ListItem = {
   answer: string | JSX.Element
 }
 
-const MagicWebinar11 = (): JSX.Element => {
+const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const faqList: ListItem[] = [
     {
       question: "Czy webinar jest płatny?",

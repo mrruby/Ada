@@ -1,26 +1,77 @@
 import { Button } from "helpers/Button"
-import { MagicSunPink } from "helpers/LayoutElements"
+import { MagicSunPink, MagicSunPinkNew } from "helpers/LayoutElements"
 import React from "react"
 
-const MagicWebinar4 = (): JSX.Element => {
+const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
+  const isVersion2 = version === 2
+  const bgColor = isVersion2 ? "bg-ada-newPurple" : "bg-ada-magicOrange"
+  const accentColor = isVersion2 ? "bg-ada-newPurple2" : "bg-ada-magicPurple"
+  const textHighlightColor = isVersion2 ? "text-ada-pink7" : "text-orange-500"
+  const buttonBgColor = isVersion2 ? "bg-ada-yellow3" : "bg-white"
+  const buttonTextColor = isVersion2
+    ? "text-ada-newPurple"
+    : "text-ada-magicPurple"
+  const buttonHoverColor = isVersion2
+    ? "bg-ada-yellow3/90"
+    : "bg-ada-magicPurple/90"
+  const goalBgColor = isVersion2 ? "bg-ada-yellow3" : "bg-ada-magicPurple"
+  const goalTextColor = isVersion2 ? "text-ada-newPurple" : "text-white"
+
+  const SunIcon = isVersion2 ? MagicSunPinkNew : MagicSunPink
+
+  const benefits = [
+    {
+      emoji: "📊",
+      text: "Jakie efekty przynosi reklama w małym biznesie\nbrz(i dlaczego 78% przedsiębiorczyń błędnie je rozumie)",
+    },
+    {
+      emoji: "💬",
+      text: "Jak wykorzystać reklamy do wyrażenia swojej\nbrmarki i przyciągnąć właściwych odbiorców",
+    },
+    {
+      emoji: "💎",
+      text: "Sprawdzony sposób na reklamy, który nie\nbrwywołuje u Ciebie ciar żenady",
+    },
+    {
+      emoji: "🚀",
+      text: "Jak reklamować biznes, aby z każdej złotówki\nbrwłożonej w reklamy wyciągać kolejne 3/5/9 zł",
+    },
+  ]
+
+  const renderBenefit = ({ emoji, text }: { emoji: string; text: string }) => (
+    <div
+      key={emoji}
+      className={`${accentColor} text-white p-6 rounded-sm flex items-start`}
+    >
+      <span className="text-xl mr-3">{emoji}</span>
+      <p className="text-left text-sm md:text-base">
+        {text.replace(/\nbr/g, "\n")}
+      </p>
+    </div>
+  )
+
   return (
-    <div className="bg-ada-magicOrange p-8 md:p-12 lg:p-16 text-center relative overflow-hidden flex flex-col items-center justify-center">
+    <div
+      className={`${bgColor} p-8 md:p-12 lg:p-16 text-center relative overflow-hidden flex flex-col items-center justify-center`}
+    >
       {/* Top section with title */}
       <div className="flex items-center justify-center md:mb-12 relative">
-        <div className="text-white w-8 h-8 md:w-12 md:h-12">
-          <MagicSunPink />
+        <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center">
+          <SunIcon />
         </div>
         <div className="bg-pink-200 px-4 py-2 mx-2 rounded-sm pb-4">
           <h1 className="text-xl md:text-3xl lg:text-4xl font-bold">
-            <span className="text-orange-500">Co Cię czeka podczas </span>
+            <span className={textHighlightColor}>Co Cię czeka podczas </span>
             <span className="text-ada-magicPurple">webinaru?</span>
           </h1>
         </div>
-        <div className="text-white w-8 h-8 md:w-12 md:h-12">
-          <MagicSunPink />
+        <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center">
+          <SunIcon />
         </div>
         <div className="absolute bottom-[-14px] left-1/2 transform -translate-x-1/2">
-          <div className="bg-ada-magicPurple text-white px-4 py-1 rounded-sm transform -rotate-3">
+          <div
+            className={`${accentColor} text-white px-4 py-1 rounded-sm transform -rotate-3`}
+          >
             <span className="font-bold">ODKRYJESZ:</span>
           </div>
         </div>
@@ -28,50 +79,14 @@ const MagicWebinar4 = (): JSX.Element => {
 
       {/* Grid of benefits */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 mb-8 max-w-6xl mx-auto">
-        {/* Benefit 1 */}
-        <div className="bg-ada-magicPurple text-white p-6 rounded-sm flex items-start">
-          <span className="text-xl mr-3">📊</span>
-          <p className="text-left text-sm md:text-base">
-            Jakie efekty przynosi reklama w małym biznesie
-            <br />
-            (i dlaczego 78% przedsiębiorczyń błędnie je rozumie)
-          </p>
-        </div>
-
-        {/* Benefit 2 */}
-        <div className="bg-ada-magicPurple text-white p-6 rounded-sm flex items-start">
-          <span className="text-xl mr-3">💬</span>
-          <p className="text-left text-sm md:text-base">
-            Jak wykorzystać reklamy do wyrażenia swojej
-            <br />
-            marki i przyciągnąć właściwych odbiorców
-          </p>
-        </div>
-
-        {/* Benefit 3 */}
-        <div className="bg-ada-magicPurple text-white p-6 rounded-sm flex items-start">
-          <span className="text-xl mr-3">💎</span>
-          <p className="text-left text-sm md:text-base">
-            Sprawdzony sposób na reklamy, który nie
-            <br />
-            wywołuje u Ciebie ciar żenady
-          </p>
-        </div>
-
-        {/* Benefit 4 */}
-        <div className="bg-ada-magicPurple text-white p-6 rounded-sm flex items-start">
-          <span className="text-xl mr-3">🚀</span>
-          <p className="text-left text-sm md:text-base">
-            Jak reklamować biznes, aby z każdej złotówki
-            <br />
-            włożonej w reklamy wyciągać kolejne 3/5/9 zł
-          </p>
-        </div>
+        {benefits.map(renderBenefit)}
       </div>
 
       {/* Bottom section with goal */}
       <div className="max-w-3xl mx-auto text-center mb-8">
-        <div className="inline-block bg-ada-magicPurple text-white px-3 py-1 rounded-sm">
+        <div
+          className={`inline-block ${goalBgColor} ${goalTextColor} px-3 py-1 rounded-sm`}
+        >
           <span className="font-bold">Nasz cel:</span>
         </div>
         <span className="text-white font-medium ml-2">
@@ -83,11 +98,13 @@ const MagicWebinar4 = (): JSX.Element => {
       <Button
         type="button"
         text={
-          <span className="text-ada-magicPurple uppercase">CHCĘ DOŁĄCZYĆ</span>
+          <span className={`${buttonTextColor} font-bold uppercase`}>
+            CHCĘ DOŁĄCZYĆ
+          </span>
         }
         sectionId="signup"
         textSize="text-xl md:text-2xl"
-        btnStyle="bg-white hover:bg-ada-magicPurple/90 text-xl font-bold py-6 mb-6 px-12 rounded-full border-none"
+        btnStyle={`${buttonBgColor} hover:${buttonHoverColor} text-xl font-bold py-6 mb-6 px-12 rounded-full border-none`}
       />
     </div>
   )

@@ -323,6 +323,14 @@ export const MagicSunDark: React.FC<Props> = (props) => (
   />
 )
 
+export const MagicSunYellow: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-sun-yellow.svg"
+    alt="Decorative sun"
+    {...props}
+  />
+)
+
 export const MagicSun: React.FC<Props> = (props) => (
   <ImageComponent src="/assets/magic-sun.svg" alt="Decorative sun" {...props} />
 )
@@ -335,9 +343,25 @@ export const MagicUnion: React.FC<Props> = (props) => (
   />
 )
 
+export const MagicUnionPink: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-union-pink.svg"
+    alt="Decorative union"
+    {...props}
+  />
+)
+
 export const MagicUnion2: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/magic-union-2.svg"
+    alt="Decorative union"
+    {...props}
+  />
+)
+
+export const MagicUnion2Pink: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-union-2-pink.svg"
     alt="Decorative union"
     {...props}
   />
@@ -355,9 +379,25 @@ export const Vector: React.FC<Props> = (props) => (
   <ImageComponent src="/assets/vector.svg" alt="Decorative vector" {...props} />
 )
 
+export const VectorPink: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/vector-pink.svg"
+    alt="Decorative vector"
+    {...props}
+  />
+)
+
 export const MagicSunPink: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/magic-sun-pink.svg"
+    alt="Magic sun pink"
+    {...props}
+  />
+)
+
+export const MagicSunPinkNew: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/magic-sun-pink-new.svg"
     alt="Magic sun pink"
     {...props}
   />

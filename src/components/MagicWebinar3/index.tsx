@@ -2,7 +2,18 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Typography from "../shared/Typography"
 
-const MagicWebinar3 = (): JSX.Element => {
+const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
+  const isPinkVersion = version === 2
+  const primaryColor = isPinkVersion
+    ? "text-ada-magicPurple"
+    : "text-ada-magicOrange"
+  const secondaryColor = isPinkVersion
+    ? "text-ada-pink7"
+    : "text-ada-magicPurple"
+  const backgroundColor = isPinkVersion
+    ? "bg-ada-newPurple2"
+    : "bg-ada-magicPurple"
+
   const targetAudiences = [
     {
       title: "Właścicielek marek osobistych",
@@ -32,7 +43,7 @@ const MagicWebinar3 = (): JSX.Element => {
       <div>
         <Typography
           variant="h3"
-          className="text-xl font-semibold bg-ada-magicPurple text-white px-3 py-1 inline"
+          className={`text-xl font-semibold ${backgroundColor} text-white px-3 py-1 inline`}
         >
           {title}
         </Typography>
@@ -54,9 +65,9 @@ const MagicWebinar3 = (): JSX.Element => {
                   variant="h1"
                   className="text-4xl md:text-5xl font-bold"
                 >
-                  <span className="text-ada-magicOrange">Ten</span>{" "}
-                  <span className="text-ada-magicPurple">webinar</span>{" "}
-                  <span className="text-ada-magicOrange">
+                  <span className={primaryColor}>Ten</span>{" "}
+                  <span className={secondaryColor}>webinar</span>{" "}
+                  <span className={primaryColor}>
                     jest stworzony specjalnie dla:
                   </span>
                 </Typography>

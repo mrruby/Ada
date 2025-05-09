@@ -1,53 +1,69 @@
-import { MagicSun } from "helpers/LayoutElements"
+import { MagicSun, MagicSunYellow } from "helpers/LayoutElements"
 import React from "react"
 import Typography from "../shared/Typography"
 
-const MagicWebinar2 = (): JSX.Element => {
+const MagicWebinar2 = ({ version = 1 }: { version?: number }): JSX.Element => {
+  const isPinkVersion = version === 2
+  const bgColor = isPinkVersion ? "bg-ada-newPurple2" : "bg-ada-magicPurple"
+  const textColor = isPinkVersion ? "text-ada-newPurple" : "text-white"
+
+  const cards = [
+    {
+      emoji: "😩",
+      text: "Wszyscy chwalą się świetnymi wynikami, a ja nie widzę rezultatów...",
+    },
+    {
+      emoji: "😪",
+      text: "Konkurencja ciągle rośnie, a ja zostaję w tyle mimo ciężkiej pracy",
+    },
+    {
+      emoji: "💸",
+      text: "Chcę rozkręcić firmę, ale nie umiem w reklamy - potrzebuję pomocy!",
+    },
+    {
+      emoji: "🤔",
+      text: "Nie mam pojęcia, które strategie reklamowe działają w moim biznesie",
+    },
+  ]
+
+  const renderCard = ({ emoji, text }: { emoji: string; text: string }) => (
+    <div
+      key={emoji}
+      className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+    >
+      <span className="text-5xl mb-4">{emoji}</span>
+      <Typography variant="body" className="text-lg">
+        {text}
+      </Typography>
+    </div>
+  )
+
   return (
-    <div className="bg-ada-magicPurple px-6 md:px-12 relative">
+    <div className={`${bgColor} px-6 md:px-12 relative`}>
       <div className="flex justify-center">
-        <MagicSun mobileBottom="top-[-50px]" width="200px" zIndex="z-10" />
+        {isPinkVersion ? (
+          <MagicSunYellow
+            mobileBottom="top-[-50px]"
+            width="200px"
+            zIndex="z-10"
+          />
+        ) : (
+          <MagicSun mobileBottom="top-[-50px]" width="200px" zIndex="z-10" />
+        )}
       </div>
       <div className="container mx-auto mt-24">
         <Typography
           variant="h1"
-          className="text-white text-4xl md:text-5xl font-bold text-center mb-12"
+          className={`${textColor} text-4xl md:text-5xl font-bold text-center mb-12`}
         >
           Czy kiedykolwiek myślałaś:
         </Typography>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full mx-auto mb-12">
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <span className="text-5xl mb-4">😩</span>
-            <Typography variant="body" className="text-lg">
-              Wszyscy chwalą się świetnymi wynikami, a ja nie widzę
-              rezultatów...
-            </Typography>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <span className="text-5xl mb-4">😪</span>
-            <Typography variant="body" className="text-lg">
-              Konkurencja ciągle rośnie, a ja zostaję w tyle mimo ciężkiej pracy
-            </Typography>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <span className="text-5xl mb-4">💸</span>
-            <Typography variant="body" className="text-lg">
-              Chcę rozkręcić firmę, ale nie umiem w reklamy - potrzebuję pomocy!
-            </Typography>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <span className="text-5xl mb-4">🤔</span>
-            <Typography variant="body" className="text-lg">
-              Nie mam pojęcia, które strategie reklamowe działają w moim
-              biznesie
-            </Typography>
-          </div>
+          {cards.map(renderCard)}
         </div>
+
         {/* Bottom Message */}
         <div className="max-w-3xl mx-auto">
           <div className="text-white p-6 max-w-lg mx-auto">

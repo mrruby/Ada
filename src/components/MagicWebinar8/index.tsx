@@ -1,6 +1,39 @@
 import React from "react"
 
-const MagicWebinar8 = (): JSX.Element => {
+const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
+  const colors = {
+    background: version === 2 ? "bg-ada-newPurple" : "bg-ada-magicOrange",
+    heading: version === 2 ? "text-pink-100" : "text-white",
+    accent: version === 2 ? "text-ada-pink7" : "text-ada-magicPurple",
+  }
+
+  const benefits = [
+    {
+      title: (
+        <>
+          Udział w intensywnym
+          <br />
+          60-minutowym webinarze
+        </>
+      ),
+      value: "397 zł",
+    },
+    {
+      title: <>Udział w sesji Q&A</>,
+      value: "397 zł",
+    },
+    {
+      title: (
+        <>
+          Dostęp do nagrania
+          <br />
+          webinaru na 7 dni
+        </>
+      ),
+      value: "297 zł",
+    },
+  ]
+
   const renderBenefitCard = (title: JSX.Element, value: string) => (
     <div className="relative bg-pink-100 rounded-xl p-6 shadow-lg flex flex-col items-center">
       <div className="mb-4 w-full flex justify-center">
@@ -16,33 +49,21 @@ const MagicWebinar8 = (): JSX.Element => {
   )
 
   return (
-    <div className="w-full bg-ada-magicOrange py-16 px-4">
+    <div className={`w-full ${colors.background} py-16 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-center text-white text-4xl md:text-5xl font-bold mb-12">
+        <h2
+          className={`text-center ${colors.heading} text-4xl md:text-5xl font-bold mb-12`}
+        >
           Co dostaniesz, rejestrując się{" "}
-          <span className="text-ada-magicPurple">teraz</span>:
+          <span className={colors.accent}>teraz</span>:
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {renderBenefitCard(
-            <>
-              Udział w intensywnym
-              <br />
-              60-minutowym webinarze
-            </>,
-            "397 zł"
-          )}
-
-          {renderBenefitCard(<>Udział w sesji Q&A</>, "397 zł")}
-
-          {renderBenefitCard(
-            <>
-              Dostęp do nagrania
-              <br />
-              webinaru na 7 dni
-            </>,
-            "297 zł"
-          )}
+          {benefits.map((benefit, index) => (
+            <React.Fragment key={index}>
+              {renderBenefitCard(benefit.title, benefit.value)}
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </div>

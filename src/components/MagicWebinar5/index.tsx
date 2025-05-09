@@ -1,4 +1,4 @@
-import { MagicSun } from "helpers/LayoutElements"
+import { MagicSun, MagicSunPinkNew } from "helpers/LayoutElements"
 import React, { ReactNode } from "react"
 import { CircleImage } from "../MagicBioBanner/circleImages"
 import Typography from "../shared/Typography"
@@ -10,7 +10,7 @@ interface TeamMember {
   imageUrl: string
 }
 
-const MagicWebinar5 = (): JSX.Element => {
+const MagicWebinar5 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const teamMembers: TeamMember[] = [
     {
       name: "Adrianna Promis-Urbas",
@@ -106,14 +106,22 @@ const MagicWebinar5 = (): JSX.Element => {
                   {member.description}
                 </Typography>
               </div>
-              {index < 2 && (
-                <MagicSun
-                  width="80px"
-                  zIndex="z-0"
-                  mobileTop="top-72"
-                  mobileLeft="left-[50px]"
-                />
-              )}
+              {index < 2 &&
+                (version === 2 ? (
+                  <MagicSunPinkNew
+                    width="80px"
+                    zIndex="z-0"
+                    mobileTop="top-72"
+                    mobileLeft="left-[50px]"
+                  />
+                ) : (
+                  <MagicSun
+                    width="80px"
+                    zIndex="z-0"
+                    mobileTop="top-72"
+                    mobileLeft="left-[50px]"
+                  />
+                ))}
             </div>
           ))}
         </div>

@@ -2,42 +2,50 @@ import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
-const MagicWebinar7 = (): JSX.Element => {
+const MagicWebinar7 = ({ version = 1 }: { version?: number }): JSX.Element => {
+  const primaryColor =
+    version === 2 ? "text-ada-newPurple" : "text-ada-magicPurple"
+  const accentColor = version === 2 ? "text-ada-pink7" : "text-ada-magicOrange"
+  const bgColor = version === 2 ? "bg-ada-newPurple" : "bg-ada-magicOrange"
+
+  const renderTypography = (
+    text: string | React.ReactNode,
+    className: string,
+    variant: "h2" | "body" = "body"
+  ) => (
+    <Typography variant={variant} className={className}>
+      {text}
+    </Typography>
+  )
+
   return (
     <div className="bg-pink-100 py-16 px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center max-w-xl mx-auto pb-8">
-        <Typography
-          variant="h2"
-          className="font-bold max-w-xl mx-auto pb-4 text-center m-4"
-        >
-          <span className="text-ada-magicPurple">
-            Dlaczego jeszcze warto zapisać się na{" "}
-          </span>
-          <span className="text-ada-magicOrange">webinar</span>
-          <span className="text-ada-magicPurple">?</span>
-        </Typography>
-        <Typography
-          variant="body"
-          className="bg-ada-magicOrange text-white px-4 rounded-sm font-bold text-pink-100 m-4"
-        >
-          Zobacz, jakie wyniki możemy pomóc Ci osiągnąć:
-        </Typography>
+        {renderTypography(
+          <>
+            <span className={primaryColor}>
+              Dlaczego jeszcze warto zapisać się na{" "}
+            </span>
+            <span className={accentColor}>webinar</span>
+            <span className={primaryColor}>?</span>
+          </>,
+          "font-bold max-w-xl mx-auto pb-4 text-center m-4",
+          "h2"
+        )}
+        {renderTypography(
+          "Zobacz, jakie wyniki możemy pomóc Ci osiągnąć:",
+          `${bgColor} px-4 rounded-sm font-bold text-white m-4`
+        )}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto">
-        <Typography
-          variant="body"
-          className="text-ada-magicPurple font-bold m-4"
-        >
-          Zakupy o łącznej wartości 3900 zł z kampanii, na którą wydałyśmy 203
-          zł? Proszę bardzo!
-        </Typography>
-        <Typography
-          variant="body"
-          className="text-ada-magicPurple font-bold  m-4"
-        >
-          Niecałe 5 zł za wartościowy kontakt? Da się zrobić! Basia jest
-          zadowolona
-        </Typography>
+        {renderTypography(
+          "Zakupy o łącznej wartości 3900 zł z kampanii, na którą wydałyśmy 203 zł? Proszę bardzo!",
+          "text-ada-magicPurple font-bold m-4"
+        )}
+        {renderTypography(
+          "Niecałe 5 zł za wartościowy kontakt? Da się zrobić! Basia jest zadowolona",
+          "text-ada-magicPurple font-bold m-4"
+        )}
         {/* Row 1 */}
 
         <StaticImage
@@ -73,12 +81,10 @@ const MagicWebinar7 = (): JSX.Element => {
         />
 
         <div className="flex flex-col">
-          <Typography
-            variant="body"
-            className="text-ada-magicPurple font-bold m-4"
-          >
-            Pomogłyśmy Oli zebrać prawie 2000 osób na webinar!
-          </Typography>
+          {renderTypography(
+            "Pomogłyśmy Oli zebrać prawie 2000 osób na webinar!",
+            "text-ada-magicPurple font-bold m-4"
+          )}
 
           <StaticImage
             src={"../../images/masterclass1Info.webp"}

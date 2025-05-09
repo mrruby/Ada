@@ -33,6 +33,7 @@ module.exports = {
           brown: "#9B3118",
           black: "#000000",
           newPurple: "#3D03A1",
+          newPurple2: "#9D70E9",
           magicPurple: "#5D4294",
           magicPurple2: "#584596",
           magicOrange: "#EE701E",
