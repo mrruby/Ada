@@ -12,6 +12,7 @@ const MagicWebinarPage = (): JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MagicWebinar1 version={2} />
+      <MagicWebinar12 version={2} />
       <MagicWebinar3 version={2} />
       <MagicWebinar4 version={2} />
       <MagicWebinar5 version={2} />
