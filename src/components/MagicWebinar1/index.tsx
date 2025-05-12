@@ -144,14 +144,13 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
       return (
         <div className="mb-4 max-w-[400px]">
           <Typography variant="h1" className="mb-4 md:pt-20 text-ada-yellow3">
-            Marketing Ads Girls
+            Adsy Starter Pack: Ogarniam kampanię reklamową w małej firmie!
             <br />
-            Inside Club
-            <span className="text-ada-pink7 uppercase"> (MAGIC)</span>
+            <span className="text-ada-pink7 uppercase">Warsztat za 0 zł</span>
           </Typography>
           <Typography variant="body" className="mb-6 text-white">
-            Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod
-            czujnym okiem profesjonalistek
+            Najlepszy czas na działanie jest teraz: wspólnie z 3 ekspertkami,
+            przygotujesz swój biznes do kampanii reklamowej Meta Ads.
           </Typography>
           <Button
             type="button"

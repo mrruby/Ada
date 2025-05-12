@@ -16,19 +16,24 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
 
   const targetAudiences = [
     {
-      title: "Właścicielek marek osobistych",
+      title: "Jesteś marką osobistą lub soloprzedsiębiorczynią",
       description:
-        "- które chcą zdobywać klientów dzięki budowaniu relacji z odbiorcami",
+        "- i chcesz wystartować z reklamami bez przepalania budżetu.",
     },
     {
-      title: "Kobiet rozwijających własne sklepy online",
+      title: "Prowadzisz mikro-e-commerce albo tworzysz butikowe produkty",
       description:
-        "- które zastanawiają się kogo wybrać: agencję czy freelancera",
+        "- i potrzebujesz stabilnego wzrostu bez pomocy dużej agencji.",
     },
     {
-      title: "Lokalnych biznesów",
+      title: "Pracujesz jako marketerka lub SMM-ka dla kobiecych marek",
       description:
-        "- które muszą wyróżnić się na zatłoczonym rynku, aby klienci trafiali właśnie do nich",
+        "- i szukasz sprawdzonego procesu „od briefu do wyniku” w Meta Ads.",
+    },
+    {
+      title: "Należysz do jednej z dwóch grup:",
+      description:
+        "- już próbowałaś i się sparzyłaś lub dopiero startujesz i chcesz uniknąć typowych błędów.",
     },
   ]
 
@@ -65,11 +70,9 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
                   variant="h1"
                   className="text-4xl md:text-5xl font-bold"
                 >
-                  <span className={primaryColor}>Ten</span>{" "}
-                  <span className={secondaryColor}>webinar</span>{" "}
-                  <span className={primaryColor}>
-                    jest stworzony specjalnie dla:
-                  </span>
+                  <span className={primaryColor}>🎯 Ten</span>{" "}
+                  <span className={secondaryColor}>warsztat </span>{" "}
+                  <span className={primaryColor}>jest dla Ciebie, jeśli…</span>
                 </Typography>
               </div>
 

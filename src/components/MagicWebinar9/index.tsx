@@ -41,23 +41,23 @@ const MagicWebinar9 = ({ version = 1 }: { version?: number }): JSX.Element => {
           <div className={primaryColor}>
             {renderTypography(
               <>
-                To <span className="font-semibold">intensywna sesja,</span>{" "}
-                podczas której poznasz konkretne strategie i narzędzia. Nie
-                będziemy marnować Twojego czasu na teoretyzowanie — skupimy się
-                wyłącznie na działaniach, które są praktyczne i działają!
+                To 60-minutowe spotkanie warsztatowe.. W czasie spotkania
+                wypełnisz karty pracy razem z nami, więc kończysz z gotowym
+                planem kampanii, a nie stertą luźnych notatek. Skupiamy się
+                wyłącznie na sprawdzonych krokach, inspiracjach, konkretnej
+                wiedzy.
               </>,
               "text-lg"
             )}
           </div>
 
           <div className={primaryColor}>
-            {renderTypography("Gwarancja satysfakcji", "mb-4", "h3")}
             {renderTypography(
-              "Jeśli nie wyniesiesz z webinaru konkretnej wartości - zwrócimy Ci czas! 😉",
-              "text-lg mb-4"
-            )}
-            {renderTypography(
-              "A tak serio, serio: wiemy, że pewnie czasem brakuje Ci czasu nawet na zrobienie kawy, więc szykujemy dla Ciebie samo marketingowe mięsko.",
+              <>
+                Nagranie i materiały będą darmowe tylko do <b>28 maja</b> -
+                później cały pakiet trafi do sklepu jako produkt płatny. Jeśli
+                chcesz zgarnąć wiedzę gratis, wskakuj teraz!
+              </>,
               "text-lg"
             )}
           </div>

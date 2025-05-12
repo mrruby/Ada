@@ -11,26 +11,32 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
     {
       title: (
         <>
-          Udział w intensywnym
+          Warsztat LIVE — 21.05
           <br />
-          60-minutowym webinarze
+          💻
         </>
       ),
-      value: "397 zł",
-    },
-    {
-      title: <>Udział w sesji Q&A</>,
-      value: "397 zł",
+      value: "497 zł",
     },
     {
       title: (
         <>
-          Dostęp do nagrania
+          Karty pracy + dostęp do nagrania na 7 dni
           <br />
-          webinaru na 7 dni
+          📝
         </>
       ),
-      value: "297 zł",
+      value: "197 zł",
+    },
+    {
+      title: (
+        <>
+          Grupowe Q&A — 28.05
+          <br />
+          🎤
+        </>
+      ),
+      value: "397 zł",
     },
   ]
 
@@ -65,6 +71,10 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
             </React.Fragment>
           ))}
         </div>
+        <p className={`text-center ${colors.heading} font-bold mb-12 mt-12`}>
+          Dziś 0 zł - po 28 maja nagranie i materiały trafią do sklepu jako
+          <b> produkt płatny.</b>
+        </p>
       </div>
     </div>
   )

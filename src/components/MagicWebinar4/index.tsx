@@ -22,31 +22,53 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const benefits = [
     {
       emoji: "📊",
-      text: "Jakie efekty przynosi reklama w małym biznesie\nbrz(i dlaczego 78% przedsiębiorczyń błędnie je rozumie)",
+      text: (
+        <>
+          Inspiracje i wskazówki przygotowane przez trzy specjalistki: Dorotę
+          (grafika), Justynę (copy) oraz Adę (adsy).
+        </>
+      ),
     },
     {
-      emoji: "💬",
-      text: "Jak wykorzystać reklamy do wyrażenia swojej\nbrmarki i przyciągnąć właściwych odbiorców",
+      emoji: "🎨",
+      text: (
+        <>
+          <b>Kreację, która zatrzymuje scroll</b> (i utrzymuje ciekawość)
+        </>
+      ),
     },
     {
-      emoji: "💎",
-      text: "Sprawdzony sposób na reklamy, który nie\nbrwywołuje u Ciebie ciar żenady",
+      emoji: "✍️",
+      text: (
+        <>
+          <b>Copy, które przyciąga</b>- bez nudy
+        </>
+      ),
     },
     {
       emoji: "🚀",
-      text: "Jak reklamować biznes, aby z każdej złotówki\nbrwłożonej w reklamy wyciągać kolejne 3/5/9 zł",
+      text: (
+        <>
+          Plan na
+          <b>kampanię reklamową, której wyniki wywołują uśmiech</b>
+        </>
+      ),
     },
   ]
 
-  const renderBenefit = ({ emoji, text }: { emoji: string; text: string }) => (
+  const renderBenefit = ({
+    emoji,
+    text,
+  }: {
+    emoji: string
+    text: React.ReactNode
+  }) => (
     <div
       key={emoji}
       className={`${accentColor} text-white p-6 rounded-sm flex items-start`}
     >
       <span className="text-xl mr-3">{emoji}</span>
-      <p className="text-left text-sm md:text-base">
-        {text.replace(/\nbr/g, "\n")}
-      </p>
+      <p className="text-left text-sm md:text-base">{text}</p>
     </div>
   )
 
@@ -62,7 +84,7 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
         <div className="bg-pink-200 px-4 py-2 mx-2 rounded-sm pb-4">
           <h1 className="text-xl md:text-3xl lg:text-4xl font-bold">
             <span className={textHighlightColor}>Co Cię czeka podczas </span>
-            <span className="text-ada-magicPurple">webinaru?</span>
+            <span className="text-ada-magicPurple">warsztatów?</span>
           </h1>
         </div>
         <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center">
@@ -90,8 +112,8 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
           <span className="font-bold">Nasz cel:</span>
         </div>
         <span className="text-white font-medium ml-2">
-          Pokazać Ci, że marketing online jest dla Ciebie na wyciągnięcie ręki.
-          Nawet jeśli dopiero zaczynasz i marzysz o podboju branży.
+          pokazać Ci, że reklamy na Facebooku i Instagramie zaczynają się od
+          dobrego, strategicznego planu. Przygotujemy go wspólnie!
         </span>
       </div>
 
