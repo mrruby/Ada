@@ -141,7 +141,7 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
             Rezerwuję miejsce!
           </span>
         }
-        sectionId="pakiety"
+        sectionId="form"
         textSize="text-sm md:text-base "
         btnStyle="uppercase bg-ada-pink7 
               font-semibold tracking-wide h-[48px] md:h-[60px] 
@@ -237,11 +237,11 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
             {/* Text and Form Content */}
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col">
               {renderContent()}
-              {renderForm()}
+              <section id="form">{renderForm()}</section>
             </div>
 
             {/* Image Content */}
-            <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:-mt-16">
+            <div className="lg:col-span-5 order-3 lg:order-2 flex justify-center lg:-mt-16">
               <div className="relative w-full max-w-[500px] aspect-[3/4]">
                 <div className="z-10 absolute inset-0 flex items-end justify-center">
                   <StaticImage

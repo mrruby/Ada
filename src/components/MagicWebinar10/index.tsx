@@ -31,7 +31,7 @@ const MagicWebinar10 = ({ version = 1 }: { version?: number }): JSX.Element => {
         <div className="flex items-center justify-center gap-4 mb-12 relative">
           {renderSun("-left-10", "animate-spin-slow")}
           <Typography variant="h1" className={colors.accent}>
-            Liczba miejsc ograniczona!
+            Adsy Starter Pack: Ogarniam kampanię reklamową w małej firmie!
           </Typography>
           {renderSun("-right-10", "animate-spin-slow")}
         </div>

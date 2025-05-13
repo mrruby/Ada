@@ -62,20 +62,6 @@ const MagicWebinar5 = ({ version = 1 }: { version?: number }): JSX.Element => {
       ),
       imageUrl: "dorota",
     },
-    {
-      name: "Nicola Kut",
-      title: "Koordynatorka projektów i aspirująca analityczka biznesowa",
-      description: (
-        <>
-          Nadzoruję realizację projektów, dbając o każdy szczegół i dotrzymanie
-          terminów. Specjalizuję się w pilnowaniu harmonogramów i zapewnianiu,
-          że każdy element pracy jest wykonany zgodnie z planem, co pozwala
-          całemu zespołowi{" "}
-          <span className="font-bold">działać sprawnie i efektywnie</span>.
-        </>
-      ),
-      imageUrl: "nicola",
-    },
   ]
 
   return (

@@ -1,4 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import React from "react"
 import Typography from "../shared/Typography"
 
@@ -79,6 +80,19 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
               <div className="space-y-6">
                 {targetAudiences.map(renderAudienceItem)}
               </div>
+              <Button
+                type="button"
+                text={
+                  <span className="font-bold text-white uppercase">
+                    Tak, to o mnie!
+                  </span>
+                }
+                sectionId="signup"
+                textSize="text-sm md:text-base "
+                btnStyle="uppercase bg-ada-pink7 
+                            font-semibold tracking-wide h-[48px] md:h-[60px] 
+                            px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"
+              />
             </div>
 
             <div className="relative w-full md:w-auto">

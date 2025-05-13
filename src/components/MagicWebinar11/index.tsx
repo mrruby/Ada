@@ -32,7 +32,7 @@ const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
     {
       question: "Czy warsztat jest odpowiedni dla początkujących?",
       answer:
-        "Absolutnie! Przedstawimy strategie w sposób przystępny, bez żargonu. Niezależnie od Twojego poziomu wiedzy, wyniesiesz wartościowe wskazówki",
+        "Pewnie! Przedstawimy strategie w sposób przystępny, bez żargonu. Niezależnie od Twojego poziomu wiedzy, wyniesiesz wartościowe wskazówki",
     },
   ]
 
