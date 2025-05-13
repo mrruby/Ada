@@ -9,27 +9,30 @@ type ListItem = {
 const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const faqList: ListItem[] = [
     {
-      question: "Czy webinar jest płatny?",
-      answer: "Nie, webinar jest całkowicie bezpłatny!",
+      question: "Czy będzie nagranie?",
+      answer: "Tak, przez 7 dni.",
     },
     {
-      question: "Jak długo będzie trwał webinar?",
-      answer: "Około 60 minut + dodatkowy czas na sesję Q&A",
-    },
-    {
-      question: "Czy na webinarze będzie sprzedaż?",
+      question: "Muszę znać Ads Managera?",
       answer:
-        "Tak, na końcu przedstawimy ofertę dla osób, które będą chciały kontynuować pracę z nami, ale 90% webinaru to czysta wartość merytoryczna, którą możesz wdrożyć samodzielnie.",
+        "Nie - warsztaty to przygotowanie i rozpisanie planu na kampanię reklamową. Potem zaprosimy Cię do kontynuacji i wspólnej nauki reklam: ale bez względu na to, czy zdecydujesz się na dalszą współpracę, wyniesiesz ze spotkania mnóstwo wiedzy!",
     },
     {
-      question: "Czy webinar jest odpowiedni dla początkujących?",
-      answer:
-        "Absolutnie! Przedstawimy strategie w sposób przystępny, bez żargonu. Niezależnie od Twojego poziomu wiedzy, wyniesiesz wartościowe wskazówki.",
+      question: "Naprawdę 0 zł?",
+      answer: "Tak. Wersja płatna po 28 maja jest opcjonalna.",
     },
     {
-      question: "Jak długo będzie dostępne nagranie?",
+      question: "Nie mogę być na żywo?",
+      answer: "Zapisz się, otrzymasz link do nagrania na 7 dni.",
+    },
+    {
+      question: "Jak długo będą trwały warsztaty?",
+      answer: "Około 60 minut.",
+    },
+    {
+      question: "Czy warsztat jest odpowiedni dla początkujących?",
       answer:
-        "Nagranie będzie dostępne przez 7 dni po webinarze, wyłącznie dla zarejestrowanych uczestniczek.",
+        "Absolutnie! Przedstawimy strategie w sposób przystępny, bez żargonu. Niezależnie od Twojego poziomu wiedzy, wyniesiesz wartościowe wskazówki",
     },
   ]
 

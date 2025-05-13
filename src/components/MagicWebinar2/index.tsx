@@ -9,24 +9,50 @@ const MagicWebinar2 = ({ version = 1 }: { version?: number }): JSX.Element => {
 
   const cards = [
     {
-      emoji: "😩",
-      text: "Wszyscy chwalą się świetnymi wynikami, a ja nie widzę rezultatów...",
+      emoji: "✨",
+      text: (
+        <>
+          <b>Twoje reklamy finansują kolejne działania,</b> zamiast pożerać
+          budżet.
+        </>
+      ),
     },
     {
-      emoji: "😪",
-      text: "Konkurencja ciągle rośnie, a ja zostaję w tyle mimo ciężkiej pracy",
+      emoji: "💖",
+      text: (
+        <>
+          <b>Klientki trafiają prosto do Ciebie,</b> bo komunikaty mówią ich
+          językiem i budują autentyczną więź.
+        </>
+      ),
     },
     {
-      emoji: "💸",
-      text: "Chcę rozkręcić firmę, ale nie umiem w reklamy - potrzebuję pomocy!",
+      emoji: "⏱",
+      text: (
+        <>
+          <b> Masz wreszcie wolne popołudnia </b>- kampania pracuje na
+          zaprogramowanym autopilocie, bez Twojego ciągłego klikania.
+        </>
+      ),
     },
     {
-      emoji: "🤔",
-      text: "Nie mam pojęcia, które strategie reklamowe działają w moim biznesie",
+      emoji: "🚀",
+      text: (
+        <>
+          <b>Sprzedaż rośnie przewidywalnie</b>: wiesz dokładnie, który krok
+          przynosi wynik, więc skalujesz bez stresu.
+        </>
+      ),
     },
   ]
 
-  const renderCard = ({ emoji, text }: { emoji: string; text: string }) => (
+  const renderCard = ({
+    emoji,
+    text,
+  }: {
+    emoji: string
+    text: React.ReactNode
+  }) => (
     <div
       key={emoji}
       className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
@@ -56,23 +82,20 @@ const MagicWebinar2 = ({ version = 1 }: { version?: number }): JSX.Element => {
           variant="h1"
           className={`${textColor} text-4xl md:text-5xl font-bold text-center mb-12`}
         >
-          Czy kiedykolwiek myślałaś:
+          🔮 Wyobraź to sobie…
         </Typography>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full mx-auto mb-8">
           {cards.map(renderCard)}
         </div>
 
         {/* Bottom Message */}
         <div className="max-w-3xl mx-auto">
-          <div className="text-white p-6 max-w-lg mx-auto">
-            <div className="bg-ada-magicOrange p-1 text-white font-bold mr-1 mb-3 md:mb-0 inline">
-              Prawda jest taka:
-            </div>
+          <div className="text-white p-6 max-w-2xl mx-auto mb-8">
             <Typography variant="body" className="text-lg inline">
-              Nie potrzebujesz większego budżetu marketingowego. Potrzebujesz
-              skuteczniejszej strategii.
+              21 maja (środa) | 18:00 Grafika • Copy • Adsy na Facebooku &
+              Instagramie
             </Typography>
           </div>
         </div>

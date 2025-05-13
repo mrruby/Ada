@@ -31,9 +31,7 @@ const MagicWebinar10 = ({ version = 1 }: { version?: number }): JSX.Element => {
         <div className="flex items-center justify-center gap-4 mb-12 relative">
           {renderSun("-left-10", "animate-spin-slow")}
           <Typography variant="h1" className={colors.accent}>
-            Nie czekaj - liczba
-            <br />
-            miejsc ograniczona!
+            Liczba miejsc ograniczona!
           </Typography>
           {renderSun("-right-10", "animate-spin-slow")}
         </div>
@@ -43,7 +41,7 @@ const MagicWebinar10 = ({ version = 1 }: { version?: number }): JSX.Element => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="text-2xl">⏰</span>
             <Typography variant="h2" className="text-[#5D4B8C]">
-              Termin: 10.04
+              Termin: 21.05
             </Typography>
           </div>
           <div className="flex items-center justify-center gap-3">
@@ -54,7 +52,7 @@ const MagicWebinar10 = ({ version = 1 }: { version?: number }): JSX.Element => {
           </div>
         </div>
 
-        <CountdownTimer targetDate={new Date("2025-04-10T18:00:00")} />
+        <CountdownTimer targetDate={new Date("2025-05-21T18:00:00")} />
 
         {/* Sign up button */}
         <Button
