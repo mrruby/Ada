@@ -14,6 +14,7 @@ import {
 } from "helpers/LayoutElements"
 import TypingAnimation from "helpers/TypingAnimation"
 import React, { useEffect } from "react"
+import magicWebinarForm22 from "../../values/forms/magic-form-22.05.html"
 import magicWebinarForm from "../../values/forms/magic-webinar.html"
 
 const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
@@ -233,6 +234,31 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
     )
   }
 
+  const renderForm = () => {
+    if (isPinkVersion) {
+      return (
+        <div className="bg-white shadow-lg rounded-lg mt-2 p-6 border-t-4 border-ada-magicOrange">
+          <div
+            className="mb-6"
+            dangerouslySetInnerHTML={{ __html: magicWebinarForm22 }}
+          />
+          <div className="flex items-center bg-ada-magicPurple/10 p-3 rounded">
+            <div className="bg-ada-magicPurple px-2 py-1 text-white font-bold mr-3 rounded">
+              Uwaga:
+            </div>
+            <Typography
+              variant="body"
+              className="text-ada-magicPurple font-bold"
+            >
+              Ilość miejsc ograniczona - zdecyduj się teraz!
+            </Typography>
+          </div>
+        </div>
+      )
+    }
+    return null
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className={`text-white py-4 px-6 md:px-12 ${headerBgColor}`}>
@@ -252,25 +278,7 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
             {/* Text and Form Content */}
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col">
               {renderContent()}
-
-              {/* Form Section */}
-              <div className="bg-white shadow-lg rounded-lg mt-2 p-6 border-t-4 border-ada-magicOrange">
-                <div
-                  className="mb-6"
-                  dangerouslySetInnerHTML={{ __html: magicWebinarForm }}
-                />
-                <div className="flex items-center bg-ada-magicPurple/10 p-3 rounded">
-                  <div className="bg-ada-magicPurple px-2 py-1 text-white font-bold mr-3 rounded">
-                    Uwaga:
-                  </div>
-                  <Typography
-                    variant="body"
-                    className="text-ada-magicPurple font-bold"
-                  >
-                    Ilość miejsc ograniczona - zdecyduj się teraz!
-                  </Typography>
-                </div>
-              </div>
+              {renderForm()}
             </div>
 
             {/* Image Content */}
