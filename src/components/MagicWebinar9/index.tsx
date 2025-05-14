@@ -31,7 +31,7 @@ const MagicWebinar9 = ({ version = 1 }: { version?: number }): JSX.Element => {
           {renderTypography(
             <>
               <span className={primaryColor}>UWAGA: Nie jest to typowy </span>
-              <span className={accentColor}>webinar</span>
+              <span className={accentColor}>warsztat</span>
               <span className={primaryColor}> pełen ogólników</span>
             </>,
             "text-center md:text-left max-w-lg",
@@ -41,7 +41,7 @@ const MagicWebinar9 = ({ version = 1 }: { version?: number }): JSX.Element => {
           <div className={primaryColor}>
             {renderTypography(
               <>
-                To 60-minutowe spotkanie warsztatowe.. W czasie spotkania
+                To 90-minutowe spotkanie warsztatowe. W czasie spotkania
                 wypełnisz karty pracy razem z nami, więc kończysz z gotowym
                 planem kampanii, a nie stertą luźnych notatek. Skupiamy się
                 wyłącznie na sprawdzonych krokach, inspiracjach, konkretnej
