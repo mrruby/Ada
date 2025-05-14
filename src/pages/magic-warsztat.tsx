@@ -7,7 +7,6 @@ import MagicWebinar2 from "components/MagicWebinar2"
 import MagicWebinar3 from "components/MagicWebinar3"
 import MagicWebinar4 from "components/MagicWebinar4"
 import MagicWebinar5 from "components/MagicWebinar5"
-import MagicWebinar6 from "components/MagicWebinar6"
 import MagicWebinar8 from "components/MagicWebinar8"
 import MagicWebinar9 from "components/MagicWebinar9"
 import SEO from "components/seo"
@@ -21,7 +20,6 @@ const MagicWebinarPage = (): JSX.Element => {
       <MagicWebinar3 version={2} />
       <MagicWebinar4 version={2} />
       <MagicWebinar5 version={2} />
-      <MagicWebinar6 version={2} />
       <MagicWebinar8 version={2} />
       <MagicWebinar10 version={2} />
       <MagicWebinar9 version={2} />

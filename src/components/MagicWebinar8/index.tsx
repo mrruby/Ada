@@ -16,7 +16,7 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
           💻
         </>
       ),
-      value: "497 zł",
+      value: "197 zł",
     },
     {
       title: (
@@ -26,7 +26,7 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
           📝
         </>
       ),
-      value: "197 zł",
+      value: "97 zł",
     },
     {
       title: (
@@ -36,7 +36,7 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
           🎤
         </>
       ),
-      value: "397 zł",
+      value: "297 zł",
     },
   ]
 
