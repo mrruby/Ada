@@ -48,7 +48,7 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
       <div>
         <Typography
           variant="h3"
-          className={`text-xl font-semibold ${backgroundColor} text-white px-3 py-1 inline`}
+          className={`text-xl font-semibold ${backgroundColor} text-white pl-1 pr-3 py-1 inline`}
         >
           {title}
         </Typography>

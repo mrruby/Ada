@@ -23,36 +23,23 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
     {
       emoji: "📊",
       text: (
-        <>
+        <b>
           Inspiracje i wskazówki przygotowane przez trzy specjalistki: Dorotę
           (grafika), Justynę (copy) oraz Adę (adsy).
-        </>
+        </b>
       ),
     },
     {
       emoji: "🎨",
-      text: (
-        <>
-          <b>Kreację, która zatrzymuje scroll</b> (i utrzymuje ciekawość)
-        </>
-      ),
+      text: <b>Kreację, która zatrzymuje scroll (i utrzymuje ciekawość)</b>,
     },
     {
       emoji: "✍️",
-      text: (
-        <>
-          <b>Copy, które przyciąga</b>- bez nudy
-        </>
-      ),
+      text: <b>Copy, które przyciąga - bez nudy</b>,
     },
     {
       emoji: "🚀",
-      text: (
-        <>
-          Plan na
-          <b> kampanię reklamową, której wyniki wywołują uśmiech</b>
-        </>
-      ),
+      text: <b>Plan na kampanię reklamową, której wyniki wywołują uśmiech</b>,
     },
   ]
 
