@@ -50,7 +50,7 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
       text: (
         <>
           Plan na
-          <b>kampanię reklamową, której wyniki wywołują uśmiech</b>
+          <b> kampanię reklamową, której wyniki wywołują uśmiech</b>
         </>
       ),
     },

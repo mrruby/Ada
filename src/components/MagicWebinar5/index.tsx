@@ -111,7 +111,7 @@ const MagicWebinar5 = ({ version = 1 }: { version?: number }): JSX.Element => {
         </div>
         {/* Second row: third member centered if present */}
         {teamMembers.length > 2 && (
-          <div className="flex flex-col md:flex-row gap-12 lg:gap-16 justify-center mt-12">
+          <div className="flex flex-col md:flex-row gap-12 lg:gap-16 justify-center mt-12 max-w-[700px] mx-auto">
             <div
               key={teamMembers[2].imageUrl}
               className="flex flex-row items-start relative"
