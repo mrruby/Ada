@@ -18,23 +18,22 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const targetAudiences = [
     {
       title: "Jesteś marką osobistą lub soloprzedsiębiorczynią",
-      description:
-        "- i chcesz wystartować z reklamami bez przepalania budżetu.",
+      description: "i chcesz wystartować z reklamami bez przepalania budżetu.",
     },
     {
       title: "Prowadzisz mikro-e-commerce albo tworzysz butikowe produkty",
       description:
-        "- i potrzebujesz stabilnego wzrostu bez pomocy dużej agencji.",
+        "i potrzebujesz stabilnego wzrostu bez pomocy dużej agencji.",
     },
     {
       title: "Pracujesz jako marketerka lub SMM-ka dla kobiecych marek",
       description:
-        "- i szukasz sprawdzonego procesu „od briefu do wyniku” w Meta Ads.",
+        "i szukasz sprawdzonego procesu „od briefu do wyniku” w Meta Ads.",
     },
     {
       title: "Należysz do jednej z dwóch grup:",
       description:
-        "- już próbowałaś i się sparzyłaś lub dopiero startujesz i chcesz uniknąć typowych błędów.",
+        "już próbowałaś i się sparzyłaś lub dopiero startujesz i chcesz uniknąć typowych błędów.",
     },
   ]
 
