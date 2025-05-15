@@ -14,6 +14,7 @@ interface Props {
   rotate?: string
   width?: string
   zIndex?: string
+  animate?: string
 }
 
 const ImageComponent: React.FC<
@@ -42,6 +43,7 @@ const ImageComponent: React.FC<
   rotate = "",
   widthValue,
   heightValue,
+  animate,
 }) => {
   return (
     <img
@@ -51,7 +53,7 @@ const ImageComponent: React.FC<
         bottom || ""
       } ${mobileTop || ""} ${mobileRight || ""} ${mobileLeft || ""} ${
         mobileBottom || ""
-      } ${zIndex} w-[${width}] ${maxWidth} ${rotate}`}
+      } ${zIndex} w-[${width}] ${maxWidth} ${rotate} ${animate}`}
       width={widthValue}
       height={heightValue}
     />
@@ -327,6 +329,7 @@ export const MagicSunYellow: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/magic-sun-yellow.svg"
     alt="Decorative sun"
+    animate="animate-spin-slow"
     {...props}
   />
 )
