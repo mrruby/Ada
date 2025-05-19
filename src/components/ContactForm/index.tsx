@@ -52,8 +52,8 @@ const ContactForm = ({ source = "default" }: ContactFormProps): JSX.Element => {
           <input
             required
             type="text"
-            name="name"
-            id="name"
+            name="surname"
+            id="surname"
             placeholder="Nazwisko"
             className={inputStyles}
           />
