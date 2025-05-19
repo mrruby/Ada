@@ -33,7 +33,7 @@ const peopleContent = [
   {
     name: "Nicola Kut",
     description:
-      "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisty pracy. .",
+      "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisy pracy. .",
     img: "nicola",
   },
 ]
