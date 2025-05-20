@@ -27,7 +27,7 @@ const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
     },
     {
       question: "Jak długo będą trwały warsztaty?",
-      answer: "Około 60 minut.",
+      answer: "Około 90 minut.",
     },
     {
       question: "Czy warsztat jest odpowiedni dla początkujących?",
