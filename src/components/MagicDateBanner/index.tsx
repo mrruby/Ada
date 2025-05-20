@@ -1,9 +1,9 @@
+import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import React, { useState } from "react"
+import Card from "../shared/Card"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
-import Card from "../shared/Card"
-import { Button } from "helpers/Button"
-import { StaticImage } from "gatsby-plugin-image"
 import MagicTile from "./MagicTile"
 
 const TimeBox = ({ children }: { children: React.ReactNode }) => (
@@ -15,13 +15,13 @@ const TimeBox = ({ children }: { children: React.ReactNode }) => (
 const magicTilesContent1 = [
   {
     colors: "bg-ada-pink8 text-ada-purple2",
-    title: "Inspirujące warsztaty tematyczne",
+    title: "warsztaty tematyczne",
     description:
       "2 specjalistyczne sesje miesięcznie - głęboko merytoryczne, zawsze na czasie!",
   },
   {
     colors: "bg-ada-purple2 text-ada-white",
-    title: "Stały dostęp do zespołu 5 ekspertek",
+    title: "dostęp do zespołu 4  ekspertek",
     description:
       "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach",
   },
@@ -29,11 +29,11 @@ const magicTilesContent1 = [
     colors: "bg-ada-pink8 text-ada-purple2",
     title: "Wsparcie techniczne",
     description:
-      "nielimitowane konsultacje pisemne przy wdrażaniu konkretnych rozwiązań reklamowych",
+      "konsultacje pisemne przy wdrażaniu konkretnych rozwiązań reklamowych",
   },
   {
     colors: "bg-ada-purple2 text-ada-white",
-    title: "Prasówki marketingowe",
+    title: "Prasówki: NIE TYLKO O REKLAMACH",
     description:
       "najświeższe nowinki ze świata marketingu wprost z raportów i od ekspertów z branży",
   },
@@ -42,19 +42,19 @@ const magicTilesContent1 = [
 const magicTilesContent2 = [
   {
     colors: "bg-ada-purple2 text-ada-white",
-    title: "3 godziny konsultacji grupowych",
+    title: "KONSULTACJE GRUPOWE",
     description:
-      "spotkania, na których problemy stają się dziecinnie prostą zabawą",
+      "spotkania, na których problemy marketingowe  stają się dziecinnie prostą zabawą",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
-    title: "Wsparcie i motywacja",
+    title: "SPOŁECZNOŚĆ I ZROZUMIENIE",
     description:
       "Społeczność przedsiębiorczych kobiet zorientowanych na sukces",
   },
   {
     colors: "bg-ada-purple2 text-ada-white ]",
-    title: "Wsparcie techniczne",
+    title: "Wsparcie Wsparcie I MOTYWACJA",
     description:
       "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
   },
@@ -131,8 +131,8 @@ const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
               wyjątkowy?
             </Typography>
             <Typography variant="body" className="pt-4">
-              Tutaj nie znajdziesz kolejnego kursu online. To Twój podręczny
-              abonament na marketing!
+              Tutaj nie znajdziesz nagrań bez możliwości kontaktu.{" "}
+              <b>To Twój podręczny abonament na marketing! </b>
             </Typography>
             <Typography variant="body" className="pt-4 font-bold uppercase">
               Dostajesz:

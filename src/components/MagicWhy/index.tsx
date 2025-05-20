@@ -1,7 +1,7 @@
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
-import { StaticImage } from "gatsby-plugin-image"
 
 const MagicWhy = ({ part }: { part: number }): JSX.Element => {
   return (
@@ -10,7 +10,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
         <div className="w-full text-white -mb-8">
           <Typography variant="h1" className="mb-8 text-center animate-bounce">
             <span className="text-ada-yellow3">MAGIC </span>
-            jest dla Ciebie, jeśli:
+            jest dla...
           </Typography>
         </div>
       )}
@@ -23,7 +23,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                   variant="h2"
                   className="mb-8 text-center animate-bounce"
                 >
-                  🧑‍🎓 Początkujących:
+                  🧑‍🎓 Przedsiębiorczyń:
                 </Typography>
                 <li className="mb-3">
                   ✅ dla osób, które
@@ -41,14 +41,18 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                   na nieefektywnych kampaniach
                 </li>
                 <li className="mb-3">
-                  ✅ <span className="font-bold">dla przedsiębiorczyń,</span>{" "}
-                  które chcą przestać działać po omacku i poznać sprawdzone
-                  fundamenty reklam
+                  ✅ które mają{" "}
+                  <span className="font-bold">
+                    pierwsze reklamy za sobą (lub klikały w “promuj post”)
+                  </span>{" "}
+                  ale nie są zadowolone z wyników
                 </li>
                 <li className="mb-3">
-                  ✅{" "}
-                  <span className="font-bold"> dla właścicielek biznesów,</span>{" "}
-                  które do tej pory polegały głównie na działaniach organicznych
+                  ✅ które do tej pory
+                  <span className="font-bold">
+                    {" "}
+                    polegały głównie na działaniach organicznych
+                  </span>{" "}
                   i chcą bezpiecznie wejść w reklamy
                 </li>
                 <li>
@@ -65,24 +69,25 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                   variant="h2"
                   className="mb-8 text-center animate-bounce"
                 >
-                  🧑‍🎓 Zaawansowanych:
+                  🧑‍🎓 Marketerek:
                 </Typography>
                 <li className="mb-3">
-                  ✅ dla tych,
+                  ✅ które chcą
                   <span className="font-bold">
                     {" "}
-                    którzy zastanawiają się, jak przeskalować swój biznes
-                  </span>{" "}
-                  na następny poziom i potrzebują sprawdzonych strategii
-                  reklamowych
+                    poznać najnowsze trendy i narzędzia reklamowe, wyprzedzając
+                    konkurencję{" "}
+                  </span>
                 </li>
                 <li className="mb-3">
-                  ✅ dla tych, którzy
+                  ✅{" "}
                   <span className="font-bold">
-                    {" "}
-                    już prowadzą reklamy i chcą robić to lepiej,
+                    dla social media managerek, wirtualnych asystentek,
                   </span>{" "}
-                  osiągając wyższe ROAS
+                  które otrzymują zapytania o reklamy i{" "}
+                  <span className="font-bold">
+                    chcą zarabiać na prowadzeniu kampanii{" "}
+                  </span>
                 </li>
                 <li className="mb-3">
                   ✅ dla tych, którzy
@@ -93,15 +98,17 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                   i optymalizować koszty pozyskania klienta
                 </li>
                 <li className="mb-3">
-                  ✅
-                  <span className="font-bold"> dla właścicielek biznesów,</span>{" "}
-                  które są gotowe na pracę z zaawansowanymi strategiami i
-                  skalowanie swoich wyników
+                  ✅ które chcą{" "}
+                  <span className="font-bold"> skonsultować swoje wyniki</span>{" "}
+                  i dowiedzieć się, jak je poprawić
                 </li>
                 <li className="mb-3">
-                  ✅<span className="font-bold"> dla marketerek,</span> które
-                  chcą poznać najnowsze trendy i narzędzia reklamowe,
-                  wyprzedzając konkurencję
+                  ✅ dla tych, którzy
+                  <span className="font-bold">
+                    {" "}
+                    już prowadzą reklamy i chcą robić to lepiej,
+                  </span>{" "}
+                  osiągając wyższe ROAS
                 </li>
               </ul>
             </div>
@@ -199,6 +206,58 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
               />
             </div>
           </div>
+        </div>
+      )}
+      {part == 5 && (
+        <div className="w-full text-white -mb-8">
+          <Typography variant="h1" className="mb-8 text-center animate-bounce">
+            Co otrzymasz w <span className="text-ada-yellow3">MAGIC:</span>
+          </Typography>
+        </div>
+      )}
+      {part == 6 && (
+        <div className="w-full text-black mb-8">
+          <ul className="mx-auto max-w-lg">
+            <li className="mb-3">
+              👩‍💻 <span className="font-bold">konsultacje pisemne</span> z
+              ekspertkami
+            </li>
+            <li className="mb-3">
+              <span className="font-bold">🎥 materiały szkoleniowe video</span>{" "}
+              z ustawiania kampanii reklamowych i nie tylko
+            </li>
+            <li className="mb-3">
+              🚀 dostęp do{" "}
+              <span className="font-bold">wewnętrznej bazy wiedzy</span>
+            </li>
+            <li className="mb-3">
+              🗓️ udział w dwóch{" "}
+              <span className="font-bold">
+                1,5-godzinnych sesjach konsultacji grupowych{" "}
+              </span>
+              miesięcznie
+            </li>
+            <li>
+              💡 udział w dwóch{" "}
+              <span className="font-bold">
+                autorskich warsztatach tematycznych
+              </span>{" "}
+              w miesiącu
+            </li>
+            <li>
+              👀{" "}
+              <span className="font-bold">nielimitowany dostęp do nagrań</span>{" "}
+              ze wszystkich spotkań
+            </li>
+          </ul>
+        </div>
+      )}
+      {part == 7 && (
+        <div className="w-full text-black -mb-8">
+          <Typography variant="h1" className="mb-8 text-center animate-bounce">
+            Wybierz swój model subskrypcji{" "}
+            <span className="text-ada-pink7">MAGIC:</span>
+          </Typography>
         </div>
       )}
     </Section>

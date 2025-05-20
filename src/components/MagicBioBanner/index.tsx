@@ -1,9 +1,8 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 import PersonBox from "./PersonBox"
-import { Button } from "helpers/Button"
 
 const peopleContent = [
   {
@@ -25,15 +24,9 @@ const peopleContent = [
     img: "dorota",
   },
   {
-    name: "Marianna Ciniak",
-    description:
-      "Ekspertka od automatyzacji i psycholożka. Doskonale wie, jak zautomatyzować Twój biznes i pomoże Ci to zrobić.",
-    img: "marianna",
-  },
-  {
     name: "Nicola Kut",
     description:
-      "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisy pracy. .",
+      "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisy pracy.",
     img: "nicola",
   },
 ]
@@ -99,7 +92,7 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
               Kogo spotkasz w <span className="text-ada-pink7">MAGIC?</span>
             </Typography>
             <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
-              {peopleContent.slice(0, 3).map((item, i) => (
+              {peopleContent.slice(0, 2).map((item, i) => (
                 <PersonBox
                   key={i}
                   name={item.name}
@@ -109,7 +102,7 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
               ))}
             </div>
             <div className="flex flex-col md:flex-row gap-6 pt-8 mb-8 justify-center">
-              {peopleContent.slice(3, 5).map((item, i) => (
+              {peopleContent.slice(2, 4).map((item, i) => (
                 <PersonBox
                   key={i}
                   name={item.name}

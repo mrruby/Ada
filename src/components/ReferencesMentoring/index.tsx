@@ -375,6 +375,61 @@ const referencesMagicList: IReferencesList[] = [
   },
 ]
 
+const referencesMagicList2: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinionNew1.webp"}
+        alt="Opinia o Magic"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinionNew2.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinionNew3.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinionNew4.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
+
 const ReferencesMentoring = ({
   title1,
   title2,
@@ -466,7 +521,7 @@ const ReferencesMentoring = ({
             autoPlay
             autoPlaySpeed={2000}
           >
-            {referencesList4.map((reference, index) => (
+            {referencesMagicList2.map((reference, index) => (
               <Reference key={index} image={reference.image} />
             ))}
           </Carousel>

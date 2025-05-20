@@ -1,8 +1,7 @@
-import React from "react"
-import { Button } from "helpers/Button"
-import { Accordion } from "helpers/Accordion"
-import CountdownTimer from "helpers/CountdownTimer"
 import ReferencesSmall from "components/ReferencesSmall"
+import { Accordion } from "helpers/Accordion"
+import { Button } from "helpers/Button"
+import React from "react"
 
 interface ListItem {
   question: string
@@ -411,12 +410,16 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "💫 Jak działa członkostwo w MAGIC?",
       answer: (
         <>
-          Możesz dołączyć do nas wybierając plan miesięczny z elastyczną opcją
-          rezygnacji przed końcem okresu rozliczeniowego. Dołączając teraz,
-          zyskujesz gwarancję ceny przez cały okres trwania subskrypcji.
-          Dostępny jest też plan roczny, opłacany z góry, który daje Ci dostęp
-          do wszystkich benefitów przez pełne 12 miesięcy - oczywiście w niższej
-          cenie!
+          Możesz dołączyć do MAGIC wybierając jeden z gotowych planów: 3-, 6-
+          lub 9-miesięczny. To Ty decydujesz, jak długo zostajesz - im dłuższy
+          pakiet wybierzesz, tym niższa cena za miesiąc. <br />
+          Członkostwo opłacane jest z góry za wybrany okres i daje Ci pełny
+          dostęp do wszystkich benefitów: społeczności, warsztatów, aktualizacji
+          i wsparcia reklamowego. Po zakończeniu wybranego planu możesz
+          zdecydować, czy chcesz zostać z nami na dłużej.
+          <br />
+          Dołączając teraz, zyskujesz gwarancję ceny przez cały okres
+          subskrypcji.
         </>
       ),
     },

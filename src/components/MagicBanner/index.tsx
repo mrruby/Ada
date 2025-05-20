@@ -30,48 +30,81 @@ const bannerContent = [
 
 const magicBannerContent = [
   {
-    circleKey: "yellowCircle",
+    circleKey: "purpleCircle",
     iconKey: "",
-    bgColor: "bg-ada-purple2",
+    bgColor: "bg-ada-pink7",
     price: (
-      <div className="absolute text-ada-purple2 flex flex-col text-adaDesc font-bold left-[20px] z-30 top-[20px] w-[100px]">
-        <p>333 zł</p>
-        <p>mies.</p>
+      <div className="text-white flex flex-col text-center font-bold">
+        <p className="md:text-adaSubtitleThird">291 zł</p>
+        <p className="md:text-adaSubtitle">miesięcznie</p>
       </div>
     ),
     description: (
       <>
-        <div className="text-ada-white font-bold  md:text-adaSubtitle mt-2 mb-4">
-          <p>społeczność + konsultacje</p>
-          <p>+ warsztaty + spotkania</p>
+        <div className="text-ada-white font-bolde mt-2 mb-2 border-t-2 border-ada-yellow2 ">
+          <p>6 miesięcy</p>
+          <p>razem: 1746 zł</p>
         </div>
-        <p className="pb-2">
-          ✅ nielimitowane konsultacje pisemne z ekspertkami
-        </p>
-        <p className="pb-2">
-          ✅ materiały szkoleniowe video z ustawiania kampanii reklamowych i nie
-          tylko
-        </p>
-        <p className="pb-2">✅ 2 prasówki z nowościami z branży w miesiącu</p>
-        <p className="pb-2">
-          ✅ udział w dwóch 1,5-godzinnych sesjach konsultacji grupowych
-          miesięcznie
-        </p>
-        <p className="pb-2">
-          ✅ udział w dwóch autorskich warsztatach tematycznych w miesiącu
-        </p>
-        <p className="pb-2">
-          ✅ nielimitowany dostęp do nagrań ze wszystkich spotkań
-        </p>
         <Button
           type="button"
-          text="Zapisz się na listę oczekujących"
-          sectionId="zainteresowani-form"
+          text="Wybieram"
+          url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
           btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
         />
       </>
     ),
-    url: undefined,
+    url: "https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi",
+  },
+  {
+    circleKey: "purpleCircle",
+    iconKey: "",
+    bgColor: "bg-ada-magicYellow",
+    price: (
+      <div className="text-ada-pink7 flex flex-col text-center font-bold">
+        <p className="md:text-adaSubtitleThird">302 zł</p>
+        <p className="md:text-adaSubtitle">miesięcznie</p>
+      </div>
+    ),
+    description: (
+      <>
+        <div className="text-ada-pink7 font-bolde mt-2 mb-2 border-t-2 border-ada-pink7 ">
+          <p>3 miesięce</p>
+          <p>razem: 907 zł</p>
+        </div>
+        <Button
+          type="button"
+          text="Wybieram"
+          url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
+          btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
+        />
+      </>
+    ),
+    url: "https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi",
+  },
+  {
+    circleKey: "purpleCircle",
+    iconKey: "",
+    bgColor: "bg-ada-pink8",
+    price: (
+      <div className="text-ada-pink7 flex flex-col text-center font-bold">
+        <p className="md:text-adaSubtitleThird">333 zł</p>
+        <p className="md:text-adaSubtitle">miesięcznie</p>
+      </div>
+    ),
+    description: (
+      <>
+        <div className="text-ada-pink7 font-bolde mt-2 mb-8 border-t-2 border-ada-pink7">
+          <p>1 miesięc</p>
+        </div>
+        <Button
+          type="button"
+          text="Wybieram"
+          url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
+          btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
+        />
+      </>
+    ),
+    url: "https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi",
   },
 ]
 
@@ -221,7 +254,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
       {version == 2 && (
         <Section bgColor="bg-white" className="text-black" id="pakiety">
           <div
-            className="grid grid-cols-1 gap-20 md:gap-12 pt-8 max-w-xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-12 pt-8 mx-auto"
             onMouseOver={handleMouseEnter}
           >
             {magicBannerContent.map((item, i) => (
@@ -342,9 +375,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                     TAK!
                   </span>
                   <br />
-                  <span className="">
-                    Chcę wreszcie pokonać reklamowy chaos!
-                  </span>
+                  <span className="">Zwiększam sprzedaż dzięki reklamom!</span>
                 </>
               }
               sectionId="pakiety"
