@@ -31,17 +31,17 @@ const bannerContent = [
 const magicBannerContent = [
   {
     circleKey: "purpleCircle",
-    iconKey: "",
+    iconKey: "6-calender",
     bgColor: "bg-ada-pink7",
     price: (
       <div className="text-white flex flex-col text-center font-bold">
-        <p className="md:text-adaSubtitleThird">291 zł</p>
-        <p className="md:text-adaSubtitle">miesięcznie</p>
+        <p className="text-adaSubtitleThird">291 zł</p>
+        <p className="text-adaSubtitle">miesięcznie</p>
       </div>
     ),
     description: (
       <>
-        <div className="text-ada-white font-bolde mt-2 mb-2 border-t-2 border-ada-yellow2 ">
+        <div className="text-ada-white mt-2 mb-2 border-t-2 border-ada-yellow2 ">
           <p>6 miesięcy</p>
           <p>razem: 1746 zł</p>
         </div>
@@ -57,17 +57,17 @@ const magicBannerContent = [
   },
   {
     circleKey: "purpleCircle",
-    iconKey: "",
+    iconKey: "3-calender",
     bgColor: "bg-ada-magicYellow",
     price: (
       <div className="text-ada-pink7 flex flex-col text-center font-bold">
-        <p className="md:text-adaSubtitleThird">302 zł</p>
-        <p className="md:text-adaSubtitle">miesięcznie</p>
+        <p className="text-adaSubtitleThird">302 zł</p>
+        <p className="text-adaSubtitle">miesięcznie</p>
       </div>
     ),
     description: (
       <>
-        <div className="text-ada-pink7 font-bolde mt-2 mb-2 border-t-2 border-ada-pink7 ">
+        <div className="text-ada-pink7 mt-2 mb-2 border-t-2 border-ada-pink7 ">
           <p>3 miesięce</p>
           <p>razem: 907 zł</p>
         </div>
@@ -83,17 +83,17 @@ const magicBannerContent = [
   },
   {
     circleKey: "purpleCircle",
-    iconKey: "",
+    iconKey: "1-calender",
     bgColor: "bg-ada-pink8",
     price: (
       <div className="text-ada-pink7 flex flex-col text-center font-bold">
-        <p className="md:text-adaSubtitleThird">333 zł</p>
-        <p className="md:text-adaSubtitle">miesięcznie</p>
+        <p className="text-adaSubtitleThird">333 zł</p>
+        <p className="text-adaSubtitle">miesięcznie</p>
       </div>
     ),
     description: (
       <>
-        <div className="text-ada-pink7 font-bolde mt-2 mb-8 border-t-2 border-ada-pink7">
+        <div className="text-ada-pink7 mt-2 mb-8 border-t-2 border-ada-pink7">
           <p>1 miesięc</p>
         </div>
         <Button
