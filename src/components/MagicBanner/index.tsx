@@ -44,6 +44,7 @@ const magicBannerContent = [
         <div className="text-ada-white mt-2 mb-2 border-t-2 border-ada-yellow2 ">
           <p>6 miesięcy</p>
           <p>razem: 1746 zł</p>
+          <p>płatność jednorazowa</p>
         </div>
         <Button
           type="button"
@@ -68,8 +69,9 @@ const magicBannerContent = [
     description: (
       <>
         <div className="text-ada-pink7 mt-2 mb-2 border-t-2 border-ada-pink7 ">
-          <p>3 miesięce</p>
+          <p>3 miesiące</p>
           <p>razem: 907 zł</p>
+          <p>płatność jednorazowa</p>
         </div>
         <Button
           type="button"
@@ -94,7 +96,8 @@ const magicBannerContent = [
     description: (
       <>
         <div className="text-ada-pink7 mt-2 mb-8 border-t-2 border-ada-pink7">
-          <p>1 miesięc</p>
+          <p>1 miesiąc</p>
+          <p>płatność subskrypcyjna</p>
         </div>
         <Button
           type="button"
