@@ -48,7 +48,7 @@ const magicBannerContent = [
         </div>
         <Button
           type="button"
-          text="Wybieram"
+          text={<span className="font-bold uppercase">Wybieram!</span>}
           url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
           btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
         />
@@ -75,7 +75,7 @@ const magicBannerContent = [
         </div>
         <Button
           type="button"
-          text="Wybieram"
+          text={<span className="font-bold uppercase">Wybieram!</span>}
           url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
           btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
         />
@@ -101,7 +101,7 @@ const magicBannerContent = [
         </div>
         <Button
           type="button"
-          text="Wybieram"
+          text={<span className="font-bold uppercase">Wybieram!</span>}
           url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
           btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
         />

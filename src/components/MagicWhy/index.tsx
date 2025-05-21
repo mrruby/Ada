@@ -123,12 +123,13 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
               variant="h1"
               className="mb-8 text-center animate-bounce"
             >
-              Jak wygląda luty w<span className="text-ada-pink7"> MAGIC </span>?
+              Jak wygląda przykładowy miesiąc w
+              <span className="text-ada-pink7"> MAGIC </span>?
             </Typography>
           </div>
           <StaticImage
             loading="eager"
-            src="../../images/calendarMagic.png"
+            src="../../images/section.webp"
             alt=""
             placeholder="blurred"
             width={992}
