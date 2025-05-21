@@ -43,7 +43,8 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                 <li className="mb-3">
                   ✅ które mają{" "}
                   <span className="font-bold">
-                    pierwsze reklamy za sobą (lub klikały w “promuj post”)
+                    pierwsze reklamy za sobą (lub klikały w &quot;promuj
+                    post&quot;)
                   </span>{" "}
                   ale nie są zadowolone z wyników
                 </li>
@@ -168,38 +169,52 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center gap-8 mb-2 lg:ml-[-560px]">
-            <StaticImage
-              loading="eager"
-              src="../../images/MagdalenaPytIOdp.webp"
-              alt=""
-              placeholder="blurred"
-              width={605}
-              height={326}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
-          </div>
-          <div className="flex flex-col items-center gap-8 mb-2">
-            <div className="lg:ml-[480px] z-10 relative">
+          <div className="flex flex-col items-center">
+            <div className="lg:-ml-80">
               <StaticImage
                 loading="eager"
-                src="../../images/MonikaPyt.webp"
+                src="../../images/MagPyt.webp"
                 alt=""
                 placeholder="blurred"
-                width={679}
-                height={197}
+                width={700}
+                height={200}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
             </div>
-            <div className="-mt-12 md:ml-60">
+            <div className="lg:-ml-[500px] -mt-10">
               <StaticImage
                 loading="eager"
-                src="../../images/MonikaOdp.webp"
+                src="../../images/MagOdp.webp"
                 alt=""
                 placeholder="blurred"
-                width={709}
+                width={600}
+                height={120}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="lg:ml-[500px]">
+              <StaticImage
+                loading="eager"
+                src="../../images/MonPyt.webp"
+                alt=""
+                placeholder="blurred"
+                width={1200}
+                height={300}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div className="-mt-12 lg:ml-[480px]">
+              <StaticImage
+                loading="eager"
+                src="../../images/MonOdp.webp"
+                alt=""
+                placeholder="blurred"
+                width={1000}
                 height={274}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
