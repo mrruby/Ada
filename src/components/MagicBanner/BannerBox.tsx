@@ -32,13 +32,13 @@ const BannerBox = ({
         className={`absolute left-1/2 -top-16 -translate-x-1/2 w-[90px] h-[90px] ${zoom}`}
       >
         {title}
-        {price}
         <CircleImage circleKey={circleKey} />
         <IconImage iconKey={iconKey} />
       </div>
       <div
         className={`${bgColor} rounded-3xl p-4 md:p-6 text-center flex flex-col items-center justify-center shadow-lg pt-16 ${styles}`}
       >
+        {price}
         <p className="text-sm md:text-base leading-relaxed">{description}</p>
       </div>
     </div>
