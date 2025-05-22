@@ -34,6 +34,7 @@ const magicBannerContent = [
     iconKey: "6-calender",
     bgColor: "bg-ada-pink7",
     buttonColor: "bg-ada-pink7",
+    textColor: "text-ada-white",
     price: (
       <div className="text-white flex flex-col text-center font-bold">
         <p className="text-adaSubtitleThird">291 zł</p>
@@ -56,6 +57,7 @@ const magicBannerContent = [
     iconKey: "3-calender",
     bgColor: "bg-ada-magicYellow",
     buttonColor: "bg-ada-magicYellow",
+    textColor: "text-ada-pink7",
     price: (
       <div className="text-ada-pink7 flex flex-col text-center font-bold">
         <p className="text-adaSubtitleThird">302 zł</p>
@@ -78,6 +80,7 @@ const magicBannerContent = [
     iconKey: "1-calender",
     bgColor: "bg-ada-pink8",
     buttonColor: "bg-ada-pink8",
+    textColor: "text-ada-pink7",
     price: (
       <div className="text-ada-pink7 flex flex-col text-center font-bold">
         <p className="text-adaSubtitleThird">333 zł</p>
@@ -242,7 +245,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
       {version == 2 && (
         <Section bgColor="bg-white" className="text-black" id="pakiety">
           <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-12 pt-8 mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-24 md:gap-12 pt-8 mx-auto"
             onMouseOver={handleMouseEnter}
           >
             {magicBannerContent.map((item, i) => (
@@ -265,17 +268,20 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   description={item.description}
                   url={item.url}
                 />
-                <div className="flex justify-center">
-                  <Button
-                    type="button"
-                    text={
-                      <span className="font-bold uppercase">Wybieram!</span>
-                    }
-                    url={item.url}
-                    textSize="text-sm md:text-base"
-                    btnStyle={`mt-4 w-full ${item.buttonColor} text-white rounded-full px-8 py-3 font-semibold hover:opacity-90 transition-opacity`}
-                  />
-                </div>
+
+                <Button
+                  type="button"
+                  text={
+                    <span
+                      className={`font-bold text-md md:text-lg ${item.textColor} uppercase`}
+                    >
+                      Wybieram!
+                    </span>
+                  }
+                  url={item.url}
+                  textSize="text-sm md:text-base"
+                  btnStyle={`mt-4 w-full max-w-full ${item.buttonColor} text-white rounded-full px-8 py-3 font-semibold hover:opacity-90 transition-opacity`}
+                />
               </div>
             ))}
           </div>

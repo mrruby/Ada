@@ -144,7 +144,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
           <Typography variant="h1" className="mb-8 text-center animate-bounce ">
             Zobacz przykładowe pytania i odpowiedzi!
           </Typography>
-          <div className="flex flex-col items-center gap-8 mb-8">
+          <div className="flex flex-col items-center">
             <div className="lg:-ml-80">
               <StaticImage
                 loading="eager"
@@ -157,7 +157,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
                 quality={100}
               />
             </div>
-            <div className="-mt-12 lg:ml-[480px]">
+            <div className="lg:-mt-2 lg:ml-[480px]">
               <StaticImage
                 loading="eager"
                 src="../../images/AgnieszkaOdp.webp"
