@@ -308,7 +308,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                 allowFullScreen
               ></iframe>
             </div>
-            <Typography variant="h3" className="mb-6 text-white">
+            <Typography variant="h3" className="mt-2 mb-6 text-white">
               Obejrzałaś powtórkę, masz już plan kampanii i chcesz ją wdrożyć?{" "}
               <br />
               Chodź, dołącz do nas do MAGIC i zrobimy to razem! Zobacz niżej, co
