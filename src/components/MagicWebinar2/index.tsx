@@ -89,16 +89,6 @@ const MagicWebinar2 = ({ version = 1 }: { version?: number }): JSX.Element => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full mx-auto mb-8">
           {cards.map(renderCard)}
         </div>
-
-        {/* Bottom Message */}
-        <div className="max-w-3xl mx-auto">
-          <div className="text-white p-6 max-w-2xl mx-auto mb-8">
-            <Typography variant="body" className="text-lg inline">
-              21 maja (środa) | 18:00 Grafika • Copy • Adsy na Facebooku &
-              Instagramie
-            </Typography>
-          </div>
-        </div>
       </div>
     </div>
   )

@@ -13,11 +13,10 @@ import SEO from "components/seo"
 import React from "react"
 
 const MasterclassPage = (): JSX.Element => {
-
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
-        <MagicTitle version={2} />
+        <MagicTitle version={4} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MagicBanner1 version={3} />

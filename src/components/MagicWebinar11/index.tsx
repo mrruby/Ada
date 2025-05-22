@@ -9,8 +9,8 @@ type ListItem = {
 const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const faqList: ListItem[] = [
     {
-      question: "Czy będzie nagranie?",
-      answer: "Tak, przez 7 dni.",
+      question: "Do kiedy dostępne jest nagranie?",
+      answer: "Do 28.05.",
     },
     {
       question: "Muszę znać Ads Managera?",
@@ -20,10 +20,6 @@ const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
     {
       question: "Naprawdę 0 zł?",
       answer: "Tak. Wersja płatna po 28 maja jest opcjonalna.",
-    },
-    {
-      question: "Nie mogę być na żywo?",
-      answer: "Zapisz się, otrzymasz link do nagrania na 7 dni.",
     },
     {
       question: "Jak długo będą trwały warsztaty?",
