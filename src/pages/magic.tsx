@@ -10,42 +10,9 @@ import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import SEO from "components/seo"
-import React, { useEffect } from "react"
-import magicZainteresowaniForm from "values/forms/magic-zainteresowani.html"
+import React from "react"
 
 const MasterclassPage = (): JSX.Element => {
-  useEffect(() => {
-    const form = document.querySelector(
-      "#zainteresowani-form .ml-block-form"
-    ) as HTMLFormElement
-    if (form) {
-      // Remove target attribute to avoid new tab
-      form.removeAttribute("target")
-
-      // Add a submit event listener to intercept submission
-      form.addEventListener("submit", (e) => {
-        e.preventDefault() // Prevent the default behavior
-
-        const formData = new FormData(form)
-        fetch(form.action, {
-          method: "POST",
-          body: formData,
-          mode: "cors",
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              // Redirect on success
-              window.location.href = "https://adrianna.com.pl/thank/"
-            } else {
-              // Optionally, handle errors here
-              console.error("Submission failed:", data)
-            }
-          })
-          .catch((error) => console.error("Error:", error))
-      })
-    }
-  }, [])
 
   return (
     <Layout showHeaderAndFooter={false}>
@@ -96,14 +63,6 @@ const MasterclassPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MasterclassFAQ version={5} />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer>
-        <section id="zainteresowani-form">
-          <div
-            className="max-w-2xl my-24 mx-auto"
-            dangerouslySetInnerHTML={{ __html: magicZainteresowaniForm }}
-          />
-        </section>
       </MaxWithBgColorContainer>
     </Layout>
   )
