@@ -294,7 +294,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
             </button>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center md:items-start justify-center mb-8">
+          <div className="flex flex-col items-center md:items-start justify-center mb-8">
             <div
               className="relative w-full max-w-[960px] overflow-hidden"
               style={{ aspectRatio: "16 / 9" }}
@@ -308,6 +308,12 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                 allowFullScreen
               ></iframe>
             </div>
+            <Typography variant="h3" className="mb-6 text-white">
+              Obejrzałaś powtórkę, masz już plan kampanii i chcesz ją wdrożyć?{" "}
+              <br />
+              Chodź, dołącz do nas do MAGIC i zrobimy to razem! Zobacz niżej, co
+              czeka na Ciebie w społeczności
+            </Typography>
           </div>
         </Section>
       )}
