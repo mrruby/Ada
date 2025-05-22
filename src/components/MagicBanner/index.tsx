@@ -33,6 +33,7 @@ const magicBannerContent = [
     circleKey: "purpleCircle",
     iconKey: "6-calender",
     bgColor: "bg-ada-pink7",
+    buttonColor: "bg-ada-pink7",
     price: (
       <div className="text-white flex flex-col text-center font-bold">
         <p className="text-adaSubtitleThird">291 zł</p>
@@ -46,12 +47,6 @@ const magicBannerContent = [
           <p>razem: 1746 zł</p>
           <p>płatność jednorazowa</p>
         </div>
-        <Button
-          type="button"
-          text={<span className="font-bold uppercase">Wybieram!</span>}
-          url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
-          btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
-        />
       </>
     ),
     url: "https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi",
@@ -60,6 +55,7 @@ const magicBannerContent = [
     circleKey: "purpleCircle",
     iconKey: "3-calender",
     bgColor: "bg-ada-magicYellow",
+    buttonColor: "bg-ada-magicYellow",
     price: (
       <div className="text-ada-pink7 flex flex-col text-center font-bold">
         <p className="text-adaSubtitleThird">302 zł</p>
@@ -73,12 +69,6 @@ const magicBannerContent = [
           <p>razem: 907 zł</p>
           <p>płatność jednorazowa</p>
         </div>
-        <Button
-          type="button"
-          text={<span className="font-bold uppercase">Wybieram!</span>}
-          url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
-          btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
-        />
       </>
     ),
     url: "https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi",
@@ -87,6 +77,7 @@ const magicBannerContent = [
     circleKey: "purpleCircle",
     iconKey: "1-calender",
     bgColor: "bg-ada-pink8",
+    buttonColor: "bg-ada-pink8",
     price: (
       <div className="text-ada-pink7 flex flex-col text-center font-bold">
         <p className="text-adaSubtitleThird">333 zł</p>
@@ -99,12 +90,6 @@ const magicBannerContent = [
           <p>1 miesiąc</p>
           <p>płatność subskrypcyjna</p>
         </div>
-        <Button
-          type="button"
-          text={<span className="font-bold uppercase">Wybieram!</span>}
-          url="https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi"
-          btnStyle="mt-4 bg-ada-newPurple text-white rounded-full px-8 py-3 text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
-        />
       </>
     ),
     url: "https://slowmarketing.mailingr.co/c/magic-pakiet-basic-rXx5?priceId=price_UikNAGssSyiK3qw7UfE6vSMi",
@@ -273,7 +258,6 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
               >
                 <BannerBox
                   zoom="scale-110"
-                  key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
                   bgColor={item.bgColor}
@@ -281,6 +265,17 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   description={item.description}
                   url={item.url}
                 />
+                <div className="flex justify-center">
+                  <Button
+                    type="button"
+                    text={
+                      <span className="font-bold uppercase">Wybieram!</span>
+                    }
+                    url={item.url}
+                    textSize="text-sm md:text-base"
+                    btnStyle={`mt-4 w-full ${item.buttonColor} text-white rounded-full px-8 py-3 font-semibold hover:opacity-90 transition-opacity`}
+                  />
+                </div>
               </div>
             ))}
           </div>
