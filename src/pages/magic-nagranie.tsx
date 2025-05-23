@@ -12,11 +12,11 @@ import ReferencesMentoring from "components/ReferencesMentoring"
 import SEO from "components/seo"
 import React from "react"
 
-const MagicPage = (): JSX.Element => {
+const MagicNagraniePage = (): JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
-        <MagicTitle version={2} />
+        <MagicTitle version={4} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MagicBanner1 version={3} />
@@ -74,4 +74,4 @@ export const Head = () => (
   />
 )
 
-export default MagicPage
+export default MagicNagraniePage
