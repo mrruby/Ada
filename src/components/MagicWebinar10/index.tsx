@@ -1,5 +1,3 @@
-import { Button } from "helpers/Button"
-import CountdownTimer from "helpers/CountdownTimer"
 import { MagicSunPink, MagicSunYellow } from "helpers/LayoutElements"
 import React from "react"
 import Typography from "../shared/Typography"
@@ -35,37 +33,6 @@ const MagicWebinar10 = ({ version = 1 }: { version?: number }): JSX.Element => {
           </Typography>
           {renderSun("-right-10", "animate-spin-slow")}
         </div>
-
-        {/* Date and time box */}
-        <div className="bg-pink-100 rounded-lg p-6 mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="text-2xl">⏰</span>
-            <Typography variant="h2" className="text-[#5D4B8C]">
-              Termin: 21.05
-            </Typography>
-          </div>
-          <div className="flex items-center justify-center gap-3">
-            <span className="text-2xl">🕔</span>
-            <Typography variant="h2" className="text-[#5D4B8C]">
-              Godzina: 18:00
-            </Typography>
-          </div>
-        </div>
-
-        <CountdownTimer targetDate={new Date("2025-05-21T18:00:00")} />
-
-        {/* Sign up button */}
-        <Button
-          type="button"
-          text={
-            <span className={`font-bold uppercase ${colors.buttonText}`}>
-              ZAPISUJĘ SIĘ!
-            </span>
-          }
-          sectionId="signup"
-          textSize="text-sm md:text-base"
-          btnStyle={`${colors.button} text-xl mt-6 font-bold py-6 px-12 rounded-full border-none`}
-        />
       </div>
     </div>
   )

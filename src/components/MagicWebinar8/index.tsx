@@ -11,7 +11,7 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
     {
       title: (
         <>
-          Warsztat LIVE — 21.05
+          Zapis warsztatu
           <br />
           💻
         </>
@@ -21,7 +21,7 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
     {
       title: (
         <>
-          Karty pracy + dostęp do nagrania na 7 dni
+          Karty pracy i dostęp do nagrania do 28.05
           <br />
           📝
         </>

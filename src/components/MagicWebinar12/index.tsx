@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import magicWebinarForm22 from "../../values/forms/magic-form-22.05.html"
 import magicWebinarForm from "../../values/forms/magic-webinar.html"
-import Typography from "../shared/Typography"
 
 const MagicWebinar12 = ({ version = 1 }: { version?: number }): JSX.Element => {
   useEffect(() => {
@@ -44,14 +43,6 @@ const MagicWebinar12 = ({ version = 1 }: { version?: number }): JSX.Element => {
             __html: version === 2 ? magicWebinarForm22 : magicWebinarForm,
           }}
         />
-        <div>
-          <div className="bg-ada-magicPurple p-1 text-white font-bold mr-1 mb-3 md:mb-0 inline">
-            Uwaga:
-          </div>
-          <Typography variant="body" className="text-white inline font-bold">
-            Ilość miejsc ograniczona - zdecyduj się teraz!
-          </Typography>
-        </div>
       </div>
     </section>
   )

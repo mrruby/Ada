@@ -138,7 +138,7 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
         type="button"
         text={
           <span className="font-bold text-ada-yellow3 uppercase">
-            Rezerwuję miejsce!
+            Oglądam nagranie!
           </span>
         }
         sectionId="form"

@@ -267,6 +267,56 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
           </div>
         </Section>
       )}
+      {version == 4 && (
+        <Section
+          bgColor="bg-ada-newPurple"
+          className="text-white overflow-hidden sm:mt-10"
+          padding="py-8 md:py-0 md:pt-8 px-4 md:px-8"
+          maxWidth="5xl"
+        >
+          <div className="flex justify-between items-center mb-8">
+            <Link to={"/"}>
+              <StaticImage
+                src={"../../images/magic.webp"}
+                alt="Ada Promis"
+                placeholder="blurred"
+                formats={["auto", "webp", "avif"]}
+                width={140}
+                height={60}
+                quality={95}
+              />
+            </Link>
+            <button
+              onClick={scrollToPackages}
+              className="text-sm md:text-base font-semibold hover:underline"
+            >
+              Zgłaszam się!
+            </button>
+          </div>
+
+          <div className="flex flex-col items-center md:items-start justify-center mb-8">
+            <div
+              className="relative w-full max-w-[960px] overflow-hidden"
+              style={{ aspectRatio: "16 / 9" }}
+            >
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src={
+                  "https://www.youtube.com/embed/sP9q-F6PolE?si=Y_RCK6LTXODLJ7-CE"
+                }
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <Typography variant="h3" className="mt-2 mb-6 text-white">
+              Obejrzałaś powtórkę, masz już plan kampanii i chcesz ją wdrożyć?{" "}
+              <br />
+              Chodź, dołącz do nas do MAGIC i zrobimy to razem! Zobacz niżej, co
+              czeka na Ciebie w społeczności
+            </Typography>
+          </div>
+        </Section>
+      )}
     </>
   )
 }
