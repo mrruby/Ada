@@ -5,7 +5,7 @@ import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicLastSection from "components/MagicLastSection"
-import MagicTitle from "components/MagicTitle"
+import { Button } from "helpers/Button"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import ReferencesMentoring from "components/ReferencesMentoring"
@@ -16,7 +16,21 @@ const MagicNagraniePage = (): JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
-        <MagicTitle version={4} />
+        <div className="flex flex-col items-center text-center text-white py-16">
+          <h1 className="text-adaSubtitle md:text-adaTitle font-bold mb-8 px-4">
+            Nagranie z warsztatu nie jest już dostępne.
+          </h1>
+          <p className="mb-8 text-lg md:text-xl px-4">
+            Nadal możesz dołączyć do <span className="font-bold">MAGIC</span>!
+          </p>
+          <Button
+            type="button"
+            text={<span className="font-bold text-ada-pink7 uppercase">Dołącz do MAGIC</span>}
+            url="/magic"
+            textSize="text-sm md:text-base"
+            btnStyle="uppercase bg-ada-pink2 text-ada-black font-semibold tracking-wide h-[48px] md:h-[60px] px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"
+          />
+        </div>
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MagicBanner1 version={3} />
