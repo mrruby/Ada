@@ -432,8 +432,6 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           dopasowujemy do Twoich potrzeb. W zależności od wybranego pakietu
           korzystasz z konsultacji grupowych i indywidualnych. To nie jest
           kolejny statyczny kurs - to przestrzeń ciągłego rozwoju!
-          <br />
-          Tylko dla wtajemniczonych: KAPUCZINA.
         </>
       ),
     },
@@ -475,7 +473,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
         <>
           Otrzymujesz kompleksowe wsparcie w cenie niższej niż pojedyncza
           konsultacja 1:1 czy kolejny kurs, po którym zostajesz sam z notatkami,
-          bez realnego planu działania! Pssst… wpisz KOALA, ale nie mów nikomu.
+          bez realnego planu działania!
         </>
       ),
     },

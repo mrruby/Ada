@@ -171,7 +171,7 @@ const magicBannerContent3 = [
           <br /> Skonsultuj optymalizację budżetu w zależności od etapu lejka i
           branży.
           <br />
-          Pssst… a może kod rabatowy? KAPIBARA.
+          Pssst! Wpisz kod KAPUCZINA w koszyku <br />i zobacz, co się stanie!
         </p>
       </>
     ),
