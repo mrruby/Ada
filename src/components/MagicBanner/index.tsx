@@ -170,6 +170,8 @@ const magicBannerContent3 = [
           </span>
           <br /> Skonsultuj optymalizację budżetu w zależności od etapu lejka i
           branży.
+          <br />
+          Pssst… a może kod rabatowy? KAPIBARA.
         </p>
       </>
     ),
@@ -188,7 +190,7 @@ const magicBannerContent3 = [
           </span>
           <br />
           Dowiedz się, co zrobić w takiej sytuacji, nawet gdy support Mety
-          rozkłada ręce
+          rozkłada ręce.
         </p>
       </>
     ),
