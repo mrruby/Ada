@@ -62,7 +62,7 @@ const magicTilesContent2 = [
     colors: "bg-ada-pink8 text-ada-purple2",
     title: "Ekskluzywny dostęp",
     description:
-      "Najnowsze autorskie szkolenia i materiały dostępne w tylko w MAGIC",
+      "Najnowsze autorskie szkolenia i materiały dostępne w tylko w MAGIC. Pssst… wpisz kod KOALA, ale nie mów nikomu.",
   },
 ]
 
