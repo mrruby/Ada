@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import CountdownTimer from "helpers/CountdownTimer"
 import React from "react"
 import magicFormWide from "../../values/forms/magic-form-wide.html"
 import Section from "../shared/Section"
@@ -150,6 +151,15 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
             >
               Zgłaszam się!
             </button>
+          </div>
+
+          <div className="my-2">
+            <h2 className="text-adaBase font-bold text-center animate-bounce mb-1">
+              Zamykamy MAGIC za:{" "}
+            </h2>
+            <div className="text-ada-blue">
+              <CountdownTimer targetDate={new Date("2025-06-03T00:00:00")} />
+            </div>
           </div>
 
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
