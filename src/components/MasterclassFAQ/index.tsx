@@ -407,23 +407,6 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       answer: <>MAGIC działa na platformie Circle.</>,
     },
     {
-      question: "💫 Jak działa członkostwo w MAGIC?",
-      answer: (
-        <>
-          Możesz dołączyć do MAGIC wybierając jeden z gotowych planów: 3-, 6-
-          lub 9-miesięczny. To Ty decydujesz, jak długo zostajesz - im dłuższy
-          pakiet wybierzesz, tym niższa cena za miesiąc. <br />
-          Członkostwo opłacane jest z góry za wybrany okres i daje Ci pełny
-          dostęp do wszystkich benefitów: społeczności, warsztatów, aktualizacji
-          i wsparcia reklamowego. Po zakończeniu wybranego planu możesz
-          zdecydować, czy chcesz zostać z nami na dłużej.
-          <br />
-          Dołączając teraz, zyskujesz gwarancję ceny przez cały okres
-          subskrypcji.
-        </>
-      ),
-    },
-    {
       question: "💎 Co sprawia, że MAGIC jest wyjątkowy?",
       answer: (
         <>
@@ -436,7 +419,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       ),
     },
     {
-      question: "🎯 Co dokładnie otrzymuję?",
+      question: "🎯 Co czeka na mnie w MAGIC?",
       answer: (
         <>
           <ul>
@@ -468,12 +451,11 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       ),
     },
     {
-      question: "💰 Dlaczego warto zainwestować w MAGIC?",
+      question: "💰 Dlaczego warto zapisać się na listę oczekujących?",
       answer: (
         <>
-          Otrzymujesz kompleksowe wsparcie w cenie niższej niż pojedyncza
-          konsultacja 1:1 czy kolejny kurs, po którym zostajesz sam z notatkami,
-          bez realnego planu działania!
+          Dla osób zapisanych na listę oczekujących szykuję specjalne oferty i
+          daję im znać o możliwości dołączenia w pierwszej kolejności.
         </>
       ),
     },

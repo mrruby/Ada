@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import magicWebinarForm22 from "../../values/forms/magic-form-22.05.html"
+import magicListaForm from "../../values/forms/magic-lista.html"
 import magicWebinarForm from "../../values/forms/magic-webinar.html"
 
 const MagicWebinar12 = ({ version = 1 }: { version?: number }): JSX.Element => {
@@ -36,11 +37,20 @@ const MagicWebinar12 = ({ version = 1 }: { version?: number }): JSX.Element => {
 
   return (
     <section id="signup">
-      <div className="flex flex-col items-center justify-center py-20 bg-ada-magicOrange p-4 text-center">
+      <div
+        className={`flex flex-col items-center justify-center py-20 p-4 text-center ${
+          version !== 3 ? "bg-ada-magicOrange" : ""
+        }`}
+      >
         <div
           className="max-w-2xl mb-12 mx-auto"
           dangerouslySetInnerHTML={{
-            __html: version === 2 ? magicWebinarForm22 : magicWebinarForm,
+            __html:
+              version === 3
+                ? magicListaForm
+                : version === 2
+                  ? magicWebinarForm22
+                  : magicWebinarForm,
           }}
         />
       </div>
