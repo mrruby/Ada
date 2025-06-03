@@ -6,6 +6,7 @@ import MagicBioBanner from "components/MagicBioBanner"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicLastSection from "components/MagicLastSection"
 import MagicTitle from "components/MagicTitle"
+import MagicWebinar12 from "components/MagicWebinar12"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import ReferencesMentoring from "components/ReferencesMentoring"
@@ -37,10 +38,10 @@ const MagicPage = (): JSX.Element => {
         <MagicWhy part={6} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicWhy part={7} />
+        <MagicWhy part={8} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <MagicBanner1 version={2} />
+        <MagicWebinar12 version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3">
         <MagicWhy part={3} />
