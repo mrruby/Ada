@@ -216,7 +216,7 @@ Podstawą prawną przetwarzania Twoich danych osobowych jest nasz prawnie uzasad
 
 15. **Zapewnienie dodatkowych funkcji z wykorzystaniem wyłącznie Informacji Anonimowych**
 
-Na naszych stronach możem osadzać odtwarzacze wideo lub audio, widgety społecznościowe, moduł komentarzy, czat, formy newsletterowe lub inne narzędzia dostarczane przez podmioty trzecie. Wszystkie te narzędzia przetwarzają Informacje Anonimowe. Przetwarzanie Informacji Anonimowych opieramy na prawnie uzasadnionym interesie, który polega w tym przypadku na zapewnieniu możliwości korzystania z dodatkowych funkcji na stronie. Z poziomu narzędzi nie mamy wglądu do innych informacji, ponadto informacje te nie są nam do niczego potrzebne – Informacje Anonimowe są przetwarzane są wyłącznie po to, żeby mogły działać dodatkowe funkcje. Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom.
+Na naszych stronach możem osadzać odtwarzacze wideo lub audio, widgety społecznościowe, moduł komentarzy, czat, formy newsletterowe lub inne narzędzia dostarczane przez podmioty trzecie. Wszystkie te narzędzia przetwarzają Informacje Anonimowe. Przetwarzanie Informacji Anonimowych opieramy na prawnie uzasadnionym interesie, który polega w tym przypadku na zapewnieniu możliwości korzystania z dodatkowych funkcji na stronie. Z poziomu narzędzi nie mamy wglądu do innych informacji, ponadto informacje te nie są nam do niczego potrzebne – Informacje Anonimowe są przetwarzane wyłącznie po to, żeby mogły działać dodatkowe funkcje. Szczegółowe informacje na temat narzędzi zewnętrznych dostawców znajdziesz w sekcji poświęconej używanym przez nas narzędziom.
 
 (art. 6 ust. 1 lit. f RODO)
 
