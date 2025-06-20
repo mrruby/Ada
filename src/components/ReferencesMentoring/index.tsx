@@ -18,6 +18,8 @@ type IReferences = {
   title4?: boolean
   title5?: boolean
   title6?: boolean
+  /** Optional variant identifier (not used internally, but accepted for JSX */
+  version?: string | number
 }
 
 // const referencesList: IReferencesList[] = [

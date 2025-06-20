@@ -16,6 +16,8 @@ type IReferences = {
   title3?: boolean
   title4?: boolean
   title5?: boolean
+  /** Accepts arbitrary variant id from page components */
+  version?: string | number
 }
 
 const referencesList: IReferencesList[] = [
@@ -92,6 +94,7 @@ const References = ({
   title3,
   title4,
   title5,
+  version,
 }: IReferences): JSX.Element => {
   return (
     <div className="pt-[40px]">
