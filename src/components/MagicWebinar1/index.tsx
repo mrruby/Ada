@@ -36,8 +36,8 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const formHtml = isPinkVersion ? magicWebinarForm22 : magicWebinarForm
 
   // Calculate tomorrow's midnight for the countdown target
-  const now = new Date()
-  const countdownTargetDate = new Date(
+  const now: Date = new Date()
+  const countdownTargetDate: Date = new Date(
     now.getFullYear(),
     now.getMonth(),
     now.getDate() + 1,
