@@ -1,6 +1,8 @@
+import ResponsiveYouTubeEmbed from "components/ResponsiveYouTubeEmbed"
 import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import CountdownTimer from "helpers/CountdownTimer"
 import {
   MagicSunDark,
   MagicSunYellow,
@@ -32,6 +34,18 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const headerBgColor = isPinkVersion ? "bg-pink-100" : "bg-ada-magicPurple"
   const logoSrc = isPinkVersion ? "/assets/magic-2.svg" : "/assets/magic.svg"
   const formHtml = isPinkVersion ? magicWebinarForm22 : magicWebinarForm
+
+  // Calculate tomorrow's midnight for the countdown target
+  const now = new Date()
+  const countdownTargetDate = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate() + 1,
+    23,
+    59,
+    59,
+    999
+  )
 
   useEffect(() => {
     const form = document.querySelector(".ml-block-form") as HTMLFormElement
@@ -175,21 +189,18 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
           🚀
         </Typography>
       </div>
-      <div className="mb-8 max-w-[600px]">
-        <Typography
-          variant="body"
-          className="text-ada-magicOrange text-xl font-bold inline"
-        >
-          Bezpłatny webinar
-        </Typography>
-        <Typography
-          variant="body"
-          className="text-ada-magicPurple text-lg inline"
-        >
-          {" "}
-          dla ambitnych przedsiębiorczyń, które wreszcie chcą przestać zgadywać
-          i zacząć zarabiać
-        </Typography>
+      {/* Countdown & YouTube banner replacing the previous subtitle */}
+      <div className="mb-8 w-full flex flex-col items-center">
+        <CountdownTimer
+          targetDate={countdownTargetDate}
+          text="Do końca zapisu zostało:"
+        />
+        <ResponsiveYouTubeEmbed
+          videoId="sP9q-F6PolE"
+          title="MAGIC Webinar"
+          mobileHeight="220"
+          desktopHeight="480"
+        />
       </div>
 
       <FormSection html={formHtml} />
