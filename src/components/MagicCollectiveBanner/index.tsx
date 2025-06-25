@@ -26,48 +26,7 @@ const MagicCollectiveBanner = ({
 
   return (
     <>
-      {version == 1 && (
-        <Section
-          bgColor="bg-magic-banner1"
-          className="text-black overflow-hidden sm:mt-10 lg:backdrop:h-[756px] flex justify-center mb-6 sm:max-w-[410px] md:max-w-[510px] lg:max-w-[710px]  mx-auto"
-          padding="py-8 px-2 md:px-12"
-        >
-          <div className="max-w-[510px] pl-[24px]">
-            <Typography variant="h3" className="mt-11 font-anton font-normal">
-              Prowadzisz rozwijający się biznes online.
-            </Typography>
-            <Typography
-              variant="body"
-              className="mt-2 mb-6 font-courier lg:leading-[40px]"
-            >
-              Publikujesz regularnie, masz już swoją społeczność, zlecasz
-              niektóre zadania podwykonawcom (np. WA). Twoje działania przynoszą
-              efekty, ale czujesz, że marketing mógłby działać jeszcze lepiej.
-            </Typography>
-            <Typography
-              variant="body"
-              className="mt-12 mb-6 font-courier lg:leading-[40px] max-w-[430px]"
-            >
-              <span className="font-anton font-normal">
-                Problem? &nbsp; &nbsp;
-              </span>
-              Nie masz czasu ani energii, by samodzielnie zarządzać wszystkimi
-              kanałami marketingowymi. Zatrudnienie pełnego zespołu in-house to
-              zbyt duża inwestycja na tym etapie.
-            </Typography>
-            <Typography
-              variant="body"
-              className="mt-14 font-courier lg:leading-[40px] max-w-[430px]"
-            >
-              <span className="font-anton font-normal">
-                Rozwiązanie? &nbsp; &nbsp;
-              </span>
-              MAGIC - Twój zewnętrzny dział marketingu, który przejmie
-              odpowiedzialność za kluczowe obszary promocji Twojego biznesu.
-            </Typography>
-          </div>
-        </Section>
-      )}
+      {version == 1 && null}
       {version == 2 && (
         <Section
           bgColor=""
