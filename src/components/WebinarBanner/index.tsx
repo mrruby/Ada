@@ -1,7 +1,7 @@
-import React from "react"
-import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import CountdownTimer from "helpers/CountdownTimer"
+import React from "react"
 
 const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
   return (
@@ -222,6 +222,43 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 height={856}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+      {version === 6 && (
+        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
+          <div className="flex justify-between xl:max-w-[1350px] mx-auto">
+            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[170px]">
+              <StaticImage
+                loading="eager"
+                src={"../../images/chill.webp"}
+                alt="Ada Promis - hero"
+                placeholder="blurred"
+                width={754}
+                height={782}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div className="flex flex-col justify-center max-w-[800px] gap-4 md:mt-8 xl:-mt-60 mb-3">
+              <h2 className="hidden md:block text-adaSubtitle md:text-adaBig">
+                MASTERCLASSY
+              </h2>
+              <h1 className="text-adaSubtitle md:text-adaBig font-bold tracking-wider leading-none font-lemon text-ada-purple">
+                ADSY<span className="text-ada-orange">&</span>
+                <span className="text-ada-yellow">CHILL</span>
+              </h1>
+              <h2 className="text-adaMin md:text-adaSubtitle md:pt-2 md:mb-8">
+                Automatyczne kampanie reklamowe, które zarabiają podczas Twojego urlopu
+              </h2>
+              <Button
+                type="button"
+                text={<span className="font-bold">Sprawdzam Adsy&Chill</span>}
+                sectionId="masterclasses"
+                textSize="text-adaMin md:text-adaSubtitle"
+                btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-pink2 md:tracking-[2.90px] md:h-[100px] shadow-xl"
               />
             </div>
           </div>
