@@ -18,6 +18,7 @@ type IReferences = {
   title4?: boolean
   title5?: boolean
   title6?: boolean
+  version?: string | number
 }
 
 // const referencesList: IReferencesList[] = [
