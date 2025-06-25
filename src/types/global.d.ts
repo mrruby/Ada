@@ -26,4 +26,15 @@ declare namespace JSX {
   interface IntrinsicElements {
     [elemName: string]: any
   }
+  // Allow usage of JSX.Element without React typing conflicts
+  type Element = any
+}
+
+// Stub for react-multi-carousel types
+declare module "react-multi-carousel" {
+    export interface CarouselProps {
+    [key: string]: any
+  }
+  const Carousel: React.ComponentType<CarouselProps>
+  export default Carousel
 }
