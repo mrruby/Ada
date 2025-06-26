@@ -1,8 +1,12 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
-import React from "react"
+import React, { FC } from "react"
 
-const IconText = ({ version }: { version: number }): JSX.Element => {
+interface IconTextProps {
+  version: 1 | 2 | 3
+}
+
+const IconText: FC<IconTextProps> = ({ version }: IconTextProps) => {
   const leftList = [
     {
       icon: "🔥",
@@ -343,7 +347,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                   width={320}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
-                  class="lg:mr-[-200px] lg:mb-[-8px]"
+                  className="lg:mr-[-200px] lg:mb-[-8px]"
                 />
               </div>
             </div>
@@ -355,3 +359,13 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
 }
 
 export default IconText
+
+// Fallback declaration for JSX to satisfy TypeScript linting in isolated files
+declare global {
+  namespace JSX {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    interface IntrinsicElements {
+      [elemName: string]: any
+    }
+  }
+}
