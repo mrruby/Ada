@@ -1,16 +1,16 @@
+import IconText from "components/IconText"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MasterclassAgenda from "components/MasterclassAgenda"
+import MasterclassesInfo from "components/MasterclassesInfo"
+import MasterclassFAQ from "components/MasterclassFAQ"
+import MasterclassPreparing from "components/MasterclassPreparing"
+import MentoringBanner from "components/MentoringBanner"
+import ReferencesMentoring from "components/ReferencesMentoring"
+import WebinarAbout from "components/WebinarAbout"
+import WebinarBanner from "components/WebinarBanner"
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import WebinarBanner from "components/WebinarBanner"
-import MasterclassFAQ from "components/MasterclassFAQ"
-import IconText from "components/IconText"
-import WebinarAbout from "components/WebinarAbout"
-import ReferencesMentoring from "components/ReferencesMentoring"
-import MasterclassPreparing from "components/MasterclassPreparing"
-import MentoringBanner from "components/MentoringBanner"
-import MasterclassAgenda from "components/MasterclassAgenda"
-import MasterclassesInfo from "components/MasterclassesInfo"
 
 const AdsyAndChill = (): JSX.Element => {
   return (
@@ -44,7 +44,7 @@ const AdsyAndChill = (): JSX.Element => {
         <WebinarAbout version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title3 version="2" />
+        <ReferencesMentoring title3 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4 mt-5">
         <MasterclassAgenda version={3} />

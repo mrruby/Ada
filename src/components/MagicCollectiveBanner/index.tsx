@@ -242,7 +242,7 @@ const MagicCollectiveBanner = ({
                       placeholder="blurred"
                       width={40}
                       height={40}
-                      class="animate-spin-slow"
+                      className="animate-spin-slow"
                     />
                   </div>
                   <p className="mt-2">
@@ -258,7 +258,7 @@ const MagicCollectiveBanner = ({
                       placeholder="blurred"
                       width={40}
                       height={40}
-                      class="animate-spin-slow"
+                      className="animate-spin-slow"
                     />
                   </div>
                   <p className="mt-2">
@@ -274,7 +274,7 @@ const MagicCollectiveBanner = ({
                       placeholder="blurred"
                       width={40}
                       height={40}
-                      class="animate-spin-slow"
+                      className="animate-spin-slow"
                     />
                   </div>
                   <p className="mt-2">
@@ -290,7 +290,7 @@ const MagicCollectiveBanner = ({
                       placeholder="blurred"
                       width={40}
                       height={40}
-                      class="animate-spin-slow"
+                      className="animate-spin-slow"
                     />
                   </div>
                   <p className="mt-2">

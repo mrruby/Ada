@@ -168,12 +168,14 @@ const plusBasicList = [
   </p>,
   <p>
     Masterclassu
-    <span className="font-bold"> „Ułatw sobie reklamy z automatyzacją”</span>
+    <span className="font-bold">
+      {" "}
+      „Kampanie na Instagram, które przyciągają odbiorców”
+    </span>
   </p>,
   <p>
     Masterclassu<span className="font-bold"> „Ustaw reklamę na sprzedaż”</span>
   </p>,
-  <p className="font-bold">Grupy na Facebooku</p>,
 ]
 
 const pakietStartList = [
@@ -215,20 +217,6 @@ const pakietProList = [
   "4 x konsultacje 1:1",
   "spotkania mastermind (udział w maksymalnie 4 - osobowych grupach)",
   "certyfikat uczestnictwa",
-]
-
-const minusBasicList = [
-  "Sesja Q&A na żywo",
-  "Konsultacja 1:1 na Google Meets (60 minut)",
-]
-
-const plusVIPList = [
-  "Dostęp do masterclassu „Ułatw sobie reklamy z automatyzacją”",
-  "Dostęp do masterclassu „Ustaw reklamę na listę mailingową”",
-  "Dostęp do masterclassu „Ustaw reklamę na sprzedaż”",
-  "Dostęp do grupy na Facebooku",
-  "Sesja Q&A na żywo",
-  "Konsultacja 1:1 na Google Meets (60 minut) o wartości 650 złotych",
 ]
 
 const MasterclassAgenda = ({

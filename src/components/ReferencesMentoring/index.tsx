@@ -467,19 +467,6 @@ const referencesMagicList2: IReferencesList[] = [
       />
     ),
   },
-  {
-    image: (
-      <StaticImage
-        src="../../images/magic_kapibara.webp"
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={680}
-        height={680}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
 ]
 
 const ReferencesMentoring = ({
