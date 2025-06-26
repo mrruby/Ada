@@ -14,10 +14,12 @@
 
 declare module "react" {
   const React: any
-  namespace JSX {
+  // Explicitly re-export the JSX namespace so that it is visible project-wide
+  export namespace JSX {
     interface IntrinsicElements {
       [elem: string]: any
     }
+    interface Element extends React.ReactElement<any, any> {}
   }
   export = React
 }
