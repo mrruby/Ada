@@ -1,6 +1,6 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import React from "react"
 
 const IconText = ({ version }: { version: number }): JSX.Element => {
   const leftList = [
@@ -52,7 +52,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
   const leftList2 = [
     {
       icon: "😱",
-      text: "Pół roku temu zaplanowałaś 2024 rok, ale wyszło jak zawsze — rzeczywistość?",
+      text: "Pół roku temu zaplanowałaś 2025 rok, ale wyszło jak zawsze — rzeczywistość?",
     },
     {
       icon: "🤔",
