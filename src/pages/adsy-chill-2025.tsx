@@ -44,7 +44,7 @@ const AdsyAndChill2025 = (): JSX.Element => {
         <WebinarAbout version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title3 version="2" />
+        <ReferencesMentoring title3 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4 mt-5">
         <MasterclassAgenda version={3} />
