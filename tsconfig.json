@@ -17,7 +17,8 @@
     "types": [
       "node",
       "react",
-      "react-dom"
+      "react-dom",
+      "gatsby"
     ]
   },
   "exclude": ["node_modules", "public", ".cache"]
