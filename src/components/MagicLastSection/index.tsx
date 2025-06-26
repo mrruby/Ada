@@ -1,8 +1,8 @@
+import { Button } from "helpers/Button"
 import React from "react"
 import magicForm from "../../values/forms/magic-form.html"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
-import { Button } from "helpers/Button"
 
 const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
   return (
@@ -44,7 +44,7 @@ const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
                 Sprawdzam!
               </span>
             }
-            sectionId="pakiety"
+            sectionId="form"
             textSize="md:text-adaSubtitle"
             btnStyle="uppercase bg-ada-pink2 text-ada-black 
                       font-semibold tracking-wide h-[48px] md:h-[60px] 

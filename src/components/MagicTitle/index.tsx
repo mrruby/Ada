@@ -14,8 +14,8 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
     }
   }
 
-  const scrollToPackages = () => {
-    const element = document.getElementById("pakiety")
+  const scrollToForm = () => {
+    const element = document.getElementById("form")
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
@@ -145,7 +145,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               />
             </Link>
             <button
-              onClick={scrollToPackages}
+              onClick={scrollToForm}
               className="text-sm md:text-base font-semibold hover:underline"
             >
               Zgłaszam się!
@@ -171,7 +171,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                     Dołączam!
                   </span>
                 }
-                sectionId="pakiety"
+                sectionId="form"
                 textSize="text-sm md:text-base"
                 btnStyle="uppercase bg-ada-pink2 text-ada-black 
                       font-semibold tracking-wide h-[48px] md:h-[60px] 
@@ -286,7 +286,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               />
             </Link>
             <button
-              onClick={scrollToPackages}
+              onClick={scrollToForm}
               className="text-sm md:text-base font-semibold hover:underline"
             >
               Zgłaszam się!
