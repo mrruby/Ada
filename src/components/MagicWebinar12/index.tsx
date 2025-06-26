@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
+import magicListaForm from "../../values/forms/form-magic-zainteresowanych.html"
 import magicWebinarForm22 from "../../values/forms/magic-form-22.05.html"
-import magicListaForm from "../../values/forms/magic-lista.html"
 import magicWebinarForm from "../../values/forms/magic-webinar.html"
 
 const MagicWebinar12 = ({ version = 1 }: { version?: number }): JSX.Element => {
