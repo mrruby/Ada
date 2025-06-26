@@ -13,19 +13,7 @@
 // in `node_modules`.  Keeping them minimal avoids any conflicts.
 
 declare module "react" {
-  import * as React from 'react'
-  // Re-export everything to global namespace as well
   export = React
-  export as namespace React
-
-  // Add minimal commonly-used component / element / FC typings
-  export type FC<P = Record<string, unknown>> = React.FunctionComponent<P>
-
-  export namespace JSX {
-    interface IntrinsicElements {
-      [elem: string]: any
-    }
-  }
 }
 
 declare module "gatsby-plugin-image" {

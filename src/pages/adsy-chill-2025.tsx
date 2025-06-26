@@ -8,12 +8,11 @@ import MentoringBanner from "components/MentoringBanner"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import WebinarAbout from "components/WebinarAbout"
 import WebinarBanner from "components/WebinarBanner"
-import type { FC } from "react"
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const AdsyAndChill2025: FC = () => {
+const AdsyAndChill2025: React.FC = () => {
   return (
     <Layout
       showHeaderAndFooter={false}
