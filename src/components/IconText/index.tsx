@@ -360,9 +360,15 @@ const IconText: FC<IconTextProps> = ({ version }: IconTextProps) => {
 
 export default IconText
 
-// Fallback declaration for JSX to satisfy TypeScript linting in isolated files
+// Temporary JSX global augmentation for projects without full React JSX setup
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
+    // Provide basic `Element` type to prevent missing-type errors
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    interface Element extends React.ReactElement<any, any> {}
+
+    // Allow any intrinsic element without strict typing (quick lint fix)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     interface IntrinsicElements {
       [elemName: string]: any
