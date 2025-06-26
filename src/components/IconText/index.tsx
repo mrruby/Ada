@@ -1,11 +1,14 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
-import React, { type FC } from "react"
+import * as React from "react"
 // type-only import ensures editors see the module's typings (not emitted in JS)
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-type IconTextProps = { version: number }
-const IconText: FC<IconTextProps> = ({ version }) => {
+interface IconTextProps {
+  version: number
+}
+
+const IconText: React.FC<IconTextProps> = ({ version }) => {
   const leftList = [
     {
       icon: "🔥",
@@ -78,7 +81,7 @@ const IconText: FC<IconTextProps> = ({ version }) => {
     },
     {
       icon: "😬",
-      text: "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że „umiesz za mało"?",
+      text: "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że „umiesz za mało”?",
     },
     {
       icon: "🥵",
