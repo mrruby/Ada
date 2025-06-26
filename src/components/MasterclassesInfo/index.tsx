@@ -1,6 +1,6 @@
-import React from "react"
-import { MasterclassInfo } from "helpers/MasterclassInfo"
 import { StaticImage } from "gatsby-plugin-image"
+import { MasterclassInfo } from "helpers/MasterclassInfo"
+import React from "react"
 
 const efects1 = [
   "Umiesz ustawić kampanię, która zarówno buduje społeczność, jak i sprzedaje,",
@@ -9,9 +9,9 @@ const efects1 = [
 ]
 
 const efects2 = [
-  "Ustawiasz kampanię reklamową z formularzem, która pozyskuje dla Ciebie leady nawet gdy siedzisz w samolocie lub leżysz na plaży",
-  "Korzystasz z automatyzacji, dzięki której kontakty zebrane w formularzu (imię, adres e-mail) w mig trafiają z CRM-u Facebooka do systemu mailowego, np. MailerLite",
-  "Budujesz baaaaaaardzo gładki proces: wypełnienie formularza, dodanie do listy, odpalenie automatycznej ścieżki zakupowej, która nie zależy od Twojego czasu!",
+  "Zwiększasz liczbę obserwujących o zaangażowanych użytkowników (nie boty!)",
+  "Budujesz społeczność prawdziwych fanów Twojej marki na Instagram",
+  "Twój profil zyskuje na wiarygodności dzięki większej liczbie aktywnych obserwujących",
 ]
 
 const efects3 = [
@@ -80,21 +80,17 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
         <div id="masterclass-2">
           <MasterclassInfo
             title="Masterclass 2"
-            subtitle1="Ułatw sobie reklamy z automatyzacją"
+            subtitle1="Kampanie na Instagram, które przyciągają odbiorców"
             subtitle2={
               <>
-                Nauczysz się,{" "}
-                <span className="font-bold">
-                  jak pozyskać kontakty za pomocą formularza na Facebooku.
-                </span>{" "}
-                Bez strony WWW, z darmowym i prostym w obsłudze narzędziem do
-                automatyzacji - MAKE.
+                Stworzysz kampanię na IG, która tworzy solidne fundamenty pod
+                sprzedaż
               </>
             }
             efects={efects2}
-            forWhom="To może być Twoje pierwsze spotkanie z formularzami i MAKE. Zapraszam też osoby, które mają już za sobą pierwsze kampanie z formularzami i chcą nauczyć się je automatyzować."
+            forWhom="Dla każdego, kto chce skalować biznes w świadomy sposób"
             forWhomInfo=""
-            btn="Case study z kampanii z formularzem Facebooka"
+            btn="Case study z kampanii kierującej na Instagrama"
             sectionId="masterclass-3"
             purpose="zbieranie zapisów na webinar"
             cost="128,58 zł"
