@@ -8,7 +8,7 @@
     "@shopify/admin-api-client": "^1.0.8",
     "@shopify/storefront-api-client": "^1.0.7",
     "@tailwindcss/forms": "^0.5.9",
-    "@types/react": "^18.3.12",
+    "@types/react": "^19.1.8",
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.21",
     "encoding": "^0.1.13",
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/loadable__component": "^5.13.9",
     "@types/react-animate-on-scroll": "^2.1.8",
-    "@types/react-dom": "^18.3.1",
+    "@types/react-dom": "^19.1.6",
     "@types/react-google-recaptcha": "^2.1.9",
     "@types/uuid": "^10.0.0",
     "eslint": "^9.25.1",

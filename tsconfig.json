@@ -2,7 +2,8 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "esnext",
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "types": ["react", "react-dom"],
     "lib": ["dom", "esnext"],
     "strict": true,
     "noEmit": true,
