@@ -43,3 +43,16 @@ declare module "gatsby-plugin-image" {
   export const StaticImage: React.FC<StaticImageProps>
   export const GatsbyImage: React.FC<any>
 }
+
+// ---------------------------------------------------------------------------
+// Global fallback for JSX namespace – ensures IntrinsicElements is available
+// ---------------------------------------------------------------------------
+
+declare global {
+  namespace JSX {
+    // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
+    interface IntrinsicElements {
+      [elemName: string]: any
+    }
+  }
+}
