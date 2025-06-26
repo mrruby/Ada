@@ -1,8 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import React from "react"
-// type-only import ensures editors see the module's typings (not emitted in JS)
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 interface IconTextProps {
   version: 1 | 2 | 3 | 4

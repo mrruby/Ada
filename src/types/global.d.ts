@@ -36,9 +36,10 @@ declare module "gatsby-plugin-image" {
 // Global fallback for JSX namespace – ensures IntrinsicElements is available
 // ---------------------------------------------------------------------------
 
+export { }
+
 declare global {
   namespace JSX {
-    // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
     interface IntrinsicElements {
       [elemName: string]: any
     }
