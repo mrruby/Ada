@@ -1,6 +1,8 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import React from "react"
+// Explicit type-only import helps editors recognize gatsby-plugin-image's declarations
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 const IconText = ({ version }: { version: number }): JSX.Element => {
   const leftList = [
