@@ -13,15 +13,19 @@
 // in `node_modules`.  Keeping them minimal avoids any conflicts.
 
 declare module "react" {
-  const React: any
-  // Explicitly re-export the JSX namespace so that it is visible project-wide
+  import * as React from 'react'
+  // Re-export everything to global namespace as well
+  export = React
+  export as namespace React
+
+  // Add minimal commonly-used component / element / FC typings
+  export type FC<P = Record<string, unknown>> = React.FunctionComponent<P>
+
   export namespace JSX {
     interface IntrinsicElements {
       [elem: string]: any
     }
-    interface Element extends React.ReactElement<any, any> {}
   }
-  export = React
 }
 
 declare module "gatsby-plugin-image" {
