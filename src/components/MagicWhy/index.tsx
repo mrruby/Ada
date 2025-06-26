@@ -279,7 +279,7 @@ const MagicWhy = ({ part }: { part: number }): JSX.Element => {
       {part == 8 && (
         <div className="w-full text-black -mb-8">
           <Typography variant="h1" className="mb-8 text-center animate-bounce">
-            Zapisuję się na listę oczekujących!
+            Zapisuję się na listę zainteresowanych!
           </Typography>
         </div>
       )}
