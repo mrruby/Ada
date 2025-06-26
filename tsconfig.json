@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "target": "esnext",
     "jsx": "react-jsx",
     "lib": ["dom", "esnext"],
@@ -13,7 +13,13 @@
     "baseUrl": "./src",
     "resolveJsonModule": true,
     "rootDir": "./src",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "jsxImportSource": "react",
+    "paths": {
+      "components/*": ["components/*"],
+      "helpers/*": ["helpers/*"],
+      "images/*": ["images/*"]
+    },
     "types": [
       "node",
       "react",
