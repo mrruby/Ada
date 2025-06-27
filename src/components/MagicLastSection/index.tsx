@@ -1,4 +1,5 @@
 /// <reference types="react" />
+
 import { Button } from "helpers/Button"
 import React, { FC } from "react"
 import magicForm from "../../values/forms/magic-form.html"
