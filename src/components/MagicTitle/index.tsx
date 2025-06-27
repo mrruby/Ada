@@ -206,7 +206,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
           maxWidth="5xl"
         >
           <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
-            <div className="w-full md:w-1/2 mt-2 animate-bounce">
+            <div className="w-full md:w-1/2 mt-2">
               <div className="flex justify-between items-center">
                 <Link to={"/"}>
                   <StaticImage
@@ -226,9 +226,12 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               >
                 Marketing Ads Girls Inside Collective
               </Typography>
-              <Typography variant="body" className="mb-6 font-courier">
-                Twój zewnętrzny dział marketingu,
-                <br /> który działa tak, jak potrzebujesz
+              <Typography
+                variant="body"
+                className="mb-6 font-courier"
+              >
+                Zwiększ przychody o 40-80% dzięki profesjonalnemu zespołowi marketingowemu -
+                <br /> bez zatrudniania in-house
               </Typography>
               <Button
                 type="button"
