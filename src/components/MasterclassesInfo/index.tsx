@@ -195,8 +195,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                   src={"../../images/masterclass3Info.webp"}
                   alt="Ada Promis - masterclass"
                   placeholder="blurred"
-                  width={1081}
-                  height={161}
+                  width={800}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />
