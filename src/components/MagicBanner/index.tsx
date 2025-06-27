@@ -384,7 +384,7 @@ const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
                   <span className="">Zwiększam sprzedaż dzięki reklamom!</span>
                 </>
               }
-              sectionId="form"
+              sectionId="signup"
               textSize="text-sm md:text-base"
               btnStyle="bg-ada-pink7 text-ada-white
                                 font-semibold tracking-wide h-[80px] 

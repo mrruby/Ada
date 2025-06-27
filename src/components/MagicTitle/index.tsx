@@ -171,7 +171,7 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
                     Dołączam!
                   </span>
                 }
-                sectionId="form"
+                sectionId="signup"
                 textSize="text-sm md:text-base"
                 btnStyle="uppercase bg-ada-pink2 text-ada-black 
                       font-semibold tracking-wide h-[48px] md:h-[60px] 

@@ -50,7 +50,7 @@ const MagicLastSection: FC<MagicLastSectionProps> = ({
                 Sprawdzam!
               </span>
             }
-            sectionId="form"
+            sectionId="signup"
             textSize="md:text-adaSubtitle"
             btnStyle="uppercase bg-ada-pink2 text-ada-black 
                       font-semibold tracking-wide h-[48px] md:h-[60px] 

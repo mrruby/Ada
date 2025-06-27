@@ -114,7 +114,7 @@ const MagicBanner2 = ({}: {}): JSX.Element => {
                   Działam!
                 </span>
               }
-              sectionId="form"
+              sectionId="signup"
               textSize="text-sm md:text-base"
               btnStyle="bg-blue text-ada-black 
                       font-semibold tracking-wide h-[48px] md:h-[70px] 
