@@ -117,14 +117,14 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               </div>
             }
             image={
-              <div className="md:absolute xl:right-[-10vw] top-[80px]">
+              <div className="md:absolute xl:right-[-10vw] top-[150px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/masterclass2.webp"}
                   alt="Ada Promis"
                   placeholder="blurred"
-                  width={503}
-                  height={598}
+                  width={400}
+                  height={500}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />
