@@ -116,7 +116,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "Czy na pewno będzie czas dla mnie?",
       answer: (
         <>
-          ✓ Tak, na każdym spotkaniu możesz wskoczyć na „gorące krzesełko” i
+          ✓ Tak, na każdym spotkaniu możesz wskoczyć na "gorące krzesełko" i
           przedstawić swój problem, zadać pytania. Spotykamy się w kameralnych
           grupach, aby każdy znalazł czas na swoje pytania i pokazanie swojego
           konta reklamowego.
@@ -203,7 +203,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           menadżera reklam. Jedyne, co musisz mieć, aby w pełni skorzystać z
           masterclassów to menadżer firmy. Jeśli go nie masz, głowa do góry! Po
           dołączeniu do masterclassów dostaniesz możliwość zakupu mini-kursu
-          „Przygotuj swój menedżer firmy”. Z nim ułożysz swojego menedżera firmy
+          "Przygotuj swój menedżer firmy". Z nim ułożysz swojego menedżera firmy
           od zera 😊
         </>
       ),
@@ -215,11 +215,11 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           Cóż będę dużo mówić… osoby, które zdecydowały się na adsy&chill w
           przedsprzedaży, mówią tak:
           <br />
-          <br />- “pozyskuję leady w koszcie 2-3 zł dzięki automatyzacji z MAKE”{" "}
+          <br />- "pozyskuję leady w koszcie 2-3 zł dzięki automatyzacji z MAKE"{" "}
           <br />
-          - “ROAS w okolicy 5 przy sprzedaży taniego produktu” <br />
-          - “wczoraj odpaliłam reklamę na warsztaty online i już rozeszły się
-          prawie wszystkie miejsca” <br />
+          - "ROAS w okolicy 5 przy sprzedaży taniego produktu" <br />
+          - "wczoraj odpaliłam reklamę na warsztaty online i już rozeszły się
+          prawie wszystkie miejsca" <br />
           <br />
           Tak, Ty też możesz tak powiedzieć za kilka dni. Wystarczy, że solidnie
           zapoznasz się z materiałem Adsy&Chill i wdrożysz kampanie na swoim
@@ -313,8 +313,8 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           ukrywam, że program jest skierowany do osób, które mają już
           doświadczenie w ustawianiu reklam. Wystarczy, że wiesz, gdzie kliknąć,
           aby stworzyć kampanię i wiesz, gdzie szukać ustawień grupy docelowej.
-          Jeśli możesz o sobie powiedzieć: „coś już wyklikałam w managerze
-          reklam”, dołącz!
+          Jeśli możesz o sobie powiedzieć: "coś już wyklikałam w managerze
+          reklam", dołącz!
         </>
       ),
     },
@@ -352,7 +352,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       ),
     },
     {
-      question: "Dla kogo jest program mentoringowy „Ogarnij swoje adsy”?",
+      question: "Dla kogo jest program mentoringowy 'Ogarnij swoje adsy'?",
       answer: (
         <>
           Program to przestrzeń dla przedsiębiorczyń i solopreneurek. Dlatego to
@@ -365,7 +365,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       question: "Czy na pewno będzie czas dla mnie?",
       answer: (
         <>
-          Tak, na każdym office hour możesz wskoczyć na „gorące krzesełko” i
+          Tak, na każdym office hour możesz wskoczyć na "gorące krzesełko" i
           przedstawić swój problem, zadać pytania.
           <br />
           ❌ To NIE są spotkania, na których jedna osoba mówi, a druga słucha.
@@ -588,7 +588,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
             type="button"
             text={
               <span className=" font-extrabold">
-                Zwiększam sprzedaż{" "}
+                Zwiększam zyski z{" "}
                 <span className="text-ada-orange">Adsy&Chill!</span>
               </span>
             }

@@ -1,14 +1,14 @@
-import React from "react"
 import Layout from "components/Layout"
-import SEO from "components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import MagicTitle from "components/MagicTitle"
-import MagicBanner1 from "components/MagicBanner"
-import MagicDateBanner from "components/MagicDateBanner"
-import MagicBioBanner from "components/MagicBioBanner"
 import MagicApproachSection from "components/MagicApproachSection"
+import MagicBanner1 from "components/MagicBanner"
+import MagicBioBanner from "components/MagicBioBanner"
+import MagicDateBanner from "components/MagicDateBanner"
 import MagicLastSection from "components/MagicLastSection"
+import MagicTitle from "components/MagicTitle"
 import ReferencesMentoring from "components/ReferencesMentoring"
+import SEO from "components/seo"
+import React from "react"
 
 const MasterclassPage = (): JSX.Element => {
   return (
@@ -20,7 +20,7 @@ const MasterclassPage = (): JSX.Element => {
         <MagicBanner1 version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title3 version="1" />
+        <ReferencesMentoring title3 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <MagicDateBanner version={1} />

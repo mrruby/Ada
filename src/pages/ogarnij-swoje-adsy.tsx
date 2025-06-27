@@ -1,7 +1,3 @@
-import React from "react"
-
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
 import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MasterclassAgenda from "components/MasterclassAgenda"
@@ -14,6 +10,9 @@ import ReferencesMentoring from "components/ReferencesMentoring"
 import Team from "components/Team"
 import WebinarAbout from "components/WebinarAbout"
 import WebinarBanner from "components/WebinarBanner"
+import React from "react"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
 const MastermindPage = (): JSX.Element => {
   return (
@@ -24,7 +23,7 @@ const MastermindPage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
         <WebinarAbout version={4} />
-        <ReferencesMentoring title4 version="3" />
+        <ReferencesMentoring title4 />
       </MaxWithBgColorContainer>
       <div className="h-[200px] bg-wave2 absolute top-[1700px] w-screen hidden lg:block" />
       <div className="h-[200px] bg-wave2 absolute top-[3300px] 2xl:top-[3500px] w-screen hidden lg:block" />

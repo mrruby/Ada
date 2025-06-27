@@ -1,7 +1,6 @@
 import React from "react"
 import { BlogPost } from "helpers/BlogPost"
 import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
 
 type Blog = {
   node: {
