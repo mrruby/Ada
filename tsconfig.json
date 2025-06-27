@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "module": "commonjs",
     "target": "esnext",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "lib": ["dom", "esnext"],
     "strict": true,
     "noEmit": true,
@@ -12,20 +12,7 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "resolveJsonModule": true,
-    "rootDir": "./src",
-    "moduleResolution": "bundler",
-    "jsxImportSource": "react",
-    "paths": {
-      "components/*": ["components/*"],
-      "helpers/*": ["helpers/*"],
-      "images/*": ["images/*"]
-    },
-    "types": [
-      "node",
-      "react",
-      "react-dom",
-      "gatsby"
-    ]
+    "rootDir": "./src"
   },
   "exclude": ["node_modules", "public", ".cache"]
 }
