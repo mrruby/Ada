@@ -1,5 +1,5 @@
 import { Button } from "helpers/Button"
-import { FC } from "react"
+import React, { FC } from "react"
 import magicForm from "../../values/forms/magic-form.html"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
@@ -8,7 +8,9 @@ interface MagicLastSectionProps {
   version: number
 }
 
-const MagicLastSection: FC<MagicLastSectionProps> = ({ version }: MagicLastSectionProps) => {
+const MagicLastSection: FC<MagicLastSectionProps> = ({
+  version,
+}: MagicLastSectionProps) => {
   return (
     <>
       {version == 1 && (
