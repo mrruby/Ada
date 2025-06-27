@@ -64,11 +64,11 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             <div className="mb-6">
               <StaticImage
                 loading="eager"
-                src={"../../images/masterclass1Info.webp"}
+                src={"../../images/wyniki.png"}
                 alt="Ada Promis - masterclass"
                 placeholder="blurred"
-                width={1056}
-                height={201}
+                width={1100}
+                height={90}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -99,9 +99,21 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             groups="jedna, najlepsza, wybrana na podstawie wyników z poprzednich miesięcy"
             addInfo={
               <div className="pt-10 text-adaMin md:text-adaStandard">
-                <p><span className="font-bold">Liczba nowych obserwujących:</span> 11 125</p>
-                <p className="mt-2"><span className="font-bold">Wartość jednego klienta:</span> 540 zł miesięcznie (usługa płatna cyklicznie)</p>
-                <p className="mt-2"><span className="font-bold">Zysk:</span> 10800 zł miesięcznie (zakładając, połowa osób decyduje się na skorzystanie z usługi)</p>
+                <p>
+                  <span className="font-bold">
+                    Liczba nowych obserwujących:
+                  </span>{" "}
+                  11 125
+                </p>
+                <p className="mt-2">
+                  <span className="font-bold">Wartość jednego klienta:</span>{" "}
+                  540 zł miesięcznie (usługa płatna cyklicznie)
+                </p>
+                <p className="mt-2">
+                  <span className="font-bold">Zysk:</span> 10800 zł miesięcznie
+                  (zakładając, połowa osób decyduje się na skorzystanie z
+                  usługi)
+                </p>
               </div>
             }
             image={

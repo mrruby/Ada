@@ -1,8 +1,7 @@
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import { StaticImage } from "gatsby-plugin-image"
-import React from "react"
+import React, { JSX } from "react"
 import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
 import { responsive } from "values/const"
 import Reference from "../../helpers/Reference"
 

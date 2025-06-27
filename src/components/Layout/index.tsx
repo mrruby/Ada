@@ -2,10 +2,9 @@ import React from "react"
 import Footer from "../Footer"
 import Header from "../Header"
 import { LayoutElements } from "../Layout/elements"
-import "animate.css/animate.compat.css"
 import Cookies from "components/Cookies"
 
-type LayoutElements = {
+type LayoutElementsProps = {
   flowerBlue?: boolean
   starPink?: boolean
   flowerWhite?: boolean
@@ -66,9 +65,9 @@ type LayoutElements = {
 
 type Props = {
   children: React.ReactNode
-} & LayoutElements
+} & LayoutElementsProps
 
-const defaultProps: LayoutElements = {
+const defaultProps: LayoutElementsProps = {
   flowerBlue: false,
   starPink: false,
   flowerWhite: false,
