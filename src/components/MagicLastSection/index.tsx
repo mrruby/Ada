@@ -1,10 +1,15 @@
+/// <reference types="react" />
 import { Button } from "helpers/Button"
-import React from "react"
+import React, { FC } from "react"
 import magicForm from "../../values/forms/magic-form.html"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
+interface MagicLastSectionProps {
+  version: number
+}
+
+const MagicLastSection: FC<MagicLastSectionProps> = ({ version }: MagicLastSectionProps) => {
   return (
     <>
       {version == 1 && (
@@ -28,7 +33,7 @@ const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
                 notatka graficzna z podsumowaniem spotkania
               </Typography>
             </div>
-            <div className="md:w-full md:w-1/2">
+            <div className="w-full md:w-1/2">
               <div dangerouslySetInnerHTML={{ __html: magicForm }} />
             </div>
           </div>
