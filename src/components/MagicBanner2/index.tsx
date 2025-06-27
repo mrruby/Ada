@@ -1,8 +1,8 @@
+import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import React, { useState } from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
-import { Button } from "helpers/Button"
-import { StaticImage } from "gatsby-plugin-image"
 import BannerBox2 from "./BannerBox2"
 
 const bannerContent = [
@@ -114,7 +114,7 @@ const MagicBanner2 = ({}: {}): JSX.Element => {
                   Działam!
                 </span>
               }
-              sectionId="pakiety"
+              sectionId="signup"
               textSize="text-sm md:text-base"
               btnStyle="bg-blue text-ada-black 
                       font-semibold tracking-wide h-[48px] md:h-[70px] 

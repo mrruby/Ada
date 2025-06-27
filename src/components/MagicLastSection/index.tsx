@@ -1,10 +1,16 @@
-import React from "react"
+import { Button } from "helpers/Button"
+import React, { FC } from "react"
 import magicForm from "../../values/forms/magic-form.html"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
-import { Button } from "helpers/Button"
 
-const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
+interface MagicLastSectionProps {
+  version: number
+}
+
+const MagicLastSection: FC<MagicLastSectionProps> = ({
+  version,
+}: MagicLastSectionProps) => {
   return (
     <>
       {version == 1 && (
@@ -28,7 +34,7 @@ const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
                 notatka graficzna z podsumowaniem spotkania
               </Typography>
             </div>
-            <div className="md:w-full md:w-1/2">
+            <div className="w-full md:w-1/2">
               <div dangerouslySetInnerHTML={{ __html: magicForm }} />
             </div>
           </div>
@@ -44,7 +50,7 @@ const MagicLastSection = ({ version }: { version: number }): JSX.Element => {
                 Sprawdzam!
               </span>
             }
-            sectionId="pakiety"
+            sectionId="signup"
             textSize="md:text-adaSubtitle"
             btnStyle="uppercase bg-ada-pink2 text-ada-black 
                       font-semibold tracking-wide h-[48px] md:h-[60px] 
