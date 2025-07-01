@@ -1,3 +1,4 @@
+import CollapsibleFAQ from "components/CollapsibleFAQ"
 import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner3 from "components/MagicBanner3"
@@ -46,6 +47,9 @@ const MagicCollectivePage = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicPink2 bg-magicWave">
         <MagicCollectiveBanner version={7} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
+        <CollapsibleFAQ />
       </MaxWithBgColorContainer>
     </Layout>
   )
