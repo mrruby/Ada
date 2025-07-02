@@ -373,6 +373,19 @@ const referencesMagicList: IReferencesList[] = [
       />
     ),
   },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/magicOpinion8.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
 ]
 
 const referencesMagicList2: IReferencesList[] = [

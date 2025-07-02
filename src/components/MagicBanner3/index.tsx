@@ -7,72 +7,103 @@ import BannerBox2 from "./BannerBox3"
 const bannerContent = [
   {
     bgColor: "bg-ada-magicGreen",
-    title:
-      "👩‍💻 Praca przy kampanii sprzedażowej jednego produktu cyfrowego/mentoringu (2 miesiące)",
+    title: "🚀 KAMPANIA SINGLE",
+    subtitle:
+      "Praca przy kampanii sprzedażowej jednego produktu cyfrowego/mentoringu (2 miesiące)",
     description: (
-      <ul>
-        <li className="mb-2">
-          💼 Kompleksowa obsługa prekampanii i kampanii sprzedażowej
-        </li>
-        <li className="mb-2">📊 Strategia, wdrożenie i optymalizacja reklam</li>
-        <li className="mb-2">
-          💡 Analiza wyników i rekomendacje na przyszłość
-        </li>
-        <li className="mb-2">
-          👀 Idealne rozwiązanie dla jednorazowych projektów sprzedażowych
-        </li>
-      </ul>
+      <div>
+        <p className="font-bold mb-4">Co otrzymujesz:</p>
+        <ul className="space-y-2 mb-6">
+          <li>💼 Kompleksowa obsługa prekampanii i kampanii sprzedażowej</li>
+          <li>📊 Strategia, wdrożenie i optymalizacja reklam</li>
+          <li>💡 Analiza wyników i rekomendacje na przyszłość</li>
+          <li>📈 Obsługa reklam Meta/TikTok/LinkedIn</li>
+        </ul>
+        <p className="font-bold mb-4">Dla kogo:</p>
+        <ul className="space-y-2">
+          <li>
+            👀 Idealne rozwiązanie dla jednorazowych projektów sprzedażowych
+          </li>
+          <li>🎯 Testowanie współpracy przed długoterminowym partnerstwem</li>
+          <li>💼 Konkretny launch produktu lub usługi</li>
+        </ul>
+      </div>
     ),
   },
   {
     bgColor: "bg-ada-magicPink",
-    title: "📈 Obsługa reklam Meta, TikTok, LinkedIn",
+    title: "⭐ MARKETING PARTNER",
+    subtitle:
+      "Kompleksowe zarządzanie kampaniami na wszystkich kluczowych platformach (stała współpraca)",
     description: (
-      <ul>
-        <li className="mb-2">
-          👩‍💻 Kompleksowe zarządzanie kampaniami na wszystkich kluczowych
-          platformach
-        </li>
-        <li className="mb-2">
-          📈 Strategia, wdrożenie, optymalizacja i raportowanie
-        </li>
-        <li className="mb-2">
-          😎 Dostęp do specjalistów od każdej platformy reklamowej
-        </li>
-        <li className="mb-2">
-          🚀 Regularne aktualizacje zgodne z najnowszymi trendami i algorytmami
-        </li>
-      </ul>
+      <div>
+        <p className="font-bold mb-4">Co otrzymujesz:</p>
+        <ul className="space-y-2 mb-6">
+          <li>
+            👩‍💻 Kompleksowe zarządzanie kampaniami na wszystkich kluczowych
+            platformach
+          </li>
+          <li>📈 Strategia, wdrożenie, optymalizacja i raportowanie</li>
+          <li>😎 Dostęp do specjalistek od każdej platformy reklamowej</li>
+          <li>
+            🚀 Regularne aktualizacje zgodne z najnowszymi trendami i
+            algorytmami
+          </li>
+        </ul>
+        <p className="font-bold mb-4">Dla kogo:</p>
+        <ul className="space-y-2">
+          <li>📊 Firmy gotowe na systematyczne inwestowanie w marketing</li>
+          <li>🎯 Przedsiębiorczynie chcące skalować biznes profesjonalnie</li>
+          <li>
+            💼 Właścicielki biznesów potrzebujące stałego wsparcia
+            marketingowego
+          </li>
+        </ul>
+      </div>
     ),
   },
   {
     bgColor: "bg-ada-purple3",
-    title:
-      "‍💻 Obsługa reklam Meta, TikTok, LinkedIn + konsultacje strategiczne 1:1",
+    title: "💎 GROWTH INTENSIVE",
+    subtitle: "Obsługa reklam Meta, TikTok, LinkedIn + konsultacje strategiczne 1:1 (premium)",
     description: (
-      <ul>
-        <li className="mb-2">👩‍💻 Prowadzenie kampanii reklamowych</li>
-        <li className="mb-2">🤝 Regularne sesje konsultacyjne z ekspertem</li>
-        <li className="mb-2">
-          🎯 Strategiczne planowanie działań marketingowych
-        </li>
-        <li className="mb-2">
-          👉🏻 Rekomendacje dotyczące contentu i komunikacji
-        </li>
-      </ul>
+      <div>
+        <p className="font-bold mb-4">Co otrzymujesz:</p>
+        <ul className="space-y-2 mb-6">
+          <li>👩‍💻 Prowadzenie kampanii reklamowych na wszystkich platformach</li>
+          <li>🤝 Regularne sesje konsultacyjne z ekspertkami (2x w miesiącu)</li>
+          <li>🎯 Strategiczne planowanie działań marketingowych</li>
+          <li>👉🏻 Rekomendacje dotyczące contentu i komunikacji</li>
+        </ul>
+        <p className="font-bold mb-4">Dla kogo:</p>
+        <ul className="space-y-2">
+          <li>🚀 Ambitne przedsiębiorczynie nastawione na znaczący wzrost</li>
+          <li>💰 Firmy gotowe na większe inwestycje w profesjonalny marketing</li>
+          <li>📈 Biznesy gotowe na intensywne skalowanie</li>
+        </ul>
+      </div>
     ),
   },
   {
     bgColor: "bg-ada-magicPink2",
-    title:
-      "💌 Wdrożenie newslettera + obsługa reklam Meta, TikTok, LinkedIn + prowadzenie newslettera",
+    title: "💌 NEWSLETTER MASTER",
+    subtitle: "Wdrożenie newslettera + obsługa reklam Meta, TikTok, LinkedIn + prowadzenie newslettera",
     description: (
-      <ul>
-        <li className="mb-2">📫 Kompleksowe wdrożenie systemu mailingowego</li>
-        <li className="mb-2">🖥️ Integracja z kampaniami reklamowymi</li>
-        <li className="mb-2">📯 Regularne prowadzenie komunikacji e-mail</li>
-        <li className="mb-2">📊 Analiza wyników i optymalizacja strategii</li>
-      </ul>
+      <div>
+        <p className="font-bold mb-4">Co otrzymujesz:</p>
+        <ul className="space-y-2 mb-6">
+          <li>📫 Kompleksowe wdrożenie systemu mailingowego</li>
+          <li>🖥️ Prowadzenie kampanii reklamowych na wszystkich platformach</li>
+          <li>📯 Regularne prowadzenie komunikacji e-mail</li>
+          <li>📊 Analiza wyników i optymalizacja strategii</li>
+        </ul>
+        <p className="font-bold mb-4">Dla kogo:</p>
+        <ul className="space-y-2">
+          <li>💌 Firmy chcące zbudować silną bazę newsletterową</li>
+          <li>🎯 Biznesy potrzebujące automatyzacji komunikacji</li>
+          <li>📈 Przedsiębiorczynie stawiające na długoterminowe relacje z klientami</li>
+        </ul>
+      </div>
     ),
   },
 ]
@@ -115,28 +146,22 @@ const MagicBanner3 = (): JSX.Element => {
             className="opacity-0 md:opacity-100 animate-spin-slow"
           />
         </div>
-        <div className="w-full flex justify-end mt-6">
-          <div className="flex flex-col justify-center">
-            <div
-              className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4"
-              onMouseOver={handleMouseEnter}
-            >
+        <div className="w-full flex justify-center mt-12">
+          <div className="flex flex-col items-center max-w-3xl mx-auto">
+            <div className="flex flex-col gap-8" onMouseOver={handleMouseEnter}>
               {bannerContent.map((item, i) => (
                 <div
                   key={i}
                   className={`${
-                    hasAnimated
-                      ? i % 2 === 0
-                        ? "lg:animate-slideInFromLeft opacity-100"
-                        : "lg:animate-slideInFromRight opacity-100"
-                      : ""
+                    hasAnimated ? "lg:animate-fadeIn opacity-100" : ""
                   }`}
                 >
                   <BannerBox2
-                    styles="h-full"
+                    styles="w-full"
                     bgColor={item.bgColor}
                     description={item.description}
                     title={item.title}
+                    subtitle={item.subtitle}
                     key={i}
                   />
                 </div>

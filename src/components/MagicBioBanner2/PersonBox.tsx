@@ -15,7 +15,7 @@ const PersonBox = ({ img, name, title, description }: PersonBoxProps) => {
       <div className="w-[170px] h-[170px]">
         <CircleImage circleKey={img} />
       </div>
-      <div className="max-w-[320px]">
+      <div className="w-[320px] max-w-[320px]">
         <p className="text-adaStandard text-ada-magicPurple2 font-bold">
           {name}
         </p>

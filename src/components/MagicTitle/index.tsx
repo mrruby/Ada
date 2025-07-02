@@ -226,12 +226,11 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
               >
                 Marketing Ads Girls Inside Collective
               </Typography>
-              <Typography
-                variant="body"
-                className="mb-6 font-courier"
-              >
-                Zwiększ przychody o 40-80% dzięki profesjonalnemu zespołowi marketingowemu -
-                <br /> bez zatrudniania in-house
+              <Typography variant="body" className="mb-6 font-courier">
+                <span className="font-bold">Zwiększ przychody o 40-80%</span>{" "}
+                dzięki
+                <br /> profesjonalnemu zespołowi marketingowemu - bez
+                zatrudniania in-house
               </Typography>
               <Button
                 type="button"
