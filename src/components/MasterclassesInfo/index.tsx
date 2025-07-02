@@ -64,11 +64,11 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             <div className="mb-6">
               <StaticImage
                 loading="eager"
-                src={"../../images/wyniki.png"}
+                src={"../../images/case-study-1-original.webp"}
                 alt="Ada Promis - masterclass"
                 placeholder="blurred"
                 width={1100}
-                height={90}
+                height={200}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -117,14 +117,14 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               </div>
             }
             image={
-              <div className="md:absolute xl:right-[-10vw] top-[150px]">
+              <div className="md:absolute xl:right-[-10vw] top-[100px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/masterclass2.webp"}
                   alt="Ada Promis"
                   placeholder="blurred"
                   width={400}
-                  height={500}
+                  height={600}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />
@@ -134,11 +134,11 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               <div className="mb-6">
                 <StaticImage
                   loading="eager"
-                  src={"../../images/masterclass2Info.webp"}
+                  src={"../../images/case-study-2-original.webp"}
                   alt="Ada Promis - masterclass"
                   placeholder="blurred"
-                  width={1099}
-                  height={93}
+                  width={1300}
+                  height={120}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />

@@ -32,7 +32,7 @@ const listItems3 = [
 const listItems3A = (
   <>
     krok po kroku ustawić 3 typy kampanii reklamowych:
-    <br />- z wykorzystaniem bezpłatnego narzędzia Make,
+    <br />- dzięki którym zbudujesz dochodową społeczność,
     <br />- budujące stabilną i kaloryczną listę mailingową,
     <br />- sprzedażowe: remarketingowe!
   </>
