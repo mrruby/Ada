@@ -1,6 +1,6 @@
-import React from "react"
-import { MasterclassInfo } from "helpers/MasterclassInfo"
 import { StaticImage } from "gatsby-plugin-image"
+import { MasterclassInfo } from "helpers/MasterclassInfo"
+import React from "react"
 
 const efects1 = [
   "Umiesz ustawić kampanię, która zarówno buduje społeczność, jak i sprzedaje,",
@@ -9,9 +9,9 @@ const efects1 = [
 ]
 
 const efects2 = [
-  "Ustawiasz kampanię reklamową z formularzem, która pozyskuje dla Ciebie leady nawet gdy siedzisz w samolocie lub leżysz na plaży",
-  "Korzystasz z automatyzacji, dzięki której kontakty zebrane w formularzu (imię, adres e-mail) w mig trafiają z CRM-u Facebooka do systemu mailowego, np. MailerLite",
-  "Budujesz baaaaaaardzo gładki proces: wypełnienie formularza, dodanie do listy, odpalenie automatycznej ścieżki zakupowej, która nie zależy od Twojego czasu!",
+  "Zwiększasz liczbę obserwujących o zaangażowanych użytkowników (nie boty!)",
+  "Budujesz społeczność prawdziwych fanów Twojej marki na Instagram",
+  "Twój profil zyskuje na wiarygodności dzięki większej liczbie aktywnych obserwujących",
 ]
 
 const efects3 = [
@@ -64,11 +64,11 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             <div className="mb-6">
               <StaticImage
                 loading="eager"
-                src={"../../images/masterclass1Info.webp"}
+                src={"../../images/case-study-1-original.webp"}
                 alt="Ada Promis - masterclass"
                 placeholder="blurred"
-                width={1056}
-                height={201}
+                width={1100}
+                height={200}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -80,49 +80,51 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
         <div id="masterclass-2">
           <MasterclassInfo
             title="Masterclass 2"
-            subtitle1="Ułatw sobie reklamy z automatyzacją"
+            subtitle1="Kampanie na Instagram, które przyciągają odbiorców"
             subtitle2={
               <>
-                Nauczysz się,{" "}
-                <span className="font-bold">
-                  jak pozyskać kontakty za pomocą formularza na Facebooku.
-                </span>{" "}
-                Bez strony WWW, z darmowym i prostym w obsłudze narzędziem do
-                automatyzacji - MAKE.
+                Stworzysz kampanię na IG, która tworzy solidne fundamenty pod
+                sprzedaż
               </>
             }
             efects={efects2}
-            forWhom="To może być Twoje pierwsze spotkanie z formularzami i MAKE. Zapraszam też osoby, które mają już za sobą pierwsze kampanie z formularzami i chcą nauczyć się je automatyzować."
+            forWhom="Dla każdego, kto chce skalować biznes w świadomy sposób"
             forWhomInfo=""
-            btn="Case study z kampanii z formularzem Facebooka"
+            btn="Case study z kampanii kierującej na Instagrama"
             sectionId="masterclass-3"
-            purpose="zbieranie zapisów na webinar"
-            cost="128,58 zł"
-            time="3 dni"
-            amountOfContacts="26"
-            groups="grupy zimne związane z profilem działalności klientki — pracownicy korporacji, mamy"
-            costOfContacts="4,95 zł"
+            purpose="budowanie świadomości marki, wzrost liczby obserwujących i zaangażowania na profilu"
+            cost="4810,98 zł"
+            time="5 miesięcy"
+            amountOfContacts="40"
+            groups="jedna, najlepsza, wybrana na podstawie wyników z poprzednich miesięcy"
             addInfo={
-              <p className="pt-10 text-adaMin md:text-adaStandard">
-                Równolegle przeprowadziłam kampanię, w której zapis na webinar
-                odbywał się przez standardowy formularz na stronie. Koszt zapisu
-                wyniósł 7,09 zł. Bez strony WWW, z darmowym i prostym w obsłudze
-                narzędziem do automatyzacji - MAKE. <p />
-                <p className="font-bold mt-5">
-                  Koszt zapisu przez zautomatyzowaną kampanię z MAKE był o 30%
-                  niższy!
+              <div className="pt-10 text-adaMin md:text-adaStandard">
+                <p>
+                  <span className="font-bold">
+                    Liczba nowych obserwujących:
+                  </span>{" "}
+                  11 125
                 </p>
-              </p>
+                <p className="mt-2">
+                  <span className="font-bold">Wartość jednego klienta:</span>{" "}
+                  540 zł miesięcznie (usługa płatna cyklicznie)
+                </p>
+                <p className="mt-2">
+                  <span className="font-bold">Zysk:</span> 10800 zł miesięcznie
+                  (zakładając, połowa osób decyduje się na skorzystanie z
+                  usługi)
+                </p>
+              </div>
             }
             image={
-              <div className="md:absolute xl:right-[-10vw] top-[80px]">
+              <div className="md:absolute xl:right-[-10vw] top-[100px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/masterclass2.webp"}
                   alt="Ada Promis"
                   placeholder="blurred"
-                  width={503}
-                  height={598}
+                  width={400}
+                  height={600}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />
@@ -132,11 +134,11 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               <div className="mb-6">
                 <StaticImage
                   loading="eager"
-                  src={"../../images/masterclass2Info.webp"}
+                  src={"../../images/case-study-2-original.webp"}
                   alt="Ada Promis - masterclass"
                   placeholder="blurred"
-                  width={1099}
-                  height={93}
+                  width={1300}
+                  height={120}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />
@@ -193,8 +195,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
                   src={"../../images/masterclass3Info.webp"}
                   alt="Ada Promis - masterclass"
                   placeholder="blurred"
-                  width={1081}
-                  height={161}
+                  width={800}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />

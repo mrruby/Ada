@@ -5,7 +5,7 @@ type IReference = {
 }
 
 const Reference = ({ image }: IReference): JSX.Element => {
-  return <div className="w-[400px] md:max-w-[600px] mx-auto">{image}</div>
+  return <div className="w-full flex justify-center items-center px-4">{image}</div>
 }
 
 export default Reference

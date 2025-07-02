@@ -3,7 +3,6 @@ import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
 import { responsive } from "values/const"
 import Reference from "../../helpers/Reference"
 
@@ -458,19 +457,6 @@ const referencesMagicList2: IReferencesList[] = [
     image: (
       <StaticImage
         src={"../../images/magicOpinionNew6.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={680}
-        height={680}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src="../../images/magic_kapibara.webp"
         alt="Opinia o programie mentoringowym"
         placeholder="blurred"
         width={680}

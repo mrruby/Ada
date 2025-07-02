@@ -1,18 +1,18 @@
+import IconText from "components/IconText"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MasterclassAgenda from "components/MasterclassAgenda"
+import MasterclassesInfo from "components/MasterclassesInfo"
+import MasterclassFAQ from "components/MasterclassFAQ"
+import MasterclassPreparing from "components/MasterclassPreparing"
+import MentoringBanner from "components/MentoringBanner"
+import ReferencesMentoring from "components/ReferencesMentoring"
+import WebinarAbout from "components/WebinarAbout"
+import { Button } from "helpers/Button"
+import CountdownTimer from "helpers/CountdownTimer"
 import React, { useEffect, useState } from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import MasterclassFAQ from "components/MasterclassFAQ"
-import IconText from "components/IconText"
-import WebinarAbout from "components/WebinarAbout"
-import ReferencesMentoring from "components/ReferencesMentoring"
-import MasterclassPreparing from "components/MasterclassPreparing"
-import MentoringBanner from "components/MentoringBanner"
-import MasterclassAgenda from "components/MasterclassAgenda"
-import MasterclassesInfo from "components/MasterclassesInfo"
-import CountdownTimer from "helpers/CountdownTimer"
 import { checkAndGenerateDiscountCode } from "../utils/api"
-import { Button } from "helpers/Button"
 
 const AdsyAndChill = (): JSX.Element => {
   const [endsAt, setEndsAt] = useState<string | null>(null)
@@ -87,7 +87,7 @@ const AdsyAndChill = (): JSX.Element => {
         <WebinarAbout version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer>
-        <ReferencesMentoring title3 version="2" />
+        <ReferencesMentoring title3 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4 mt-5">
         <MasterclassAgenda version={3} />

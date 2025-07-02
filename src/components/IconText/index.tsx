@@ -71,11 +71,11 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
   const rightList2 = [
     {
       icon: "🤯",
-      text: "Myślałaś, że przecież reklamy można ‘tak łatwo wyklikać’, a potem weszłaś do menadżera reklam i poczułaś chaos?",
+      text: "Myślałaś, że przecież reklamy można 'tak łatwo wyklikać', a potem weszłaś do menadżera reklam i poczułaś chaos?",
     },
     {
       icon: "😬",
-      text: "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że „umiesz za mało”?",
+      text: "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że 'umiesz za mało'?",
     },
     {
       icon: "🥵",
@@ -343,7 +343,7 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
                   width={320}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
-                  class="lg:mr-[-200px] lg:mb-[-8px]"
+                  className="lg:mr-[-200px] lg:mb-[-8px]"
                 />
               </div>
             </div>
