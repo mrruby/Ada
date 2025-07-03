@@ -32,7 +32,7 @@ const BannerBox3 = ({
       <div className="text-sm md:text-base leading-relaxed mb-4">
         {description}
       </div>
-      <div className="flex justify-center -mb-16">
+      <div className="flex justify-center -mb-8 md:-mb-16">
         <Button
           type="button"
           text={

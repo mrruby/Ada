@@ -94,7 +94,7 @@ const HolidayInfo = ({ version }: { version: number }): JSX.Element => {
                   Dla kogo jest
                 </h2>
                 <h2 className="md:w-[500px] border-b-[11px] lg:mb-2 lg:border-b-[34px] border-ada-light-pink h-[20px] lg:h-[70px] animate-bounce">
-                  ten <span className="text-ada-pink3">warsztat</span>?
+                  to <span className="text-ada-pink3">szkolenie</span>?
                 </h2>
               </div>
               <ul className="lg:w-[680px] pt-6">

@@ -84,7 +84,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 <span className="text-ada-yellow">moje wakacje!</span>
               </h1>
               <h2 className="md:text-adaSubtitle pt-2">
-                <span className="font-bold">Warsztat kreatywny za 0 zł:</span>{" "}
+                <span className="font-bold">Szkolenie za 0 zł:</span>{" "}
                 <br />5 reklam, które musisz przetestować w to lato{" "}
               </h2>
             </div>

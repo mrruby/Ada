@@ -20,32 +20,32 @@ const MagicCollectiveBanner = ({
   useEffect(() => {
     if (version === 5) {
       // Load Koalendar script
-      const script1 = document.createElement('script');
-      script1.innerHTML = `window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};`;
-      document.body.appendChild(script1);
-      
-      const script2 = document.createElement('script');
-      script2.src = 'https://koalendar.com/assets/widget.js';
-      script2.async = true;
-      document.body.appendChild(script2);
-      
+      const script1 = document.createElement("script")
+      script1.innerHTML = `window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};`
+      document.body.appendChild(script1)
+
+      const script2 = document.createElement("script")
+      script2.src = "https://koalendar.com/assets/widget.js"
+      script2.async = true
+      document.body.appendChild(script2)
+
       script2.onload = () => {
         // Initialize Koalendar after script loads
         if (window.Koalendar) {
-          window.Koalendar('inline', {
-            "url": "https://koalendar.com/e/porozmawiajmy-o-wspolpracy",
-            "selector": "#inline-widget-porozmawiajmy-o-wspolpracy"
-          });
+          window.Koalendar("inline", {
+            url: "https://koalendar.com/e/porozmawiajmy-o-wspolpracy",
+            selector: "#inline-widget-porozmawiajmy-o-wspolpracy",
+          })
         }
-      };
-      
+      }
+
       // Cleanup
       return () => {
-        document.body.removeChild(script1);
-        document.body.removeChild(script2);
-      };
+        document.body.removeChild(script1)
+        document.body.removeChild(script2)
+      }
     }
-  }, [version]);
+  }, [version])
   const scrollToWebinarForm = () => {
     const element = document.getElementById("webinar-form")
     if (element) {
@@ -104,15 +104,15 @@ const MagicCollectiveBanner = ({
               <Button
                 type="button"
                 text={
-                  <span className="font-normal text-ada-orange font-anton md:text-adaSubtitle">
+                  <span className="font-normal text-ada-orange font-anton text-xs md:text-sm">
                     SPRAWDŹ, JAK TO DZIAŁA - BEZPŁATNA KONSULTACJA
                   </span>
                 }
                 url="https://forms.gle/21QLQXWozG9EYQvt8"
-                textSize="text-sm md:text-base"
+                textSize="text-xs md:text-sm"
                 btnStyle="bg-ada-white2
-                      tracking-wide h-[48px] md:h-[60px] 
-                      px-6 hover:opacity-90 rounded-full min-w-[130px] border-ada-orange border"
+                      tracking-wide h-[44px] md:h-[52px] 
+                      px-4 md:px-6 hover:opacity-90 rounded-full min-w-[130px] border-ada-orange border"
               />
             </div>
           </div>
@@ -178,25 +178,25 @@ const MagicCollectiveBanner = ({
           className="text-black overflow-hidden sm:mt-10"
           padding="py-8 px-4 md:px-8 flex justify-centeritems-center"
         >
-          <div className="mx-auto md:w-[563px] bg-magic-banner2 min-h-[390px] md:h-[444px]">
-            <div className="max-w-[438px] pt-6 md:pt-8 pl-[80px] md:pl-[130px]">
+          <div className="mx-auto md:w-[563px] bg-magic-banner2 min-h-[400px] md:h-[460px] pb-4">
+            <div className="max-w-[438px] pt-8 md:pt-10 pl-[80px] md:pl-[130px]">
               <TypingAnimation
                 text="Dlaczego MAGIC?"
                 textStyle="mt-[6px] md:m-5 text-ada-orange font-anton font-normal px-4 md:px-0 text-adaNav md:text-adaBase"
               />
             </div>
-            <div className="max-w-[438px] mx-auto px-10 md:px-0 space-y-4">
-              <div className="md:mb-4 mt-14 md:mt-6 text-adaMin md:text-adaStandard">
+            <div className="max-w-[438px] mx-auto px-10 md:px-0 space-y-3 md:space-y-4">
+              <div className="mt-14 md:mt-6 text-adaMin md:text-adaStandard">
                 🤝 <span className="font-bold">Działamy jako Twój zespół</span>{" "}
                 - jesteśmy stałym partnerem w rozwoju Twojego biznesu
               </div>
-              <div className="md:mb-4 text-adaMin md:text-adaStandard">
+              <div className="text-adaMin md:text-adaStandard">
                 🏅{" "}
                 <span className="font-bold">Pracujemy na poziomie premium</span>
                 - skupiamy się na długoterminowych relacjach i mierzalnych
                 rezultatach
               </div>
-              <div className="md:mb-4 text-adaMin md:text-adaStandard">
+              <div className="text-adaMin md:text-adaStandard">
                 👩‍💻{" "}
                 <span className="font-bold">
                   Łączymy strategię z wykonaniem
@@ -204,7 +204,7 @@ const MagicCollectiveBanner = ({
                 - nie tylko doradzamy, ale przede wszystkim wdrażamy i
                 zarządzamy
               </div>
-              <div className="md:mb-8 text-adaMin md:text-adaStandard">
+              <div className="text-adaMin md:text-adaStandard">
                 🧠 <span className="font-bold">Jesteśmy ADHD friendly</span> -
                 rozumiemy dynamikę kreatywnego umysłu i wspólnie z Tobą
                 wypracujemy najlepszy system współpracy
@@ -342,27 +342,29 @@ const MagicCollectiveBanner = ({
                 Rozpocznij współpracę z MAGIC
               </Typography>
             </div>
-            
+
             {/* Content */}
             <div className="text-center mb-8">
-              <Typography
-                variant="body"
-                className="font-bold mb-6"
-              >
+              <Typography variant="body" className="font-bold mb-6">
                 Umów bezpłatną rozmowę wstepną, podczas której:
               </Typography>
               <ul className="max-w-[600px] mx-auto text-left space-y-3">
                 <li className="flex items-start">
                   <span className="mr-2">✅</span>
-                  <span>Dowiesz się dokładnie, ile możesz zyskać i jak to osiągnąć</span>
+                  <span>
+                    Dowiesz się dokładnie, ile możesz zyskać i jak to osiągnąć
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">✅</span>
-                  <span>Nawet jeśli nie zdecydujesz się na współpracę - wyjdziesz z planem działania</span>
+                  <span>
+                    Nawet jeśli nie zdecydujesz się na współpracę - wyjdziesz z
+                    planem działania
+                  </span>
                 </li>
               </ul>
             </div>
-            
+
             {/* Button */}
             <div className="flex justify-center mb-8">
               <Button
@@ -378,9 +380,12 @@ const MagicCollectiveBanner = ({
                          px-6 hover:opacity-90 rounded-full min-w-[200px]"
               />
             </div>
-            
+
             {/* Koalendar Embed */}
-            <div id="inline-widget-porozmawiajmy-o-wspolpracy" className="max-w-[800px] mx-auto"></div>
+            <div
+              id="inline-widget-porozmawiajmy-o-wspolpracy"
+              className="max-w-[800px] mx-auto"
+            ></div>
           </div>
         </Section>
       )}
@@ -482,7 +487,7 @@ const MagicCollectiveBanner = ({
                 />
                 <div className="bg-white border-ada-orange border rounded-3xl px-6 py-3">
                   <h3 className="font-anton font-normal text-center text-ada-orange text-xl md:text-2xl">
-                    Case study kampanii z listą mailową
+                    Case study z kampanii z listą mailową
                   </h3>
                 </div>
                 <StaticImage
@@ -507,25 +512,40 @@ const MagicCollectiveBanner = ({
                   <div className="md:col-span-2 space-y-4">
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Cel kampanii:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Cel kampanii:
+                        </p>
                       </div>
-                      <p className="text-sm">kampania z celem zapis na listę mailową; po dołączeniu subskrybenci otrzymują one time offer na dostęp do platformy kursowej</p>
+                      <p className="text-sm">
+                        kampania z celem zapis na listę mailową; po dołączeniu
+                        subskrybenci otrzymują one time offer na dostęp do
+                        platformy kursowej
+                      </p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Czas trwania kampanii:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Czas trwania kampanii:
+                        </p>
                       </div>
                       <p className="text-sm">2 miesiące</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Grupy docelowe:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Grupy docelowe:
+                        </p>
                       </div>
-                      <p className="text-sm">różne grupy zimne bazując na zainteresowaniach, lookalike, grupa ciepła</p>
+                      <p className="text-sm">
+                        różne grupy zimne bazując na zainteresowaniach,
+                        lookalike, grupa ciepła
+                      </p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Liczba osób, która wypełniła formularz zapisu:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Liczba osób, która wypełniła formularz zapisu:
+                        </p>
                       </div>
                       <p className="text-sm">1949</p>
                     </div>
@@ -534,25 +554,33 @@ const MagicCollectiveBanner = ({
                   <div className="space-y-4">
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Wydany budżet:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wydany budżet:
+                        </p>
                       </div>
                       <p className="text-sm">6892,61 zł</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Ilość zakupów:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Ilość zakupów:
+                        </p>
                       </div>
                       <p className="text-sm">28 x 2499 zł</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Wartość zakupów:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wartość zakupów:
+                        </p>
                       </div>
                       <p className="text-sm">69 972 zł</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">ROAS:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          ROAS:
+                        </p>
                       </div>
                       <p className="text-sm">10,15</p>
                     </div>
@@ -600,25 +628,39 @@ const MagicCollectiveBanner = ({
                   <div className="md:col-span-2 space-y-4">
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Cel kampanii:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Cel kampanii:
+                        </p>
                       </div>
-                      <p className="text-sm">budowanie świadomości marki, wzrost liczby obserwujących i zaangażowania na profilu.</p>
+                      <p className="text-sm">
+                        budowanie świadomości marki, wzrost liczby obserwujących
+                        i zaangażowania na profilu.
+                      </p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Czas trwania kampanii:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Czas trwania kampanii:
+                        </p>
                       </div>
                       <p className="text-sm">5 miesięcy</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Grupy docelowe:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Grupy docelowe:
+                        </p>
                       </div>
-                      <p className="text-sm">jedna, najlepsza, wybrana na podstawie wyników z poprzednich miesięcy</p>
+                      <p className="text-sm">
+                        jedna, najlepsza, wybrana na podstawie wyników z
+                        poprzednich miesięcy
+                      </p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Liczba nowych obserwujących:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Liczba nowych obserwujących:
+                        </p>
                       </div>
                       <p className="text-sm">11 125</p>
                     </div>
@@ -627,27 +669,38 @@ const MagicCollectiveBanner = ({
                   <div className="space-y-4">
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Wydany budżet:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wydany budżet:
+                        </p>
                       </div>
                       <p className="text-sm">4810,98 zł</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Ilość zapisów:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Ilość zapisów:
+                        </p>
                       </div>
                       <p className="text-sm">40</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Koszt pozyskania kontaktu:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Koszt pozyskania kontaktu:
+                        </p>
                       </div>
                       <p className="text-sm">4,95 zł</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Zysk:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Zysk:
+                        </p>
                       </div>
-                      <p className="text-sm">10800 zł miesięcznie (zakładając, połowa osób decyduje się na skorzystanie z usługi)</p>
+                      <p className="text-sm">
+                        10800 zł miesięcznie (zakładając, połowa osób decyduje
+                        się na skorzystanie z usługi)
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -693,25 +746,40 @@ const MagicCollectiveBanner = ({
                   <div className="md:col-span-2 space-y-4">
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Cel kampanii:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Cel kampanii:
+                        </p>
                       </div>
-                      <p className="text-sm">kampania sprzedażowa podczas akcji promocyjnej (remarketing)</p>
+                      <p className="text-sm">
+                        kampania sprzedażowa podczas akcji promocyjnej
+                        (remarketing)
+                      </p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Czas trwania kampanii:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Czas trwania kampanii:
+                        </p>
                       </div>
                       <p className="text-sm">5 dni</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Grupy docelowe:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Grupy docelowe:
+                        </p>
                       </div>
-                      <p className="text-sm">osoby zapisane na newsletter (kampania na listę mailową here!👋) oraz osoby odwiedzające sklep w ostatnim miesiącu</p>
+                      <p className="text-sm">
+                        osoby zapisane na newsletter (kampania na listę mailową
+                        here!👋) oraz osoby odwiedzające sklep w ostatnim
+                        miesiącu
+                      </p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Liczba osób, która wypełniła formularz zapisu:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Liczba osób, która wypełniła formularz zapisu:
+                        </p>
                       </div>
                       <p className="text-sm">1115</p>
                     </div>
@@ -720,25 +788,33 @@ const MagicCollectiveBanner = ({
                   <div className="space-y-4">
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Wydany budżet:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wydany budżet:
+                        </p>
                       </div>
                       <p className="text-sm">203,72 zł</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Ilość zakupów:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Ilość zakupów:
+                        </p>
                       </div>
                       <p className="text-sm">21</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">Wartość zakupów:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wartość zakupów:
+                        </p>
                       </div>
                       <p className="text-sm">3900,80 zł</p>
                     </div>
                     <div>
                       <div className="mb-2">
-                        <p className="font-bold bg-ada-purple3 text-white inline-block">ROAS:</p>
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          ROAS:
+                        </p>
                       </div>
                       <p className="text-sm">19,15</p>
                     </div>
@@ -746,6 +822,24 @@ const MagicCollectiveBanner = ({
                 </div>
               </div>
             </div>
+          </div>
+        </Section>
+      )}
+      {version == 10 && (
+        <Section bgColor="" className="text-black text-center my-16">
+          <div className="flex justify-center">
+            <Button
+              type="button"
+              text={
+                <span className="font-bold text-ada-white uppercase">
+                  Umawiam bezpłatną konsultację
+                </span>
+              }
+              sectionId="umawiam-spotkanie"
+              textSize="text-sm md:text-base"
+              btnStyle="bg-ada-orange tracking-wide h-[50px] md:h-[56px] 
+                       px-8 md:px-10 hover:opacity-90 rounded-full min-w-[250px]"
+            />
           </div>
         </Section>
       )}

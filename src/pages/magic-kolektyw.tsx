@@ -63,6 +63,9 @@ const MagicCollectivePage = (): JSX.Element => {
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
         <CollapsibleFAQ />
       </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <MagicCollectiveBanner version={10} />
+      </MaxWithBgColorContainer>
     </Layout>
   )
 }

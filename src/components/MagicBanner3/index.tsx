@@ -148,7 +148,7 @@ const MagicBanner3 = (): JSX.Element => {
         </div>
         <div className="w-full flex justify-center mt-12">
           <div className="flex flex-col items-center max-w-3xl mx-auto">
-            <div className="flex flex-col gap-8" onMouseOver={handleMouseEnter}>
+            <div className="flex flex-col gap-16 md:gap-8" onMouseOver={handleMouseEnter}>
               {bannerContent.map((item, i) => (
                 <div
                   key={i}

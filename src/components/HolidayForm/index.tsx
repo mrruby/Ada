@@ -13,7 +13,7 @@ const HolidayForm = (): JSX.Element => {
           Chcesz zaprojektować takie przemyślane & skuteczne kampanie reklamowe
           pod moim okiem?
         </p>
-        <p className="pt-4">Zarezerwuj miejsce na warsztacie:</p>
+        <p className="pt-4">Odbierz natychmiastowy dostęp do szkolenia za 0 zł</p>
       </div>
       <div className="flex flex-col md:flex-row py-6">
         <div className="md:min-w-[560px]">

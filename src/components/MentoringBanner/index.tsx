@@ -70,8 +70,7 @@ const MentoringBanner = ({ version }: { version: number }): JSX.Element => {
       {version === 4 && (
         <>
           <h2 className="md:text-adaSubtitle font-bold">
-            Przyjdź na <span className="text-ada-pink3">bezpłatny </span>
-            warsztat kreatywny
+            Odbierz dostęp do szkolenia za 0 zł
           </h2>
         </>
       )}

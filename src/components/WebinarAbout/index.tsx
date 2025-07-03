@@ -76,15 +76,15 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           </p>
           <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
             I tak od stażu w agencji marketingowej do swojej działalności: dziś
-            pod szyldem GetBold! obsługuję klientów z Europy, w tym z Polski i
+            pod szyldem MAGIC obsługuję klientów z Europy, w tym z Polski i
             na moim liczniku wybiło już{" "}
-            <span className="font-bold">ponad 1 mln budżetów reklamowych </span>
+            <span className="font-bold">ponad 2 mln budżetów reklamowych </span>
             wydanych w ramach Meta Ads.
           </p>
           <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
             Zaczynałam na etacie.{" "}
             <span className="font-bold">
-              Teraz prowadzę butikową agencję reklamową
+              Teraz prowadzę butikowy kolektyw marketingowy
             </span>{" "}
             i dzięki odpowiedniej strategii mogę pozwolić sobie na wakacje, bez
             obaw, że moja firma runie. Nawet więcej! Po ostatnim tygodniowym
