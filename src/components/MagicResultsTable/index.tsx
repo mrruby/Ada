@@ -3,7 +3,7 @@ import Section from "../shared/Section"
 
 const tableData = [
   {
-    metric: "Ilość",
+    metric: "Ilość follow",
     budget1_5k: "650",
     budget2_5k: "2200",
     budget5k: "3300",

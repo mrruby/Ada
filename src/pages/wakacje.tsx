@@ -1,14 +1,14 @@
-import React from "react"
-import Layout from "components/Layout"
-import SEO from "components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import WebinarBanner from "components/WebinarBanner"
 import HolidayForm from "components/HolidayForm"
-import WebinarAbout from "components/WebinarAbout"
-import HolidayInfo from "components/HolidayInfo"
-import ReferencesMentoring from "components/ReferencesMentoring"
-import MentoringBanner from "components/MentoringBanner"
 import HolidayFormTop from "components/HolidayFormTop"
+import HolidayInfo from "components/HolidayInfo"
+import Layout from "components/Layout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MentoringBanner from "components/MentoringBanner"
+import ReferencesMentoring from "components/ReferencesMentoring"
+import SEO from "components/seo"
+import WebinarAbout from "components/WebinarAbout"
+import WebinarBanner from "components/WebinarBanner"
+import React from "react"
 
 const MasterclassPage = (): JSX.Element => {
   return (
@@ -52,7 +52,7 @@ const MasterclassPage = (): JSX.Element => {
 }
 
 export const Head = () => (
-  <SEO title="Warsztat - Niech kampanie pracują na moje wakacje!" />
+  <SEO title="Szkolenie - Niech kampanie pracują na moje wakacje!" />
 )
 
 export default MasterclassPage
