@@ -225,6 +225,74 @@ type IReferences = {
 //   },
 // ]
 
+const referencesAdsyList: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy1.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads - Monika Gajek"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy2.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads - Juila Boryczka"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy3.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads - Martyna Sitarz"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy4.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy5.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
+
 const referencesList4: IReferencesList[] = [
   {
     image: (
@@ -493,6 +561,21 @@ const ReferencesMentoring = ({
           <h3 className="mx-auto md:max-w-[800px] text-center text-adaStandard md:text-adaBase lg:text-3xl font-bold lg:mb-2 md:border-b-[16px] lg:border-b-[28px] border-ada-pink2 md:h-[24px] lg:h-[40px] animate-bounce uppercase tracking-[0.12em]">
             biznes dzięki reklamom!
           </h3>
+          <div className="max-h-[600px] mx-auto mt-5 pb-4">
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              customLeftArrow={<CustomLeftArrow />}
+              customRightArrow={<CustomRightArrow />}
+              ssr={true}
+              autoPlay
+              autoPlaySpeed={2000}
+            >
+              {referencesAdsyList.map((reference, index) => (
+                <Reference key={index} image={reference.image} />
+              ))}
+            </Carousel>
+          </div>
         </>
       )}
       {title4 && (

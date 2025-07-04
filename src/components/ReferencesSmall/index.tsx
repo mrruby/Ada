@@ -71,6 +71,34 @@ const referencesList: IReferencesList[] = [
       />
     ),
   },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy4.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads"
+        placeholder="blurred"
+        width={400}
+        height={400}
+        formats={["auto", "webp", "avif"]}
+        quality={90}
+        className="mx-auto"
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opiniaAdsy5.webp"}
+        alt="Opinia o programie mentoringowym Meta Ads"
+        placeholder="blurred"
+        width={400}
+        height={400}
+        formats={["auto", "webp", "avif"]}
+        quality={90}
+        className="mx-auto"
+      />
+    ),
+  },
 ]
 
 const ReferencesSmall = (): JSX.Element => {

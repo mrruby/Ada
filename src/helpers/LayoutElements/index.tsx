@@ -37,7 +37,7 @@ const ImageComponent: React.FC<
   mobileRight,
   mobileLeft,
   mobileBottom,
-  width = "40px",
+  width = "",
   zIndex = "z-40",
   maxWidth = "",
   rotate = "",
@@ -49,11 +49,12 @@ const ImageComponent: React.FC<
     <img
       src={src}
       alt={alt}
+      aria-hidden="true"
       className={`absolute ${top || ""} ${right || ""} ${left || ""} ${
         bottom || ""
       } ${mobileTop || ""} ${mobileRight || ""} ${mobileLeft || ""} ${
         mobileBottom || ""
-      } ${zIndex} w-[${width}] ${maxWidth} ${rotate} ${animate}`}
+      } ${zIndex} ${width} ${maxWidth} ${rotate} ${animate}`}
       width={widthValue}
       height={heightValue}
     />
@@ -195,7 +196,7 @@ export const Waves4 = WavesTemplate
 export const Waves5 = WavesTemplate
 
 const SunTemplate: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/sun.svg" alt="Decorative sun" {...props} />
+  <ImageComponent src="/assets/sun.svg" alt="" {...props} />
 )
 
 export const Sun1 = SunTemplate
@@ -207,36 +208,36 @@ export const Sun5 = SunTemplate
 export const Sun6: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/sun2.svg"
-    alt="Decorative sun"
+    alt=""
     {...props}
     zIndex="-z-20"
   />
 )
 
 export const Sun7: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/sun2.svg" alt="Decorative sun" {...props} />
+  <ImageComponent src="/assets/sun2.svg" alt="" {...props} />
 )
 
 export const Flaming: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/flaming.svg"
-    alt="Decorative flamingo"
+    alt=""
     {...props}
   />
 )
 
 export const Flaps: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/flaps.svg" alt="Decorative flaps" {...props} />
+  <ImageComponent src="/assets/flaps.svg" alt="" {...props} />
 )
 
 export const Flaps2: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/flaps.svg" alt="Decorative flaps" {...props} />
+  <ImageComponent src="/assets/flaps.svg" alt="" {...props} />
 )
 
 export const Sunglasses: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/sunglasses.svg"
-    alt="Decorative sunglasses"
+    alt=""
     {...props}
   />
 )
@@ -244,21 +245,21 @@ export const Sunglasses: React.FC<Props> = (props) => (
 export const Sunglasses2: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/sunglasses.svg"
-    alt="Decorative sunglasses"
+    alt=""
     {...props}
   />
 )
 
 export const Ball1: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/ball1.svg" alt="Decorative ball" {...props} />
+  <ImageComponent src="/assets/ball1.svg" alt="" {...props} />
 )
 
 export const Ball2: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/ball2.svg" alt="Decorative ball" {...props} />
+  <ImageComponent src="/assets/ball2.svg" alt="" {...props} />
 )
 
 export const Ball3: React.FC<Props> = (props) => (
-  <ImageComponent src="/assets/ball2.svg" alt="Decorative ball" {...props} />
+  <ImageComponent src="/assets/ball2.svg" alt="" {...props} />
 )
 
 export const Drinks: React.FC<Props> = (props) => (
@@ -268,7 +269,7 @@ export const Drinks: React.FC<Props> = (props) => (
 export const Arrow: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/arrowWebinar.svg"
-    alt="Decorative arrow"
+    alt=""
     {...props}
   />
 )
