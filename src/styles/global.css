@@ -384,7 +384,6 @@ body {
   background-image: url("../../static/assets/pink-bg.webp");
   background-size: calc(100% * 0.7);
   background-position: center;
-  z-index: -1;
 }
 
 @media (min-width: 1170px) {
