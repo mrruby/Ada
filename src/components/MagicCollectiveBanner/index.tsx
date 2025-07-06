@@ -934,8 +934,15 @@ const MagicCollectiveBanner = ({
         </Section>
       )}
       {version == 14 && (
-        <Section bgColor="" className="text-black px-3" padding="my-12">
-          <div className="border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+        <Section bgColor="" className="text-black px-3" padding="-mt-1 mb-12">
+          <StaticImage
+            src={"../../images/triangle.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="mt-12 border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
@@ -982,8 +989,15 @@ const MagicCollectiveBanner = ({
         </Section>
       )}
       {version == 16 && (
-        <Section bgColor="" className="text-black px-3" padding="my-12">
-          <div className="border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+        <Section bgColor="" className="text-black px-3" padding="-mt-1 mb-12">
+          <StaticImage
+            src={"../../images/triangle.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="mt-4 border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
@@ -1023,7 +1037,14 @@ const MagicCollectiveBanner = ({
         </Section>
       )}
       {version == 17 && (
-        <Section bgColor="" className="text-black px-3" padding="my-12">
+        <Section bgColor="" className="text-black px-3" padding="-mt-1 mb-12">
+          <StaticImage
+            src={"../../images/triangle2.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
           <div className="border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
             <Typography
               variant="h2"
@@ -1046,8 +1067,15 @@ const MagicCollectiveBanner = ({
         </Section>
       )}
       {version == 18 && (
-        <Section bgColor="" className="text-black px-3" padding="my-12">
-          <div className="border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+        <Section bgColor="" className="text-black px-3" padding="-mt-1 mb-12">
+          <StaticImage
+            src={"../../images/triangle.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="mt-2 border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
@@ -1114,9 +1142,16 @@ const MagicCollectiveBanner = ({
         <Section
           bgColor=""
           className="text-black px-3 relative"
-          padding="my-12"
+          padding="-mt-1 mb-12"
         >
-          <div className="border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+          <StaticImage
+            src={"../../images/triangle.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="mt-6 border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
