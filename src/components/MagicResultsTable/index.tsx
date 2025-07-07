@@ -1,7 +1,14 @@
 import React from "react"
 import Section from "../shared/Section"
 
-const tableData = [
+interface TableRow {
+  metric: string
+  budget1_5k: string
+  budget2_5k: string
+  budget5k: string
+}
+
+const tableData: TableRow[] = [
   {
     metric: "Zyskasz tylu nowych obserwatorów",
     budget1_5k: "650 (jeden za 0,35zł)",
