@@ -1,12 +1,13 @@
 ---
 description: Ada Project - Personal Marketing Website for Adrianna Promis Urbas
-globs: 
+globs:
 alwaysApply: true
 ---
 
 # Ada Project - Marketing Website
 
 ## Project Overview
+
 This is the personal website and blog for **Adrianna Promis Urbas**, a Polish marketing strategist specializing in Facebook/Meta advertising campaigns and "slow marketing" approaches. The site serves as her business platform, content hub, and client acquisition tool.
 
 ## General Instructions
@@ -16,6 +17,7 @@ This is the personal website and blog for **Adrianna Promis Urbas**, a Polish ma
 - Focus only on content and style changes when requested
 
 ## Technology Stack
+
 - **Framework**: Gatsby.js (React-based static site generator)
 - **Language**: TypeScript with React 18.3.1
 - **Styling**: TailwindCSS 3.4.14 with extensive custom theme
@@ -24,14 +26,18 @@ This is the personal website and blog for **Adrianna Promis Urbas**, a Polish ma
 - **Deployment**: Netlify (static site hosting)
 
 ## Target Audience
+
 - **Language**: Polish
 - **Market**: Polish-speaking business owners and marketers
 - **Focus**: Health & wellness sector businesses
 
 ## Development Notes
+
 - Content-first architecture with Markdown-based blog
 - Mobile-first responsive design
 - Performance optimized with Gatsby Image
 - GDPR-compliant analytics implementation
 - Git-based content workflow through Netlify CMS
 - Do not delete React imports in files - they are required for JSX compilation
+- Do not add new global types
+- Do not fix type issues by installing new type packages
