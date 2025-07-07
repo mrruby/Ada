@@ -3,25 +3,19 @@ import Section from "../shared/Section"
 
 const tableData = [
   {
-    metric: "Ilość follow",
-    budget1_5k: "650",
-    budget2_5k: "2200",
-    budget5k: "3300",
+    metric: "Zyskasz tylu nowych obserwatorów",
+    budget1_5k: "650 (jeden za 0,35zł)",
+    budget2_5k: "2200 (jeden za 0,24zł)",
+    budget5k: "3300 (jeden za 0,19zł)",
   },
   {
-    metric: "Ilość zapisów na webinar",
-    budget1_5k: "280",
-    budget2_5k: "480",
-    budget5k: "1200",
+    metric: "Na Twoją listę mailową zapisze się tyle osób",
+    budget1_5k: "280 (jeden za 3,50zł)",
+    budget2_5k: "480 (jeden za 2,90zł)",
+    budget5k: "1200 (jeden za 2,50zł)",
   },
   {
-    metric: "Ilość przesłanych kontaktów",
-    budget1_5k: "5-15",
-    budget2_5k: "30-45",
-    budget5k: "120",
-  },
-  {
-    metric: "Ilość zakupów",
+    metric: "Tyle wyniesie przychód z kampanii",
     budget1_5k: "9500 zł",
     budget2_5k: "17000 zł",
     budget5k: "54000 zł",
@@ -34,7 +28,7 @@ const MagicResultsTable = (): JSX.Element => {
       <div className="max-w-4xl mx-auto px-4">
         <div className="bg-ada-white2 border-ada-orange border rounded-full py-3 px-6 text-center mb-12 max-w-md mx-auto">
           <span className="font-normal text-ada-orange font-anton text-lg md:text-xl">
-            Nasze wyniki w liczbach
+            Zobacz, co możemy zrobić w miesiąc z budżetem:
           </span>
         </div>
 
@@ -44,13 +38,13 @@ const MagicResultsTable = (): JSX.Element => {
               <tr>
                 <th className="text-left p-4 font-bold text-black border-b border-r border-ada-orange"></th>
                 <th className="text-center p-4 font-bold text-ada-orange border-b border-r border-ada-orange">
-                  Budżet 1,5k
+                  1,5k
                 </th>
                 <th className="text-center p-4 font-bold text-ada-orange border-b border-r border-ada-orange">
-                  Budżet 2,5k
+                  2,5k
                 </th>
                 <th className="text-center p-4 font-bold text-ada-orange border-b border-ada-orange">
-                  Budżet 5k
+                  5k
                 </th>
               </tr>
             </thead>
