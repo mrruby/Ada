@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import WebinarForm from "components/WebinarForm"
+import WakacjeForm from "components/WakacjeForm"
 
 const HolidayForm = (): JSX.Element => {
   return (
@@ -28,7 +28,7 @@ const HolidayForm = (): JSX.Element => {
             quality={100}
           />
         </div>
-        <WebinarForm />
+        <WakacjeForm />
       </div>
     </section>
   )
