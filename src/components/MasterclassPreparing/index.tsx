@@ -1,6 +1,5 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import { Button } from "helpers/Button"
+import React from "react"
 
 const listItems = [
   "Kliknij w link, który dostaniesz w mailu i upewnij się, że jesteś zalogowana na Youtube, aby móc zadawać pytania na spotkaniu!",
@@ -10,7 +9,6 @@ const listItems = [
 
 const listItems2 = [
   "Od razu po zakupie otrzymujesz dostęp do masterclassów na platformie kursowej. Możesz przerabiać materiały do woli przez następne 12 miesięcy - kiedy chcesz i ile razy chcesz!",
-  "Dostajesz także dostęp do zamkniętej grupy na Facebooku, w której możesz zadawać pytania i rozmawiać o wynikach swoich reklam.",
   "4 godziny - tyle potrzebujesz na przerobienie pierwszego masterclassu i ustawienie pierwszej kampanii. Działasz wtedy, kiedy chcesz.",
   "Po miesiącu - masz gotowy, hulający lejek reklamowych. Psst! Im szybciej wdrożysz kampanie, tym szybciej zobaczysz wyniki 😉",
 ]
