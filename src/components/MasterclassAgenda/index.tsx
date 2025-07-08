@@ -25,16 +25,16 @@ const listItems2 = [
 ]
 
 const listItems3 = [
-  "zaplanować kampanie reklamowe na wakacje",
-  "wykorzystać automatyzację w reklamach i oszczędzać czas",
+  "ułożyć wakacyjny lejek,",
+  "zarabiać dzięki reklamom podczas urlopu i odpoczynku!",
 ]
 
 const listItems3A = (
   <>
     krok po kroku ustawić 3 typy kampanii reklamowych:
-    <br />- dzięki którym zbudujesz dochodową społeczność,
-    <br />- budujące stabilną i kaloryczną listę mailingową,
-    <br />- sprzedażowe: remarketingowe!
+    <br />- z celem pozyskania obserwujących,
+    <br />- zapisu na listę mailową,
+    <br />- sprzedażową,
   </>
 )
 
@@ -163,18 +163,18 @@ const minusListItems2 = [
 
 const plusBasicList = [
   <p>
-    Masterclassu
-    <span className="font-bold"> „Ustaw reklamę na listę mailingową”</span>
-  </p>,
-  <p>
-    Masterclassu
+    dostęp do masterclassu{" "}
     <span className="font-bold">
-      {" "}
-      „Kampanie na Instagram, które przyciągają odbiorców”
+      „Reklamy IG, które budują zaangażowaną społeczność”
     </span>
   </p>,
   <p>
-    Masterclassu<span className="font-bold"> „Ustaw reklamę na sprzedaż”</span>
+    dostęp do masterclassu{" "}
+    <span className="font-bold">„Lista mailowa, która przyciąga klientów”</span>
+  </p>,
+  <p>
+    dostęp do masterclassu{" "}
+    <span className="font-bold">„Reklamy, które sprzedają na automacie”</span>
   </p>,
 ]
 
@@ -477,7 +477,7 @@ const MasterclassAgenda = ({
                   </>
                 )}
                 <span className={endsAt ? "text-adaSubtitle" : ""}>
-                  {endsAt ? "497 zł" : "597 zł"}
+                  {endsAt ? "497 zł" : "497zł (tylko do 15.07!)"}
                 </span>
               </p>
               <div className="flex justify-center">
