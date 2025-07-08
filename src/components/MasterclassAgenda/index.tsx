@@ -24,12 +24,12 @@ const listItems2 = [
   "co najmniej 10 pomysłami na kreacje do przetestowania w reklamach! 😎",
 ]
 
-const listItems3 = [
+const listItems3: string[] = [
   "ułożyć wakacyjny lejek,",
   "zarabiać dzięki reklamom podczas urlopu i odpoczynku!",
 ]
 
-const listItems3A = (
+const listItems3A: React.ReactNode = (
   <>
     krok po kroku ustawić 3 typy kampanii reklamowych:
     <br />- z celem pozyskania obserwujących,
@@ -161,7 +161,7 @@ const minusListItems2 = [
   </p>,
 ]
 
-const plusBasicList = [
+const plusBasicList: React.ReactNode[] = [
   <p>
     dostęp do masterclassu{" "}
     <span className="font-bold">
