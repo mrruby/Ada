@@ -9,12 +9,12 @@ import MasterclassPreparing from "components/MasterclassPreparing"
 import MentoringBanner from "components/MentoringBanner"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import WebinarAbout from "components/WebinarAbout"
-import React from "react"
+import * as React from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const AdsyAndChill = (): JSX.Element => {
+const AdsyAndChill = (): React.JSX.Element => {
   return (
     <Layout
       flowerBlue2={true}
