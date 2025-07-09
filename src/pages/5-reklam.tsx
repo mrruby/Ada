@@ -38,11 +38,13 @@ const AdsyAndChill = (): React.JSX.Element => {
             src={"https://www.youtube.com/embed/BLMDf4LVNnc"}
           ></iframe>
           <p className="mt-8 text-center text-adaSubtitle font-semibold max-w-[800px]">
-            Obejrzałaś już to szkolenie i chcesz, żeby reklamy pracowały na Twoje wakacje? W takim razie ogarniemy to razem w Adsy&amp;Chill! 😎🏖️
+            Obejrzałaś już to szkolenie i chcesz, żeby reklamy pracowały na
+            Twoje wakacje? W takim razie ogarniemy to razem w Adsy&amp;Chill!
+            😎🏖️
           </p>
         </div>
       </MaxWithBgColorContainer>
-      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[1020px] w-screen z-0"></div>
+      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[1220px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <IconText version={2} />
       </MaxWithBgColorContainer>
@@ -62,17 +64,17 @@ const AdsyAndChill = (): React.JSX.Element => {
         <MentoringBanner version={6} />
       </MaxWithBgColorContainer>
       <div
-        className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5180px] w-screen z-0"
+        className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5480px] w-screen z-0"
         id="masterclasses"
       ></div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={1} />
       </MaxWithBgColorContainer>
-      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[6690px] w-screen z-0"></div>
+      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[6900px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MasterclassesInfo version={2} />
       </MaxWithBgColorContainer>
-      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[8100px] w-screen z-0"></div>
+      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[8200px] w-screen z-0"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
         <MasterclassesInfo version={3} />
       </MaxWithBgColorContainer>

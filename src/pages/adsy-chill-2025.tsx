@@ -53,7 +53,7 @@ const AdsyAndChill2025 = (): JSX.Element => {
         <MentoringBanner version={6} />
       </MaxWithBgColorContainer>
       <div
-        className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5380px] w-screen z-0"
+        className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[5580px] w-screen z-0"
         id="masterclasses"
       ></div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink4">
