@@ -471,14 +471,7 @@ const MasterclassAgenda = ({
               </ul>
               <p className="text-center font-bold text-adaBase pt-4">
                 Cena:{" "}
-                {endsAt && (
-                  <>
-                    <span className="line-through">597 zł</span>{" "}
-                  </>
-                )}
-                <span className={endsAt ? "text-adaSubtitle" : ""}>
-                  {endsAt ? "497 zł" : "597 zł"}
-                </span>
+                <span className="text-adaSubtitle">497 zł</span>. Od 16 lipca: 699 zł
               </p>
               <div className="flex justify-center">
                 <BuyChillButton />

@@ -193,7 +193,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
     },
     {
       question: "Kiedy i jak dostanę dostęp?",
-      answer: <>Dostęp dostaniesz na maila od razu po zakupie.</>,
+      answer: <>Dostęp dostaniesz na maila podanego przy zakupie już 16 lipca</>,
     },
     {
       question: "Czy muszę mieć doświadczenie z reklamami?",
@@ -215,7 +215,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           Cóż będę dużo mówić… osoby, które zdecydowały się na adsy&chill w
           przedsprzedaży, mówią tak:
           <br />
-          <br />- "pozyskuję leady w koszcie 2-3 zł dzięki automatyzacji z MAKE"{" "}
+          <br />- "moje konto na Instagramie rośnie w oczach"{" "}
           <br />
           - "ROAS w okolicy 5 przy sprzedaży taniego produktu" <br />
           - "wczoraj odpaliłam reklamę na warsztaty online i już rozeszły się

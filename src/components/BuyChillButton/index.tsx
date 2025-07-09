@@ -1,33 +1,9 @@
 import React from "react"
 
 const BuyChillButton = (): JSX.Element => {
-  const handleClick = async () => {
-    try {
-      const discountCode = localStorage.getItem("discountCode")
-      const response = await fetch("/api/create-cart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          productVariantId: "49088728006997",
-          quantity: 1,
-          discountCode,
-        }),
-      })
-
-      const result = await response.json()
-      if (response.ok) {
-        window.location.href = result.checkoutUrl
-      } else {
-        console.error(
-          "Error creating cart and redirecting to checkout:",
-          result.error
-        )
-      }
-    } catch (error) {
-      console.error("Error creating cart and redirecting to checkout:", error)
-    }
+  const handleClick = () => {
+    window.location.href =
+      "https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ"
   }
 
   return (

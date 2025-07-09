@@ -8,7 +8,7 @@ const listItems = [
 ]
 
 const listItems2 = [
-  "Od razu po zakupie otrzymujesz dostęp do masterclassów na platformie kursowej. Możesz przerabiać materiały do woli przez następne 12 miesięcy - kiedy chcesz i ile razy chcesz!",
+  "Dostęp do masterclassów na platformie kursowej otrzymasz 16 lipca. Możesz przerabiać materiały do woli przez następne 12 miesięcy - kiedy chcesz i ile razy chcesz!",
   "4 godziny - tyle potrzebujesz na przerobienie pierwszego masterclassu i ustawienie pierwszej kampanii. Działasz wtedy, kiedy chcesz.",
   "Po miesiącu - masz gotowy, hulający lejek reklamowych. Psst! Im szybciej wdrożysz kampanie, tym szybciej zobaczysz wyniki 😉",
 ]
