@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node",
     "target": "esnext",
     "jsx": "react",
     "types": ["react", "react-dom", "gatsby", "node"],
