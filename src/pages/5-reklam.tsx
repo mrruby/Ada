@@ -1,3 +1,5 @@
+/// <reference types="react" />
+
 import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MasterclassAgenda from "components/MasterclassAgenda"
@@ -7,11 +9,12 @@ import MasterclassPreparing from "components/MasterclassPreparing"
 import MentoringBanner from "components/MentoringBanner"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import WebinarAbout from "components/WebinarAbout"
-import React from "react"
+import * as React from "react"
+
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const AdsyAndChill = (): JSX.Element => {
+const AdsyAndChill = (): React.JSX.Element => {
   return (
     <Layout
       flowerBlue2={true}
@@ -36,6 +39,9 @@ const AdsyAndChill = (): JSX.Element => {
               "https://www.youtube.com/embed/uAdIHSK6S_8?si=kYitYjNrItAMWOu9"
             }
           ></iframe>
+          <p className="mt-8 text-center text-adaSubtitle font-semibold max-w-[800px]">
+            Obejrzałaś już to szkolenie i chcesz, żeby reklamy pracowały na Twoje wakacje? W takim razie ogarniemy to razem w Adsy&amp;Chill! 😎🏖️
+          </p>
         </div>
       </MaxWithBgColorContainer>
       <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[1020px] w-screen z-0"></div>
