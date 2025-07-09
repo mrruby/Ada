@@ -1,6 +1,6 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import TypingAnimation from "helpers/TypingAnimation"
+import React from "react"
 
 const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
   return (
@@ -127,7 +127,7 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             <span className="font-bold">
               od stażu w agencji marketingowej do swojej działalności:
             </span>{" "}
-            dziś pod szyldem GetBold! obsługuję klientów z Europy, w tym z
+            dziś pod szyldem Kolektyw MAGIC obsługuję klientów z Europy, w tym z
             Polski i na moim liczniku wybiło już{" "}
             <span className="font-bold">ponad 1 mln budżetów reklamowych </span>
             wydanych w ramach Meta Ads.

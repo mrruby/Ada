@@ -15,6 +15,12 @@ This is the personal website and blog for **Adrianna Promis Urbas**, a Polish ma
 - Do not modify tsconfig.json
 - Do not concern yourself with type issues
 - Focus only on content and style changes when requested
+- Do not add type declaration libraries or packages (e.g., @types/*)
+- Do not create or modify generic type declaration files (.d.ts)
+- Do not add global type declarations (e.g., global JSX.Element)
+- Do not create new type declaration files for images or other assets
+- Do not add type stubs for third-party libraries
+- Do not modify the TypeScript configuration to "improve type safety"
 
 ## Technology Stack
 
