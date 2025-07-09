@@ -55,9 +55,7 @@ const AdsyAndChill = (): JSX.Element => {
         <div className="flex flex-col items-center mt-16">
           <iframe
             className="w-full max-w-[1000px] aspect-video"
-            src={
-              "https://www.youtube.com/embed/pfQWagEIp-M?si=sB_C4rn8OT6UXKw-"
-            }
+            src={"https://www.youtube.com/embed/BLMDf4LVNnc"}
           ></iframe>
         </div>
         {endsAt && (

@@ -35,9 +35,7 @@ const AdsyAndChill = (): React.JSX.Element => {
         <div className="flex flex-col items-center mt-16">
           <iframe
             className="w-full max-w-[1000px] aspect-video"
-            src={
-              "https://www.youtube.com/embed/uAdIHSK6S_8?si=kYitYjNrItAMWOu9"
-            }
+            src={"https://www.youtube.com/embed/BLMDf4LVNnc"}
           ></iframe>
           <p className="mt-8 text-center text-adaSubtitle font-semibold max-w-[800px]">
             Obejrzałaś już to szkolenie i chcesz, żeby reklamy pracowały na Twoje wakacje? W takim razie ogarniemy to razem w Adsy&amp;Chill! 😎🏖️

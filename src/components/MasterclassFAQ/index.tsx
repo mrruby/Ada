@@ -201,10 +201,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
         <>
           Nie musisz 😊 Podczas masterclassów poprowadzę Cię za rękę przez
           menadżera reklam. Jedyne, co musisz mieć, aby w pełni skorzystać z
-          masterclassów to menadżer firmy. Jeśli go nie masz, głowa do góry! Po
-          dołączeniu do masterclassów dostaniesz możliwość zakupu mini-kursu
-          "Przygotuj swój menedżer firmy". Z nim ułożysz swojego menedżera firmy
-          od zera 😊
+          masterclassów, to menadżer firmy.
         </>
       ),
     },

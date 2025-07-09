@@ -163,19 +163,19 @@ const minusListItems2 = [
 
 const plusBasicList = [
   <p>
-    Masterclassu
-    <span className="font-bold"> „Ustaw reklamę na listę mailingową”</span>
-  </p>,
-  <p>
-    Masterclassu
+    masterclassu {" "}
     <span className="font-bold">
-      {" "}
-      „Kampanie na Instagram, które przyciągają odbiorców”
+      „Reklamy IG, które budują zaangażowaną społeczność”
     </span>
   </p>,
   <p>
-    Masterclassu<span className="font-bold"> „Ustaw reklamę na sprzedaż”</span>
+    masterclassu {" "}
+    <span className="font-bold">„Lista mailowa, która przyciąga klientów”</span>
   </p>,
+  <p>
+    masterclassu {" "}
+    <span className="font-bold">„Reklamy, które sprzedają na automacie”</span>
+  </p>
 ]
 
 const pakietStartList = [
@@ -469,9 +469,14 @@ const MasterclassAgenda = ({
                   </li>
                 ))}
               </ul>
+              <p className="text-center font-bold text-adaBase pt-2">
+                Bonus: Ustaw reklamę z automatyzacją! (tylko przy zakupie do
+                15.07)
+              </p>
               <p className="text-center font-bold text-adaBase pt-4">
                 Cena:{" "}
-                <span className="text-adaSubtitle">497 zł</span>. Od 16 lipca: 699 zł
+                <span className="text-adaSubtitle">497 zł</span>. Od 16 lipca:
+                699 zł
               </p>
               <div className="flex justify-center">
                 <BuyChillButton />
