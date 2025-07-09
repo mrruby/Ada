@@ -163,18 +163,23 @@ const minusListItems2 = [
 
 const plusBasicList = [
   <p>
-    Masterclassu
-    <span className="font-bold"> „Ustaw reklamę na listę mailingową”</span>
-  </p>,
-  <p>
-    Masterclassu
+    masterclassu {" "}
     <span className="font-bold">
-      {" "}
-      „Kampanie na Instagram, które przyciągają odbiorców”
+      „Reklamy IG, które budują zaangażowaną społeczność”
     </span>
   </p>,
   <p>
-    Masterclassu<span className="font-bold"> „Ustaw reklamę na sprzedaż”</span>
+    masterclassu {" "}
+    <span className="font-bold">„Lista mailowa, która przyciąga klientów”</span>
+  </p>,
+  <p>
+    masterclassu {" "}
+    <span className="font-bold">„Reklamy, które sprzedają na automacie”</span>
+  </p>,
+  <p>
+    <span className="font-bold">
+      BONUS (tylko do 15 lipca): „Ustaw reklamę z automatyzacją!”
+    </span>
   </p>,
 ]
 
