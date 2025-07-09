@@ -175,12 +175,7 @@ const plusBasicList = [
   <p>
     masterclassu {" "}
     <span className="font-bold">„Reklamy, które sprzedają na automacie”</span>
-  </p>,
-  <p>
-    <span className="font-bold">
-      BONUS (tylko do 15 lipca): „Ustaw reklamę z automatyzacją!”
-    </span>
-  </p>,
+  </p>
 ]
 
 const pakietStartList = [
