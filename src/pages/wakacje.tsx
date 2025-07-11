@@ -1,3 +1,4 @@
+import CountdownBanner from "components/CountdownBanner"
 import HolidayForm from "components/HolidayForm"
 import HolidayFormTop from "components/HolidayFormTop"
 import HolidayInfo from "components/HolidayInfo"
@@ -25,6 +26,9 @@ const MasterclassPage = (): JSX.Element => {
       ball2={true}
       arrow={true}
     >
+      <div className="pt-[70px] md:pt-[50px]">
+        <CountdownBanner />
+      </div>
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <WebinarBanner version={2} />
       </MaxWithBgColorContainer>

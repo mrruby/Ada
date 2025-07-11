@@ -76,7 +76,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 2 && (
-        <div className="mt-[80px] mb-[50px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 pb-4 md:py-16">
+        <div className="mt-26 b-[50px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 pb-4 md:py-16">
           <div className="flex flex-col md:flex-row justify-between max-w-[1350px] mx-auto">
             <div className="flex flex-col justify-center max-w-[600px] gap-4">
               <h1 className="text-adaSubtitle md:text-adaTitle2 font-bold tracking-wider leading-none">
@@ -84,8 +84,8 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 <span className="text-ada-yellow">moje wakacje!</span>
               </h1>
               <h2 className="md:text-adaSubtitle pt-2">
-                <span className="font-bold">Szkolenie za 0 zł:</span>{" "}
-                <br />5 reklam, które musisz przetestować w to lato{" "}
+                <span className="font-bold">Szkolenie za 0 zł:</span> <br />5
+                reklam, które musisz przetestować w to lato{" "}
               </h2>
             </div>
           </div>
@@ -228,7 +228,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
         </div>
       )}
       {version === 6 && (
-        <div className="mt-[70px] px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-2 md:min-h-[800px]">
+        <div className="mt-20 px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-10 md:min-h-[800px]">
           <div className="flex justify-between xl:max-w-[1350px] mx-auto">
             <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[170px]">
               <StaticImage

@@ -1,6 +1,17 @@
 import React from "react"
 import {
+  Arrow,
+  ArrowMasterclass,
+  Ball1,
+  Ball2,
+  Ball3,
+  Drinks,
+  Flaming,
+  Flaps,
+  Flaps2,
   FlowerBlue,
+  FlowerBlue10,
+  FlowerBlue11,
   FlowerBlue2,
   FlowerBlue3,
   FlowerBlue4,
@@ -9,19 +20,15 @@ import {
   FlowerBlue7,
   FlowerBlue8,
   FlowerBlue9,
-  FlowerBlue10,
-  FlowerBlue11,
   FlowerWhite,
-  StarPink,
-  TwoBlueFlowers,
-  TwoBlueFlowers2,
   FlowerWhite2,
   FlowerWhite3,
-  Waves1,
-  Waves2,
-  Waves3,
-  Waves4,
-  Waves5,
+  Leaves1,
+  Leaves2,
+  Leaves3,
+  Leaves4,
+  Leaves5,
+  StarPink,
   Sun1,
   Sun2,
   Sun3,
@@ -29,22 +36,15 @@ import {
   Sun5,
   Sun6,
   Sun7,
-  Flaming,
-  Flaps,
-  Flaps2,
   Sunglasses,
   Sunglasses2,
-  Ball1,
-  Ball2,
-  Ball3,
-  Drinks,
-  Arrow,
-  ArrowMasterclass,
-  Leaves1,
-  Leaves2,
-  Leaves3,
-  Leaves4,
-  Leaves5,
+  TwoBlueFlowers,
+  TwoBlueFlowers2,
+  Waves1,
+  Waves2,
+  Waves3,
+  Waves4,
+  Waves5,
 } from "../../helpers/LayoutElements/index"
 import { ILayoutElements } from "../../utils/types/layoutElements"
 
@@ -268,7 +268,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {sun6 && (
         <Sun6
-          mobileTop="hidden xl:flex lg:top-[-50px]"
+          mobileTop="hidden xl:flex lg:top-[150px]"
           mobileLeft="left-[6vw]"
         />
       )}
@@ -280,7 +280,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {flaming && (
         <Flaming
-          mobileTop="hidden xl:flex lg:top-[-30px]"
+          mobileTop="hidden xl:flex lg:top-[40px]"
           mobileRight="right-[-150px]"
         />
       )}

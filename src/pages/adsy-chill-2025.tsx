@@ -1,3 +1,4 @@
+import CountdownBanner from "components/CountdownBanner"
 import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MasterclassAgenda from "components/MasterclassAgenda"
@@ -30,6 +31,7 @@ const AdsyAndChill2025 = (): JSX.Element => {
       ball3={true}
       drinks={true}
     >
+      <CountdownBanner />
       <MaxWithBgColorContainer>
         <WebinarBanner version={6} />
       </MaxWithBgColorContainer>
