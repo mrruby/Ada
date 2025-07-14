@@ -3,7 +3,7 @@ import CountdownTimer from "../../helpers/CountdownTimer"
 import MaxWithBgColorContainer from "../Layout/MaxWithBgColorContainer"
 
 const CountdownBanner: React.FC = () => {
-  const targetDate = new Date("2025-07-14T23:59:59")
+  const targetDate = new Date("2025-07-15T23:59:59")
 
   return (
     <MaxWithBgColorContainer bgColor="bg-ada-yellow">
