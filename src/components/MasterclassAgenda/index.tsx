@@ -469,14 +469,9 @@ const MasterclassAgenda = ({
                   </li>
                 ))}
               </ul>
-              <p className="text-center font-bold text-adaBase pt-2">
-                Bonus: Ustaw reklamę z automatyzacją! (tylko przy zakupie do
-                15.07)
-              </p>
               <p className="text-center font-bold text-adaBase pt-4 bg-ada-white border border-ada-black px-6 py-4 inline-block">
                 Cena:{" "}
-                <span className="text-[1.6875rem] font-extrabold">497 zł</span>. Od 16 lipca:{" "}
-                <span className="line-through">699 zł</span>
+                <span className="text-[1.6875rem] font-extrabold">699 zł</span>
               </p>
               <div className="flex justify-center">
                 <BuyChillButton />
