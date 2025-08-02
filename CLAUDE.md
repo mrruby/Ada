@@ -1,0 +1,43 @@
+# Ada Project - Marketing Website
+
+## Project Overview
+
+This is the personal website and blog for **Adrianna Promis Urbas**, a Polish marketing strategist specializing in Facebook/Meta advertising campaigns and "slow marketing" approaches. The site serves as her business platform, content hub, and client acquisition tool.
+
+## General Instructions
+
+- Do not modify tsconfig.json
+- Do not concern yourself with type issues
+- Focus only on content and style changes when requested
+- Do not add type declaration libraries or packages (e.g., @types/\*)
+- Do not create or modify generic type declaration files (.d.ts)
+- Do not add global type declarations (e.g., global JSX.Element)
+- Do not create new type declaration files for images or other assets
+- Do not add type stubs for third-party libraries
+- Do not modify the TypeScript configuration to "improve type safety"
+
+## Technology Stack
+
+- **Framework**: Gatsby.js (React-based static site generator)
+- **Language**: TypeScript with React 18.3.1
+- **Styling**: TailwindCSS 3.4.14 with extensive custom theme
+- **CMS**: Netlify CMS for content management
+- **Package Manager**: `yarn` (IMPORTANT: Use yarn exclusively, do not create package-lock.json)
+- **Deployment**: Netlify (static site hosting)
+
+## Target Audience
+
+- **Language**: Polish
+- **Market**: Polish-speaking business owners and marketers
+- **Focus**: Health & wellness sector businesses
+
+## Development Notes
+
+- Content-first architecture with Markdown-based blog
+- Mobile-first responsive design
+- Performance optimized with Gatsby Image
+- GDPR-compliant analytics implementation
+- Git-based content workflow through Netlify CMS
+- Do not delete React imports in files - they are required for JSX compilation
+- Do not add new global types
+- Do not fix type issues by installing new type packages
