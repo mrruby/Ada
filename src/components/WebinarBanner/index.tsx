@@ -259,7 +259,7 @@ const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
                 text={<span className="font-bold">Sprawdzam Adsy&Chill</span>}
                 sectionId="masterclasses"
                 textSize="text-adaMin md:text-adaSubtitle"
-                btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-pink2 md:tracking-[2.90px] md:h-[100px] shadow-xl"
+                btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-pink2 md:tracking-[2.90px] md:h-[100px] shadow-xl rounded-[50px]"
               />
             </div>
           </div>
