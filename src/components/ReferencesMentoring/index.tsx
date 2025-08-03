@@ -618,7 +618,7 @@ const ReferencesMentoring = ({
           </div>
         </>
       )}
-      {!title6 && (
+      {title6 && (
         <div className="max-h-[600px] mx-auto mt-5 pb-4">
           <Carousel
             responsive={responsive}

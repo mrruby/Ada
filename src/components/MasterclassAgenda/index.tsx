@@ -1,9 +1,13 @@
 import BuyChillButton from "components/BuyChillButton"
+import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import OpinionVideos from "components/OpinionVideos"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import CountdownTimer from "helpers/CountdownTimer"
 import React from "react"
+import Carousel from "react-multi-carousel"
+import { responsive } from "values/const"
+import Package from "../../helpers/Package"
 
 import metaAdsZainteresowani from "values/forms/meta-ads-zainteresowani.html"
 import ogarnijSwojeAdsyZainteresowani from "values/forms/ogarnij-swoje-adsy-zainteresowani.html"
@@ -163,19 +167,19 @@ const minusListItems2 = [
 
 const plusBasicList = [
   <p>
-    masterclassu {" "}
+    Masterclass{" "}
     <span className="font-bold">
       „Reklamy IG, które budują zaangażowaną społeczność”
     </span>
   </p>,
   <p>
-    masterclassu {" "}
+    Masterclass{" "}
     <span className="font-bold">„Lista mailowa, która przyciąga klientów”</span>
   </p>,
   <p>
-    masterclassu {" "}
+    Masterclass{" "}
     <span className="font-bold">„Reklamy, które sprzedają na automacie”</span>
-  </p>
+  </p>,
 ]
 
 const pakietStartList = [
@@ -217,6 +221,55 @@ const pakietProList = [
   "4 x konsultacje 1:1",
   "spotkania mastermind (udział w maksymalnie 4 - osobowych grupach)",
   "certyfikat uczestnictwa",
+]
+
+const newlistItems1 = [
+  <p>Otrzymasz konkretną instrukcję krok po kroku ze wskazaniem "co i jak"</p>,
+  <p>
+    Dostęp do nagrań przez 12 miesięcy - oglądasz kiedy chcesz, ile razy
+    potrzebujesz
+  </p>,
+]
+
+const newlistItems2 = [
+  <p>Nauczysz się kampanii od podstaw, nawet jeśli dopiero zaczynasz</p>,
+  <p>
+    Ustawisz kampanie, które poprowadzą klienta od zainteresowania do zakupu
+  </p>,
+]
+
+const packageList = [
+  {
+    title: "❤️ PAKIET IG:",
+    desc: (
+      <>
+        ✅ Masterclass{" "}
+        <b>„Reklamy IG, które budują zaangażowaną społeczność”</b>
+      </>
+    ),
+    price: "349 zł",
+    link: "https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ",
+  },
+  {
+    title: "💌 PAKIET MAILING:",
+    desc: (
+      <>
+        ✅ Masterclass <b>„Lista mailowa, która przyciąga klientów”</b>
+      </>
+    ),
+    price: "349 zł",
+    link: "https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ",
+  },
+  {
+    title: "💰PAKIET SPRZEDAŻ:",
+    desc: (
+      <>
+        ✅ Masterclass <b>„Reklamy, które sprzedają na automacie”</b>
+      </>
+    ),
+    price: "349 zł",
+    link: "https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ",
+  },
 ]
 
 const MasterclassAgenda = ({
@@ -897,6 +950,169 @@ const MasterclassAgenda = ({
                 __html: ogarnijSwojeAdsyZainteresowani,
               }}
             />
+          </div>
+        </div>
+      )}
+      {version === 13 && (
+        <div
+          className="w-full flex flex-col px-3 pb-2 items-center md:pt-12"
+          id="dlaczego"
+        >
+          <div className="flex flex-col md:flex-row md:gap-20">
+            <div className="max-w-[780px]">
+              <h2 className="text-adaStandard lg:text-adaSubtitleSecondary uppercase font-bold bg-ada-pink2 shadow-xl lg:max-w-[640px] px-8 py-4 md:h-[84px] mx-auto flex items-center justify-center">
+                Dlaczego ADSY&CHILL?
+              </h2>
+              <p className="pt-6 text-adaMin md:text-adaDesc">
+                Dzięki temu produktowi zbudujesz stabilny proces pozyskiwania
+                klientów przez reklamy. Przestaniesz spędzać 8 godzin dziennie
+                przy komputerze, a zaczniesz żyć tak, jak naprawdę chcesz - z
+                pieniędzmi płynącymi z dobrze skonfigurowanych kampanii
+                reklamowych.
+              </p>
+              <p className="pt-6 text-adaMin md:text-adaSubtitle uppercase font-extrabold">
+                Przeprowadzę Cię przez proces krok <br /> po kroku. To jak:{" "}
+                <span className="text-ada-yellow"> działamy i czilujemy?</span>
+              </p>
+              <Button
+                type="button"
+                text={
+                  <span className="font-extrabold uppercase">
+                    Chcę <br /> ADSY&CHILL!
+                  </span>
+                }
+                textSize="text-adaSubtitle"
+                btnStyle="md:w-[410px] md:h-[90px] bg-ada-pink2 my-10 mx-auto rounded-[50px]"
+                sectionId="pricing"
+              />
+            </div>
+            <div className="md:mt-[-220px] md:mr-[-300px]">
+              <StaticImage
+                loading="eager"
+                src={"../../images/chill2.webp"}
+                alt="Ada Promis - chill"
+                width={466}
+                height={721}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+      {version === 14 && (
+        <div
+          className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12"
+          id="pricing"
+        >
+          {endsAt && (
+            <div className="flex flex-col items-center pt-10">
+              <CountdownTimer
+                text="Skorzystaj z oferty specjalnej przez"
+                targetDate={new Date(endsAt)}
+              />
+            </div>
+          )}
+          <div className="flex flex-col md:flex-row gap-10  text-center">
+            <div className="max-w-[700px] flex flex-col">
+              <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary py-5 px-10 text-center font-bold mb-4">
+                Co dostaniesz <br /> w Adsy&Chill?
+              </h2>
+              <h3 className="text-adaBase lg:text-adaSubtitle py-5">
+                🚀 PAKIET FULL:
+              </h3>
+              <ul className="flex flex-col gap-[10px] mx-auto mb-6">
+                {plusBasicList.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex flex-row text-adaMin md:text-adaStandard"
+                  >
+                    <div className="mr-2">✅</div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="text-center font-bold text-adaBase pt-4 bg-ada-pink2 w-[300px] rounded-[100px] px-6 py-4 inline-block mx-auto mb-10">
+                  Cena:{" "}
+                  <span className="text-[1.6875rem] font-extrabold">
+                    699 zł
+                  </span>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div className="mx-auto mt-5 pb-4 overflow-visible w-screen md:w-[1200px]">
+            <Carousel
+              responsive={responsive}
+              infinite={false}
+              customLeftArrow={<CustomLeftArrow />}
+              customRightArrow={<CustomRightArrow />}
+              ssr={false}
+              autoPlay={false}
+            >
+              {packageList.map((packageItem, index) => (
+                <Package
+                  key={index}
+                  title={packageItem.title}
+                  desc={packageItem.desc}
+                  price={packageItem.price}
+                  link={packageItem.link}
+                />
+              ))}
+            </Carousel>
+          </div>
+          <div>
+            <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary pt-10 pb-10 font-bold text-center">
+              Dlaczego jeszcze <span className="text-ada-pink2">warto</span>{" "}
+              dołączyć?
+            </h2>
+            <ul className="flex flex-col md:flex-row gap-[10px] mx-auto mb-10  max-w-[1080px] xl:min-w-[880px]">
+              <div>
+                {newlistItems1.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex flex-row items-center text-adaMin md:text-adaDesc mb-6"
+                  >
+                    <div className="mr-2">
+                      <StaticImage
+                        src={"../../images/check.svg"}
+                        alt="Ada Promis"
+                        placeholder="blurred"
+                        width={44}
+                        height={46}
+                        style={{ width: "44px", height: "46px" }}
+                      />
+                    </div>
+                    {item}
+                  </li>
+                ))}
+              </div>
+              <div>
+                {newlistItems2.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex flex-row items-center text-adaMin md:text-adaDesc mb-6"
+                  >
+                    <div className="mr-2">
+                      <StaticImage
+                        src={"../../images/check.svg"}
+                        alt="Ada Promis"
+                        placeholder="blurred"
+                        width={44}
+                        height={46}
+                        style={{ width: "44px", height: "46px" }}
+                      />
+                    </div>
+                    {item}
+                  </li>
+                ))}
+              </div>
+            </ul>
           </div>
         </div>
       )}
