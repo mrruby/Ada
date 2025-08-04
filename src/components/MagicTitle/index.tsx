@@ -318,6 +318,21 @@ const MagicTitle = ({ version }: { version: number }): JSX.Element => {
           </div>
         </Section>
       )}
+      {version == 5 && (
+        <Section className="flex justify-center">
+          <Link to={"/"}>
+            <StaticImage
+              src={"../../images/magicKolektyw.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
+              formats={["auto", "webp", "avif"]}
+              width={776}
+              height={436}
+              quality={95}
+            />
+          </Link>
+        </Section>
+      )}
     </>
   )
 }

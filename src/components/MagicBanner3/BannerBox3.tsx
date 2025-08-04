@@ -4,11 +4,13 @@ import React from "react"
 
 type BannerBox2Props = {
   bgColor: string
-  title: string
+  title: string | JSX.Element
   subtitle?: string
   description: string | JSX.Element
   styles?: string
   url?: string
+  btn?: JSX.Element
+  showDefaultButton?: boolean
 }
 
 const BannerBox3 = ({
@@ -18,6 +20,8 @@ const BannerBox3 = ({
   description,
   styles,
   url,
+  btn,
+  showDefaultButton = true,
 }: BannerBox2Props) => {
   const content = (
     <div
@@ -32,26 +36,29 @@ const BannerBox3 = ({
       <div className="text-sm md:text-base leading-relaxed mb-4">
         {description}
       </div>
-      <div className="flex justify-center -mb-8 md:-mb-16">
-        <Button
-          type="button"
-          text={
-            <span className="font-normal font-anton text-md md:text-lg text-center">
-              <span className="text-ada-orange block">
-                SPRAWDŹ, CZY TO PAKIET DLA CIEBIE
+      {btn}
+      {showDefaultButton && (
+        <div className="flex justify-center -mb-8 md:-mb-16">
+          <Button
+            type="button"
+            text={
+              <span className="font-normal font-anton text-md md:text-lg text-center">
+                <span className="text-ada-orange block">
+                  SPRAWDŹ, CZY TO PAKIET DLA CIEBIE
+                </span>
+                <span className="text-ada-magicPink2 block">
+                  BEZPŁATNA KONSULTACJA 30 MIN
+                </span>
               </span>
-              <span className="text-ada-magicPink2 block">
-                BEZPŁATNA KONSULTACJA 30 MIN
-              </span>
-            </span>
-          }
-          url="https://koalendar.com/e/porozmawiajmy-o-wspolpracy/?month=2025-07&duration=30&date=2025-07-03"
-          textSize="text-sm"
-          btnStyle="bg-ada-white2
-                tracking-wide h-auto py-3 
-                px-6 hover:opacity-90 rounded-full min-w-[200px] md:min-w-[400px] border-ada-orange border"
-        />
-      </div>
+            }
+            url="https://koalendar.com/e/porozmawiajmy-o-wspolpracy/?month=2025-07&duration=30&date=2025-07-03"
+            textSize="text-sm"
+            btnStyle="bg-ada-white2
+            tracking-wide h-auto py-3 
+            px-6 hover:opacity-90 rounded-full min-w-[200px] md:min-w-[400px] border-ada-orange border"
+          />
+        </div>
+      )}
     </div>
   )
 
