@@ -11,14 +11,14 @@ const QuizTitle = (): JSX.Element => {
       padding="py-8 md:py-16 px-4 md:px-8"
       maxWidth="5xl"
     >
-      <div className="flex justify-center mb-12">
+      <div className="flex justify-center mb-4">
         <Link to={"/"}>
           <StaticImage
             src={"../../images/kolektyw-logo.webp"}
             alt="Kolektyw Logo"
             placeholder="blurred"
             formats={["auto", "webp", "avif"]}
-            width={300}
+            width={200}
             height={100}
             quality={95}
           />
