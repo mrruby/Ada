@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Section from "../shared/Section"
 import formDzielnaPoszukiwaczka from "../../values/forms/form-dzielna-poszukiwaczka.html"
 import formZosiaSamosia from "../../values/forms/form-zosia-samosia.html"
@@ -23,6 +23,42 @@ const QuizResult: React.FC<QuizResultProps> = ({ personalityType }) => {
   }
 
   const form = getForm()
+
+  useEffect(() => {
+    const formElement = document.querySelector(".ml-block-form") as HTMLFormElement
+    if (!formElement) return
+
+    // Remove target attribute to avoid new tab
+    formElement.removeAttribute("target")
+
+    // Add a submit event listener to intercept submission
+    const handleSubmit = (e: Event) => {
+      e.preventDefault()
+
+      const formData = new FormData(formElement)
+      fetch(formElement.action, {
+        method: "POST",
+        body: formData,
+        mode: "cors",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            window.location.href = "https://adrianna.com.pl/thank/"
+          } else {
+            console.error("Submission failed:", data)
+          }
+        })
+        .catch((error) => console.error("Error:", error))
+    }
+
+    formElement.addEventListener("submit", handleSubmit)
+
+    // Cleanup function to remove event listener
+    return () => {
+      formElement.removeEventListener("submit", handleSubmit)
+    }
+  }, [])
 
   return (
     <Section
