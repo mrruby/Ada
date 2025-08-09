@@ -133,6 +133,15 @@ const IconText = ({ version }: { version: number }): JSX.Element => {
       ),
     },
     {
+      icon: "🤔",
+      text: (
+        <>
+          Chcesz w końcu zrealizować swoje <b>biznesowe plany</b> bez odkładania{" "}
+          <b>na później?</b>
+        </>
+      ),
+    },
+    {
       icon: "😎",
       text: (
         <>

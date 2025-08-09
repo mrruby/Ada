@@ -192,9 +192,13 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       ),
     },
     {
-      question: "Kiedy i jak dostanę dostęp?",
+      question: "Co będzie się działopo zakupie?",
       answer: (
-        <>Dostęp dostaniesz na maila podanego przy zakupie już 16 lipca</>
+        <>
+          Od razu po zakupie otrzymujesz dostęp do masterclassów na platformie
+          kursowej. Możesz przerabiać materiały do woli przez następne 12
+          miesięcy - kiedy chcesz i ile razy chcesz!
+        </>
       ),
     },
     {

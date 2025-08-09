@@ -62,11 +62,12 @@ export const MasterclassInfo2: React.FC<Props> = ({
   const handleToggle = () => setIsVisible(!isVisible)
 
   return (
-    <div className="w-full py-5 md:py-20 px-2 relative md:h-[900px]">
+    <div className="w-full py-5 md:py-20 px-2 relative md:h-[800px]">
       {!isVisible ? (
         <div className="flex flex-col items-center mx-auto h-full">
-          {image && <div className="mb-6">{image}</div>}
-
+          {image && (
+            <div className="mb-6 relative w-screen md:h-[800px]">{image}</div>
+          )}
           <h2 className="text-adaSubtitle lg:text-adaSubtitleThird font-bold uppercase">
             {title}
           </h2>
@@ -74,7 +75,7 @@ export const MasterclassInfo2: React.FC<Props> = ({
             {subtitle1}
           </p>
           <p className="pt-2 text-center">{subtitle2}</p>
-          <div className="md:flex max-w-[940px] gap-16">
+          <div className="md:flex max-w-[940px] justify-center gap-16">
             <div className="max-w-[360px] mt-16">
               <h3 className="font-bold md:text-adaDesc pb-4">Efekty:</h3>
               <ul className="flex flex-row gap-8 mx-auto mb-10 flex-wrap">
@@ -88,13 +89,6 @@ export const MasterclassInfo2: React.FC<Props> = ({
                   </li>
                 ))}
               </ul>
-              <Button
-                type="button"
-                text={<span className="font-extrabold uppercase">{btn}</span>}
-                textSize="md:text-adaSubtitle"
-                btnStyle="bg-blue md:w-[410px] md:h-[90px] text-ada-white my-2 md:my-10 mx-auto rounded-[50px]"
-                sectionId="pricing"
-              />
             </div>
             <div className="max-w-[300px] mt-16">
               <h3 className="font-bold md:text-adaDesc pb-4">
@@ -121,6 +115,13 @@ export const MasterclassInfo2: React.FC<Props> = ({
               />
             </button>
           </div>
+          <Button
+            type="button"
+            text={<span className="font-extrabold uppercase">{btn}</span>}
+            textSize="md:text-adaSubtitle"
+            btnStyle="bg-blue md:w-[410px] md:h-[90px] text-ada-white my-2 md:my-10 mx-auto rounded-[50px]"
+            sectionId="pricing"
+          />
         </div>
       ) : (
         <div className="flex justify-center gap-8 items-center h-full">

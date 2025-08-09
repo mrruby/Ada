@@ -230,7 +230,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
           people="1949"
           roas="10,15"
           image={
-            <div className="md:hidden lg:hidden xl:block md:absolute left-[-12vw] top-[10px]">
+            <div className="md:hidden lg:hidden xl:block md:absolute left-0 top-[-30px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/masterclass4.webp"}
@@ -301,7 +301,7 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
               </div>
             }
             image={
-              <div className="md:hidden lg:hidden xl:block md:absolute left-[-12vw] top-[10px]">
+              <div className="md:hidden lg:hidden xl:block md:absolute left-0 top-[120px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/masterclass5.webp"}
@@ -360,14 +360,14 @@ const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
             people="1115"
             roas="17,90"
             image={
-              <div className="md:hidden lg:hidden xl:block md:absolute xl:left-[-11vw] top-[14px]">
+              <div className="md:hidden lg:hidden xl:block md:absolute left-0 top-[-60px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/masterclass6.webp"}
                   alt="Ada Promis"
                   placeholder="blurred"
                   width={418}
-                  height={733}
+                  height={780}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />

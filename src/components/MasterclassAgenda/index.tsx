@@ -247,8 +247,8 @@ const packageList = [
         <b>„Reklamy IG, które budują zaangażowaną społeczność”</b>
       </>
     ),
-    price: "349 zł",
-    link: "https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ",
+    price: "297 zł",
+    link: "https://slowmarketing.mailingr.co/c/masterclass:-reklamy-ig-ktore-buduja-zaangazowana-spolecznosc-ubRU",
   },
   {
     title: "💌 PAKIET MAILING:",
@@ -257,8 +257,8 @@ const packageList = [
         ✅ Masterclass <b>„Lista mailowa, która przyciąga klientów”</b>
       </>
     ),
-    price: "349 zł",
-    link: "https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ",
+    price: "297 zł",
+    link: "https://slowmarketing.mailingr.co/c/masterclass:-lista-mailowa-ktora-przyciaga-klientow-1dPN",
   },
   {
     title: "💰PAKIET SPRZEDAŻ:",
@@ -267,8 +267,8 @@ const packageList = [
         ✅ Masterclass <b>„Reklamy, które sprzedają na automacie”</b>
       </>
     ),
-    price: "349 zł",
-    link: "https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ",
+    price: "297 zł",
+    link: "https://slowmarketing.mailingr.co/c/masterclass:-reklamy-ktore-sprzedaja-na-automacie-Dvcn",
   },
 ]
 
@@ -1032,18 +1032,23 @@ const MasterclassAgenda = ({
                   </li>
                 ))}
               </ul>
-              <a
-                href="https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="text-center font-bold text-adaBase pt-4 bg-ada-pink2 w-[300px] rounded-[100px] px-6 py-4 inline-block mx-auto mb-10">
-                  Cena:{" "}
-                  <span className="text-[1.6875rem] font-extrabold">
-                    699 zł
-                  </span>
-                </p>
-              </a>
+              <div className="relative mt-2">
+                <a
+                  href="https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p
+                    className="p-2 bg-ada-blue text-adaBase text-ada-pink2 w-[150px] font-bold absolute top-[-10px] left-[40px]"
+                    style={{ transform: "rotate(-8deg)" }}
+                  >
+                    <span className="line-through">699 zł </span> 547 zł
+                  </p>
+                  <p className="text-center font-extrabold text-adaBase pt-4 bg-ada-pink2 w-[300px] rounded-[100px] px-6 py-4 inline-block mx-auto mb-10 uppercase">
+                    Chcę dołączyć!
+                  </p>
+                </a>
+              </div>
             </div>
           </div>
           <div className="mx-auto mt-5 pb-4 overflow-visible w-screen md:w-[1200px]">
@@ -1053,7 +1058,7 @@ const MasterclassAgenda = ({
               customLeftArrow={<CustomLeftArrow />}
               customRightArrow={<CustomRightArrow />}
               ssr={false}
-              autoPlay={false}
+              autoPlay={true}
             >
               {packageList.map((packageItem, index) => (
                 <Package
