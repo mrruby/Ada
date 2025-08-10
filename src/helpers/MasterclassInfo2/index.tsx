@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 interface Props {
   title: string
@@ -59,10 +59,25 @@ export const MasterclassInfo2: React.FC<Props> = ({
   btnMargin = "",
 }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const [isHovering, setIsHovering] = useState(false)
   const handleToggle = () => setIsVisible(!isVisible)
 
+  useEffect(() => {
+    if (!isHovering) return
+
+    const interval = setInterval(() => {
+      setIsVisible((prev) => !prev)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [isHovering])
+
   return (
-    <div className="w-full py-5 md:py-20 px-2 relative md:h-[800px]">
+    <div
+      className="w-full py-5 md:py-20 px-2 relative md:h-[800px]"
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
       {!isVisible ? (
         <div className="flex flex-col items-center mx-auto h-full">
           {image && (

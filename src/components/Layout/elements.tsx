@@ -322,7 +322,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {ball3 && (
         <Ball3
-          mobileTop="hidden xl:flex lg:top-[6160px]"
+          mobileTop="hidden xl:flex lg:top-[5060px]"
           mobileRight="right-[-150px]"
         />
       )}

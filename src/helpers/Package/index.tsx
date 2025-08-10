@@ -17,7 +17,8 @@ const Package = ({ title, desc, price, link }: IPackage): JSX.Element => {
           className="p-2 bg-ada-blue text-ada-pink2 w-[120px] font-bold absolute top-[52px] left-[120px]"
           style={{ transform: "rotate(-8deg)" }}
         >
-          <span className="line-through">349 zł </span> {price}
+          {price}
+          <span className="ml-3 line-through text-[13px]">349 zł</span>
         </p>
         <a href={link} target="_blank" rel="noopener noreferrer">
           <span className="text-center font-bold text-adaBase pt-4 bg-ada-pink2 w-[300px] rounded-[100px] px-6 py-4 inline-block mx-auto uppercase">

@@ -1039,10 +1039,13 @@ const MasterclassAgenda = ({
                   rel="noopener noreferrer"
                 >
                   <p
-                    className="p-2 bg-ada-blue text-adaBase text-ada-pink2 w-[150px] font-bold absolute top-[-10px] left-[40px]"
+                    className="p-2 bg-ada-blue text-adaBase text-ada-pink2 w-[158px] font-bold absolute top-[55px] left-[100px] md:left-[220px]"
                     style={{ transform: "rotate(-8deg)" }}
                   >
-                    <span className="line-through">699 zł </span> 547 zł
+                    547 zł{" "}
+                    <span className="ml-2 line-through text-[14px]">
+                      699 zł{" "}
+                    </span>
                   </p>
                   <p className="text-center font-extrabold text-adaBase pt-4 bg-ada-pink2 w-[300px] rounded-[100px] px-6 py-4 inline-block mx-auto mb-10 uppercase">
                     Chcę dołączyć!
