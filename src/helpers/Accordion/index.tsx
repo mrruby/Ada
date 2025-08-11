@@ -10,7 +10,7 @@ export const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
   return (
     <div className="xl:w-[550px]">
       <button
-        className="flex cursor-pointer lg:text-adaBase font-bold p-4 items-center justify-between w-full text-center mx-auto shadow-lg"
+        className="flex cursor-pointer lg:text-adaBase font-bold p-4 items-center justify-between w-screen md:w-full text-center mx-auto shadow-lg"
         onClick={() => setAccordionOpen(!accordionOpen)}
       >
         <h2 className="text-left">{question}</h2>

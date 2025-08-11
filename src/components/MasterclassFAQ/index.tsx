@@ -192,8 +192,14 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
       ),
     },
     {
-      question: "Kiedy i jak dostanę dostęp?",
-      answer: <>Dostęp dostaniesz na maila podanego przy zakupie już 16 lipca</>,
+      question: "Co będzie się działopo zakupie?",
+      answer: (
+        <>
+          Od razu po zakupie otrzymujesz dostęp do masterclassów na platformie
+          kursowej. Możesz przerabiać materiały do woli przez następne 12
+          miesięcy - kiedy chcesz i ile razy chcesz!
+        </>
+      ),
     },
     {
       question: "Czy muszę mieć doświadczenie z reklamami?",
@@ -212,8 +218,7 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
           Cóż będę dużo mówić… osoby, które zdecydowały się na adsy&chill w
           przedsprzedaży, mówią tak:
           <br />
-          <br />- "moje konto na Instagramie rośnie w oczach"{" "}
-          <br />
+          <br />- "moje konto na Instagramie rośnie w oczach" <br />
           - "ROAS w okolicy 5 przy sprzedaży taniego produktu" <br />
           - "wczoraj odpaliłam reklamę na warsztaty online i już rozeszły się
           prawie wszystkie miejsca" <br />
@@ -621,6 +626,37 @@ const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
               </ul>
             </div>
           </div>
+        </>
+      )}
+      {version === 6 && (
+        <>
+          <div className="flex flex-col md:flex-row gap-[90px] items-center w-[300px] md:w-full justify-center">
+            <div className="pt-[60px] lg:pt-[76px]">
+              <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] border-b-[11px] lg:mb-2 lg:border-b-[22px] border-ada-light-pink h-[24px] lg:h-[60px] animate-bounce text-center mx-auto">
+                FAQ
+              </h2>
+              <div className="pt-[30px] flex flex-col flex-wrap lg:flex-row lg:gap-[60px]">
+                <ul className="maw-w-[300px] gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
+                  {renderList(leftList3)}
+                </ul>
+                <ul className="gap-10 md:gap-[140px] text-adaMin md:text-adaStandard">
+                  {renderList(rightList3)}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <Button
+            type="button"
+            text={
+              <span className=" font-extrabold">
+                Zwiększam zyski z{" "}
+                <span className="text-ada-orange">Adsy&Chill!</span>
+              </span>
+            }
+            sectionId="pricing"
+            textSize="md:text-adaSubtitleSecondary"
+            btnStyle="md:w-[500px] bg-ada-light-pink mb-10 lg:mb-[120px] md:leading-[36px] md:h-[120px] rounded-[100px]"
+          />
         </>
       )}
     </div>

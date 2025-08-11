@@ -304,7 +304,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {sunglasses2 && (
         <Sunglasses2
-          mobileTop="hidden xl:flex lg:top-[7470px]"
+          mobileTop="hidden xl:flex lg:top-[7680px]"
           mobileRight="left-[-150px]"
         />
       )}
@@ -322,7 +322,7 @@ export const LayoutElements: React.FC<ILayoutElements> = ({
       )}
       {ball3 && (
         <Ball3
-          mobileTop="hidden xl:flex lg:top-[6160px]"
+          mobileTop="hidden xl:flex lg:top-[5060px]"
           mobileRight="right-[-150px]"
         />
       )}

@@ -76,8 +76,8 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
           </p>
           <p className="pt-2 pb-2 md:text-adaBase tracking-wider leading-none">
             I tak od stażu w agencji marketingowej do swojej działalności: dziś
-            pod szyldem MAGIC obsługuję klientów z Europy, w tym z Polski i
-            na moim liczniku wybiło już{" "}
+            pod szyldem MAGIC obsługuję klientów z Europy, w tym z Polski i na
+            moim liczniku wybiło już{" "}
             <span className="font-bold">ponad 2 mln budżetów reklamowych </span>
             wydanych w ramach Meta Ads.
           </p>
@@ -198,6 +198,43 @@ const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
             zaoszczędzę dobre kilka lat samodzielnego klikania w menedżerze
             reklam.
           </p>
+        </div>
+      )}
+      {version === 5 && (
+        <div className="flex flex-col md:flex-row items-center gap-4 max-w-[1000px] my-16">
+          <div className="text-left max-w-[600px]">
+            <TypingAnimation
+              text="Cześć!"
+              textStyle="text-adaSubtitle uppercase md:text-[80px] font-bold animate-bounce text-ada-pink2"
+            />
+            <h3 className="text-adaMin md:text-adaSubtitleSecondary pt-4 font-bold mb-6">
+              Nazywam się <br />
+              Adrianna Promis-Urbas
+            </h3>
+            <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none mb-4">
+              <b>Jestem przedsiębiorczynią.</b>
+              <br /> Tworzę kampanie reklamowe, które rzeczywiście zarabiają
+              pieniądze.{" "}
+              <b>
+                W swojej karierze wydałam na kampanie reklamowe sporo ponad 2
+                000 000 złotych, a zarobiłam kilkanaście razy tyle!
+              </b>
+            </p>
+            <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
+              Teraz przekażę Ci dokładnie <b>te same strategie,</b> dzięki
+              którym <b>Twoje reklamy będą generować stabilny przychód</b>{" "}
+              zamiast pochłaniać budżet bez efektów.
+            </p>
+          </div>
+          <StaticImage
+            src={"../../images/chill4.webp"}
+            alt="Ada Promis"
+            placeholder="blurred"
+            width={600}
+            height={600}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
         </div>
       )}
     </div>
