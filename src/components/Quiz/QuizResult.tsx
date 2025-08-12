@@ -68,6 +68,9 @@ const QuizResult: React.FC<QuizResultProps> = ({ personalityType }) => {
       maxWidth="4xl"
     >
       <div className="text-center animate-fadeIn">
+        <p className="font-montserrat text-base md:text-lg text-ada-magicPurple max-w-3xl mx-auto mb-8">
+          Podaj swojego maila, aby otrzymać wyniki i sprawdzić nie tylko swoją adsową osobowość, ale też Twoje wyzwania i supermoce w prowadzeniu reklam. No i… co możesz z tym zrobić! 🔮
+        </p>
         <div className="form-scale" id="quiz-form">
           <div dangerouslySetInnerHTML={{ __html: form }} />
         </div>

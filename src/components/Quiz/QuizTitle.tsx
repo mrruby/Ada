@@ -33,10 +33,6 @@ const QuizTitle = (): JSX.Element => {
           </span>
         </div>
 
-        <p className="font-montserrat text-base md:text-lg text-ada-magicPurple max-w-3xl mx-auto mb-8">
-          Podaj swojego maila, aby otrzymać wyniki i sprawdzić nie tylko swoją adsową osobowość, ale też Twoje wyzwania i supermoce w prowadzeniu reklam. No i… co możesz z tym zrobić! 🔮
-        </p>
-
         <div className="flex justify-center space-x-4 mb-8">
           <div className="bg-ada-magicGreen rounded-full px-6 py-2">
             <span className="text-ada-magicPurple font-bold">12 pytań</span>
