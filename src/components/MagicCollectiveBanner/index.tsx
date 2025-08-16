@@ -843,6 +843,375 @@ const MagicCollectiveBanner = ({
           </div>
         </Section>
       )}
+      {version == 11 && (
+        <Section
+          bgColor=""
+          className="text-black"
+          padding="mt-12 mb-16 relative"
+        >
+          <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[480px] mx-auto">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange"
+            >
+              Jak będzie wyglądać nasza współpraca?
+            </Typography>
+          </div>
+          <p className="my-8 text-center max-w-[800px] mx-auto">
+            <b>Cieszymy się, że będziemy razem tworzyć coś wyjątkowego! </b>
+            Przygotowałyśmy dla Ciebie przewodnik po naszej współpracy, żebyś
+            wiedziała, czego możesz się spodziewać na każdym etapie naszej
+            przygody.
+          </p>
+          <div className="flex justify-center items-center absolute  left-1/2 -translate-x-1/2 -translate-y-6 z-100 cursor-pointer">
+            <a href="#info">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+        </Section>
+      )}
+      {version == 12 && (
+        <Section bgColor="" className="text-black px-3" padding="my-12">
+          <div className="px-2 bg-ada-white2 border-ada-orange border rounded-3xl max-w-[480px] mx-auto">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
+            >
+              Poznajmy się bliżej!
+            </Typography>
+          </div>
+          <div className="my-8 max-w-[800px] mx-auto">
+            <p className="pb-12">
+              <b>💪 👩 Twój zespół marzeń</b>
+              <br />
+              Podczas naszej współpracy będziesz pracować głównie z{" "}
+              <b>Justyną i Nicolą</b> - to nasze kreatywne serca kolektywu
+              MAGIC! Jedna z dziewczyn zostanie Twoją dedykowaną menadżerką
+              projektu (będzie znała Twój biznes jak własną kieszeń), a druga
+              będzie zawsze gotowa do pomocy, gdy zajdzie taka potrzeba. Lubimy
+              myśleć o sobie jak o Twoim zewnętrznym zespole marketingowym!
+            </p>
+            <p className="pb-12">
+              <b>👩‍💻 Jak się komunikujemy</b>
+              <br />
+              Nasza ulubiona platforma komunikacyjna to <b>Trello</b> - to tam
+              dzieje się cała magia! Dlaczego akurat Trello? Bo każda z nas jest
+              wtedy na bieżąco z Twoim projektem, możemy szybko zareagować w
+              razie nagłych sytuacji, a Ty masz wszystko w jednym miejscu.
+              Oczywiście, jesteśmy również dostępne mailowo, ale Trello to
+              naprawdę nasze miejsce mocy.
+            </p>
+            <p>
+              <b>🗓️ Nasze comiesięczne spotkania</b>
+              <br />
+              <b>Raz w miesiącu organizujemy spotkanie online</b> - to czas,
+              kiedy razem przeglądamy, co udało nam się osiągnąć, analizujemy
+              wyniki i snujemy plany na kolejne tygodnie. To także moment, gdy
+              możesz podzielić się swoimi pomysłami i marzeniami dotyczącymi
+              rozwoju biznesu - a my podpowiemy Ci jak wykorzystać do tego
+              kampanie reklamowe.
+            </p>
+          </div>
+        </Section>
+      )}
+      {version == 13 && (
+        <Section bgColor="" className="text-black px-3" padding="my-12">
+          <div className="border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
+            >
+              Jeśli chcesz otrzymać wycenę, odezwij się do Justyny:
+            </Typography>
+          </div>
+          <p className="text-center text-xl pt-4">justyna@getbold.agency</p>
+        </Section>
+      )}
+      {version == 14 && (
+        <Section bgColor="" className="text-black px-3" padding="-mt-1 mb-12">
+          <StaticImage
+            src={"../../images/triangle.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="mt-12 border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
+            >
+              Nasze tempo pracy
+            </Typography>
+          </div>
+        </Section>
+      )}
+      {version == 15 && (
+        <Section bgColor="" className="text-black px-3" padding="my-12">
+          <div className="my-8 max-w-[800px] mx-auto">
+            <Typography variant="h3">🗓️ Kiedy się odzywamy?</Typography>
+            <p className="pb-4">
+              Standardowo <b>odpowiadamy w ciągu 30 godzin roboczych,</b> ale
+              zazwyczaj jesteśmy znacznie szybsze! Czasem może się zdarzyć, że
+              powiadomienie zginie gdzieś po drodze, więc jeśli cisza trwa
+              dłużej niż zwykle, <b>śmiało oznaczaj nas ponownie na Trello</b> -
+              nie obrażamy się, wręcz przeciwnie!
+            </p>
+          </div>
+          <div className="my-8 max-w-[800px] mx-auto">
+            <Typography variant="h3">📊 Przygotowanie kampanii</Typography>
+            <p className="pb-4">
+              Na przygotowanie i uruchomienie Twojej kampanii potrzebujemy
+              zazwyczaj 3-4 pełne dni robocze od momentu, gdy dostaniemy komplet
+              materiałów. To orientacyjny czas. Wiele zależy od tego, jak szybko
+              akceptujesz teksty i grafiki oraz liczby poprawek. Pamiętaj, że
+              jeśli coś dostarczysz później (na przykład stronę z ofertą), to
+              automatycznie przesuwa nam termin - ale zawsze Cię o tym
+              poinformujemy!
+            </p>
+          </div>
+          <div className="my-8 max-w-[800px] mx-auto">
+            <Typography variant="h3">🚨Kampanie na ostatnią chwilę</Typography>
+            <p className="pb-4">
+              Czy jesteśmy w stanie przygotować kampanię od zera w ciągu jednego
+              dnia? Jeśli wyskoczy coś pilnego, zazwyczaj jesteśmy.
+              <b>Nie traktujmy tego jednak jako rutynę, tylko wyjątek. </b>
+              Pewnie Ty też nie byłabyś zadowolona, gdyby ktoś nagle zajął Twoje
+              miejsce w kolejce, prawda?
+            </p>
+          </div>
+        </Section>
+      )}
+      {version == 16 && (
+        <Section bgColor="" className="text-black px-3" padding="-mt-1 mb-12">
+          <StaticImage
+            src={"../../images/triangle.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="mt-4 border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
+            >
+              Jak pokazujemy efekty naszej pracy
+            </Typography>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center gap-8 my-4">
+            <div className="max-w-[460px]">
+              <Typography variant="h3">
+                🗓️ <br /> Miesięczne podsumowania
+              </Typography>
+              <p className="pb-4">
+                Na <b>koniec każdego miesiąca</b> przygotowujemy dla Ciebie{" "}
+                <b>szczegółowy raport</b> - to nasze małe arcydzieło
+                analityczne! Pokazujemy w nim, ile osób kupiło, zapisało się,
+                jaki był koszt tych akcji, ile sprzedało się produktów, jaki był
+                zysk, co działało najlepiej, a co warto jeszcze poprawić lub
+                dodać. To jak miesięczna dawka wiadomości o Twoim biznesie!
+              </p>
+            </div>
+            <div className="max-w-[460px]">
+              <Typography variant="h3">
+                🤝 <br /> Na bieżąco dzielimy się spostrzeżeniami
+              </Typography>
+              <p className="pb-4">
+                Nie czekamy do końca miesiąca z komunikacją! Czasem odzywamy się{" "}
+                <b>3 razy w ciągu dnia, czasem raz na dwa tygodnie</b> -
+                wszystko zależy od tego, co się dzieje z kampaniami. Gdy
+                przychodzą nam do głowy nowe pomysły lub chcemy z Tobą
+                przedyskutować jakąś strategię, organizujemy burzę mózgów na{" "}
+                <b>Trello oraz na comiesięcznych spotkaniach.</b> To nasza
+                ulubiona forma kreatywnej współpracy!
+              </p>
+            </div>
+          </div>
+        </Section>
+      )}
+      {version == 17 && (
+        <Section bgColor="" className="text-black px-3" padding="-mt-1 mb-12">
+          <StaticImage
+            src={"../../images/triangle2.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
+            >
+              Dbamy o Twoją społeczność
+            </Typography>
+          </div>
+          <div className="border-ada-orange border rounded-3xl max-w-[760px] mx-auto bg-ada-white2 p-8 mt-4">
+            <Typography variant="h3">❌ Moderacja komentarzy</Typography>
+            <p className="py-4">
+              Moderowanie komentarzy{" "}
+              <b>nie wchodzi w zakres naszej współpracy. </b>
+              Wierzymy, że moderowanie komentarzy to część sztuki komunikacji z
+              klientami, nie tylko reagowanie na problemy. Chociaż zdarza nam
+              się sprawdzać komentarze i ukrywać te mniej przyjemne, jednak
+              moderacja komentarzy powinna być częścią strategii komunikacji.
+            </p>
+          </div>
+        </Section>
+      )}
+      {version == 18 && (
+        <Section bgColor="" className="text-black px-3" padding="-mt-1 mb-12">
+          <StaticImage
+            src={"../../images/triangle.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="mt-2 border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
+            >
+              Nasze granice
+            </Typography>
+          </div>
+        </Section>
+      )}
+      {version == 19 && (
+        <Section bgColor="" className="text-black px-3" padding="my-2">
+          <div className="text-center">
+            (ale w <b>pozytywnym</b> znaczeniu!)
+          </div>
+          <div className="flex flex-col md:flex-row justify-center gap-8 my-4">
+            <div className="max-w-[280px]">
+              <Typography variant="h3">✅ Co robimy z pasją</Typography>
+              <p className="pt-2 pb-4">
+                Skupiamy się na tym, co robimy najlepiej -
+                <b> kampaniach reklamowych i kreacjach, które sprzedają.</b>
+              </p>
+            </div>
+            <div className="max-w-[360px]">
+              <Typography variant="h3">
+                ❌ Czego nie robimy w ramach stałej współpracy
+              </Typography>
+              <p className="pt-2 pb-4">
+                Nasza{" "}
+                <b>
+                  umowa nie obejmuje tworzenia stron internetowych, copywritingu
+                </b>
+                (poza tekstami reklamowymi),{" "}
+                <b>
+                  fotografii produktowej, konsultacji ścieżek mailowych,
+                  tworzenia newsletterów czy optymalizacji stron.
+                </b>{" "}
+                Część z tych usług świadczymy w ramach innych pakietów, część
+                zlecamy świetnym specjalistom - jeśli będziesz potrzebować
+                czegoś wychodzącego poza zakres naszej współpracy, chętnie
+                przygotujemy dla Ciebie wycenę lub kogoś polecimy!
+              </p>
+            </div>
+            <div className="max-w-[360px]">
+              <Typography variant="h3">
+                🚀 Twoje konto reklamowe to nasza odpowiedzialność
+              </Typography>
+              <p className="pt-2 pb-4">
+                To bardzo ważne: podczas naszej współpracy{" "}
+                <b>kampanie są w 100% pod naszą opieką.</b> Oczywiście możesz
+                zaglądać na konto (zachęcamy!), ale{" "}
+                <b>
+                  wszelkie zmiany wprowadzamy tylko my - osoby z kolektywu
+                  MAGIC.
+                </b>{" "}
+                Jeśli wprowadzisz zmiany samodzielnie, nie będziemy mogły
+                zagwarantować wyników kampanii. To jak próba kierowania
+                samochodem na dwie kierownice.
+              </p>
+            </div>
+          </div>
+        </Section>
+      )}
+      {version == 20 && (
+        <Section
+          bgColor=""
+          className="text-black px-3 relative"
+          padding="-mt-1 mb-12"
+        >
+          <StaticImage
+            src={"../../images/triangle.png"}
+            alt=""
+            placeholder="blurred"
+            width={959}
+            height={189}
+          />
+          <div className="mt-6 border-ada-orange border rounded-3xl max-w-[480px] mx-auto bg-ada-white2">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange uppercase"
+            >
+              Pierwsze kroki razem
+            </Typography>
+          </div>
+          <div className="my-8 max-w-[800px] mx-auto">
+            <Typography variant="h3">👀 Okres poznawania się</Typography>
+            <p className="pb-4">
+              Pierwsze <b>3 miesiące</b> to nasz okres testowy - czas, kiedy
+              poznajemy się nawzajem, sprawdzamy, co możemy wspólnie zdziałać i
+              czy dobrze nam się razem pracuje. W tym czasie{" "}
+              <b>
+                wdrażamy nasze sprawdzone metody prowadzenia kampanii i
+                dostosowujemy je do Twojego biznesu.
+              </b>
+              Zależy nam, aby pierwsze 3 miesiące upłynęły nam pod hasłem
+              „zaufanie”. Nie zawsze będzie różowo, ale będzie warto.
+            </p>
+          </div>
+          <div className="my-8 max-w-[800px] mx-auto">
+            <Typography variant="h3">🚀 Nasza filozofia tworzenia</Typography>
+            <p className="pb-4">
+              Kreacje reklamowe mają być piękne i spójne z Twoją marką, ale
+              przede wszystkim - mają sprzedawać!{" "}
+              <b>
+                Wierzymy, że najlepsza grafika to ta, która przynosi Ci klientów
+                i zyski.
+              </b>{" "}
+              Nie martw się - nie poświęcimy estetyki, ale skuteczność zawsze
+              będzie na pierwszym miejscu.
+            </p>
+          </div>
+          <div className="flex justify-center items-center absolute  right-0 -translate-x-1/2 -bottom-24 z-100 cursor-pointer">
+            <a href="#tempo">
+              <StaticImage
+                src={"../../images/magicBtn2.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+        </Section>
+      )}
+      {version == 21 && (
+        <Section
+          bgColor=""
+          className="text-black text-center px-2"
+          padding="my-12"
+        >
+          <p>
+            Przygotowane przez zespół kolektywu MAGIC ✨<br />
+            Masz pytania? Napisz do nas na Trello - zawsze się cieszymy, gdy
+            możemy pomóc!
+          </p>
+        </Section>
+      )}
     </>
   )
 }
