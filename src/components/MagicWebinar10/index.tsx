@@ -1,3 +1,4 @@
+import { Button } from "helpers/Button"
 import { MagicSunPink, MagicSunYellow } from "helpers/LayoutElements"
 import React from "react"
 import Typography from "../shared/Typography"
@@ -22,16 +23,22 @@ const MagicWebinar10 = ({ version = 1 }: { version?: number }): JSX.Element => {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center ${colors.background} p-4 text-center py-16`}
+      className={`flex flex-col items-center justify-center ${colors.background} p-4 text-center`}
     >
       <div className="max-w-md w-full">
         {/* Header with spinners */}
         <div className="flex items-center justify-center gap-4 mb-12 relative">
-          {renderSun("-left-10", "animate-spin-slow")}
-          <Typography variant="h1" className={colors.accent}>
-            Adsy Starter Pack: Ogarniam kampanię reklamową w małej firmie!
-          </Typography>
-          {renderSun("-right-10", "animate-spin-slow")}
+          <Button
+            type="button"
+            text={
+              <span className="text-ada-newPurple font-bold uppercase">
+                Ogarniam reklamy w małej firmie - jesienny re-start
+              </span>
+            }
+            sectionId="top"
+            textSize="text-sm md:text-base"
+            btnStyle="bg-ada-yellow3 hover:bg-ada-yellow3/90 px-6 py-4 rounded-lg uppercase font-bold"
+          />
         </div>
       </div>
     </div>

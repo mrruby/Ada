@@ -26,7 +26,7 @@ const MagicWebinar7 = ({ version = 1 }: { version?: number }): JSX.Element => {
             <span className={primaryColor}>
               Dlaczego jeszcze warto zapisać się na{" "}
             </span>
-            <span className={accentColor}>webinar</span>
+            <span className={accentColor}>masterclass</span>
             <span className={primaryColor}>?</span>
           </>,
           "font-bold max-w-xl mx-auto pb-4 text-center m-4",
@@ -52,7 +52,8 @@ const MagicWebinar7 = ({ version = 1 }: { version?: number }): JSX.Element => {
           src={"../../images/masterclass3Info.webp"}
           alt="Masterclass 3 Info"
           placeholder="blurred"
-          width={500}
+          width={600}
+          objectFit="contain"
           className="m-4"
         />
         <div className="flex flex-col">

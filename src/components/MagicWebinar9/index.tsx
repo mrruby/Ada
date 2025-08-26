@@ -31,7 +31,7 @@ const MagicWebinar9 = ({ version = 1 }: { version?: number }): JSX.Element => {
           {renderTypography(
             <>
               <span className={primaryColor}>UWAGA: Nie jest to typowy </span>
-              <span className={accentColor}>warsztat</span>
+              <span className={accentColor}>webinar</span>
               <span className={primaryColor}> pełen ogólników</span>
             </>,
             "text-center md:text-left max-w-lg",
@@ -42,8 +42,8 @@ const MagicWebinar9 = ({ version = 1 }: { version?: number }): JSX.Element => {
             {renderTypography(
               <>
                 To 90-minutowe spotkanie warsztatowe. W czasie spotkania
-                wypełnisz karty pracy razem z nami, więc kończysz z gotowym
-                planem kampanii, a nie stertą luźnych notatek. Skupiamy się
+                wypełnisz karty pracy, więc przygotujesz konkretny plan działania
+                na najbardziej intensywny sezon reklamowy w roku. Skupiamy się
                 wyłącznie na sprawdzonych krokach, inspiracjach, konkretnej
                 wiedzy.
               </>,
@@ -54,7 +54,7 @@ const MagicWebinar9 = ({ version = 1 }: { version?: number }): JSX.Element => {
           <div className={primaryColor}>
             {renderTypography(
               <>
-                Nagranie i materiały będą darmowe tylko do <b>28 maja</b> -
+                Nagranie i materiały będą darmowe tylko do <b>17 września</b> -
                 później cały pakiet trafi do sklepu jako produkt płatny. Jeśli
                 chcesz zgarnąć wiedzę gratis, wskakuj teraz!
               </>,

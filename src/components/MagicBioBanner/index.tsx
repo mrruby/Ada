@@ -128,7 +128,7 @@ const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
                 alt=""
                 layout="fixed"
                 width={16}
-                height={20}
+                height={15}
                 placeholder="blurred"
                 quality={90}
               />

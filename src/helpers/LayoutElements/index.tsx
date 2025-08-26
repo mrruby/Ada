@@ -282,6 +282,16 @@ export const ArrowMasterclass: React.FC<Props> = (props) => (
   />
 )
 
+export const ArrowMagic: React.FC<Props> = (props) => (
+  <ImageComponent
+    src="/assets/arrowMagic.svg"
+    alt="Decorative arrow"
+    {...props}
+  />
+)
+
+export { default as YellowCircleArrow } from "../YellowCircleArrow"
+
 export const Leaves1: React.FC<Props> = (props) => (
   <ImageComponent
     src="/assets/leaves1.svg"

@@ -1,11 +1,10 @@
-import { MagicSun, MagicSunYellow } from "helpers/LayoutElements"
+import { MagicSun, YellowCircleArrow } from "helpers/LayoutElements"
 import React from "react"
 import Typography from "../shared/Typography"
 
 const MagicWebinar2 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const isPinkVersion = version === 2
   const bgColor = isPinkVersion ? "bg-ada-newPurple2" : "bg-ada-magicPurple"
-  const textColor = isPinkVersion ? "text-ada-newPurple" : "text-white"
 
   const cards = [
     {
@@ -68,9 +67,9 @@ const MagicWebinar2 = ({ version = 1 }: { version?: number }): JSX.Element => {
     <div className={`${bgColor} px-6 md:px-12 relative`}>
       <div className="flex justify-center">
         {isPinkVersion ? (
-          <MagicSunYellow
-            mobileBottom="top-[-50px]"
-            width="200px"
+          <YellowCircleArrow
+            mobileBottom="top-[-25px]"
+            width="67px"
             zIndex="z-10"
           />
         ) : (
@@ -80,9 +79,9 @@ const MagicWebinar2 = ({ version = 1 }: { version?: number }): JSX.Element => {
       <div className="container mx-auto mt-24">
         <Typography
           variant="h1"
-          className={`${textColor} text-4xl md:text-5xl font-bold text-center mb-12`}
+          className="text-white text-4xl md:text-5xl font-bold text-center mb-12"
         >
-          🔮 Wyobraź to sobie…
+          Wyobraź to sobie…
         </Typography>
 
         {/* Cards Grid */}

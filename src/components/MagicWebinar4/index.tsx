@@ -22,24 +22,19 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const benefits = [
     {
       emoji: "📊",
-      text: (
-        <b>
-          Inspiracje i wskazówki przygotowane przez trzy specjalistki: Dorotę
-          (grafika), Justynę (copy) oraz Adę (adsy).
-        </b>
-      ),
+      text: "Inspiracje i wskazówki przygotowane przez specjalistkę od adsów dla kobiecych biznesów",
     },
     {
       emoji: "🎨",
-      text: <b>Kreację, która zatrzymuje scroll (i utrzymuje ciekawość)</b>,
+      text: "Kreację, która zatrzymuje scroll (i utrzymuje ciekawość)",
     },
     {
       emoji: "✍️",
-      text: <b>Copy, które przyciąga - bez nudy</b>,
+      text: "Copy, które przyciąga - bez nudy",
     },
     {
       emoji: "🚀",
-      text: <b>Plan na kampanię reklamową, której wyniki wywołują uśmiech</b>,
+      text: "Plan na kampanię reklamową, której wyniki wywołują uśmiech",
     },
   ]
 
@@ -52,10 +47,10 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
   }) => (
     <div
       key={emoji}
-      className={`${accentColor} text-white p-6 rounded-sm flex items-start`}
+      className={`${accentColor} text-white p-6 rounded-sm flex flex-col items-center`}
     >
-      <span className="text-xl mr-3">{emoji}</span>
-      <p className="text-left text-sm md:text-base">{text}</p>
+      <span className="text-xl mb-3">{emoji}</span>
+      <p className="text-center text-sm md:text-base font-normal">{text}</p>
     </div>
   )
 
@@ -70,8 +65,8 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
         </div>
         <div className="bg-pink-200 px-4 py-2 mx-2 rounded-sm pb-4">
           <h1 className="text-xl md:text-3xl lg:text-4xl font-bold">
-            <span className={textHighlightColor}>Co Cię czeka podczas </span>
-            <span className="text-ada-magicPurple">warsztatów?</span>
+            <span className="text-ada-newPurple">Co na Ciebie czeka na </span>
+            <span className="text-ada-pink7">masterclass?</span>
           </h1>
         </div>
         <div className="w-10 h-10 md:w-14 md:h-14 flex items-center justify-center">
@@ -96,11 +91,11 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
         <div
           className={`inline-block ${goalBgColor} ${goalTextColor} px-3 py-1 rounded-sm`}
         >
-          <span className="font-bold">Nasz cel:</span>
+          <span className="font-bold">Mój cel:</span>
         </div>
         <span className="text-white font-medium ml-2">
           pokazać Ci, że reklamy na Facebooku i Instagramie zaczynają się od
-          dobrego, strategicznego planu. Przygotujemy go wspólnie!
+          sprawdzonych taktyk i planu. Przygotujemy go wspólnie!
         </span>
       </div>
 
@@ -111,7 +106,7 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
             CHCĘ DOŁĄCZYĆ
           </span>
         }
-        sectionId="signup"
+        sectionId="top"
         textSize="text-xl md:text-2xl"
         btnStyle={`${buttonBgColor} hover:${buttonHoverColor} text-xl font-bold py-6 mb-6 px-12 rounded-full border-none`}
       />

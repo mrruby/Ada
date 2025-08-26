@@ -1,5 +1,7 @@
 import { Accordion } from "helpers/Accordion"
+import { Button } from "helpers/Button"
 import React from "react"
+import Typography from "../shared/Typography"
 
 type ListItem = {
   question: string
@@ -10,7 +12,7 @@ const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const faqList: ListItem[] = [
     {
       question: "Do kiedy dostępne jest nagranie?",
-      answer: "Do 28.05.",
+      answer: "Do 13.09.",
     },
     {
       question: "Muszę znać Ads Managera?",
@@ -39,7 +41,7 @@ const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
   }
 
   return (
-    <div className="min-h-screen bg-pink-100 flex flex-col text-ada-blue items-center px-3">
+    <div className="min-h-screen bg-pink-100 flex flex-col text-ada-blue items-center px-3 pb-16">
       <div className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center text-ada-black">
         <div className="pt-[60px] lg:pt-[76px]">
           <h2 className="text-[20px] lg:text-adaTitle font-bold lg:mb-2 animate-bounce text-center mx-auto">
@@ -48,6 +50,30 @@ const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
           <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
             {renderList(faqList)}
           </ul>
+        </div>
+      </div>
+      
+      {/* Button and text section */}
+      <div className="mt-16 flex flex-col items-center">
+        <Button
+          type="button"
+          text={
+            <span className="font-bold text-ada-yellow3 uppercase">
+              REZERWUJĘ MIEJSCE!
+            </span>
+          }
+          sectionId="top"
+          textSize="text-lg md:text-xl"
+          btnStyle="bg-ada-pink7 hover:bg-ada-pink7/90 px-8 py-4 rounded-full uppercase font-bold shadow-lg"
+        />
+        
+        <div className="mt-6 text-center">
+          <span className="bg-ada-newPurple text-white px-2 py-1 rounded font-bold">
+            Uwaga:
+          </span>
+          <span className="text-black ml-2">
+            Ilość miejsc ograniczona - zdecyduj się teraz!
+          </span>
         </div>
       </div>
     </div>

@@ -105,7 +105,7 @@ const MagicApproachSection = ({
                     placeholder="blurred"
                     layout="fixed"
                     width={37}
-                    height={35}
+                    height={30}
                   />
                 </div>
                 <Typography variant="body" className="text-black max-w-60">
@@ -123,7 +123,7 @@ const MagicApproachSection = ({
                     placeholder="blurred"
                     layout="fixed"
                     width={47}
-                    height={30}
+                    height={27}
                   />
                 </div>
                 <Typography variant="body" className="text-black max-w-60">
@@ -139,7 +139,7 @@ const MagicApproachSection = ({
                     placeholder="blurred"
                     layout="fixed"
                     width={28}
-                    height={35}
+                    height={30}
                   />
                 </div>
                 <Typography variant="body" className="text-black max-w-60">

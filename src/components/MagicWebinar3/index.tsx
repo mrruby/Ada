@@ -48,7 +48,7 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
       <div>
         <Typography
           variant="h3"
-          className={`text-xl font-semibold ${backgroundColor} text-white pl-1 pr-3 py-1 inline`}
+          className="text-xl font-semibold bg-ada-newPurple text-white pl-1 pr-3 py-1 inline"
         >
           {title}
         </Typography>
@@ -70,9 +70,9 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
                   variant="h1"
                   className="text-4xl md:text-5xl font-bold"
                 >
-                  <span className={primaryColor}>🎯 Ten</span>{" "}
-                  <span className={secondaryColor}>warsztat </span>{" "}
-                  <span className={primaryColor}>jest dla Ciebie, jeśli…</span>
+                  <span className="text-ada-newPurple">Ten masterclass jest </span>
+                  <span className="text-ada-pink7">dla Ciebie</span>
+                  <span className="text-ada-newPurple">, jeśli…</span>
                 </Typography>
               </div>
 
@@ -82,14 +82,14 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
               <Button
                 type="button"
                 text={
-                  <span className="font-bold text-white uppercase">
+                  <span className="font-bold text-ada-newPurple uppercase">
                     Tak, to o mnie!
                   </span>
                 }
-                sectionId="signup"
+                sectionId="top"
                 textSize="text-sm md:text-base "
-                btnStyle="uppercase bg-ada-pink7 
-                            font-semibold tracking-wide h-[48px] md:h-[60px] 
+                btnStyle="uppercase bg-white 
+                            font-bold tracking-wide h-[48px] md:h-[60px] 
                             px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"
               />
             </div>

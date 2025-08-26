@@ -11,7 +11,7 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
     {
       title: (
         <>
-          Zapis warsztatu
+          Spotkanie na żywo
           <br />
           💻
         </>
@@ -21,22 +21,22 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
     {
       title: (
         <>
-          Karty pracy i dostęp do nagrania do 28.05
+          Szablony grafik: must have na jesień
           <br />
           📝
         </>
       ),
-      value: "97 zł",
+      value: "297 zł",
     },
     {
       title: (
         <>
-          Grupowe Q&A — 28.05
+          Dostęp do nagrania do 17.09
           <br />
           🎤
         </>
       ),
-      value: "297 zł",
+      value: "97 zł",
     },
   ]
 
@@ -71,8 +71,8 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
             </React.Fragment>
           ))}
         </div>
-        <p className={`text-center ${colors.heading} font-bold mb-12 mt-12`}>
-          Dziś 0 zł - po 28 maja nagranie i materiały trafią do sklepu jako
+        <p className={`text-center ${colors.heading} font-bold mt-12`}>
+          Dziś 0 zł - po 17 września nagranie i materiały trafią do sklepu jako
           <b> produkt płatny.</b>
         </p>
       </div>

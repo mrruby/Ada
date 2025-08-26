@@ -14,7 +14,7 @@ import {
 } from "helpers/LayoutElements"
 import TypingAnimation from "helpers/TypingAnimation"
 import React, { useEffect } from "react"
-import magicWebinarForm22 from "../../values/forms/magic-form-22.05.html"
+import magicWebinarForm22 from "../../values/forms/magic-form-jesien.html"
 import magicWebinarForm from "../../values/forms/magic-webinar.html"
 
 interface DecorationProps {
@@ -29,7 +29,9 @@ interface DecorationProps {
 const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const isPinkVersion = version === 2
   const bgColor = isPinkVersion ? "bg-ada-newPurple" : "bg-pink-100"
-  const headerBgColor = isPinkVersion ? "bg-pink-100" : "bg-ada-magicPurple"
+  const headerBgColor = isPinkVersion
+    ? "bg-ada-magicPink3"
+    : "bg-ada-magicPurple"
   const logoSrc = isPinkVersion ? "/assets/magic-2.svg" : "/assets/magic.svg"
   const formHtml = isPinkVersion ? magicWebinarForm22 : magicWebinarForm
 
@@ -124,27 +126,35 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
   }
 
   const renderPinkContent = () => (
-    <div className="mb-4 max-w-[400px]">
-      <Typography variant="h1" className="mb-4 md:pt-20 text-ada-yellow3">
-        Adsy Starter Pack: Ogarniam kampanię reklamową w małej firmie!
-        <br />
-        <span className="text-ada-pink7 uppercase">Warsztat za 0 zł</span>
+    <div className="mb-4 max-w-[600px]">
+      <Typography
+        variant="h1"
+        className="mb-4 md:pt-20 text-ada-yellow3 text-4xl md:text-5xl uppercase font-bold"
+      >
+        OGARNIAM REKLAMY W MAŁEJ FIRMIE -
+        <span className="text-ada-pink7"> JESIENNY RE-START</span>
       </Typography>
-      <Typography variant="body" className="mb-6 text-white">
-        Najlepszy czas na działanie jest teraz: wspólnie z 3 ekspertkami,
-        przygotujesz swój biznes do kampanii reklamowej Meta Ads.
+      <Typography
+        variant="h2"
+        className="mb-4 text-white font-bold text-2xl md:text-3xl"
+      >
+        Masterclass za 0 zł: 10 września o 18:00
+      </Typography>
+      <Typography variant="body" className="mb-6 max-w-[400px] text-white">
+        Najlepszy czas na działanie jest teraz: pod okiem ekspertki przygotujesz
+        swój biznes do kampanii reklamowej Meta Ads.
       </Typography>
       <Button
         type="button"
         text={
-          <span className="font-bold text-ada-yellow3 uppercase">
-            Oglądam nagranie!
+          <span className="font-extrabold text-ada-newPurple uppercase">
+            Rezerwuję miejsce!
           </span>
         }
-        sectionId="form"
+        sectionId="top"
         textSize="text-sm md:text-base "
-        btnStyle="uppercase bg-ada-pink7 
-              font-semibold tracking-wide h-[48px] md:h-[60px] 
+        btnStyle="uppercase bg-white 
+              font-extrabold tracking-wide h-[48px] md:h-[60px] 
               px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"
       />
     </div>
@@ -213,15 +223,10 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
   const renderContent = () =>
     isPinkVersion ? renderPinkContent() : renderDefaultContent()
 
-  const renderForm = () =>
-    isPinkVersion ? (
-      <div className="mt-2">
-        <FormSection html={magicWebinarForm22} />
-      </div>
-    ) : null
+  const renderForm = () => null
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div id="top" className="flex flex-col min-h-screen">
       <header className={`text-white py-4 px-6 md:px-12 ${headerBgColor}`}>
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
@@ -240,24 +245,30 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
               <section id="form">{renderForm()}</section>
             </div>
 
-            {/* Image Content */}
+            {/* Image or Form Content */}
             <div className="lg:col-span-5 order-3 lg:order-2 flex justify-center lg:-mt-16">
-              <div className="relative w-full max-w-[500px] aspect-[3/4]">
-                <div className="z-10 absolute inset-0 flex items-end justify-center">
-                  <StaticImage
-                    loading="eager"
-                    src="../../images/ada_purple.webp"
-                    alt="Ada w telefonie"
-                    placeholder="blurred"
-                    width={500}
-                    height={670}
-                    className="object-contain"
-                  />
+              {isPinkVersion ? (
+                <div className="w-full pt-20 md:pt-24">
+                  <FormSection html={magicWebinarForm22} />
                 </div>
-                {["top", "middle", "bottom"].map((pos) =>
-                  renderDecorations(pos, isPinkVersion)
-                )}
-              </div>
+              ) : (
+                <div className="relative w-full max-w-[500px] aspect-[3/4]">
+                  <div className="z-10 absolute inset-0 flex items-end justify-center">
+                    <StaticImage
+                      loading="eager"
+                      src="../../images/ada_purple.webp"
+                      alt="Ada w telefonie"
+                      placeholder="blurred"
+                      width={500}
+                      height={670}
+                      className="object-contain"
+                    />
+                  </div>
+                  {["top", "middle", "bottom"].map((pos) =>
+                    renderDecorations(pos, isPinkVersion)
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
