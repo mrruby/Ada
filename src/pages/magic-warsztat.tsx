@@ -19,16 +19,16 @@ const MagicWebinarPage = () => {
     <Layout showHeaderAndFooter={false}>
       <MagicWebinar1 version={2} />
       <MagicWebinar2 version={2} />
-      <MagicWebinar3 version={2} />
+      <MagicWebinar3 />
       <MagicWebinar4 version={2} />
-      <MagicWebinar5 version={2} />
+      <MagicWebinar5 />
       <MagicWebinar6 version={2} />
       <MagicWebinar7 version={2} />
       <MagicWebinar8 version={2} />
       <MagicWebinar10 version={2} />
       <MagicWebinar9 version={2} />
       <MagicWebinarSignup />
-      <MagicWebinar11 version={2} />
+      <MagicWebinar11 />
     </Layout>
   )
 }
