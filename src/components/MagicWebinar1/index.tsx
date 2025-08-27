@@ -26,7 +26,7 @@ interface DecorationProps {
   zIndex?: string
 }
 
-const MagicWebinar1 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar1 = ({ version = 1 }: { version?: number }) => {
   const isPinkVersion = version === 2
   const bgColor = isPinkVersion ? "bg-ada-newPurple" : "bg-pink-100"
   const headerBgColor = isPinkVersion

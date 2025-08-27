@@ -1,9 +1,9 @@
-import React from "react"
-import { FeatureBox } from "helpers/FeatureBox"
-import { BonusBox } from "helpers/BonusBox"
 import { StaticImage } from "gatsby-plugin-image"
+import { BonusBox } from "helpers/BonusBox"
+import { FeatureBox } from "helpers/FeatureBox"
+import React from "react"
 
-const MastermindSteps = ({ version }: { version: number }): JSX.Element => {
+const MastermindSteps = ({ version }: { version: number }) => {
   const featuresDataFirtstRow = [
     {
       text: "Start! Układamy swój lejek, analizujemy ścieżkę swojego biznesu.",

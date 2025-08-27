@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Section from "../shared/Section"
 
-const QuizTitle = (): JSX.Element => {
+const QuizTitle = () => {
   return (
     <Section
       bgColor="transparent"

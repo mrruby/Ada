@@ -1,7 +1,7 @@
-import React from "react"
 import { Button } from "helpers/Button"
+import React from "react"
 
-const CooperationSection = (): JSX.Element => {
+const CooperationSection = () => {
   return (
     <div className="flex px-2 lg:pl-[120px] flex-col text-ada-blue items-center text-center pb-[70px]">
       <h3 className="text-[15px] lg:text-adaSubtitle max-w-[760px] pb-6">

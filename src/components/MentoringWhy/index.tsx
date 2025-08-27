@@ -1,9 +1,8 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
-import MentoringForm from "components/MentoringForm"
+import React from "react"
 
-const MentoringWhy = (): JSX.Element => {
+const MentoringWhy = () => {
   return (
     <section>
       <div className="flex flex-col md:flex-row gap-4 xl:gap-[90px] items-center w-full justify-center mx-3">

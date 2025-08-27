@@ -1,10 +1,10 @@
 import React from "react"
 
 interface Props {
-  text: string | JSX.Element
-  text2?: string | JSX.Element
+  text: string | React.JSX.Element
+  text2?: string | React.JSX.Element
   styleText?: string
-  image: JSX.Element
+  image: React.JSX.Element
 }
 
 export const BonusBox: React.FC<Props> = ({

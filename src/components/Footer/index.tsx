@@ -1,10 +1,10 @@
+import { Link } from "gatsby"
 import React from "react"
 import MaxWithBgColorContainer from "../Layout/MaxWithBgColorContainer"
-import Logo from "./Logo"
-import { Link } from "gatsby"
 import FooterMenu from "./FooterMenu"
+import Logo from "./Logo"
 
-const Footer = (): JSX.Element => {
+const Footer = () => {
   return (
     <MaxWithBgColorContainer
       bgColor="bg-ada-light-pink"

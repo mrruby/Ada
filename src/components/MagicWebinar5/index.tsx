@@ -1,4 +1,3 @@
-import { MagicSun, MagicSunPinkNew } from "helpers/LayoutElements"
 import React, { ReactNode } from "react"
 import { CircleImage } from "../MagicBioBanner/circleImages"
 import Typography from "../shared/Typography"
@@ -10,16 +9,15 @@ interface TeamMember {
   imageUrl: string
 }
 
-const MagicWebinar5 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar5 = ({ version = 1 }: { version?: number }) => {
   const teamMember: TeamMember = {
     name: "Adrianna Promis-Urbas",
     title: "Specjalistka od kampanii reklamowych z 9-letnim doświadczeniem",
     description: (
       <>
-        Pomogłam <span className="font-bold">ponad 200 kobietom</span>{" "}
-        zwiększyć zyski i satysfakcję z prowadzenia własnej firmy.
-        Specjalizuję się w przekształcaniu chaotycznych działań marketingowych
-        w precyzyjne{" "}
+        Pomogłam <span className="font-bold">ponad 200 kobietom</span> zwiększyć
+        zyski i satysfakcję z prowadzenia własnej firmy. Specjalizuję się w
+        przekształcaniu chaotycznych działań marketingowych w precyzyjne{" "}
         <span className="font-bold">
           systemy generujące przewidywalne wyniki
         </span>

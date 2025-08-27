@@ -1,6 +1,6 @@
 import React from "react"
 
-const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar8 = ({ version = 1 }: { version?: number }) => {
   const colors = {
     background: version === 2 ? "bg-ada-newPurple" : "bg-ada-magicOrange",
     heading: version === 2 ? "text-pink-100" : "text-white",
@@ -40,7 +40,7 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }): JSX.Element => {
     },
   ]
 
-  const renderBenefitCard = (title: JSX.Element, value: string) => (
+  const renderBenefitCard = (title: React.JSX.Element, value: string) => (
     <div className="relative bg-pink-100 rounded-xl p-6 shadow-lg flex flex-col items-center">
       <div className="mb-4 w-full flex justify-center">
         <span className="text-green-500 text-4xl absolute -top-5 left-1/2 transform -translate-x-1/2">

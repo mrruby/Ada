@@ -2,7 +2,7 @@ import { MagicSun, YellowCircleArrow } from "helpers/LayoutElements"
 import React from "react"
 import Typography from "../shared/Typography"
 
-const MagicWebinar2 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar2 = ({ version = 1 }: { version?: number }) => {
   const isPinkVersion = version === 2
   const bgColor = isPinkVersion ? "bg-ada-newPurple2" : "bg-ada-magicPurple"
 

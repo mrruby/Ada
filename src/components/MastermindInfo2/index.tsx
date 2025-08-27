@@ -1,10 +1,10 @@
 import React from "react"
 
-const MastermindInfo2 = (): JSX.Element => {
+const MastermindInfo2 = () => {
   const listItemClass =
     "text-[15px] lg:text-adaDesc leading-tight font-medium py-2 leading-tight"
 
-  const programList: JSX.Element[] = [
+  const programList = [
     <span key={0}>
       Twoje cele w kampaniach reklamowych to:{" "}
       <span className="font-bold">
@@ -43,7 +43,7 @@ const MastermindInfo2 = (): JSX.Element => {
     </span>,
   ]
 
-  const notForYouList: JSX.Element[] = [
+  const notForYouList = [
     <span key={0}>
       masz nadzieję, że{" "}
       <span className="font-bold">wyniki zrobią się „same”</span> w Managerze

@@ -31,7 +31,7 @@ const peopleContent = [
   },
 ]
 
-const MagicBioBanner = ({ version }: { version: number }): JSX.Element => {
+const MagicBioBanner = ({ version }: { version: number }) => {
   return (
     <>
       <Section>

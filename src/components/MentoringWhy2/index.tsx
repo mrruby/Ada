@@ -1,8 +1,6 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import { Button } from "helpers/Button"
 
-const MentoringWhy2 = (): JSX.Element => {
+const MentoringWhy2 = () => {
   const leftList = [
     {
       text: (

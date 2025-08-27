@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import Menu from "./Menu"
 import MaxWithBgColorContainer from "../Layout/MaxWithBgColorContainer"
+import Menu from "./Menu"
 import MenuDesktop from "./MenuDesktop"
 
-const Header = (): JSX.Element => {
+const Header = () => {
   const [open, setOpen] = useState(false)
 
   return (

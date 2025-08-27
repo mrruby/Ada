@@ -1,13 +1,13 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
 type Props = {
   title: string
   title2: string
-  paragraph1: JSX.Element
-  paragraph2?: JSX.Element
-  paragraph3?: JSX.Element
+  paragraph1: React.JSX.Element
+  paragraph2?: React.JSX.Element
+  paragraph3?: React.JSX.Element
   socials?: boolean
 }
 
@@ -18,7 +18,7 @@ const TextBanner = ({
   paragraph2,
   paragraph3,
   socials,
-}: Props): JSX.Element => {
+}: Props) => {
   return (
     <div className="py-6 px-4 lg:pt-[68px] lg:pb-[40px] abu" id="blog-posts">
       <div className="text-ada-blue flex flex-col items-center ">

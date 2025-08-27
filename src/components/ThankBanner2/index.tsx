@@ -1,8 +1,8 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import React from "react"
 
-const ThankBanner2 = (): JSX.Element => {
+const ThankBanner2 = () => {
   return (
     <div className="flex px-2 lg:pl-[120px] flex-col items-center text-ada-blue relative md:min-h-[85vh]">
       <div className="lg:w-[1000px] pt-[80px] lg:pt-[110px] md:pb-[60px] text-center">

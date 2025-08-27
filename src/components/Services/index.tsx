@@ -1,7 +1,7 @@
-import React from "react"
 import ContentSection from "helpers/ContentSection"
+import React from "react"
 
-const Services = (): JSX.Element => {
+const Services = () => {
   const servicesData = [
     {
       title: "Meta Ads",

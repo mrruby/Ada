@@ -1,7 +1,7 @@
-import React from "react"
 import { FeatureBox } from "helpers/FeatureBox"
+import React from "react"
 
-const FeaturesAda = (): JSX.Element => {
+const FeaturesAda = () => {
   const featuresData = [
     {
       text: "ODKRYWCZOŚĆ",

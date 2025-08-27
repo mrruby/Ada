@@ -5,7 +5,7 @@ type Props = {
   setOpen: (_: boolean) => void
 }
 
-const Burger = ({ open, setOpen }: Props): JSX.Element => {
+const Burger = ({ open, setOpen }: Props) => {
   const burgerClass =
     "flex flex-col justify-between md:hidden fixed top-8 right-8 md:relative md:flex md:flex-col md:justify-around w-[32px] h-[32px] bg-transparent border-none cursor-pointer p-0 z-10"
 

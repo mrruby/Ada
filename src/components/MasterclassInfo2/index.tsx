@@ -1,6 +1,6 @@
-import React from "react"
-import { MasterclassInfoSection } from "helpers/MasterclassInfoSection"
 import { Button } from "helpers/Button"
+import { MasterclassInfoSection } from "helpers/MasterclassInfoSection"
+import React from "react"
 
 const listItems = [
   "Słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
@@ -9,7 +9,7 @@ const listItems = [
   "Chciałabyś oferować swoim klientom szerszy zakres usług, aby móc podnosić stawki i dyktować warunki?",
 ]
 
-const MasterclassInfo2 = (): JSX.Element => {
+const MasterclassInfo2 = () => {
   return (
     <div
       className="w-full flex flex-col px-3 py-4 md:pt-[60px] items-center mb-[85px]"

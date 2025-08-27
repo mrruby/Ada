@@ -1,9 +1,9 @@
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import NavLink from "../../../../src/helpers/NavLink"
-import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
 
-const MenuDesktop = (): JSX.Element => {
+const MenuDesktop = () => {
   const linkClass =
     "text-ada-blue text-adaBase md:text-adaNav font-bold  uppercase transition-colors duration-300 hover:text-ada-white hover:border-b-4 hover:border-ada-blue "
 

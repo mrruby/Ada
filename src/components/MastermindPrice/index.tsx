@@ -1,8 +1,8 @@
-import React from "react"
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
+import React from "react"
 
-const MastermindPrice = ({ version }: { version: number }): JSX.Element => {
+const MastermindPrice = ({ version }: { version: number }) => {
   return (
     <div className="w-full flex flex-col px-3 items-center text-center pb-8">
       {version === 1 && (

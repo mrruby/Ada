@@ -3,7 +3,7 @@ import magicListaForm from "../../values/forms/form-magic-zainteresowanych.html"
 import magicWebinarForm22 from "../../values/forms/magic-form-jesien.html"
 import magicWebinarForm from "../../values/forms/magic-webinar.html"
 
-const MagicWebinar12 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar12 = ({ version = 1 }: { version?: number }) => {
   useEffect(() => {
     const form = document.querySelector(".ml-block-form") as HTMLFormElement
     if (form) {

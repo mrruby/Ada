@@ -1,7 +1,7 @@
-import React from "react"
 import { Button } from "helpers/Button"
+import React from "react"
 
-const KnowledgeBanner = (): JSX.Element => {
+const KnowledgeBanner = () => {
   return (
     <div className="flex px-2 flex-col items-center text-center text-ada-blue md:pb-[150px]">
       <div className="pt-[60px] lg:pt-[160px] z-0 pb-[30px]">

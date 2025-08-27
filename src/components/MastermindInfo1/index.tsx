@@ -1,6 +1,6 @@
 import React from "react"
 
-const MastermindInfo1 = (): JSX.Element => {
+const MastermindInfo1 = () => {
   const listItemClass =
     "text-[15px] lg:text-adaDesc leading-tight font-medium py-2 leading-tight"
 

@@ -1,7 +1,7 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const MasterclassAbout = (): JSX.Element => {
+const MasterclassAbout = () => {
   return (
     <div className="flex flex-col text-ada-blue items-center px-3 pb-16">
       <div className="flex flex-col items-center max-w-[806px] md:pb-[40px] gap-4">

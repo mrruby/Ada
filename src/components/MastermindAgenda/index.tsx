@@ -1,8 +1,8 @@
+import React from "react"
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
-import React from "react"
 
 const scrollToSection = (section: Element | null): void => {
   if (section) {
@@ -18,7 +18,7 @@ const listItemTitleClass2 =
 const listItemTitleClass3 =
   "text-[15px] lg:text-adaSubtitle uppercase text-ada-purple font-bold"
 
-const MastermindAgenda = ({ version }: { version: number }): JSX.Element => {
+const MastermindAgenda = ({ version }: { version: number }) => {
   return (
     <>
       {version === 1 && (

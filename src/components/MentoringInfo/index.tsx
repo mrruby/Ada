@@ -1,11 +1,10 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 
-const MentoringInfo = (): JSX.Element => {
+const MentoringInfo = () => {
   const listItemClass =
     "text-[15px] lg:text-adaDesc leading-tight font-medium py-2 leading-tight"
 
-  const leftYesList: JSX.Element[] = [
+  const leftYesList = [
     <span key={0}>
       pracujesz w marketingu lub jesteś Wirtualną Asystentką i chcesz poszerzyć
       wachlarz swoich usług o kampanie reklamowe z celami:
@@ -35,7 +34,7 @@ const MentoringInfo = (): JSX.Element => {
     </span>,
   ]
 
-  const rightYesList: JSX.Element[] = [
+  const rightYesList = [
     <span key={0}>
       możesz
       <span className="font-bold">
@@ -59,7 +58,7 @@ const MentoringInfo = (): JSX.Element => {
     </span>,
   ]
 
-  const leftNoList: JSX.Element[] = [
+  const leftNoList = [
     <span key={0}>
       masz nadzieję, że
       <span className="font-bold"> wyniki zrobią się „same” </span>w menadżerze
@@ -75,7 +74,7 @@ const MentoringInfo = (): JSX.Element => {
       <span className="font-bold"> i nie interesują Cię inne perspektywy</span>
     </span>,
   ]
-  const rightNoList: JSX.Element[] = [
+  const rightNoList = [
     <span key={0}>
       nigdy nie widziałaś na oczy menadżerze reklam, albo słyszysz o nim
       pierwszy raz. W takim wypadku proponuję, abyś najbliższe miesiące spędziła

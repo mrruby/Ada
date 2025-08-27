@@ -66,7 +66,7 @@ const magicTilesContent2 = [
   },
 ]
 
-const MagicDateBanner = ({ version }: { version: number }): JSX.Element => {
+const MagicDateBanner = ({ version }: { version: number }) => {
   const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleMouseEnter = () => {

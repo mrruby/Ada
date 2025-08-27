@@ -11,11 +11,7 @@ declare global {
   }
 }
 
-const MagicCollectiveBanner = ({
-  version,
-}: {
-  version: number
-}): JSX.Element => {
+const MagicCollectiveBanner = ({ version }: { version: number }) => {
   // Load Koalendar script for version 5
   useEffect(() => {
     if (version === 5) {

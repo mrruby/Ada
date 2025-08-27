@@ -17,7 +17,7 @@ type Podcast = {
   }
 }
 
-const Podcasts = ({ postsData }: { postsData: Podcast[] }): JSX.Element => {
+const Podcasts = ({ postsData }: { postsData: Podcast[] }) => {
   const formattedPostsData = postsData?.map((edge, index) => ({
     title: edge.node.frontmatter.title,
     description: edge.node.frontmatter.description,

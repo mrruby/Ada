@@ -2,7 +2,7 @@ import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
-const MagicWebinar7 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar7 = ({ version = 1 }: { version?: number }) => {
   const primaryColor =
     version === 2 ? "text-ada-newPurple" : "text-ada-magicPurple"
   const accentColor = version === 2 ? "text-ada-pink7" : "text-ada-magicOrange"

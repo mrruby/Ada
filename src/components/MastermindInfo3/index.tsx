@@ -1,39 +1,10 @@
 import React from "react"
 
-const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
+const MastermindInfo3 = ({ version }: { version: number }) => {
   const listItemClass =
     "text-[15px] lg:text-adaDesc leading-tight font-medium py-2 leading-tight"
 
-  const whatYouGetList: JSX.Element[] = [
-    <span key={0}>
-      Zdobędziesz wiedzę i umiejętności, które{" "}
-      <span className="font-bold">
-        zwrócą Ci się wielokrotnie w Twoim biznesie.
-      </span>
-    </span>,
-    <span key={1}>
-      Nauczysz się
-      <span className="font-bold"> przyciągać klientów</span> na Twoje social
-      media, webinary i listy e-mail na zawołanie.
-    </span>,
-    <span key={2}>
-      Wreszcie napełnisz swoje lejki marketingowe odpowiednimi klientami.
-    </span>,
-    <span key={3}>
-      Przestaniesz mówić wciąż do{" "}
-      <span className="font-bold">tych samych osób</span>, Twoje świetnie
-      ustawione reklamy będą docierać do nowych potencjalnych klientów.
-    </span>,
-    <span key={4}>
-      Będziesz spokojna, że Twoje pieniądze zainwestowane w reklamę pracują na
-      siebie, nawet gdy śpisz.
-    </span>,
-    <span key={5} className="font-bold">
-      Przestaniesz się frustrować przepalonym budżetem.
-    </span>,
-  ]
-
-  const programDetailsList: JSX.Element[] = [
+  const programDetailsList = [
     <span key={0}>
       6 spotkań w czasie rzeczywistym po{" "}
       <span className="font-bold">2,5 godziny,</span>
@@ -63,7 +34,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     </span>,
   ]
 
-  const leftWhatYouGetList2: JSX.Element[] = [
+  const leftWhatYouGetList2 = [
     <span key={0}>
       <span className="font-bold">Zdobędziesz wiedzę i umiejętności,</span>{" "}
       które zwrócą Ci się wielokrotnie, gdy weźmiesz pod swoje skrzydła nowych,
@@ -85,7 +56,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     </span>,
   ]
 
-  const rightWhatYouGetList2: JSX.Element[] = [
+  const rightWhatYouGetList2 = [
     <span key={0}>
       <span className="font-bold">Dodatkowo: </span>
       nauczysz się jak prowadzić działania reklamowe dla własnej marki osobistej
@@ -108,7 +79,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     </span>,
   ]
 
-  const leftProgramDetailsList2: JSX.Element[] = [
+  const leftProgramDetailsList2 = [
     <span key={0}>
       <span className="font-bold">12 praktycznych spotkań grupowych</span> z
       ustawiania kampanii na żywo
@@ -126,7 +97,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
       </span>
     </span>,
   ]
-  const rightProgramDetailsList2: JSX.Element[] = [
+  const rightProgramDetailsList2 = [
     <span key={0}>
       <span>
         21 godzin office hour, czyli grupowych konsultacji reklamowych
@@ -147,7 +118,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
   const listItemClass2 =
     "text-[15px] lg:text-[1.75rem] font-bold bg-ada-pink3 inline-block px-2 py-1"
 
-  const leftProgramDetailsList3: JSX.Element[] = [
+  const leftProgramDetailsList3 = [
     <div key={0}>
       <p className={listItemClass2}>🎥 6 szkoleń:</p>
       <p className="mt-2">
@@ -168,7 +139,7 @@ const MastermindInfo3 = ({ version }: { version: number }): JSX.Element => {
     </div>,
   ]
 
-  const rightProgramDetailsList3: JSX.Element[] = [
+  const rightProgramDetailsList3 = [
     <div key={0}>
       <p className={listItemClass2}>💪 bieżący kontakt</p>
       <p className="mt-2">i wsparcie na grupie na Facebooku</p>

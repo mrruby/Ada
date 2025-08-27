@@ -1,5 +1,5 @@
-import React from "react"
 import { BlogPost } from "helpers/BlogPost"
+import React from "react"
 import Carousel from "react-multi-carousel"
 
 type Blog = {
@@ -18,7 +18,7 @@ type Blog = {
   }
 }
 
-const BlogPosts = ({ postsData }: { postsData: Blog[] }): JSX.Element => {
+const BlogPosts = ({ postsData }: { postsData: Blog[] }) => {
   const formattedPostsData = postsData?.map((edge) => ({
     title: edge.node.frontmatter.title,
     tags: edge.node.frontmatter.tags,

@@ -1,5 +1,5 @@
-import React from "react"
 import Markdown from "markdown-to-jsx"
+import React from "react"
 
 type Props = {
   title: string
@@ -7,11 +7,7 @@ type Props = {
   markdown: string
 }
 
-const PodcastPostLayout = ({
-  title,
-  description,
-  markdown,
-}: Props): JSX.Element => {
+const PodcastPostLayout = ({ title, description, markdown }: Props) => {
   const overrides = {
     h2: {
       props: {

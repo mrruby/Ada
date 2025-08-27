@@ -278,7 +278,7 @@ const MasterclassAgenda = ({
 }: {
   version: number
   endsAt?: string | null
-}): JSX.Element => {
+}) => {
   return (
     <>
       {version === 1 && (

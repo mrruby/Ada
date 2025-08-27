@@ -7,7 +7,7 @@ import { responsive } from "values/const"
 import Reference from "../../helpers/Reference"
 
 type IReferencesList = {
-  image: JSX.Element
+  image: React.JSX.Element
 }
 
 type IReferences = {
@@ -530,7 +530,7 @@ const ReferencesMentoring = ({
   title4,
   title5,
   title6,
-}: IReferences): JSX.Element => {
+}: IReferences) => {
   return (
     <div className="pt-[40px]">
       {title1 && (

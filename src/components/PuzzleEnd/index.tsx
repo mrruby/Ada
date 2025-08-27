@@ -2,7 +2,7 @@ import PuzzleForm from "components/PuzzleForm"
 import PuzzleOpinions from "components/PuzzleOpinions"
 import React from "react"
 
-const PuzzleEnd = (): JSX.Element => {
+const PuzzleEnd = () => {
   return (
     <div
       id="puzzle-end"

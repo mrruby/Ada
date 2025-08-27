@@ -21,7 +21,7 @@ const efects3 = [
   "Zarabiasz na kampaniach reklamowych.",
 ]
 
-const MasterclassesInfo = ({ version }: { version: number }): JSX.Element => {
+const MasterclassesInfo = ({ version }: { version: number }) => {
   return (
     <>
       {version === 1 && (

@@ -1,8 +1,8 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import React from "react"
 
-const MastermindWhy1 = (): JSX.Element => {
+const MastermindWhy1 = () => {
   const listItemClass = "lg:text-adaBase leading-tight py-2 leading-tight"
 
   return (

@@ -1,15 +1,15 @@
-import React from "react"
-import Burger from "./Burger"
-import NavLink from "../../../../src/helpers/NavLink"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
+import NavLink from "../../../../src/helpers/NavLink"
+import Burger from "./Burger"
 
 type Props = {
   open: boolean
   setOpen: (_: boolean) => void
 }
 
-const Menu = ({ open, setOpen }: Props): JSX.Element => {
+const Menu = ({ open, setOpen }: Props) => {
   const linkClass =
     "text-ada-blue text-adaSubtitle md:text-adaNav font-bold uppercase py-3 transition-colors duration-300 hover:text-ada-white hover:border-b-4 hover:border-ada-blue"
 

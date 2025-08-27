@@ -8,6 +8,7 @@ interface Answer {
 interface QuizQuestionProps {
   question: string
   answers: Answer[]
+  questionNumber: number
   onAnswer: (points: number) => void
 }
 

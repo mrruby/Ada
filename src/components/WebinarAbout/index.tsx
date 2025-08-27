@@ -2,7 +2,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import TypingAnimation from "helpers/TypingAnimation"
 import React from "react"
 
-const WebinarAbout = ({ version }: { version: number }): JSX.Element => {
+const WebinarAbout = ({ version }: { version: number }) => {
   return (
     <div className="flex flex-col text-ada-blue items-center px-3 pb-16 text-center">
       {version === 1 && (

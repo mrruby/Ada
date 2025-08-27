@@ -1,6 +1,6 @@
 import React from "react"
 
-const ThankBanner = (): JSX.Element => {
+const ThankBanner = () => {
   return (
     <div className="flex px-2 flex-col items-start text-ada-blue relative md:min-h-[85vh] ">
       <div className="lg:w-[1000px] pt-[60px] md:pb-[40px] text-left mx-auto max-w-2xl">

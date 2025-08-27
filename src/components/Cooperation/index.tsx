@@ -1,8 +1,8 @@
-import React from "react"
 import ContentSection from "helpers/ContentSection"
 import CooperationSection from "helpers/CooperationSection"
+import React from "react"
 
-const Cooperation = (): JSX.Element => {
+const Cooperation = () => {
   const servicesData = [
     {
       title: "Produkty",

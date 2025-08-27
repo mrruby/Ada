@@ -1,8 +1,8 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import React from "react"
 
-const MasterclassInfo3 = (): JSX.Element => {
+const MasterclassInfo3 = () => {
   return (
     <div className="w-full px-3 py-2 flex flex-col pb-[80px]">
       <div className="flex flex-col md:flex-row items-center">

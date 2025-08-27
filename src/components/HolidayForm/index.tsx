@@ -1,8 +1,8 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import WakacjeForm from "components/WakacjeForm"
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const HolidayForm = (): JSX.Element => {
+const HolidayForm = () => {
   return (
     <section
       className="w-full flex flex-col items-center text-center py-20"
@@ -13,7 +13,9 @@ const HolidayForm = (): JSX.Element => {
           Chcesz zaprojektować takie przemyślane & skuteczne kampanie reklamowe
           pod moim okiem?
         </p>
-        <p className="pt-4">Odbierz natychmiastowy dostęp do szkolenia za 0 zł</p>
+        <p className="pt-4">
+          Odbierz natychmiastowy dostęp do szkolenia za 0 zł
+        </p>
       </div>
       <div className="flex flex-col md:flex-row py-6">
         <div className="md:min-w-[560px]">

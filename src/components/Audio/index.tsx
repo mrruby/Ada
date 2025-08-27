@@ -4,7 +4,7 @@ type Props = {
   url: string
 }
 
-const Audio = ({ url }: Props): JSX.Element => {
+const Audio = ({ url }: Props) => {
   return (
     <audio className="focus:outline-none" controls>
       <source src={url} type="audio/mpeg" />

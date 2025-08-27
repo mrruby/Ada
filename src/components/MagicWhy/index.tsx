@@ -3,7 +3,7 @@ import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-const MagicWhy = ({ part }: { part: number }): JSX.Element => {
+const MagicWhy = ({ part }: { part: number }) => {
   return (
     <Section bgColor="bg-transparent">
       {part == 1 && (

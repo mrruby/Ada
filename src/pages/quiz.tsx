@@ -10,7 +10,10 @@ const quizData = [
   {
     question: "⏰ Jak długo prowadzisz swoją markę lub działasz w marketingu?",
     answers: [
-      { text: "🌱 Jeszcze nie zaczęłam, jestem na etapie planowania", points: 0 },
+      {
+        text: "🌱 Jeszcze nie zaczęłam, jestem na etapie planowania",
+        points: 0,
+      },
       { text: "🚀 Od kilku miesięcy", points: 1 },
       { text: "💪 Od ponad roku", points: 2 },
       { text: "👑 Kilka lat, to moja codzienność", points: 3 },
@@ -154,7 +157,7 @@ const quizData = [
   },
 ]
 
-const QuizPage = (): JSX.Element => {
+const QuizPage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [totalPoints, setTotalPoints] = useState(0)
   const [showResult, setShowResult] = useState(false)

@@ -2,7 +2,7 @@ import { Button } from "helpers/Button"
 import { MagicSunPink, MagicSunPinkNew } from "helpers/LayoutElements"
 import React from "react"
 
-const MagicWebinar4 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar4 = ({ version = 1 }: { version?: number }) => {
   const isVersion2 = version === 2
   const bgColor = isVersion2 ? "bg-ada-newPurple" : "bg-ada-magicOrange"
   const accentColor = isVersion2 ? "bg-ada-newPurple2" : "bg-ada-magicPurple"

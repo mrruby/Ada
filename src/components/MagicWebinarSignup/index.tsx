@@ -3,7 +3,7 @@ import { MagicSunYellow } from "helpers/LayoutElements"
 import React from "react"
 import Typography from "../shared/Typography"
 
-const MagicWebinarSignup = (): JSX.Element => {
+const MagicWebinarSignup = () => {
   return (
     <div className="bg-ada-newPurple py-16 px-4">
       <div className="max-w-3xl mx-auto">

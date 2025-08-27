@@ -1,12 +1,12 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
 type IOpinions = {
   title1?: boolean
   title2?: boolean
 }
 
-const Opinions = ({ title1, title2 }: IOpinions): JSX.Element => {
+const Opinions = ({ title1, title2 }: IOpinions) => {
   const commonClassNames = "min-h-fit min-w-[431px] mx-4"
 
   return (

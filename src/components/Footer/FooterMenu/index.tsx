@@ -1,7 +1,7 @@
 import React from "react"
 import NavLink from "../../../../src/helpers/NavLink"
 
-const FooterMenu = (): JSX.Element => {
+const FooterMenu = () => {
   const linkClass =
     "text-ada-blue text-adaNav font-bold uppercase hover:text-ada-white"
 

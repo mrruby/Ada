@@ -1,17 +1,17 @@
-import React from "react"
 import { Button } from "helpers/Button"
+import React from "react"
 
 type Props = {
   title: string
   reverse?: boolean
-  paragraph1: JSX.Element
-  paragraph2?: JSX.Element
+  paragraph1: React.JSX.Element
+  paragraph2?: React.JSX.Element
   paragraph3?: string
   paragraphStyle?: string
   paragraphTextStyle?: string
   actionButton?: boolean
   btnText: string
-  image: JSX.Element
+  image: React.JSX.Element
   imgStyle?: string
   btnUrl: string
 }
@@ -28,7 +28,7 @@ const CustomBanner = ({
   image,
   imgStyle = "lg:absolute bottom-0 right-[-50px]",
   btnUrl,
-}: Props): JSX.Element => {
+}: Props) => {
   const subtitleClass = `${paragraphTextStyle} font-medium leading-tight py-2`
 
   return (

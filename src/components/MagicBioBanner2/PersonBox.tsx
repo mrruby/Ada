@@ -6,7 +6,7 @@ type PersonBoxProps = {
   img: string
   name: string
   title: string
-  description: JSX.Element
+  description: React.JSX.Element
 }
 
 const PersonBox = ({ img, name, title, description }: PersonBoxProps) => {

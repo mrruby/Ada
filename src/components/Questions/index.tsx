@@ -33,7 +33,7 @@ const questionsList: IQuestionsList[] = [
   },
 ]
 
-const Questions = (): JSX.Element => {
+const Questions = () => {
   return (
     <div className="pt-[120px] text-center pb-10 px-4">
       <h2 className="font-bold lg:h-[58px] text-adaSubtitle lg:text-adaTitle2 text-ada-grey -mb-4">

@@ -1,11 +1,11 @@
-import React from "react"
 import { Button } from "helpers/Button"
+import React from "react"
 
-const HolidayInfo = ({ version }: { version: number }): JSX.Element => {
+const HolidayInfo = ({ version }: { version: number }) => {
   const listItemClass =
     "text-[15px] lg:text-adaDesc leading-tight font-medium py-2 leading-tight flex gap-4"
 
-  const whatYouGetList: JSX.Element[] = [
+  const whatYouGetList = [
     <span key={0}>
       <span className="font-bold">Dla przedsiębiorczyń,</span> które chcą
       wykorzystać okres wakacyjny do zwiększenia sprzedaży w swoim biznesie bez
@@ -39,7 +39,7 @@ const HolidayInfo = ({ version }: { version: number }): JSX.Element => {
     </span>,
   ]
 
-  const programDetailsList: JSX.Element[] = [
+  const programDetailsList = [
     <span key={0}>
       <span className="font-bold md:text-adaSubtitle">
         Poznasz koncepcję lejka reklamowego, <br />

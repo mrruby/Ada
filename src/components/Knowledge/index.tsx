@@ -1,15 +1,15 @@
-import React from "react"
-import { KnowledgeBox } from "helpers/KnowledgeBox"
 import { Link } from "gatsby"
+import { KnowledgeBox } from "helpers/KnowledgeBox"
+import React from "react"
 
 interface KnowledgeData {
-  text: JSX.Element
-  btnText: string | JSX.Element
+  text: React.JSX.Element
+  btnText: string | React.JSX.Element
   url: string
   type: "variant1" | "variant2"
 }
 
-const Knowledge = (): JSX.Element => {
+const Knowledge = () => {
   const knowledgeData: KnowledgeData[] = [
     {
       text: (

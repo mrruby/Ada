@@ -1,5 +1,5 @@
-import React from "react"
 import Markdown from "markdown-to-jsx"
+import React from "react"
 
 type Props = {
   title: string
@@ -8,12 +8,7 @@ type Props = {
   tags: string[]
 }
 
-const BlogPostLayout = ({
-  title,
-  markdown,
-  date,
-  tags,
-}: Props): JSX.Element => {
+const BlogPostLayout = ({ title, markdown, date, tags }: Props) => {
   const formattedDate = new Date(date)
     .toLocaleDateString("en-UK", {
       day: "2-digit",

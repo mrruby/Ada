@@ -1,6 +1,6 @@
 import React from "react"
 
-const BuyChillButton = (): JSX.Element => {
+const BuyChillButton = () => {
   const handleClick = () => {
     window.location.href =
       "https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ"

@@ -1,7 +1,7 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const HelloBanner = (): JSX.Element => {
+const HelloBanner = () => {
   return (
     <div className="grid h-[500px] md:h-[690px] xl:h-[850px]">
       <StaticImage

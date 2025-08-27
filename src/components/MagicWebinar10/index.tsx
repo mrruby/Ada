@@ -1,9 +1,8 @@
 import { Button } from "helpers/Button"
 import { MagicSunPink, MagicSunYellow } from "helpers/LayoutElements"
 import React from "react"
-import Typography from "../shared/Typography"
 
-const MagicWebinar10 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar10 = ({ version = 1 }: { version?: number }) => {
   const isVersion2 = version === 2
   const colors = {
     background: isVersion2 ? "bg-ada-newPurple" : "bg-ada-magicPurple",

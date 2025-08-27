@@ -6,7 +6,7 @@ type ContactFormProps = {
   source?: string
 }
 
-const ContactForm = ({ source = "default" }: ContactFormProps): JSX.Element => {
+const ContactForm = ({ source = "default" }: ContactFormProps) => {
   const inputStyles =
     "border-1 border-ada-blue mb-4 p-4 text-ada-blue w-full text-center hover:shadow-xl"
 

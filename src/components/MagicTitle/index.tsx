@@ -6,7 +6,7 @@ import magicFormWide from "../../values/forms/magic-form-wide.html"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-const MagicTitle = ({ version }: { version: number }): JSX.Element => {
+const MagicTitle = ({ version }: { version: number }) => {
   const scrollToWebinarForm = () => {
     const element = document.getElementById("webinar-form")
     if (element) {

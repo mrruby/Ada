@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 type AccordionProps = {
   question: string
-  answer: string | JSX.Element
+  answer: string | React.JSX.Element
 }
 
 export const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {

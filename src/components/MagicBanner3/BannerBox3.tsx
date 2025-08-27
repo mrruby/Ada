@@ -6,7 +6,7 @@ type BannerBox2Props = {
   bgColor: string
   title: string
   subtitle?: string
-  description: string | JSX.Element
+  description: string | React.JSX.Element
   styles?: string
   url?: string
 }

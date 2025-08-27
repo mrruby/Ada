@@ -1,8 +1,8 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const AboutBanner = (): JSX.Element => {
+const AboutBanner = () => {
   const listItemClass = "text-[15px] lg:text-adaDesc leading-tight"
 
   return (

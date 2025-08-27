@@ -1,14 +1,13 @@
 import { Accordion } from "helpers/Accordion"
 import { Button } from "helpers/Button"
 import React from "react"
-import Typography from "../shared/Typography"
 
 type ListItem = {
   question: string
-  answer: string | JSX.Element
+  answer: string | React.JSX.Element
 }
 
-const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar11 = ({ version = 1 }: { version?: number }) => {
   const faqList: ListItem[] = [
     {
       question: "Do kiedy dostępne jest nagranie?",
@@ -52,7 +51,7 @@ const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
           </ul>
         </div>
       </div>
-      
+
       {/* Button and text section */}
       <div className="mt-16 flex flex-col items-center">
         <Button
@@ -66,7 +65,7 @@ const MagicWebinar11 = ({ version = 1 }: { version?: number }): JSX.Element => {
           textSize="text-lg md:text-xl"
           btnStyle="bg-ada-pink7 hover:bg-ada-pink7/90 px-8 py-4 rounded-full uppercase font-bold shadow-lg"
         />
-        
+
         <div className="mt-6 text-center">
           <span className="bg-ada-newPurple text-white px-2 py-1 rounded font-bold">
             Uwaga:

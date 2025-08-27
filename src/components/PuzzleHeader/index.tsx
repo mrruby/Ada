@@ -1,10 +1,8 @@
 import PuzzleForm from "components/PuzzleForm"
-import { StaticImage } from "gatsby-plugin-image"
-import { Button } from "helpers/Button"
 import { PuzzleBlue, PuzzlePink } from "helpers/LayoutElements"
 import React from "react"
 
-const PuzzleBanner = (): JSX.Element => {
+const PuzzleBanner = () => {
   return (
     <div className="relative">
       <div className="mt-20 mb-10 flex flex-col items-center md:items-start max-w-3xl text-center mx-auto relative">

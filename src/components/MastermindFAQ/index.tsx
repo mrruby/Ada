@@ -1,12 +1,12 @@
-import React from "react"
 import { Button } from "helpers/Button"
+import React from "react"
 
 interface ListItem {
   question: string
-  answer?: string | JSX.Element
+  answer?: string | React.JSX.Element
 }
 
-const MastermindFAQ = (): JSX.Element => {
+const MastermindFAQ = () => {
   const listItemClass = "lg:w-[550px]"
   const listItemQuestionClass = "lg:text-adaDesc font-bold pt-5 pb-2"
   const listItemAnswerClass = "lg:text-adaDesc"

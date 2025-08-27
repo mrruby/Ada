@@ -1,10 +1,10 @@
-import React from "react"
-import CountdownTimer from "helpers/CountdownTimer"
-import { Button } from "helpers/Button"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
+import CountdownTimer from "helpers/CountdownTimer"
+import React from "react"
 
-const MasterclassTime1 = (): JSX.Element => {
+const MasterclassTime1 = () => {
   return (
     <div className="flex flex-col pt-5 pb-5 gap-10 px-2 justify-center items-center bg-ada-light-pink">
       <div className="flex flex-col lg:flex-row gap-10 items-center">

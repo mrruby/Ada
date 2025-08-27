@@ -1,8 +1,8 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import Team from "components/Team"
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const AboutBanner2 = (): JSX.Element => {
+const AboutBanner2 = () => {
   return (
     <div>
       <div className="flex flex-col lg:flex-row relative w-full justify-end min-h-[610px]">

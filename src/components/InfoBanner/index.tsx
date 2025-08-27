@@ -1,8 +1,8 @@
-import React from "react"
-import { InfoBox } from "helpers/InfoBox"
 import { StaticImage } from "gatsby-plugin-image"
+import { InfoBox } from "helpers/InfoBox"
+import React from "react"
 
-const InfoBanner = (): JSX.Element => {
+const InfoBanner = () => {
   const infoData = [
     {
       btnText: "Darmowe materiały",

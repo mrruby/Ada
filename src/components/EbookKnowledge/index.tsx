@@ -1,7 +1,7 @@
-import React from "react"
 import ContentSection from "helpers/ContentSection"
+import React from "react"
 
-const EbookKnowledge = (): JSX.Element => {
+const EbookKnowledge = () => {
   const ebookKnowledgeData = [
     {
       title: "Slow marketing",

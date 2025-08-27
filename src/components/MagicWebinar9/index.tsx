@@ -2,7 +2,7 @@ import { MagicSun, MagicSunPinkNew } from "helpers/LayoutElements"
 import React from "react"
 import Typography from "../shared/Typography"
 
-const MagicWebinar9 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar9 = ({ version = 1 }: { version?: number }) => {
   const isVersion2 = version === 2
   const accentColor = isVersion2 ? "text-ada-pink7" : "text-ada-magicOrange"
   const primaryColor = "text-ada-magicPurple"
@@ -42,10 +42,10 @@ const MagicWebinar9 = ({ version = 1 }: { version?: number }): JSX.Element => {
             {renderTypography(
               <>
                 To 90-minutowe spotkanie warsztatowe. W czasie spotkania
-                wypełnisz karty pracy, więc przygotujesz konkretny plan działania
-                na najbardziej intensywny sezon reklamowy w roku. Skupiamy się
-                wyłącznie na sprawdzonych krokach, inspiracjach, konkretnej
-                wiedzy.
+                wypełnisz karty pracy, więc przygotujesz konkretny plan
+                działania na najbardziej intensywny sezon reklamowy w roku.
+                Skupiamy się wyłącznie na sprawdzonych krokach, inspiracjach,
+                konkretnej wiedzy.
               </>,
               "text-lg"
             )}

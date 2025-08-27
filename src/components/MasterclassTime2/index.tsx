@@ -1,7 +1,7 @@
-import React from "react"
 import CountdownTimer from "helpers/CountdownTimer"
+import React from "react"
 
-const MasterclassTime2 = (): JSX.Element => {
+const MasterclassTime2 = () => {
   return (
     <div className="flex flex-col py-20 md:pt-14 gap-10 px-2 items-center bg-ada-light-pink animate-fadeIn">
       <h2 className="text-adaBase lg:text-[36px] font-bold text-center leading-tight animate-bounce pt-5">

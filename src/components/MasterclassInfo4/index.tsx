@@ -1,6 +1,6 @@
 import React from "react"
 
-const MasterclassInfo4 = (): JSX.Element => {
+const MasterclassInfo4 = () => {
   return (
     <div className="max-w-[826px] mx-auto px-3 py-10 flex flex-col">
       <h3 className="md:text-adaSubtitle text-center">

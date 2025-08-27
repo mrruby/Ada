@@ -3,7 +3,7 @@ import { Button } from "helpers/Button"
 import React from "react"
 import Typography from "../shared/Typography"
 
-const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar3 = ({ version = 1 }: { version?: number }) => {
   const isPinkVersion = version === 2
   const primaryColor = isPinkVersion
     ? "text-ada-magicPurple"
@@ -70,7 +70,9 @@ const MagicWebinar3 = ({ version = 1 }: { version?: number }): JSX.Element => {
                   variant="h1"
                   className="text-4xl md:text-5xl font-bold"
                 >
-                  <span className="text-ada-newPurple">Ten masterclass jest </span>
+                  <span className="text-ada-newPurple">
+                    Ten masterclass jest{" "}
+                  </span>
                   <span className="text-ada-pink7">dla Ciebie</span>
                   <span className="text-ada-newPurple">, jeśli…</span>
                 </Typography>

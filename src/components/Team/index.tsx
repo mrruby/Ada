@@ -1,7 +1,7 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const Team = ({ version }: { version: number }): JSX.Element => {
+const Team = ({ version }: { version: number }) => {
   return (
     <>
       {version === 1 && (

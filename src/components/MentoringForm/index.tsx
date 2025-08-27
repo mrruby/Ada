@@ -2,7 +2,7 @@ import React from "react"
 import formMetaAdsMasters from "../../values/forms/form-meta-ads-masters.html"
 import formOgarnijSwojeAdsy from "../../values/forms/form-ogarnij-swoje-adsy.html"
 
-const MentoringForm = ({ version }: { version: number }): JSX.Element => {
+const MentoringForm = ({ version }: { version: number }) => {
   return (
     <>
       {version === 1 && (

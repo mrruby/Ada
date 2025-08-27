@@ -2,7 +2,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import React from "react"
 
-const IconText = ({ version }: { version: number }): JSX.Element => {
+const IconText = ({ version }: { version: number }) => {
   const leftList = [
     {
       icon: "🔥",

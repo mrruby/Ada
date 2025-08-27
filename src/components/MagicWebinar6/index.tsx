@@ -6,7 +6,7 @@ import React from "react"
 import Carousel from "react-multi-carousel"
 import { responsive } from "values/const"
 
-const MagicWebinar6 = ({ version = 1 }: { version?: number }): JSX.Element => {
+const MagicWebinar6 = ({ version = 1 }: { version?: number }) => {
   const isVersion2 = version === 2
 
   // StaticImage requires literal src values, not variables

@@ -1,6 +1,6 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import React from "react"
 
 const listItems = [
   <span>
@@ -23,7 +23,7 @@ const listItems = [
   </span>,
 ]
 
-const MasterclassDate1 = (): JSX.Element => {
+const MasterclassDate1 = () => {
   return (
     <div
       className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-[85px]"

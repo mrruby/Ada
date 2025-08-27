@@ -1,8 +1,7 @@
-import React from "react"
-import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const MentoringAbout = (): JSX.Element => {
+const MentoringAbout = () => {
   return (
     <section className="mb-20 px-3">
       <div className="mx-auto md:py-20">

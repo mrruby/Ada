@@ -1,8 +1,8 @@
-import React from "react"
-import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
+import React from "react"
 
-const MastermindBanner = ({ version }: { version: number }): JSX.Element => {
+const MastermindBanner = ({ version }: { version: number }) => {
   return (
     <>
       {version === 1 && (

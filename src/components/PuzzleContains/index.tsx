@@ -4,7 +4,7 @@ import React from "react"
 const PuzzleContainsItem: React.FC<{
   title: string
   description: string
-}> = ({ title, description }): JSX.Element => (
+}> = ({ title, description }) => (
   <div className="flex items-start">
     <img
       src="/assets/small-puzzle.svg"
@@ -20,7 +20,7 @@ const PuzzleContainsItem: React.FC<{
   </div>
 )
 
-const PuzzleContains = (): JSX.Element => {
+const PuzzleContains = () => {
   return (
     <div className="mt-20 mb-10 flex flex-col max-w-3xl items-center text-center mx-auto">
       <h2 className="text-adaSubtitleThird font-bold text-ada-blue mb-6">

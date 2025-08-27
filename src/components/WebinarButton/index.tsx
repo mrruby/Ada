@@ -1,11 +1,7 @@
-import React from "react"
 import { Button } from "helpers/Button"
+import React from "react"
 
-const WebinarButton = ({
-  variant,
-}: {
-  variant: "variant1" | "variant2"
-}): JSX.Element => {
+const WebinarButton = ({ variant }: { variant: "variant1" | "variant2" }) => {
   return (
     <div className="py-20">
       {variant === "variant1" && (

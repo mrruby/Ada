@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
-const PuzzleOpinions = (): JSX.Element => {
+const PuzzleOpinions = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center gap-4">
       <StaticImage

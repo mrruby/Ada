@@ -25,7 +25,7 @@ const customResponsive = {
 }
 
 type IReferencesList = {
-  image: JSX.Element
+  image: React.JSX.Element
 }
 
 const referencesList: IReferencesList[] = [
@@ -101,7 +101,7 @@ const referencesList: IReferencesList[] = [
   },
 ]
 
-const ReferencesSmall = (): JSX.Element => {
+const ReferencesSmall = () => {
   return (
     <div className="w-full max-w-lg mx-auto">
       <Carousel

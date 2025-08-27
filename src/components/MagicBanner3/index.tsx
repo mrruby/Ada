@@ -65,20 +65,25 @@ const bannerContent = [
   {
     bgColor: "bg-ada-purple3",
     title: "💎 GROWTH INTENSIVE",
-    subtitle: "Obsługa reklam Meta, TikTok, LinkedIn + konsultacje strategiczne 1:1 (premium)",
+    subtitle:
+      "Obsługa reklam Meta, TikTok, LinkedIn + konsultacje strategiczne 1:1 (premium)",
     description: (
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
         <ul className="space-y-2 mb-6">
           <li>👩‍💻 Prowadzenie kampanii reklamowych na wszystkich platformach</li>
-          <li>🤝 Regularne sesje konsultacyjne z ekspertkami (2x w miesiącu)</li>
+          <li>
+            🤝 Regularne sesje konsultacyjne z ekspertkami (2x w miesiącu)
+          </li>
           <li>🎯 Strategiczne planowanie działań marketingowych</li>
           <li>👉🏻 Rekomendacje dotyczące contentu i komunikacji</li>
         </ul>
         <p className="font-bold mb-4">Dla kogo:</p>
         <ul className="space-y-2">
           <li>🚀 Ambitne przedsiębiorczynie nastawione na znaczący wzrost</li>
-          <li>💰 Firmy gotowe na większe inwestycje w profesjonalny marketing</li>
+          <li>
+            💰 Firmy gotowe na większe inwestycje w profesjonalny marketing
+          </li>
           <li>📈 Biznesy gotowe na intensywne skalowanie</li>
         </ul>
       </div>
@@ -87,7 +92,8 @@ const bannerContent = [
   {
     bgColor: "bg-ada-magicPink2",
     title: "💌 NEWSLETTER MASTER",
-    subtitle: "Wdrożenie newslettera + obsługa reklam Meta, TikTok, LinkedIn + prowadzenie newslettera",
+    subtitle:
+      "Wdrożenie newslettera + obsługa reklam Meta, TikTok, LinkedIn + prowadzenie newslettera",
     description: (
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
@@ -101,14 +107,17 @@ const bannerContent = [
         <ul className="space-y-2">
           <li>💌 Firmy chcące zbudować silną bazę newsletterową</li>
           <li>🎯 Biznesy potrzebujące automatyzacji komunikacji</li>
-          <li>📈 Przedsiębiorczynie stawiające na długoterminowe relacje z klientami</li>
+          <li>
+            📈 Przedsiębiorczynie stawiające na długoterminowe relacje z
+            klientami
+          </li>
         </ul>
       </div>
     ),
   },
 ]
 
-const MagicBanner3 = (): JSX.Element => {
+const MagicBanner3 = () => {
   const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleMouseEnter = () => {
@@ -148,7 +157,10 @@ const MagicBanner3 = (): JSX.Element => {
         </div>
         <div className="w-full flex justify-center mt-12">
           <div className="flex flex-col items-center max-w-3xl mx-auto">
-            <div className="flex flex-col gap-16 md:gap-8" onMouseOver={handleMouseEnter}>
+            <div
+              className="flex flex-col gap-16 md:gap-8"
+              onMouseOver={handleMouseEnter}
+            >
               {bannerContent.map((item, i) => (
                 <div
                   key={i}

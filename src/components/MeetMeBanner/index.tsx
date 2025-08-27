@@ -1,7 +1,7 @@
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 
-const MeetMeBanner = (): JSX.Element => {
+const MeetMeBanner = () => {
   const listItemClass = "text-[15px] lg:text-adaBase py-[2px]"
 
   return (

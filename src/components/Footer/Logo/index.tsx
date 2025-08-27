@@ -1,6 +1,6 @@
 import React from "react"
 
-const Logo = (): JSX.Element => {
+const Logo = () => {
   return (
     <h2 className="text-ada-blue text-adaTitle font-bold lg:pr-7 lg:border-r lg:border-ada-blue">
       Ada Promis

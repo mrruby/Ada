@@ -1,5 +1,5 @@
 import Typography from "components/shared/Typography"
-import React, { JSX } from "react"
+import React from "react"
 import Section from "../shared/Section"
 import PersonBox from "./PersonBox"
 
@@ -67,7 +67,7 @@ const peopleContent = [
   },
 ]
 
-const MagicBioBanner2 = (): JSX.Element => {
+const MagicBioBanner2 = () => {
   return (
     <>
       <Section>

@@ -29,7 +29,7 @@ const tableData: TableRow[] = [
   },
 ]
 
-const MagicResultsTable = (): JSX.Element => {
+const MagicResultsTable = () => {
   return (
     <Section bgColor="bg-ada-magicGreen" padding="py-12">
       <div className="max-w-4xl mx-auto px-4">

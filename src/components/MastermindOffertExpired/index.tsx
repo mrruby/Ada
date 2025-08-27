@@ -1,7 +1,7 @@
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 
-const MastermindOffertExpired = (): JSX.Element => {
+const MastermindOffertExpired = () => {
   return (
     <section className="h-[86vh] py-16">
       <div className="h-full px-4 flex items-center">

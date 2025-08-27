@@ -1,6 +1,6 @@
 import React from "react"
 
-const ContactFormHeader = (): JSX.Element => {
+const ContactFormHeader = () => {
   return (
     <div className="flex flex-col items-center">
       <div className=" text-ada-blue flex flex-col md:items-center px-4 pt-[60px] lg:pt-[92px] lg:pb-[40px] md:text-center">

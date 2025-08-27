@@ -1,10 +1,10 @@
-import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
 interface Props {
   type: "button" | "submit" | "reset"
-  text: string | JSX.Element
+  text: string | React.JSX.Element
   url?: string
   textSize?: string
   sectionId?: string

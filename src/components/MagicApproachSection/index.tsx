@@ -1,13 +1,9 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-const MagicApproachSection = ({
-  version,
-}: {
-  version: number
-}): JSX.Element => {
+const MagicApproachSection = ({ version }: { version: number }) => {
   const columns = [
     "jak poznać remedium na spadające zasięgi, które przynosi realną sprzedaż i efekty",
     "jak skutecznie wykorzystywać menedżera reklam, aby osiągać lepsze wyniki",

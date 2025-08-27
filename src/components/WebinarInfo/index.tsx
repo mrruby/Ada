@@ -1,5 +1,5 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
 const listItems = [
   <span key={0}>
@@ -14,7 +14,7 @@ const listItems = [
   </span>,
 ]
 
-const WebinarInfo = (): JSX.Element => {
+const WebinarInfo = () => {
   return (
     <div className="px-2 xl:px-6 text-ada-blue mx-auto gap-8 bg-ada-light-pink flex flex-col md:flex-row justify-between tracking-wider pb-10 md:pb-0">
       <StaticImage

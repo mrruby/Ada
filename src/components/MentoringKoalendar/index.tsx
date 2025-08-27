@@ -1,6 +1,6 @@
 import React from "react"
 
-const MentoringKoalendar = (): JSX.Element => {
+const MentoringKoalendar = () => {
   return (
     <iframe
       src="https://koalendar.com/e/meta-ads-master?embed=true"

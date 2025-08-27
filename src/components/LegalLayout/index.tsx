@@ -1,11 +1,11 @@
-import React from "react"
 import Markdown from "markdown-to-jsx"
+import React from "react"
 
 type Props = {
   markdown: string
 }
 
-const LegalLayout = ({ markdown }: Props): JSX.Element => {
+const LegalLayout = ({ markdown }: Props) => {
   const overrides = {
     h2: {
       props: {

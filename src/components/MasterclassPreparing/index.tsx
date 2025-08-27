@@ -13,11 +13,7 @@ const listItems2 = [
   "Po miesiącu - masz gotowy, hulający lejek reklamowych. Psst! Im szybciej wdrożysz kampanie, tym szybciej zobaczysz wyniki 😉",
 ]
 
-const MasterclassPreparing = ({
-  version,
-}: {
-  version: number
-}): JSX.Element => {
+const MasterclassPreparing = ({ version }: { version: number }) => {
   return (
     <>
       {version === 1 && (

@@ -5,10 +5,10 @@ import React from "react"
 
 interface ListItem {
   question: string
-  answer: string | JSX.Element
+  answer: string | React.JSX.Element
 }
 
-const MasterclassFAQ = ({ version }: { version: number }): JSX.Element => {
+const MasterclassFAQ = ({ version }: { version: number }) => {
   const leftList: ListItem[] = [
     {
       question: "Czy te warsztaty są dla mnie?",

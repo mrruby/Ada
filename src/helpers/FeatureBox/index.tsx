@@ -1,9 +1,9 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
 interface Props {
-  text: string | JSX.Element
-  text2?: string | JSX.Element
+  text: string | React.JSX.Element
+  text2?: string | React.JSX.Element
   number?: string
   styleText?: string
   styleParagraph?: string

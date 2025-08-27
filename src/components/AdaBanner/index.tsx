@@ -1,7 +1,7 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const AdaBanner = (): JSX.Element => {
+const AdaBanner = () => {
   return (
     <div className="flex px-2 lg:pl-[120px] flex-col lg:flex-row text-ada-blue relative">
       <div className="lg:w-[736px] pt-[60px] lg:pt-[76px] z-0 pb-[60px]">

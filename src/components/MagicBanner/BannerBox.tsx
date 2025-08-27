@@ -7,9 +7,9 @@ type BannerBoxProps = {
   circleKey: string
   iconKey: string
   bgColor: string
-  title?: string | JSX.Element
-  price?: string | JSX.Element
-  description: string | JSX.Element
+  title?: string | React.JSX.Element
+  price?: string | React.JSX.Element
+  description: string | React.JSX.Element
   styles?: string
   url?: string
   zoom?: string

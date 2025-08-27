@@ -3,7 +3,7 @@ import { Button } from "helpers/Button"
 import CountdownTimer from "helpers/CountdownTimer"
 import React from "react"
 
-const WebinarBanner = ({ version }: { version: number }): JSX.Element => {
+const WebinarBanner = ({ version }: { version: number }) => {
   return (
     <>
       {version === 1 && (

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
 import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies"
+import React, { useEffect, useState } from "react"
 
 type CookieOption = {
   name: string
@@ -44,7 +44,7 @@ const setCookie = (name: string, value: string, days = 365) => {
   document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`
 }
 
-const Cookies = (): JSX.Element | null => {
+const Cookies = () => {
   const [preferences, setPreferences] = useState<CookiePreferences>({})
   const [isVisible, setIsVisible] = useState(false)
 

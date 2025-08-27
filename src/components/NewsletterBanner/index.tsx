@@ -1,6 +1,6 @@
-import React from "react"
-import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
+import React from "react"
 
 type Props = {
   title1?: boolean
@@ -24,7 +24,7 @@ const NewsletterBanner = ({
   twoParagraphs,
   btnText = "Zapisuję się, zanim wyjdzie kolejny mail!",
   image,
-}: Props): JSX.Element => {
+}: Props) => {
   const h2ClassName =
     "text-adaDesc lg:text-adaTitle font-bold lg:mb-2 border-b-[11px] lg:border-b-[30px] border-ada-light-pink h-[24px] lg:h-[68px] animate-bounce"
 

@@ -1,8 +1,8 @@
-import React from "react"
-import { Button } from "helpers/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
+import React from "react"
 
-const MasterclassBanner = (): JSX.Element => {
+const MasterclassBanner = () => {
   return (
     <div className="flex px-2 xl:px-6 flex-col-reverse items-center lg:flex-row text-ada-blue mx-auto gap-8 md:py-20">
       <div className="flex">

@@ -1,12 +1,12 @@
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import { StaticImage } from "gatsby-plugin-image"
-import React, { JSX } from "react"
+import React from "react"
 import Carousel from "react-multi-carousel"
 import { responsive } from "values/const"
 import Reference from "../../helpers/Reference"
 
 type IReferencesList = {
-  image: JSX.Element
+  image: React.JSX.Element
 }
 
 type IReferences = {
@@ -91,7 +91,7 @@ const References = ({
   title3,
   title4,
   title5,
-}: IReferences): JSX.Element => {
+}: IReferences) => {
   return (
     <div className="pt-[40px]">
       {title1 && (

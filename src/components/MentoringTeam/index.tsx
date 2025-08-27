@@ -1,7 +1,7 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const MentoringTeam = (): JSX.Element => {
+const MentoringTeam = () => {
   return (
     <section>
       <div className="flex flex-col justify-center">

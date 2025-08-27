@@ -1,8 +1,8 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import React from "react"
 
-const MastermindWhy2 = (): JSX.Element => {
+const MastermindWhy2 = () => {
   return (
     <div className="flex flex-col md:flex-row gap-[60px] xl:gap-[90px] items-center w-full justify-center mx-3 pb-10">
       <div className="min-w-[507px] md:ml-[-130px]">

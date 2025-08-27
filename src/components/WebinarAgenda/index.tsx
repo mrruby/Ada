@@ -1,5 +1,5 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
 const listItems = [
   {
@@ -26,7 +26,7 @@ const listItems2 = [
   "Q&A na żywo — pytaj o wszystko, co dotyczy kampanii na Facebooku i Instagramie",
 ]
 
-const WebinarAgenda = (): JSX.Element => {
+const WebinarAgenda = () => {
   return (
     <div className="w-full flex flex-col px-3 pb-2 items-center py-[100px] mt-5">
       <h3 className="text-adaSubtitle md:text-adaTitle2 font-bold uppercase mb-10 max-w-[1085px] text-center animate-bounce md:border-b-[50px] border-ada-light-pink md:leading-[0px]">

@@ -1,6 +1,6 @@
-import React from "react"
-import { MasterclassInfoSection } from "helpers/MasterclassInfoSection"
 import { Button } from "helpers/Button"
+import { MasterclassInfoSection } from "helpers/MasterclassInfoSection"
+import React from "react"
 
 const listItems = [
   "Podsumowałaś 2023 rok, myślisz o planach na 2024 i zastanawiasz się, jak to wszystko ogarnąć bez ciągłej obecności w mediach społecznościowych?",
@@ -9,7 +9,7 @@ const listItems = [
   "Szukasz systemu, który działa w tle, kiedy Ty spędzasz czas z rodziną, odpoczywasz lub oglądasz serial?",
 ]
 
-const MasterclassInfo1 = (): JSX.Element => {
+const MasterclassInfo1 = () => {
   return (
     <div
       className="w-full flex flex-col px-3 py-2 items-center pt-16 mb-[85px]"

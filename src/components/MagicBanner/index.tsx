@@ -215,7 +215,7 @@ const magicBannerContent3 = [
   },
 ]
 
-const MagicBanner1 = ({ version }: { version: number }): JSX.Element => {
+const MagicBanner1 = ({ version }: { version: number }) => {
   const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleMouseEnter = () => {

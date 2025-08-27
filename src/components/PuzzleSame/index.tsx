@@ -13,7 +13,7 @@ const ListItem: React.FC<{ emoji: string; text: string }> = ({
   </li>
 )
 
-const PuzzleSame = (): JSX.Element => {
+const PuzzleSame = () => {
   const listItems = [
     {
       emoji: "🤔",

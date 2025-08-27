@@ -1,7 +1,7 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const EbookContainer = (): JSX.Element => {
+const EbookContainer = () => {
   const featureClass =
     "text-[10px] md:text-[16px] lg:text-adaSubtitle font-semibold max-w-[325px] leading-tight"
 

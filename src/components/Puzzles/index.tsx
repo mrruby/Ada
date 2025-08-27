@@ -1,7 +1,7 @@
-import React from "react"
 import { PuzzleBox } from "helpers/PuzzleBox"
+import React from "react"
 
-const Puzzles = (): JSX.Element => {
+const Puzzles = () => {
   const PuzzleBoxData = [
     {
       text: "Darmowe materiały o slow marketingu i kampaniach reklamowych.",

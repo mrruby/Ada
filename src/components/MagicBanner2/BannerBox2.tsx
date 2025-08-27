@@ -1,12 +1,11 @@
 // BannerBox2tsx
 import React from "react"
 import Typography from "../shared/Typography"
-import { StaticImage } from "gatsby-plugin-image"
 
 type BannerBox2Props = {
   bgColor: string
   title?: string
-  description: string | JSX.Element
+  description: string | React.JSX.Element
   styles?: string
   url?: string
 }

@@ -1,8 +1,8 @@
-import React from "react"
-import { ProductBox } from "helpers/ProductBox"
 import { StaticImage } from "gatsby-plugin-image"
+import { ProductBox } from "helpers/ProductBox"
+import React from "react"
 
-const Products = (): JSX.Element => {
+const Products = () => {
   const productsData = [
     {
       title: "Konsultacje reklamowe",

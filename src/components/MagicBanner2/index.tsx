@@ -50,7 +50,7 @@ const bannerContent = [
   },
 ]
 
-const MagicBanner2 = ({}: {}): JSX.Element => {
+const MagicBanner2 = ({}: {}) => {
   const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleMouseEnter = () => {
