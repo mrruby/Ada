@@ -1,5 +1,3 @@
-/// <reference types="react" />
-
 import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MasterclassAgenda from "components/MasterclassAgenda"

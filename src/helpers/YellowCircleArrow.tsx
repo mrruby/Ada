@@ -41,7 +41,7 @@ const YellowCircleArrow: React.FC<Props> = ({
       >
         {/* Yellow circle */}
         <circle cx="30" cy="30" r="30" fill="#F4E105" />
-        
+
         {/* Simple thin purple down arrow - 2x bigger */}
         <path
           d="M30 45L18 33M30 45L42 33M30 45V15"

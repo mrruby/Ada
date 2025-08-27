@@ -25,7 +25,7 @@ const QuizProgress: React.FC<QuizProgressProps> = ({ current, total }) => {
             {Math.round(progressPercentage)}% ukończone
           </span>
         </div>
-        
+
         <div className="relative h-4 bg-ada-magicGrey rounded-full overflow-hidden">
           <div
             className="absolute top-0 left-0 h-full bg-gradient-to-r from-ada-magicPink to-ada-magicOrange 
@@ -40,9 +40,7 @@ const QuizProgress: React.FC<QuizProgressProps> = ({ current, total }) => {
               <div
                 key={i}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i < current
-                    ? "bg-ada-magicOrange w-3"
-                    : "bg-ada-magicGrey"
+                  i < current ? "bg-ada-magicOrange w-3" : "bg-ada-magicGrey"
                 }`}
               />
             ))}

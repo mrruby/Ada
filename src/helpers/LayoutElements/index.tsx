@@ -206,12 +206,7 @@ export const Sun4 = SunTemplate
 export const Sun5 = SunTemplate
 
 export const Sun6: React.FC<Props> = (props) => (
-  <ImageComponent
-    src="/assets/sun2.svg"
-    alt=""
-    {...props}
-    zIndex="-z-20"
-  />
+  <ImageComponent src="/assets/sun2.svg" alt="" {...props} zIndex="-z-20" />
 )
 
 export const Sun7: React.FC<Props> = (props) => (
@@ -219,11 +214,7 @@ export const Sun7: React.FC<Props> = (props) => (
 )
 
 export const Flaming: React.FC<Props> = (props) => (
-  <ImageComponent
-    src="/assets/flaming.svg"
-    alt=""
-    {...props}
-  />
+  <ImageComponent src="/assets/flaming.svg" alt="" {...props} />
 )
 
 export const Flaps: React.FC<Props> = (props) => (
@@ -235,19 +226,11 @@ export const Flaps2: React.FC<Props> = (props) => (
 )
 
 export const Sunglasses: React.FC<Props> = (props) => (
-  <ImageComponent
-    src="/assets/sunglasses.svg"
-    alt=""
-    {...props}
-  />
+  <ImageComponent src="/assets/sunglasses.svg" alt="" {...props} />
 )
 
 export const Sunglasses2: React.FC<Props> = (props) => (
-  <ImageComponent
-    src="/assets/sunglasses.svg"
-    alt=""
-    {...props}
-  />
+  <ImageComponent src="/assets/sunglasses.svg" alt="" {...props} />
 )
 
 export const Ball1: React.FC<Props> = (props) => (
@@ -267,11 +250,7 @@ export const Drinks: React.FC<Props> = (props) => (
 )
 
 export const Arrow: React.FC<Props> = (props) => (
-  <ImageComponent
-    src="/assets/arrowWebinar.svg"
-    alt=""
-    {...props}
-  />
+  <ImageComponent src="/assets/arrowWebinar.svg" alt="" {...props} />
 )
 
 export const ArrowMasterclass: React.FC<Props> = (props) => (
