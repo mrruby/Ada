@@ -1,10 +1,10 @@
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import ThankBanner2 from "components/ThankBanner2"
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import ThankBanner2 from "components/ThankBanner2"
 
-const ThankYouPage = (): JSX.Element => {
+const ThankYouPage = () => {
   return (
     <Layout>
       <MaxWithBgColorContainer>

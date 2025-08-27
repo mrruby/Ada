@@ -1,13 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
-// @ts-ignore
-import { Disqus } from "gatsby-plugin-disqus"
-import Layout from "../../components/Layout"
-import Audio from "../../components/Audio"
-import SEO from "../../components/seo"
-import { siteName } from "../../helpers"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import PodcastPostLayout from "components/PodcastPostLayout"
+import { graphql } from "gatsby"
+import { Disqus } from "gatsby-plugin-disqus"
+import React from "react"
+import Audio from "../../components/Audio"
+import Layout from "../../components/Layout"
+import SEO from "../../components/seo"
+import { siteName } from "../../helpers"
 
 type PodcastData = {
   data: {
@@ -27,7 +26,7 @@ type PodcastData = {
   }
 }
 
-const PodcastPage = ({ data }: PodcastData): JSX.Element => {
+const PodcastPage = ({ data }: PodcastData) => {
   const {
     frontmatter: { season, episodeNumber, description, title },
     rawMarkdownBody,

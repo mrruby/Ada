@@ -11,7 +11,7 @@ import WebinarAbout from "components/WebinarAbout"
 import WebinarBanner from "components/WebinarBanner"
 import React from "react"
 
-const MasterclassPage = (): JSX.Element => {
+const MasterclassPage = () => {
   return (
     <Layout
       sun1={true}

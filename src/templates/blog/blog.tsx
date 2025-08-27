@@ -1,12 +1,12 @@
-import React from "react"
 import { graphql } from "gatsby"
+import React from "react"
 // @ts-ignore
+import BlogPostLayout from "components/BlogPostLayout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import { Disqus } from "gatsby-plugin-disqus"
 import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
 import { siteName } from "../../helpers"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import BlogPostLayout from "components/BlogPostLayout"
 
 type BlogData = {
   data: {
@@ -33,7 +33,7 @@ const BlogPage = ({
       fields: { slug },
     },
   },
-}: BlogData): JSX.Element => {
+}: BlogData) => {
   const disqusConfig = {
     url: `${siteName + slug.slice(0, -1)}`,
     identifier: slug,

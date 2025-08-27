@@ -14,9 +14,7 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "resolveJsonModule": true,
-    "rootDir": "./src",
-    "jsxFactory": "React.createElement",
-    "jsxFragmentFactory": "React.Fragment"
+    "rootDir": "./src"
   },
   "exclude": ["node_modules", "public", ".cache"]
 }
