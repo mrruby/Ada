@@ -132,7 +132,9 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }) => {
         className="mb-4 md:pt-20 text-ada-yellow3 text-4xl md:text-5xl uppercase font-bold"
       >
         JESIENNY RE-START:
-        <span className="text-ada-pink7"> OGARNIAM REKLAMY SPRZEDAŻOWE W MAŁYM BINZESIE!</span>
+        <span className="text-ada-pink7">
+          OGARNIAM REKLAMY SPRZEDAŻOWE W MAŁYM BIZNESIE!
+        </span>
       </Typography>
       <Typography
         variant="h2"

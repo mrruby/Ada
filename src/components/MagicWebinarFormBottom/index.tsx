@@ -51,12 +51,18 @@ const MagicWebinarFormBottom = () => {
         </Typography>
 
         <div className="magic-form-bottom bg-white shadow-lg rounded-lg p-6 border-t-4 border-ada-pink7">
-          <div className="mb-6" dangerouslySetInnerHTML={{ __html: magicWebinarForm22 }} />
+          <div
+            className="mb-6"
+            dangerouslySetInnerHTML={{ __html: magicWebinarForm22 }}
+          />
           <div className="flex items-center bg-ada-pink7/10 p-3 rounded">
             <div className="bg-ada-pink7 px-2 py-1 text-white font-bold mr-3 rounded">
               Uwaga:
             </div>
-            <Typography variant="body" className="text-ada-magicPurple font-bold">
+            <Typography
+              variant="body"
+              className="text-ada-magicPurple font-bold"
+            >
               Ilość miejsc ograniczona - zdecyduj się teraz!
             </Typography>
           </div>

@@ -55,7 +55,7 @@ const PuzzleSame = () => {
         textSize="md:text-adaSubtitle"
         btnStyle="mt-10 uppercase md:w-[480px] bg-ada-pink2 tracking-[2.90px] h-[100px] shadow-xl mx-4 md:mx-0"
       />
-      <h3 className="text-adaSubtitle font-bold text-ada-purple my-10 bg-ada-purple text-white px-2 py-1 inline-block rounded-sm">
+      <h3 className="text-adaSubtitle font-bold text-ada-purple my-10 bg-ada-purple  px-2 py-1 inline-block rounded-sm">
         Jeśli kusi Cię teraz, aby:
       </h3>
       <ul className="text-left space-y-4 max-w-xl">
