@@ -10,6 +10,7 @@ import MagicWebinar6 from "components/MagicWebinar6"
 import MagicWebinar7 from "components/MagicWebinar7"
 import MagicWebinar8 from "components/MagicWebinar8"
 import MagicWebinar9 from "components/MagicWebinar9"
+import MagicWebinarFormBottom from "components/MagicWebinarFormBottom"
 import MagicWebinarSignup from "components/MagicWebinarSignup"
 import SEO from "components/seo"
 import React from "react"
@@ -29,6 +30,7 @@ const MagicWebinarPage = () => {
       <MagicWebinar9 version={2} />
       <MagicWebinarSignup />
       <MagicWebinar11 />
+      <MagicWebinarFormBottom />
     </Layout>
   )
 }

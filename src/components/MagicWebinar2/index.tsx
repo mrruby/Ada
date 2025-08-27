@@ -64,7 +64,7 @@ const MagicWebinar2 = ({ version = 1 }: { version?: number }) => {
   )
 
   return (
-    <div className={`${bgColor} px-6 md:px-12 relative`}>
+    <div className={`${bgColor} px-6 md:px-12 relative pb-0`}>
       <div className="flex justify-center">
         {isPinkVersion ? (
           <YellowCircleArrow
@@ -76,7 +76,7 @@ const MagicWebinar2 = ({ version = 1 }: { version?: number }) => {
           <MagicSun mobileBottom="top-[-50px]" width="200px" zIndex="z-10" />
         )}
       </div>
-      <div className="container mx-auto mt-24">
+      <div className="container mx-auto mt-12">
         <Typography
           variant="h1"
           className="text-white text-4xl md:text-5xl font-bold text-center mb-12"
@@ -85,7 +85,7 @@ const MagicWebinar2 = ({ version = 1 }: { version?: number }) => {
         </Typography>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full mx-auto mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full mx-auto pb-8">
           {cards.map(renderCard)}
         </div>
       </div>

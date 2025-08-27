@@ -15,52 +15,143 @@ const MagicWebinar6 = ({ version = 1 }: { version?: number }) => {
         {
           image: (
             <StaticImage
-              src="../../images/magic1.webp"
+              src="../../images/magic_reference_1.webp"
               alt="Opinia o Magic"
               placeholder="blurred"
               width={680}
-              height={680}
               formats={["auto", "webp", "avif"]}
               quality={100}
+              imgStyle={{ objectFit: "contain" }}
             />
           ),
         },
         {
           image: (
             <StaticImage
-              src="../../images/magic2.webp"
+              src="../../images/magic_reference_2.webp"
               alt="Opinia o programie mentoringowym"
               placeholder="blurred"
               width={680}
-              height={680}
               formats={["auto", "webp", "avif"]}
               quality={100}
+              imgStyle={{ objectFit: "contain" }}
             />
           ),
         },
         {
           image: (
             <StaticImage
-              src="../../images/magic3.webp"
+              src="../../images/magic_reference_3.webp"
               alt="Opinia o programie mentoringowym"
               placeholder="blurred"
               width={680}
-              height={680}
               formats={["auto", "webp", "avif"]}
               quality={100}
+              imgStyle={{ objectFit: "contain" }}
             />
           ),
         },
         {
           image: (
             <StaticImage
-              src="../../images/magic4.webp"
+              src="../../images/magic_reference_4.webp"
               alt="Opinia o programie mentoringowym"
               placeholder="blurred"
               width={680}
-              height={680}
               formats={["auto", "webp", "avif"]}
               quality={100}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          ),
+        },
+        {
+          image: (
+            <StaticImage
+              src="../../images/magic_reference_5.webp"
+              alt="Opinia o programie mentoringowym"
+              placeholder="blurred"
+              width={680}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          ),
+        },
+        {
+          image: (
+            <StaticImage
+              src="../../images/magic_reference_6.webp"
+              alt="Opinia o programie mentoringowym"
+              placeholder="blurred"
+              width={680}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          ),
+        },
+        {
+          image: (
+            <StaticImage
+              src="../../images/magic_reference_7.webp"
+              alt="Opinia o programie mentoringowym"
+              placeholder="blurred"
+              width={680}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          ),
+        },
+        {
+          image: (
+            <StaticImage
+              src="../../images/magic_reference_8.webp"
+              alt="Opinia o programie mentoringowym"
+              placeholder="blurred"
+              width={680}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          ),
+        },
+        {
+          image: (
+            <StaticImage
+              src="../../images/magic_reference_9.webp"
+              alt="Opinia o programie mentoringowym"
+              placeholder="blurred"
+              width={680}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          ),
+        },
+        {
+          image: (
+            <StaticImage
+              src="../../images/magic_reference_10.webp"
+              alt="Opinia o programie mentoringowym"
+              placeholder="blurred"
+              width={680}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          ),
+        },
+        {
+          image: (
+            <StaticImage
+              src="../../images/magic_reference_11.webp"
+              alt="Opinia o programie mentoringowym"
+              placeholder="blurred"
+              width={680}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+              imgStyle={{ objectFit: "contain" }}
             />
           ),
         },
@@ -110,8 +201,7 @@ const MagicWebinar6 = ({ version = 1 }: { version?: number }) => {
   const renderTitle = () =>
     isVersion2 ? (
       <span className="text-pink-100">
-        Zobacz, co członkinie <span className="text-ada-pink7">MAGIC</span>{" "}
-        mówią o społeczności:
+        Zobacz, co mówią o współpracy ze mną:
       </span>
     ) : (
       <>
@@ -130,7 +220,7 @@ const MagicWebinar6 = ({ version = 1 }: { version?: number }) => {
       <Typography variant="h2" className="font-bold max-w-xl mx-auto pb-8">
         {renderTitle()}
       </Typography>
-      <div className="max-h-[600px] mx-auto mt-5 pb-4">
+      <div className="h-[800px] mx-auto mt-5 pb-4">
         <Carousel
           responsive={responsive}
           infinite={true}
@@ -139,6 +229,7 @@ const MagicWebinar6 = ({ version = 1 }: { version?: number }) => {
           ssr={true}
           autoPlay={isVersion2}
           autoPlaySpeed={2000}
+          className="h-full"
         >
           {referencesList4.map((reference, index) => (
             <Reference key={index} image={reference.image} />

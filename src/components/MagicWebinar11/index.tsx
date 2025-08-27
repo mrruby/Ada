@@ -11,7 +11,7 @@ const MagicWebinar11 = () => {
   const faqList: ListItem[] = [
     {
       question: "Do kiedy dostępne jest nagranie?",
-      answer: "Do 13.09.",
+      answer: "Do 17.09.",
     },
     {
       question: "Muszę znać Ads Managera?",

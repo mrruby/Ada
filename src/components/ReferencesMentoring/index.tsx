@@ -533,8 +533,7 @@ const ReferencesMentoring = ({
       {title5 && (
         <>
           <div className="text-adaSubtitle md:text-adaSubtitleSecondary font-bold text-center text-ada-black pb-4">
-            Zobacz, co członkinie <span className="text-ada-pink7">MAGIC</span>{" "}
-            mówią o społeczności:
+            Zobacz, co mówią o współpracy ze mną:
           </div>
         </>
       )}
