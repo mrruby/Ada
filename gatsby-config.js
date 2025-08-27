@@ -1,4 +1,5 @@
 const path = require("path")
+const adapter = require("gatsby-adapter-netlify")
 
 module.exports = {
   siteMetadata: {
@@ -6,6 +7,7 @@ module.exports = {
     description: `Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny: praktykuję slow marketing, przemyślany, wartościowy, zbudowany na relacjach`,
     author: `Adrianna Promis`,
   },
+  adapter: adapter(),
   plugins: [
     {
       resolve: `gatsby-plugin-disqus`,
