@@ -13,7 +13,7 @@ import ReferencesMentoring from "components/ReferencesMentoring"
 import SEO from "components/seo"
 import React from "react"
 
-const MagicPage = (): JSX.Element => {
+const MagicPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">

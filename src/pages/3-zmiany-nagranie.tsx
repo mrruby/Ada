@@ -1,10 +1,10 @@
-import React from "react"
 import Layout from "components/Layout"
-import SEO from "components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import SEO from "components/seo"
 import CountdownTimer from "helpers/CountdownTimer"
+import React from "react"
 
-const TrzyZmianyNagranie = (): JSX.Element => {
+const TrzyZmianyNagranie = () => {
   return (
     <Layout>
       <MaxWithBgColorContainer bgColor="bg-linear2">

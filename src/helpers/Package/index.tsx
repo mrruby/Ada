@@ -2,12 +2,12 @@ import React from "react"
 
 type IPackage = {
   title: string
-  desc: JSX.Element
+  desc: React.JSX.Element
   price: string
   link: string
 }
 
-const Package = ({ title, desc, price, link }: IPackage): JSX.Element => {
+const Package = ({ title, desc, price, link }: IPackage) => {
   return (
     <div className="max-w-[400px] min-h-[250px] p-4 text-center p-8">
       <h3 className="font-bold text-adaBase"> {title}</h3>

@@ -1,22 +1,22 @@
-import React from "react"
-import Layout from "components/Layout"
-import SEO from "components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import IconText from "components/IconText"
-import MentoringBanner from "components/MentoringBanner"
-import MentoringWhy from "components/MentoringWhy"
-import Opinions from "components/Opinions"
-import MentoringWhy2 from "components/MentoringWhy2"
-import MastermindSteps from "components/MastermindSteps"
-import MentoringInfo from "components/MentoringInfo"
-import MentoringAbout from "components/MentoringAbout"
-import ReferencesMentoring from "components/ReferencesMentoring"
-import MastermindInfo3 from "components/MastermindInfo3"
-import MastermindPrice from "components/MastermindPrice"
+import Layout from "components/Layout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import MastermindAgenda from "components/MastermindAgenda"
+import MastermindInfo3 from "components/MastermindInfo3"
+import MastermindPrice from "components/MastermindPrice"
+import MastermindSteps from "components/MastermindSteps"
+import MentoringAbout from "components/MentoringAbout"
+import MentoringBanner from "components/MentoringBanner"
+import MentoringInfo from "components/MentoringInfo"
+import MentoringWhy from "components/MentoringWhy"
+import MentoringWhy2 from "components/MentoringWhy2"
+import Opinions from "components/Opinions"
+import ReferencesMentoring from "components/ReferencesMentoring"
+import SEO from "components/seo"
+import React from "react"
 
-const WebinarReplayPage = (): JSX.Element => {
+const WebinarReplayPage = () => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
       <MaxWithBgColorContainer bgColor="bg-linear2">

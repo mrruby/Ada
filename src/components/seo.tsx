@@ -1,5 +1,5 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 type Props = {
   description?: string
@@ -8,7 +8,7 @@ type Props = {
   image?: string
 }
 
-const SEO = ({ description, title, script, image }: Props): JSX.Element => {
+const SEO = ({ description, title, script, image }: Props) => {
   const { site } = useStaticQuery(graphql`
     query {
       site {

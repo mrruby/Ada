@@ -2,7 +2,7 @@ import SEO from "components/seo"
 import { navigate } from "gatsby"
 import React from "react"
 
-const MagicCollectivePage = (): JSX.Element => {
+const MagicCollectivePage = () => {
   React.useEffect(() => {
     navigate("/magic-kolektyw/", { replace: true })
   }, [])

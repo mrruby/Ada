@@ -14,7 +14,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import { checkAndGenerateDiscountCode } from "../utils/api"
 
-const AdsyAndChill = (): JSX.Element => {
+const AdsyAndChill = () => {
   const [endsAt, setEndsAt] = useState<string | null>(null)
 
   useEffect(() => {

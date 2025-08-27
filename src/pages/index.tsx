@@ -1,15 +1,15 @@
-import React from "react"
-import Layout from "components/Layout"
-import SEO from "components/seo"
 import CustomBanner from "components/CustomBanner"
-import { StaticImage } from "gatsby-plugin-image"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import Features from "components/Features"
-import Services from "components/Services"
+import Layout from "components/Layout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import NewsletterBanner from "components/NewsletterBanner"
 import References from "components/References"
+import SEO from "components/seo"
+import Services from "components/Services"
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const IndexPage = (): JSX.Element => {
+const IndexPage = () => {
   return (
     <Layout
       flowerBlue={true}

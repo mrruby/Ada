@@ -14,7 +14,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const MastermindPage = (): JSX.Element => {
+const MastermindPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <WebinarBanner version={5} />

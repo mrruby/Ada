@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "components/seo"
-import Layout from "../components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import LegalLayout from "components/LegalLayout"
+import SEO from "components/seo"
+import { graphql } from "gatsby"
+import React from "react"
+import Layout from "../components/Layout"
 
 type TermsData = {
   data: {
@@ -17,7 +17,7 @@ const TermsPage = ({
   data: {
     markdownRemark: { rawMarkdownBody },
   },
-}: TermsData): JSX.Element => {
+}: TermsData) => {
   return (
     <Layout>
       <MaxWithBgColorContainer>

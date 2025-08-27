@@ -1,7 +1,6 @@
-import React from "react"
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
 import AboutBanner2 from "components/AboutBanner2"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MastermindAgenda from "components/MastermindAgenda"
 import MastermindBanner from "components/MastermindBanner"
 import MastermindFAQ from "components/MastermindFAQ"
 import MastermindInfo1 from "components/MastermindInfo1"
@@ -11,14 +10,15 @@ import MastermindPrice from "components/MastermindPrice"
 import MastermindSteps from "components/MastermindSteps"
 import MastermindWhy1 from "components/MastermindWhy1"
 import MastermindWhy2 from "components/MastermindWhy2"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MentoringForm from "components/MentoringForm"
 import Opinions from "components/Opinions"
 import Questions from "components/Questions"
 import ReferencesMentoring from "components/ReferencesMentoring"
-import MastermindAgenda from "components/MastermindAgenda"
+import React from "react"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
-const MastermindPage = (): JSX.Element => {
+const MastermindPage = () => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
       <MastermindBanner version={1} />

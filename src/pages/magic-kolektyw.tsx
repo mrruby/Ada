@@ -10,7 +10,7 @@ import ReferencesMentoring from "components/ReferencesMentoring"
 import SEO from "components/seo"
 import React from "react"
 
-const MagicCollectivePage = (): JSX.Element => {
+const MagicCollectivePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-white2 reltive">

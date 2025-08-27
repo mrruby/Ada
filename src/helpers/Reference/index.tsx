@@ -1,10 +1,10 @@
 import React from "react"
 
 type IReference = {
-  image: JSX.Element
+  image: React.JSX.Element
 }
 
-const Reference = ({ image }: IReference): JSX.Element => {
+const Reference = ({ image }: IReference) => {
   return (
     <div className="w-full flex justify-center items-center px-4">{image}</div>
   )

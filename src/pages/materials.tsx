@@ -1,13 +1,13 @@
+import Knowledge from "components/Knowledge"
+import KnowledgeBanner from "components/KnowledgeBanner"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import NewsletterBanner from "components/NewsletterBanner"
+import TextBanner from "components/TextBanner"
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import KnowledgeBanner from "components/KnowledgeBanner"
-import Knowledge from "components/Knowledge"
-import NewsletterBanner from "components/NewsletterBanner"
-import TextBanner from "components/TextBanner"
 
-const MaterialsPage = (): JSX.Element => {
+const MaterialsPage = () => {
   return (
     <Layout
       flowerBlue={true}

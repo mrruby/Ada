@@ -5,14 +5,14 @@ import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicLastSection from "components/MagicLastSection"
-import { Button } from "helpers/Button"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import SEO from "components/seo"
+import { Button } from "helpers/Button"
 import React from "react"
 
-const MagicNagraniePage = (): JSX.Element => {
+const MagicNagraniePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
@@ -25,7 +25,11 @@ const MagicNagraniePage = (): JSX.Element => {
           </p>
           <Button
             type="button"
-            text={<span className="font-bold text-ada-pink7 uppercase">Dołącz do MAGIC</span>}
+            text={
+              <span className="font-bold text-ada-pink7 uppercase">
+                Dołącz do MAGIC
+              </span>
+            }
             url="/magic"
             textSize="text-sm md:text-base"
             btnStyle="uppercase bg-ada-pink2 text-ada-black font-semibold tracking-wide h-[48px] md:h-[60px] px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px]"

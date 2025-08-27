@@ -14,7 +14,7 @@ import * as React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const AdsyAndChill = (): React.JSX.Element => {
+const AdsyAndChill = () => {
   return (
     <Layout
       flowerBlue2={true}

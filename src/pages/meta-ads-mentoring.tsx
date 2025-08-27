@@ -1,7 +1,5 @@
 import React from "react"
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
 import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MasterclassAgenda from "components/MasterclassAgenda"
@@ -19,8 +17,10 @@ import Opinions from "components/Opinions"
 import OpinionVideos from "components/OpinionVideos"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import Team from "components/Team"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
-const MentoringPage = (): JSX.Element => {
+const MentoringPage = () => {
   return (
     <Layout
       flowerBlue={true}

@@ -1,9 +1,9 @@
-import React from "react"
 import Layout from "components/Layout"
-import SEO from "components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import SEO from "components/seo"
+import React from "react"
 
-const PowtorkaMasterclass = (): JSX.Element => {
+const PowtorkaMasterclass = () => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
       <MaxWithBgColorContainer bgColor="bg-linear2">

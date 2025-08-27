@@ -1,14 +1,14 @@
-import React from "react"
-import Layout from "components/Layout"
-import SEO from "components/seo"
 import CustomBanner from "components/CustomBanner"
-import { StaticImage } from "gatsby-plugin-image"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import References from "components/References"
 import EbookContainer from "components/EbookContainer"
 import EbookKnowledge from "components/EbookKnowledge"
+import Layout from "components/Layout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import References from "components/References"
+import SEO from "components/seo"
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const EbookPage = (): JSX.Element => {
+const EbookPage = () => {
   return (
     <Layout flowerBlue={true} starPink={true} flowerWhite={true}>
       <MaxWithBgColorContainer bgColor="bg-linear2">

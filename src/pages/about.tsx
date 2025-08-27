@@ -1,16 +1,16 @@
-import React from "react"
-import Layout from "components/Layout"
-import SEO from "components/seo"
-import FeaturesAda from "components/FeaturesAda"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import AboutBanner from "components/AboutBanner"
 import AdaBanner from "components/AdaBanner"
-import HelloBanner from "components/HelloBanner"
 import Cooperation from "components/Cooperation"
+import FeaturesAda from "components/FeaturesAda"
+import HelloBanner from "components/HelloBanner"
+import Layout from "components/Layout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MeetMeBanner from "components/MeetMeBanner"
 import Puzzles from "components/Puzzles"
+import SEO from "components/seo"
+import React from "react"
 
-const AboutPage = (): JSX.Element => {
+const AboutPage = () => {
   return (
     <Layout twoBlueFlowers2={true}>
       <HelloBanner />

@@ -1,10 +1,10 @@
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import { Button } from "helpers/Button"
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import { Button } from "helpers/Button"
 
-const NotFoundPage = (): JSX.Element => (
+const NotFoundPage = () => (
   <Layout>
     <MaxWithBgColorContainer extraStyle="h-[450px] md:h-[900px] pt-[60px] flex flex-col justify-center text-center">
       <h1 className="px-4 text-adaTitle font-bold pb-8">

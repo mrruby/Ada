@@ -14,7 +14,7 @@ import MagicWebinar9 from "components/MagicWebinar9"
 import SEO from "components/seo"
 import React from "react"
 
-const MagicWebinarPage = (): JSX.Element => {
+const MagicWebinarPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MagicWebinar1 />

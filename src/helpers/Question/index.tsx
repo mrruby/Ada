@@ -5,7 +5,7 @@ type IQuestion = {
   answer: string
 }
 
-const Question = ({ question, answer }: IQuestion): JSX.Element => {
+const Question = ({ question, answer }: IQuestion) => {
   return (
     <div className="flex flex-col mt-2 lg:mb-14 text-center px-[24px] m-auto justify-center">
       <p className="lg:text-adaDesc pt-[20px] font-bold">{question} </p>

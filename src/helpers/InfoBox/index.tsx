@@ -1,10 +1,10 @@
-import React from "react"
 import { Button } from "helpers/Button"
+import React from "react"
 
 interface Props {
   btnText: string
   url: string
-  image: JSX.Element
+  image: React.JSX.Element
 }
 
 export const InfoBox: React.FC<Props> = ({ btnText, url, image }) => {

@@ -5,11 +5,11 @@ import React, { useEffect, useState } from "react"
 interface Props {
   title: string
   subtitle1: string
-  subtitle2: JSX.Element
+  subtitle2: React.JSX.Element
   subtitle3: string
   efects: string[]
   forWhom: string
-  forWhomInfo: string | JSX.Element
+  forWhomInfo: string | React.JSX.Element
   btn: string
   purpose: string
   cost: string
@@ -21,9 +21,9 @@ interface Props {
   value?: string
   people?: string
   roas?: string
-  addInfo?: string | JSX.Element
-  image?: JSX.Element
-  imageInfo?: JSX.Element
+  addInfo?: string | React.JSX.Element
+  image?: React.JSX.Element
+  imageInfo?: React.JSX.Element
   btnStyle?: string
   btnMargin?: string
   sectionId?: string

@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import Podcasts from "components/Podcasts"
+import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
 type Podcast = {
   node: {
@@ -25,7 +25,7 @@ type PodcastsType = {
   allMarkdownRemark: { edges: Podcast[] }
 }
 
-const PodcastsPage = (): JSX.Element => {
+const PodcastsPage = () => {
   const {
     allMarkdownRemark: { edges },
   }: PodcastsType = useStaticQuery(graphql`

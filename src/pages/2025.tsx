@@ -10,7 +10,7 @@ import ReferencesMentoring from "components/ReferencesMentoring"
 import SEO from "components/seo"
 import React from "react"
 
-const MasterclassPage = (): JSX.Element => {
+const MasterclassPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">

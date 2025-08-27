@@ -1,20 +1,20 @@
-import React from "react"
 import Layout from "components/Layout"
-import SEO from "components/seo"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import PuzzleBanner from "components/PuzzleHeader"
-import PuzzleContains from "components/PuzzleContains"
-import PuzzleEnd from "components/PuzzleEnd"
-import PuzzleDesire from "components/PuzzleDesire"
-import StaticImageComponent from "components/StaticImageComponent"
-import PuzzleDays from "components/PuzzleDays"
 import PuzzleAttention from "components/PuzzleAttention"
-import PuzzleGood from "components/PuzzleGood"
+import PuzzleContains from "components/PuzzleContains"
+import PuzzleDays from "components/PuzzleDays"
+import PuzzleDesire from "components/PuzzleDesire"
 import PuzzleDream from "components/PuzzleDream"
+import PuzzleEnd from "components/PuzzleEnd"
+import PuzzleGood from "components/PuzzleGood"
+import PuzzleBanner from "components/PuzzleHeader"
 import PuzzlePerfect from "components/PuzzlePerfect"
 import PuzzleSame from "components/PuzzleSame"
+import SEO from "components/seo"
+import StaticImageComponent from "components/StaticImageComponent"
+import React from "react"
 
-const PuzzlePage = (): JSX.Element => {
+const PuzzlePage = () => {
   return (
     <Layout>
       <StaticImageComponent

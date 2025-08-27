@@ -1,10 +1,10 @@
-import React from "react"
 import { Button } from "helpers/Button"
+import React from "react"
 
 type ContentBoxProps = {
   title: string
   description: string
-  image?: JSX.Element
+  image?: React.JSX.Element
   buttonText: string
   url: string
 }

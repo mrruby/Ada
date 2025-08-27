@@ -1,13 +1,13 @@
-import React from "react"
+import BlogPosts from "components/BlogPosts"
+import CustomBanner from "components/CustomBanner"
+import InfoBanner from "components/InfoBanner"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import NewsletterBanner from "components/NewsletterBanner"
 import { graphql, useStaticQuery } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import CustomBanner from "components/CustomBanner"
-import { StaticImage } from "gatsby-plugin-image"
-import BlogPosts from "components/BlogPosts"
-import NewsletterBanner from "components/NewsletterBanner"
-import InfoBanner from "components/InfoBanner"
 
 type Blog = {
   node: {
@@ -29,7 +29,7 @@ type Blogs = {
   allMarkdownRemark: { edges: Blog[] }
 }
 
-const BlogPage = (): JSX.Element => {
+const BlogPage = () => {
   const {
     allMarkdownRemark: { edges },
   }: Blogs = useStaticQuery(graphql`

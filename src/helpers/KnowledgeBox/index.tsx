@@ -1,10 +1,10 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
+import React from "react"
 
 interface Props {
-  text: JSX.Element
-  btnText: string | JSX.Element
+  text: React.JSX.Element
+  btnText: string | React.JSX.Element
   url: string
   type: "variant1" | "variant2"
 }

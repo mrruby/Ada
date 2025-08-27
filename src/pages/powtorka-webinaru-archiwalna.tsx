@@ -1,22 +1,22 @@
-import React from "react"
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import AboutBanner2 from "components/AboutBanner2"
-import References from "components/References"
-import Questions from "components/Questions"
-import MastermindSteps from "components/MastermindSteps"
-import MastermindWhy1 from "components/MastermindWhy1"
-import MastermindWhy2 from "components/MastermindWhy2"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MastermindAgenda from "components/MastermindAgenda"
+import MastermindFAQ from "components/MastermindFAQ"
 import MastermindInfo1 from "components/MastermindInfo1"
 import MastermindInfo2 from "components/MastermindInfo2"
 import MastermindInfo3 from "components/MastermindInfo3"
-import MastermindAgenda from "components/MastermindAgenda"
 import MastermindPrice from "components/MastermindPrice"
-import MastermindFAQ from "components/MastermindFAQ"
+import MastermindSteps from "components/MastermindSteps"
 import MastermindVideo from "components/MastermindVideo"
+import MastermindWhy1 from "components/MastermindWhy1"
+import MastermindWhy2 from "components/MastermindWhy2"
+import Questions from "components/Questions"
+import References from "components/References"
+import React from "react"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
-const WebinarReplayPageArchive = (): JSX.Element => {
+const WebinarReplayPageArchive = () => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
       <MaxWithBgColorContainer bgColor="bg-linear2">

@@ -6,7 +6,7 @@ const faqItems = [
   {
     question: "Czy będę mieć kontrolę nad kampaniami?",
     answer:
-      "Tak! Masz dostęp do swojego konta reklamowego, dodatkowo jesteśmy z bieżącym kontakcie na Trello. Wspólnie ustalamy plan działania. Możesz liczyć na naszą elastyczność i zaangażowanie. Gdy trzeba, powiemy: \"przemyślmy to jeszcze raz\".",
+      'Tak! Masz dostęp do swojego konta reklamowego, dodatkowo jesteśmy z bieżącym kontakcie na Trello. Wspólnie ustalamy plan działania. Możesz liczyć na naszą elastyczność i zaangażowanie. Gdy trzeba, powiemy: "przemyślmy to jeszcze raz".',
   },
   {
     question: "Czy dajecie gwarancję wyników?",
@@ -20,7 +20,7 @@ const faqItems = [
   },
 ]
 
-const CollapsibleFAQ = (): JSX.Element => {
+const CollapsibleFAQ = () => {
   return (
     <Section>
       <div className="max-w-[800px] mx-auto">
@@ -36,7 +36,9 @@ const CollapsibleFAQ = (): JSX.Element => {
           <details key={idx} className="mb-4 group bg-white p-4 rounded-lg">
             <summary className="cursor-pointer font-semibold flex justify-between items-center list-none">
               <span>{item.question}</span>
-              <span className="ml-2 transition-transform group-open:rotate-180">▼</span>
+              <span className="ml-2 transition-transform group-open:rotate-180">
+                ▼
+              </span>
             </summary>
             <p className="mt-2 leading-relaxed">{item.answer}</p>
           </details>

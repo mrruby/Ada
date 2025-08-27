@@ -10,7 +10,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const AdsyAndChill2025 = (): JSX.Element => {
+const AdsyAndChill2025 = () => {
   return (
     <Layout
       showHeaderAndFooter={false}
