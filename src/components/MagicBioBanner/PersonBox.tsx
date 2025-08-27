@@ -1,7 +1,6 @@
 // PersonBox.tsx
 import React from "react"
 import Typography from "../shared/Typography"
-import { StaticImage } from "gatsby-plugin-image"
 import { CircleImage } from "./circleImages"
 
 type PersonBoxProps = {

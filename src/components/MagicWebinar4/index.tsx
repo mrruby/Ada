@@ -6,7 +6,6 @@ const MagicWebinar4 = ({ version = 1 }: { version?: number }) => {
   const isVersion2 = version === 2
   const bgColor = isVersion2 ? "bg-ada-newPurple" : "bg-ada-magicOrange"
   const accentColor = isVersion2 ? "bg-ada-newPurple2" : "bg-ada-magicPurple"
-  const textHighlightColor = isVersion2 ? "text-ada-pink7" : "text-orange-500"
   const buttonBgColor = isVersion2 ? "bg-ada-yellow3" : "bg-white"
   const buttonTextColor = isVersion2
     ? "text-ada-newPurple"

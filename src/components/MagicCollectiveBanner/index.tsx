@@ -42,19 +42,6 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
       }
     }
   }, [version])
-  const scrollToWebinarForm = () => {
-    const element = document.getElementById("webinar-form")
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
-  const scrollToPackages = () => {
-    const element = document.getElementById("pakiety")
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
 
   return (
     <>

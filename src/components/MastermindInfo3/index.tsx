@@ -196,21 +196,17 @@ const MastermindInfo3 = ({ version }: { version: number }) => {
             <div className="flex flex-col md:flex-row justify-between pt-4">
               <ul className="lg:max-w-[500px] pt-6">
                 {leftProgramDetailsList2.map((item, index) => (
-                  <div className="flex gap-4">
+                  <div key={index} className="flex gap-4">
                     <span className="text-[44px] font-extrabold">&#10003;</span>
-                    <li key={index} className={listItemClass}>
-                      {item}
-                    </li>
+                    <li className={listItemClass}>{item}</li>
                   </div>
                 ))}
               </ul>
               <ul className="lg:max-w-[500px] pt-6">
                 {rightProgramDetailsList2.map((item, index) => (
-                  <div className="flex gap-4">
+                  <div key={index} className="flex gap-4">
                     <span className="text-[44px] font-extrabold">&#10003;</span>
-                    <li key={index} className={listItemClass}>
-                      {item}
-                    </li>
+                    <li className={listItemClass}>{item}</li>
                   </div>
                 ))}
               </ul>
@@ -230,25 +226,21 @@ const MastermindInfo3 = ({ version }: { version: number }) => {
             <div className="flex flex-col md:flex-row justify-between">
               <ul className="lg:max-w-[500px] pt-6">
                 {leftWhatYouGetList2.map((item, index) => (
-                  <div className="flex gap-4">
+                  <div key={index} className="flex gap-4">
                     <span className="text-[44px] font-extrabold">
                       &#10003;{" "}
                     </span>{" "}
-                    <li key={index} className={listItemClass}>
-                      {item}
-                    </li>
+                    <li className={listItemClass}>{item}</li>
                   </div>
                 ))}
               </ul>
               <ul className="lg:max-w-[500px] pt-6">
                 {rightWhatYouGetList2.map((item, index) => (
-                  <div className="flex gap-4">
+                  <div key={index} className="flex gap-4">
                     <span className="text-[44px] font-extrabold">
                       &#10003;{" "}
                     </span>{" "}
-                    <li key={index} className={listItemClass}>
-                      {item}
-                    </li>
+                    <li className={listItemClass}>{item}</li>
                   </div>
                 ))}
               </ul>
@@ -269,19 +261,15 @@ const MastermindInfo3 = ({ version }: { version: number }) => {
             <div className="flex flex-col md:flex-row justify-between">
               <ul className="lg:max-w-[510px] pt-6 lg:mr-8">
                 {leftProgramDetailsList3.map((item, index) => (
-                  <div className="flex gap-4">
-                    <li key={index} className={listItemClass}>
-                      {item}
-                    </li>
+                  <div key={index} className="flex gap-4">
+                    <li className={listItemClass}>{item}</li>
                   </div>
                 ))}
               </ul>
               <ul className="lg:max-w-[510px] pt-6">
                 {rightProgramDetailsList3.map((item, index) => (
-                  <div className="flex gap-4">
-                    <li key={index} className={listItemClass}>
-                      {item}
-                    </li>
+                  <div key={index} className="flex gap-4">
+                    <li className={listItemClass}>{item}</li>
                   </div>
                 ))}
               </ul>

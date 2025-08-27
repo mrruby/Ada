@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import CountdownTimer from "helpers/CountdownTimer"
 
 interface NextStepsProps {
   koalendarLink: string

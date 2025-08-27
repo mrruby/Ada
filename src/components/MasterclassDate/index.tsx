@@ -3,19 +3,19 @@ import { Button } from "helpers/Button"
 import React from "react"
 
 const listItems = [
-  <span>
+  <span key="price">
     po warsztatach nagranie będzie dostępne{" "}
     <span className="font-bold">w ponad 2 razy wyższej cenie</span> - 129
     złotych
   </span>,
-  <span>
+  <span key="qa">
     decydując się teraz,{" "}
     <span className="font-bold">weźmiesz udział w Q&A na żywo.</span> Oglądając
     nagranie, oczywiście dostajesz dostęp również do nagrania sesji Q&A, ale nie
     odpowiem na Twoje pytania — to bonus zarezerwowany tylko dla osób obecnych
     na żywo
   </span>,
-  <span>
+  <span key="recording">
     rezerwując miejsce teraz, otrzymasz{" "}
     <span className="font-bold">nagranie spotkania!</span> Więc bez obaw: jeśli
     coś Ci wypadnie, możesz przerobić materiał w innym terminie, w

@@ -98,21 +98,17 @@ const MentoringInfo = () => {
         <div className="flex flex-col md:flex-row justify-between md:gap-8">
           <ul className="lg:max-w-[500px] pt-6">
             {leftYesList.map((item, index) => (
-              <div className="flex gap-4">
+              <div key={index} className="flex gap-4">
                 <span className="text-[44px] font-extrabold">&#10003; </span>{" "}
-                <li key={index} className={listItemClass}>
-                  {item}
-                </li>
+                <li className={listItemClass}>{item}</li>
               </div>
             ))}
           </ul>
           <ul className="lg:max-w-[500px] pt-6">
             {rightYesList.map((item, index) => (
-              <div className="flex gap-4">
+              <div key={index} className="flex gap-4">
                 <span className="text-[44px] font-extrabold">&#10003; </span>{" "}
-                <li key={index} className={listItemClass}>
-                  {item}
-                </li>
+                <li className={listItemClass}>{item}</li>
               </div>
             ))}
           </ul>
@@ -125,21 +121,17 @@ const MentoringInfo = () => {
         <div className="flex flex-col md:flex-row justify-between md:gap-8 pt-4">
           <ul className="lg:max-w-[500px] pt-6">
             {leftNoList.map((item, index) => (
-              <div className="flex gap-4">
+              <div key={index} className="flex gap-4">
                 <span className="text-[44px] font-extrabold">&#10007;</span>
-                <li key={index} className={listItemClass}>
-                  {item}
-                </li>
+                <li className={listItemClass}>{item}</li>
               </div>
             ))}
           </ul>
           <ul className="lg:max-w-[500px] pt-6">
             {rightNoList.map((item, index) => (
-              <div className="flex gap-4">
+              <div key={index} className="flex gap-4">
                 <span className="text-[44px] font-extrabold">&#10007;</span>
-                <li key={index} className={listItemClass}>
-                  {item}
-                </li>
+                <li className={listItemClass}>{item}</li>
               </div>
             ))}
           </ul>

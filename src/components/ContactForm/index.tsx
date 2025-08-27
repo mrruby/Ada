@@ -18,7 +18,7 @@ const ContactForm = ({ source = "default" }: ContactFormProps) => {
         data-netlify="true"
         data-netlify-recaptcha="true"
         name="contact-page"
-        netlify-honeypot="bot-field"
+        data-netlify-honeypot="bot-field"
         aria-label="Formularz kontaktowy"
       >
         <input type="hidden" name="bot-field" aria-hidden="true" />

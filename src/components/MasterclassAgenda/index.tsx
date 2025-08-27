@@ -78,22 +78,22 @@ const listItems8 = [
 ]
 
 const plusListItems1 = [
-  <p>
+  <p key="goal">
     <span className="font-bold">Twoje cele w kampaniach reklamowych to:</span>{" "}
     pozyskanie obserwujących, zbudowanie listy newsletterowej, sprzedaż
     produktów i usług
   </p>,
-  <p>
+  <p key="results">
     zależy Ci na <span className="font-bold">osiąganiu lepszych wyników</span>{" "}
     dzięki kampaniom reklamowym
   </p>,
-  <p>
+  <p key="develop">
     chcesz{" "}
     <span className="font-bold">
       rozwijać swoją wiedzę, umiejętności i biznes
     </span>
   </p>,
-  <p>
+  <p key="marketing">
     <span className="font-bold">
       skuteczny marketing to patrzenie na liczby + kreatywna głowa
     </span>{" "}
@@ -102,40 +102,40 @@ const plusListItems1 = [
 ]
 
 const plusListItems2 = [
-  <p>
+  <p key="time">
     <span className="font-bold">
       możesz regularnie przeznaczyć czas na kampanie
     </span>{" "}
     — zdajesz sobie sprawę, że tutaj nie wystarczy zerknięcie z doskoku
   </p>,
-  <p>
+  <p key="knowledge">
     <span className="font-bold">znasz podstawową obsługę Managera reklam</span>{" "}
     — nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza, gdzie
     kliknąć, aby ustawić kampanię i stworzyć zestaw reklam to must have
   </p>,
-  <p>
+  <p key="ready">
     <span className="font-bold">
       jesteś gotowa na pracę, testowanie, analizę, modyfikacje, świętowanie
     </span>{" "}
     (tak, na to też przyjdzie czas, gdy zobaczysz rosnące wyniki)
   </p>,
-  <p>
+  <p key="budget">
     <span className="font-bold">nie chcesz lub nie masz budżetu,</span> aby
     zlecić kampanie reklamowe agencji lub freelancerowi
   </p>,
 ]
 
 const minusListItems1 = [
-  <p>
+  <p key="hope">
     masz nadzieję, że
-    <span className="font-bold"> wyniki zrobią się „same” </span>w menadżerze
+    <span className="font-bold"> wyniki zrobią się „same" </span>w menadżerze
     reklam
   </p>,
-  <p>
+  <p key="notime">
     <span className="font-bold">nie masz czasu</span> na regularną pracę nad
     kampaniami, przygotowywanie materiałów i optymalizację
   </p>,
-  <p>
+  <p key="budget100">
     <span className="font-bold">
       myślisz, że 100 zł wrzucone do Managera Reklam wystarczy
     </span>{" "}
@@ -145,11 +145,11 @@ const minusListItems1 = [
 ]
 
 const minusListItems2 = [
-  <p>
+  <p key="knowbest">
     wiesz, że<span className="font-bold"> Ty wszystko zrobisz najlepiej</span> j
     i nie interesują Cię inne perspektywy
   </p>,
-  <p>
+  <p key="never">
     <span className="font-bold">
       nigdy nie widziałaś na oczy menadżera reklam,
     </span>{" "}
@@ -157,7 +157,7 @@ const minusListItems2 = [
     najbliższe miesiące spędziła na przeklikaniu się przez system i dołączyła do
     kolejnej edycji
   </p>,
-  <p>
+  <p key="expert">
     jesteś super wymiataczką{" "}
     <span className="font-bold">
       — tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz. Brawo!
@@ -166,19 +166,19 @@ const minusListItems2 = [
 ]
 
 const plusBasicList = [
-  <p>
+  <p key="ig-ads">
     Masterclass{" "}
     <span className="font-bold">
-      „Reklamy IG, które budują zaangażowaną społeczność”
+      „Reklamy IG, które budują zaangażowaną społeczność"
     </span>
   </p>,
-  <p>
+  <p key="email-list">
     Masterclass{" "}
-    <span className="font-bold">„Lista mailowa, która przyciąga klientów”</span>
+    <span className="font-bold">„Lista mailowa, która przyciąga klientów"</span>
   </p>,
-  <p>
+  <p key="auto-ads">
     Masterclass{" "}
-    <span className="font-bold">„Reklamy, które sprzedają na automacie”</span>
+    <span className="font-bold">„Reklamy, które sprzedają na automacie"</span>
   </p>,
 ]
 
@@ -224,16 +224,20 @@ const pakietProList = [
 ]
 
 const newlistItems1 = [
-  <p>Otrzymasz konkretną instrukcję krok po kroku ze wskazaniem "co i jak"</p>,
-  <p>
+  <p key="instruction">
+    Otrzymasz konkretną instrukcję krok po kroku ze wskazaniem "co i jak"
+  </p>,
+  <p key="access">
     Dostęp do nagrań przez 12 miesięcy - oglądasz kiedy chcesz, ile razy
     potrzebujesz
   </p>,
 ]
 
 const newlistItems2 = [
-  <p>Nauczysz się kampanii od podstaw, nawet jeśli dopiero zaczynasz</p>,
-  <p>
+  <p key="learn">
+    Nauczysz się kampanii od podstaw, nawet jeśli dopiero zaczynasz
+  </p>,
+  <p key="setup">
     Ustawisz kampanie, które poprowadzą klienta od zainteresowania do zakupu
   </p>,
 ]

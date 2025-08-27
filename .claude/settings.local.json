@@ -13,7 +13,8 @@
       "Bash(yarn list:*)",
       "WebFetch(domain:eslint.org)",
       "WebFetch(domain:typescript-eslint.io)",
-      "Bash(yarn add:*)"
+      "Bash(yarn add:*)",
+      "Bash(yarn lint:*)"
     ],
     "deny": []
   }

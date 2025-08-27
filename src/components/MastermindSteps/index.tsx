@@ -852,9 +852,8 @@ const MastermindSteps = ({ version }: { version: number }) => {
               ...featuresDataSecondRow2,
               ...featuresDataThirdRow3,
             ].map((feature, index) => (
-              <div className="w-full max-w-[320px] mx-auto">
+              <div key={index} className="w-full max-w-[320px] mx-auto">
                 <FeatureBox
-                  key={index}
                   text={feature.text}
                   number={feature.number}
                   styleText="font-bold"

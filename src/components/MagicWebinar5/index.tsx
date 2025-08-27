@@ -9,7 +9,7 @@ interface TeamMember {
   imageUrl: string
 }
 
-const MagicWebinar5 = ({ version = 1 }: { version?: number }) => {
+const MagicWebinar5 = () => {
   const teamMember: TeamMember = {
     name: "Adrianna Promis-Urbas",
     title: "Specjalistka od kampanii reklamowych z 9-letnim doświadczeniem",

@@ -7,7 +7,7 @@ type ListItem = {
   answer: string | React.JSX.Element
 }
 
-const MagicWebinar11 = ({ version = 1 }: { version?: number }) => {
+const MagicWebinar11 = () => {
   const faqList: ListItem[] = [
     {
       question: "Do kiedy dostępne jest nagranie?",

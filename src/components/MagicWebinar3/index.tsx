@@ -3,18 +3,7 @@ import { Button } from "helpers/Button"
 import React from "react"
 import Typography from "../shared/Typography"
 
-const MagicWebinar3 = ({ version = 1 }: { version?: number }) => {
-  const isPinkVersion = version === 2
-  const primaryColor = isPinkVersion
-    ? "text-ada-magicPurple"
-    : "text-ada-magicOrange"
-  const secondaryColor = isPinkVersion
-    ? "text-ada-pink7"
-    : "text-ada-magicPurple"
-  const backgroundColor = isPinkVersion
-    ? "bg-ada-newPurple2"
-    : "bg-ada-magicPurple"
-
+const MagicWebinar3 = () => {
   const targetAudiences = [
     {
       title: "Jesteś marką osobistą lub soloprzedsiębiorczynią",

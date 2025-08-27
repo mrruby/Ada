@@ -1,5 +1,4 @@
 import { Button } from "helpers/Button"
-import { MagicSunPink, MagicSunYellow } from "helpers/LayoutElements"
 import React from "react"
 
 const MagicWebinar10 = ({ version = 1 }: { version?: number }) => {
@@ -12,13 +11,6 @@ const MagicWebinar10 = ({ version = 1 }: { version?: number }) => {
       : "bg-ada-magicOrange hover:bg-ada-magicOrange/90",
     buttonText: isVersion2 ? "text-white" : "text-ada-magicPurple",
   }
-
-  const renderSun = (position: string, rotate: string) =>
-    isVersion2 ? (
-      <MagicSunYellow mobileLeft={position} rotate={rotate} />
-    ) : (
-      <MagicSunPink mobileLeft={position} rotate={rotate} />
-    )
 
   return (
     <div

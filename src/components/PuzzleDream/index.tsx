@@ -1,4 +1,4 @@
-import { PuzzlePink, SmallPuzzlePink } from "helpers/LayoutElements"
+import { SmallPuzzlePink } from "helpers/LayoutElements"
 import React from "react"
 
 const PuzzleDream: React.FC = () => {

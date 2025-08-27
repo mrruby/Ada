@@ -17,7 +17,6 @@ const BannerBox3 = ({
   subtitle,
   description,
   styles,
-  url,
 }: BannerBox2Props) => {
   const content = (
     <div

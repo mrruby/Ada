@@ -8,11 +8,7 @@ interface MastermindVideoProps {
   targetDate: Date
 }
 
-const MastermindVideo = ({
-  videoUrl,
-  buttonUrl,
-  targetDate,
-}: MastermindVideoProps) => {
+const MastermindVideo = ({ videoUrl, targetDate }: MastermindVideoProps) => {
   return (
     <div className="flex flex-col pb-20 pt-20 md:pt-14 gap-10 px-2">
       <div className="flex flex-col items-center gap-2 mx-auto pb-8">
