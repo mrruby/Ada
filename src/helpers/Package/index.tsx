@@ -9,7 +9,7 @@ type IPackage = {
 
 const Package = ({ title, desc, price, link }: IPackage) => {
   return (
-    <div className="max-w-[400px] min-h-[250px] p-4 text-center p-8">
+    <div className="max-w-[400px] min-h-[250px] text-center p-8">
       <h3 className="font-bold text-adaBase"> {title}</h3>
       <p className="my-4"> {desc}</p>
       <div className="relative">
