@@ -20,7 +20,7 @@ const MagicWebinar11 = () => {
     },
     {
       question: "Naprawdę 0 zł?",
-      answer: "Tak. Wersja płatna jest opcjonalna.",
+      answer: "Tak. Wersja płatna po 17 września jest opcjonalna.",
     },
     {
       question: "Jak długo będą trwały warsztaty?",
