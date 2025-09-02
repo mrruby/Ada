@@ -1,3 +1,4 @@
+import CountdownBanner2 from "components/CountdownBanner2"
 import Layout from "components/Layout"
 import MagicWebinar1 from "components/MagicWebinar1"
 import MagicWebinar10 from "components/MagicWebinar10"
@@ -31,6 +32,7 @@ const MagicWebinarPage = () => {
       <MagicWebinarSignup />
       <MagicWebinar11 />
       <MagicWebinarFormBottom />
+      <CountdownBanner2 />
     </Layout>
   )
 }
