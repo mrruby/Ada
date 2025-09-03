@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 interface CountdownTimerProps {
   targetDate: Date
   text?: string
+  color?: string
 }
 
 const TimeSegment: React.FC<{ label: string; value: number }> = ({
@@ -20,6 +21,7 @@ const TimeSegment: React.FC<{ label: string; value: number }> = ({
 const CountdownTimer: React.FC<CountdownTimerProps> = ({
   targetDate,
   text,
+  color,
 }) => {
   const calculateTimeLeft = () => {
     const difference = +targetDate - +new Date()
@@ -47,14 +49,23 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
     return () => clearTimeout(timer)
   })
 
+  const isTailwindClass = color?.startsWith("bg-")
+  const containerClass = `flex w-full gap-2 sm:gap-4 md:gap-8 lg:max-w-[660px] justify-around px-2 sm:px-4 py-2 ${
+    isTailwindClass ? color : "bg-ada-light-pink"
+  }`
+
   return (
-    <div className="flex flex-col items-center w-full px-2 sm:px-4">
+    <div className="flex flex-col items-center px-2 sm:px-4">
       {text && (
         <p className="mb-2 text-lg sm:text-xl md:text-2xl font-bold text-center">
           ✨ {text} ✨
         </p>
       )}
-      <div className="flex w-full gap-2 sm:gap-4 md:gap-8 lg:max-w-[660px] justify-around bg-ada-light-pink px-2 sm:px-4 py-2">
+      <div
+        className={containerClass}
+        style={!isTailwindClass && color ? { backgroundColor: color } : {}}
+      >
+        {" "}
         <TimeSegment label="DNI" value={timeLeft.days} />
         <TimeSegment label="GODZIN" value={timeLeft.hours} />
         <TimeSegment label="MINUT" value={timeLeft.minutes} />
