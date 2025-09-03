@@ -3,6 +3,7 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner4 from "components/MagicBanner4"
 import MagicBioBanner3 from "components/MagicBioBanner3"
 import MagicCollectiveBanner from "components/MagicCollectiveBanner"
+import MagicOpinions from "components/MagicOpinions"
 import SEO from "components/seo"
 import React from "react"
 
@@ -36,6 +37,9 @@ const MagicInvitationPage2 = (): JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <MagicBioBanner3 />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <MagicOpinions />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-magic-pink">
         <div className="max-w-4xl mx-auto">
