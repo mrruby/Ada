@@ -5,6 +5,7 @@ import Card from "../shared/Card"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 import MagicTile from "./MagicTile"
+import MagicTile2 from "./MagicTile2"
 
 const TimeBox = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-white rounded-lg p-4 text-3xl font-bold min-w-[60px] text-center">
@@ -63,6 +64,65 @@ const magicTilesContent2 = [
     title: "Ekskluzywny dostęp",
     description:
       "Najnowsze autorskie szkolenia i materiały dostępne w tylko w MAGIC. Pssst… wpisz kod KOALA, ale nie mów nikomu.",
+  },
+]
+
+const magicTilesContent3 = [
+  {
+    colors: "bg-ada-magicOrange2 text-ada-text",
+    title: "👩‍💻 WARSZTATY TEMATYCZNE",
+    description:
+      "2 specjalistyczne sesje miesięcznie - głęboko merytoryczne, zawsze na czasie!",
+  },
+  {
+    colors: "bg-ada-magicPink4 text-ada-text",
+
+    title: "👩 Wsparcie I MOTYWACJA",
+    description:
+      "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko2 specjalistyczne sesje miesięcznie - głęboko merytoryczne, zawsze na czasie!",
+  },
+  {
+    colors: "bg-ada-magicPurple4 text-ada-text",
+    title: "📝 Prasówki: NIE TYLKO O REKLAMACH",
+    description:
+      "najświeższe nowinki ze świata marketingu wprost z raportów i od ekspertów z branży",
+  },
+]
+
+const magicTilesContent4 = [
+  {
+    colors: "bg-ada-magicPurple4 text-ada-text",
+    title: "🤝 KONSULTACJE GRUPOWE",
+    description:
+      "spotkania, na których problemy marketingowe  stają się dziecinnie prostą zabawą",
+  },
+  {
+    colors: "bg-ada-magicOrange2 text-ada-text",
+    title: "👥 dostęp do zespołu 4  ekspertek",
+    description:
+      "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach",
+  },
+]
+
+const magicTilesContent5 = [
+  {
+    colors: "bg-ada-magicPink4 text-ada-text",
+    title: "🛠️ Wsparcie techniczne",
+    description:
+      "konsultacje pisemne przy wdrażaniu konkretnych rozwiązań reklamowych",
+  },
+  {
+    colors: "bg-ada-magicPurple4 text-ada-text",
+
+    title: "🤗 SPOŁECZNOŚĆ I ZROZUMIENIE",
+    description:
+      "Społeczność przedsiębiorczych kobiet zorientowanych na sukces",
+  },
+  {
+    colors: "bg-ada-magicPink4 text-ada-text",
+    title: "💎 Ekskluzywny dostęp",
+    description:
+      "Najnowsze autorskie szkolenia i materiały dostępne w tylko w MAGICwieższe nowinki ze świata marketingu wprost z raportów i od ekspertów z branży",
   },
 ]
 
@@ -186,6 +246,96 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               height={1000}
               formats={["auto", "webp", "avif"]}
               quality={100}
+            />
+          </div>
+        </div>
+      )}
+      {version == 3 && (
+        <div className="text-center text-black -mb-10">
+          <div className="text-black">
+            <Typography variant="h2" className="mb-2 animate-bounce uppercase">
+              Co sprawia, że <span className="text-ada-magicPink4">MAGIC</span>{" "}
+              jest wyjątkowy?
+            </Typography>
+            <Typography variant="body" className="pt-4">
+              Tutaj nie znajdziesz nagrań bez możliwości kontaktu.
+              <br />
+              <b>To Twój podręczny abonament na marketing! </b>
+            </Typography>
+            <Typography variant="h2" className="pt-4 font-bold uppercase">
+              ✅ Dostajesz:
+            </Typography>
+          </div>
+        </div>
+      )}
+      {version == 4 && (
+        <div
+          className="flex flex-col items-center relative"
+          onMouseOver={handleMouseEnter}
+        >
+          <div className="flex flex-col xl:flex-row gap-4 relative z-10 text-black w-full">
+            <div className="flex flex-col gap-6 md:gap-2 pt-8 md:min-w-[360px]">
+              {magicTilesContent3.map((item, i) => (
+                <div
+                  key={i}
+                  className={`${
+                    hasAnimated ? "lg:animate-slideInFromLeft opacity-100" : " "
+                  }`}
+                >
+                  <MagicTile2
+                    colors={item.colors}
+                    title={item.title}
+                    description={item.description}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col gap-6 md:gap-2 pt-8 md:min-w-[360px]">
+              {magicTilesContent4.map((item, i) => (
+                <div
+                  key={i}
+                  className={`${
+                    hasAnimated
+                      ? "lg:animate-slideInFromRight opacity-100"
+                      : " "
+                  }`}
+                >
+                  <MagicTile2
+                    colors={item.colors}
+                    title={item.title}
+                    description={item.description}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col gap-6 md:gap-2 pt-8 md:min-w-[360px]">
+              {magicTilesContent5.map((item, i) => (
+                <div
+                  key={i}
+                  className={`${
+                    hasAnimated
+                      ? "lg:animate-slideInFromRight opacity-100"
+                      : " "
+                  }`}
+                >
+                  <MagicTile2
+                    colors={item.colors}
+                    title={item.title}
+                    description={item.description}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="md:-mt-[400px] mb-[-30px] md:mb-[-96px] md:ml-[40px]">
+            <StaticImage
+              loading="eager"
+              src="../../images/ada_purple.webp"
+              alt="Ada w telefonie"
+              placeholder="blurred"
+              width={781}
+              height={838}
+              className="object-contain"
             />
           </div>
         </div>

@@ -135,6 +135,58 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             </div>
           </div>
         )}
+        {version == 3 && (
+          <div className="text-center">
+            <Typography variant="h1" className="text-ada-black animate-bounce">
+              Kogo spotkasz w{" "}
+              <span className="text-ada-magicPink4">MAGIC?</span>
+            </Typography>
+            <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
+              {peopleContent.slice(0, 2).map((item, i) => (
+                <PersonBox
+                  key={i}
+                  name={item.name}
+                  description={item.description}
+                  img={item.img}
+                />
+              ))}
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 pt-8 mb-8 justify-center">
+              {peopleContent.slice(2, 4).map((item, i) => (
+                <PersonBox
+                  key={i}
+                  name={item.name}
+                  description={item.description}
+                  img={item.img}
+                />
+              ))}
+            </div>
+            <Typography
+              variant="h3"
+              className="text-ada-black max-w-[800px] m-auto mt-12"
+            >
+              <span className="text-ada-magicPink4">
+                Dołącz do społeczności kobiet,{" "}
+              </span>
+              <br />
+              <span className="font-normal">
+                które wspólnie rozwijają swoje biznesy i wspierają się w drodze
+                do sukcesu w reklamach Meta.
+              </span>
+            </Typography>
+            <div className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto animate-spin-slow">
+              <StaticImage
+                src="../../images/arrowMagic.svg"
+                alt=""
+                layout="fixed"
+                width={16}
+                height={15}
+                placeholder="blurred"
+                quality={90}
+              />
+            </div>
+          </div>
+        )}
       </Section>
     </>
   )
