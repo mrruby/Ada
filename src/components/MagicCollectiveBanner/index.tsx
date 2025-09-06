@@ -4,6 +4,7 @@ import TypingAnimation from "helpers/TypingAnimation"
 import React, { useEffect } from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
+import MagicCollectiveForm from "../MagicCollectiveForm"
 
 declare global {
   interface Window {
@@ -930,11 +931,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
           </div>
           <section id="ankieta">
             <div className="flex justify-center w-full mx-auto my-8">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLScWWFTLKbI4z7gIHU7-6gDcBcKLmlDP1QgB3EfODdomkHmpYw/viewform?embedded=true"
-                width="640"
-                height="800"
-              ></iframe>
+              <MagicCollectiveForm />
             </div>
           </section>
         </Section>
