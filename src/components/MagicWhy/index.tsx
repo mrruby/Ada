@@ -461,8 +461,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                 src="../../images/pyt1.webp"
                 alt=""
                 placeholder="blurred"
-                width={568}
-                height={252}
+                width={464}
+                height={260}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -473,8 +473,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                 src="../../images/pyt2.webp"
                 alt=""
                 placeholder="blurred"
-                width={582}
-                height={187}
+                width={531}
+                height={312}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -487,8 +487,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                 src="../../images/pyt3.webp"
                 alt=""
                 placeholder="blurred"
-                width={700}
-                height={200}
+                width={544}
+                height={128}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -499,8 +499,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                 src="../../images/pyt4.webp"
                 alt=""
                 placeholder="blurred"
-                width={600}
-                height={120}
+                width={420}
+                height={166}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -513,8 +513,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                 src="../../images/pyt5.webp"
                 alt=""
                 placeholder="blurred"
-                width={1200}
-                height={300}
+                width={510}
+                height={170}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
@@ -525,8 +525,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                 src="../../images/pyt6.webp"
                 alt=""
                 placeholder="blurred"
-                width={1000}
-                height={274}
+                width={444}
+                height={210}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
