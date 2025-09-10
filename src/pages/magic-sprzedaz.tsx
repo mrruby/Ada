@@ -5,11 +5,11 @@ import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
-import MagicFAQ from "components/MagicFAQ"
 import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicSaleBanner from "components/MagicSaleBanner"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
+import MasterclassFAQ from "components/MasterclassFAQ"
 import SEO from "components/seo"
 import React from "react"
 
@@ -53,8 +53,8 @@ const MagicSalePage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicCommunityOpinions />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
-        <MagicFAQ />
+      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+        <MasterclassFAQ version={5} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicFinalCTA />
