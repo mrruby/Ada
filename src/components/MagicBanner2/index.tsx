@@ -109,7 +109,11 @@ const MagicBanner2 = ({ version }: { version: number }) => {
   }
   return (
     <>
-      <Section className="text-black relative overflow-hidden" padding="py-8 md:py-12" maxWidth="2xl">
+      <Section
+        className="text-black relative overflow-hidden"
+        padding="py-8 md:py-12"
+        maxWidth="2xl"
+      >
         {version == 1 && (
           <div>
             <div

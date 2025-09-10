@@ -606,7 +606,7 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                   </span>
                 </>
               }
-              sectionId="signup"
+              sectionId="magic-package"
               textSize="text-sm md:text-base"
               btnStyle="bg-ada-magicPink4
                                 font-semibold tracking-wide h-[100px] 
