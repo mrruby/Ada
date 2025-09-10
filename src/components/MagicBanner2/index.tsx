@@ -109,7 +109,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
   }
   return (
     <>
-      <Section className="text-black relative overflow-hidden">
+      <Section className="text-black relative overflow-hidden" padding="py-8 md:py-12" maxWidth="2xl">
         {version == 1 && (
           <div>
             <div
@@ -182,7 +182,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
           </div>
         )}
         {version == 2 && (
-          <div>
+          <div className="w-full">
             <div
               className="max-w-4xl mx-auto mb-8 md:mb-20 text-center text-black"
               onMouseOver={handleMouseEnter}
@@ -198,8 +198,8 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                 Jako członkini możesz na przykład:
               </Typography>
             </div>
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="w-full md:w-auto flex-shrink-0 px-4 md:px-8">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 md:-mx-32 lg:-mx-48">
+              <div className="w-full md:w-auto flex-shrink-0 px-4 md:pl-0 md:pr-8">
                 <StaticImage
                   loading="eager"
                   src="../../images/ada_magic.webp"
@@ -211,8 +211,8 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                   quality={100}
                 />
               </div>
-              <div className="w-full md:w-2/3 flex flex-col justify-center">
-                <div className="flex flex-col gap-4 md:gap-6 max-w-[800px]">
+              <div className="w-full md:w-3/4 flex flex-col justify-center px-4 md:px-0">
+                <div className="flex flex-col gap-4 md:gap-6 w-full">
                   {/* First row: 2/3 and 1/3 */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
                     <div
