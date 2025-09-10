@@ -183,17 +183,20 @@ const MagicBioBanner = ({ version }: { version: number }) => {
                 do sukcesu w reklamach Meta.
               </span>
             </Typography>
-            <div className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto animate-spin-slow">
+            <a
+              href="#magic-package"
+              className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto animate-spin-slow cursor-pointer hover:opacity-80 transition-opacity block"
+            >
               <StaticImage
                 src="../../images/arrowMagic.svg"
-                alt=""
+                alt="Przejdź do pakietu"
                 layout="fixed"
                 width={16}
                 height={15}
                 placeholder="blurred"
                 quality={90}
               />
-            </div>
+            </a>
           </div>
         )}
       </Section>

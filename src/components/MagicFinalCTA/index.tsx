@@ -9,7 +9,7 @@ const MagicFinalCTA = () => {
         <Button
           type="button"
           text={<span className="font-bold uppercase">Dołączam do Magic!</span>}
-          sectionId="top"
+          sectionId="magic-package"
           textSize="text-lg md:text-xl"
           btnStyle="bg-ada-magicPink4 text-black 
                     font-semibold tracking-wide h-[60px] md:h-[80px] 

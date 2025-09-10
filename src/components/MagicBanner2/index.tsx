@@ -198,20 +198,20 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                 Jako członkini możesz na przykład:
               </Typography>
             </div>
-            <div className="z-1 md:absolute -left-12 top-40">
-              <StaticImage
-                loading="eager"
-                src="../../images/ada_magic.webp"
-                alt="Ada w telefonie"
-                placeholder="blurred"
-                width={620}
-                height={600}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-            <div className="w-full flex justify-end">
-              <div className="flex flex-col justify-center">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="w-full md:w-1/3 flex-shrink-0 px-4 md:px-0">
+                <StaticImage
+                  loading="eager"
+                  src="../../images/ada_magic.webp"
+                  alt="Ada w telefonie"
+                  placeholder="blurred"
+                  width={480}
+                  height={464}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
+              </div>
+              <div className="w-full md:w-2/3 flex flex-col justify-center">
                 <div className="flex flex-col gap-4 md:gap-6 max-w-[800px]">
                   {/* First row: 2/3 and 1/3 */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">

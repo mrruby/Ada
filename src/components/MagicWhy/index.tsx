@@ -350,7 +350,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                 <Button
                   type="button"
                   text={<span className=" font-bold"> WCHODZĘ W TO!</span>}
-                  url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+                  sectionId="magic-package"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                   btnStyle="bg-ada-magicPurple4
                                       tracking-wide 
@@ -413,7 +413,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                 <Button
                   type="button"
                   text={<span className=" font-bold"> Tak, Dołączam!</span>}
-                  url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+                  sectionId="magic-package"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                   btnStyle="bg-ada-magicPink4
                                       tracking-wide 
@@ -478,8 +478,8 @@ const MagicWhy = ({ part }: { part: number }) => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="lg:-ml-80">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center lg:-space-x-4">
+            <div>
               <StaticImage
                 loading="eager"
                 src="../../images/pyt3.webp"
@@ -491,7 +491,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                 quality={100}
               />
             </div>
-            <div className="lg:-ml-[500px] -mt-10">
+            <div className="lg:-mt-2">
               <StaticImage
                 loading="eager"
                 src="../../images/pyt4.webp"
@@ -504,8 +504,8 @@ const MagicWhy = ({ part }: { part: number }) => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="lg:ml-[500px]">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center lg:-space-x-4 mt-8">
+            <div>
               <StaticImage
                 loading="eager"
                 src="../../images/pyt5.webp"
@@ -517,7 +517,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                 quality={100}
               />
             </div>
-            <div className="-mt-12 lg:ml-[480px]">
+            <div className="lg:-mt-2">
               <StaticImage
                 loading="eager"
                 src="../../images/pyt6.webp"

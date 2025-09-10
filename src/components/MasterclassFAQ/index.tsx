@@ -453,15 +453,6 @@ const MasterclassFAQ = ({ version }: { version: number }) => {
       ),
     },
     {
-      question: "💰 Dlaczego warto zapisać się na listę oczekujących?",
-      answer: (
-        <>
-          Dla osób zapisanych na listę oczekujących szykuję specjalne oferty i
-          daję im znać o możliwości dołączenia w pierwszej kolejności.
-        </>
-      ),
-    },
-    {
       question: "Ile czasu zajmuje MAGIC?",
       answer: (
         <>
