@@ -297,129 +297,129 @@ const MagicWhy = ({ part }: { part: number }) => {
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
             <div className="flex flex-col md:flex-row gap-8">
-                <div className="flex flex-col gap-2 items-center">
-                  <ul className="max-w-md bg-ada-white3 py-8 border-[3px] rounded-3xl border-ada-magicPurple4">
-                    <Typography
-                      variant="h2"
-                      className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
-                    >
-                      🧑‍🎓 Przedsiębiorczyń:
-                    </Typography>
-                    <div className="px-8">
-                      <li className="mb-3">
-                        ✅ dla osób, które
-                        <span className="font-bold">
-                          {" "}
-                          jeszcze nie prowadziły reklam
-                        </span>{" "}
-                        i potrzebują pewnego startu w świecie płatnej promocji
-                      </li>
-                      <li className="mb-3">
-                        ✅ dla tych, którzy{" "}
-                        <span className="font-bold">
-                          boją się, że źle klikną i stracą budżet reklamowy
-                        </span>{" "}
-                        na nieefektywnych kampaniach
-                      </li>
-                      <li className="mb-3">
-                        ✅ które mają{" "}
-                        <span className="font-bold">
-                          pierwsze reklamy za sobą (lub klikały w &quot;promuj
-                          post&quot;)
-                        </span>{" "}
-                        ale nie są zadowolone z wyników
-                      </li>
-                      <li className="mb-3">
-                        ✅ które do tej pory
-                        <span className="font-bold">
-                          {" "}
-                          polegały głównie na działaniach organicznych
-                        </span>{" "}
-                        i chcą bezpiecznie wejść w reklamy
-                      </li>
-                      <li>
-                        ✅{" "}
-                        <span className="font-bold">
-                          {" "}
-                          dla osób, które zlecały reklamy na zewnątrz,
-                        </span>{" "}
-                        ale chcą przejąć kontrolę nad swoim budżetem reklamowym
-                      </li>
-                    </div>
-                  </ul>
-                  <Button
-                    type="button"
-                    text={<span className=" font-bold"> WCHODZĘ W TO!</span>}
-                    url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
-                    textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
-                    btnStyle="bg-ada-magicPurple4
+              <div className="flex flex-col gap-2 items-center">
+                <ul className="max-w-md bg-ada-white3 py-8 border-[3px] rounded-3xl border-ada-magicPurple4">
+                  <Typography
+                    variant="h2"
+                    className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
+                  >
+                    🧑‍🎓 Przedsiębiorczyń:
+                  </Typography>
+                  <div className="px-8">
+                    <li className="mb-3">
+                      ✅ dla osób, które
+                      <span className="font-bold">
+                        {" "}
+                        jeszcze nie prowadziły reklam
+                      </span>{" "}
+                      i potrzebują pewnego startu w świecie płatnej promocji
+                    </li>
+                    <li className="mb-3">
+                      ✅ dla tych, którzy{" "}
+                      <span className="font-bold">
+                        boją się, że źle klikną i stracą budżet reklamowy
+                      </span>{" "}
+                      na nieefektywnych kampaniach
+                    </li>
+                    <li className="mb-3">
+                      ✅ które mają{" "}
+                      <span className="font-bold">
+                        pierwsze reklamy za sobą (lub klikały w &quot;promuj
+                        post&quot;)
+                      </span>{" "}
+                      ale nie są zadowolone z wyników
+                    </li>
+                    <li className="mb-3">
+                      ✅ które do tej pory
+                      <span className="font-bold">
+                        {" "}
+                        polegały głównie na działaniach organicznych
+                      </span>{" "}
+                      i chcą bezpiecznie wejść w reklamy
+                    </li>
+                    <li>
+                      ✅{" "}
+                      <span className="font-bold">
+                        {" "}
+                        dla osób, które zlecały reklamy na zewnątrz,
+                      </span>{" "}
+                      ale chcą przejąć kontrolę nad swoim budżetem reklamowym
+                    </li>
+                  </div>
+                </ul>
+                <Button
+                  type="button"
+                  text={<span className=" font-bold"> WCHODZĘ W TO!</span>}
+                  url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+                  textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
+                  btnStyle="bg-ada-magicPurple4
                                       tracking-wide 
                                       p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
-                  />
-                </div>
-                <div className="flex flex-col gap-2 items-center">
-                  <ul className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] rounded-3xl border-ada-magicPink4">
-                    <Typography
-                      variant="h2"
-                      className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
-                    >
-                      🧑‍🎓 Marketerek:
-                    </Typography>
-                    <div className="px-8">
-                      <li className="mb-3">
-                        ✅ które chcą
-                        <span className="font-bold">
-                          {" "}
-                          poznać najnowsze trendy i narzędzia reklamowe,
-                          wyprzedzając konkurencję{" "}
-                        </span>
-                      </li>
-                      <li className="mb-3">
-                        ✅{" "}
-                        <span className="font-bold">
-                          dla social media managerek, wirtualnych asystentek,
-                        </span>{" "}
-                        które otrzymują zapytania o reklamy i{" "}
-                        <span className="font-bold">
-                          chcą zarabiać na prowadzeniu kampanii{" "}
-                        </span>
-                      </li>
-                      <li className="mb-3">
-                        ✅ dla tych, którzy
-                        <span className="font-bold">
-                          {" "}
-                          chcą nauczyć się lepiej gospodarować budżetem
-                        </span>{" "}
-                        i optymalizować koszty pozyskania klienta
-                      </li>
-                      <li className="mb-3">
-                        ✅ które chcą{" "}
-                        <span className="font-bold">
-                          {" "}
-                          skonsultować swoje wyniki
-                        </span>{" "}
-                        i dowiedzieć się, jak je poprawić
-                      </li>
-                      <li className="mb-3">
-                        ✅ dla tych, którzy
-                        <span className="font-bold">
-                          {" "}
-                          już prowadzą reklamy i chcą robić to lepiej,
-                        </span>{" "}
-                        osiągając wyższe ROAS
-                      </li>
-                    </div>
-                  </ul>
-                  <Button
-                    type="button"
-                    text={<span className=" font-bold"> Tak, Dołączam!</span>}
-                    url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
-                    textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
-                    btnStyle="bg-ada-magicPink4
+                />
+              </div>
+              <div className="flex flex-col gap-2 items-center">
+                <ul className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] rounded-3xl border-ada-magicPink4">
+                  <Typography
+                    variant="h2"
+                    className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
+                  >
+                    🧑‍🎓 Marketerek:
+                  </Typography>
+                  <div className="px-8">
+                    <li className="mb-3">
+                      ✅ które chcą
+                      <span className="font-bold">
+                        {" "}
+                        poznać najnowsze trendy i narzędzia reklamowe,
+                        wyprzedzając konkurencję{" "}
+                      </span>
+                    </li>
+                    <li className="mb-3">
+                      ✅{" "}
+                      <span className="font-bold">
+                        dla social media managerek, wirtualnych asystentek,
+                      </span>{" "}
+                      które otrzymują zapytania o reklamy i{" "}
+                      <span className="font-bold">
+                        chcą zarabiać na prowadzeniu kampanii{" "}
+                      </span>
+                    </li>
+                    <li className="mb-3">
+                      ✅ dla tych, którzy
+                      <span className="font-bold">
+                        {" "}
+                        chcą nauczyć się lepiej gospodarować budżetem
+                      </span>{" "}
+                      i optymalizować koszty pozyskania klienta
+                    </li>
+                    <li className="mb-3">
+                      ✅ które chcą{" "}
+                      <span className="font-bold">
+                        {" "}
+                        skonsultować swoje wyniki
+                      </span>{" "}
+                      i dowiedzieć się, jak je poprawić
+                    </li>
+                    <li className="mb-3">
+                      ✅ dla tych, którzy
+                      <span className="font-bold">
+                        {" "}
+                        już prowadzą reklamy i chcą robić to lepiej,
+                      </span>{" "}
+                      osiągając wyższe ROAS
+                    </li>
+                  </div>
+                </ul>
+                <Button
+                  type="button"
+                  text={<span className=" font-bold"> Tak, Dołączam!</span>}
+                  url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+                  textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
+                  btnStyle="bg-ada-magicPink4
                                       tracking-wide 
                                       p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
-                  />
-                </div>
+                />
+              </div>
             </div>
           </div>
         </div>
