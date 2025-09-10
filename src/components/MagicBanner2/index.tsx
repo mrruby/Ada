@@ -279,7 +279,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                       WYBIERAM!
                     </span>
                   }
-                  sectionId="signup"
+                  url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
                   textSize="text-sm md:text-base"
                   btnStyle="bg-ada-white 
                       font-semibold tracking-wide h-[48px] md:h-[70px] 

@@ -56,7 +56,7 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
             <Button
               type="button"
               text={<span>Dołączam!</span>}
-              url="signup"
+              url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
               textSize="text-xs md:text-adaSubtitleSecondary uppercase font-extrabold text-black"
               btnStyle="bg-ada-magicPink4
                       tracking-wide 
@@ -114,7 +114,7 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
             <Button
               type="button"
               text={<span>Tak, dołączam!</span>}
-              url="signup"
+              url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
               textSize="text-xs md:text-adaSubtitleSecondary uppercase font-extrabold text-black"
               btnStyle="bg-ada-magicPink4
                       tracking-wide 

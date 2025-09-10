@@ -295,9 +295,8 @@ const MagicWhy = ({ part }: { part: number }) => {
               jest dla...
             </Typography>
           </div>
-          <div className="flex flex-col items-center md:flex-row md:justify-between gap-8">
-            <div className="w-full text-black">
-              <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+            <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex flex-col gap-2 items-center">
                   <ul className="max-w-md bg-ada-white3 py-8 border-[3px] rounded-3xl border-ada-magicPurple4">
                     <Typography
@@ -351,7 +350,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                   <Button
                     type="button"
                     text={<span className=" font-bold"> WCHODZĘ W TO!</span>}
-                    url="signup"
+                    url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
                     textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                     btnStyle="bg-ada-magicPurple4
                                       tracking-wide 
@@ -414,14 +413,13 @@ const MagicWhy = ({ part }: { part: number }) => {
                   <Button
                     type="button"
                     text={<span className=" font-bold"> Tak, Dołączam!</span>}
-                    url="signup"
+                    url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
                     textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                     btnStyle="bg-ada-magicPink4
                                       tracking-wide 
                                       p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
                   />
                 </div>
-              </div>
             </div>
           </div>
         </div>
