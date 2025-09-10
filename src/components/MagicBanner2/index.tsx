@@ -90,7 +90,9 @@ const bannerContent2 = [
     bgColor: "bg-ada-magicPurple4",
     description: (
       <p>
-        <span className="font-bold">Ustawić pierwszą automatyzację w reklamach</span>
+        <span className="font-bold">
+          Ustawić pierwszą automatyzację w reklamach
+        </span>
       </p>
     ),
     styles: "text-black",

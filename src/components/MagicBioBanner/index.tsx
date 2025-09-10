@@ -141,7 +141,10 @@ const MagicBioBanner = ({ version }: { version: number }) => {
               Kogo spotkasz w{" "}
               <span className="text-ada-magicPink4">MAGIC?</span>
             </Typography>
-            <Typography variant="h3" className="mt-8 mb-4 text-ada-magicPink4 font-bold">
+            <Typography
+              variant="h3"
+              className="mt-8 mb-4 text-ada-magicPink4 font-bold"
+            >
               4 specjalistki pod jednym dachem:
             </Typography>
             <Typography variant="h3" className="mb-8 text-ada-black">
