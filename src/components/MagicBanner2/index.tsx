@@ -199,14 +199,14 @@ const MagicBanner2 = ({ version }: { version: number }) => {
               </Typography>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="w-full md:w-1/3 flex-shrink-0 px-4 md:px-0">
+              <div className="w-full md:w-auto flex-shrink-0 px-4 md:px-8">
                 <StaticImage
                   loading="eager"
                   src="../../images/ada_magic.webp"
                   alt="Ada w telefonie"
                   placeholder="blurred"
-                  width={480}
-                  height={464}
+                  width={540}
+                  height={522}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />
