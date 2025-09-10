@@ -18,12 +18,12 @@ const BannerBox2 = ({
   url,
 }: BannerBox2Props) => {
   const content = (
-    <div className="relative md:mt-0">
-      <div className="absolute left-1/2 -top-8 md:-top-3 -translate-x-1/2 text-adaSubtitleThird">
+    <div className="relative md:mt-0 h-full">
+      <div className="absolute left-1/2 -top-6 -translate-x-1/2 text-5xl z-10">
         ✅
       </div>
       <div
-        className={`${bgColor} rounded-3xl p-4 md:p-5 text-center flex flex-col items-center justify-center shadow-lg md:pt-16 ${styles}`}
+        className={`${bgColor} rounded-2xl p-6 md:p-8 pt-10 md:pt-12 text-center flex flex-col items-center justify-center min-h-[120px] h-full ${styles}`}
       >
         <Typography variant="h2" className="mb-2">
           {title}

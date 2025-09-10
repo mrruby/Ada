@@ -53,7 +53,7 @@ const MagicPage = () => {
         <MagicBioBanner version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicBanner2 />
+        <MagicBanner2 version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-yellow3 z-2 relative">
         <ReferencesMentoring title5 />
