@@ -89,7 +89,9 @@ const bannerContent2 = [
   {
     bgColor: "bg-ada-magicPurple4",
     description: (
-      <p className="font-bold">Ustawić pierwszą automatyzację w reklamach</p>
+      <p>
+        <span className="font-bold">Ustawić pierwszą automatyzację w reklamach</span>
+      </p>
     ),
     styles: "text-black",
   },
@@ -105,7 +107,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
   }
   return (
     <>
-      <Section className="text-black relative">
+      <Section className="text-black relative overflow-hidden">
         {version == 1 && (
           <div>
             <div
@@ -140,7 +142,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
             </div>
             <div className="w-full flex justify-end">
               <div className="flex flex-col justify-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[800px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-[800px]">
                   {bannerContent.map((item, i) => (
                     <div
                       key={i}
@@ -208,25 +210,65 @@ const MagicBanner2 = ({ version }: { version: number }) => {
             </div>
             <div className="w-full flex justify-end">
               <div className="flex flex-col justify-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-[800px]">
-                  {bannerContent2.map((item, i) => (
+                <div className="flex flex-col gap-4 md:gap-6 max-w-[800px]">
+                  {/* First row: 2/3 and 1/3 */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
                     <div
-                      key={i}
-                      className={`${
+                      className={`md:col-span-2 h-full ${
                         hasAnimated
-                          ? i % 2 === 0
-                            ? "lg:animate-slideInFromLeft opacity-100"
-                            : "lg:animate-slideInFromRight opacity-100"
+                          ? "lg:animate-slideInFromLeft opacity-100"
                           : " "
                       }`}
                     >
                       <BannerBox2
-                        bgColor={item.bgColor}
-                        description={item.description}
-                        styles={item.styles}
+                        bgColor={bannerContent2[0].bgColor}
+                        description={bannerContent2[0].description}
+                        styles={bannerContent2[0].styles}
                       />
                     </div>
-                  ))}
+                    <div
+                      className={`md:col-span-1 h-full ${
+                        hasAnimated
+                          ? "lg:animate-slideInFromRight opacity-100"
+                          : " "
+                      }`}
+                    >
+                      <BannerBox2
+                        bgColor={bannerContent2[1].bgColor}
+                        description={bannerContent2[1].description}
+                        styles={bannerContent2[1].styles}
+                      />
+                    </div>
+                  </div>
+                  {/* Second row: 1/3 and 2/3 */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
+                    <div
+                      className={`md:col-span-1 h-full ${
+                        hasAnimated
+                          ? "lg:animate-slideInFromLeft opacity-100"
+                          : " "
+                      }`}
+                    >
+                      <BannerBox2
+                        bgColor={bannerContent2[2].bgColor}
+                        description={bannerContent2[2].description}
+                        styles={bannerContent2[2].styles}
+                      />
+                    </div>
+                    <div
+                      className={`md:col-span-2 h-full ${
+                        hasAnimated
+                          ? "lg:animate-slideInFromRight opacity-100"
+                          : " "
+                      }`}
+                    >
+                      <BannerBox2
+                        bgColor={bannerContent2[3].bgColor}
+                        description={bannerContent2[3].description}
+                        styles={bannerContent2[3].styles}
+                      />
+                    </div>
+                  </div>
                 </div>
                 <Button
                   type="button"

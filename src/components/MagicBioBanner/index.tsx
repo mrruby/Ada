@@ -141,6 +141,12 @@ const MagicBioBanner = ({ version }: { version: number }) => {
               Kogo spotkasz w{" "}
               <span className="text-ada-magicPink4">MAGIC?</span>
             </Typography>
+            <Typography variant="h3" className="mt-8 mb-4 text-ada-magicPink4 font-bold">
+              4 specjalistki pod jednym dachem:
+            </Typography>
+            <Typography variant="h3" className="mb-8 text-ada-black">
+              Meta Ads | Copywriting | Grafika | Koordynacja kampanii
+            </Typography>
             <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
               {peopleContent.slice(0, 2).map((item, i) => (
                 <PersonBox

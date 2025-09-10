@@ -3,7 +3,10 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner1 from "components/MagicBanner"
 import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
+import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
+import MagicFAQ from "components/MagicFAQ"
+import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicSaleBanner from "components/MagicSaleBanner"
 import MagicWhy from "components/MagicWhy"
 import SEO from "components/seo"
@@ -12,6 +15,7 @@ import React from "react"
 const MagicSalePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <div id="top"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicSaleBanner version={1} />
       </MaxWithBgColorContainer>
@@ -41,6 +45,15 @@ const MagicSalePage = () => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicBanner2 version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white3">
+        <MagicCommunityOpinions />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white3">
+        <MagicFAQ />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white3">
+        <MagicFinalCTA />
       </MaxWithBgColorContainer>
     </Layout>
   )
