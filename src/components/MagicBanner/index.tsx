@@ -232,6 +232,7 @@ const magicBannerContent4 = [
         </p>
       </>
     ),
+    styles: "mt-[-24px]",
   },
   {
     circleKey: "",
@@ -249,6 +250,7 @@ const magicBannerContent4 = [
         </p>
       </>
     ),
+    styles: "mb-[32px]",
   },
   {
     circleKey: "",
@@ -330,12 +332,28 @@ const magicBannerContent5 = [
 
 const MagicBanner1 = ({ version }: { version: number }) => {
   const [hasAnimated, setHasAnimated] = useState(false)
+  const [hasAnimated2, setHasAnimated2] = useState(false)
 
   const handleMouseEnter = () => {
     if (!hasAnimated) {
       setHasAnimated(true)
     }
   }
+
+  const handleMouseEnter2 = () => {
+    if (!hasAnimated2) {
+      setHasAnimated2(true)
+    }
+  }
+
+  const leftBoxes = [
+    ...magicBannerContent4.slice(0, 2),
+    ...magicBannerContent3.slice(0, 1),
+  ]
+  const rightBoxes = [
+    ...magicBannerContent2.slice(2, 3),
+    ...magicBannerContent5.slice(1, 3),
+  ]
 
   return (
     <>
@@ -507,111 +525,84 @@ const MagicBanner1 = ({ version }: { version: number }) => {
         </Section>
       )}
       {version == 4 && (
-        <Section className="text-black">
-          <Typography
-            variant="h2"
-            className="text-black leading-snug mb-6 text-center"
-          >
-            Rozpoznajesz te sytuacje?
-          </Typography>
-          <div
-            className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8"
-            style={{ gridTemplateRows: "auto auto" }}
-            onMouseOver={handleMouseEnter}
-          >
-            <div className="flex flex-col gap-2 md:gap-6">
-              {magicBannerContent4.slice(0, 2).map((item, i) => (
-                <BannerBox
-                  key={i}
-                  circleKey={item.circleKey}
-                  iconKey={item.iconKey}
-                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromLeft opacity-100" : " "}`}
-                  description={item.description}
-                />
-              ))}
+        <Section>
+          <div className="text-black" onMouseOver={handleMouseEnter2}>
+            <Typography
+              variant="h2"
+              className="text-black leading-snug mb-6 text-center"
+            >
+              Rozpoznajesz te sytuacje?
+            </Typography>
+
+            <div className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8">
+              <div className="flex flex-col gap-2 md:gap-6">
+                {leftBoxes.map((item, i) => (
+                  <BannerBox
+                    key={i}
+                    circleKey={item.circleKey}
+                    iconKey={item.iconKey}
+                    bgColor={item.bgColor}
+                    description={item.description}
+                    styles={item.styles}
+                    animationClass={
+                      hasAnimated2 ? "animate-slideInFromLeft" : ""
+                    }
+                    animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
+                  />
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-2 md:gap-6">
+                {rightBoxes.map((item, i) => (
+                  <BannerBox
+                    key={i + leftBoxes.length}
+                    circleKey={item.circleKey}
+                    iconKey={item.iconKey}
+                    bgColor={item.bgColor}
+                    description={item.description}
+                    styles={item.styles}
+                    animationClass={
+                      hasAnimated2 ? "animate-slideInFromRight" : ""
+                    }
+                    animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
+                  />
+                ))}
+              </div>
             </div>
-            <div className="row-span-2 flex items-center">
-              {magicBannerContent2.slice(2, 3).map((item, i) => (
-                <BannerBox
-                  key={i}
-                  circleKey={item.circleKey}
-                  iconKey={item.iconKey}
-                  bgColor={`${item.bgColor} ${
-                    hasAnimated ? "lg:animate-slideInFromRight opacity-100" : ""
-                  }`}
-                  description={item.description}
-                  styles={item.styles}
-                />
-              ))}
+
+            <Typography variant="h2" className="text-black text-center pt-6">
+              Rozumiemy to.
+            </Typography>
+            <Typography
+              variant="body"
+              className="text-black pt-8 text-center max-w-[600px] mx-auto pb-6"
+            >
+              Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
+              chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie
+              działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do
+              merytorycznego wsparcia, sprawdzonych strategii i inspiracji,
+              które realnie przekładają się na wyniki.
+            </Typography>
+
+            <div className="w-full flex justify-center">
+              <Button
+                type="button"
+                text={
+                  <>
+                    <span className="font-bold text-black uppercase text-adaSubtitleSecondary">
+                      TAK!
+                    </span>
+                    <br />
+                    <span className="">
+                      Zwiększam sprzedaż <br /> dzięki reklamom!
+                    </span>
+                  </>
+                }
+                sectionId="signup"
+                textSize="text-sm md:text-base"
+                btnStyle="bg-ada-magicPink4 font-semibold tracking-wide h-[100px] px-6 shadow-xl hover:opacity-90 rounded-full min-w-[330px] mt-4 m-auto"
+              />
             </div>
-          </div>
-          <div
-            className="grid md:grid-cols-2 gap-2 md:gap-8 pt-3 md:pt-0"
-            style={{ gridTemplateRows: "auto auto" }}
-          >
-            <div className="row-span-2 flex items-center">
-              {magicBannerContent3.slice(0, 1).map((item, i) => (
-                <BannerBox
-                  key={i}
-                  circleKey={item.circleKey}
-                  iconKey={item.iconKey}
-                  bgColor={`${item.bgColor} ${
-                    hasAnimated ? "lg:animate-slideInFromLeft opacity-100" : " "
-                  }`}
-                  description={item.description}
-                  styles={item.styles}
-                />
-              ))}
-            </div>
-            <div className="flex flex-col gap-6">
-              {magicBannerContent5.slice(1, 3).map((item, i) => (
-                <BannerBox
-                  key={i}
-                  circleKey={item.circleKey}
-                  iconKey={item.iconKey}
-                  bgColor={`${item.bgColor} ${
-                    hasAnimated
-                      ? "lg:animate-slideInFromRight opacity-100"
-                      : " "
-                  }`}
-                  description={item.description}
-                />
-              ))}
-            </div>
-          </div>
-          <Typography variant="h2" className="text-black text-center pt-6">
-            Rozumiemy to.
-          </Typography>
-          <Typography
-            variant="body"
-            className="text-black pt-8 text-center max-w-[600px] mx-auto pb-6"
-          >
-            Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
-            chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie
-            działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do
-            merytorycznego wsparcia, sprawdzonych strategii i inspiracji, które
-            realnie przekładają się na wyniki.
-          </Typography>
-          <div className="w-full flex justify-center">
-            <Button
-              type="button"
-              text={
-                <>
-                  <span className="font-bold text-black uppercase text-adaSubtitleSecondary">
-                    TAK!
-                  </span>
-                  <br />
-                  <span className="">
-                    Zwiększam sprzedaż <br /> dzięki reklamom!
-                  </span>
-                </>
-              }
-              sectionId="magic-package"
-              textSize="text-sm md:text-base"
-              btnStyle="bg-ada-magicPink4
-                                font-semibold tracking-wide h-[100px] 
-                                px-6 shadow-xl hover:opacity-90 rounded-full min-w-[330px] mt-4 m-auto"
-            />
           </div>
         </Section>
       )}
