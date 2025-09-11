@@ -5,12 +5,23 @@ type MagicTileProps = {
   colors: string
   title?: string
   description: string
+  animationDelay?: string
+  animationClass?: string
 }
 
-const MagicTile2 = ({ colors, title, description }: MagicTileProps) => (
-  <div className="md:mt-0 text-center mb-8">
+const MagicTile2 = ({
+  colors,
+  title,
+  description,
+  animationDelay,
+  animationClass,
+}: MagicTileProps) => (
+  <div
+    className={`md:mt-0 text-center mb-8 ${animationClass ?? ""}`}
+    style={{ animationDelay: animationDelay }}
+  >
     <div
-      className={`${colors} rounded-xl p-2 md:p-6 shadow-lg  xd:min-h-[192px]`}
+      className={`${colors} rounded-xl p-2 md:p-6 shadow-lg xd:min-h-[192px]`}
     >
       <Typography variant="h3" className="uppercase">
         {title}

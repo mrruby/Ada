@@ -1,10 +1,18 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
-import React from "react"
+import React, { useState } from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
 const MagicWhy = ({ part }: { part: number }) => {
+  const [hasAnimated, setHasAnimated] = useState(false)
+
+  const handleMouseEnter = () => {
+    if (!hasAnimated) {
+      setHasAnimated(true)
+    }
+  }
+
   return (
     <Section bgColor="bg-transparent">
       {part == 1 && (
@@ -287,21 +295,23 @@ const MagicWhy = ({ part }: { part: number }) => {
       {part == 9 && (
         <div>
           <div className="w-full text-black mb-20">
-            <Typography
-              variant="h1"
-              className="mb-8 text-center animate-bounce uppercase"
-            >
+            <Typography variant="h1" className="mb-8 text-center uppercase">
               <span className="text-white">MAGIC </span>
               jest dla...
             </Typography>
           </div>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+          <div
+            className="flex flex-col md:flex-row justify-center items-center gap-8"
+            onMouseOver={handleMouseEnter}
+          >
             <div className="flex flex-col md:flex-row gap-8">
-              <div className="flex flex-col gap-2 items-center">
-                <ul className="max-w-md bg-ada-white3 py-8 border-[3px] rounded-3xl border-ada-magicPurple4">
+              <div
+                className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromLeft" : ""}`}
+              >
+                <ul className="max-w-md bg-ada-white3 py-8 border-[3px] rounded-3xl border-ada-magicPurple4 ">
                   <Typography
                     variant="h2"
-                    className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
+                    className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
                     🧑‍🎓 Przedsiębiorczyń:
                   </Typography>
@@ -357,7 +367,9 @@ const MagicWhy = ({ part }: { part: number }) => {
                                       p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
                 />
               </div>
-              <div className="flex flex-col gap-2 items-center">
+              <div
+                className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromRight" : ""}`}
+              >
                 <ul className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] rounded-3xl border-ada-magicPink4">
                   <Typography
                     variant="h2"

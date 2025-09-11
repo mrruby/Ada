@@ -1,4 +1,3 @@
-// BannerBox.tsx
 import React from "react"
 import { CircleImage } from "./circleImages"
 import { IconImage } from "./iconImages"
@@ -13,6 +12,8 @@ type BannerBoxProps = {
   styles?: string
   url?: string
   zoom?: string
+  animationDelay?: string
+  animationClass?: string
 }
 
 const BannerBox = ({
@@ -25,9 +26,17 @@ const BannerBox = ({
   styles,
   url,
   zoom,
+  animationDelay,
+  animationClass,
 }: BannerBoxProps) => {
   const content = (
-    <div className="relative md:mt-0">
+    <div
+      className={`relative md:mt-0 opacity-0 transform ${animationClass || ""}`}
+      style={{
+        animationDelay: animationDelay,
+        animationFillMode: "forwards",
+      }}
+    >
       <div
         className={`absolute left-1/2 -top-16 -translate-x-1/2 w-[90px] h-[90px] ${zoom}`}
       >
