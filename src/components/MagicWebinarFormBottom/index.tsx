@@ -1,6 +1,6 @@
 import Typography from "components/shared/Typography"
 import React, { useEffect } from "react"
-import magicWebinarForm22 from "../../values/forms/magic-form-jesien.html"
+import magicWebinarForm22 from "../../values/forms/form-nagranie-masterclassu.html"
 
 const MagicWebinarFormBottom = () => {
   useEffect(() => {
