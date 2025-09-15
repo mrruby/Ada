@@ -29,7 +29,7 @@ const CountdownBanner2: React.FC = () => {
           variant="h3"
           className="text-ada-pink7 text-xl md:text-2xl font-bold mb-2"
         >
-          UWAGA! Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się teraz!
+          Nie czekaj - drzwi do MAGIC zamykają się już za:
         </Typography>
         <CountdownTimer targetDate={targetDate} color="bg-ada-magicPink3" />
       </div>
