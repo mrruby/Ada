@@ -1,3 +1,4 @@
+import CountdownBanner2 from "components/CountdownBanner2"
 import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner1 from "components/MagicBanner"
@@ -17,6 +18,7 @@ import React from "react"
 const MagicSalePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <CountdownBanner2 />
       <MagicLogoHeader variant="pink" />
       <div id="top" className="h-[116px] md:h-[132px]"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
