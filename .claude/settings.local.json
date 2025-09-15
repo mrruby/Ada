@@ -15,7 +15,9 @@
       "WebFetch(domain:typescript-eslint.io)",
       "Bash(yarn add:*)",
       "Bash(yarn lint:*)",
-      "Bash(yarn tsc:*)"
+      "Bash(yarn tsc:*)",
+      "Bash(git fetch:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }

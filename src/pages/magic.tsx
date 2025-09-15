@@ -20,7 +20,6 @@ const MagicSalePage = () => {
     <Layout showHeaderAndFooter={false}>
       <CountdownBanner2 />
       <MagicLogoHeader variant="pink" />
-      <div id="top" className="h-[116px] md:h-[132px]"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicSaleBanner version={1} />
       </MaxWithBgColorContainer>
