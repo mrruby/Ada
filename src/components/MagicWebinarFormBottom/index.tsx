@@ -57,13 +57,13 @@ const MagicWebinarFormBottom = () => {
           />
           <div className="flex items-center bg-ada-pink7/10 p-3 rounded">
             <div className="bg-ada-pink7 px-2 py-1 text-white font-bold mr-3 rounded">
-              Uwaga:
+              UWAGA!
             </div>
             <Typography
               variant="body"
               className="text-ada-magicPurple font-bold"
             >
-              Ilość miejsc ograniczona - zdecyduj się teraz!
+              Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się teraz!
             </Typography>
           </div>
         </div>

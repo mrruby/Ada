@@ -136,12 +136,7 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }) => {
           OGARNIAM REKLAMY SPRZEDAŻOWE W MAŁYM BIZNESIE!
         </span>
       </Typography>
-      <Typography
-        variant="h2"
-        className="mb-4 text-white font-bold text-2xl md:text-3xl"
-      >
-        Masterclass za 0 zł: 10 września o 18:00
-      </Typography>
+      {/* removed outdated live date/time */}
       <Typography variant="body" className="mb-6 max-w-[400px] text-white">
         Najlepszy czas na działanie jest teraz: pod okiem ekspertki przygotujesz
         swój biznes do kampanii reklamowej Meta Ads.
@@ -150,7 +145,7 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }) => {
         type="button"
         text={
           <span className="font-extrabold text-ada-newPurple uppercase">
-            Rezerwuję miejsce!
+            ODBIERAM DOSTĘP!
           </span>
         }
         sectionId="top"
@@ -213,10 +208,10 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }) => {
       <div className="mb-6" dangerouslySetInnerHTML={{ __html: html }} />
       <div className="flex items-center bg-ada-magicPurple/10 p-3 rounded">
         <div className="bg-ada-magicPurple px-2 py-1 text-white font-bold mr-3 rounded">
-          Uwaga:
+          UWAGA!
         </div>
         <Typography variant="body" className="text-ada-magicPurple font-bold">
-          Ilość miejsc ograniczona - zdecyduj się teraz!
+          Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się teraz!
         </Typography>
       </div>
     </div>
