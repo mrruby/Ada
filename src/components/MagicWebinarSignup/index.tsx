@@ -17,7 +17,7 @@ const MagicWebinarSignup = () => {
               variant="h1"
               className="text-ada-pink7 text-3xl md:text-4xl font-bold"
             >
-              Nie czekaj - liczba miejsc ograniczona!
+              UWAGA! Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się teraz!
             </Typography>
             <div className="w-[60px] h-[60px]">
               <MagicSunYellow width="60px" zIndex="z-0" />
@@ -28,18 +28,7 @@ const MagicWebinarSignup = () => {
         {/* Pink rounded square with event details */}
         <div className="bg-pink-200 rounded-lg p-6 max-w-md mx-auto mb-8">
           <div className="text-center space-y-3">
-            <Typography
-              variant="h2"
-              className="text-ada-magicPurple text-2xl md:text-3xl font-extrabold"
-            >
-              ⏰ Termin: 10.09
-            </Typography>
-            <Typography
-              variant="h2"
-              className="text-ada-magicPurple text-2xl md:text-3xl font-extrabold"
-            >
-              🕒 Godzina: 18:00
-            </Typography>
+            {/* removed outdated date/time */}
           </div>
         </div>
 
@@ -48,9 +37,7 @@ const MagicWebinarSignup = () => {
           <Button
             type="button"
             text={
-              <span className="font-bold text-white uppercase">
-                ZAPISUJĘ SIĘ!
-              </span>
+              <span className="font-bold text-white uppercase">ODBIERAM DOSTĘP!</span>
             }
             sectionId="top"
             textSize="text-lg md:text-xl"

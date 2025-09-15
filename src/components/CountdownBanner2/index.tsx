@@ -4,7 +4,8 @@ import CountdownTimer from "../../helpers/CountdownTimer"
 import MaxWithBgColorContainer from "../Layout/MaxWithBgColorContainer"
 
 const CountdownBanner2: React.FC = () => {
-  const targetDate = new Date("2025-09-10T17:59:59")
+  // Deadline set to end of day 17.09 (local time Europe/Warsaw)
+  const targetDate = new Date("2025-09-17T21:59:59Z")
 
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -28,7 +29,7 @@ const CountdownBanner2: React.FC = () => {
           variant="h3"
           className="text-ada-pink7 text-xl md:text-2xl font-bold mb-2"
         >
-          Nie czekaj - liczba miejsc ograniczona!
+          UWAGA! Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się teraz!
         </Typography>
         <CountdownTimer targetDate={targetDate} color="bg-ada-magicPink3" />
       </div>

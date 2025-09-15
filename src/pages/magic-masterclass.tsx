@@ -12,7 +12,6 @@ import MagicWebinar7 from "components/MagicWebinar7"
 import MagicWebinar8 from "components/MagicWebinar8"
 import MagicWebinar9 from "components/MagicWebinar9"
 import MagicWebinarFormBottom from "components/MagicWebinarFormBottom"
-import MagicWebinarSignup from "components/MagicWebinarSignup"
 import SEO from "components/seo"
 import React from "react"
 
@@ -29,7 +28,7 @@ const MagicWebinarPage = () => {
       <MagicWebinar8 version={2} />
       <MagicWebinar10 version={2} />
       <MagicWebinar9 version={2} />
-      <MagicWebinarSignup />
+      {/* Signup section removed per brief */}
       <MagicWebinar11 />
       <MagicWebinarFormBottom />
       <CountdownBanner2 />

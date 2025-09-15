@@ -24,10 +24,8 @@ const MagicWebinar7 = ({ version = 1 }: { version?: number }) => {
         {renderTypography(
           <>
             <span className={primaryColor}>
-              Dlaczego jeszcze warto zapisać się na{" "}
+              Dlaczego jeszcze warto obejrzeć nagranie masterclassu?
             </span>
-            <span className={accentColor}>masterclass</span>
-            <span className={primaryColor}>?</span>
           </>,
           "font-bold max-w-xl mx-auto pb-4 text-center m-4",
           "h2"

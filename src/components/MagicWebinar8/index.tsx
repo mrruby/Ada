@@ -58,23 +58,16 @@ const MagicWebinar8 = ({ version = 1 }: { version?: number }) => {
     <div className={`w-full ${colors.background} py-16 px-4`}>
       <div className="max-w-6xl mx-auto">
         <h2
-          className={`text-center ${colors.heading} text-4xl md:text-5xl font-bold mb-12`}
+          className={`text-center ${colors.heading} text-4xl md:text-5xl font-bold mb-4`}
         >
-          Co dostaniesz, rejestrując się{" "}
-          <span className={colors.accent}>teraz</span>:
+          Zarejestruj się teraz i odbierz dostęp do nagrania za 0zł
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {benefits.map((benefit, index) => (
-            <React.Fragment key={index}>
-              {renderBenefitCard(benefit.title, benefit.value)}
-            </React.Fragment>
-          ))}
-        </div>
-        <p className={`text-center ${colors.heading} font-bold mt-12`}>
-          Dziś 0 zł - po 17 września nagranie i materiały trafią do sklepu jako
-          <b> produkt płatny.</b>
+        <p className={`text-center ${colors.heading} font-bold mb-12`}>
+          Tylko do 17.09!
         </p>
+
+        {/* benefits grid removed per brief */}
+        {/* removed extra pricing note per brief; keep button unchanged if present elsewhere */}
       </div>
     </div>
   )
