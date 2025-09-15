@@ -1,4 +1,5 @@
 import { Button } from "helpers/Button"
+import TypingAnimation from "helpers/TypingAnimation"
 import React, { useEffect } from "react"
 import Section from "../shared/Section"
 
@@ -44,11 +45,17 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
     <>
       {version == 1 && (
         <Section padding="py-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
-          <h1 className="text-adaTitle2 font-bold text-ada-magicOrange2">
-            Marketing Ads Girls <br /> Inside Club{" "}
-            <span className="text-ada-magicPink4">(MAGIC)</span>
-          </h1>
-          <p className="mt-6 mb-8 max-w-[600px] leading-[32px] md:leading-[36px] text-black text-adaBase">
+          <div>
+            <TypingAnimation
+              text="Marketing Ads Girls Inside Club"
+              textStyle="text-adaTitle2 font-bold text-ada-magicOrange2"
+            />
+            <h1 className="text-adaTitle2 font-bold">
+              {" "}
+              <span className="text-ada-magicPink4">(MAGIC)</span>
+            </h1>
+          </div>
+          <p className="mt-6 mb-8 max-w-[600px] leading-[32px] md:leading-[36px] text-black text-adaBase text-center mx-auto">
             Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod
             czujnym okiem profesjonalistek
           </p>
@@ -67,9 +74,10 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
       )}
       {version == 2 && (
         <Section padding="py-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
-          <p className="text-adaTitle font-bold text-black">
-            Dołącz do <span className="text-ada-white3">MAGIC:</span>
-          </p>
+          <TypingAnimation
+            text="Dołącz do MAGIC:"
+            textStyle="text-adaTitle text-black font-bold"
+          />
           <div className="relative my-6">
             <p className="md:absolute text-[80px] left-[-10px] top-[-60px]">
               🗓️
