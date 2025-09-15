@@ -6,6 +6,7 @@ import MagicBioBanner from "components/MagicBioBanner"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
+import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
@@ -16,7 +17,8 @@ import React from "react"
 const MagicSalePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <div id="top"></div>
+      <MagicLogoHeader variant="pink" />
+      <div id="top" className="h-[116px] md:h-[132px]"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicSaleBanner version={1} />
       </MaxWithBgColorContainer>
