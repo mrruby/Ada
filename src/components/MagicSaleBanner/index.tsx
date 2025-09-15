@@ -44,7 +44,7 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
   return (
     <>
       {version == 1 && (
-        <Section padding="py-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
+        <Section padding="pt-[116px] md:pt-[132px] pb-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
           <div>
             <TypingAnimation
               text="Marketing Ads Girls Inside Club"
