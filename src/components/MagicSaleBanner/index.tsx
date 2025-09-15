@@ -101,6 +101,9 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
               <p>
                 🚀 dostęp do <b>wewnętrznej bazy wiedzy </b>
               </p>
+              <p className="text-ada-magicOrange2 font-bold">
+                🍊 Bonus: sprawdź kod KAPIBARA
+              </p>
             </div>
             <div>
               <p className="pb-4">

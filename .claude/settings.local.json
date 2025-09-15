@@ -16,8 +16,7 @@
       "Bash(yarn add:*)",
       "Bash(yarn lint:*)",
       "Bash(yarn tsc:*)",
-      "Bash(git fetch:*)",
-      "Bash(git commit:*)"
+      "Bash(git fetch:*)"
     ],
     "deny": []
   }

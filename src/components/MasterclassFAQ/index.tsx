@@ -417,6 +417,9 @@ const MasterclassFAQ = ({ version }: { version: number }) => {
           dopasowujemy do Twoich potrzeb. W zależności od wybranego pakietu
           korzystasz z konsultacji grupowych i indywidualnych. To nie jest
           kolejny statyczny kurs - to przestrzeń ciągłego rozwoju!
+          <br />
+          <br />
+          <span className="font-bold text-ada-pink7">Przypominam! Kod: KAPIBARA</span>
         </>
       ),
     },
