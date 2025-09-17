@@ -417,6 +417,9 @@ const MasterclassFAQ = ({ version }: { version: number }) => {
           dopasowujemy do Twoich potrzeb. W zależności od wybranego pakietu
           korzystasz z konsultacji grupowych i indywidualnych. To nie jest
           kolejny statyczny kurs - to przestrzeń ciągłego rozwoju!
+          <br />
+          <br />
+          <span className="font-bold text-ada-pink7">Przypominam! Kod: KAPIBARA</span>
         </>
       ),
     },
@@ -449,15 +452,6 @@ const MasterclassFAQ = ({ version }: { version: number }) => {
           własny newsletter oraz jakie narzędzia AI warto wykorzystać w swojej
           pracy, aby działać szybciej i skuteczniej! Wszystko, czego
           potrzebujesz do skutecznego marketingu online!
-        </>
-      ),
-    },
-    {
-      question: "💰 Dlaczego warto zapisać się na listę oczekujących?",
-      answer: (
-        <>
-          Dla osób zapisanych na listę oczekujących szykuję specjalne oferty i
-          daję im znać o możliwości dołączenia w pierwszej kolejności.
         </>
       ),
     },

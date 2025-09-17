@@ -149,6 +149,8 @@ const magicBannerContent2 = [
           Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan
           działania ze specjalistkami, które spędzają w Managerze Reklam 5+
           godzin dziennie.
+          <br />
+          <span className="font-bold">(sprawdź w koszyku kod KAPIBARA)</span>
         </p>
       </>
     ),
@@ -215,14 +217,147 @@ const magicBannerContent3 = [
   },
 ]
 
+const magicBannerContent4 = [
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-magicOrange2",
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">📊</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Twoje wyniki rozczarowują, zamiast zachwycać?
+          </span>
+          <br />W MAGIC nauczysz się, jak w miesiąc dotrzeć do tylu osób, do ilu
+          docierałaś przez rok.
+        </p>
+      </>
+    ),
+    styles: "mt-[-24px]",
+  },
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-magicPurple4 text-ada-white",
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">🤝</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Tworzysz samodzielnie teksty, maile, landingi?
+          </span>
+          <br /> Skonsultuj swoje treści z copywriterką i zapytaj graficzki, co
+          zrobić, aby projekt przyciągał wzrok
+        </p>
+      </>
+    ),
+    styles: "mb-[32px]",
+  },
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-pink8",
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">🤨</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Wyniki reklam nie są takie, jakich oczekiwałaś?
+          </span>
+          <br />
+          Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan
+          działania ze specjalistkami, które spędzają w Managerze Reklam 5+
+          godzin dziennie.
+          <br />
+          <span className="font-bold">(sprawdź w koszyku kod KAPIBARA)</span>
+        </p>
+      </>
+    ),
+    styles: "md:min-h-[390px] md:mt-[-30px] md:min-w-[496px]",
+  },
+]
+
+const magicBannerContent5 = [
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-pink8",
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">😮‍💨</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Czujesz, że tracisz budżet reklamowy?
+          </span>
+          Skonsultuj optymalizację budżetu w zależności od etapu lejka i branży.
+        </p>
+      </>
+    ),
+    styles: "md:min-h-[390px] md:mt-[-30px]",
+  },
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-magicOrange2",
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">💻</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Twoje konto reklamowe zostało zablokowane?
+          </span>
+          <br />
+          Dowiedz się, co zrobić w takiej sytuacji, nawet gdy support Mety
+          rozkłada ręce.
+        </p>
+      </>
+    ),
+  },
+  {
+    circleKey: "",
+    iconKey: "",
+    bgColor: "bg-ada-magicPurple4 text-ada-white",
+    description: (
+      <>
+        <p>
+          <span className="text-adaSubtitleSecondary">🤷‍♀️</span> <br />{" "}
+          <span className="font-bold uppercase">
+            Spędzasz godziny na tworzeniu contentu, a efekty wciąż nie są
+            zadowalające?
+          </span>
+          <br /> Zamiast tworzyć nieskończone ilości treści na IG, dowiedz się
+          jak wykorzystać algorytm Mety na korzyść swojego biznesu.
+        </p>
+      </>
+    ),
+  },
+]
+
 const MagicBanner1 = ({ version }: { version: number }) => {
   const [hasAnimated, setHasAnimated] = useState(false)
+  const [hasAnimated2, setHasAnimated2] = useState(false)
 
   const handleMouseEnter = () => {
     if (!hasAnimated) {
       setHasAnimated(true)
     }
   }
+
+  const handleMouseEnter2 = () => {
+    if (!hasAnimated2) {
+      setHasAnimated2(true)
+    }
+  }
+
+  const leftBoxes = [
+    ...magicBannerContent4.slice(0, 2),
+    ...magicBannerContent3.slice(0, 1),
+  ]
+  const rightBoxes = [
+    ...magicBannerContent2.slice(2, 3),
+    ...magicBannerContent5.slice(1, 3),
+  ]
 
   return (
     <>
@@ -390,6 +525,88 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                                 font-semibold tracking-wide h-[80px] 
                                 px-6 shadow-xl hover:opacity-90 rounded-full min-w-[130px] mt-4 m-auto"
             />
+          </div>
+        </Section>
+      )}
+      {version == 4 && (
+        <Section>
+          <div className="text-black" onMouseOver={handleMouseEnter2}>
+            <Typography
+              variant="h2"
+              className="text-black leading-snug mb-6 text-center"
+            >
+              Rozpoznajesz te sytuacje?
+            </Typography>
+
+            <div className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8">
+              <div className="flex flex-col gap-2 md:gap-6">
+                {leftBoxes.map((item, i) => (
+                  <BannerBox
+                    key={i}
+                    circleKey={item.circleKey}
+                    iconKey={item.iconKey}
+                    bgColor={item.bgColor}
+                    description={item.description}
+                    styles={item.styles}
+                    animationClass={
+                      hasAnimated2 ? "animate-slideInFromLeft" : ""
+                    }
+                    animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
+                  />
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-2 md:gap-6">
+                {rightBoxes.map((item, i) => (
+                  <BannerBox
+                    key={i + leftBoxes.length}
+                    circleKey={item.circleKey}
+                    iconKey={item.iconKey}
+                    bgColor={item.bgColor}
+                    description={item.description}
+                    styles={item.styles}
+                    animationClass={
+                      hasAnimated2 ? "animate-slideInFromRight" : ""
+                    }
+                    animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <Typography variant="h2" className="text-black text-center pt-6">
+              Rozumiemy to.
+            </Typography>
+            <Typography
+              variant="body"
+              className="text-black pt-8 text-center max-w-[600px] mx-auto pb-6"
+            >
+              Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
+              chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie
+              działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do
+              merytorycznego wsparcia, sprawdzonych strategii i inspiracji,
+              które realnie przekładają się na wyniki.
+            </Typography>
+
+            <div className="w-full flex justify-center">
+              <Button
+                type="button"
+                text={
+                  <>
+                    <span className="font-bold text-black uppercase text-adaSubtitleSecondary">
+                      TAK!
+                    </span>
+                    <br />
+                    <span className="">
+                      Zwiększam sprzedaż <br /> dzięki reklamom!
+                    </span>
+                  </>
+                }
+                sectionId="signup"
+                textSize="text-sm md:text-base"
+                btnStyle="bg-ada-magicPink4 font-semibold tracking-wide h-[100px] px-6 shadow-xl hover:opacity-90 rounded-full min-w-[330px] mt-4 m-auto"
+              />
+            </div>
           </div>
         </Section>
       )}

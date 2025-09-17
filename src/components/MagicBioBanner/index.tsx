@@ -135,6 +135,70 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             </div>
           </div>
         )}
+        {version == 3 && (
+          <div className="text-center">
+            <Typography variant="h1" className="text-ada-black animate-bounce">
+              Kogo spotkasz w{" "}
+              <span className="text-ada-magicPink4">MAGIC?</span>
+            </Typography>
+            <Typography
+              variant="h3"
+              className="mt-8 mb-4 text-ada-magicPink4 font-bold"
+            >
+              4 specjalistki pod jednym dachem:
+            </Typography>
+            <Typography variant="h3" className="mb-8 text-ada-black">
+              Meta Ads | Copywriting | Grafika | Koordynacja kampanii
+            </Typography>
+            <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
+              {peopleContent.slice(0, 2).map((item, i) => (
+                <PersonBox
+                  key={i}
+                  name={item.name}
+                  description={item.description}
+                  img={item.img}
+                />
+              ))}
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 pt-8 mb-8 justify-center">
+              {peopleContent.slice(2, 4).map((item, i) => (
+                <PersonBox
+                  key={i}
+                  name={item.name}
+                  description={item.description}
+                  img={item.img}
+                />
+              ))}
+            </div>
+            <Typography
+              variant="h3"
+              className="text-ada-black max-w-[800px] m-auto mt-12"
+            >
+              <span className="text-ada-magicPink4">
+                Dołącz do społeczności kobiet,{" "}
+              </span>
+              <br />
+              <span className="font-normal">
+                które wspólnie rozwijają swoje biznesy i wspierają się w drodze
+                do sukcesu w reklamach Meta.
+              </span>
+            </Typography>
+            <a
+              href="#magic-package"
+              className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto animate-spin-slow cursor-pointer hover:opacity-80 transition-opacity block"
+            >
+              <StaticImage
+                src="../../images/arrowMagic.svg"
+                alt="Przejdź do pakietu"
+                layout="fixed"
+                width={16}
+                height={15}
+                placeholder="blurred"
+                quality={90}
+              />
+            </a>
+          </div>
+        )}
       </Section>
     </>
   )

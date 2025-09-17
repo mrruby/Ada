@@ -1,0 +1,34 @@
+import React from "react"
+import Typography from "../shared/Typography"
+
+type MagicTileProps = {
+  colors: string
+  title?: string
+  description: string
+  animationDelay?: string
+  animationClass?: string
+}
+
+const MagicTile2 = ({
+  colors,
+  title,
+  description,
+  animationDelay,
+  animationClass,
+}: MagicTileProps) => (
+  <div
+    className={`md:mt-0 text-center mb-8 ${animationClass ?? ""}`}
+    style={{ animationDelay: animationDelay }}
+  >
+    <div
+      className={`${colors} rounded-xl p-2 md:p-6 shadow-lg xd:min-h-[192px]`}
+    >
+      <Typography variant="h3" className="uppercase">
+        {title}
+      </Typography>
+      <p className="text-sm md:text-base leading-relaxed pt-2">{description}</p>
+    </div>
+  </div>
+)
+
+export default MagicTile2
