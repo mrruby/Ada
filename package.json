@@ -39,7 +39,7 @@
   "devDependencies": {
     "@types/loadable__component": "^5.13.9",
     "@types/minimatch": "^6.0.0",
-    "@types/react": "^19.1.8",
+    "@types/react": "^18.3.1",
     "@types/react-animate-on-scroll": "^2.1.8",
     "@types/react-dom": "^18.3.1",
     "@types/react-google-recaptcha": "^2.1.9",
@@ -76,6 +76,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "resolutions": {
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

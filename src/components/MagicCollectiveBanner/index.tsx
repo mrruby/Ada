@@ -4,6 +4,7 @@ import TypingAnimation from "helpers/TypingAnimation"
 import React, { useEffect } from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
+import MagicCollectiveForm from "../MagicCollectiveForm"
 
 declare global {
   interface Window {
@@ -823,6 +824,277 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               btnStyle="bg-ada-orange tracking-wide h-[50px] md:h-[56px] 
                        px-8 md:px-10 hover:opacity-90 rounded-full min-w-[250px]"
             />
+          </div>
+        </Section>
+      )}
+      {version == 11 && (
+        <Section bgColor="" className="text-black" padding="mx-auto">
+          <div className="flex justify-center">
+            <StaticImage
+              src={"../../images/magic-kolektyw.png"}
+              alt=""
+              placeholder="blurred"
+              width={530}
+              height={300}
+              className="-mb-4 md:my-4"
+            />
+          </div>
+        </Section>
+      )}
+      {version == 12 && (
+        <Section bgColor="" className="text-black" padding="mt-12 mb-20">
+          <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[400px] mx-auto uppercase">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange"
+            >
+              Krok 1
+            </Typography>
+          </div>
+          <div className="text-adaDesc">
+            <p className="font-bold mt-10 mb-4">
+              Zainwestuj 10 minut i dowiedz się, jak inwestując do 5 tysięcy
+              miesięcznie w marketing, możesz pozyskać 1000 nowych
+              obserwujących, dodatkowe 1000 nowych osób na liście mailowej.{" "}
+            </p>
+            <p>
+              Działając konsekwentnie, możesz wygenerować{" "}
+              <b>2-, 4-, 8-, 15-krotny zwrot.</b> Bo żeby marketing działał, nie
+              musisz mieć milionów. Wystarczy, że wiesz, gdzie mają pójść Twoje
+              złotówki.
+            </p>
+          </div>
+          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 translate-y-6 z-2">
+            <a href="#ankieta">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+        </Section>
+      )}
+      {version == 13 && (
+        <Section bgColor="" className="text-black" padding="mt-12 mb-20 mx-4">
+          <div className="border-ada-orange border rounded-3xl max-w-[400px] mx-auto bg-ada-magicGreen h-[200px]">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center"
+            >
+              MIEJSCE NA WIDEO
+            </Typography>
+          </div>
+          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 translate-y-6 z-2">
+            <a href="#ankieta">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+        </Section>
+      )}
+      {version == 14 && (
+        <Section bgColor="" className="text-black" padding="my-12">
+          <div className="px-4">
+            <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[400px] mx-auto uppercase">
+              <Typography
+                variant="h2"
+                className="p-2 font-anton font-normal text-center text-ada-orange"
+              >
+                Krok 2
+              </Typography>
+            </div>
+          </div>
+          <div className="text-adaDesc px-4">
+            <p className="font-bold mt-10 mb-4">
+              Zacznij działać z profesjonalnym zespołem marketingowym. Zostaw
+              dane - odezwiemy się i pokażemy Ci, jak to może wyglądać w Twoim
+              biznesie.
+            </p>
+            <p className="mb-4">
+              Rozmowa jest na luzie, bez zobowiązań. Dowiesz się, jak wygląda
+              współpraca z zewnętrznym zespołem marketingowym, jakie masz
+              możliwości i... czy to w ogóle dla Ciebie.
+            </p>
+            <p>
+              Jeśli prowadzisz kursy online, mentoringi, oferujesz usługi
+              cyfrowe i regularnie tworzysz content - jest spora szansa, że
+              nasze podejście do reklam to coś dla Ciebie.
+            </p>
+          </div>
+          <section id="ankieta">
+            <div className="flex justify-center w-full mx-auto my-8">
+              <MagicCollectiveForm />
+            </div>
+          </section>
+        </Section>
+      )}
+      {version == 15 && (
+        <Section bgColor="" className="text-black relative" padding="mx-1">
+          <div className="flex justify-end">
+            <StaticImage
+              src={"../../images/magic-kolektyw.png"}
+              alt=""
+              placeholder="blurred"
+              width={354}
+              height={200}
+              className="-mb-20"
+            />
+          </div>
+          <div className="flex flex-col md:flex-row w-full items-center gap-2 -mt-10">
+            <div className="z-10">
+              <StaticImage
+                loading="eager"
+                src="../../images/ada_purple.webp"
+                alt="Ada"
+                placeholder="blurred"
+                width={600}
+                height={900}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div>
+              <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[300px] mx-auto uppercase">
+                <Typography
+                  variant="h1"
+                  className="p-2 font-anton font-normal text-center text-ada-orange"
+                >
+                  Jeśli...
+                </Typography>
+              </div>
+              <div className="text-adaDesc max-w-[600px]">
+                <p className="font-bold mt-10 mb-4">
+                  nie wiesz, jak skutecznie sprzedawać swój produkt cyfrowy, nie
+                  jesteś sama!
+                </p>
+                <p className="mb-4">
+                  Zobacz, jak przedsiębiorczynie takie jak Ty zwiększyły
+                  przychody o 40-80% dzięki profesjonalnemu zespołowi
+                  marketingowemu
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 z-2 -bottom-4">
+            <a href="#konsultacja">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+        </Section>
+      )}
+      {version == 16 && (
+        <Section
+          bgColor=""
+          className="text-black relative"
+          padding="mt-12 mb-20"
+        >
+          <div className="bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-white2"
+            >
+              Umów się na bezpłatną konsultację
+            </Typography>
+          </div>
+          <p className="text-adaDesc mt-10 mb-4">
+            Dołącz do <b>setek przedsiębiorczyń,</b> które tak jak Ty zbudowały{" "}
+            <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
+          </p>
+          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 z-2">
+            <a href="#konsultacja">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+        </Section>
+      )}
+      {version == 17 && (
+        <Section bgColor="" className="text-black" padding="mt-12 mb-20 px-4">
+          <p className="text-adaDesc mt-10 mb-4 text-center max-w-[600px] mx-auto">
+            Z naszego podejścia, w którym pokazujemy jak{" "}
+            <b>krok po kroku zbudować skuteczny marketing,</b> skorzystały już
+            setki przedsiębiorczyń:
+          </p>
+          <div className="flex flex-col gap-8">
+            <div className="bg-ada-magicPurple3 rounded-3xl max-w-[600px] mx-auto border-ada-orange border">
+              <div className="md:flex gap-2 px-8 py-2 items-center justify center">
+                <Typography
+                  variant="h2"
+                  className="p-2 font-anton font-normal text-center text-ada-magicGreen uppercase"
+                >
+                  200+ kobiet
+                </Typography>
+                <p className="text-white">
+                  <b>zwiększyło zyski</b> dzięki naszym kampaniom
+                </p>
+              </div>
+            </div>
+            <div className="bg-ada-magicPurple3 rounded-3xl max-w-[600px] mx-auto border-ada-orange border">
+              <div className="md:flex gap-2 px-8 py-2 items-center justify center">
+                <Typography
+                  variant="h2"
+                  className="p-2 font-anton font-normal text-center text-ada-magicGreen uppercase"
+                >
+                  2 tygodnie =
+                </Typography>
+                <p className="text-white">
+                  efekty jak po <b>3 miesiącach działań organicznych</b>
+                </p>
+              </div>
+            </div>
+            <div className="bg-ada-magicPurple3 rounded-3xl max-w-[600px] mx-auto border-ada-orange border">
+              <div className="md:flex gap-2 px-8 py-2 items-center justify center">
+                <Typography
+                  variant="h2"
+                  className="p-2 font-anton font-normal text-center text-ada-magicGreen uppercase"
+                >
+                  Maksymalne
+                </Typography>
+                <p className="text-white">
+                  <b>wykorzystanie Twojego czasu</b> na marketing
+                </p>
+              </div>
+            </div>
+          </div>
+        </Section>
+      )}
+      {version == 18 && (
+        <Section
+          bgColor=""
+          className="text-black"
+          padding="mt-12 mb-20"
+          id="konsultacja"
+        >
+          <p className="text-adaDesc mt-10 mb-4 text-center">
+            Dołącz do <b>setek przedsiębiorczyń,</b> które tak jak Ty zbudowały{" "}
+            <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
+          </p>
+          <div className="bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-white2"
+            >
+              Umów się na bezpłatną konsultację
+            </Typography>
           </div>
         </Section>
       )}
