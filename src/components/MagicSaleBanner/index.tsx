@@ -137,7 +137,7 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
       {version == 6 && (
         <Section padding="py-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
           <h1 className="text-adaTitle2 font-bold text-ada-magicOrange2">
-            Obejrzyj nagranie z masterclassu!
+            Nagranie nie jest już dostępne, ale wciąż możesz dołączyć do MAGIC!
           </h1>
         </Section>
       )}

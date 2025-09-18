@@ -7,7 +7,6 @@ import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicSaleBanner from "components/MagicSaleBanner"
-import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import SEO from "components/seo"
@@ -19,9 +18,6 @@ const MagicNagraniePage = () => {
       <div id="top"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicSaleBanner version={6} />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicVideo version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicBanner1 version={4} />
@@ -66,7 +62,7 @@ const MagicNagraniePage = () => {
 
 export const Head = () => (
   <SEO
-    title="Obejrzyj nagranie z masterclassu!"
+    title="Nagranie nie jest już dostępne, ale wciąż możesz dołączyć do MAGIC!"
     image="https://adrianna.com.pl/img/ada_purple.webp"
   />
 )
