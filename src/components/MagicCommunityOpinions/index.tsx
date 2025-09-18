@@ -5,7 +5,7 @@ import Typography from "../shared/Typography"
 
 const MagicCommunityOpinions = () => {
   return (
-    <Section bgColor="bg-transparent" className="pt-24 md:pt-32">
+    <Section bgColor="bg-transparent" className="pt-24 md:pt-32" id="opinie">
       <div className="w-full">
         <Typography variant="h1" className="mb-12 text-center text-ada-black">
           Zobacz, co członkinie <span className="text-ada-pink7">MAGIC</span>{" "}
