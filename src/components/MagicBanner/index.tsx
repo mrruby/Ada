@@ -149,8 +149,6 @@ const magicBannerContent2 = [
           Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan
           działania ze specjalistkami, które spędzają w Managerze Reklam 5+
           godzin dziennie.
-          <br />
-          <span className="font-bold">(sprawdź w koszyku kod KAPIBARA)</span>
         </p>
       </>
     ),
@@ -172,8 +170,6 @@ const magicBannerContent3 = [
           </span>
           <br /> Skonsultuj optymalizację budżetu w zależności od etapu lejka i
           branży.
-          <br />
-          Pssst! Wpisz kod KAPUCZINA w koszyku <br />i zobacz, co się stanie!
         </p>
       </>
     ),
@@ -269,8 +265,6 @@ const magicBannerContent4 = [
           Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan
           działania ze specjalistkami, które spędzają w Managerze Reklam 5+
           godzin dziennie.
-          <br />
-          <span className="font-bold">(sprawdź w koszyku kod KAPIBARA)</span>
         </p>
       </>
     ),

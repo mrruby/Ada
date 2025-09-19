@@ -409,6 +409,11 @@ const MasterclassFAQ = ({ version }: { version: number }) => {
       answer: <>MAGIC działa na platformie Circle.</>,
     },
     {
+      question: "👀 Dlaczego warto zapisać się na listę zainteresowanych?",
+      answer:
+        "Drzwi do MAGIC otwieramy tylko kilka razy w roku, by maksymalnie skupić się na potrzebach i celach Klubowiczek. Zapis na listę zainteresowanych gwarantuje Ci informację w pierwszej kolejności, gdy tylko pojawi się możliwość dołączenia do Klubu. Mogę też zdradzić, że osoby z listy zainteresowanych zawsze dostają ode mnie specjalną ofertę 💜",
+    },
+    {
       question: "💎 Co sprawia, że MAGIC jest wyjątkowy?",
       answer: (
         <>
@@ -419,7 +424,6 @@ const MasterclassFAQ = ({ version }: { version: number }) => {
           kolejny statyczny kurs - to przestrzeń ciągłego rozwoju!
           <br />
           <br />
-          <span className="font-bold text-ada-pink7">Przypominam! Kod: KAPIBARA</span>
         </>
       ),
     },
