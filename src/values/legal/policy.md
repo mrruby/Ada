@@ -1,4 +1,7 @@
 ﻿**Polityka prywatności i plików cookies**
+
+**Data ostatniej aktualizacji: 25.09.2025**
+
 Dzień dobry!
 
 Jeżeli tutaj trafiłeś, to niezawodny znak, że cenisz swoją prywatność. Doskonale to rozumiemy, dlatego oddajemy w Twoje ręce dokument, w którym w jednym miejscu znajdziesz zasady przetwarzania danych osobowych oraz wykorzystywania plików cookies i innych technologii śledzących.
@@ -110,19 +113,21 @@ Dane przetwarzane są w celu obsługi procesu odstąpienia od umowy lub procesu 
 
 Zapisując się do newslettera, musisz podać dane niezbędne do jego otrzymywania określone w formularzu zapisu.
 
-Podanie danych jest warunkiem otrzymywania newslettera.
+Podanie danych jest dobrowolne, jest jednak warunkiem otrzymywania newslettera.
 
 Ponadto, system mailingowy zapisuje Twój numer IP, z którego korzystałeś, zapisując się do newslettera, określa Twoją przybliżoną lokalizację, klienta poczty, z którego korzystasz do obsługi poczty e-mail oraz śledzi Twoje działania podejmowane w związku z wysyłanymi do Ciebie wiadomościami. W związku z tym posiadamy również informacje, które wiadomości otworzyłeś, w ramach których wiadomości kliknąłeś w linki itp.
 
 W systemie mailingowym możemy również definiować, na podstawie różnych kryteriów związanych z Twoją aktywnością, zainteresowaniami lub innymi preferencjami, określone grupy lub segmenty odbiorców newslettera mające wpływ na to, jakiego rodzaju wiadomości otrzymujesz w ramach newslettera.
 
-Dane przekazane przez Ciebie w związku z zapisem do newslettera wykorzystywane są w celu przesyłania Ci newslettera, a podstawą prawną ich przetwarzania jest wykonanie umowy o świadczenie usługi elektronicznej, a także nasz prawnie usprawiedliwiony interes, jakim w tym przypadku jest realizacja celów marketingowych.
+Dane przekazane przez Ciebie w związku z zapisem do newslettera wykorzystywane są w celu przesyłania Ci newslettera, a podstawą prawną ich przetwarzania jest art. 6 ust. 1 lit. b RODO - wykonanie umowy o świadczenie usługi elektronicznej, a także art. 6 ust. 1 lit. f RODO - nasz prawnie usprawiedliwiony interes, jakim w tym przypadku jest realizacja celów marketingowych oraz obrona przed roszczeniami.
 
 Jeżeli chodzi o przetwarzanie informacji, które nie pochodzą od Ciebie, a zostały zebrane automatycznie przez system mailingowy, opieramy się w tym zakresie na naszym prawnie uzasadnionym interesie polegającym na analizie zachowań subskrybentów newslettera w celu optymalizacji działań mailingowych.
 
 W każdej chwili możesz zrezygnować z otrzymywania newslettera, klikając w dedykowany link znajdujący się w każdej wiadomości wysyłanej w ramach newslettera, lub po prostu kontaktując się z nami.
 
-Rezygnacja z newslettera nie prowadzi do usunięcia Twoich danych z systemu mailingowego. Dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z newsletterem, jak również w celu zapewnienia możliwości wykazania, że działania newsletterowe prowadzone były zgodnie z prawem.
+Dane przetwarzane są przez czas realizacji usługi lub do czasu rezygnacji użytkownika z newslettera, skutecznego wniesienia sprzeciwu podmiotu, którego dane dotyczą.
+
+Rezygnacja z newslettera nie prowadzi do usunięcia Twoich danych z systemu mailingowego. Dane trafiają do archiwum na potrzeby ewentualnego ustalenia, dochodzenia lub obrony roszczeń związanych z newsletterem, jak również w celu zapewnienia możliwości wykazania, że działania newsletterowe prowadzone były zgodnie z prawem i mogą być przetwarzane do czasu upływu terminu przedawnienia roszczeń, który zazwyczaj wynosi 3 lub 6 lat + 1 rok w zależności od tego, czy dane dotyczą przedsiębiorcy czy osoby fizycznej.
 
 (art. 6 ust. 1 lit. b RODO, art. 6 ust. 1 lit. f RODO)
 
