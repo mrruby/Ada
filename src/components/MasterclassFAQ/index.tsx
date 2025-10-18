@@ -8,7 +8,17 @@ interface ListItem {
   answer: string | React.JSX.Element
 }
 
-const MasterclassFAQ = ({ version }: { version: number }) => {
+interface MasterclassFAQProps {
+  version: number
+  customMagicList?: ListItem[]
+  hideMagicQuestions?: string[]
+}
+
+const MasterclassFAQ = ({
+  version,
+  customMagicList,
+  hideMagicQuestions,
+}: MasterclassFAQProps) => {
   const leftList: ListItem[] = [
     {
       question: "Czy te warsztaty są dla mnie?",
@@ -481,6 +491,14 @@ const MasterclassFAQ = ({ version }: { version: number }) => {
     ))
   }
 
+  const filteredMagicFAQList =
+    customMagicList ??
+    (hideMagicQuestions
+      ? magicFAQList.filter(
+          (item) => !hideMagicQuestions.includes(item.question)
+        )
+      : magicFAQList)
+
   return (
     <div className="flex flex-col text-ada-blue items-center px-3">
       {version === 1 && (
@@ -620,7 +638,7 @@ const MasterclassFAQ = ({ version }: { version: number }) => {
                 FAQ
               </h2>
               <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
-                {renderList(magicFAQList)}
+                {renderList(filteredMagicFAQList)}
               </ul>
             </div>
           </div>

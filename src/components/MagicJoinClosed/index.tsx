@@ -3,7 +3,13 @@ import Typography from "components/shared/Typography"
 import React, { useEffect } from "react"
 import magicListaForm from "../../values/forms/magic-zainteresowani-new.html"
 
-const MagicJoinClosed = () => {
+interface MagicJoinClosedProps {
+  title?: string
+}
+
+const MagicJoinClosed = ({
+  title = "Drzwi do MAGIC są zamknięte, ale możesz zapisać się na listę zainteresowanych",
+}: MagicJoinClosedProps) => {
   useEffect(() => {
     const form = document.querySelector(
       ".magic-join-closed .ml-block-form"
@@ -41,8 +47,7 @@ const MagicJoinClosed = () => {
           variant="h2"
           className="text-ada-black font-bold leading-snug mb-4"
         >
-          Drzwi do MAGIC są zamknięte, ale możesz zapisać się na listę
-          zainteresowanych
+          {title}
         </Typography>
 
         <div className="magic-join-closed bg-white shadow-xl rounded-2xl p-6 md:p-8 border-t-4 border-ada-pink7">
