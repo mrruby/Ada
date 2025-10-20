@@ -6,12 +6,12 @@ import MagicBioBanner from "components/MagicBioBanner"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
-import MagicJoinClosed from "components/MagicJoinClosed"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
+import MagicSpecialJoin from "components/MagicSpecialJoin"
 import SEO from "components/seo"
 import React from "react"
 
@@ -39,7 +39,7 @@ const MagicSpecialPage = () => {
       </MaxWithBgColorContainer>
       <div id="magic-package"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
-        <MagicJoinClosed title="DOŁĄCZ DO MAGIC" />
+        <MagicSpecialJoin title="DOŁĄCZ DO MAGIC" />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicWhy part={10} />
