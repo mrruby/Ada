@@ -75,7 +75,7 @@ const MagicSpecialJoin: React.FC<MagicSpecialJoinProps> = ({
     magicIndex >= 0 ? title.slice(magicIndex + "MAGIC".length) : ""
 
   return (
-    <Section padding="py-16 px-4">
+    <Section id="signup" padding="py-16 px-4">
       <div className="relative mx-auto max-w-[960px] rounded-[40px]  px-6 pb-14 pt-16  md:px-16">
         <Typography
           variant="h2"
