@@ -17,6 +17,7 @@ type IReferences = {
   title4?: boolean
   title5?: boolean
   title6?: boolean
+  title7?: boolean
 }
 
 // const referencesList: IReferencesList[] = [
@@ -475,6 +476,7 @@ const ReferencesMentoring = ({
   title4,
   title5,
   title6,
+  title7,
 }: IReferences) => {
   return (
     <div className="pt-[40px]">
@@ -578,6 +580,32 @@ const ReferencesMentoring = ({
             ))}
           </Carousel>
         </div>
+      )}
+      {title7 && (
+        <>
+          <Typography
+            variant="h2"
+            className="p-2 font-anton font-normal text-center uppercase text-ada-orange"
+          >
+            Tak mówią osoby, które korzystały <br /> z mojego wsparcia w
+            reklamach:
+          </Typography>
+          <div className="max-h-[600px] mx-auto mt-5 pb-4" id="opinie">
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              customLeftArrow={<CustomLeftArrow />}
+              customRightArrow={<CustomRightArrow />}
+              ssr={true}
+              autoPlay
+              autoPlaySpeed={2000}
+            >
+              {referencesMagicList.map((reference, index) => (
+                <Reference key={index} image={reference.image} />
+              ))}
+            </Carousel>
+          </div>
+        </>
       )}
     </div>
   )

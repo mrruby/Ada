@@ -173,6 +173,66 @@ const IconText = ({ version }: { version: number }) => {
     },
   ]
 
+  const leftList5 = [
+    {
+      icon: "🤔",
+      text: (
+        <>
+          Wiesz, że reklamy mogłyby pomóc Twojemu biznesowi, ale nie chcesz
+          wydawać fortuny na agencję?
+        </>
+      ),
+    },
+    {
+      icon: "🤔",
+      text: (
+        <>
+          Wiesz, że reklamy mogłyby pomóc Twojemu biznesowi, ale nie chcesz
+          wydawać fortuny na agencję?
+        </>
+      ),
+    },
+    {
+      icon: "😎",
+      text: (
+        <>
+          Masz ochotę nauczyć się czegoś nowego, co realnie rozwinie Twój
+          biznes?
+        </>
+      ),
+    },
+  ]
+
+  const rightList5 = [
+    {
+      icon: "🤔",
+      text: (
+        <>
+          Widzisz, jak inne kobiety skutecznie promują swoje biznesy i
+          zastanawiasz się, jak one to robią?
+        </>
+      ),
+    },
+    {
+      icon: "💪",
+      text: (
+        <>
+          Chciałabyś w końcu zrozumieć te wszystkie liczby i ustawienia w
+          Menedżerze Reklam?
+        </>
+      ),
+    },
+    {
+      icon: "📊",
+      text: (
+        <>
+          Szukasz sprawdzonego sposobu na dotarcie do swoich wymarzonych
+          klientek - bez zgadywania i stresu?
+        </>
+      ),
+    },
+  ]
+
   const leftList3 = iconTextList.slice(0, 4)
   const rightList3 = iconTextList.slice(4)
 
@@ -445,6 +505,64 @@ const IconText = ({ version }: { version: number }) => {
               do życia, w którym pracujesz tak, jak lubisz i zarabiasz dzięki
               temu naprawdę <span className="font-bold">fajne pieniądze</span>{" "}
               💸
+            </p>
+          </div>
+        </div>
+      )}
+      {version === 5 && (
+        <div className="mx-auto md:pb-10 mt-4 md:mt-10">
+          <h2 className="text-adaStandard lg:text-adaSubtitleThird font-bold bg-white lg:max-w-[340px] px-10 py-4 mx-auto flex items-center justify-center text-ada-magicOrange rounded-full font-anton border border-ada-magicOrange">
+            Czy Ty też...
+          </h2>
+          <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
+            <ul className="gap-10 md:gap-[120px] text-black">
+              {leftList5.map((item, index) => (
+                <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
+                  <span className="text-adaMin md:text-adaSubtitle">
+                    {" "}
+                    {item.icon}
+                  </span>
+                  <span className="text-adaMin md:text-adaStandard">
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <ul className="gap-10 md:gap-[120px]">
+              {rightList5.map((item, index) => (
+                <li className="flex gap-4 max-w-[580px] pb-3 px-3" key={index}>
+                  <span className="text-adaMin md:text-adaSubtitle">
+                    {" "}
+                    {item.icon}
+                  </span>
+                  <span className="text-adaMin md:text-adaStandard">
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex justify-center items-center -translate-y-6 mt-8 mb-2 mx-auto w-full">
+            <a href="#pakiety">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+          <div className="max-w-[480px] text-center py-[50px] mx-auto">
+            <h3 className="text-adaStandard md:text-adaSubtitleSecondary pb-10 text-ada-magicOrange font-anton">
+              W TWOJEJ GŁOWIE POJAWIŁA SIĘ MYŚL:{" "}
+              <span className="text-ada-magicPink2">„KURCZE, NO TAK!”?</span>
+            </h3>
+            <p className="text-adaMin md:text-adaDesc text-black">
+              Świetnie! Dzięki <span className="font-bold">masterclassom</span>{" "}
+              przybliżysz się do życia, w którym pracujesz tak, jak lubisz i
+              zarabiasz dzięki temu naprawdę{" "}
+              <span className="font-bold">fajne pieniądze</span>{" "}
             </p>
           </div>
         </div>

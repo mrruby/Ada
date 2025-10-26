@@ -285,6 +285,100 @@ const MasterclassFAQ = ({
     },
   ]
 
+  const leftList4: ListItem[] = [
+    {
+      question: "Czy Adsy&chill są dla mnie?",
+      answer: (
+        <>
+          Adsy&chill to masterclassy dla kobiet, które chcą docierać do nowych
+          osób na większą skalę niż do tej pory. Poprowadzą Cię przez
+          przygotowanie trzech najważniejszych kampanii reklamowych.
+        </>
+      ),
+    },
+    {
+      question: "Co będzie się działo po zakupie?",
+      answer: (
+        <>
+          Na Twojego maila trafi wiadomość z danymi do logowania do Adsy&chill.
+          Masterclassy są dostępne na intuicyjnej platformie, w formie wygodnych
+          lekcji video.
+        </>
+      ),
+    },
+    {
+      question: "Czy muszę mieć doświadczenie z reklamami?",
+      answer: (
+        <>
+          Nie musisz 😊 Jeśli kliknęłaś kiedyś ‘promuj post’ lub pomyślałaś, że
+          możesz ustawić pierwszą kampanię reklamową z prawdziwego zdarzenia -
+          Adsy&chill są dla Ciebie.
+        </>
+      ),
+    },
+    {
+      question: "Jakie wyniki osiągnę dzięki masterclassom?",
+      answer: (
+        <>
+          Osoby, które zdecydowały się na dołączenie do Adsy&chill, mówią tak:
+          <br />
+          <br />- „moje konto na Instagramie rośnie w oczach”
+          <br />
+          - „ROAS w okolicy 5 przy sprzedaży taniego produktu”
+          <br />
+          - „wczoraj odpaliłam reklamę na warsztaty online i już rozeszły się
+          prawie wszystkie miejsca”
+          <br />
+          <br />
+          Czy obiecam Ci, że w 3 dni sprzedasz 578 produktów? Nie. Czy jestem
+          pewna, że przygotowanie reklam zgodnie ze wskazówkami z Adsy&Chill
+          przyniesie Ci regularna sprzedaż? Tak :)
+        </>
+      ),
+    },
+  ]
+
+  const rightList4: ListItem[] = [
+    {
+      question: "Na jak długo dostanę dostęp?",
+      answer: <>Na 12 miesięcy.</>,
+    },
+    {
+      question: "Skąd ta cena?",
+      answer: (
+        <>
+          Masz rację - kursy prowadzenia reklam potrafią kosztować od 1000 zł
+          wzwyż. Masterclass dostajesz w niższej cenie, bo wiem, że wiele
+          przedsiębiorczyń zastanawia się nad rozpoczęciem działań reklamowych,
+          ale powstrzymuje je wysoka cena, jaką musiałyby wydać na start.
+          Adsy&chill to instrukcja ustawienia kampanii reklamowych od podstaw.
+        </>
+      ),
+    },
+    {
+      question: "Czy dostanę fakturę?",
+      answer: (
+        <>
+          Tak, faktura trafi na maila podanego w koszyku chwilę po zakończeniu
+          transakcji.
+        </>
+      ),
+    },
+    {
+      question: "Czy mogę przeczytać opinie o Adsy&chill?",
+      answer: (
+        <>
+          Oczywiście! Zerknij też do sekcji{" "}
+          <b>
+            <a href="#opinie">
+              “Tak mówią osoby, które korzystały z mojego wsparcia w reklamach”
+            </a>
+          </b>
+        </>
+      ),
+    },
+  ]
+
   const autumnList: ListItem[] = [
     {
       question: "Pewnie teraz zastanawiasz się...",
@@ -672,6 +766,39 @@ const MasterclassFAQ = ({
             sectionId="pricing"
             textSize="md:text-adaSubtitleSecondary"
             btnStyle="md:w-[500px] bg-ada-light-pink mb-10 lg:mb-[120px] md:leading-[36px] md:h-[120px] rounded-[100px]"
+          />
+        </>
+      )}
+      {version === 7 && (
+        <>
+          <div
+            className="flex flex-col md:flex-row gap-[90px] items-center w-full justify-center text-black"
+            id="faq"
+          >
+            <div className="pt-[60px] lg:pt-[76px]">
+              <h2 className="text-[20px] lg:text-adaTitle font-bold w-[80px] md:w-[152px] lg:mb-2 animate-bounce text-center mx-auto">
+                FAQ
+              </h2>
+              <div className="pt-[30px] flex flex-col flex-wrap lg:flex-row lg:gap-[60px]">
+                <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
+                  {renderList(leftList4)}
+                </ul>
+                <ul className="gap-10 md:gap-[140px] text-adaMin md:text-adaStandard">
+                  {renderList(rightList4)}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <Button
+            type="button"
+            text={
+              <span className="uppercase">
+                Tworzę kobiece reklamy z Adsy&Chill!
+              </span>
+            }
+            sectionId="pricing"
+            textSize="md:text-adaSubtitle text-white"
+            btnStyle="md:w-[440px] bg-ada-magicOrange mb-10 lg:mb-[120px] md:leading-[36px] md:h-[100px] rounded-full"
           />
         </>
       )}

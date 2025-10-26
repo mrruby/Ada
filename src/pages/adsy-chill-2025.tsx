@@ -1,10 +1,10 @@
 import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MagicCollectiveBanner from "components/MagicCollectiveBanner"
 import MasterclassAgenda from "components/MasterclassAgenda"
-import MasterclassesInfo from "components/MasterclassesInfo"
+import MasterclassesInfo2 from "components/MasterclassesInfo2"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import ReferencesMentoring from "components/ReferencesMentoring"
-import WebinarAbout from "components/WebinarAbout"
 import WebinarBanner from "components/WebinarBanner"
 import React from "react"
 import Layout from "../components/Layout"
@@ -12,59 +12,39 @@ import SEO from "../components/seo"
 
 const AdsyAndChill2025 = () => {
   return (
-    <Layout
-      showHeaderAndFooter={false}
-      flowerBlue2={true}
-      flowerBlue5={true}
-      flowerBlue7={true}
-      flowerBlue8={true}
-      flowerBlue9={true}
-      flowerBlue10={true}
-      flowerBlue11={true}
-      sun6={true}
-      sun7={true}
-      sunglasses2={true}
-      flaps2={true}
-      ball3={true}
-      drinks={true}
-    >
-      <MaxWithBgColorContainer>
-        <WebinarBanner version={6} />
+    <Layout showHeaderAndFooter={false}>
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <WebinarBanner version={7} />
       </MaxWithBgColorContainer>
-      <div className="opacity-0 xl:opacity-100 h-[180px] bg-wave2 absolute top-[820px] w-screen z-0"></div>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <IconText version={4} />
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+        <IconText version={5} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassAgenda version={13} />
+      <MaxWithBgColorContainer bgColor="bg-ada-purple3">
+        <MagicCollectiveBanner version={19} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear2">
-        <WebinarAbout version={5} />
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <ReferencesMentoring title7 />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer>
-        <ReferencesMentoring title3 />
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+        <MasterclassesInfo2 version={1} />
       </MaxWithBgColorContainer>
-      <div
-        className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[6080px] w-screen z-0"
-        id="masterclasses"
-      ></div>
-      <MaxWithBgColorContainer bgColor="bg-ada-pink4">
-        <MasterclassesInfo version={4} />
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <MasterclassesInfo2 version={2} />
       </MaxWithBgColorContainer>
-      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[6990px] w-screen z-0"></div>
-      <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-        <MasterclassesInfo version={5} />
+      <MaxWithBgColorContainer bgColor="bg-ada-purple3">
+        <MasterclassesInfo2 version={3} />
       </MaxWithBgColorContainer>
-      <div className="h-[180px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[8400px] w-screen z-0"></div>
-      <MaxWithBgColorContainer bgColor="bg-ada-pink4">
-        <MasterclassesInfo version={6} />
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <MasterclassAgenda version={15} />
       </MaxWithBgColorContainer>
-      <div className="h-[300px] opacity-0 xl:opacity-100 bg-wave2 absolute top-[9650px] w-screen z-0"></div>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassAgenda version={14} />
+      <MaxWithBgColorContainer bgColor="bg-magic-grid relative">
+        <MasterclassAgenda version={16} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-linear3">
-        <MasterclassFAQ version={6} />
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+        <MasterclassAgenda version={17} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <MasterclassFAQ version={7} />
       </MaxWithBgColorContainer>
     </Layout>
   )

@@ -2,9 +2,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
 import React, { useEffect } from "react"
+import MagicCollectiveForm from "../MagicCollectiveForm"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
-import MagicCollectiveForm from "../MagicCollectiveForm"
 
 declare global {
   interface Window {
@@ -1095,6 +1095,65 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             >
               Umów się na bezpłatną konsultację
             </Typography>
+          </div>
+        </Section>
+      )}
+      {version == 19 && (
+        <Section
+          bgColor=""
+          className="text-black overflow-hidden sm:mt-10"
+          padding="py-8 px-4 md:px-8 flex justify-centeritems-center"
+        >
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
+            <div className="w-full md:w-1/2 text-white">
+              <TypingAnimation
+                text="Cześć!"
+                textStyle="text-adaSubtitle uppercase md:text-[80px] font-extrabold animate-bounce text-ada-magicGreen font-anton "
+              />
+              <h3 className="text-adaMin md:text-adaSubtitleSecondary pt-8 mt-4 font-bold  pb-6">
+                Nazywam się Adrianna Promis-Urbas
+              </h3>
+              <p className="pt-2 pb-2 text-adaMin md:text-adaNav tracking-wider">
+                <span className="font-bold">Jestem przedsiębiorczynią.</span>{" "}
+                Tworzę kampanie reklamowe, które zarabiają pieniądze.
+                <span className="font-bold">
+                  {" "}
+                  W swojej karierze wydałam na kampanie reklamowe sporo ponad 2
+                  000 000 złotych, a zarobiłam kilkanaście razy tyle!{" "}
+                </span>
+              </p>
+              <p className="pt-2 pb-2 text-adaMin md:text-adaNav tracking-wider">
+                Teraz pokazuję przedsiębiorczyniom
+                <span className="font-bold"> sprawdzone strategie,</span> dzięki
+                którym{" "}
+                <span className="font-bold">
+                  Twoje reklamy przynoszą stabilny przychód
+                </span>{" "}
+                zamiast pochłaniać budżet.
+              </p>
+            </div>
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end md:-mt-6 mb-4">
+              <StaticImage
+                src={"../../images/magic-hero2.webp"}
+                alt="Ada Promis"
+                placeholder="blurred"
+                formats={["auto", "webp", "avif"]}
+                width={410}
+                height={592}
+                quality={95}
+              />
+            </div>
+          </div>
+          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 -translate-y-6">
+            <a href="#pakiety">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
           </div>
         </Section>
       )}
