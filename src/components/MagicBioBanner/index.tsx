@@ -137,9 +137,11 @@ const MagicBioBanner = ({ version }: { version: number }) => {
         )}
         {version == 3 && (
           <div className="text-center">
-            <Typography variant="h1" className="text-ada-black animate-bounce">
-              Kogo spotkasz w{" "}
-              <span className="text-ada-magicPink4">MAGIC?</span>
+            <Typography
+              variant="h2"
+              className="text-ada-magicPink4 animate-bounce"
+            >
+              <span className="text-ada-black"> Kogo spotkasz </span>w MAGIC?
             </Typography>
             <Typography
               variant="h3"
@@ -185,14 +187,14 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             </Typography>
             <a
               href="#magic-package"
-              className="bg-ada-pink7 rounded-[40px] w-[40px] h-[40px] flex items-center justify-center mt-7 mx-auto animate-spin-slow cursor-pointer hover:opacity-80 transition-opacity block"
+              className="rounded-[40px] w-[70px] h-[70px] flex items-center justify-center mt-7 mx-auto cursor-pointer hover:opacity-80 transition-opacity block rotate-90"
             >
               <StaticImage
-                src="../../images/arrowMagic.svg"
+                src="../../images/magicArrowLeft.svg"
                 alt="Przejdź do pakietu"
                 layout="fixed"
-                width={16}
-                height={15}
+                width={70}
+                height={70}
                 placeholder="blurred"
                 quality={90}
               />

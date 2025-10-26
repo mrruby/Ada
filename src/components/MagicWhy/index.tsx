@@ -544,6 +544,29 @@ const MagicWhy = ({ part }: { part: number }) => {
           </div>
         </div>
       )}
+      {part == 12 && (
+        <div className="flex flex-col items-center gap-8">
+          <div className="w-full text-ada-black -mb-8">
+            <Typography
+              variant="h1"
+              className="mb-8 text-center animate-bounce"
+            >
+              Jak wygląda przykładowy miesiąc w
+              <span className="text-ada-pink7"> MAGIC </span>?
+            </Typography>
+          </div>
+          <StaticImage
+            loading="eager"
+            src="../../images/magic_kalendarz.webp"
+            alt=""
+            placeholder="blurred"
+            width={658}
+            height={384}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+        </div>
+      )}
     </Section>
   )
 }
