@@ -39,6 +39,7 @@ module.exports = {
           magicPurple2: "#584596",
           magicPurple3: "#5D4E9D",
           magicPurple4: "#B2A1FA",
+          magicPurple5: "#B0A8D7",
           magicOrange: "#EE701E",
           magicOrange2: "#FFAD00",
           magicGreen: "#E8F6CB",

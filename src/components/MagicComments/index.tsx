@@ -4,7 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 
 const transitionClass = `
-  transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]
+  transition-transform transition-opacity duration-700 ease-out
+  origin-left
 `
 
 const CommentBlock1 = () => {
@@ -17,9 +18,9 @@ const CommentBlock1 = () => {
     >
       <div
         className={`
-          w-full flex justify-start ${transitionClass}
-          ${animated ? "opacity-100 translate-x-0" : "lg:opacity-0 lg:-translate-x-10"}
-        `}
+    w-full flex justify-start ${transitionClass}
+    ${animated ? "opacity-100 scale-100" : "lg:opacity-0 scale-75"}
+  `}
       >
         <div className="flex items-center lg:gap-12">
           <StaticImage
@@ -42,12 +43,12 @@ const CommentBlock1 = () => {
           />
         </div>
       </div>
-
       <div
         className={`
-          w-full flex justify-end ${transitionClass} delay-150 lg:-mt-12
-          ${animated ? "opacity-100 translate-x-0" : "lg:opacity-0 lg:translate-x-10"}
-        `}
+    w-full flex justify-end ${transitionClass} delay-200 lg:-mt-12
+    ${animated ? "opacity-100 scale-100" : "lg:opacity-0 scale-75"}
+    origin-right
+  `}
       >
         <div className="flex items-center gap-24">
           <StaticImage
@@ -84,9 +85,9 @@ const CommentBlock2 = () => {
     >
       <div
         className={`
-          w-full flex justify-start ${transitionClass}
-          ${animated ? "opacity-100 translate-x-0" : "lg:opacity-0 lg:-translate-x-10"}
-        `}
+    w-full flex justify-start ${transitionClass}
+    ${animated ? "opacity-100 scale-100" : "lg:opacity-0 scale-75"}
+  `}
       >
         <div className="flex items-center lg:gap-12">
           <StaticImage
@@ -112,9 +113,10 @@ const CommentBlock2 = () => {
 
       <div
         className={`
-          w-full flex justify-end ${transitionClass} delay-150 lg:-mt-12
-          ${animated ? "opacity-100 translate-x-0" : "lg:opacity-0 lg:translate-x-10"}
-        `}
+    w-full flex justify-end ${transitionClass} delay-200 lg:-mt-12
+    ${animated ? "opacity-100 scale-100" : "lg:opacity-0 scale-75"}
+    origin-right
+  `}
       >
         <div className="flex items-center gap-24">
           <StaticImage
@@ -151,9 +153,9 @@ const CommentBlock3 = () => {
     >
       <div
         className={`
-          w-full flex justify-start ${transitionClass}
-          ${animated ? "opacity-100 translate-x-0" : "lg:opacity-0 lg:-translate-x-10"}
-        `}
+    w-full flex justify-start ${transitionClass}
+    ${animated ? "opacity-100 scale-100" : "lg:opacity-0 scale-75"}
+  `}
       >
         <div className="flex items-center lg:gap-12">
           <StaticImage
@@ -179,9 +181,10 @@ const CommentBlock3 = () => {
 
       <div
         className={`
-          w-full flex justify-end ${transitionClass} delay-150 lg:-mt-12
-          ${animated ? "opacity-100 translate-x-0" : "lg:opacity-0 lg:translate-x-10"}
-        `}
+    w-full flex justify-end ${transitionClass} delay-200 lg:-mt-12
+    ${animated ? "opacity-100 scale-100" : "lg:opacity-0 scale-75"}
+    origin-right
+  `}
       >
         <div className="flex items-center gap-24">
           <StaticImage
