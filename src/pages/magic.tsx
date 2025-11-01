@@ -41,9 +41,11 @@ const MagicSalePage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
         <MagicSaleBanner version={2} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
-        <MagicWhy part={12} />
-      </MaxWithBgColorContainer>
+      <div className="bg-magic">
+        <MaxWithBgColorContainer bgColor="bg-transparent">
+          <MagicWhy part={12} />
+        </MaxWithBgColorContainer>
+      </div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicComments version={1} />
       </MaxWithBgColorContainer>

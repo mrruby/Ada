@@ -436,3 +436,16 @@ body {
   z-index: -1;
   pointer-events: none;
 }
+
+.bg-magic {
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0)
+    ),
+    url("../../static/assets/background-magic.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
