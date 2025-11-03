@@ -269,7 +269,7 @@ const WebinarBanner = ({ version }: { version: number }) => {
         <div className="mt-20 px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-10 md:min-h-[800px]">
           <div className="flex justify-between xl:max-w-[1350px] mx-auto">
             <div className="flex flex-col justify-center max-w-[800px] gap-4 md:mt-8 xl:-mt-60 mb-3">
-              <h1 className="text-adaSubtitle md:text-adaBig font-bold tracking-wider leading-none font-anton text-ada-orange uppercase">
+              <h1 className="text-adaSubtitle md:text-adaBig tracking-wider leading-none font-anton text-ada-orange uppercase">
                 Adsy&chill
               </h1>
               <h2 className="text-adaMin md:text-adaSubtitle md:pt-2 md:mb-8 text-black">
@@ -283,7 +283,7 @@ const WebinarBanner = ({ version }: { version: number }) => {
                 }
                 sectionId="masterclasses"
                 textSize="text-adaMin md:text-adaSubtitle text-black"
-                btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-magicGreen md:tracking-[2.90px] md:h-[100px] rounded-[50px] border-1 border-black hover:bg-ada-orange "
+                btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-magicGreen md:tracking-[2.90px] md:h-[100px] rounded-[50px] border border-black hover:bg-ada-orange"
               />
             </div>
             <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[170px]">

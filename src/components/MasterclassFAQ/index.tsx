@@ -792,13 +792,11 @@ const MasterclassFAQ = ({
           <Button
             type="button"
             text={
-              <span className="uppercase">
-                Tworzę kobiece reklamy z Adsy&Chill!
-              </span>
+              <span className="uppercase">Tworzę reklamy z Adsy&Chill!</span>
             }
             sectionId="pricing"
             textSize="md:text-adaSubtitle text-white"
-            btnStyle="md:w-[440px] bg-ada-magicOrange mb-10 lg:mb-[120px] md:leading-[36px] md:h-[100px] rounded-full"
+            btnStyle="md:w-[440px] bg-ada-magicOrange mb-10 lg:mb-[120px] md:leading-[36px] md:h-[100px] rounded-full border border-black"
           />
         </>
       )}

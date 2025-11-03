@@ -31,7 +31,7 @@ const AdsyAndChill2025 = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <MasterclassesInfo2 version={2} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-purple3">
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <MasterclassesInfo2 version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
@@ -41,9 +41,12 @@ const AdsyAndChill2025 = () => {
         <MasterclassAgenda version={16} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
-        <MasterclassAgenda version={17} />
+        <ReferencesMentoring title8 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <MasterclassAgenda version={17} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-purple3">
         <MasterclassFAQ version={7} />
       </MaxWithBgColorContainer>
     </Layout>

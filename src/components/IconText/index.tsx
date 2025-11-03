@@ -184,11 +184,11 @@ const IconText = ({ version }: { version: number }) => {
       ),
     },
     {
-      icon: "🤔",
+      icon: "👀",
       text: (
         <>
-          Wiesz, że reklamy mogłyby pomóc Twojemu biznesowi, ale nie chcesz
-          wydawać fortuny na agencję?
+          Czujesz, że Twoja oferta jest wartościowa, ale nie dociera do
+          właściwych osób?
         </>
       ),
     },
@@ -511,14 +511,17 @@ const IconText = ({ version }: { version: number }) => {
       )}
       {version === 5 && (
         <div className="mx-auto md:pb-10 mt-4 md:mt-10">
-          <h2 className="text-adaStandard lg:text-adaSubtitleThird font-bold bg-white lg:max-w-[340px] px-10 py-4 mx-auto flex items-center justify-center text-ada-magicOrange rounded-full font-anton border border-ada-magicOrange">
+          <h2 className="text-adaStandard md:text-adaSubtitleThird font-bold bg-white lg:max-w-[340px] px-10 py-4 mx-auto flex items-center justify-center text-ada-magicOrange rounded-full font-anton border border-ada-magicOrange">
             Czy Ty też...
           </h2>
           <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
             <ul className="gap-10 md:gap-[120px] text-black">
               {leftList5.map((item, index) => (
-                <li className="flex gap-4 max-w-[560px] pb-4 px-3" key={index}>
-                  <span className="text-adaMin md:text-adaSubtitle">
+                <li
+                  className="flex gap-4 max-w-[460px] p-4 px-3 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center"
+                  key={index}
+                >
+                  <span className="text-adaMin md:text-adaSubtitleThird">
                     {" "}
                     {item.icon}
                   </span>
@@ -528,9 +531,12 @@ const IconText = ({ version }: { version: number }) => {
                 </li>
               ))}
             </ul>
-            <ul className="gap-10 md:gap-[120px]">
+            <ul className="gap-10 md:gap-[120px] text-black">
               {rightList5.map((item, index) => (
-                <li className="flex gap-4 max-w-[580px] pb-3 px-3" key={index}>
+                <li
+                  className="flex gap-4 max-w-[460px] p-4 px-3 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center"
+                  key={index}
+                >
                   <span className="text-adaMin md:text-adaSubtitle">
                     {" "}
                     {item.icon}
@@ -562,7 +568,7 @@ const IconText = ({ version }: { version: number }) => {
               Świetnie! Dzięki <span className="font-bold">masterclassom</span>{" "}
               przybliżysz się do życia, w którym pracujesz tak, jak lubisz i
               zarabiasz dzięki temu naprawdę{" "}
-              <span className="font-bold">fajne pieniądze</span>{" "}
+              <span className="font-bold">fajne pieniądze</span> 💸
             </p>
           </div>
         </div>

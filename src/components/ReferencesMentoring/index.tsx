@@ -18,6 +18,7 @@ type IReferences = {
   title5?: boolean
   title6?: boolean
   title7?: boolean
+  title8?: boolean
 }
 
 // const referencesList: IReferencesList[] = [
@@ -469,6 +470,44 @@ const referencesMagicList2: IReferencesList[] = [
   },
 ]
 
+const referencesAdsyList2: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinionAdsy1.webp"}
+        alt="Opinia o Magic"
+        placeholder="blurred"
+        width={360}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinionAdsy2.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={360}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinionAdsy3.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={360}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
 const ReferencesMentoring = ({
   title1,
   title2,
@@ -477,6 +516,7 @@ const ReferencesMentoring = ({
   title5,
   title6,
   title7,
+  title8,
 }: IReferences) => {
   return (
     <div className="pt-[40px]">
@@ -601,6 +641,32 @@ const ReferencesMentoring = ({
               autoPlaySpeed={2000}
             >
               {referencesMagicList.map((reference, index) => (
+                <Reference key={index} image={reference.image} />
+              ))}
+            </Carousel>
+          </div>
+        </>
+      )}
+      {title8 && (
+        <>
+          <Typography
+            variant="h2"
+            className="p-2 font-anton font-normal text-center uppercase text-ada-orange"
+          >
+            Tak mówią osoby, które korzystały <br /> z mojego wsparcia w
+            reklamach:
+          </Typography>
+          <div className="max-h-[720px] mx-auto mt-5 pb-4" id="opinie">
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              customLeftArrow={<CustomLeftArrow />}
+              customRightArrow={<CustomRightArrow />}
+              ssr={true}
+              autoPlay
+              autoPlaySpeed={2000}
+            >
+              {referencesAdsyList2.map((reference, index) => (
                 <Reference key={index} image={reference.image} />
               ))}
             </Carousel>

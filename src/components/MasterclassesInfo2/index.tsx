@@ -45,7 +45,6 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
             efects={efects1}
             forWhom="Dla każdego, kto chce skalować biznes w świadomy sposób"
             forWhomInfo=""
-            tip="Czy wiesz, że kampanie budujące społeczność na Instagramie już mogą generować pierwsze zakupy? Zadbaj o jakość społeczności, a każdy nowy obserwujący stanie się potencjalnym klientem."
             btn="Rozwijam instagrama!"
             sectionId="masterclass-1"
             purpose="budowanie świadomości marki, wzrost liczby obserwujących i zaangażowania na profilu"
@@ -57,6 +56,20 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
             people="11 125"
             roas="10 800 zł miesięcznie (zakładając, połowa osób decyduje się na skorzystanie z usługi)"
             roasLabel="Zysk"
+            image={
+              <div className="md:hidden lg:hidden xl:block md:absolute left-[-80px] -bottom-[30px]">
+                <StaticImage
+                  loading="eager"
+                  src={"../../images/protip1.webp"}
+                  alt="Ada Promis"
+                  placeholder="blurred"
+                  width={430}
+                  height={683}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
+              </div>
+            }
             imageInfo={
               <div className="mb-6">
                 <StaticImage
@@ -93,7 +106,6 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
           efects={efects2}
           forWhom="Dla każdego, kto chce skalować biznes w świadomy sposób"
           forWhomInfo=""
-          tip="Czy wiesz, że kampanie budujące społeczność na Instagramie już mogą generować pierwsze zakupy? Zadbaj o jakość społeczności, a każdy nowy obserwujący stanie się potencjalnym klientem."
           btn="BUDUJĘ MAILING!"
           sectionId="masterclass-2"
           purpose="kampania z celem zapis na listę mailową. Po dołączeniu subskrybenci otrzymują one time offer na dostęp do platformy kursowej"
@@ -104,6 +116,20 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
           value="69 972 zł"
           people="1949"
           roas="10,15"
+          image={
+            <div className="md:hidden lg:hidden xl:block md:absolute  left-[-80px] -bottom-[50px]">
+              <StaticImage
+                loading="eager"
+                src={"../../images/protip2.webp"}
+                alt="Ada Promis"
+                placeholder="blurred"
+                width={485}
+                height={632}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+          }
           imageInfo={
             <div className="mb-6">
               <StaticImage
@@ -139,11 +165,9 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
               </>
             }
             subtitle3="Case study z kampanii sprzedażowej"
-            textColor="text-white"
             efects={efects3}
             forWhom="Kampanie sprzedażowe to wisienka na torcie. Zadziałają najlepiej, jeśli prowadzisz już kampanie na wcześniejszych etapach lejka. Moja rada: zacznij od masterclassów o Instaramie i liście mailowej, a potem wróć do tego masterclassu."
             forWhomInfo=""
-            tip="Psst! Remarketing to najskuteczniejsze kampanie sprzedażowe - możesz je prowadzić nawet z małym budżetem i niewielką grupą fanów."
             btn="Sprzedaję skutecznie!"
             purpose="kampania sprzedażowa podczas akcji promocyjnej (remarketing)"
             cost="203,72 zł"
@@ -153,6 +177,20 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
             value="3900,80 zł"
             people="1115"
             roas="19,15"
+            image={
+              <div className="md:hidden lg:hidden xl:block md:absolute left-[-80px] bottom-[18px]">
+                <StaticImage
+                  loading="eager"
+                  src={"../../images/protip3.webp"}
+                  alt="Ada Promis"
+                  placeholder="blurred"
+                  width={485}
+                  height={632}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
+              </div>
+            }
             imageInfo={
               <div className="mb-6">
                 <StaticImage

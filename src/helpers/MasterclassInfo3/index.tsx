@@ -9,7 +9,6 @@ interface Props {
   efects: string[]
   forWhom: string
   forWhomInfo: string | React.JSX.Element
-  tip: string
   btn: string
   purpose: string
   cost: string
@@ -44,7 +43,6 @@ export const MasterclassInfo3: React.FC<Props> = ({
   efects,
   forWhom,
   forWhomInfo,
-  tip,
   btn,
   purpose,
   cost,
@@ -69,45 +67,41 @@ export const MasterclassInfo3: React.FC<Props> = ({
 
   return (
     <div
-      className={`relative w-full lg:h-[800px] py-5 md:py-20 px-2 overflow-visible transition-all duration-700 ${textColor}`}
+      className={`relative w-full lg:h-[900px] py-5 md:py-20 px-2 overflow-visible transition-all duration-700 ${textColor}`}
     >
       <div
         className={`lg:flex w-full transition-transform duration-700 ease-in-out ${
           showDetails ? "-translate-x-full" : "translate-x-0"
         }`}
       >
-        <div className="flex-shrink-0 w-full flex flex-col items-center relative z-10">
-          {image}
-          <div className="max-w-[840px] flex flex-col items-center mx-auto">
-            <div className="flex gap-5 justify-center">
-              <StaticImage
-                src={"../../images/magicSign.svg"}
-                alt=""
-                placeholder="blurred"
-                width={40}
-                className="opacity-0 md:opacity-100 animate-spin-slow w-[40px] h-[40px] mt-2"
-              />
-              <h2 className="text-adaSubtitle lg:text-adaSubtitleThird uppercase font-anton text-ada-magicOrange mb-4">
+        {image}
+        <div className="flex-shrink-0 w-full flex flex-col items-center z-10 justify-center">
+          <div className="max-w-[480px] flex flex-col items-center mx-auto">
+            <div className="flex flex-col gap-2 justify-center bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl text-center p-4 max-w-[480px] mb-12">
+              <h2 className="text-adaSubtitle lg:text-adaSubtitleThird uppercase font-anton text-ada-magicOrange">
                 {title}
               </h2>
-              <StaticImage
-                src={"../../images/magicSign.svg"}
-                alt=""
-                placeholder="blurred"
-                width={40}
-                className="opacity-0 md:opacity-100 animate-spin-slow w-[40px] h-[40px] mt-2"
-              />
+              <p className="uppercase font-bold md:text-adaDesc text-center">
+                {subtitle1}
+              </p>
+              <p className="pt-2">{subtitle2}</p>
             </div>
-
-            <p className="uppercase md:text-adaDesc text-center">{subtitle1}</p>
-            <p className="pt-2 text-center mb-8">{subtitle2}</p>
-
-            <div className="flex flex-col lg:flex-row justify-center gap-[20px] w-full">
+            <div className="flex flex-col justify-center gap-[20px] w-full">
+              <div>
+                <h3 className="font-bold md:text-adaDesc py-4">
+                  Poziom trudności:
+                </h3>
+                <p className="flex flex-col md:flex-row text-adaMin md:text-adaStandard">
+                  <span className="lg:-ml-8 pr-2">✅ </span>
+                  {forWhom}
+                </p>
+                <p className="pt-4">{forWhomInfo}</p>
+              </div>
               <div className="lg:min-w-[350px]">
-                <h3 className="font-bold md:text-adaDesc pb-4 mt-10">
+                <h3 className="font-bold md:text-adaDesc pb-2 mt-10">
                   Efekty:
                 </h3>
-                <ul className="flex flex-col lg:gap-[10px] mx-auto mb-10 mr-2">
+                <ul className="flex flex-col lg:gap-[10px] mx-auto mb-2 mr-2">
                   {efects.map((item, index) => (
                     <li
                       key={index}
@@ -118,31 +112,10 @@ export const MasterclassInfo3: React.FC<Props> = ({
                   ))}
                 </ul>
               </div>
-
-              <div>
-                <div className="mb-4">
-                  <h3 className="font-bold md:text-adaDesc pb-2">
-                    Poziom trudności:
-                  </h3>
-                  <p className="flex flex-col md:flex-row text-adaMin md:text-adaStandard">
-                    <span className="lg:-ml-8 pr-2">✅ </span>
-                    {forWhom}
-                  </p>
-                  <p className="pt-4">{forWhomInfo}</p>
-                </div>
-
-                <div className="md:max-w-[40vw]">
-                  <h3 className="font-bold md:text-adaDesc pb-2">Protip:</h3>
-                  <p className="flex flex-col md:flex-row text-adaMin md:text-adaStandard">
-                    {tip}
-                  </p>
-                </div>
-              </div>
             </div>
-
-            <div className={`${btnStyle} my-20`}>
+            <div className={`${btnStyle} my-12`}>
               <div
-                className={`px-3 lg:w-[400px] rounded-full md:h-[60px] flex justify-center items-center bg-ada-pink5 mx-auto ${btnMargin}`}
+                className={`px-3 lg:w-[400px] rounded-full md:h-[60px] flex justify-center items-center bg-ada-pink5 mx-auto border border-black ${btnMargin}`}
               >
                 <a
                   className="font-extrabold md:text-adaSubtitle text-white uppercase"
@@ -155,7 +128,6 @@ export const MasterclassInfo3: React.FC<Props> = ({
             </div>
           </div>
         </div>
-
         <div
           className="flex-shrink-0 w-full flex flex-col justify-between
  items-center relative z-10"

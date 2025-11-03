@@ -1228,7 +1228,7 @@ const MasterclassAgenda = ({
               </a>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-8 md:w-[1200px]">
+          <div className="flex flex-col lg:flex-row gap-8 md:w-[1200px] hidden">
             {packageList2.map((packageItem, index) => (
               <Package2
                 key={index}
