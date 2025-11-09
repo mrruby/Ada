@@ -266,7 +266,7 @@ const WebinarBanner = ({ version }: { version: number }) => {
         </div>
       )}
       {version === 7 && (
-        <div className="mt-20 px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-10 md:min-h-[700px]">
+        <div className="mt-20 px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-10 md:min-h-[670px]">
           <div className="flex flex-col lg:flex-row justify-between mx-auto text-center lg:text-start">
             <div className="flex flex-col justify-center items-center lg:items-start max-w-[800px] gap-4 md:mt-8 xl:-mt-60 mb-3">
               <h1 className="text-adaSubtitleThird md:text-adaBig tracking-wider leading-none font-anton text-ada-orange uppercase">
@@ -280,7 +280,7 @@ const WebinarBanner = ({ version }: { version: number }) => {
               <Button
                 type="button"
                 text={<span className="font-bold">Przekonałaś mnie!</span>}
-                sectionId="masterclasses"
+                sectionId="pakiety"
                 textSize="text-adaMin md:text-adaSubtitle text-black"
                 btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-magicGreen md:tracking-[2.90px] md:h-[70px] rounded-[50px] border border-black hover:bg-ada-orange"
               />
@@ -289,21 +289,21 @@ const WebinarBanner = ({ version }: { version: number }) => {
                 text={
                   <span className="font-bold">Chcę więcej informacji!</span>
                 }
-                sectionId="masterclasses"
+                sectionId="pakiety"
                 textSize="text-adaMin md:text-adaSubtitle text-black"
                 btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-magicPink2 md:tracking-[2.90px] md:h-[70px] rounded-[50px] border border-black hover:bg-ada-magicPink2"
               />
             </div>
-            <div className="xl:ml-[-300px] md:-mt-6 lg:max-w-none md:max-w-[500px]">
+            <div className="flex justify-center lg:justify-end w-full lg:w-auto">
               <StaticImage
                 loading="eager"
                 src={"../../images/magic_adsy3.webp"}
                 alt="Ada Promis - hero"
                 placeholder="blurred"
-                width={773}
-                height={701}
+                width={700}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
+                className="max-w-full h-auto object-contain"
               />
             </div>
           </div>

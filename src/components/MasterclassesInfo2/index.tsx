@@ -109,7 +109,7 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
               </div>
             }
             image={
-              <div className="md:hidden lg:hidden xl:block md:absolute left-[-80px] -bottom-[80px]">
+              <div className="md:hidden lg:hidden xl:block md:absolute left-[-90px] -bottom-[30px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/protip1.webp"}
@@ -249,7 +249,7 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
             </>
           }
           image={
-            <div className="md:hidden lg:hidden xl:block md:absolute  left-[-80px] -bottom-[6px]">
+            <div className="md:hidden lg:hidden xl:block md:absolute  left-[-90px] bottom-[20px]">
               <StaticImage
                 loading="eager"
                 src={"../../images/protip2.webp"}
@@ -381,7 +381,7 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
               </div>
             }
             image={
-              <div className="md:hidden lg:hidden xl:block md:absolute left-[-80px] -bottom-[34px]">
+              <div className="md:hidden lg:hidden xl:block md:absolute left-[-90px] -bottom-[34px]">
                 <StaticImage
                   loading="eager"
                   src={"../../images/protip3.webp"}

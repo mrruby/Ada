@@ -12,29 +12,14 @@ interface Props {
   btn: string
   paragraph?: string | React.JSX.Element
   paragraph2?: string | React.JSX.Element
-  purpose?: string
-  cost?: string
-  time?: string
-  amount?: string
-  amountOfContacts?: string
-  costOfContacts?: string
-  groups?: string
-  value?: string
-  people?: string
-  roas?: string
-  addInfo?: string | React.JSX.Element
   image?: React.JSX.Element
   imageInfo?: React.JSX.Element
   btnStyle?: string
   btnMargin?: string
-  sectionId?: string
-  roasLabel?: string
   textColor?: "text-black" | "text-white"
   btnLink?: string
 }
 
-const h4Style =
-  "bg-ada-magicPink2 font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1 "
 const pStyle = "mt-1 pr-4 text-adaMin md:text-adaStandard"
 
 export const MasterclassInfo3: React.FC<Props> = ({
@@ -48,22 +33,10 @@ export const MasterclassInfo3: React.FC<Props> = ({
   btn,
   paragraph,
   paragraph2,
-  purpose,
-  cost,
-  time,
-  amount,
-  amountOfContacts,
-  costOfContacts,
-  groups,
-  value,
-  people,
-  roas,
-  addInfo,
   image,
   imageInfo,
   btnStyle,
   btnMargin,
-  roasLabel = "ROAS",
   textColor = "text-black",
   btnLink = "#pakiety",
 }) => {
@@ -80,7 +53,7 @@ export const MasterclassInfo3: React.FC<Props> = ({
       >
         {image}
         <div className="flex-shrink-0 w-full flex flex-col items-center z-10 justify-center">
-          <div className="max-w-[480px] flex flex-col items-center mx-auto">
+          <div className="lg:pl-8 max-w-[420px] flex flex-col items-center mx-auto">
             <div className="flex flex-col gap-2 justify-center bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl text-center p-4 max-w-[480px] mb-12">
               <h2 className="text-adaSubtitle lg:text-adaSubtitleThird uppercase font-anton text-ada-magicOrange">
                 {title}
@@ -149,76 +122,6 @@ export const MasterclassInfo3: React.FC<Props> = ({
             )}
             <div className="mx-auto flex justify-center">{imageInfo}</div>
             {paragraph2 && <div className="mx-auto">{paragraph2}</div>}
-            {/* <div className="mx-auto max-w-[800px] mt-6">
-              <table className="w-full">
-                <tbody>
-                  <tr className="flex flex-col md:table-row">
-                    <td className="md:max-w-[500px]">
-                      <h4 className={h4Style}>Cel kampanii: </h4>
-                      <p className={pStyle}>{purpose}</p>
-                    </td>
-                    <td>
-                      <h4 className={h4Style}>Wydany budżet: </h4>
-                      <p className={pStyle}>{cost}</p>
-                    </td>
-                  </tr>
-
-                  <tr className="flex flex-col md:table-row">
-                    <td className="md:max-w-[500px]">
-                      <h4 className={h4Style}>Czas trwania kampanii:</h4>
-                      <p className={pStyle}>{time}</p>
-                    </td>
-                    {amount ? (
-                      <td>
-                        <h4 className={h4Style}>Ilość zakupów:</h4>
-                        <p className={pStyle}>{amount}</p>
-                      </td>
-                    ) : (
-                      <td>
-                        <h4 className={h4Style}>Ilość kontaktów:</h4>
-                        <p className={pStyle}>{amountOfContacts}</p>
-                      </td>
-                    )}
-                  </tr>
-
-                  <tr className="flex flex-col md:table-row">
-                    <td className="md:max-w-[500px]">
-                      <h4 className={h4Style}>Grupy docelowe:</h4>
-                      <p className={pStyle}>{groups}</p>
-                    </td>
-                    {people ? (
-                      <td>
-                        <h4 className={h4Style}>Wartość zakupów:</h4>
-                        <p className={pStyle}>{value}</p>
-                      </td>
-                    ) : (
-                      <td>
-                        <h4 className={h4Style}>Koszt pozyskania kontaktu:</h4>
-                        <p className={pStyle}>{costOfContacts}</p>
-                      </td>
-                    )}
-                  </tr>
-
-                  <tr className="flex flex-col md:table-row">
-                    {people && (
-                      <td className="md:max-w-[500px]">
-                        <h4 className={h4Style}>
-                          Liczba osób, która wypełniła formularz zapisu:
-                        </h4>
-                        <p className={pStyle}>{people}</p>
-                      </td>
-                    )}
-                    {roas && (
-                      <td>
-                        <h4 className={h4Style}>{roasLabel}:</h4>
-                        <p className={pStyle}>{roas}</p>
-                      </td>
-                    )}
-                  </tr>
-                </tbody>
-              </table>
-              {addInfo}
-            </div> */}
           </div>
         </div>
       </div>
