@@ -1,6 +1,7 @@
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import React from "react"
 import Carousel from "react-multi-carousel"
 import { responsive } from "values/const"
@@ -622,7 +623,7 @@ const ReferencesMentoring = ({
         </div>
       )}
       {title7 && (
-        <>
+        <div className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12">
           <Typography
             variant="h2"
             className="p-2 font-anton font-normal text-center uppercase text-ada-orange"
@@ -630,25 +631,18 @@ const ReferencesMentoring = ({
             Tak mówią osoby, które korzystały <br /> z mojego wsparcia w
             reklamach:
           </Typography>
-          <div className="max-h-[600px] mx-auto mt-5 pb-4" id="opinie">
-            <Carousel
-              responsive={responsive}
-              infinite={true}
-              customLeftArrow={<CustomLeftArrow />}
-              customRightArrow={<CustomRightArrow />}
-              ssr={true}
-              autoPlay
-              autoPlaySpeed={2000}
-            >
-              {referencesMagicList.map((reference, index) => (
-                <Reference key={index} image={reference.image} />
-              ))}
-            </Carousel>
+          <div className="mx-auto pt-2">
+            <StaticImage
+              src={"../../images/adsyOpinie1.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
+              width={1200}
+            />
           </div>
-        </>
+        </div>
       )}
       {title8 && (
-        <>
+        <div className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12">
           <Typography
             variant="h2"
             className="p-2 font-anton font-normal text-center uppercase text-ada-orange"
@@ -656,22 +650,24 @@ const ReferencesMentoring = ({
             Tak mówią osoby, które korzystały <br /> z mojego wsparcia w
             reklamach:
           </Typography>
-          <div className="max-h-[720px] mx-auto mt-5 pb-4" id="opinie">
-            <Carousel
-              responsive={responsive}
-              infinite={true}
-              customLeftArrow={<CustomLeftArrow />}
-              customRightArrow={<CustomRightArrow />}
-              ssr={true}
-              autoPlay
-              autoPlaySpeed={2000}
-            >
-              {referencesAdsyList2.map((reference, index) => (
-                <Reference key={index} image={reference.image} />
-              ))}
-            </Carousel>
+          <div className="mx-auto pt-6">
+            <StaticImage
+              src={"../../images/adsyOpinie2.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
+              width={1200}
+            />
           </div>
-        </>
+          <div className="mx-auto">
+            <Button
+              type="button"
+              text={<span className="font-bold">Ja też tak chcę!</span>}
+              sectionId="pakiety"
+              textSize="text-adaMin md:text-adaSubtitle text-white"
+              btnStyle="uppercase w-[187px] md:w-[380px] bg-ada-magicOrange md:tracking-[2.90px] md:h-[70px] rounded-[50px] border border-black hover:bg-ada-magicPink2"
+            />
+          </div>
+        </div>
       )}
     </div>
   )

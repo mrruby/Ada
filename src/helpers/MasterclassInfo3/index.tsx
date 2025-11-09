@@ -10,13 +10,15 @@ interface Props {
   forWhom: string
   forWhomInfo: string | React.JSX.Element
   btn: string
-  purpose: string
-  cost: string
-  time: string
+  paragraph?: string | React.JSX.Element
+  paragraph2?: string | React.JSX.Element
+  purpose?: string
+  cost?: string
+  time?: string
   amount?: string
   amountOfContacts?: string
   costOfContacts?: string
-  groups: string
+  groups?: string
   value?: string
   people?: string
   roas?: string
@@ -44,6 +46,8 @@ export const MasterclassInfo3: React.FC<Props> = ({
   forWhom,
   forWhomInfo,
   btn,
+  paragraph,
+  paragraph2,
   purpose,
   cost,
   time,
@@ -67,7 +71,7 @@ export const MasterclassInfo3: React.FC<Props> = ({
 
   return (
     <div
-      className={`relative w-full lg:h-[900px] py-5 md:py-20 px-2 overflow-visible transition-all duration-700 ${textColor}`}
+      className={`relative w-full lg:h-[1000px] py-5 md:py-10 px-2 overflow-visible transition-all duration-700 ${textColor}`}
     >
       <div
         className={`lg:flex w-full transition-transform duration-700 ease-in-out ${
@@ -115,10 +119,10 @@ export const MasterclassInfo3: React.FC<Props> = ({
             </div>
             <div className={`${btnStyle} my-12`}>
               <div
-                className={`px-3 lg:w-[400px] rounded-full md:h-[60px] flex justify-center items-center bg-ada-pink5 mx-auto border border-black ${btnMargin}`}
+                className={`px-3 lg:w-[400px] rounded-full md:h-[80px] flex justify-center items-center bg-ada-magicPink2 mx-auto border border-black ${btnMargin}`}
               >
                 <a
-                  className="font-extrabold md:text-adaSubtitle text-white uppercase"
+                  className="font-bold md:text-adaSubtitle  uppercase text-black text-center"
                   href={btnLink}
                   rel="noopener noreferrer"
                 >
@@ -132,14 +136,20 @@ export const MasterclassInfo3: React.FC<Props> = ({
           className="flex-shrink-0 w-full flex flex-col justify-between
  items-center relative z-10"
         >
-          <div className="max-w-[840px] mx-auto">
+          <div className="mx-auto">
             <div className="w-full bg-ada-magicPink2">
-              <p className="pt-2 text-center text-adaStandard lg:text-adaSubtitleSecondary font-bold mb-4">
+              <p className="pt-2 text-center text-adaStandard lg:text-adaSubtitle font-bold mb-4">
                 {subtitle3}
               </p>
             </div>
+            {paragraph && (
+              <div className="py-4 max-w-[700px] mx-auto">
+                <p className={pStyle}>{paragraph}</p>
+              </div>
+            )}
             <div className="mx-auto flex justify-center">{imageInfo}</div>
-            <div className="mx-auto max-w-[800px] mt-6">
+            {paragraph2 && <div className="mx-auto">{paragraph2}</div>}
+            {/* <div className="mx-auto max-w-[800px] mt-6">
               <table className="w-full">
                 <tbody>
                   <tr className="flex flex-col md:table-row">
@@ -208,7 +218,7 @@ export const MasterclassInfo3: React.FC<Props> = ({
                 </tbody>
               </table>
               {addInfo}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -225,6 +235,17 @@ export const MasterclassInfo3: React.FC<Props> = ({
           width={80}
           className="cursor-pointer hover:scale-110 transition-transform duration-300"
         />
+        {!showDetails && (
+          <div>
+            <StaticImage
+              src="../../images/pst.svg"
+              alt="Wróć"
+              placeholder="blurred"
+              width={140}
+              className="mt-6"
+            />
+          </div>
+        )}
       </button>
     </div>
   )

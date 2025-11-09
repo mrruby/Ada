@@ -217,8 +217,8 @@ const IconText = ({ version }: { version: number }) => {
       icon: "💪",
       text: (
         <>
-          Chciałabyś w końcu zrozumieć te wszystkie liczby i ustawienia w
-          Menedżerze Reklam?
+          Chciałabyś w końcu zrozumieć, jak poruszać się po menedżerze reklam i
+          dlaczego zadziała lepiej niż przycisk “promuj post”?
         </>
       ),
     },
@@ -510,21 +510,18 @@ const IconText = ({ version }: { version: number }) => {
         </div>
       )}
       {version === 5 && (
-        <div className="mx-auto md:pb-10 mt-4 md:mt-10">
-          <h2 className="text-adaStandard md:text-adaSubtitleThird font-bold bg-white lg:max-w-[340px] px-10 py-4 mx-auto flex items-center justify-center text-ada-magicOrange rounded-full font-anton border border-ada-magicOrange">
+        <div className="mx-auto md:pb-10 mt-4 md:mt-10 px-2">
+          <h2 className="text-adaSubtitleSecondary md:text-adaSubtitleThird font-bold bg-white lg:max-w-[340px] px-10 py-4 mx-auto flex items-center justify-center text-ada-magicOrange rounded-full font-anton border border-ada-magicOrange">
             Czy Ty też...
           </h2>
           <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
             <ul className="gap-10 md:gap-[120px] text-black">
               {leftList5.map((item, index) => (
                 <li
-                  className="flex gap-4 max-w-[460px] p-4 px-3 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center"
+                  className="flex gap-4 max-w-[500px] h-[120px] px-6 py-8 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center"
                   key={index}
                 >
-                  <span className="text-adaMin md:text-adaSubtitleThird">
-                    {" "}
-                    {item.icon}
-                  </span>
+                  <span className="md:text-adaSubtitleThird"> {item.icon}</span>
                   <span className="text-adaMin md:text-adaStandard">
                     {item.text}
                   </span>
@@ -534,7 +531,7 @@ const IconText = ({ version }: { version: number }) => {
             <ul className="gap-10 md:gap-[120px] text-black">
               {rightList5.map((item, index) => (
                 <li
-                  className="flex gap-4 max-w-[460px] p-4 px-3 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center"
+                  className="flex gap-4 max-w-[500px] h-[120px] p-2 lg:px-6 lg:py-8 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center"
                   key={index}
                 >
                   <span className="text-adaMin md:text-adaSubtitle">
@@ -560,15 +557,15 @@ const IconText = ({ version }: { version: number }) => {
             </a>
           </div>
           <div className="max-w-[480px] text-center py-[50px] mx-auto">
-            <h3 className="text-adaStandard md:text-adaSubtitleSecondary pb-10 text-ada-magicOrange font-anton">
+            <h3 className="text-adaSubtitleSecondary pb-10 text-ada-magicOrange font-anton">
               W TWOJEJ GŁOWIE POJAWIŁA SIĘ MYŚL:{" "}
               <span className="text-ada-magicPink2">„KURCZE, NO TAK!”?</span>
             </h3>
-            <p className="text-adaMin md:text-adaDesc text-black">
-              Świetnie! Dzięki <span className="font-bold">masterclassom</span>{" "}
-              przybliżysz się do życia, w którym pracujesz tak, jak lubisz i
-              zarabiasz dzięki temu naprawdę{" "}
-              <span className="font-bold">fajne pieniądze</span> 💸
+            <p className="text-adaDesc text-black">
+              Świetnie! Dzięki <b>ADSY&CHILL</b> przybliżysz się do życia w
+              biznesie, który działa nie tylko wtedy gdy pracujesz i publikujesz
+              treści na Instagramie{" "}
+              <b>- możesz zarabiać więcej dzięki reklamom!</b>
             </p>
           </div>
         </div>

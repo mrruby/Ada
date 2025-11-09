@@ -1,6 +1,7 @@
 import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicCollectiveBanner from "components/MagicCollectiveBanner"
+import MagicWhy from "components/MagicWhy"
 import MasterclassAgenda from "components/MasterclassAgenda"
 import MasterclassesInfo2 from "components/MasterclassesInfo2"
 import MasterclassFAQ from "components/MasterclassFAQ"
@@ -34,11 +35,14 @@ const AdsyAndChill2025 = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <MasterclassesInfo2 version={3} />
       </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+        <MagicWhy part={13} />
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <MasterclassAgenda version={15} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-magic-grid relative">
-        <MasterclassAgenda version={16} />
+        <MasterclassAgenda version={18} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <ReferencesMentoring title8 />

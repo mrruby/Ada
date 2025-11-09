@@ -1104,31 +1104,30 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
           className="text-black overflow-hidden sm:mt-10"
           padding="py-8 px-4 md:px-8 flex justify-centeritems-center"
         >
-          <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
+          <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-center gap-8 text-center lg:text-start">
             <div className="w-full md:w-1/2 text-white">
               <TypingAnimation
                 text="Cześć!"
-                textStyle="text-adaSubtitle uppercase md:text-[80px] font-extrabold animate-bounce text-ada-magicGreen font-anton "
+                textStyle="text-adaSubtitleSecondary uppercase md:text-[80px] animate-bounce text-ada-magicGreen font-anton "
               />
-              <h3 className="text-adaMin md:text-adaSubtitleSecondary pt-8 mt-4 font-bold  pb-6">
+              <h3 className="text-adaMin md:text-adaSubtitleSecondary pt-8 mt-4 font-bold  pb-6 tracking-widest">
                 Nazywam się Adrianna Promis-Urbas
               </h3>
-              <p className="pt-2 pb-2 text-adaMin md:text-adaNav tracking-wider">
-                <span className="font-bold">Jestem przedsiębiorczynią.</span>{" "}
-                Tworzę kampanie reklamowe, które zarabiają pieniądze.
-                <span className="font-bold">
-                  {" "}
+              <p className="pt-2 pb-2 text-adaMin md:text-adaNav tracking-widest">
+                <b>Jestem przedsiębiorczynią.</b> Tworzę kampanie reklamowe,
+                które zarabiają pieniądze.{" "}
+                <b>
                   W swojej karierze wydałam na kampanie reklamowe sporo ponad 2
-                  000 000 złotych, a zarobiłam kilkanaście razy tyle!{" "}
-                </span>
+                  000 000 złotych,
+                </b>{" "}
+                a zarobiłam kilkanaście razy tyle!
               </p>
-              <p className="pt-2 pb-2 text-adaMin md:text-adaNav tracking-wider">
-                Teraz pokazuję przedsiębiorczyniom
-                <span className="font-bold"> sprawdzone strategie,</span> dzięki
-                którym{" "}
-                <span className="font-bold">
-                  Twoje reklamy przynoszą stabilny przychód
-                </span>{" "}
+              <p className="pt-2 pb-2 text-adaMin md:text-adaNav tracking-widest">
+                <b>
+                  Moja specjalizacja to marki osobiste i małe kobiece biznesy
+                </b>{" "}
+                - dobrze znam i rozumiem wyzwania przedsiębiorczyń i chcę, aby
+                reklamy ułatwiały codzienność, zapewniając stabilny przychód
                 zamiast pochłaniać budżet.
               </p>
             </div>
@@ -1144,7 +1143,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               />
             </div>
           </div>
-          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 -translate-y-6">
+          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 lg:-translate-y-6">
             <a href="#pakiety">
               <StaticImage
                 src={"../../images/magicBtn.svg"}

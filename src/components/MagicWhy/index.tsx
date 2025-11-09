@@ -567,6 +567,128 @@ const MagicWhy = ({ part }: { part: number }) => {
           />
         </div>
       )}
+      {part == 13 && (
+        <div className="relative flex flex-col items-center justify-center">
+          <div className="w-full text-black mb-20">
+            <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary pt-10 text-center font-anton text-ada-magicOrange">
+              Co zmieni się, jeśli zainwestujesz w{" "}
+              <span className="text-ada-magicPink4">Adsy&Chill</span>?
+            </h2>
+          </div>
+          <div
+            className="flex flex-col md:flex-row justify-center items-center gap-8 mb-6"
+            onMouseOver={handleMouseEnter}
+          >
+            <div className="flex flex-col md:flex-row gap-8 text-black">
+              <div
+                className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromLeft" : ""}`}
+              >
+                <div className="max-w-md bg-ada-white3 py-2 border-[3px] border-ada-magicPurple4 ">
+                  <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary pb-2 text-center font-anton text-ada-magicOrange">
+                    Przed
+                  </h2>
+                  <ul className="px-8">
+                    <li className="mb-3">
+                      ❌ Korzystasz z <b>“promuj post”</b> na Instagramie
+                    </li>
+                    <li className="mb-3">
+                      ❌ Być może <b>ustawiasz już reklamy w menedżerze,</b> ale
+                      nie jesteś zadowolona z wyników
+                    </li>
+                    <li className="mb-3">
+                      ❌ Nie wiesz, <b>jak działać skutecznie z reklamami,</b> i
+                      jak je ustawić
+                    </li>
+                    <li className="mb-3">
+                      ❌{" "}
+                      <b>
+                        Twoje działania organiczne już nie przynoszą
+                        efektu,{" "}
+                      </b>
+                      lub działają jedynie wtedy, gdy bez przerwy publikujesz i
+                      działasz na Instagramie
+                    </li>
+                    <li className="mb-3">
+                      ❌ Nie wiesz,
+                      <b> jak ustawić kampanię sprzedażową, </b>
+                      która przynosi efekty
+                    </li>
+                    <li className="mb-3">
+                      ❌ Obawiasz się
+                      <b> przepalenia budżetu reklamowego</b>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromRight" : ""}`}
+              >
+                <div className="max-w-md bg-ada-white3 py-2 border-[3px] border-ada-magicPink4 ">
+                  <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary pb-2 text-center font-anton text-ada-magicOrange">
+                    Po
+                  </h2>
+                  <ul className="px-8">
+                    <li className="mb-3">
+                      ✅ <b>Korzystasz z gotowych nagrań i instrukcji,</b> które
+                      w ekspresowy i skuteczny sposób przeprowadzą Cię przez
+                      ustawienie reklam
+                    </li>
+                    <li className="mb-3">
+                      ✅{" "}
+                      <b>
+                        Masz dostęp do pełnego, eksperckiego pakietu nagrań i
+                        wytycznych do kampanii
+                      </b>{" "}
+                      na pozyskanie obserwujących, budowanie listy mailowej i
+                      sprzedaży remarketingowej
+                    </li>
+                    <li className="mb-3">
+                      ✅ Otrzymujeszb <b>sprawdzony i gotowy</b> proces od
+                      ekspertek
+                    </li>
+                    <li className="mb-3">
+                      ✅{" "}
+                      <b>
+                        Potrafisz analizować wyniki swoich reklam i wdrażać
+                        poprawki,
+                      </b>
+                      aby działały lepiej
+                    </li>
+                    <li className="mb-3">
+                      ✅ <b> Twoje kampanie reklamowe pracują:</b>
+                      na urlopie, w weekend, w święta, po południu…
+                    </li>
+                    <li className="mb-3">
+                      ✅<b> Uśmiechasz się na widok nowych obserwacji,</b>{" "}
+                      zamówień, zapytań i rosnącej liczby mailowej!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mx-auto">
+            <Button
+              type="button"
+              text={<span className="font-bold">Wybieram ADSY&CHILL!</span>}
+              sectionId="pakiety"
+              textSize="text-adaMin md:text-adaSubtitle text-black"
+              btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-magicPink2 md:tracking-[2.90px] md:h-[70px] rounded-[50px] border border-black hover:bg-ada-magicPink2"
+            />
+          </div>
+          <div className="flex justify-center items-center absolute bottom-[-120px] left-1/2 -translate-x-1/2 -translate-y-6">
+            <a href="#pakiety">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+        </div>
+      )}
     </Section>
   )
 }
