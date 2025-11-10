@@ -39,6 +39,7 @@ module.exports = {
           magicPurple2: "#584596",
           magicPurple3: "#5D4E9D",
           magicPurple4: "#B2A1FA",
+          magicPurple5: "#B0A8D7",
           magicOrange: "#EE701E",
           magicOrange2: "#FFAD00",
           magicGreen: "#E8F6CB",
@@ -91,6 +92,7 @@ module.exports = {
         marquee2: "marquee 120s linear infinite",
         slideInFromLeft: "slideInFromLeft 1.5s ease-out",
         slideInFromRight: "slideInFromRight 1.5s ease-out",
+        magicPulse: "magicPulse 4s ease-in-out forwards",
       },
       keyframes: {
         fadeIn: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
@@ -122,6 +124,10 @@ module.exports = {
           "50%": { transform: "translateX(-4%)", opacity: "1" },
           "70%": { transform: "translateX(2%)", opacity: "1" },
           "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        magicPulse: {
+          "0%": { transform: "scale(6)" },
+          "100%": { transform: "scale(1)" },
         },
       },
     },

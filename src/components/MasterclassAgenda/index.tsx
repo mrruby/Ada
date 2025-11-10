@@ -9,6 +9,7 @@ import Carousel from "react-multi-carousel"
 import { responsive } from "values/const"
 import Package from "../../helpers/Package"
 
+import Package2 from "helpers/Package2"
 import metaAdsZainteresowani from "values/forms/meta-ads-zainteresowani.html"
 import ogarnijSwojeAdsyZainteresowani from "values/forms/ogarnij-swoje-adsy-zainteresowani.html"
 
@@ -182,6 +183,45 @@ const plusBasicList = [
   </p>,
 ]
 
+const masterclassList = [
+  <span>
+    <span className="font-bold">
+      Masterclass “Wartościowe follow na Instagramie”: <br />
+    </span>
+    przystępne omówienie teorii i przygotowania strategicznego <br />+ nagranie
+    krok po kroku w menedżerze reklam
+  </span>,
+  <span>
+    <span className="font-bold">
+      Masterclass “Kampania, która buduje listę mailingową”: <br />
+    </span>
+    przystępne omówienie teorii i przygotowania strategicznego <br />+ nagranie
+    krok po kroku w menedżerze reklam
+  </span>,
+  <span>
+    <span className="font-bold">
+      Masterclass “Reklamy remarketingowe, które sprzedają”: <br />
+    </span>
+    przystępne omówienie teorii i przygotowania strategicznego <br />+ nagranie
+    krok po kroku w menedżerze reklam
+  </span>,
+  <span>
+    <span className="font-bold">BONUS: gotowe szablony graficzne reklam </span>
+    do kampanii na pozyskanie obserwujących, budowanie listy mailowej i sprzedaż
+    remarketingową{" "}
+  </span>,
+  <span>
+    <span className="font-bold">BONUS: lejek na urlop, wakacje i święta </span>
+    dla e-commerce, usług i produktów cyfrowych{" "}
+  </span>,
+  <span>
+    <span className="font-bold">
+      BONUS: słowniczek pojęć w menedżerze reklam,{" "}
+    </span>
+    które ułatwią Ci życie z reklamami{" "}
+  </span>,
+]
+
 const pakietStartList = [
   "6 szkoleń video",
   "16h office Hours",
@@ -242,6 +282,27 @@ const newlistItems2 = [
   </p>,
 ]
 
+const newlistItems3 = [
+  <p key="instruction">
+    Otrzymasz konkretną instrukcję ustawienia trzech kampanii reklamowych krok
+    po kroku
+  </p>,
+  <p key="access">
+    Masz dostęp do nagrań przez 12 miesięcy - oglądasz kiedy chcesz, ile razy
+    potrzebujesz
+  </p>,
+]
+
+const newlistItems4 = [
+  <p key="learn">
+    W godzinę ustawisz profesjonalną kampanię reklamową - nawet jeśli to Twój
+    pierwszy raz
+  </p>,
+  <p key="setup">
+    W trzy godziny stworzysz lejek reklamowy dla swojego biznesu
+  </p>,
+]
+
 const packageList = [
   {
     title: "❤️ PAKIET IG:",
@@ -273,6 +334,40 @@ const packageList = [
     ),
     price: "297 zł",
     link: "https://slowmarketing.mailingr.co/c/masterclass:-reklamy-ktore-sprzedaja-na-automacie-Dvcn",
+  },
+]
+
+const packageList2 = [
+  {
+    title: "❤️ PAKIET IG:",
+    desc: (
+      <>
+        ✅ Masterclass{" "}
+        <b>„Reklamy IG, które budują zaangażowaną społeczność”</b>
+      </>
+    ),
+    link: "https://slowmarketing.mailingr.co/c/masterclass:-reklamy-ig-ktore-buduja-zaangazowana-spolecznosc-ubRU",
+    color: "magicGreen",
+  },
+  {
+    title: "💌 PAKIET MAILING:",
+    desc: (
+      <>
+        ✅ Masterclass <b>„Lista mailowa, która przyciąga klientów”</b>
+      </>
+    ),
+    link: "https://slowmarketing.mailingr.co/c/masterclass:-lista-mailowa-ktora-przyciaga-klientow-1dPN",
+    color: "white2",
+  },
+  {
+    title: "💰PAKIET SPRZEDAŻ:",
+    desc: (
+      <>
+        ✅ Masterclass <b>„Reklamy, które sprzedają na automacie”</b>
+      </>
+    ),
+    link: "https://slowmarketing.mailingr.co/c/masterclass:-reklamy-ktore-sprzedaja-na-automacie-Dvcn",
+    color: "purple3",
   },
 ]
 
@@ -1125,6 +1220,177 @@ const MasterclassAgenda = ({
                 ))}
               </div>
             </ul>
+          </div>
+        </div>
+      )}
+      {version === 15 && (
+        <div
+          className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12"
+          id="pakiety"
+        >
+          <h2 className="text-adaSubtitleSecondary lg:text-adaTitle3 pt-10 pb-10 text-center font-anton text-ada-magicOrange">
+            Co dostaniesz <br /> w Adsy&Chill?
+          </h2>
+          <div className="mx-auto">
+            <StaticImage
+              src={"../../images/magicAgenda.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
+              width={1100}
+            />
+          </div>
+        </div>
+      )}
+      {version === 16 && (
+        <div
+          className="w-full flex flex-col px-3 items-center mb-20"
+          id="pricing"
+        >
+          <div className="text-center">
+            <div className="max-w-[500px] flex flex-col text-black rounded-[20px] bg-ada-magicPink border border-ada-magicOrange px-8">
+              <h3 className="text-adaBase lg:text-adaSubtitle py-5 font-bold">
+                🚀 PAKIET FULL:
+              </h3>
+              <ul className="flex flex-col gap-[10px] mx-auto pb-12 text-left">
+                {plusBasicList.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex flex-row text-adaMin md:text-adaStandard"
+                  >
+                    <div className="mr-2">✅</div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="-mt-6">
+              <a
+                href="https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="text-center font-extrabold text-adaBase pt-4 bg-ada-magicOrange text-white w-[300px] rounded-[100px] px-6 py-4 inline-block mx-auto mb-10 uppercase border border-black">
+                  Chcę dołączyć!
+                </p>
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row gap-8 md:w-[1200px] hidden">
+            {packageList2.map((packageItem, index) => (
+              <Package2
+                key={index}
+                title={packageItem.title}
+                desc={packageItem.desc}
+                link={packageItem.link}
+                color={packageItem.color}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+      {version === 17 && (
+        <div
+          className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12 relative"
+          id="time"
+        >
+          <div>
+            <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary pt-10 pb-10 text-center font-anton text-ada-magicOrange">
+              Adsy&chill to świetny wybór, bo...
+            </h2>
+            <ul className="flex flex-col md:flex-row gap-[10px] mx-auto mb-10  max-w-[1080px] xl:min-w-[880px] text-black">
+              <div>
+                {newlistItems3.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex flex-row items-center text-adaMin md:text-adaDesc mb-6"
+                  >
+                    <div className="mr-2">
+                      <StaticImage
+                        src={"../../images/checkBlack.svg"}
+                        alt="Ada Promis"
+                        placeholder="blurred"
+                        width={44}
+                        height={46}
+                        style={{ width: "44px", height: "46px" }}
+                      />
+                    </div>
+                    {item}
+                  </li>
+                ))}
+              </div>
+              <div>
+                {newlistItems4.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex flex-row items-center text-adaMin md:text-adaDesc mb-6"
+                  >
+                    <div className="mr-2">
+                      <StaticImage
+                        src={"../../images/checkBlack.svg"}
+                        alt="Ada Promis"
+                        placeholder="blurred"
+                        width={44}
+                        height={46}
+                        style={{ width: "44px", height: "46px" }}
+                      />
+                    </div>
+                    {item}
+                  </li>
+                ))}
+              </div>
+            </ul>
+          </div>
+          <div className="flex justify-center items-center absolute bottom-[-60px] left-1/2 -translate-x-1/2 -translate-y-6">
+            <a href="#faq">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+        </div>
+      )}
+      {version === 18 && (
+        <div
+          className="w-full flex flex-col px-3 items-center mb-20"
+          id="pricing"
+        >
+          <div className="">
+            <div className="max-w-[620px] flex flex-col text-black rounded-[20px] bg-ada-white border border-ada-magicOrange py-8 shadow-lg">
+              <h3 className="text-adaSubtitleSecondary lg:text-adaTitle3 py-5 font-bold text-center">
+                🚀 PAKIET FULL
+              </h3>
+              <div className="border-y border-ada-magicOrange px-8">
+                <p className="mt-4 lg:-mb-6">cena</p>
+                <p className="text-adaSubtitleSecondary lg:text-adaTitle3 font-bold">
+                  547 zł
+                </p>
+                <p className="lg:-mt-5 lg:text-adaSubtitleSecondary line-through">
+                  729 zł
+                </p>
+                <a
+                  href="https://slowmarketing.mailingr.co/c/adsyandchill-2025-6nPc?priceId=price_SITaPYXmbvodQAaQDDTjXIkQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className="text-center font-extrabold text-adaBase pt-4 bg-ada-magicOrange text-white w-[300px] rounded-[100px] px-6 py-4 inline-block mx-auto mb-10 uppercase border border-black mt-6">
+                    KUPUJĘ DOSTĘP!
+                  </p>
+                </a>
+              </div>
+              <div className="px-4">
+                <ul className="py-4 list-disc">
+                  {masterclassList.map((item, index) => (
+                    <li key={index} className="pb-4 mx-5">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       )}

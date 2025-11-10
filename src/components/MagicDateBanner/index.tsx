@@ -331,14 +331,14 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               ))}
             </div>
           </div>
-          <div className="md:-mt-[400px] mb-[-30px] md:mb-[-96px] md:ml-[40px]">
+          <div className="md:-mt-[460px] mb-[-30px] md:mb-[-96px] md:ml-[40px]">
             <StaticImage
               loading="eager"
-              src="../../images/ada_purple.webp"
+              src="../../images/magic_adsy.webp"
               alt="Ada w telefonie"
               placeholder="blurred"
               width={600}
-              height={500}
+              height={800}
               quality={100}
               className="object-contain ml-14  mt-40"
             />

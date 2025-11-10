@@ -1,6 +1,7 @@
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import Typography from "components/shared/Typography"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import React from "react"
 import Carousel from "react-multi-carousel"
 import { responsive } from "values/const"
@@ -17,6 +18,8 @@ type IReferences = {
   title4?: boolean
   title5?: boolean
   title6?: boolean
+  title7?: boolean
+  title8?: boolean
 }
 
 // const referencesList: IReferencesList[] = [
@@ -468,6 +471,44 @@ const referencesMagicList2: IReferencesList[] = [
   },
 ]
 
+const referencesAdsyList2: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinionAdsy1.webp"}
+        alt="Opinia o Magic"
+        placeholder="blurred"
+        width={360}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinionAdsy2.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={360}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/opinionAdsy3.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={360}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
 const ReferencesMentoring = ({
   title1,
   title2,
@@ -475,6 +516,8 @@ const ReferencesMentoring = ({
   title4,
   title5,
   title6,
+  title7,
+  title8,
 }: IReferences) => {
   return (
     <div className="pt-[40px]">
@@ -577,6 +620,53 @@ const ReferencesMentoring = ({
               <Reference key={index} image={reference.image} />
             ))}
           </Carousel>
+        </div>
+      )}
+      {title7 && (
+        <div className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12">
+          <Typography
+            variant="h2"
+            className="p-2 font-anton font-normal text-center uppercase text-ada-orange"
+          >
+            Tak mówią osoby, które korzystały <br /> z mojego wsparcia w
+            reklamach:
+          </Typography>
+          <div className="mx-auto pt-2">
+            <StaticImage
+              src={"../../images/adsyOpinie1.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
+              width={1200}
+            />
+          </div>
+        </div>
+      )}
+      {title8 && (
+        <div className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12">
+          <Typography
+            variant="h2"
+            className="p-2 font-anton font-normal text-center uppercase text-ada-orange"
+          >
+            Tak mówią osoby, które korzystały <br /> z mojego wsparcia w
+            reklamach:
+          </Typography>
+          <div className="mx-auto pt-6">
+            <StaticImage
+              src={"../../images/adsyOpinie2.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
+              width={1200}
+            />
+          </div>
+          <div className="mx-auto">
+            <Button
+              type="button"
+              text={<span className="font-bold">Ja też tak chcę!</span>}
+              sectionId="pakiety"
+              textSize="text-adaMin md:text-adaSubtitle text-white"
+              btnStyle="uppercase w-[187px] md:w-[380px] bg-ada-magicOrange md:tracking-[2.90px] md:h-[70px] rounded-[50px] border border-black hover:bg-ada-magicPink2"
+            />
+          </div>
         </div>
       )}
     </div>

@@ -173,6 +173,66 @@ const IconText = ({ version }: { version: number }) => {
     },
   ]
 
+  const leftList5 = [
+    {
+      icon: "🤔",
+      text: (
+        <>
+          Wiesz, że reklamy mogłyby pomóc Twojemu biznesowi, ale nie chcesz
+          wydawać fortuny na agencję?
+        </>
+      ),
+    },
+    {
+      icon: "👀",
+      text: (
+        <>
+          Czujesz, że Twoja oferta jest wartościowa, ale nie dociera do
+          właściwych osób?
+        </>
+      ),
+    },
+    {
+      icon: "😎",
+      text: (
+        <>
+          Masz ochotę nauczyć się czegoś nowego, co realnie rozwinie Twój
+          biznes?
+        </>
+      ),
+    },
+  ]
+
+  const rightList5 = [
+    {
+      icon: "🤔",
+      text: (
+        <>
+          Widzisz, jak inne kobiety skutecznie promują swoje biznesy i
+          zastanawiasz się, jak one to robią?
+        </>
+      ),
+    },
+    {
+      icon: "💪",
+      text: (
+        <>
+          Chciałabyś w końcu zrozumieć, jak poruszać się po menedżerze reklam i
+          dlaczego zadziała lepiej niż przycisk “promuj post”?
+        </>
+      ),
+    },
+    {
+      icon: "📊",
+      text: (
+        <>
+          Szukasz sprawdzonego sposobu na dotarcie do swoich wymarzonych
+          klientek - bez zgadywania i stresu?
+        </>
+      ),
+    },
+  ]
+
   const leftList3 = iconTextList.slice(0, 4)
   const rightList3 = iconTextList.slice(4)
 
@@ -445,6 +505,67 @@ const IconText = ({ version }: { version: number }) => {
               do życia, w którym pracujesz tak, jak lubisz i zarabiasz dzięki
               temu naprawdę <span className="font-bold">fajne pieniądze</span>{" "}
               💸
+            </p>
+          </div>
+        </div>
+      )}
+      {version === 5 && (
+        <div className="mx-auto md:pb-10 mt-4 md:mt-10 px-2">
+          <h2 className="text-adaSubtitleSecondary md:text-adaSubtitleThird font-bold bg-white lg:max-w-[340px] px-10 py-4 mx-auto flex items-center justify-center text-ada-magicOrange rounded-full font-anton border border-ada-magicOrange">
+            Czy Ty też...
+          </h2>
+          <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
+            <ul className="gap-10 md:gap-[120px] text-black">
+              {leftList5.map((item, index) => (
+                <li
+                  className="flex gap-4 max-w-[500px] h-[120px] px-6 py-8 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center"
+                  key={index}
+                >
+                  <span className="md:text-adaSubtitleThird"> {item.icon}</span>
+                  <span className="text-adaMin md:text-adaStandard">
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <ul className="gap-10 md:gap-[120px] text-black">
+              {rightList5.map((item, index) => (
+                <li
+                  className="flex gap-4 max-w-[500px] h-[120px] p-2 lg:px-6 lg:py-8 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center"
+                  key={index}
+                >
+                  <span className="text-adaMin md:text-adaSubtitle">
+                    {" "}
+                    {item.icon}
+                  </span>
+                  <span className="text-adaMin md:text-adaStandard">
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex justify-center items-center -translate-y-6 mt-8 mb-2 mx-auto w-full">
+            <a href="#pakiety">
+              <StaticImage
+                src={"../../images/magicBtn.svg"}
+                alt=""
+                placeholder="blurred"
+                width={80}
+                height={80}
+              />
+            </a>
+          </div>
+          <div className="max-w-[480px] text-center py-[50px] mx-auto">
+            <h3 className="text-adaSubtitleSecondary pb-10 text-ada-magicOrange font-anton">
+              W TWOJEJ GŁOWIE POJAWIŁA SIĘ MYŚL:{" "}
+              <span className="text-ada-magicPink2">„KURCZE, NO TAK!”?</span>
+            </h3>
+            <p className="text-adaDesc text-black">
+              Świetnie! Dzięki <b>ADSY&CHILL</b> przybliżysz się do życia w
+              biznesie, który działa nie tylko wtedy gdy pracujesz i publikujesz
+              treści na Instagramie{" "}
+              <b>- możesz zarabiać więcej dzięki reklamom!</b>
             </p>
           </div>
         </div>

@@ -1,0 +1,155 @@
+import { StaticImage } from "gatsby-plugin-image"
+import React, { useState } from "react"
+
+interface Props {
+  title: string
+  subtitle1: string | React.JSX.Element
+  subtitle2: React.JSX.Element
+  subtitle3: string
+  efects: string[]
+  forWhom: string
+  forWhomInfo: string | React.JSX.Element
+  btn: string
+  paragraph?: string | React.JSX.Element
+  paragraph2?: string | React.JSX.Element
+  image?: React.JSX.Element
+  imageInfo?: React.JSX.Element
+  btnStyle?: string
+  btnMargin?: string
+  textColor?: "text-black" | "text-white"
+  btnLink?: string
+}
+
+const pStyle = "mt-1 pr-4 text-adaMin md:text-adaStandard"
+
+export const MasterclassInfo3: React.FC<Props> = ({
+  title,
+  subtitle1,
+  subtitle2,
+  subtitle3,
+  efects,
+  forWhom,
+  forWhomInfo,
+  btn,
+  paragraph,
+  paragraph2,
+  image,
+  imageInfo,
+  btnStyle,
+  btnMargin,
+  textColor = "text-black",
+  btnLink = "#pakiety",
+}) => {
+  const [showDetails, setShowDetails] = useState(false)
+
+  return (
+    <div
+      className={`relative w-full lg:h-[1000px] py-5 md:py-10 px-2 overflow-visible transition-all duration-700 ${textColor}`}
+    >
+      <div
+        className={`lg:flex w-full transition-transform duration-700 ease-in-out ${
+          showDetails ? "-translate-x-full" : "translate-x-0"
+        }`}
+      >
+        {image}
+        <div className="flex-shrink-0 w-full flex flex-col items-center z-10 justify-center">
+          <div className="lg:pl-8 max-w-[420px] flex flex-col items-center mx-auto">
+            <div className="flex flex-col gap-2 justify-center bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl text-center p-4 max-w-[480px] mb-12">
+              <h2 className="text-adaSubtitle lg:text-adaSubtitleThird uppercase font-anton text-ada-magicOrange">
+                {title}
+              </h2>
+              <p className="uppercase font-bold md:text-adaDesc text-center">
+                {subtitle1}
+              </p>
+              <p className="pt-2">{subtitle2}</p>
+            </div>
+            <div className="flex flex-col justify-center gap-[20px] w-full">
+              <div>
+                <h3 className="font-bold md:text-adaDesc py-4">
+                  Poziom trudności:
+                </h3>
+                <p className="flex flex-col md:flex-row text-adaMin md:text-adaStandard">
+                  <span className="lg:-ml-8 pr-2">✅ </span>
+                  {forWhom}
+                </p>
+                <p className="pt-4">{forWhomInfo}</p>
+              </div>
+              <div className="lg:min-w-[350px]">
+                <h3 className="font-bold md:text-adaDesc pb-2 mt-10">
+                  Efekty:
+                </h3>
+                <ul className="flex flex-col lg:gap-[10px] mx-auto mb-2 mr-2">
+                  {efects.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex flex-col md:flex-row text-adaMin md:text-adaStandard"
+                    >
+                      <span className="lg:-ml-8 pr-2">✅ </span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className={`${btnStyle} my-12`}>
+              <div
+                className={`px-3 lg:w-[400px] rounded-full md:h-[80px] flex justify-center items-center bg-ada-magicPink2 mx-auto border border-black ${btnMargin}`}
+              >
+                <a
+                  className="font-bold md:text-adaSubtitle  uppercase text-black text-center"
+                  href={btnLink}
+                  rel="noopener noreferrer"
+                >
+                  {btn}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="flex-shrink-0 w-full flex flex-col justify-between
+ items-center relative z-10"
+        >
+          <div className="mx-auto">
+            <div className="w-full bg-ada-magicPink2">
+              <p className="pt-2 text-center text-adaStandard lg:text-adaSubtitle font-bold mb-4">
+                {subtitle3}
+              </p>
+            </div>
+            {paragraph && (
+              <div className="py-4 max-w-[700px] mx-auto">
+                <p className={pStyle}>{paragraph}</p>
+              </div>
+            )}
+            <div className="mx-auto flex justify-center">{imageInfo}</div>
+            {paragraph2 && <div className="mx-auto">{paragraph2}</div>}
+          </div>
+        </div>
+      </div>
+      <button
+        onClick={() => setShowDetails(!showDetails)}
+        className={`opacity-0 lg:opacity-100 absolute top-1/2 transform -translate-y-1/2 z-40 transition-all duration-300 ${
+          showDetails ? "left-0 rotate-180" : "right-0"
+        }`}
+      >
+        <StaticImage
+          src="../../images/magicArrowLeft.svg"
+          alt={showDetails ? "Wróć" : "Otwórz szczegóły"}
+          placeholder="blurred"
+          width={80}
+          className="cursor-pointer hover:scale-110 transition-transform duration-300"
+        />
+        {!showDetails && (
+          <div>
+            <StaticImage
+              src="../../images/pst.svg"
+              alt="Wróć"
+              placeholder="blurred"
+              width={140}
+              className="mt-6"
+            />
+          </div>
+        )}
+      </button>
+    </div>
+  )
+}

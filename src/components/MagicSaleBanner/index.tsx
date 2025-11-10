@@ -45,7 +45,7 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
     <>
       {version == 1 && (
         <Section padding="pt-[56px] md:pt-[72px] pb-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
-          <div>
+          {/* <div>
             <TypingAnimation
               text="Marketing Ads Girls Inside Club"
               textStyle="text-adaTitle2 font-bold text-ada-magicOrange2"
@@ -53,6 +53,16 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
             <h1 className="text-adaTitle2 font-bold">
               {" "}
               <span className="text-ada-magicPink4">(MAGIC)</span>
+            </h1>
+          </div> */}
+
+          <div className="flex items-center flex-col gap-2">
+            <h1 className="text-adaTitle2 font-bold text-ada-magicOrange2">
+              Marketing Ads Girls Inside Club
+              <br />
+            </h1>
+            <h1 className="text-adaTitle2 font-bold text-ada-magicPink4 animate-magicPulse">
+              (MAGIC)
             </h1>
           </div>
           <p className="mt-6 mb-8 max-w-[600px] leading-[32px] md:leading-[36px] text-black text-adaBase text-center mx-auto">

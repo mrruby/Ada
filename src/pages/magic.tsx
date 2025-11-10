@@ -3,10 +3,10 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner1 from "components/MagicBanner"
 import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
+import MagicComments from "components/MagicComments"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
-import MagicJoinClosed from "components/MagicJoinClosed"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
 import MagicVideo from "components/MagicVideo"
@@ -39,13 +39,15 @@ const MagicSalePage = () => {
       </MaxWithBgColorContainer>
       <div id="magic-package"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
-        <MagicJoinClosed />
+        <MagicSaleBanner version={2} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
-        <MagicWhy part={10} />
-      </MaxWithBgColorContainer>
+      <div className="bg-magic">
+        <MaxWithBgColorContainer bgColor="bg-transparent">
+          <MagicWhy part={12} />
+        </MaxWithBgColorContainer>
+      </div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicWhy part={11} />
+        <MagicComments version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicBioBanner version={3} />

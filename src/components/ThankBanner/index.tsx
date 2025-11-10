@@ -1,97 +1,168 @@
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
-const ThankBanner = () => {
+const ThankBanner = ({ version }: { version: number }) => {
   return (
-    <div className="flex px-2 flex-col items-start text-ada-blue relative md:min-h-[85vh] ">
-      <div className="lg:w-[1000px] pt-[60px] md:pb-[40px] text-left mx-auto max-w-2xl">
-        <h1 className="text-[14px] lg:text-adaTitle2 font-medium text-center">
-          Dziękuję za zapis!
-        </h1>
-        <p className="lg:text-[28px] font-medium leading-tight">
-          Teraz jeszcze tylko:
-        </p>
-        <ol className="list-decimal list-inside">
-          <li className="pb-[10px] pt-[10px]">
-            Sprawdź skrzynkę mailową podaną przy zapisie:
-          </li>
-          <ul className="list-inside pl-[30px]">
-            <li className="pb-[5px]">
-              <a
-                href="https://mail.google.com"
-                className="underline text-ada-blue"
-              >
-                Gmail
-              </a>
-            </li>
-            <li className="pb-[5px]">
-              <a
-                href="https://poczta.onet.pl"
-                className="underline text-ada-blue"
-              >
-                Onet
-              </a>
-            </li>
-            <li className="pb-[5px]">
-              <a
-                href="https://poczta.wp.pl"
-                className="underline text-ada-blue"
-              >
-                WP.pl
-              </a>
-            </li>
-            <li className="pb-[5px]">
-              <a
-                href="https://poczta.o2.pl"
-                className="underline text-ada-blue"
-              >
-                O2.pl
-              </a>
-            </li>
-            <li className="pb-[5px]">
-              <a
-                href="https://poczta.interia.pl"
-                className="underline text-ada-blue"
-              >
-                Interia.pl
-              </a>
-            </li>
-            <li className="pb-[5px]">
-              <a
-                href="https://poczta.gazeta.pl"
-                className="underline text-ada-blue"
-              >
-                Gazeta.pl
-              </a>
-            </li>
-            <li className="pb-[5px]">
-              <a
-                href="https://mail.yahoo.com"
-                className="underline text-ada-blue"
-              >
-                Yahoo.com
-              </a>
-            </li>
+    <>
+      {version == 1 && (
+        <div className="mt-20 px-2 xl:px-6 mx-auto gap-8 md:pt-10">
+          <div className="flex justify-between xl:max-w-[1350px] mx-auto">
+            <div className="flex flex-col justify-center max-w-[600px] gap-4 md:mt-8 xl:-mt-60 mb-3">
+              <h2 className="text-adaMin md:text-adaSubtitle md:pt-2 md:mb-8 text-black">
+                <b>Dziękuję</b> za zapis!
+              </h2>
+              <h1 className="text-adaSubtitle md:text-adaBig tracking-wider leading-none font-anton text-ada-orange uppercase">
+                Jeszcze <span className="text-ada-pink"> tylko</span> jedna
+                sprawa!
+              </h1>
+            </div>
+            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[170px]">
+              <StaticImage
+                loading="eager"
+                src={"../../images/magic_adsy.webp"}
+                alt="Ada Promis - hero"
+                placeholder="blurred"
+                width={460}
+                height={600}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+      {version == 2 && (
+        <div className="flex py-12 flex-col items-center relative text-center text-adaMin md:text-adaSubtitle uppercase">
+          <div className="flex flex-col items-center mb-6 relative w-[300px] -mt-[48px]">
+            <div className="absolute inset-0 flex items-center justify-center z-10 text-ada-orange text-adaSubtitle md:text-adaTitle font-anton">
+              1
+            </div>
+            <div className="w-full h-0 border-l-[150px] border-l-transparent border-r-[150px] border-r-transparent border-t-[100px] border-white"></div>
+          </div>
+          <h2 className="mb-2 text-black">
+            <b>Sprawdź skrzynkę mailową</b> <br /> podaną przy zapisie:
+          </h2>
+          <ul className="list-inside pl-6 mt-1 md:flex gap-12 text-black">
+            <div>
+              <li className="py-1">
+                <a href="https://mail.google.com" className="underline">
+                  Gmail
+                </a>
+              </li>
+              <li className="py-1">
+                <a href="https://poczta.onet.pl" className="underline">
+                  Onet
+                </a>
+              </li>
+              <li className="py-1">
+                <a href="https://poczta.wp.pl" className="underline">
+                  WP.pl
+                </a>
+              </li>
+              <li className="py-1">
+                <a href="https://poczta.o2.pl" className="underline">
+                  O2.pl
+                </a>
+              </li>
+            </div>
+            <div>
+              <li className="py-1">
+                <a href="https://poczta.interia.pl" className="underline">
+                  Interia.pl
+                </a>
+              </li>
+              <li className="py-1">
+                <a href="https://poczta.gazeta.pl" className="underline">
+                  Gazeta.pl
+                </a>
+              </li>
+              <li className="py-1">
+                <a href="https://mail.yahoo.com" className="underline">
+                  Yahoo.com
+                </a>
+              </li>
+            </div>
           </ul>
-          <li className="pb-[10px]">
-            Dodaj adres “adrianna@getbold.agency” do listy zaufanych kontaktów –
-            dzięki temu maile nie będą wpadać do folderu SPAM!
-          </li>
-          <li className="pb-[10px]">
-            Otwórz maila od adrianna@getbold.agency – mógł trafić do folderu
-            SPAM – koniecznie sprawdź, czy gdzieś się nie zapodział.
-          </li>
-          <li className="pb-[10px]">
-            Przyciśnij przycisk potwierdzający zapis w mailu.
-          </li>
-        </ol>
-        <p className="lg:text-[28px] font-medium leading-tight pt-[5px]">
-          Widzimy się niedługo!
-        </p>
-        <p className="lg:text-[28px] font-medium leading-tight pt-[5px]">
-          Ada Promis
-        </p>
-      </div>
-    </div>
+        </div>
+      )}
+
+      {version == 3 && (
+        <div className="flex py-12 flex-col items-center text-black relative text-center text-adaMin md:text-adaSubtitle px-2">
+          <div className="flex flex-col items-center mb-6 relative w-[300px] -mt-[48px]">
+            <div className="absolute inset-0 flex items-center justify-center z-10 text-ada-orange text-adaSubtitle md:text-adaTitle font-anton">
+              2
+            </div>
+            <div className="w-full h-0 border-l-[150px] border-l-transparent border-r-[150px] border-r-transparent border-t-[100px] border-ada-magicGreen"></div>
+          </div>
+          <div className="mb-2 text-black lg:min-w-[700px]">
+            <div className="border border-black font-bold p-4 mb-2">
+              Dodaj adres “adrianna@getbold.agency”
+            </div>
+            do listy zaufanych kontaktów – dzięki temu maile nie będą wpadać do
+            folderu SPAM!
+          </div>
+        </div>
+      )}
+
+      {version == 4 && (
+        <div className="flex py-12 flex-col items-center text-black relative text-center text-adaMin md:text-adaSubtitle  px-2">
+          <div className="flex flex-col items-center mb-6 relative w-[300px] -mt-[48px]">
+            <div className="absolute inset-0 flex items-center justify-center z-10 text-black text-adaSubtitle md:text-adaTitle font-anton">
+              3
+            </div>
+            <div className="w-full h-0 border-l-[150px] border-l-transparent border-r-[150px] border-r-transparent border-t-[100px] border-ada-magicPurple5"></div>
+          </div>
+          <div className="mb-2 text-black lg:min-w-[700px]">
+            <div className="border border-black font-bold p-4 mb-2 bg-white">
+              Otwórz maila od adrianna@getbold.agency
+            </div>
+            – mógł trafić do folderu SPAM – koniecznie sprawdź, czy gdzieś się
+            nie zapodział.
+          </div>
+        </div>
+      )}
+
+      {version == 5 && (
+        <div className="flex py-12 flex-col items-center text-black relative text-center text-adaMin md:text-adaSubtitle font-bold">
+          <div className="flex flex-col items-center mb-6 relative w-[300px] -mt-[48px]">
+            <div className="absolute inset-0 flex items-center justify-center z-10 text-ada-orange text-adaSubtitle md:text-adaTitle font-anton">
+              4
+            </div>
+            <div className="w-full h-0 border-l-[150px] border-l-transparent border-r-[150px] border-r-transparent border-t-[100px] border-ada-white2"></div>
+          </div>
+          Kliknij przycisk potwierdzający zapis w mailu.
+        </div>
+      )}
+
+      {version == 6 && (
+        <div className="lg:mt-20 px-2 xl:px-6 mx-auto gap-8 md:pt-10">
+          <div className="flex flex-col-reverse lg:flex-row justify-center xl:max-w-[850px] mx-auto">
+            <div className="ml-[-10vw] xl:ml-[-300px] -mt-10 md:-mt-6 lg:max-w-none md:max-w-[500px] max-w-[170px]">
+              <StaticImage
+                loading="eager"
+                src={"../../images/magic_adsy2.webp"}
+                alt="Ada Promis - hero"
+                placeholder="blurred"
+                width={600}
+                height={782}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div className="flex flex-col justify-center items-center max-w-[620px] gap-4 p-4 lg:p-12 text-ada border border-black rounded-[60px] text-center lg:h-[400px]">
+              <h2 className="text-adaSubtitle md:text-adaBig tracking-wider leading-none font-anton text-ada-orange">
+                <span className="text-ada-pink">Widzimy </span>
+                <br />
+                się niedługo!
+              </h2>
+              <p className="text-adaMin md:text-adaSubtitle text-black">
+                Ada Promis
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
