@@ -644,7 +644,6 @@ const ReferencesMentoring = ({
               src={"../../images/adsyOpinie1M.webp"}
               alt="Ada Promis"
               placeholder="blurred"
-              width={320}
             />
           </div>
         </div>
@@ -666,12 +665,12 @@ const ReferencesMentoring = ({
               width={1200}
             />
           </div>
-          <div className="mx-auto pt-6 block lg:hidden">
+          <div className="mx-auto pt-6 block lg:hidden mb-4">
             <StaticImage
               src={"../../images/adsyOpinie2M.webp"}
               alt="Ada Promis"
               placeholder="blurred"
-              width={320}
+              width={300}
             />
           </div>
           <div className="mx-auto">

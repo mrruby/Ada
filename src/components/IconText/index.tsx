@@ -4,6 +4,7 @@ import React, { useState } from "react"
 
 const IconText = ({ version }: { version: number }) => {
   const [hasAnimated, setHasAnimated] = useState(false)
+  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768
 
   const handleMouseEnter = () => {
     if (!hasAnimated) setHasAnimated(true)
@@ -520,69 +521,88 @@ const IconText = ({ version }: { version: number }) => {
           className="mx-auto md:pb-10 mt-4 md:mt-10 px-2"
           onMouseOver={handleMouseEnter}
         >
-          <h2 className="text-adaSubtitleSecondary md:text-adaSubtitleThird  px-10 py-4 mx-auto flex items-center justify-center text-ada-magicOrange rounded-full font-anton ">
+          <h2 className="text-adaSubtitleSecondary md:text-adaSubtitleThird px-10 py-4 mx-auto flex items-center justify-center text-ada-magicOrange rounded-full font-anton">
             Czy Ty też...
           </h2>
+
           <div className="flex flex-col md:flex-row pt-8 justify-center md:gap-4">
             <ul className="gap-10 md:gap-[120px] text-black">
-              {leftList5.map((item, index) => (
-                <li
-                  key={index}
-                  className={`flex gap-4 max-w-[500px] h-[120px] px-6 py-8 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-6 items-center transition-all duration-500 opacity-0 relative text-center lg:text-start ${
-                    hasAnimated ? "animate-slideInFromLeft" : "opacity-0"
-                  }`}
-                  style={{
-                    animationDelay: hasAnimated ? `${index * 0.3}s` : "0s",
-                    animationFillMode: "forwards",
-                  }}
-                >
-                  <span
-                    className="
-          absolute 
-          top-[4px] left-1/2 
-          -translate-x-1/2 -translate-y-1/2
-          md:static md:translate-x-0 md:translate-y-0
-          text-adaSubtitleThird
-        "
+              {leftList5.map((item, index) => {
+                const isDesktop =
+                  typeof window !== "undefined" && window.innerWidth >= 768
+                const animationClass =
+                  hasAnimated && isDesktop
+                    ? "animate-slideInFromLeft"
+                    : "opacity-100"
+
+                return (
+                  <li
+                    key={index}
+                    className={`flex gap-4 max-w-[500px] h-[120px] px-6 py-8 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-6 items-center transition-all duration-500 relative text-center lg:text-start ${animationClass}`}
+                    style={{
+                      animationDelay:
+                        hasAnimated && isDesktop ? `${index * 0.3}s` : "0s",
+                      animationFillMode: "forwards",
+                    }}
                   >
-                    {item.icon}
-                  </span>
-                  <span className="text-adaNav md:text-adaStandard">
-                    {item.text}
-                  </span>
-                </li>
-              ))}
+                    <span
+                      className="
+                  absolute 
+                  top-[4px] left-1/2 
+                  -translate-x-1/2 -translate-y-1/2
+                  md:static md:translate-x-0 md:translate-y-0
+                  text-adaSubtitleThird
+                "
+                    >
+                      {item.icon}
+                    </span>
+                    <span className="text-adaNav md:text-adaStandard">
+                      {item.text}
+                    </span>
+                  </li>
+                )
+              })}
             </ul>
+
             <ul className="gap-10 md:gap-[120px] text-black">
-              {rightList5.map((item, index) => (
-                <li
-                  key={index}
-                  className={`flex gap-4 max-w-[500px] h-[120px] p-2 lg:px-6 lg:py-8 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-4 items-center transition-all duration-500 opacity-0 relative text-center lg:text-start  ${
-                    hasAnimated ? "animate-slideInFromRight" : "opacity-0"
-                  }`}
-                  style={{
-                    animationDelay: hasAnimated ? `${index * 0.3}s` : "0s",
-                    animationFillMode: "forwards",
-                  }}
-                >
-                  <span
-                    className="
-          absolute 
-          top-[4px] left-1/2 
-          -translate-x-1/2 -translate-y-1/2
-          md:static md:translate-x-0 md:translate-y-0
-          text-adaSubtitleThird
-        "
+              {rightList5.map((item, index) => {
+                const isDesktop =
+                  typeof window !== "undefined" && window.innerWidth >= 768
+                const animationClass =
+                  hasAnimated && isDesktop
+                    ? "animate-slideInFromRight"
+                    : "opacity-100"
+
+                return (
+                  <li
+                    key={index}
+                    className={`flex gap-4 max-w-[500px] h-[120px] px-6 py-8 bg-ada-white2 border border-ada-magicOrange rounded-[24px] shadow-xl mb-6 items-center transition-all duration-500 relative text-center lg:text-start ${animationClass}`}
+                    style={{
+                      animationDelay:
+                        hasAnimated && isDesktop ? `${index * 0.3}s` : "0s",
+                      animationFillMode: "forwards",
+                    }}
                   >
-                    {item.icon}
-                  </span>
-                  <span className="text-adaNav md:text-adaStandard">
-                    {item.text}
-                  </span>
-                </li>
-              ))}
+                    <span
+                      className="
+                  absolute 
+                  top-[4px] left-1/2 
+                  -translate-x-1/2 -translate-y-1/2
+                  md:static md:translate-x-0 md:translate-y-0
+                  text-adaSubtitleThird
+                "
+                    >
+                      {item.icon}
+                    </span>
+                    <span className="text-adaNav md:text-adaStandard">
+                      {item.text}
+                    </span>
+                  </li>
+                )
+              })}
             </ul>
           </div>
+
           <div className="flex justify-center items-center -translate-y-6 mt-8 mb-2 mx-auto w-full">
             <a href="#pakiety">
               <StaticImage
@@ -594,6 +614,7 @@ const IconText = ({ version }: { version: number }) => {
               />
             </a>
           </div>
+
           <div className="max-w-[480px] text-center py-[50px] mx-auto">
             <h3 className="text-adaSubtitleSecondary pb-10 text-ada-magicOrange font-anton">
               W TWOJEJ GŁOWIE POJAWIŁA SIĘ MYŚL:{" "}
