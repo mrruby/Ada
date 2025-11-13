@@ -670,7 +670,6 @@ const ReferencesMentoring = ({
               src={"../../images/adsyOpinie2M.webp"}
               alt="Ada Promis"
               placeholder="blurred"
-              width={300}
             />
           </div>
           <div className="mx-auto">

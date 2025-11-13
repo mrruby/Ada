@@ -116,7 +116,7 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                     src={"../../images/protip1.webp"}
                     alt="Ada Promis"
                     placeholder="blurred"
-                    width={380}
+                    width={360}
                     formats={["auto", "webp", "avif"]}
                     quality={100}
                   />
@@ -127,7 +127,6 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                     src={"../../images/protip1M.webp"}
                     alt="Ada Promis"
                     placeholder="blurred"
-                    width={380}
                     formats={["auto", "webp", "avif"]}
                     quality={100}
                   />
@@ -291,7 +290,6 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                   src={"../../images/protip2M.webp"}
                   alt="Ada Promis"
                   placeholder="blurred"
-                  width={380}
                   formats={["auto", "webp", "avif"]}
                   quality={100}
                 />
@@ -449,7 +447,6 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                     src={"../../images/protip3M.webp"}
                     alt="Ada Promis"
                     placeholder="blurred"
-                    width={380}
                     formats={["auto", "webp", "avif"]}
                     quality={100}
                   />
