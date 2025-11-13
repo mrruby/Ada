@@ -26,10 +26,9 @@ const MagicSalePage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicVideo />
       </MaxWithBgColorContainer>
-      <div>
+      <div className="bg-ada-white3">
         <MagicBanner1 version={4} />
       </div>
-
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicWhy part={9} />
       </MaxWithBgColorContainer>
