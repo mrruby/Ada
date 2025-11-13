@@ -25,9 +25,9 @@ const MagicSpecialPage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicVideo />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
+      <div className="bg-ada-white3">
         <MagicBanner1 version={4} />
-      </MaxWithBgColorContainer>
+      </div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicWhy part={9} />
       </MaxWithBgColorContainer>
@@ -46,9 +46,9 @@ const MagicSpecialPage = () => {
           <MagicWhy part={12} />
         </MaxWithBgColorContainer>
       </div>
-      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+      <div className="bg-ada-pink8">
         <MagicComments version={1} />
-      </MaxWithBgColorContainer>
+      </div>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicBioBanner version={3} />
       </MaxWithBgColorContainer>

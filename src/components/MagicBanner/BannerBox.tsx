@@ -31,7 +31,7 @@ const BannerBox = ({
 }: BannerBoxProps) => {
   const content = (
     <div
-      className={`relative md:mt-0 opacity-0 transform ${animationClass || ""}`}
+      className={`relative md:mt-0 lg:opacity-0 transform ${animationClass || ""}`}
       style={{
         animationDelay: animationDelay,
         animationFillMode: "forwards",
