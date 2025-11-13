@@ -268,11 +268,11 @@ const WebinarBanner = ({ version }: { version: number }) => {
       {version === 7 && (
         <div className="mt-20 px-2 xl:px-6 text-ada-blue mx-auto gap-8 md:pt-10 md:min-h-[670px]">
           <div className="flex flex-col lg:flex-row justify-between mx-auto text-center lg:text-start">
-            <div className="flex flex-col justify-center items-center lg:items-start max-w-[800px] gap-4 md:mt-8 xl:-mt-60 mb-3">
+            <div className="flex flex-col justify-center items-center lg:items-start max-w-[800px] gap-4 md:mt-8 xl:-mt-32 mb-3">
               <h1 className="text-adaSubtitleThird md:text-adaBig tracking-wider leading-none font-anton text-ada-orange uppercase">
                 Adsy&chill
               </h1>
-              <h2 className="text-adaMin md:text-adaSubtitle md:pt-2 md:mb-8 text-black">
+              <h2 className="text-adaMin md:text-adaBase md:pt-2 md:mb-8 text-black">
                 Ustaw reklamy samodzielnie,
                 <br /> skorzystaj z gotowych, sprawdzonych instrukcji
                 <br /> i skaluj swój biznes bez dodatkowej pracy!

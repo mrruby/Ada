@@ -631,12 +631,19 @@ const ReferencesMentoring = ({
             Tak mówią osoby, które korzystały <br /> z mojego wsparcia w
             reklamach:
           </Typography>
-          <div className="mx-auto pt-2">
+          <div className="mx-auto pt-6 hidden lg:block">
             <StaticImage
               src={"../../images/adsyOpinie1.webp"}
               alt="Ada Promis"
               placeholder="blurred"
               width={1200}
+            />
+          </div>
+          <div className="mx-auto pt-6 block lg:hidden">
+            <StaticImage
+              src={"../../images/adsyOpinie1M.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
             />
           </div>
         </div>
@@ -650,12 +657,20 @@ const ReferencesMentoring = ({
             Tak mówią osoby, które korzystały <br /> z mojego wsparcia w
             reklamach:
           </Typography>
-          <div className="mx-auto pt-6">
+          <div className="mx-auto pt-6 hidden lg:block">
             <StaticImage
               src={"../../images/adsyOpinie2.webp"}
               alt="Ada Promis"
               placeholder="blurred"
               width={1200}
+            />
+          </div>
+          <div className="mx-auto pt-6 block lg:hidden mb-4">
+            <StaticImage
+              src={"../../images/adsyOpinie2M.webp"}
+              alt="Ada Promis"
+              placeholder="blurred"
+              width={300}
             />
           </div>
           <div className="mx-auto">

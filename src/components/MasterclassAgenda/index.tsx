@@ -1228,7 +1228,7 @@ const MasterclassAgenda = ({
           className="w-full flex flex-col px-3 py-2 items-center mb-5 md:pt-12"
           id="pakiety"
         >
-          <h2 className="text-adaSubtitleSecondary lg:text-adaTitle3 pt-10 pb-10 text-center font-anton text-ada-magicOrange">
+          <h2 className="text-adaSubtitleSecondary lg:text-adaTitle2 pt-10 pb-1 text-center font-anton text-ada-magicOrange">
             Co dostaniesz <br /> w Adsy&Chill?
           </h2>
           <div className="mx-auto">
@@ -1236,7 +1236,7 @@ const MasterclassAgenda = ({
               src={"../../images/magicAgenda.webp"}
               alt="Ada Promis"
               placeholder="blurred"
-              width={1100}
+              width={780}
             />
           </div>
         </div>
@@ -1294,7 +1294,7 @@ const MasterclassAgenda = ({
           id="time"
         >
           <div>
-            <h2 className="text-adaSubtitle lg:text-adaSubtitleSecondary pt-10 pb-10 text-center font-anton text-ada-magicOrange">
+            <h2 className="text-adaSubtitleSecondary lg:text-adaSubtitleSecondary pt-10 pb-10 text-center font-anton text-ada-magicOrange">
               Adsy&chill to świetny wybór, bo...
             </h2>
             <ul className="flex flex-col md:flex-row gap-[10px] mx-auto mb-10  max-w-[1080px] xl:min-w-[880px] text-black">
@@ -1302,16 +1302,15 @@ const MasterclassAgenda = ({
                 {newlistItems3.map((item, index) => (
                   <li
                     key={index}
-                    className="flex flex-row items-center text-adaMin md:text-adaDesc mb-6"
+                    className="flex flex-row items-center text-adaNav md:text-adaDesc mb-6"
                   >
-                    <div className="mr-2">
+                    <div className="mr-2 w-[44px] lg:w-[64px] mr-4">
                       <StaticImage
                         src={"../../images/checkBlack.svg"}
                         alt="Ada Promis"
                         placeholder="blurred"
                         width={44}
                         height={46}
-                        style={{ width: "44px", height: "46px" }}
                       />
                     </div>
                     {item}
@@ -1322,16 +1321,15 @@ const MasterclassAgenda = ({
                 {newlistItems4.map((item, index) => (
                   <li
                     key={index}
-                    className="flex flex-row items-center text-adaMin md:text-adaDesc mb-6"
+                    className="flex flex-row items-center text-adaNav md:text-adaDesc mb-6"
                   >
-                    <div className="mr-2">
+                    <div className="mr-2 w-[44px] lg:w-[64px] mr-4">
                       <StaticImage
                         src={"../../images/checkBlack.svg"}
                         alt="Ada Promis"
                         placeholder="blurred"
                         width={44}
                         height={46}
-                        style={{ width: "44px", height: "46px" }}
                       />
                     </div>
                     {item}
@@ -1340,7 +1338,7 @@ const MasterclassAgenda = ({
               </div>
             </ul>
           </div>
-          <div className="flex justify-center items-center absolute bottom-[-60px] left-1/2 -translate-x-1/2 -translate-y-6">
+          <div className="flex justify-center items-center absolute bottom-[-60px] left-1/2 -translate-x-1/2 -translate-y-6 w-[60px] lg:w-[80px]">
             <a href="#faq">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
@@ -1363,7 +1361,7 @@ const MasterclassAgenda = ({
               <h3 className="text-adaSubtitleSecondary lg:text-adaTitle3 py-5 font-bold text-center">
                 🚀 PAKIET FULL
               </h3>
-              <div className="border-y border-ada-magicOrange px-8">
+              <div className="border-y border-ada-magicOrange px-8 text-center lg:text-start">
                 <p className="mt-4 lg:-mb-6">cena</p>
                 <p className="text-adaSubtitleSecondary lg:text-adaTitle3 font-bold">
                   547 zł

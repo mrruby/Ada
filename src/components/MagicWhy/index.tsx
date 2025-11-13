@@ -676,7 +676,7 @@ const MagicWhy = ({ part }: { part: number }) => {
               btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-magicPink2 md:tracking-[2.90px] md:h-[70px] rounded-[50px] border border-black hover:bg-ada-magicPink2"
             />
           </div>
-          <div className="flex justify-center items-center absolute bottom-[-120px] left-1/2 -translate-x-1/2 -translate-y-6">
+          <div className="flex justify-center items-center absolute bottom-[-120px] left-1/2 -translate-x-1/2 translate-y-[-54px] lg:-translate-y-6 w-[60px] lg:w-[80px]">
             <a href="#pakiety">
               <StaticImage
                 src={"../../images/magicBtn.svg"}

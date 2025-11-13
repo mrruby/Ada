@@ -39,7 +39,6 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
             forWhom="Prowadzisz profil na Instagramie? Wystarczy! To najprostsza kampania, która może zaskoczyć Cię efektami. O resztę się nie martw: razem z nagraniami i instrukcją przeprowadzę Cię krok po kroku przez ustawienie reklamy! "
             forWhomInfo=""
             btn="Chcę ustawić taką kampanię dla siebie!"
-            sectionId="masterclass-1"
             paragraph={
               <>
                 Monice zależało, żeby jej konto na Instagramie regularnie się
@@ -48,6 +47,7 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                 <b>
                   {" "}
                   w ciągu 6 miesięcy zyskała 9306 nowych obserwujących.
+                  <br />
                   Dodatkowy efekt? 43 osoby przesłały zapytania
                 </b>{" "}
                 o możliwość wykupienia zajęć językowych.
@@ -59,36 +59,36 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                   <tbody>
                     <tr className="flex flex-col md:table-row">
                       <td className="md:max-w-[300px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Czas trwania kampanii:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           6 miesięcy (styczeń-czerwiec 2025)
                         </p>
                       </td>
                       <td className="md:max-w-[120px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Liczba nowych obserwujących:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           9306
                         </p>
                       </td>
                     </tr>
                     <tr className="flex flex-col md:table-row">
                       <td className="md:max-w-[300px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Wydany budżet:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           5781,47 zł
                         </p>
                       </td>
                       <td className="md:max-w-[120px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Liczba zapytań o zajęcia (dodatkowo):
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           43
                         </p>
                       </td>
@@ -101,7 +101,7 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                     src={"../../images/masterclass1Infov2-2.webp"}
                     alt="Ada Promis"
                     placeholder="blurred"
-                    width={624}
+                    width={580}
                     formats={["auto", "webp", "avif"]}
                     quality={100}
                   />
@@ -109,29 +109,55 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
               </div>
             }
             image={
-              <div className="md:hidden lg:hidden xl:block md:absolute left-[-90px] -bottom-[30px]">
-                <StaticImage
-                  loading="eager"
-                  src={"../../images/protip1.webp"}
-                  alt="Ada Promis"
-                  placeholder="blurred"
-                  width={430}
-                  formats={["auto", "webp", "avif"]}
-                  quality={100}
-                />
+              <div>
+                <div className="hidden lg:block md:absolute left-[-90px] lg:-bottom-[80px]">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/protip1.webp"}
+                    alt="Ada Promis"
+                    placeholder="blurred"
+                    width={380}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                  />
+                </div>
+                <div className="block lg:hidden mt-2 -mb-5">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/protip1M.webp"}
+                    alt="Ada Promis"
+                    placeholder="blurred"
+                    width={380}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                  />
+                </div>
               </div>
             }
             imageInfo={
-              <div className="mb-6">
-                <StaticImage
-                  loading="eager"
-                  src={"../../images/masterclass1Infov2.webp"}
-                  alt="Ada Promis - masterclass"
-                  placeholder="blurred"
-                  width={1108}
-                  formats={["auto", "webp", "avif"]}
-                  quality={100}
-                />
+              <div>
+                <div className="hidden lg:block mb-2">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/masterclass1Infov2.webp"}
+                    alt="Ada Promis - masterclass"
+                    placeholder="blurred"
+                    width={980}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                  />
+                </div>
+                <div className="block lg:hidden mb-2">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/masterclass1M.webp"}
+                    alt="Ada Promis - masterclass"
+                    placeholder="blurred"
+                    width={340}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                  />
+                </div>
               </div>
             }
           />
@@ -153,45 +179,44 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
           forWhomInfo=""
           btn="To jest to!"
           btnMargin="bg-ada-magicOrange"
-          sectionId="masterclass-2"
           paragraph2={
             <>
               <table className="w-full">
                 <tbody>
                   <tr className="flex flex-col md:table-row">
                     <td className="md:max-w-[300px]">
-                      <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                      <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                         Cel kampanii:
                       </h4>
-                      <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                      <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                         kampania z celem zapis na listę mailową; po dołączeniu
                         subskrybenci otrzymują one time offer na dostęp do
                         platformy kursowej
                       </p>
                     </td>
                     <td className="md:max-w-[120px]">
-                      <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                      <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                         Wartość zakupów:
                       </h4>
-                      <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                      <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                         69 972 zł
                       </p>
                     </td>
                   </tr>
                   <tr className="flex flex-col md:table-row">
                     <td className="md:max-w-[300px]">
-                      <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                      <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                         Czas trwania kampanii:
                       </h4>
-                      <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                      <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                         2 miesiące
                       </p>
                     </td>
                     <td className="md:max-w-[120px]">
-                      <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                      <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                         ROAS:
                       </h4>
-                      <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                      <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                         10,15
                       </p>
                     </td>
@@ -202,45 +227,44 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                 <table>
                   <tbody>
                     <tr className="flex flex-col md:table-row">
-                      <td className="md:max-w-[300px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                      <td className="md:max-w-[200px]">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Liczba osób, która wypełniła formularz zapisu:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           1949
                         </p>
                       </td>
                     </tr>
                     <tr className="flex flex-col md:table-row">
-                      <td className="md:max-w-[300px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                      <td className="md:max-w-[200px]">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Wydany budżet:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           6892,61 zł
                         </p>
                       </td>
                     </tr>
                     <tr className="flex flex-col md:table-row">
-                      <td className="md:max-w-[300px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                      <td className="md:max-w-[200px]">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Ilość zakupów:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-6">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           28 x 2499 zł
                         </p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <div className="mx-auto min-w-[300px]">
+                <div className="mx-auto lg:min-w-[500px]">
                   <StaticImage
                     loading="eager"
-                    src={"../../images/masterclass3Infov2-2.webp"}
+                    src={"../../images/masterclass2Infov2-2.webp"}
                     alt="Ada Promis"
                     placeholder="blurred"
-                    width={624}
-                    height={240}
+                    width={620}
                     formats={["auto", "webp", "avif"]}
                     quality={100}
                   />
@@ -249,29 +273,55 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
             </>
           }
           image={
-            <div className="md:hidden lg:hidden xl:block md:absolute  left-[-90px] bottom-[20px]">
-              <StaticImage
-                loading="eager"
-                src={"../../images/protip2.webp"}
-                alt="Ada Promis"
-                placeholder="blurred"
-                width={485}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
+            <div>
+              <div className="hidden lg:block md:absolute left-[-90px] -bottom-[10px]">
+                <StaticImage
+                  loading="eager"
+                  src={"../../images/protip2.webp"}
+                  alt="Ada Promis"
+                  placeholder="blurred"
+                  width={380}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
+              </div>
+              <div className="block lg:hidden mt-2 -mb-5">
+                <StaticImage
+                  loading="eager"
+                  src={"../../images/protip2M.webp"}
+                  alt="Ada Promis"
+                  placeholder="blurred"
+                  width={380}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
+              </div>
             </div>
           }
           imageInfo={
-            <div className="mb-6">
-              <StaticImage
-                loading="eager"
-                src={"../../images/masterclass2Infov2.webp"}
-                alt="Ada Promis - masterclass"
-                placeholder="blurred"
-                width={1108}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
+            <div>
+              <div className="hidden lg:block mb-2">
+                <StaticImage
+                  loading="eager"
+                  src={"../../images/masterclass2Infov2.webp"}
+                  alt="Ada Promis - masterclass"
+                  placeholder="blurred"
+                  width={980}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
+              </div>
+              <div className="block lg:hidden mb-2">
+                <StaticImage
+                  loading="eager"
+                  src={"../../images/masterclass2M.webp"}
+                  alt="Ada Promis - masterclass"
+                  placeholder="blurred"
+                  width={340}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+                />
+              </div>
             </div>
           }
         />
@@ -311,56 +361,56 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                   <tbody>
                     <tr className="flex flex-col md:table-row">
                       <td className="md:max-w-[300px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Cel kampanii:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-2">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           Sprzedaż kursu dla właścicieli lokalnych firm, nie
                           podajemy nazwy
                         </p>
                       </td>
                       <td className="md:max-w-[200px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Wydany budżet:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-2">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           55 858 zł
                         </p>
                       </td>
                     </tr>
                     <tr className="flex flex-col md:table-row">
                       <td className="md:max-w-[300px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Czas trwania kampanii:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-2">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           14 miesięcy (lipiec 2024 - wrzesień 2025)
                         </p>
                       </td>
                       <td className="md:max-w-[200px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Liczba osób, które zapisały się na webinar:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-2">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           10 376
                         </p>
                       </td>
                     </tr>
                     <tr className="flex flex-col md:table-row">
                       <td className="md:max-w-[300px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Grupy docelowe:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-2">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           osoby zainteresowane marketingiem, właściciele
                           lokalnych biznesów
                         </p>
                       </td>
                       <td className="md:max-w-[200px]">
-                        <h4 className="font-bold text-adaMin md:text-adaDesc w-fit py-1 pr-1">
+                        <h4 className="font-bold text-adaMin md:text-adaStandard w-fit pt-1 pr-1">
                           Liczba sprzedanych kursów:
                         </h4>
-                        <p className="mt-1 pr-4 text-adaMin md:text-adaStandard mb-2">
+                        <p className="pr-4 text-adaMin md:text-adaStandard mb-2">
                           172, około 120 000 złotych
                         </p>
                       </td>
@@ -373,7 +423,7 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                     src={"../../images/masterclass3Infov2-2.webp"}
                     alt="Ada Promis"
                     placeholder="blurred"
-                    width={624}
+                    width={500}
                     formats={["auto", "webp", "avif"]}
                     quality={100}
                   />
@@ -381,29 +431,55 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
               </div>
             }
             image={
-              <div className="md:hidden lg:hidden xl:block md:absolute left-[-90px] -bottom-[34px]">
-                <StaticImage
-                  loading="eager"
-                  src={"../../images/protip3.webp"}
-                  alt="Ada Promis"
-                  placeholder="blurred"
-                  width={485}
-                  formats={["auto", "webp", "avif"]}
-                  quality={100}
-                />
+              <div>
+                <div className="hidden lg:block md:absolute left-[-90px] bottom-[54px]">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/protip3.webp"}
+                    alt="Ada Promis"
+                    placeholder="blurred"
+                    width={380}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                  />
+                </div>
+                <div className="block lg:hidden mt-2 -mb-5">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/protip3M.webp"}
+                    alt="Ada Promis"
+                    placeholder="blurred"
+                    width={380}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                  />
+                </div>
               </div>
             }
             imageInfo={
-              <div className="mb-6">
-                <StaticImage
-                  loading="eager"
-                  src={"../../images/masterclass3Infov2.webp"}
-                  alt="Ada Promis - masterclass"
-                  placeholder="blurred"
-                  width={1108}
-                  formats={["auto", "webp", "avif"]}
-                  quality={100}
-                />
+              <div>
+                <div className="hidden lg:block mb-2">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/masterclass3Infov2.webp"}
+                    alt="Ada Promis - masterclass"
+                    placeholder="blurred"
+                    width={980}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                  />
+                </div>
+                <div className="block lg:hidden mb-2">
+                  <StaticImage
+                    loading="eager"
+                    src={"../../images/masterclass2M.webp"}
+                    alt="Ada Promis - masterclass"
+                    placeholder="blurred"
+                    width={340}
+                    formats={["auto", "webp", "avif"]}
+                    quality={100}
+                  />
+                </div>
               </div>
             }
           />
