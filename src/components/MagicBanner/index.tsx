@@ -437,7 +437,7 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                   key={i}
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
-                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromLeft opacity-100" : " "}`}
+                  bgColor={`${item.bgColor} ${hasAnimated ? "lg:animate-slideInFromLeft lg:opacity-100" : " "}`}
                   description={item.description}
                 />
               ))}
@@ -449,7 +449,9 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                   circleKey={item.circleKey}
                   iconKey={item.iconKey}
                   bgColor={`${item.bgColor} ${
-                    hasAnimated ? "lg:animate-slideInFromRight opacity-100" : ""
+                    hasAnimated
+                      ? "lg:animate-slideInFromRight lg:opacity-100"
+                      : ""
                   }`}
                   description={item.description}
                   styles={item.styles}
@@ -523,86 +525,87 @@ const MagicBanner1 = ({ version }: { version: number }) => {
         </Section>
       )}
       {version == 4 && (
-        <Section>
+        <div className=" w-screen">
           <div className="text-black" onMouseOver={handleMouseEnter2}>
-            <Typography
-              variant="h2"
-              className="text-black leading-snug mb-6 text-center"
-            >
-              Rozpoznajesz te sytuacje?
-            </Typography>
+            <div className="mx-auto max-w-5xl py-8 md:py-12 px-4">
+              <Typography
+                variant="h2"
+                className="text-black leading-snug mb-6 text-center"
+              >
+                Rozpoznajesz te sytuacje?
+              </Typography>
+              <div className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8">
+                <div className="flex flex-col gap-2 md:gap-6">
+                  {leftBoxes.map((item, i) => (
+                    <BannerBox
+                      key={i}
+                      circleKey={item.circleKey}
+                      iconKey={item.iconKey}
+                      bgColor={item.bgColor}
+                      description={item.description}
+                      styles={item.styles}
+                      animationClass={
+                        hasAnimated2 ? "animate-slideInFromLeft" : ""
+                      }
+                      animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
+                    />
+                  ))}
+                </div>
 
-            <div className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8">
-              <div className="flex flex-col gap-2 md:gap-6">
-                {leftBoxes.map((item, i) => (
-                  <BannerBox
-                    key={i}
-                    circleKey={item.circleKey}
-                    iconKey={item.iconKey}
-                    bgColor={item.bgColor}
-                    description={item.description}
-                    styles={item.styles}
-                    animationClass={
-                      hasAnimated2 ? "animate-slideInFromLeft" : ""
-                    }
-                    animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
-                  />
-                ))}
+                <div className="flex flex-col gap-2 md:gap-6">
+                  {rightBoxes.map((item, i) => (
+                    <BannerBox
+                      key={i + leftBoxes.length}
+                      circleKey={item.circleKey}
+                      iconKey={item.iconKey}
+                      bgColor={item.bgColor}
+                      description={item.description}
+                      styles={item.styles}
+                      animationClass={
+                        hasAnimated2 ? "animate-slideInFromRight" : ""
+                      }
+                      animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
+                    />
+                  ))}
+                </div>
               </div>
 
-              <div className="flex flex-col gap-2 md:gap-6">
-                {rightBoxes.map((item, i) => (
-                  <BannerBox
-                    key={i + leftBoxes.length}
-                    circleKey={item.circleKey}
-                    iconKey={item.iconKey}
-                    bgColor={item.bgColor}
-                    description={item.description}
-                    styles={item.styles}
-                    animationClass={
-                      hasAnimated2 ? "animate-slideInFromRight" : ""
-                    }
-                    animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
-                  />
-                ))}
+              <Typography variant="h2" className="text-black text-center pt-6">
+                Rozumiemy to.
+              </Typography>
+              <Typography
+                variant="body"
+                className="text-black pt-8 text-center max-w-[600px] mx-auto pb-6"
+              >
+                Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
+                chcą skutecznie reklamować się w Meta, ale bez stresu, że coś
+                nie działa. Zamiast eksperymentów i niepewności, zyskujesz
+                dostęp do merytorycznego wsparcia, sprawdzonych strategii i
+                inspiracji, które realnie przekładają się na wyniki.
+              </Typography>
+
+              <div className="w-full flex justify-center">
+                <Button
+                  type="button"
+                  text={
+                    <>
+                      <span className="font-bold text-black uppercase text-adaSubtitleSecondary">
+                        TAK!
+                      </span>
+                      <br />
+                      <span className="">
+                        Zwiększam sprzedaż <br /> dzięki reklamom!
+                      </span>
+                    </>
+                  }
+                  sectionId="signup"
+                  textSize="text-sm md:text-base"
+                  btnStyle="bg-ada-magicPink4 font-semibold tracking-wide h-[100px] px-6 shadow-xl hover:opacity-90 rounded-full min-w-[330px] mt-4 m-auto"
+                />
               </div>
-            </div>
-
-            <Typography variant="h2" className="text-black text-center pt-6">
-              Rozumiemy to.
-            </Typography>
-            <Typography
-              variant="body"
-              className="text-black pt-8 text-center max-w-[600px] mx-auto pb-6"
-            >
-              Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
-              chcą skutecznie reklamować się w Meta, ale bez stresu, że coś nie
-              działa. Zamiast eksperymentów i niepewności, zyskujesz dostęp do
-              merytorycznego wsparcia, sprawdzonych strategii i inspiracji,
-              które realnie przekładają się na wyniki.
-            </Typography>
-
-            <div className="w-full flex justify-center">
-              <Button
-                type="button"
-                text={
-                  <>
-                    <span className="font-bold text-black uppercase text-adaSubtitleSecondary">
-                      TAK!
-                    </span>
-                    <br />
-                    <span className="">
-                      Zwiększam sprzedaż <br /> dzięki reklamom!
-                    </span>
-                  </>
-                }
-                sectionId="signup"
-                textSize="text-sm md:text-base"
-                btnStyle="bg-ada-magicPink4 font-semibold tracking-wide h-[100px] px-6 shadow-xl hover:opacity-90 rounded-full min-w-[330px] mt-4 m-auto"
-              />
             </div>
           </div>
-        </Section>
+        </div>
       )}
     </>
   )
