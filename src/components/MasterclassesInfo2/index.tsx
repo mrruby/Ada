@@ -344,8 +344,8 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
             btn="Sprzedaję skutecznie!"
             paragraph={
               <>
-                Marcie zależało na zdobyciu nowych klientów i powiększeniu
-                swojej społeczności.{" "}
+                Ani zależało na zdobyciu nowych klientów i powiększeniu swojej
+                społeczności.{" "}
                 <b>
                   Promocja webinaru ze ścieżką sprzedażową dała podwójny efekt:
                   10 376 osób zapisało się na webinar, a 172 osoby kupiły kurs.
