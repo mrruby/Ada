@@ -62,8 +62,8 @@ export const MasterclassInfo3: React.FC<Props> = ({
         if (hoverActiveRef.current && cycleCount.current < 5) {
           runCycle()
         }
-      }, 15000)
-    }, 15000)
+      }, 7000)
+    }, 7000)
   }
 
   const handleMouseEnter = () => {

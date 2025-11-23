@@ -96,15 +96,27 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                   </tbody>
                 </table>
                 <div className="mx-auto">
-                  <StaticImage
-                    loading="eager"
-                    src={"../../images/masterclass1Infov2-2.webp"}
-                    alt="Ada Promis"
-                    placeholder="blurred"
-                    width={580}
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
-                  />
+                  <div className="hidden lg:block">
+                    <StaticImage
+                      loading="eager"
+                      src={"../../images/masterclass1Infov2-2.webp"}
+                      alt="Ada Promis"
+                      placeholder="blurred"
+                      width={580}
+                      formats={["auto", "webp", "avif"]}
+                      quality={100}
+                    />
+                  </div>
+                  <div className="block lg:hidden">
+                    <StaticImage
+                      loading="eager"
+                      src={"../../images/masterclass1Infov1-2M.webp"}
+                      alt="Ada Promis"
+                      placeholder="blurred"
+                      formats={["auto", "webp", "avif"]}
+                      quality={100}
+                    />
+                  </div>
                 </div>
               </div>
             }
@@ -258,15 +270,27 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                   </tbody>
                 </table>
                 <div className="mx-auto lg:min-w-[500px]">
-                  <StaticImage
-                    loading="eager"
-                    src={"../../images/masterclass2Infov2-2.webp"}
-                    alt="Ada Promis"
-                    placeholder="blurred"
-                    width={620}
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
-                  />
+                  <div className="hidden lg:block">
+                    <StaticImage
+                      loading="eager"
+                      src={"../../images/masterclass2Infov2-2.webp"}
+                      alt="Ada Promis"
+                      placeholder="blurred"
+                      width={580}
+                      formats={["auto", "webp", "avif"]}
+                      quality={100}
+                    />
+                  </div>
+                  <div className="block lg:hidden">
+                    <StaticImage
+                      loading="eager"
+                      src={"../../images/masterclass2Infov1-2M.webp"}
+                      alt="Ada Promis"
+                      placeholder="blurred"
+                      formats={["auto", "webp", "avif"]}
+                      quality={100}
+                    />
+                  </div>
                 </div>
               </div>
             </>
@@ -344,8 +368,8 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
             btn="Sprzedaję skutecznie!"
             paragraph={
               <>
-                Marcie zależało na zdobyciu nowych klientów i powiększeniu
-                swojej społeczności.{" "}
+                Ani zależało na zdobyciu nowych klientów i powiększeniu swojej
+                społeczności.{" "}
                 <b>
                   Promocja webinaru ze ścieżką sprzedażową dała podwójny efekt:
                   10 376 osób zapisało się na webinar, a 172 osoby kupiły kurs.
@@ -416,15 +440,27 @@ const MasterclassesInfo2 = ({ version }: { version: number }) => {
                   </tbody>
                 </table>
                 <div className="mx-auto">
-                  <StaticImage
-                    loading="eager"
-                    src={"../../images/masterclass3Infov2-2.webp"}
-                    alt="Ada Promis"
-                    placeholder="blurred"
-                    width={500}
-                    formats={["auto", "webp", "avif"]}
-                    quality={100}
-                  />
+                  <div className="hidden lg:block">
+                    <StaticImage
+                      loading="eager"
+                      src={"../../images/masterclass3Infov2-2.webp"}
+                      alt="Ada Promis"
+                      placeholder="blurred"
+                      width={580}
+                      formats={["auto", "webp", "avif"]}
+                      quality={100}
+                    />
+                  </div>
+                  <div className="block lg:hidden">
+                    <StaticImage
+                      loading="eager"
+                      src={"../../images/masterclass3Infov1-2M.webp"}
+                      alt="Ada Promis"
+                      placeholder="blurred"
+                      formats={["auto", "webp", "avif"]}
+                      quality={100}
+                    />
+                  </div>
                 </div>
               </div>
             }
