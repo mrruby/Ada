@@ -1,5 +1,23 @@
 import { StaticImage } from "gatsby-plugin-image"
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
+
+const Cursor = () => (
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="drop-shadow-lg"
+  >
+    <path
+      d="M7.5 28L7.5 4L23.5 19.5L14.5 19.5L19.5 28L16.5 29.5L11.5 21L7.5 28Z"
+      fill="black"
+      stroke="white"
+      strokeWidth="2"
+    />
+  </svg>
+)
 
 interface Props {
   title: string
@@ -82,8 +100,77 @@ export const MasterclassInfo3: React.FC<Props> = ({
     if (timerRef.current) clearTimeout(timerRef.current)
   }
 
+  const showDetailsDesktopRef = useRef(showDetailsDesktop)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [showCursor, setShowCursor] = useState(false)
+  const [cursorAtTarget, setCursorAtTarget] = useState(false)
+  const [cursorClick, setCursorClick] = useState(false)
+  const hasAnimatedRef = useRef(false)
+
+  useEffect(() => {
+    showDetailsDesktopRef.current = showDetailsDesktop
+  }, [showDetailsDesktop])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (
+            entry.isIntersecting &&
+            !hasAnimatedRef.current &&
+            !showDetailsDesktopRef.current
+          ) {
+            hasAnimatedRef.current = true
+
+            setTimeout(() => {
+              if (showDetailsDesktopRef.current) return
+              setShowCursor(true)
+
+              // Start moving to target shortly after appearing
+              setTimeout(() => {
+                if (showDetailsDesktopRef.current) {
+                  setShowCursor(false)
+                  return
+                }
+                setCursorAtTarget(true)
+
+                // Click after movement finishes
+                setTimeout(() => {
+                  if (showDetailsDesktopRef.current) {
+                    setShowCursor(false)
+                    return
+                  }
+                  setCursorClick(true)
+                  setTimeout(() => {
+                    if (showDetailsDesktopRef.current) {
+                      setShowCursor(false)
+                      return
+                    }
+                    setShowDetailsDesktop(true)
+                    setCursorClick(false)
+                    setTimeout(() => {
+                      setShowCursor(false)
+                    }, 500)
+                  }, 300)
+                }, 1000)
+              }, 100)
+            }, 3000)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div
+      ref={containerRef}
       className={`relative w-full lg:h-[880px] py-5 md:py-10 px-2 overflow-visible transition-all duration-700 ${textColor}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -292,6 +379,23 @@ export const MasterclassInfo3: React.FC<Props> = ({
           </div>
         )}
       </button>
+      {showCursor && (
+        <div
+          className={`hidden lg:block absolute z-50 transition-all duration-1000 ease-in-out pointer-events-none ${
+            cursorClick ? "scale-90" : "scale-100"
+          }`}
+          style={{
+            top: "50%",
+            right: cursorAtTarget ? "45px" : "0px",
+            transform: `translate(${cursorAtTarget ? "0px" : "0px"}, ${
+              cursorAtTarget ? "10px" : "50px"
+            })`,
+            opacity: showCursor ? 1 : 0,
+          }}
+        >
+          <Cursor />
+        </div>
+      )}
     </div>
   )
 }

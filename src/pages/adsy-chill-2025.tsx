@@ -1,3 +1,4 @@
+import BonusCountdown from "components/BonusCountdown"
 import IconText from "components/IconText"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicCollectiveBanner from "components/MagicCollectiveBanner"
@@ -14,6 +15,7 @@ import SEO from "../components/seo"
 const AdsyAndChill2025 = () => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <BonusCountdown />
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <WebinarBanner version={7} />
       </MaxWithBgColorContainer>
@@ -53,6 +55,7 @@ const AdsyAndChill2025 = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-purple3">
         <MasterclassFAQ version={7} />
       </MaxWithBgColorContainer>
+      <BonusCountdown />
     </Layout>
   )
 }
