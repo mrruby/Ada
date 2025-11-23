@@ -61,23 +61,33 @@ export const MasterclassInfo3: React.FC<Props> = ({
   const [showDetailsDesktop, setShowDetailsDesktop] = useState(false)
   const [showDetailsMobile, setShowDetailsMobile] = useState(false)
 
+  const manualInteractionRef = useRef(false)
   const hoverActiveRef = useRef(false)
   const cycleCount = useRef(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
   const runCycle = () => {
-    if (!hoverActiveRef.current || cycleCount.current >= 5) return
+    if (
+      !hoverActiveRef.current ||
+      cycleCount.current >= 5 ||
+      manualInteractionRef.current
+    )
+      return
 
     timerRef.current = setTimeout(() => {
-      if (!hoverActiveRef.current) return
+      if (!hoverActiveRef.current || manualInteractionRef.current) return
       setShowDetailsDesktop(true)
 
       timerRef.current = setTimeout(() => {
-        if (!hoverActiveRef.current) return
+        if (!hoverActiveRef.current || manualInteractionRef.current) return
         setShowDetailsDesktop(false)
         cycleCount.current += 1
 
-        if (hoverActiveRef.current && cycleCount.current < 5) {
+        if (
+          hoverActiveRef.current &&
+          cycleCount.current < 5 &&
+          !manualInteractionRef.current
+        ) {
           runCycle()
         }
       }, 7000)
@@ -86,7 +96,7 @@ export const MasterclassInfo3: React.FC<Props> = ({
 
   const handleMouseEnter = () => {
     if (window.innerWidth < 1024) return
-    if (hoverActiveRef.current) return
+    if (hoverActiveRef.current || manualInteractionRef.current) return
     hoverActiveRef.current = true
     cycleCount.current = 0
     runCycle()
@@ -96,7 +106,9 @@ export const MasterclassInfo3: React.FC<Props> = ({
     if (window.innerWidth < 1024) return
     hoverActiveRef.current = false
     cycleCount.current = 0
-    setShowDetailsDesktop(false)
+    if (!manualInteractionRef.current) {
+      setShowDetailsDesktop(false)
+    }
     if (timerRef.current) clearTimeout(timerRef.current)
   }
 
@@ -118,17 +130,25 @@ export const MasterclassInfo3: React.FC<Props> = ({
           if (
             entry.isIntersecting &&
             !hasAnimatedRef.current &&
-            !showDetailsDesktopRef.current
+            !showDetailsDesktopRef.current &&
+            !manualInteractionRef.current
           ) {
             hasAnimatedRef.current = true
 
             setTimeout(() => {
-              if (showDetailsDesktopRef.current) return
+              if (
+                showDetailsDesktopRef.current ||
+                manualInteractionRef.current
+              )
+                return
               setShowCursor(true)
 
               // Start moving to target shortly after appearing
               setTimeout(() => {
-                if (showDetailsDesktopRef.current) {
+                if (
+                  showDetailsDesktopRef.current ||
+                  manualInteractionRef.current
+                ) {
                   setShowCursor(false)
                   return
                 }
@@ -136,13 +156,19 @@ export const MasterclassInfo3: React.FC<Props> = ({
 
                 // Click after movement finishes
                 setTimeout(() => {
-                  if (showDetailsDesktopRef.current) {
+                  if (
+                    showDetailsDesktopRef.current ||
+                    manualInteractionRef.current
+                  ) {
                     setShowCursor(false)
                     return
                   }
                   setCursorClick(true)
                   setTimeout(() => {
-                    if (showDetailsDesktopRef.current) {
+                    if (
+                      showDetailsDesktopRef.current ||
+                      manualInteractionRef.current
+                    ) {
                       setShowCursor(false)
                       return
                     }
@@ -355,7 +381,10 @@ export const MasterclassInfo3: React.FC<Props> = ({
         )}
       </div>
       <button
-        onClick={() => setShowDetailsDesktop(!showDetailsDesktop)}
+        onClick={() => {
+          setShowDetailsDesktop(!showDetailsDesktop)
+          manualInteractionRef.current = true
+        }}
         className={`opacity-0 lg:opacity-100 absolute top-1/2 transform -translate-y-1/2 z-40 transition-all duration-300 ${
           showDetailsDesktop ? "left-0 rotate-180" : "right-0"
         }`}
