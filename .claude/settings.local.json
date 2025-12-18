@@ -17,7 +17,7 @@
       "Bash(yarn lint:*)",
       "Bash(yarn tsc:*)",
       "WebFetch(domain:docs.google.com)",
-      "Bash(yarn why:*)"
+      "Bash(yarn why:*)",
       "Bash(git fetch:*)"
     ],
     "deny": []
