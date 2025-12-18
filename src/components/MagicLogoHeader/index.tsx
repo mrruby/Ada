@@ -1,8 +1,12 @@
 import React from "react"
 
-const MagicLogoHeader: React.FC<{ variant?: "pink" | "purple" }> = ({ variant = "pink" }) => {
-  const headerBgColor = variant === "pink" ? "bg-ada-magicPink3" : "bg-ada-magicPurple"
-  const logoSrc = variant === "pink" ? "/assets/magic-2.svg" : "/assets/magic.svg"
+const MagicLogoHeader: React.FC<{ variant?: "pink" | "purple" }> = ({
+  variant = "pink",
+}) => {
+  const headerBgColor =
+    variant === "pink" ? "bg-ada-magicPink3" : "bg-ada-magicPurple"
+  const logoSrc =
+    variant === "pink" ? "/assets/magic-2.svg" : "/assets/magic.svg"
 
   return (
     <header className={`text-white py-4 px-6 md:px-12 ${headerBgColor}`}>

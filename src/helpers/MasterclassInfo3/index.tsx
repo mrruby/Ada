@@ -136,10 +136,7 @@ export const MasterclassInfo3: React.FC<Props> = ({
             hasAnimatedRef.current = true
 
             setTimeout(() => {
-              if (
-                showDetailsDesktopRef.current ||
-                manualInteractionRef.current
-              )
+              if (showDetailsDesktopRef.current || manualInteractionRef.current)
                 return
               setShowCursor(true)
 

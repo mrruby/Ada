@@ -471,44 +471,6 @@ const referencesMagicList2: IReferencesList[] = [
   },
 ]
 
-const referencesAdsyList2: IReferencesList[] = [
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinionAdsy1.webp"}
-        alt="Opinia o Magic"
-        placeholder="blurred"
-        width={360}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinionAdsy2.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={360}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-  {
-    image: (
-      <StaticImage
-        src={"../../images/opinionAdsy3.webp"}
-        alt="Opinia o programie mentoringowym"
-        placeholder="blurred"
-        width={360}
-        formats={["auto", "webp", "avif"]}
-        quality={100}
-      />
-    ),
-  },
-]
 const ReferencesMentoring = ({
   title1,
   title2,

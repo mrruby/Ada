@@ -13,11 +13,11 @@ const BonusCountdown: React.FC = () => {
     // If today is Tuesday (2), diff is 0 (so today)
     // If today is Wednesday (3), diff is 6 (next Tuesday)
     const daysUntilTuesday = (2 - day + 7) % 7
-    
+
     const target = new Date(now)
     target.setDate(target.getDate() + daysUntilTuesday)
     target.setHours(23, 59, 59, 999)
-    
+
     setTargetDate(target)
   }, [])
 

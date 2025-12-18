@@ -3,13 +3,15 @@ import Section from "../shared/Section"
 
 const MagicVideo = ({ version }: { version?: number }) => {
   // Default video (original)
-  const defaultVideoSrc = "https://player.vimeo.com/video/1117395484?badge=0&autopause=0&player_id=0&app_id=58479"
+  const defaultVideoSrc =
+    "https://player.vimeo.com/video/1117395484?badge=0&autopause=0&player_id=0&app_id=58479"
   const defaultTitle = "Twoje zaproszenie do MAGIC"
-  
+
   // Version 2 video (for magic-nagranie page)
-  const version2VideoSrc = "https://player.vimeo.com/video/1117718298?badge=0&autopause=0&player_id=0&app_id=58479"
+  const version2VideoSrc =
+    "https://player.vimeo.com/video/1117718298?badge=0&autopause=0&player_id=0&app_id=58479"
   const version2Title = "Nagranie_ Jesienny re-start"
-  
+
   const videoSrc = version === 2 ? version2VideoSrc : defaultVideoSrc
   const videoTitle = version === 2 ? version2Title : defaultTitle
 

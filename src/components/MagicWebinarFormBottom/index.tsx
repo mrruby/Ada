@@ -63,7 +63,8 @@ const MagicWebinarFormBottom = () => {
               variant="body"
               className="text-ada-magicPurple font-bold"
             >
-              Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się teraz!
+              Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się
+              teraz!
             </Typography>
           </div>
         </div>

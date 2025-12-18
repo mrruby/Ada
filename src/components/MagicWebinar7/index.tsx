@@ -5,7 +5,6 @@ import React from "react"
 const MagicWebinar7 = ({ version = 1 }: { version?: number }) => {
   const primaryColor =
     version === 2 ? "text-ada-newPurple" : "text-ada-magicPurple"
-  const accentColor = version === 2 ? "text-ada-pink7" : "text-ada-magicOrange"
   const bgColor = version === 2 ? "bg-ada-newPurple" : "bg-ada-magicOrange"
 
   const renderTypography = (

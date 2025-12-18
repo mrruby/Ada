@@ -36,9 +36,11 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 17. **Umowa** – umowa zawierana pomiędzy Sprzedawcą a Kupującym, której przedmiotem jest sprzedaż Towarów, dostarczenie Treści Cyfrowych albo świadczenie Usług Podstawowych lub Usług Elektronicznych na rzecz Kupującego;
 18. **Usługi** – Usługi Elektroniczne lub Usługi Podstawowe;
 19. **Usługi Cyfrowe** – usługi pozwalające Kupującemu na:
-   - wytwarzanie, przetwarzanie, przechowywanie lub dostęp do danych w postaci cyfrowej;
-   - wspólne korzystanie z danych w postaci cyfrowej, które zostały przesłane lub wytworzone przez Kupującego lub innych użytkowników Usługi Cyfrowej;
-   - inne formy interakcji za pomocą danych w postaci cyfrowej;
+
+- wytwarzanie, przetwarzanie, przechowywanie lub dostęp do danych w postaci cyfrowej;
+- wspólne korzystanie z danych w postaci cyfrowej, które zostały przesłane lub wytworzone przez Kupującego lub innych użytkowników Usługi Cyfrowej;
+- inne formy interakcji za pomocą danych w postaci cyfrowej;
+
 20. **Usługi Podstawowe** – wszelkie usługi świadczone przez Sprzedawcę w ramach jego podstawowej działalności związanej ze sprzedażą produktów cyfrowych;
 21. **Usługi Elektroniczne** — wszelkie usługi elektroniczne świadczone przez Sprzedawcę na rzecz Kupującego za pośrednictwem Serwisu;
 22. **Zawartość** – treści zamieszczone przez Kupującego w Serwisie.

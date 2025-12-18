@@ -33,7 +33,8 @@ const DEFAULT_BENEFITS: Benefit[] = [
   {
     bgClass: "bg-ada-magicPurple4",
     title: "🤗 SPOŁECZNOŚĆ I ZROZUMIENIE",
-    description: "Społeczność przedsiębiorczych kobiet zorientowanych na sukces",
+    description:
+      "Społeczność przedsiębiorczych kobiet zorientowanych na sukces",
   },
   {
     bgClass: "bg-ada-magicPurple4",

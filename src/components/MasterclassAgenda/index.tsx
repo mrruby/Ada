@@ -184,37 +184,37 @@ const plusBasicList = [
 ]
 
 const masterclassList = [
-  <span>
+  <span key="mc-follow">
     <span className="font-bold">
-      Masterclass “Wartościowe follow na Instagramie”: <br />
+      Masterclass "Wartościowe follow na Instagramie": <br />
     </span>
     przystępne omówienie teorii i przygotowania strategicznego <br />+ nagranie
     krok po kroku w menedżerze reklam
   </span>,
-  <span>
+  <span key="mc-mailing">
     <span className="font-bold">
-      Masterclass “Kampania, która buduje listę mailingową”: <br />
+      Masterclass "Kampania, która buduje listę mailingową": <br />
     </span>
     przystępne omówienie teorii i przygotowania strategicznego <br />+ nagranie
     krok po kroku w menedżerze reklam
   </span>,
-  <span>
+  <span key="mc-remarketing">
     <span className="font-bold">
-      Masterclass “Reklamy remarketingowe, które sprzedają”: <br />
+      Masterclass "Reklamy remarketingowe, które sprzedają": <br />
     </span>
     przystępne omówienie teorii i przygotowania strategicznego <br />+ nagranie
     krok po kroku w menedżerze reklam
   </span>,
-  <span>
+  <span key="bonus-szablony">
     <span className="font-bold">BONUS: gotowe szablony graficzne reklam </span>
     do kampanii na pozyskanie obserwujących, budowanie listy mailowej i sprzedaż
     remarketingową{" "}
   </span>,
-  <span>
+  <span key="bonus-lejek">
     <span className="font-bold">BONUS: lejek na urlop, wakacje i święta </span>
     dla e-commerce, usług i produktów cyfrowych{" "}
   </span>,
-  <span>
+  <span key="bonus-slowniczek">
     <span className="font-bold">
       BONUS: słowniczek pojęć w menedżerze reklam,{" "}
     </span>

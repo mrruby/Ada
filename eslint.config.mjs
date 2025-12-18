@@ -1,7 +1,7 @@
 import eslint from "@eslint/js"
-import tseslint from "typescript-eslint"
-import reactPlugin from "eslint-plugin-react"
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
+import reactPlugin from "eslint-plugin-react"
+import tseslint from "typescript-eslint"
 
 export default tseslint.config(
   {
@@ -64,7 +64,6 @@ export default tseslint.config(
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
       "react/no-unescaped-entities": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/ban-ts-comment": "off",

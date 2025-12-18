@@ -17,7 +17,8 @@ const MagicWebinarSignup = () => {
               variant="h1"
               className="text-ada-pink7 text-3xl md:text-4xl font-bold"
             >
-              UWAGA! Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się teraz!
+              UWAGA! Ten produkt jest dostępny za 0zł jedynie do 17.09 -
+              zdecyduj się teraz!
             </Typography>
             <div className="w-[60px] h-[60px]">
               <MagicSunYellow width="60px" zIndex="z-0" />
@@ -37,7 +38,9 @@ const MagicWebinarSignup = () => {
           <Button
             type="button"
             text={
-              <span className="font-bold text-white uppercase">ODBIERAM DOSTĘP!</span>
+              <span className="font-bold text-white uppercase">
+                ODBIERAM DOSTĘP!
+              </span>
             }
             sectionId="top"
             textSize="text-lg md:text-xl"

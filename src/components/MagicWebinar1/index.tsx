@@ -33,7 +33,9 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }) => {
     ? "bg-ada-magicPink3"
     : "bg-ada-magicPurple"
   const logoSrc = isPinkVersion ? "/assets/magic-2.svg" : "/assets/magic.svg"
-  const formHtml = isPinkVersion ? magicWebinarFormMasterclass : magicWebinarForm
+  const formHtml = isPinkVersion
+    ? magicWebinarFormMasterclass
+    : magicWebinarForm
 
   useEffect(() => {
     const form = document.querySelector(".ml-block-form") as HTMLFormElement
@@ -211,7 +213,8 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }) => {
           UWAGA!
         </div>
         <Typography variant="body" className="text-ada-magicPurple font-bold">
-          Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się teraz!
+          Ten produkt jest dostępny za 0zł jedynie do 17.09 - zdecyduj się
+          teraz!
         </Typography>
       </div>
     </div>

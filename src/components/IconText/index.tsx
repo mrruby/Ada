@@ -4,7 +4,6 @@ import React, { useState } from "react"
 
 const IconText = ({ version }: { version: number }) => {
   const [hasAnimated, setHasAnimated] = useState(false)
-  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768
 
   const handleMouseEnter = () => {
     if (!hasAnimated) setHasAnimated(true)
