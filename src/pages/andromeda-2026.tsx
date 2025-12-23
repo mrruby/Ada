@@ -25,8 +25,7 @@ const benefits = [
   {
     bgClass: "bg-ada-magicPurple4",
     title: "📊 Ułożysz kreacje strategicznie",
-    description:
-      "Poznasz zasady, które ułatwią Ci pracę z kampaniami.",
+    description: "Poznasz zasady, które ułatwią Ci pracę z kampaniami.",
   },
   {
     bgClass: "bg-ada-magicPink3",
@@ -64,7 +63,8 @@ const Andromeda2026Page = () => {
             <span className="text-ada-magicPurple4">
               prowadzić kampanie Meta w 2026 roku
             </span>{" "}
-            dla swoich klientek - bez przepalania budżetów i nerwowego testowania na oślep.
+            dla swoich klientek - bez przepalania budżetów i nerwowego
+            testowania na oślep.
           </h1>
         </>
       }

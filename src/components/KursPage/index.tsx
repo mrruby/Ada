@@ -16,10 +16,9 @@ import React, { useEffect, useState } from "react"
 
 type KursPageProps = {
   storageKey: string
-  title: string
 }
 
-const KursPage = ({ storageKey, title }: KursPageProps) => {
+const KursPage = ({ storageKey }: KursPageProps) => {
   const [timeExpired, setTimeExpired] = useState(false)
   const [endTime, setEndTime] = useState<Date | null>(null)
   const [isClient, setIsClient] = useState(false)
@@ -73,7 +72,9 @@ const KursPage = ({ storageKey, title }: KursPageProps) => {
                 <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-400">
                   <div className="text-center text-gray-500">
                     <p className="text-2xl font-bold mb-2">Video Placeholder</p>
-                    <p className="text-sm">Tutaj pojawi sie nagranie szkolenia</p>
+                    <p className="text-sm">
+                      Tutaj pojawi sie nagranie szkolenia
+                    </p>
                   </div>
                 </div>
               </div>
