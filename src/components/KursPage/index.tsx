@@ -79,6 +79,61 @@ const KursPage = ({ storageKey, title }: KursPageProps) => {
               </div>
             </div>
           </MaxWithBgColorContainer>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+            <MagicVideo />
+          </MaxWithBgColorContainer>
+
+          <div className="bg-ada-white3">
+            <MagicBanner1 version={4} />
+          </div>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+            <MagicWhy part={9} />
+          </MaxWithBgColorContainer>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-white3">
+            <MagicDateBanner version={3} />
+          </MaxWithBgColorContainer>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+            <MagicDateBanner version={4} />
+          </MaxWithBgColorContainer>
+
+          <div id="magic-package"></div>
+          <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
+            <MagicJoinClosed />
+          </MaxWithBgColorContainer>
+
+          <div className="bg-magic">
+            <MaxWithBgColorContainer bgColor="bg-transparent">
+              <MagicWhy part={12} />
+            </MaxWithBgColorContainer>
+          </div>
+
+          <div className="bg-ada-pink8">
+            <MagicComments version={1} />
+          </div>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-white3">
+            <MagicBioBanner version={3} />
+          </MaxWithBgColorContainer>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+            <MagicBanner2 version={2} />
+          </MaxWithBgColorContainer>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-white3">
+            <MagicCommunityOpinions />
+          </MaxWithBgColorContainer>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+            <MasterclassFAQ version={5} />
+          </MaxWithBgColorContainer>
+
+          <MaxWithBgColorContainer bgColor="bg-ada-white3">
+            <MagicFinalCTA />
+          </MaxWithBgColorContainer>
         </>
       ) : (
         <>
