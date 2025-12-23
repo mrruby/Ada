@@ -57,7 +57,7 @@ const DEFAULT_BENEFITS: Benefit[] = [
 ]
 
 const AdaOverlay = () => (
-  <div className="absolute left-1/2 -translate-x-1/2 bottom-0 z-10 max-w-[300px]">
+  <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-0 z-10 max-w-[300px]">
     <div className="relative">
       <StaticImage
         src="../../images/ada-show.webp"
