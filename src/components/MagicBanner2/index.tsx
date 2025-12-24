@@ -283,10 +283,10 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                       WYBIERAM!
                     </span>
                   }
-                  url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+                  sectionId="magic-package"
                   textSize="text-sm md:text-base"
-                  btnStyle="bg-ada-white 
-                      font-semibold tracking-wide h-[48px] md:h-[70px] 
+                  btnStyle="bg-ada-white
+                      font-semibold tracking-wide h-[48px] md:h-[70px]
                       px-6 shadow-xl hover:opacity-90 rounded-full max-w-[430px] mx-auto mt-8"
                 />
               </div>

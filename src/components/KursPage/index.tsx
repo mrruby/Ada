@@ -10,7 +10,6 @@ import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicJoinClosed from "components/MagicJoinClosed"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
-import MasterclassFAQ from "components/MasterclassFAQ"
 import CountdownTimer from "helpers/CountdownTimer"
 import React, { useEffect, useState } from "react"
 
@@ -60,7 +59,7 @@ const KursPage = ({ storageKey }: KursPageProps) => {
           <div className="sticky top-0 z-50 bg-ada-purple text-white py-4">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg font-bold mb-2">
-                Dostep do kursu znika za:
+                Dostęp do kursu znika za:
               </p>
               <CountdownTimer targetDate={endTime} color="bg-ada-purple" />
             </div>
@@ -73,7 +72,7 @@ const KursPage = ({ storageKey }: KursPageProps) => {
                   <div className="text-center text-gray-500">
                     <p className="text-2xl font-bold mb-2">Video Placeholder</p>
                     <p className="text-sm">
-                      Tutaj pojawi sie nagranie szkolenia
+                      Tutaj pojawi się nagranie szkolenia
                     </p>
                   </div>
                 </div>
@@ -128,10 +127,6 @@ const KursPage = ({ storageKey }: KursPageProps) => {
             <MagicCommunityOpinions />
           </MaxWithBgColorContainer>
 
-          <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-            <MasterclassFAQ version={5} />
-          </MaxWithBgColorContainer>
-
           <MaxWithBgColorContainer bgColor="bg-ada-white3">
             <MagicFinalCTA />
           </MaxWithBgColorContainer>
@@ -141,14 +136,15 @@ const KursPage = ({ storageKey }: KursPageProps) => {
           <MaxWithBgColorContainer bgColor="bg-ada-pink8">
             <div className="py-12 px-4 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-ada-purple mb-4">
-                Dostep do kursu zniknal!
+                Dostęp do kursu zniknął!
               </h2>
               <p className="text-lg md:text-xl text-gray-700">
-                Ale nadal mozesz zapisac sie na liste oczekujacych Magic
+                Ale nadal możesz zapisać się na listę oczekujących Magic
               </p>
             </div>
           </MaxWithBgColorContainer>
 
+          <div id="magic-package"></div>
           <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
             <MagicJoinClosed />
           </MaxWithBgColorContainer>
@@ -193,10 +189,6 @@ const KursPage = ({ storageKey }: KursPageProps) => {
 
           <MaxWithBgColorContainer bgColor="bg-ada-white3">
             <MagicCommunityOpinions />
-          </MaxWithBgColorContainer>
-
-          <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-            <MasterclassFAQ version={5} />
           </MaxWithBgColorContainer>
 
           <MaxWithBgColorContainer bgColor="bg-ada-white3">

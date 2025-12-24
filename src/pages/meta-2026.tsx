@@ -32,10 +32,16 @@ const benefits = [
     bgClass: "bg-ada-magicPink3",
     title: "✨ Wykorzystasz Advantage+ z głową",
     description:
-      "Dowiesz się, kiedy warto, dostaniesz konkretne przykłady i zrozumiesz, dlaczego akurat one się sprawdzają.",
+      "Dowiesz się, kiedy warto, a kiedy lepiej unikać opcji Adv+",
   },
   {
     bgClass: "bg-ada-magicYellow",
+    title: "🚀 Zobaczysz reklamy, które działają",
+    description:
+      "Dostaniesz konkretne przykłady i zrozumiesz, dlaczego akurat one się sprawdzają.",
+  },
+  {
+    bgClass: "bg-ada-magicPurple4",
     title: "😎 Otrzymasz praktyczne inspiracje",
     description: "Pokażę Ci teksty i grafiki, które działają!",
   },

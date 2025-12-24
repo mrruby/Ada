@@ -8,7 +8,7 @@ interface MagicJoinClosedProps {
 }
 
 const MagicJoinClosed = ({
-  title = "Drzwi do MAGIC są zamknięte, ale możesz zapisać się na listę zainteresowanych",
+  title = "Zapisz się na listę: otwieramy już niedługo! 👇",
 }: MagicJoinClosedProps) => {
   useEffect(() => {
     const form = document.querySelector(
