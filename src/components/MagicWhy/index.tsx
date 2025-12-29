@@ -360,7 +360,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                 <Button
                   type="button"
                   text={<span className=" font-bold"> WCHODZĘ W TO!</span>}
-                  sectionId="magic-package"
+                  sectionId="signup"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                   btnStyle="bg-ada-magicPurple4
                                       tracking-wide 
@@ -425,7 +425,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                 <Button
                   type="button"
                   text={<span className=" font-bold"> Tak, Dołączam!</span>}
-                  sectionId="magic-package"
+                  sectionId="signup"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                   btnStyle="bg-ada-magicPink4
                                       tracking-wide 

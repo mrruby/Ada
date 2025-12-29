@@ -3,7 +3,6 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner1 from "components/MagicBanner"
 import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
-import MagicComments from "components/MagicComments"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
@@ -111,6 +110,7 @@ const KursPage = ({ storageKey, videoUrl }: KursPageProps) => {
             <MagicDateBanner version={4} />
           </MaxWithBgColorContainer>
 
+          <div id="signup"></div>
           <div id="magic-package"></div>
           <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
             <MagicJoinClosed />
@@ -120,10 +120,6 @@ const KursPage = ({ storageKey, videoUrl }: KursPageProps) => {
             <MaxWithBgColorContainer bgColor="bg-transparent">
               <MagicWhy part={12} />
             </MaxWithBgColorContainer>
-          </div>
-
-          <div className="bg-ada-pink8">
-            <MagicComments version={1} />
           </div>
 
           <MaxWithBgColorContainer bgColor="bg-ada-white3">
@@ -155,6 +151,7 @@ const KursPage = ({ storageKey, videoUrl }: KursPageProps) => {
             </div>
           </MaxWithBgColorContainer>
 
+          <div id="signup"></div>
           <div id="magic-package"></div>
           <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
             <MagicJoinClosed />
@@ -180,10 +177,6 @@ const KursPage = ({ storageKey, videoUrl }: KursPageProps) => {
             <MaxWithBgColorContainer bgColor="bg-transparent">
               <MagicWhy part={12} />
             </MaxWithBgColorContainer>
-          </div>
-
-          <div className="bg-ada-pink8">
-            <MagicComments version={1} />
           </div>
 
           <MaxWithBgColorContainer bgColor="bg-ada-white3">
