@@ -31,8 +31,7 @@ const benefits = [
   {
     bgClass: "bg-ada-magicPink3",
     title: "✨ Wykorzystasz Advantage+ z głową",
-    description:
-      "Dowiesz się, kiedy warto, a kiedy lepiej unikać opcji Adv+",
+    description: "Dowiesz się, kiedy warto, a kiedy lepiej unikać opcji Adv+",
   },
   {
     bgClass: "bg-ada-magicYellow",

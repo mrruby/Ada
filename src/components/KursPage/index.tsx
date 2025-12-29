@@ -8,16 +8,16 @@ import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicJoinClosed from "components/MagicJoinClosed"
-import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import CountdownTimer from "helpers/CountdownTimer"
 import React, { useEffect, useState } from "react"
 
 type KursPageProps = {
   storageKey: string
+  videoUrl?: string
 }
 
-const KursPage = ({ storageKey }: KursPageProps) => {
+const KursPage = ({ storageKey, videoUrl }: KursPageProps) => {
   const [timeExpired, setTimeExpired] = useState(false)
   const [endTime, setEndTime] = useState<Date | null>(null)
   const [isClient, setIsClient] = useState(false)
@@ -28,7 +28,7 @@ const KursPage = ({ storageKey }: KursPageProps) => {
     if (stored) {
       setEndTime(new Date(stored))
     } else {
-      const newEnd = new Date(Date.now() + 3 * 60 * 60 * 1000)
+      const newEnd = new Date(Date.now() + 24 * 60 * 60 * 1000)
       localStorage.setItem(storageKey, newEnd.toISOString())
       setEndTime(newEnd)
     }
@@ -68,20 +68,31 @@ const KursPage = ({ storageKey }: KursPageProps) => {
           <MaxWithBgColorContainer bgColor="bg-ada-white3">
             <div className="py-8 px-4">
               <div className="max-w-4xl mx-auto">
-                <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-400">
-                  <div className="text-center text-gray-500">
-                    <p className="text-2xl font-bold mb-2">Video Placeholder</p>
-                    <p className="text-sm">
-                      Tutaj pojawi się nagranie szkolenia
-                    </p>
+                {videoUrl ? (
+                  <div className="relative pb-[56.25%]">
+                    <iframe
+                      src={videoUrl}
+                      className="absolute top-0 left-0 w-full h-full"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      title="Reklamy dla klientów w 2026 roku"
+                    />
                   </div>
-                </div>
+                ) : (
+                  <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-400">
+                    <div className="text-center text-gray-500">
+                      <p className="text-2xl font-bold mb-2">
+                        Video Placeholder
+                      </p>
+                      <p className="text-sm">
+                        Tutaj pojawi się nagranie szkolenia
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
-          </MaxWithBgColorContainer>
-
-          <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-            <MagicVideo />
           </MaxWithBgColorContainer>
 
           <div className="bg-ada-white3">
@@ -147,10 +158,6 @@ const KursPage = ({ storageKey }: KursPageProps) => {
           <div id="magic-package"></div>
           <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
             <MagicJoinClosed />
-          </MaxWithBgColorContainer>
-
-          <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-            <MagicVideo />
           </MaxWithBgColorContainer>
 
           <div className="bg-ada-white3">
