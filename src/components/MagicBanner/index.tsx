@@ -248,7 +248,7 @@ const magicBannerContent4 = [
         </p>
       </>
     ),
-    styles: "mb-[32px]",
+    styles: "md:mb-[32px]",
   },
   {
     circleKey: "",
@@ -534,38 +534,43 @@ const MagicBanner1 = ({ version }: { version: number }) => {
               >
                 Rozpoznajesz te sytuacje?
               </Typography>
-              <div className="grid md:grid-cols-2 gap-2 md:gap-8 pt-8">
-                <div className="flex flex-col gap-2 md:gap-6">
+              <div className="grid md:grid-cols-2 gap-8 pt-0 md:pt-8">
+                <div className="flex flex-col items-center md:items-stretch gap-8 md:gap-6">
                   {leftBoxes.map((item, i) => (
-                    <BannerBox
-                      key={i}
-                      circleKey={item.circleKey}
-                      iconKey={item.iconKey}
-                      bgColor={item.bgColor}
-                      description={item.description}
-                      styles={item.styles}
-                      animationClass={
-                        hasAnimated2 ? "animate-slideInFromLeft" : ""
-                      }
-                      animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
-                    />
+                    <div key={i} className="w-full max-w-[340px] md:max-w-none">
+                      <BannerBox
+                        circleKey={item.circleKey}
+                        iconKey={item.iconKey}
+                        bgColor={item.bgColor}
+                        description={item.description}
+                        styles={item.styles}
+                        animationClass={
+                          hasAnimated2 ? "animate-slideInFromLeft" : ""
+                        }
+                        animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
+                      />
+                    </div>
                   ))}
                 </div>
 
-                <div className="flex flex-col gap-2 md:gap-6">
+                <div className="flex flex-col items-center md:items-stretch gap-8 md:gap-6">
                   {rightBoxes.map((item, i) => (
-                    <BannerBox
+                    <div
                       key={i + leftBoxes.length}
-                      circleKey={item.circleKey}
-                      iconKey={item.iconKey}
-                      bgColor={item.bgColor}
-                      description={item.description}
-                      styles={item.styles}
-                      animationClass={
-                        hasAnimated2 ? "animate-slideInFromRight" : ""
-                      }
-                      animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
-                    />
+                      className="w-full max-w-[340px] md:max-w-none"
+                    >
+                      <BannerBox
+                        circleKey={item.circleKey}
+                        iconKey={item.iconKey}
+                        bgColor={item.bgColor}
+                        description={item.description}
+                        styles={item.styles}
+                        animationClass={
+                          hasAnimated2 ? "animate-slideInFromRight" : ""
+                        }
+                        animationDelay={hasAnimated2 ? `${i * 0.3}s` : "0s"}
+                      />
+                    </div>
                   ))}
                 </div>
               </div>

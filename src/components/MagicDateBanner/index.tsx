@@ -284,8 +284,8 @@ const MagicDateBanner = ({ version }: { version: number }) => {
           className="flex flex-col items-center relative"
           onMouseOver={handleMouseEnter2}
         >
-          <div className="flex flex-col xl:flex-row gap-4 relative z-10 text-black w-full">
-            <div className="flex flex-col gap-6 md:gap-2 pt-8 md:min-w-[360px]">
+          <div className="flex flex-col xl:flex-row gap-6 xl:gap-4 relative z-10 text-black w-full pt-8">
+            <div className="flex flex-col gap-6 md:gap-2 md:min-w-[360px]">
               {magicTilesContent3.map((item, i) => (
                 <div key={i}>
                   <MagicTile2
@@ -300,7 +300,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col gap-6 md:gap-2 pt-8 md:min-w-[360px]">
+            <div className="flex flex-col gap-6 md:gap-2 md:min-w-[360px]">
               {magicTilesContent4.map((item, i) => (
                 <div key={i}>
                   <MagicTile2
@@ -315,7 +315,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col gap-6 md:gap-2 pt-8 md:min-w-[360px]">
+            <div className="flex flex-col gap-6 md:gap-2 md:min-w-[360px]">
               {magicTilesContent5.map((item, i) => (
                 <div key={i}>
                   <MagicTile2
@@ -331,7 +331,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               ))}
             </div>
           </div>
-          <div className="md:-mt-[460px] mb-[-30px] md:mb-[-96px] md:ml-[40px]">
+          <div className="md:-mt-[460px] mb-[-30px] md:mb-[-96px] md:ml-[40px] max-w-[280px] md:max-w-none mx-auto">
             <StaticImage
               loading="eager"
               src="../../images/magic_adsy.webp"
@@ -340,7 +340,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               width={600}
               height={800}
               quality={100}
-              className="object-contain ml-14  mt-40"
+              className="object-contain ml-0 md:ml-14 mt-8 md:mt-40"
             />
           </div>
         </div>

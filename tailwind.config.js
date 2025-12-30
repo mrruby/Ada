@@ -51,6 +51,7 @@ module.exports = {
           magicGrey2: "#A5A5A5",
           magicYellow: "#F4E105",
           darkGrey: "#3D3D3D",
+          sowaBurgundy: "#7B231C",
         },
       },
       backgroundImage: {

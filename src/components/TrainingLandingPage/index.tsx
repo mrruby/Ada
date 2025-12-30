@@ -9,14 +9,6 @@ type Benefit = {
   bgClass: string
 }
 
-const DEFAULT_DESCRIPTION_BULLETS = [
-  "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
-  "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
-  "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
-  "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
-  "Ekspresowa pomoc w problemach reklamowych, technicznych i nie tylko",
-]
-
 const DEFAULT_BENEFITS: Benefit[] = [
   {
     bgClass: "bg-ada-magicPink3",
@@ -80,7 +72,6 @@ type TrainingLandingPageProps = {
   heroBgColor: string
   heroLeft: React.ReactNode
   formHTML: string
-  descriptionBullets?: string[]
   benefits?: Benefit[]
 }
 
@@ -88,7 +79,6 @@ const TrainingLandingPage = ({
   heroBgColor,
   heroLeft,
   formHTML,
-  descriptionBullets = DEFAULT_DESCRIPTION_BULLETS,
   benefits = DEFAULT_BENEFITS,
 }: TrainingLandingPageProps) => {
   return (
@@ -109,16 +99,16 @@ const TrainingLandingPage = ({
             <h2 className="inline-block text-[48px] font-anton font-normal text-black bg-ada-magicOrange2 uppercase leading-none mb-8">
               OPIS szkolenia
             </h2>
-            <div className="mt-6">
-              <h3 className="text-[16px] font-bold text-black mb-4 leading-none">
-                Ekspresowa pomoc
-              </h3>
-              <ul className="space-y-3 text-[16px] font-normal text-black leading-none">
-                {descriptionBullets.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-            </div>
+            <p className="mt-6 text-[16px] font-normal text-black leading-relaxed">
+              Mini-kurs za 0zł: W 45 minut pokażę Ci, jak prowadzić kampanie
+              Meta w 2026 roku dla swoich klientek - bez przepalania budżetów i
+              nerwowego testowania na oślep. Dowiesz się, jak działa system
+              Andromeda i zaczniesz działać z aktualną wiedzą! Pokażę Ci też,
+              kiedy warto zaufać Advantage+, a kiedy lepiej zachować kontrolę
+              nad targetowaniem. Dostaniesz konkretne przykłady reklam i
+              tekstów, które możesz wdrożyć u swoich klientek w 2026 - bez
+              zgadywania i marnowania budżetów ✨
+            </p>
           </div>
           <div className="w-full lg:w-1/2">
             <StaticImage
@@ -135,7 +125,7 @@ const TrainingLandingPage = ({
         <div className="py-16 px-4">
           <h2 className="text-[48px] font-anton font-normal uppercase leading-none text-center mb-12 text-black">
             co zyskasz podczas{" "}
-            <span className="text-ada-magicPurple4">szkolenia</span>
+            <span className="text-ada-magicPurple4">mini-kursu</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {benefits.map((b, idx) => (
@@ -156,7 +146,7 @@ const TrainingLandingPage = ({
       </MaxWithBgColorContainer>
 
       <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
-        <div className="py-16 px-4 flex flex-col lg:flex-row items-center justify-center gap-4">
+        <div className="py-16 px-4 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-4">
           <div className="flex flex-col items-center justify-center">
             <h2 className="text-[48px] lg:text-[72px] font-anton font-normal uppercase leading-none text-ada-darkGrey text-center">
               WYPEŁNIJ
@@ -167,7 +157,7 @@ const TrainingLandingPage = ({
               src="../../images/arrow-right-spirng.webp"
               alt="Arrow"
               placeholder="blurred"
-              className="mt-4 max-w-[150px]"
+              className="mt-4 max-w-[150px] rotate-90 lg:rotate-0"
             />
           </div>
           <div>
