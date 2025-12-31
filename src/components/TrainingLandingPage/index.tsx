@@ -49,7 +49,7 @@ const DEFAULT_BENEFITS: Benefit[] = [
 ]
 
 const AdaOverlay = () => (
-  <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-0 z-10 max-w-[300px]">
+  <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-0 z-10 max-w-[300px] lg:max-w-[400px]">
     <div className="relative">
       <StaticImage
         src="../../images/ada-show.webp"
@@ -85,7 +85,7 @@ const TrainingLandingPage = ({
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor={heroBgColor}>
         <div className="py-16 flex flex-col lg:flex-row items-center lg:items-start justify-between px-4 relative">
-          <div className="w-full lg:w-1/2">{heroLeft}</div>
+          <div className="w-full lg:w-1/2 lg:mb-72 max-w-lg">{heroLeft}</div>
           <AdaOverlay />
           <div className="w-full lg:w-auto mt-8 lg:mt-0">
             <div dangerouslySetInnerHTML={{ __html: formHTML }} />
@@ -95,19 +95,19 @@ const TrainingLandingPage = ({
 
       <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
         <div className="py-16 flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 ">
             <h2 className="inline-block text-[48px] font-anton font-normal text-black bg-ada-magicOrange2 uppercase leading-none mb-8">
-              OPIS szkolenia
+              mini-kurs za 0zł
             </h2>
-            <p className="mt-6 text-[16px] font-normal text-black leading-relaxed">
-              Mini-kurs za 0zł: W 45 minut pokażę Ci, jak prowadzić kampanie
-              Meta w 2026 roku dla swoich klientek - bez przepalania budżetów i
-              nerwowego testowania na oślep. Dowiesz się, jak działa system
-              Andromeda i zaczniesz działać z aktualną wiedzą! Pokażę Ci też,
-              kiedy warto zaufać Advantage+, a kiedy lepiej zachować kontrolę
-              nad targetowaniem. Dostaniesz konkretne przykłady reklam i
-              tekstów, które możesz wdrożyć u swoich klientek w 2026 - bez
-              zgadywania i marnowania budżetów ✨
+            <p className="mt-6 text-[16px] font-normal text-black leading-relaxed]">
+              W 45 minut pokażę Ci, jak prowadzić kampanie Meta w 2026 roku dla
+              swoich klientek - bez przepalania budżetów i nerwowego testowania
+              na oślep. Dowiesz się, jak działa system Andromeda i zaczniesz
+              działać z aktualną wiedzą! Pokażę Ci też, kiedy warto zaufać
+              Advantage+, a kiedy lepiej zachować kontrolę nad targetowaniem.
+              Dostaniesz konkretne przykłady reklam i tekstów, które możesz
+              wdrożyć u swoich klientek w 2026 - bez zgadywania i marnowania
+              budżetów ✨
             </p>
           </div>
           <div className="w-full lg:w-1/2">
