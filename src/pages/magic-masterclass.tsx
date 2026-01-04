@@ -19,7 +19,7 @@ const MagicWebinarPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MagicWebinar1 version={2} />
-      <MagicWebinar2 version={2} />
+      <MagicWebinar2 variant="pink" />
       <MagicWebinar3 />
       <MagicWebinar4 version={2} />
       <MagicWebinar5 />

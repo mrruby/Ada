@@ -4,7 +4,8 @@ import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 import PersonBox from "./PersonBox"
 
-const peopleContent = [
+// Static array moved outside component
+const PEOPLE_CONTENT = [
   {
     name: "Adrianna Promis-Urbas",
     description:
@@ -31,11 +32,39 @@ const peopleContent = [
   },
 ]
 
+// Extracted PeopleGrid component (DRY)
+const PeopleGrid = ({ showStamp = false }: { showStamp?: boolean }) => (
+  <>
+    <div className="flex flex-col md:flex-row gap-6 pt-8 justify-center">
+      {PEOPLE_CONTENT.slice(0, 2).map((item) => (
+        <PersonBox
+          key={item.name}
+          name={item.name}
+          description={item.description}
+          img={item.img}
+          showStamp={showStamp}
+        />
+      ))}
+    </div>
+    <div className="flex flex-col md:flex-row gap-6 pt-8 mb-8 justify-center">
+      {PEOPLE_CONTENT.slice(2, 4).map((item) => (
+        <PersonBox
+          key={item.name}
+          name={item.name}
+          description={item.description}
+          img={item.img}
+          showStamp={showStamp}
+        />
+      ))}
+    </div>
+  </>
+)
+
 const MagicBioBanner = ({ version }: { version: number }) => {
   return (
     <>
       <Section>
-        {version == 1 && (
+        {version === 1 && (
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative">
             {/* Left column: Circular image */}
             <div className="w-full md:w-1/3 flex-shrink-0">
@@ -86,31 +115,12 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             </div>
           </div>
         )}
-        {version == 2 && (
+        {version === 2 && (
           <div className="text-center">
             <Typography variant="h2" className="text-ada-black animate-bounce">
               Kogo spotkasz w <span className="text-ada-pink7">MAGIC?</span>
             </Typography>
-            <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
-              {peopleContent.slice(0, 2).map((item, i) => (
-                <PersonBox
-                  key={i}
-                  name={item.name}
-                  description={item.description}
-                  img={item.img}
-                />
-              ))}
-            </div>
-            <div className="flex flex-col md:flex-row gap-6 pt-8 mb-8 justify-center">
-              {peopleContent.slice(2, 4).map((item, i) => (
-                <PersonBox
-                  key={i}
-                  name={item.name}
-                  description={item.description}
-                  img={item.img}
-                />
-              ))}
-            </div>
+            <PeopleGrid />
             <Typography
               variant="h3"
               className="text-ada-black max-w-[800px] m-auto"
@@ -135,7 +145,7 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             </div>
           </div>
         )}
-        {version == 3 && (
+        {version === 3 && (
           <div className="text-center">
             <Typography
               variant="h2"
@@ -152,26 +162,7 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             <Typography variant="h3" className="mb-8 text-ada-black">
               Meta Ads | Copywriting | Grafika | Koordynacja kampanii
             </Typography>
-            <div className="flex flex-col md:flex-row gap-6 pt-8  justify-center">
-              {peopleContent.slice(0, 2).map((item, i) => (
-                <PersonBox
-                  key={i}
-                  name={item.name}
-                  description={item.description}
-                  img={item.img}
-                />
-              ))}
-            </div>
-            <div className="flex flex-col md:flex-row gap-6 pt-8 mb-8 justify-center">
-              {peopleContent.slice(2, 4).map((item, i) => (
-                <PersonBox
-                  key={i}
-                  name={item.name}
-                  description={item.description}
-                  img={item.img}
-                />
-              ))}
-            </div>
+            <PeopleGrid />
             <Typography
               variant="h3"
               className="text-ada-black max-w-[800px] m-auto mt-12"
@@ -202,6 +193,33 @@ const MagicBioBanner = ({ version }: { version: number }) => {
           </div>
         )}
       </Section>
+      {version === 4 && (
+        <div className="bg-ada-sowaGold2 py-16 px-4">
+          <div className="container mx-auto">
+            <h2 className="font-playfair font-bold text-[48px] leading-[100%] text-center uppercase text-black">
+              Kogo spotkasz
+              <br />
+              w <span className="text-ada-sowaDarkRed">MAGIC?</span>
+            </h2>
+            <p className="text-center mt-6 text-black font-montserrat text-lg max-w-md mx-auto">
+              <span className="font-bold">4 specjalistki pod jednym dachem:</span>
+              <br />
+              Meta Ads | Copywriting | Grafika | Koordynacja kampanii
+            </p>
+            <div className="flex flex-col md:flex-row gap-6 pt-8 justify-center">
+              {PEOPLE_CONTENT.map((item) => (
+                <PersonBox
+                  key={item.name}
+                  name={item.name}
+                  description={item.description}
+                  img={item.img}
+                  showStamp={true}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

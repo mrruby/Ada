@@ -19,7 +19,8 @@
       "WebFetch(domain:docs.google.com)",
       "Bash(yarn why:*)",
       "Bash(git fetch:*)",
-      "Bash(yarn remove:*)"
+      "Bash(yarn remove:*)",
+      "Bash(chmod:*)"
     ],
     "deny": []
   }

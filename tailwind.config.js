@@ -1,5 +1,4 @@
 module.exports = {
-  mode: "jit",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -52,6 +51,10 @@ module.exports = {
           magicYellow: "#F4E105",
           darkGrey: "#3D3D3D",
           sowaBurgundy: "#7B231C",
+          sowaGold: "#CD9400",
+          sowaGold2: "#CCAA4D",
+          sowaDarkRed: "#AF0101",
+          sowaDarkBurgundy: "#5A0103",
         },
       },
       backgroundImage: {
