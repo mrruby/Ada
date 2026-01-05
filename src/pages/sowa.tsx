@@ -22,16 +22,9 @@ const SowaPage = () => {
     <Layout showHeaderAndFooter={false}>
       <div className="font-playfair bg-ada-sowaBurgundy">
         {/* Section 1 - Hero (Burgundy) */}
-        {/* Top bar - full width */}
+        {/* Top bar - always visible */}
         <div className="bg-ada-sowaBurgundy relative">
-          {/* Sowa on the left - XL only */}
-          <StaticImage
-            src="../images/sowa.webp"
-            alt="Sowa"
-            placeholder="blurred"
-            className="hidden xl:block absolute left-0 top-0 -translate-x-1/3 w-[33rem] z-10"
-          />
-          <div className="py-2 md:py-3 w-screen mt-6 md:mt-10 bg-ada-sowaGold2">
+          <div className="py-2 md:py-3 w-full mt-6 md:mt-10 bg-ada-sowaGold2">
             <p className="text-black font-bold text-[20px] md:text-[36px] xl:text-[48px] leading-[100%] text-center px-4">
               Webinar za 0 zł:{" "}
               <span className="text-ada-sowaBurgundy">10 września o 18:00</span>
@@ -39,18 +32,15 @@ const SowaPage = () => {
           </div>
         </div>
 
-        {/* Mobile & LG Hero - Clean design without koperta */}
-        <div className="xl:hidden bg-ada-sowaBurgundy">
+        {/* Mobile & LG Hero - uses CSS class for visibility */}
+        <div className="sowa-hero-mobile bg-ada-sowaBurgundy">
           <div className="flex flex-col items-center text-center py-8 px-4">
-            {/* Sowa image - centered */}
             <StaticImage
               src="../images/sowa.webp"
               alt="Sowa"
               placeholder="blurred"
-              className="w-40 md:w-56 mb-6"
+              className="w-40 md:w-56 lg:w-72 mb-6"
             />
-
-            {/* Heading with m-signs */}
             <div className="flex items-center gap-3 md:gap-4 mb-2">
               <StaticImage
                 src="../images/m-sign.webp"
@@ -68,70 +58,72 @@ const SowaPage = () => {
                 className="w-6 md:w-10"
               />
             </div>
-
-            {/* Gold heading */}
             <h1 className="font-extrabold text-[24px] md:text-[40px] leading-[113%] text-center uppercase text-ada-sowaGold mb-4">
               jesienny re-start
             </h1>
-
-            {/* Description */}
             <p className="font-montserrat font-normal text-[14px] md:text-[18px] leading-[140%] text-center text-white max-w-sm">
               Najlepszy czas na działanie jest teraz: pod okiem ekspertki
               przygotujesz swój biznes do kampanii reklamowej Meta Ads.
             </p>
-
-            {/* Form - mobile */}
             <div id="sowa-form" className="w-full max-w-md mt-8">
               <SowaFormCard className="p-4" />
             </div>
           </div>
         </div>
 
-        {/* XL Hero - Koperta design */}
-        <MaxWithBgColorContainer
-          bgColor="bg-ada-sowaBurgundy"
-          extraStyle="hidden xl:block"
-        >
-          <div className="relative">
-            <div className="pt-4 flex flex-row items-start justify-between px-4">
-              <div className="w-[87.5%] relative -mt-20">
-                <StaticImage
-                  src="../images/m-sign.webp"
-                  alt=""
-                  placeholder="blurred"
-                  className="absolute left-40 bottom-4 -translate-y-1/2 w-16 z-20"
-                />
-                <StaticImage
-                  src="../images/m-sign.webp"
-                  alt=""
-                  placeholder="blurred"
-                  className="absolute right-40 bottom-4 -translate-y-1/2 w-16 z-20"
-                />
-                <StaticImage
-                  src="../images/koperta.webp"
-                  alt="Koperta"
-                  placeholder="blurred"
-                  className="w-full block"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 mx-auto top-64 left-8 pt-10">
-                  <h1 className="font-extrabold text-[44px] leading-[113%] text-center uppercase text-black max-w-md mx-auto">
-                    Ogarniam reklamy w małej firmie
-                  </h1>
-                  <h1 className="font-extrabold text-[44px] leading-[113%] text-center uppercase text-ada-sowaGold">
-                    jesienny re-start
-                  </h1>
-                  <p className="font-montserrat font-normal text-[24px] leading-[100%] text-center text-black mt-2 max-w-xs">
-                    Najlepszy czas na działanie jest teraz: pod okiem ekspertki
-                    przygotujesz swój biznes do kampanii reklamowej Meta Ads.
-                  </p>
+        {/* XL Hero - Koperta design - uses CSS class for visibility */}
+        <div className="sowa-hero-xl bg-ada-sowaBurgundy">
+          <MaxWithBgColorContainer bgColor="bg-ada-sowaBurgundy">
+            <div className="relative">
+              {/* Sowa on the left */}
+              <StaticImage
+                src="../images/sowa.webp"
+                alt="Sowa"
+                placeholder="blurred"
+                className="absolute left-0 top-0 -translate-x-1/3 w-[33rem] z-10"
+                style={{ marginTop: "-120px" }}
+              />
+              <div className="pt-4 flex flex-row items-start justify-between px-4">
+                <div className="w-[87.5%] relative -mt-20">
+                  <StaticImage
+                    src="../images/m-sign.webp"
+                    alt=""
+                    placeholder="blurred"
+                    className="absolute left-40 bottom-4 -translate-y-1/2 w-16 z-20"
+                  />
+                  <StaticImage
+                    src="../images/m-sign.webp"
+                    alt=""
+                    placeholder="blurred"
+                    className="absolute right-40 bottom-4 -translate-y-1/2 w-16 z-20"
+                  />
+                  <StaticImage
+                    src="../images/koperta.webp"
+                    alt="Koperta"
+                    placeholder="blurred"
+                    className="w-full block"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-8 mx-auto top-64 left-8 pt-10">
+                    <h1 className="font-extrabold text-[44px] leading-[113%] text-center uppercase text-black max-w-md mx-auto">
+                      Ogarniam reklamy w małej firmie
+                    </h1>
+                    <h1 className="font-extrabold text-[44px] leading-[113%] text-center uppercase text-ada-sowaGold">
+                      jesienny re-start
+                    </h1>
+                    <p className="font-montserrat font-normal text-[24px] leading-[100%] text-center text-black mt-2 max-w-xs">
+                      Najlepszy czas na działanie jest teraz: pod okiem
+                      ekspertki przygotujesz swój biznes do kampanii reklamowej
+                      Meta Ads.
+                    </p>
+                  </div>
+                </div>
+                <div id="sowa-form-xl" className="mt-8">
+                  <SowaFormCard className="pt-8" />
                 </div>
               </div>
-              <div id="sowa-form-xl" className="mt-8">
-                <SowaFormCard className="pt-8" />
-              </div>
             </div>
-          </div>
-        </MaxWithBgColorContainer>
+          </MaxWithBgColorContainer>
+        </div>
 
         {/* Section 2 - MagicWebinar2 */}
         <div className="relative -mt-8 bg-white pb-8 pt-1">

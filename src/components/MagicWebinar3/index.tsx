@@ -1,5 +1,4 @@
 import { StaticImage } from "gatsby-plugin-image"
-import { Button } from "helpers/Button"
 import React from "react"
 import Typography from "../shared/Typography"
 
@@ -150,17 +149,13 @@ const MagicWebinar3 = ({
                   config.renderMode === "boxes" ? "flex justify-center" : ""
                 }
               >
-                <Button
-                  type="button"
-                  text={
+                <a href={`#${sectionId}`} className="inline-block">
+                  <button type="button" className={config.buttonStyle}>
                     <span className={config.buttonTextClass}>
                       Tak, to o mnie!
                     </span>
-                  }
-                  sectionId={sectionId}
-                  textSize="text-sm md:text-base"
-                  btnStyle={config.buttonStyle}
-                />
+                  </button>
+                </a>
               </div>
             </div>
 

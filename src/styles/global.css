@@ -454,3 +454,20 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/* Sowa page responsive hero - explicit media queries to avoid purging */
+.sowa-hero-mobile {
+  display: block;
+}
+.sowa-hero-xl {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .sowa-hero-mobile {
+    display: none;
+  }
+  .sowa-hero-xl {
+    display: block;
+  }
+}

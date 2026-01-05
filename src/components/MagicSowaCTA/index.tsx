@@ -1,4 +1,3 @@
-import { Button } from "helpers/Button"
 import React from "react"
 
 type Variant = "gold" | "red"
@@ -28,16 +27,16 @@ const MagicSowaCTA = ({
             </p>
           </div>
           <div>
-            <Button
-              type="button"
-              text={
+            <a href={`#${sectionId}`} className="inline-block">
+              <button
+                type="button"
+                className="bg-black hover:bg-gray-800 px-12 py-4 rounded-full"
+              >
                 <span className="text-white font-montserrat font-bold text-[20px] md:text-[24px]">
                   Zapisuję się
                 </span>
-              }
-              sectionId={sectionId}
-              btnStyle="bg-black hover:bg-gray-800 px-12 py-4 rounded-full"
-            />
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -48,16 +47,16 @@ const MagicSowaCTA = ({
   return (
     <div className="bg-ada-sowaDarkRed py-16 px-4">
       <div className="container mx-auto text-center">
-        <Button
-          type="button"
-          text={
+        <a href={`#${sectionId}`} className="inline-block">
+          <button
+            type="button"
+            className="bg-ada-sowaGold2 hover:opacity-90 px-12 py-4 rounded-full"
+          >
             <span className="text-black font-montserrat font-bold text-[20px] md:text-[24px] uppercase">
               REZERWUJĘ MIEJSCE!
             </span>
-          }
-          sectionId={sectionId}
-          btnStyle="bg-ada-sowaGold2 hover:opacity-90 px-12 py-4 rounded-full"
-        />
+          </button>
+        </a>
         <div className="mt-6">
           <span className="bg-white text-black px-3 py-1 rounded font-bold font-montserrat">
             Uwaga:
