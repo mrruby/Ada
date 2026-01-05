@@ -1,0 +1,74 @@
+import { Button } from "helpers/Button"
+import React from "react"
+
+type Variant = "gold" | "red"
+
+interface MagicSowaCTAProps {
+  variant: Variant
+  sectionId?: string
+}
+
+const MagicSowaCTA = ({
+  variant,
+  sectionId = "sowa-form",
+}: MagicSowaCTAProps) => {
+  if (variant === "gold") {
+    return (
+      <div className="bg-ada-sowaGold2 py-16 px-4">
+        <div className="container mx-auto text-center">
+          <h2 className="font-playfair font-extrabold text-[36px] leading-[100%] uppercase text-black mb-8 text-center">
+            Nie czekaj - liczba miejsc ograniczona!
+          </h2>
+          <div className="bg-ada-sowaDarkRed rounded-2xl p-6 inline-block text-white mb-8">
+            <p className="font-montserrat font-extrabold text-[32px] leading-[100%] text-center">
+              ⏰ Termin: 10.09
+            </p>
+            <p className="font-montserrat font-extrabold text-[32px] leading-[100%] text-center">
+              🕒 Godzina: 18:00
+            </p>
+          </div>
+          <div>
+            <Button
+              type="button"
+              text={
+                <span className="text-white font-montserrat font-bold text-[20px] md:text-[24px]">
+                  Zapisuję się
+                </span>
+              }
+              sectionId={sectionId}
+              btnStyle="bg-black hover:bg-gray-800 px-12 py-4 rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // variant === "red"
+  return (
+    <div className="bg-ada-sowaDarkRed py-16 px-4">
+      <div className="container mx-auto text-center">
+        <Button
+          type="button"
+          text={
+            <span className="text-black font-montserrat font-bold text-[20px] md:text-[24px] uppercase">
+              REZERWUJĘ MIEJSCE!
+            </span>
+          }
+          sectionId={sectionId}
+          btnStyle="bg-ada-sowaGold2 hover:opacity-90 px-12 py-4 rounded-full"
+        />
+        <div className="mt-6">
+          <span className="bg-white text-black px-3 py-1 rounded font-bold font-montserrat">
+            Uwaga:
+          </span>
+          <span className="text-white ml-2 font-montserrat">
+            Ilość miejsc ograniczona - zdecyduj się teraz!
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default MagicSowaCTA

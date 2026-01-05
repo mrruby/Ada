@@ -198,11 +198,12 @@ const MagicBioBanner = ({ version }: { version: number }) => {
           <div className="container mx-auto">
             <h2 className="font-playfair font-bold text-[48px] leading-[100%] text-center uppercase text-black">
               Kogo spotkasz
-              <br />
-              w <span className="text-ada-sowaDarkRed">MAGIC?</span>
+              <br />w <span className="text-ada-sowaDarkRed">MAGIC?</span>
             </h2>
             <p className="text-center mt-6 text-black font-montserrat text-lg max-w-md mx-auto">
-              <span className="font-bold">4 specjalistki pod jednym dachem:</span>
+              <span className="font-bold">
+                4 specjalistki pod jednym dachem:
+              </span>
               <br />
               Meta Ads | Copywriting | Grafika | Koordynacja kampanii
             </p>

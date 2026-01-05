@@ -73,6 +73,7 @@ type TrainingLandingPageProps = {
   heroLeft: React.ReactNode
   formHTML: string
   benefits?: Benefit[]
+  descriptionBullets?: string[]
 }
 
 const TrainingLandingPage = ({
@@ -80,6 +81,7 @@ const TrainingLandingPage = ({
   heroLeft,
   formHTML,
   benefits = DEFAULT_BENEFITS,
+  descriptionBullets,
 }: TrainingLandingPageProps) => {
   return (
     <Layout showHeaderAndFooter={false}>
@@ -99,16 +101,24 @@ const TrainingLandingPage = ({
             <h2 className="inline-block text-[48px] font-anton font-normal text-black bg-ada-magicOrange2 uppercase leading-none mb-8">
               mini-kurs za 0zł
             </h2>
-            <p className="mt-6 text-[16px] font-normal text-black leading-relaxed]">
-              W 45 minut pokażę Ci, jak prowadzić kampanie Meta w 2026 roku dla
-              swoich klientek - bez przepalania budżetów i nerwowego testowania
-              na oślep. Dowiesz się, jak działa system Andromeda i zaczniesz
-              działać z aktualną wiedzą! Pokażę Ci też, kiedy warto zaufać
-              Advantage+, a kiedy lepiej zachować kontrolę nad targetowaniem.
-              Dostaniesz konkretne przykłady reklam i tekstów, które możesz
-              wdrożyć u swoich klientek w 2026 - bez zgadywania i marnowania
-              budżetów ✨
-            </p>
+            {descriptionBullets ? (
+              <ul className="mt-6 text-[16px] font-normal text-black leading-relaxed list-disc pl-5 space-y-2">
+                {descriptionBullets.map((bullet, idx) => (
+                  <li key={idx}>{bullet}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-6 text-[16px] font-normal text-black leading-relaxed">
+                W 45 minut pokażę Ci, jak prowadzić kampanie Meta w 2026 roku
+                dla swoich klientek - bez przepalania budżetów i nerwowego
+                testowania na oślep. Dowiesz się, jak działa system Andromeda i
+                zaczniesz działać z aktualną wiedzą! Pokażę Ci też, kiedy warto
+                zaufać Advantage+, a kiedy lepiej zachować kontrolę nad
+                targetowaniem. Dostaniesz konkretne przykłady reklam i tekstów,
+                które możesz wdrożyć u swoich klientek w 2026 - bez zgadywania i
+                marnowania budżetów ✨
+              </p>
+            )}
           </div>
           <div className="w-full lg:w-1/2">
             <StaticImage

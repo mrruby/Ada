@@ -1,8 +1,8 @@
 // PersonBox.tsx
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Typography from "../shared/Typography"
 import { CircleImage } from "./circleImages"
-import magicStampImage from "../../images/magic-stamp.webp"
 
 type PersonBoxProps = {
   img: string
@@ -17,10 +17,11 @@ const PersonBox = ({ img, name, description, showStamp }: PersonBoxProps) => {
       <div className="relative">
         <CircleImage circleKey={img} />
         {showStamp && (
-          <img
-            src={magicStampImage}
+          <StaticImage
+            src="../../images/magic-stamp.webp"
             alt=""
-            className="absolute bottom-0 right-0 w-10"
+            placeholder="blurred"
+            className="!absolute bottom-0 right-0 w-10"
           />
         )}
       </div>

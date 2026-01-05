@@ -66,7 +66,8 @@ const variantConfig: Record<
     titleColors: { main: "text-white", highlight: "text-ada-sowaGold" },
     audienceTitleClass: "",
     descriptionClass: "",
-    buttonTextClass: "font-bold text-black uppercase text-[24px]",
+    buttonTextClass:
+      "font-montserrat font-bold text-black uppercase text-[20px] md:text-[24px]",
     buttonStyle:
       "uppercase bg-white font-bold tracking-wide h-[72px] md:h-[80px] px-12 shadow-xl hover:opacity-90 rounded-full min-w-[200px]",
     renderMode: "boxes",
@@ -79,7 +80,15 @@ const variantConfig: Record<
   },
 }
 
-const MagicWebinar3 = ({ variant = "default" }: { variant?: Variant }) => {
+interface MagicWebinar3Props {
+  variant?: Variant
+  sectionId?: string
+}
+
+const MagicWebinar3 = ({
+  variant = "default",
+  sectionId = "top",
+}: MagicWebinar3Props) => {
   const config = variantConfig[variant]
 
   const renderAudienceItem = ({ title, description }: AudienceItem) => (
@@ -148,7 +157,7 @@ const MagicWebinar3 = ({ variant = "default" }: { variant?: Variant }) => {
                       Tak, to o mnie!
                     </span>
                   }
-                  sectionId="top"
+                  sectionId={sectionId}
                   textSize="text-sm md:text-base"
                   btnStyle={config.buttonStyle}
                 />

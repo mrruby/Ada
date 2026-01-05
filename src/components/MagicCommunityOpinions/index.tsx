@@ -3,14 +3,60 @@ import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-const MagicCommunityOpinions = () => {
+type Variant = "default" | "sowa"
+
+const variantConfig: Record<
+  Variant,
+  {
+    bgColor: string
+    headingClass: string
+    textColor: string
+    magicColor: string
+  }
+> = {
+  default: {
+    bgColor: "bg-transparent",
+    headingClass: "",
+    textColor: "text-ada-black",
+    magicColor: "text-ada-pink7",
+  },
+  sowa: {
+    bgColor: "bg-ada-sowaBurgundy",
+    headingClass:
+      "font-montserrat font-bold text-[48px] leading-[100%] uppercase",
+    textColor: "text-white",
+    magicColor: "text-ada-sowaGold",
+  },
+}
+
+const MagicCommunityOpinions = ({
+  variant = "default",
+}: {
+  variant?: Variant
+}) => {
+  const config = variantConfig[variant]
+
   return (
-    <Section bgColor="bg-transparent" className="pt-24 md:pt-32" id="opinie">
+    <Section bgColor={config.bgColor} className="pt-24 md:pt-32" id="opinie">
       <div className="w-full">
-        <Typography variant="h1" className="mb-12 text-center text-ada-black">
-          Zobacz, co członkinie <span className="text-ada-pink7">MAGIC</span>{" "}
-          mówią o społeczności:
-        </Typography>
+        {variant === "sowa" ? (
+          <h2
+            className={`mb-12 text-center ${config.headingClass} ${config.textColor}`}
+          >
+            Zobacz, co członkinie{" "}
+            <span className={config.magicColor}>MAGIC</span> mówią o
+            społeczności:
+          </h2>
+        ) : (
+          <Typography
+            variant="h1"
+            className={`mb-12 text-center ${config.textColor}`}
+          >
+            Zobacz, co członkinie{" "}
+            <span className={config.magicColor}>MAGIC</span> mówią o
+            społeczności:
+          </Typography>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="flex flex-col gap-6">
