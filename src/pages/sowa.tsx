@@ -135,8 +135,7 @@ const SowaPage = () => {
             placeholder="blurred"
             className="!absolute inset-0 w-full h-full"
             style={{ position: "absolute" }}
-            objectFit="cover"
-            objectPosition="center"
+            imgStyle={{ objectFit: "cover", objectPosition: "center" }}
           />
           {/* White overlay for softer image */}
           <div className="absolute inset-0 bg-white/30 z-[5]" />

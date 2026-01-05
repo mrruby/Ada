@@ -50,7 +50,7 @@ const MagicWebinar7 = ({ version = 1 }: { version?: number }) => {
           alt="Masterclass 3 Info"
           placeholder="blurred"
           width={600}
-          objectFit="contain"
+          imgStyle={{ objectFit: "contain" }}
           className="m-4"
         />
         <div className="flex flex-col">
