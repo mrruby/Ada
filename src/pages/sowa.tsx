@@ -73,29 +73,31 @@ const SowaPage = () => {
 
         {/* XL Hero - Koperta design - uses CSS class for visibility */}
         <div className="sowa-hero-xl bg-ada-sowaBurgundy">
-          <MaxWithBgColorContainer bgColor="bg-ada-sowaBurgundy">
-            <div className="relative">
-              {/* Sowa on the left */}
-              <StaticImage
-                src="../images/sowa.webp"
-                alt="Sowa"
-                placeholder="blurred"
-                className="absolute left-0 top-0 -translate-x-1/3 w-[33rem] z-10"
-                style={{ marginTop: "-120px" }}
-              />
+          {/* Viewport-width wrapper for positioning context */}
+          <div className="relative w-full">
+            {/* Owl positioned relative to full viewport */}
+            <StaticImage
+              src="../images/sowa.webp"
+              alt="Sowa"
+              placeholder="blurred"
+              className="absolute left-0 top-0 -translate-x-1/3 w-[33rem] z-10 -mt-[120px]"
+            />
+
+            {/* Content container - centered */}
+            <div className="container mx-auto">
               <div className="pt-4 flex flex-row items-start justify-between px-4">
                 <div className="w-[87.5%] relative -mt-20">
                   <StaticImage
                     src="../images/m-sign.webp"
                     alt=""
                     placeholder="blurred"
-                    className="absolute left-40 bottom-4 -translate-y-1/2 w-16 z-20"
+                    className="absolute left-[15%] bottom-4 -translate-y-1/2 w-16 z-20"
                   />
                   <StaticImage
                     src="../images/m-sign.webp"
                     alt=""
                     placeholder="blurred"
-                    className="absolute right-40 bottom-4 -translate-y-1/2 w-16 z-20"
+                    className="absolute right-[15%] bottom-4 -translate-y-1/2 w-16 z-20"
                   />
                   <StaticImage
                     src="../images/koperta.webp"
@@ -122,7 +124,7 @@ const SowaPage = () => {
                 </div>
               </div>
             </div>
-          </MaxWithBgColorContainer>
+          </div>
         </div>
 
         {/* Section 2 - MagicWebinar2 */}
