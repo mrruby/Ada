@@ -80,7 +80,7 @@ const SowaPage = () => {
               src="../images/sowa.webp"
               alt="Sowa"
               placeholder="blurred"
-              className="absolute left-0 top-0 -translate-x-1/3 w-[33rem] z-10 -mt-[120px]"
+              className="!absolute left-0 top-0 -translate-x-1/3 w-[33rem] z-10 -mt-[120px]"
             />
 
             {/* Content container - centered */}
@@ -91,13 +91,13 @@ const SowaPage = () => {
                     src="../images/m-sign.webp"
                     alt=""
                     placeholder="blurred"
-                    className="absolute left-[15%] bottom-4 -translate-y-1/2 w-16 z-20"
+                    className="!absolute left-[15%] bottom-4 -translate-y-1/2 w-16 z-20"
                   />
                   <StaticImage
                     src="../images/m-sign.webp"
                     alt=""
                     placeholder="blurred"
-                    className="absolute right-[15%] bottom-4 -translate-y-1/2 w-16 z-20"
+                    className="!absolute right-[15%] bottom-4 -translate-y-1/2 w-16 z-20"
                   />
                   <StaticImage
                     src="../images/koperta.webp"
