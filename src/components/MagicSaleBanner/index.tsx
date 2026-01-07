@@ -67,7 +67,7 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
           </div>
           <p className="mt-6 mb-8 max-w-[600px] leading-[32px] md:leading-[36px] text-black text-adaBase text-center mx-auto">
             Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod
-            czujnym okiem profesjonalistek
+            czujnym okiem profesjonalistek, teraz
           </p>
           <div className="flex justify-center mt-8">
             <Button

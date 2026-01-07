@@ -19,7 +19,7 @@ import React from "react"
 const MagicSalePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <MagicLogoHeader variant="pink" />
+      <MagicLogoHeader variant="purple" />
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicSaleBanner version={1} />
       </MaxWithBgColorContainer>
