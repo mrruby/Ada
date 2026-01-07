@@ -71,7 +71,7 @@ const MagicSalePage = () => {
 
 export const Head = () => (
   <SEO
-    title="Magic: Marketing Ads Girls Inside Collective"
+    title="Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod czujnym okiem profesjonalistek, teraz"
     image="https://adrianna.com.pl/img/ada_purple.webp"
   />
 )
