@@ -27,7 +27,7 @@ const SowaPage = () => {
           <div className="py-2 md:py-3 w-full mt-6 md:mt-10 bg-ada-sowaGold2">
             <p className="text-black font-bold text-[20px] md:text-[36px] xl:text-[48px] leading-[100%] text-center px-4">
               Webinar za 0 zł:{" "}
-              <span className="text-ada-sowaBurgundy">10 września o 18:00</span>
+              <span className="text-ada-sowaBurgundy">15 stycznia o 18:00</span>
             </p>
           </div>
         </div>
