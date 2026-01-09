@@ -14,6 +14,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           height={200}
           placeholder="blurred"
           quality={90}
+          className="rounded-full"
+          imgClassName="rounded-full"
         />
       )
     case "justyna":
@@ -26,6 +28,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           height={200}
           placeholder="blurred"
           quality={90}
+          className="rounded-full"
+          imgClassName="rounded-full"
         />
       )
     case "dorota":
@@ -38,6 +42,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           height={200}
           placeholder="blurred"
           quality={90}
+          className="rounded-full"
+          imgClassName="rounded-full"
         />
       )
     case "marianna":
@@ -50,6 +56,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           height={200}
           placeholder="blurred"
           quality={90}
+          className="rounded-full"
+          imgClassName="rounded-full"
         />
       )
     case "nicola":
@@ -62,6 +70,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           height={200}
           placeholder="blurred"
           quality={90}
+          className="rounded-full"
+          imgClassName="rounded-full"
         />
       )
     default:
