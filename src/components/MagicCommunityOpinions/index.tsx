@@ -23,7 +23,7 @@ const variantConfig: Record<
   sowa: {
     bgColor: "bg-ada-sowaBurgundy",
     headingClass:
-      "font-montserrat font-bold text-[48px] leading-[100%] uppercase",
+      "font-playfair font-normal text-[48px] leading-[100%] uppercase",
     textColor: "text-white",
     magicColor: "text-ada-sowaGold",
   },
@@ -43,9 +43,8 @@ const MagicCommunityOpinions = ({
           <h2
             className={`mb-12 text-center ${config.headingClass} ${config.textColor}`}
           >
-            Zobacz, co członkinie{" "}
-            <span className={config.magicColor}>MAGIC</span> mówią o
-            społeczności:
+            Zobacz, co mówią o naszych{" "}
+            <span className={config.magicColor}>magicznych eliksirach:</span>
           </h2>
         ) : (
           <Typography

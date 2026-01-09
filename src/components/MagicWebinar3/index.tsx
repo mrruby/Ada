@@ -6,6 +6,7 @@ type Variant = "default" | "sowa"
 
 // Interface moved outside component
 interface AudienceItem {
+  id: string
   title: string
   description: string
 }
@@ -13,22 +14,53 @@ interface AudienceItem {
 // Static array moved outside component for DRY/perf
 const TARGET_AUDIENCES: AudienceItem[] = [
   {
+    id: "personal-brand",
     title: "Jesteś marką osobistą lub soloprzedsiębiorczynią",
     description: "i chcesz wystartować z reklamami bez przepalania budżetu.",
   },
   {
+    id: "micro-ecommerce",
     title: "Prowadzisz mikro-e-commerce albo tworzysz butikowe produkty",
     description: "i potrzebujesz stabilnego wzrostu bez pomocy dużej agencji.",
   },
   {
+    id: "marketer",
     title: "Pracujesz jako marketerka lub SMM-ka dla kobiecych marek",
     description:
       'i szukasz sprawdzonego procesu „od briefu do wyniku" w Meta Ads.',
   },
   {
+    id: "two-groups",
     title: "Należysz do jednej z dwóch grup:",
     description:
       "już próbowałaś i się sparzyłaś lub dopiero startujesz i chcesz uniknąć typowych błędów.",
+  },
+]
+
+// Sowa variant specific content
+const SOWA_AUDIENCES: AudienceItem[] = [
+  {
+    id: "own-business-1",
+    title: "Prowadzisz własną działalność",
+    description:
+      "i nie jesteś zadowolona z wyników swoich reklam, ale nie masz funduszy na zatrudnienie agencji",
+  },
+  {
+    id: "keep-up",
+    title: "Chcesz trzymać rękę na pulsie",
+    description:
+      "i zrozumieć jak działa system, bez poświęcania godzin na naukę reklam i doktorat z adsów",
+  },
+  {
+    id: "marketing-job",
+    title: "Pracujesz w marketingu",
+    description: "i prowadzisz reklamy dla klientów",
+  },
+  {
+    id: "own-business-2",
+    title: "Prowadzisz własną działalność",
+    description:
+      "i nie jesteś zadowolona z wyników swoich reklam, ale nie masz funduszy na zatrudnienie agencji",
   },
 ]
 
@@ -90,8 +122,8 @@ const MagicWebinar3 = ({
 }: MagicWebinar3Props) => {
   const config = variantConfig[variant]
 
-  const renderAudienceItem = ({ title, description }: AudienceItem) => (
-    <div className="flex gap-3" key={title}>
+  const renderAudienceItem = ({ id, title, description }: AudienceItem) => (
+    <div className="flex gap-3" key={id}>
       <span className="text-2xl flex-shrink-0 mt-1">✅</span>
       <div>
         <Typography variant="h3" className={config.audienceTitleClass}>
@@ -113,31 +145,35 @@ const MagicWebinar3 = ({
               <div className="space-y-4">
                 <h1 className={config.headingClass}>
                   <span className={config.titleColors.main}>
-                    Ten masterclass jest{" "}
+                    {variant === "sowa"
+                      ? "Te warsztaty są "
+                      : "Ten masterclass jest "}
                   </span>
                   <span className={config.titleColors.highlight}>
                     dla Ciebie
                   </span>
-                  <span className={config.titleColors.main}>, jeśli…</span>
+                  <span className={config.titleColors.main}>, jeśli:</span>
                 </h1>
               </div>
 
               {config.renderMode === "boxes" ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {TARGET_AUDIENCES.map((item, idx) => (
-                    <div
-                      key={item.title}
-                      className={`${config.boxColors?.[idx % (config.boxColors?.length || 1)]} rounded-lg p-6 text-center`}
-                    >
-                      <span className="text-4xl block mb-4">✅</span>
-                      <h3 className="font-montserrat font-extrabold text-[20px] leading-[122%] text-center text-white mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="font-montserrat text-[20px] leading-[122%] text-center text-white">
-                        {item.description}
-                      </p>
-                    </div>
-                  ))}
+                  {(variant === "sowa" ? SOWA_AUDIENCES : TARGET_AUDIENCES).map(
+                    (item, idx) => (
+                      <div
+                        key={item.id}
+                        className={`${config.boxColors?.[idx % (config.boxColors?.length || 1)]} rounded-lg p-6 text-center`}
+                      >
+                        <span className="text-4xl block mb-4">✅</span>
+                        <h3 className="font-montserrat font-extrabold text-[20px] leading-[122%] text-center text-white mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="font-montserrat text-[20px] leading-[122%] text-center text-white">
+                          {item.description}
+                        </p>
+                      </div>
+                    )
+                  )}
                 </div>
               ) : (
                 <div className="space-y-6">
@@ -149,12 +185,13 @@ const MagicWebinar3 = ({
                   config.renderMode === "boxes" ? "flex justify-center" : ""
                 }
               >
-                <a href={`#${sectionId}`} className="inline-block">
-                  <button type="button" className={config.buttonStyle}>
-                    <span className={config.buttonTextClass}>
-                      Tak, to o mnie!
-                    </span>
-                  </button>
+                <a
+                  href={`#${sectionId}`}
+                  className={`inline-flex items-center justify-center ${config.buttonStyle}`}
+                >
+                  <span className={config.buttonTextClass}>
+                    Tak, to o mnie!
+                  </span>
                 </a>
               </div>
             </div>

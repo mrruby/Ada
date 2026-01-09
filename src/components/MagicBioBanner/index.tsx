@@ -1,8 +1,17 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import Carousel from "react-multi-carousel"
+import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 import PersonBox from "./PersonBox"
+
+// Responsive config for bio slider (show 1 on mobile, all on desktop)
+const bioResponsive = {
+  desktop: { breakpoint: { max: 4000, min: 768 }, items: 4 },
+  tablet: { breakpoint: { max: 768, min: 464 }, items: 2 },
+  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+}
 
 // Static array moved outside component
 const PEOPLE_CONTENT = [
@@ -194,20 +203,20 @@ const MagicBioBanner = ({ version }: { version: number }) => {
         )}
       </Section>
       {version === 4 && (
-        <div className="bg-ada-sowaGold2 py-16 px-4">
+        <div className="bg-ada-sowaNavy py-16 px-4">
           <div className="container mx-auto">
-            <h2 className="font-playfair font-bold text-[48px] leading-[100%] text-center uppercase text-black">
-              Kogo spotkasz
-              <br />w <span className="text-ada-sowaDarkRed">MAGIC?</span>
+            <h2 className="font-playfair font-normal text-[48px] md:text-[64px] leading-[130%] text-center text-white uppercase">
+              Kto poprowadzi{" "}
+              <span className="text-ada-sowaGold">warsztaty?</span>
             </h2>
-            <p className="text-center mt-6 text-black font-montserrat text-lg max-w-md mx-auto">
-              <span className="font-bold">
-                4 specjalistki pod jednym dachem:
-              </span>
-              <br />
-              Meta Ads | Copywriting | Grafika | Koordynacja kampanii
+            <p className="text-center mt-6 text-white font-montserrat font-bold text-[24px] leading-[100%] max-w-2xl mx-auto">
+              Nie jedna, nie dwie, nie trzy…{" "}
+              <span className="text-ada-sowaGold">aż cztery specjalistki</span>{" "}
+              przygotowały dla Ciebie magiczną formułę na reklamy sprzedażowe!
             </p>
-            <div className="flex flex-col md:flex-row gap-6 pt-8 justify-center">
+
+            {/* Desktop: flex row */}
+            <div className="hidden md:flex flex-row gap-6 pt-8 justify-center">
               {PEOPLE_CONTENT.map((item) => (
                 <PersonBox
                   key={item.name}
@@ -215,8 +224,32 @@ const MagicBioBanner = ({ version }: { version: number }) => {
                   description={item.description}
                   img={item.img}
                   showStamp={true}
+                  textColor="text-white"
                 />
               ))}
+            </div>
+
+            {/* Mobile: carousel */}
+            <div className="md:hidden pt-8">
+              <Carousel
+                responsive={bioResponsive}
+                infinite={true}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                ssr={true}
+              >
+                {PEOPLE_CONTENT.map((item) => (
+                  <div key={item.name} className="px-2">
+                    <PersonBox
+                      name={item.name}
+                      description={item.description}
+                      img={item.img}
+                      showStamp={true}
+                      textColor="text-white"
+                    />
+                  </div>
+                ))}
+              </Carousel>
             </div>
           </div>
         </div>

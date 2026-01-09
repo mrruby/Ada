@@ -23,14 +23,13 @@ const variantConfig: Record<Variant, Config> = {
   default: { ...baseConfig, bgColor: "bg-ada-magicPurple", iconType: "sun" },
   pink: { ...baseConfig, bgColor: "bg-ada-newPurple2", iconType: "arrow" },
   sowa: {
-    bgColor: "bg-transparent",
+    bgColor: "bg-ada-sowaNavy",
     showIcon: false,
     iconType: null,
     headingClass:
-      "font-playfair text-black text-[48px] font-extrabold text-center mb-12 leading-[100%] pt-8",
-    headingStyle: { textShadow: "0px 4px 4px #CCAA4D" },
+      "text-white text-[36px] md:text-[48px] font-extrabold text-center mb-12 font-playfair",
     cardTextClass:
-      "font-montserrat font-medium text-[16px] leading-[100%] text-center text-black [&_b]:font-bold",
+      "font-montserrat font-medium text-[16px] leading-[140%] text-center text-black",
   },
 }
 
@@ -75,6 +74,30 @@ const CARDS = [
         przynosi wynik, więc skalujesz bez stresu.
       </>
     ),
+  },
+]
+
+// Sowa variant cards
+const SOWA_CARDS = [
+  {
+    id: "plan",
+    emoji: "📅",
+    text: "Otrzymasz gotowy plan na kampanię, omówiony przez specjalistkę od organizacji sprzedaży: Nicolę",
+  },
+  {
+    id: "texts",
+    emoji: "🖊️",
+    text: "Przygotujesz teksty reklamowe z Justyną, korzystając z gotowych przykładów, które wdrożysz od zaraz",
+  },
+  {
+    id: "graphics",
+    emoji: "🎨",
+    text: "Otrzymasz szablony grafik sprzedażowych, przygotowanych przez Dorotę, wraz z omówieniem",
+  },
+  {
+    id: "settings",
+    emoji: "👩‍💻",
+    text: "Ada opowie Ci o ustawieniach w reklamach, które najlepiej sprawdzają się w reklamach sprzedażowych",
   },
 ]
 
@@ -125,12 +148,14 @@ const MagicWebinar2 = ({ variant, version }: Props) => {
       )}
       <div className="container mx-auto mt-12">
         <h1 className={config.headingClass} style={config.headingStyle}>
-          Wyobraź to sobie…
+          {resolvedVariant === "sowa"
+            ? "Podczas warsztatów:"
+            : "Wyobraź to sobie…"}
         </h1>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full mx-auto pb-8">
-          {CARDS.map(renderCard)}
+          {(resolvedVariant === "sowa" ? SOWA_CARDS : CARDS).map(renderCard)}
         </div>
       </div>
     </div>

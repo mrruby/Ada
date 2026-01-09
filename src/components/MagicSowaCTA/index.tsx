@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
 type Variant = "gold" | "red"
@@ -13,12 +14,20 @@ const MagicSowaCTA = ({
 }: MagicSowaCTAProps) => {
   if (variant === "gold") {
     return (
-      <div className="bg-ada-sowaGold2 py-16 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="font-playfair font-extrabold text-[36px] leading-[100%] uppercase text-black mb-8 text-center">
-            Nie czekaj - liczba miejsc ograniczona!
+      <div className="bg-ada-sowaGold2 py-16 px-4 relative overflow-hidden">
+        <div className="container mx-auto text-center relative">
+          <StaticImage
+            src="../../images/elixir.webp"
+            alt="Ads Eliksir"
+            placeholder="blurred"
+            width={300}
+            quality={100}
+            className="!absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block"
+          />
+          <h2 className="font-playfair font-normal text-[48px] leading-[100%] uppercase text-black mb-8 max-w-[80%] mx-auto">
+            Nie czekaj - zapisz się, zanim Ads Eliksir…zniknie!
           </h2>
-          <div className="bg-ada-sowaDarkRed rounded-2xl p-6 inline-block text-white mb-8">
+          <div className="bg-ada-sowaNavy rounded-2xl p-6 inline-block text-white mb-8">
             <p className="font-montserrat font-extrabold text-[32px] leading-[100%] text-center">
               ⏰ Termin: 10.09
             </p>
@@ -27,15 +36,13 @@ const MagicSowaCTA = ({
             </p>
           </div>
           <div>
-            <a href={`#${sectionId}`} className="inline-block">
-              <button
-                type="button"
-                className="bg-black hover:bg-gray-800 px-12 py-4 rounded-full"
-              >
-                <span className="text-white font-montserrat font-bold text-[20px] md:text-[24px]">
-                  Zapisuję się
-                </span>
-              </button>
+            <a
+              href={`#${sectionId}`}
+              className="inline-flex items-center justify-center bg-black hover:bg-gray-800 px-12 py-4 rounded-full"
+            >
+              <span className="text-white font-montserrat font-bold text-[20px] md:text-[24px]">
+                Zapisuję się
+              </span>
             </a>
           </div>
         </div>
@@ -47,15 +54,13 @@ const MagicSowaCTA = ({
   return (
     <div className="bg-ada-sowaDarkRed py-16 px-4">
       <div className="container mx-auto text-center">
-        <a href={`#${sectionId}`} className="inline-block">
-          <button
-            type="button"
-            className="bg-ada-sowaGold2 hover:opacity-90 px-12 py-4 rounded-full"
-          >
-            <span className="text-black font-montserrat font-bold text-[20px] md:text-[24px] uppercase">
-              REZERWUJĘ MIEJSCE!
-            </span>
-          </button>
+        <a
+          href={`#${sectionId}`}
+          className="inline-flex items-center justify-center bg-ada-sowaGold2 hover:opacity-90 px-12 py-4 rounded-full"
+        >
+          <span className="text-black font-montserrat font-bold text-[20px] md:text-[24px] uppercase">
+            REZERWUJĘ MIEJSCE!
+          </span>
         </a>
         <div className="mt-6">
           <span className="bg-white text-black px-3 py-1 rounded font-bold font-montserrat">

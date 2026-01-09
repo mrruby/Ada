@@ -55,6 +55,7 @@ module.exports = {
           sowaGold2: "#CCAA4D",
           sowaDarkRed: "#AF0101",
           sowaDarkBurgundy: "#5A0103",
+          sowaNavy: "#2c2d3d",
         },
       },
       backgroundImage: {

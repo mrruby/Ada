@@ -9,11 +9,20 @@ type PersonBoxProps = {
   name: string
   description: string
   showStamp?: boolean
+  textColor?: string
 }
 
-const PersonBox = ({ img, name, description, showStamp }: PersonBoxProps) => {
+const PersonBox = ({
+  img,
+  name,
+  description,
+  showStamp,
+  textColor = "text-ada-black",
+}: PersonBoxProps) => {
   return (
-    <div className="text-center text-ada-black flex flex-col justify-center items-center pt-4 md:max-w-[300px]">
+    <div
+      className={`text-center ${textColor} flex flex-col justify-center items-center pt-4 md:max-w-[300px]`}
+    >
       <div className="relative">
         <CircleImage circleKey={img} />
         {showStamp && (
