@@ -15,15 +15,16 @@ const MagicSowaCTA = ({
   if (variant === "gold") {
     return (
       <div className="bg-ada-sowaGold2 py-16 px-4 relative overflow-hidden">
+        <StaticImage
+          src="../../images/elixir.webp"
+          alt="Ads Eliksir"
+          placeholder="blurred"
+          width={300}
+          quality={100}
+          className="!absolute right-48 top-0 hidden lg:block rounded-3xl overflow-hidden"
+          imgClassName="rounded-3xl"
+        />
         <div className="container mx-auto text-center relative">
-          <StaticImage
-            src="../../images/elixir.webp"
-            alt="Ads Eliksir"
-            placeholder="blurred"
-            width={300}
-            quality={100}
-            className="!absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block"
-          />
           <h2 className="font-playfair font-normal text-[48px] leading-[100%] uppercase text-black mb-8 max-w-[50%] mx-auto">
             Nie czekaj - zapisz się, zanim Ads Eliksir…zniknie!
           </h2>

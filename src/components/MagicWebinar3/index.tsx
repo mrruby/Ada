@@ -205,7 +205,8 @@ const MagicWebinar3 = ({
                   placeholder="blurred"
                   width={700}
                   quality={100}
-                  className="w-full md:w-auto"
+                  className="w-full md:w-auto rounded-3xl overflow-hidden"
+                  imgClassName="rounded-3xl"
                 />
               ) : (
                 <StaticImage

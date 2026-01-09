@@ -23,6 +23,9 @@ const SowaPage = () => {
       <div className="font-playfair bg-ada-sowaBurgundy">
         {/* Section 1 - Hero (Burgundy) */}
 
+        {/* Anchor target for scroll links */}
+        <div id="sowa-form" className="absolute" />
+
         {/* Mobile Hero */}
         <div className="sowa-hero-mobile bg-ada-sowaBurgundy">
           <div className="flex flex-col items-center py-8 px-4">
@@ -34,7 +37,7 @@ const SowaPage = () => {
             </p>
 
             {/* Form */}
-            <div id="sowa-form" className="w-full max-w-md mb-6">
+            <div className="w-full max-w-md mb-6">
               <SowaFormCard className="p-4" />
             </div>
 
@@ -60,10 +63,7 @@ const SowaPage = () => {
                   <span className="text-white">18 stycznia o 12:00</span>
                 </p>
               </div>
-              <div
-                id="sowa-form-xl"
-                className="w-1/2 flex justify-end relative"
-              >
+              <div className="w-1/2 flex justify-end relative">
                 <div className="!absolute -left-24 top-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
                   <StaticImage
                     src="../images/wypełnij-sowa.webp"
@@ -109,7 +109,8 @@ const SowaPage = () => {
                   src="../images/koperta.webp"
                   alt="Koperta"
                   placeholder="blurred"
-                  className="w-full block"
+                  className="w-full block rounded-b-3xl overflow-hidden"
+                  imgClassName="rounded-b-3xl"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-2 top-[320px]">
                   <h1 className="font-extrabold text-[44px] leading-[113%] text-center uppercase max-w-lg mx-auto">
@@ -120,7 +121,7 @@ const SowaPage = () => {
                     </span>
                   </h1>
                   <a
-                    href="#sowa-form-xl"
+                    href="#sowa-form"
                     className="inline-flex items-center justify-center mt-6 bg-black hover:bg-gray-800 px-12 py-4 rounded-full"
                   >
                     <span className="text-white font-montserrat font-bold text-[20px] md:text-[24px]">
