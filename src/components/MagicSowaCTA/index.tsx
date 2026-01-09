@@ -24,7 +24,7 @@ const MagicSowaCTA = ({
             quality={100}
             className="!absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block"
           />
-          <h2 className="font-playfair font-normal text-[48px] leading-[100%] uppercase text-black mb-8 max-w-[80%] mx-auto">
+          <h2 className="font-playfair font-normal text-[48px] leading-[100%] uppercase text-black mb-8 max-w-[50%] mx-auto">
             Nie czekaj - zapisz się, zanim Ads Eliksir…zniknie!
           </h2>
           <div className="bg-ada-sowaNavy rounded-2xl p-6 inline-block text-white mb-8">

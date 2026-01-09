@@ -62,7 +62,7 @@ const SowaPage = () => {
               </div>
               <div
                 id="sowa-form-xl"
-                className="w-1/2 flex justify-center relative"
+                className="w-1/2 flex justify-end relative"
               >
                 <div className="!absolute -left-24 top-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
                   <StaticImage
@@ -111,7 +111,7 @@ const SowaPage = () => {
                   placeholder="blurred"
                   className="w-full block"
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-2 top-[400px]">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-2 top-[320px]">
                   <h1 className="font-extrabold text-[44px] leading-[113%] text-center uppercase max-w-lg mx-auto">
                     <span className="text-ada-sowaGold">ADS ELIKSIR:</span>{" "}
                     <span className="text-black">
