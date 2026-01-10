@@ -30,10 +30,10 @@ const MagicSowaCTA = ({
           </h2>
           <div className="bg-ada-sowaNavy rounded-2xl p-6 inline-block text-white mb-8">
             <p className="font-montserrat font-extrabold text-[32px] leading-[100%] text-center">
-              ⏰ Termin: 10.09
+              ⏰ Termin: 18.01
             </p>
             <p className="font-montserrat font-extrabold text-[32px] leading-[100%] text-center">
-              🕒 Godzina: 18:00
+              🕒 Godzina: 12:00
             </p>
           </div>
           <div>
