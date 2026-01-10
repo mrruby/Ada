@@ -29,7 +29,24 @@ const SowaPage = () => {
         {/* Mobile Hero */}
         <div className="sowa-hero-mobile bg-ada-sowaBurgundy">
           <div className="flex flex-col items-center py-8 px-4">
-            {/* Date text - top */}
+            {/* Main heading */}
+            <h1 className="font-extrabold text-[28px] sm:text-[32px] leading-[120%] text-center uppercase max-w-sm mx-auto mb-6">
+              <span className="text-ada-sowaGold">ADS ELIKSIR:</span>{" "}
+              <span className="text-white">
+                grafiki, teksty i strategia kampanii sprzedażowych Meta Ads w
+                2026
+              </span>
+            </h1>
+
+            {/* Sowa */}
+            <StaticImage
+              src="../images/sowa.webp"
+              alt="Sowa"
+              placeholder="blurred"
+              className="w-40 md:w-56 mb-6"
+            />
+
+            {/* Date text */}
             <p className="font-normal text-[20px] md:text-[32px] leading-[152%] text-center mb-6">
               <span className="text-ada-sowaGold">Warsztaty za 0 zł:</span>
               <br />
@@ -40,14 +57,6 @@ const SowaPage = () => {
             <div className="w-full max-w-md mb-6">
               <SowaFormCard className="p-4" />
             </div>
-
-            {/* Sowa */}
-            <StaticImage
-              src="../images/sowa.webp"
-              alt="Sowa"
-              placeholder="blurred"
-              className="w-40 md:w-56"
-            />
           </div>
         </div>
 
