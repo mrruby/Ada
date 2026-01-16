@@ -10,8 +10,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/ada_portrait.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
+          width={240}
+          height={240}
           placeholder="blurred"
           quality={90}
         />
@@ -22,8 +22,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/justyna_portrait.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
+          width={240}
+          height={240}
           placeholder="blurred"
           quality={90}
         />
@@ -34,8 +34,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/dorota_portrait.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
+          width={240}
+          height={240}
           placeholder="blurred"
           quality={90}
         />
@@ -46,8 +46,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/marianna_portrait.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
+          width={240}
+          height={240}
           placeholder="blurred"
           quality={90}
         />
@@ -58,8 +58,8 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/nicola_portrait.webp"
           alt=""
           layout="fixed"
-          width={200}
-          height={200}
+          width={240}
+          height={240}
           placeholder="blurred"
           quality={90}
         />

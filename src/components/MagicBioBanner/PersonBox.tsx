@@ -34,7 +34,7 @@ const PersonBox = ({
           />
         )}
       </div>
-      <Typography variant="h3" className="mb-2 mt-2">
+      <Typography variant="h3" className="mb-2 mt-2 whitespace-nowrap">
         {name}
       </Typography>
       <p className="text-sm md:text-base leading-relaxed">{description}</p>

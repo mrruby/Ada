@@ -41,11 +41,12 @@ const PEOPLE_CONTENT = [
   },
 ]
 
-// Extracted PeopleGrid component (DRY)
-const PeopleGrid = ({ showStamp = false }: { showStamp?: boolean }) => (
+// Responsive people display: flex row on desktop, carousel on mobile
+const PeopleResponsive = ({ showStamp = false }: { showStamp?: boolean }) => (
   <>
-    <div className="flex flex-col md:flex-row gap-6 pt-8 justify-center">
-      {PEOPLE_CONTENT.slice(0, 2).map((item) => (
+    {/* Desktop: grid layout */}
+    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 justify-items-center">
+      {PEOPLE_CONTENT.map((item) => (
         <PersonBox
           key={item.name}
           name={item.name}
@@ -55,16 +56,27 @@ const PeopleGrid = ({ showStamp = false }: { showStamp?: boolean }) => (
         />
       ))}
     </div>
-    <div className="flex flex-col md:flex-row gap-6 pt-8 mb-8 justify-center">
-      {PEOPLE_CONTENT.slice(2, 4).map((item) => (
-        <PersonBox
-          key={item.name}
-          name={item.name}
-          description={item.description}
-          img={item.img}
-          showStamp={showStamp}
-        />
-      ))}
+
+    {/* Mobile: carousel */}
+    <div className="md:hidden pt-8">
+      <Carousel
+        responsive={bioResponsive}
+        infinite={true}
+        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={<CustomRightArrow />}
+        ssr={true}
+      >
+        {PEOPLE_CONTENT.map((item) => (
+          <div key={item.name} className="px-2">
+            <PersonBox
+              name={item.name}
+              description={item.description}
+              img={item.img}
+              showStamp={showStamp}
+            />
+          </div>
+        ))}
+      </Carousel>
     </div>
   </>
 )
@@ -129,7 +141,7 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             <Typography variant="h2" className="text-ada-black animate-bounce">
               Kogo spotkasz w <span className="text-ada-pink7">MAGIC?</span>
             </Typography>
-            <PeopleGrid />
+            <PeopleResponsive />
             <Typography
               variant="h3"
               className="text-ada-black max-w-[800px] m-auto"
@@ -171,7 +183,7 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             <Typography variant="h3" className="mb-8 text-ada-black">
               Meta Ads | Copywriting | Grafika | Koordynacja kampanii
             </Typography>
-            <PeopleGrid />
+            <PeopleResponsive />
             <Typography
               variant="h3"
               className="text-ada-black max-w-[800px] m-auto mt-12"
@@ -215,8 +227,8 @@ const MagicBioBanner = ({ version }: { version: number }) => {
               przygotowały dla Ciebie magiczną formułę na reklamy sprzedażowe!
             </p>
 
-            {/* Desktop: flex row */}
-            <div className="hidden md:flex flex-row gap-6 pt-8 justify-center">
+            {/* Desktop: grid layout */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 justify-items-center">
               {PEOPLE_CONTENT.map((item) => (
                 <PersonBox
                   key={item.name}

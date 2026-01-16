@@ -8,7 +8,11 @@ const MagicFinalCTA = () => {
       <div className="text-center py-12">
         <Button
           type="button"
-          text={<span className="font-bold uppercase">Dołączam do Magic!</span>}
+          text={
+            <span className="!font-extrabold uppercase">
+              Dołączam do Magic!
+            </span>
+          }
           sectionId="magic-package"
           textSize="text-lg md:text-xl"
           btnStyle="bg-ada-magicPink4 text-black 

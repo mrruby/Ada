@@ -3,6 +3,7 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner1 from "components/MagicBanner"
 import MagicBanner2 from "components/MagicBanner2"
 import MagicBioBanner from "components/MagicBioBanner"
+import MagicCaseStudies from "components/MagicCaseStudies"
 import MagicComments from "components/MagicComments"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
@@ -54,10 +55,16 @@ const MagicSalePage = () => {
         <MagicBioBanner version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicBanner2 version={2} />
+        <MagicCaseStudies />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
+        <MagicSaleBanner version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicCommunityOpinions />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+        <MagicBanner2 version={2} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
         <MasterclassFAQ version={5} />

@@ -149,88 +149,26 @@ const MagicWhy = ({ part }: { part: number }) => {
         </div>
       )}
       {part == 4 && (
-        <div className="flex flex-col items-center gap-8 text-ada-black">
-          <Typography variant="h1" className="mb-8 text-center animate-bounce ">
+        <div className="flex flex-col items-center gap-4 text-ada-black">
+          <Typography variant="h1" className="text-center animate-bounce ">
             Zobacz przykładowe pytania i odpowiedzi!
           </Typography>
-          <div className="flex flex-col items-center">
-            <div className="lg:-ml-80">
-              <StaticImage
-                loading="eager"
-                src="../../images/AgnieszkaPyt.webp"
-                alt=""
-                placeholder="blurred"
-                width={568}
-                height={252}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-            <div className="lg:-mt-2 lg:ml-[480px]">
-              <StaticImage
-                loading="eager"
-                src="../../images/AgnieszkaOdp.webp"
-                alt=""
-                placeholder="blurred"
-                width={582}
-                height={187}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="lg:-ml-80">
-              <StaticImage
-                loading="eager"
-                src="../../images/MagPyt.webp"
-                alt=""
-                placeholder="blurred"
-                width={700}
-                height={200}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-            <div className="lg:-ml-[500px] -mt-10">
-              <StaticImage
-                loading="eager"
-                src="../../images/MagOdp.webp"
-                alt=""
-                placeholder="blurred"
-                width={600}
-                height={120}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="lg:ml-[500px]">
-              <StaticImage
-                loading="eager"
-                src="../../images/MonPyt.webp"
-                alt=""
-                placeholder="blurred"
-                width={1200}
-                height={300}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-            <div className="-mt-12 lg:ml-[480px]">
-              <StaticImage
-                loading="eager"
-                src="../../images/MonOdp.webp"
-                alt=""
-                placeholder="blurred"
-                width={1000}
-                height={274}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-          </div>
+          <StaticImage
+            loading="eager"
+            src="../../images/pyt-odp.webp"
+            alt=""
+            placeholder="blurred"
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+            className="max-w-4xl"
+          />
+          <Button
+            type="button"
+            text={<span className="!font-extrabold"> WCHODZĘ W TO!</span>}
+            sectionId="magic-package"
+            textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
+            btnStyle="bg-ada-magicPurple4 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl mt-4"
+          />
         </div>
       )}
       {part == 5 && (
@@ -359,11 +297,13 @@ const MagicWhy = ({ part }: { part: number }) => {
                 </ul>
                 <Button
                   type="button"
-                  text={<span className=" font-bold"> WCHODZĘ W TO!</span>}
+                  text={
+                    <span className=" !font-extrabold"> WCHODZĘ W TO!</span>
+                  }
                   sectionId="signup"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                   btnStyle="bg-ada-magicPurple4
-                                      tracking-wide 
+                                      tracking-wide
                                       p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
                 />
               </div>
@@ -424,11 +364,13 @@ const MagicWhy = ({ part }: { part: number }) => {
                 </ul>
                 <Button
                   type="button"
-                  text={<span className=" font-bold"> Tak, Dołączam!</span>}
+                  text={
+                    <span className=" !font-extrabold"> Tak, Dołączam!</span>
+                  }
                   sectionId="signup"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                   btnStyle="bg-ada-magicPink4
-                                      tracking-wide 
+                                      tracking-wide
                                       p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
                 />
               </div>
@@ -464,84 +406,15 @@ const MagicWhy = ({ part }: { part: number }) => {
           <Typography variant="h1" className="mb-8 text-center animate-bounce ">
             Zobacz przykładowe pytania i odpowiedzi!
           </Typography>
-          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center lg:-space-x-8">
-            <div>
-              <StaticImage
-                loading="eager"
-                src="../../images/pyt1.webp"
-                alt=""
-                placeholder="blurred"
-                width={464}
-                height={260}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-            <div>
-              <StaticImage
-                loading="eager"
-                src="../../images/pyt2.webp"
-                alt=""
-                placeholder="blurred"
-                width={531}
-                height={312}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-          </div>
-          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center lg:-space-x-4">
-            <div>
-              <StaticImage
-                loading="eager"
-                src="../../images/pyt3.webp"
-                alt=""
-                placeholder="blurred"
-                width={544}
-                height={128}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-            <div className="lg:-mt-2">
-              <StaticImage
-                loading="eager"
-                src="../../images/pyt4.webp"
-                alt=""
-                placeholder="blurred"
-                width={420}
-                height={166}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-          </div>
-          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center lg:-space-x-4 mt-8">
-            <div>
-              <StaticImage
-                loading="eager"
-                src="../../images/pyt5.webp"
-                alt=""
-                placeholder="blurred"
-                width={510}
-                height={170}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-            <div className="lg:-mt-2">
-              <StaticImage
-                loading="eager"
-                src="../../images/pyt6.webp"
-                alt=""
-                placeholder="blurred"
-                width={444}
-                height={210}
-                formats={["auto", "webp", "avif"]}
-                quality={100}
-              />
-            </div>
-          </div>
+          <StaticImage
+            loading="eager"
+            src="../../images/pyt-odp.webp"
+            alt=""
+            placeholder="blurred"
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+            className="max-w-4xl"
+          />
         </div>
       )}
       {part == 12 && (
@@ -670,7 +543,9 @@ const MagicWhy = ({ part }: { part: number }) => {
           <div className="mx-auto">
             <Button
               type="button"
-              text={<span className="font-bold">Wybieram ADSY&CHILL!</span>}
+              text={
+                <span className="!font-extrabold">Wybieram ADSY&CHILL!</span>
+              }
               sectionId="pakiety"
               textSize="text-adaMin md:text-adaSubtitle text-black"
               btnStyle="uppercase w-[187px] md:w-[480px] bg-ada-magicPink2 md:tracking-[2.90px] md:h-[70px] rounded-[50px] border border-black hover:bg-ada-magicPink2"

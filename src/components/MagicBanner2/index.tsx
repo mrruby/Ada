@@ -171,7 +171,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                 <Button
                   type="button"
                   text={
-                    <span className="font-bold text-ada-white text-adaSubtitle">
+                    <span className="!font-extrabold text-ada-white text-adaSubtitle">
                       Działam!
                     </span>
                   }
@@ -279,7 +279,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                 <Button
                   type="button"
                   text={
-                    <span className="font-bold text-black text-adaSubtitle">
+                    <span className="!font-extrabold text-black text-adaSubtitle">
                       WYBIERAM!
                     </span>
                   }

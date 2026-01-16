@@ -41,3 +41,7 @@ This is the personal website and blog for **Adrianna Promis Urbas**, a Polish ma
 - Do not delete React imports in files - they are required for JSX compilation
 - Do not add new global types
 - Do not fix type issues by installing new type packages
+
+## Color Reference
+
+Use Tailwind color classes instead of hardcoded hex values.

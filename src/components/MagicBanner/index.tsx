@@ -404,7 +404,7 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                   type="button"
                   text={
                     <span
-                      className={`font-bold text-md md:text-lg ${item.textColor} uppercase`}
+                      className={`!font-extrabold text-md md:text-lg ${item.textColor} uppercase`}
                     >
                       Wybieram!
                     </span>
@@ -508,7 +508,7 @@ const MagicBanner1 = ({ version }: { version: number }) => {
               type="button"
               text={
                 <>
-                  <span className="font-bold text-ada-yellow3 uppercase text-adaSubtitle">
+                  <span className="!font-extrabold text-ada-yellow3 uppercase text-adaSubtitle">
                     TAK!
                   </span>
                   <br />
@@ -594,7 +594,7 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                   type="button"
                   text={
                     <>
-                      <span className="font-bold text-black uppercase text-adaSubtitleSecondary">
+                      <span className="!font-extrabold text-black uppercase text-adaSubtitleSecondary">
                         TAK!
                       </span>
                       <br />

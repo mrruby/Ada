@@ -20,7 +20,11 @@
       "Bash(yarn why:*)",
       "Bash(git fetch:*)",
       "Bash(yarn remove:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(xargs:*)",
+      "Bash(sips:*)",
+      "Bash(brew list:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": []
   }

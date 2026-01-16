@@ -178,7 +178,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
 
             <Button
               type="button"
-              text="Zapisuję się!"
+              text={<span className="!font-extrabold">Zapisuję się!</span>}
               sectionId="webinar-form"
               textSize="text-sm md:text-base"
               btnStyle="uppercase bg-ada-pink2 text-ada-black 

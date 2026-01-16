@@ -39,7 +39,10 @@ const MagicSpecialPage = () => {
       </MaxWithBgColorContainer>
       <div id="magic-package"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
-        <MagicSaleBanner version={2} />
+        <MagicSaleBanner
+          version={2}
+          url="https://slowmarketing.zanfia.co/c/sesame/magic-pakiet-basic-rXx5?variant=ad0a7a4d-a612-4afc-870d-d1a660b44872"
+        />
       </MaxWithBgColorContainer>
       <div className="bg-magic">
         <MaxWithBgColorContainer bgColor="bg-transparent">

@@ -1,6 +1,7 @@
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
 import React, { useEffect } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import Section from "../shared/Section"
 
 declare global {
@@ -9,7 +10,13 @@ declare global {
   }
 }
 
-const MagicSaleBanner = ({ version }: { version: number }) => {
+const MagicSaleBanner = ({
+  version,
+  url,
+}: {
+  version: number
+  url?: string
+}) => {
   // Load Koalendar script for version 5
   useEffect(() => {
     if (version === 5) {
@@ -44,41 +51,67 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
   return (
     <>
       {version == 1 && (
-        <Section padding="pt-[56px] md:pt-[72px] pb-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
-          {/* <div>
-            <TypingAnimation
-              text="Marketing Ads Girls Inside Club"
-              textStyle="text-adaTitle2 font-bold text-ada-magicOrange2"
-            />
-            <h1 className="text-adaTitle2 font-bold">
-              {" "}
-              <span className="text-ada-magicPink4">(MAGIC)</span>
-            </h1>
-          </div> */}
+        <Section padding="pt-[56px] md:pt-[72px] pb-8 px-4 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left column - Content */}
+            <div className="text-center lg:text-left">
+              {/* Big heading */}
+              <div className="flex items-start gap-3 justify-center lg:justify-start">
+                <h1 className="font-montserrat font-extrabold text-[40px] md:text-[56px] lg:text-[64px] leading-[100%] text-ada-magicOrange2 mb-6">
+                  Marketing Ads Girls
+                  <br />
+                  Inside Club
+                </h1>
+                <StaticImage
+                  src="../../images/star-pink.webp"
+                  alt=""
+                  width={48}
+                  height={48}
+                  placeholder="blurred"
+                  className="flex-shrink-0 mt-2"
+                />
+              </div>
 
-          <div className="flex items-center flex-col gap-2">
-            <h1 className="text-adaTitle2 font-bold text-ada-magicOrange2">
-              Marketing Ads Girls Inside Club
-              <br />
-            </h1>
-            <h1 className="text-adaTitle2 font-bold text-ada-magicPink4 animate-magicPulse">
-              (MAGIC)
-            </h1>
-          </div>
-          <p className="mt-6 mb-8 max-w-[600px] leading-[32px] md:leading-[36px] text-black text-adaBase text-center mx-auto">
-            Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod
-            czujnym okiem profesjonalistek
-          </p>
-          <div className="flex justify-center mt-8">
-            <Button
-              type="button"
-              text={<span>Dołączam!</span>}
-              sectionId="magic-package"
-              textSize="text-xs md:text-adaSubtitleSecondary uppercase font-extrabold text-black"
-              btnStyle="bg-ada-magicPink4
-                      tracking-wide 
-                      p-6 hover:opacity-90 rounded-full min-w-[130px] h-[64px] shadow-xl"
-            />
+              {/* Subtext */}
+              <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-black mb-8 max-w-[500px] mx-auto lg:mx-0">
+                Społeczność kobiet, które skalują swoje biznesy z pomocą reklam
+                pod czujnym okiem profesjonalistek
+              </p>
+
+              {/* Button */}
+              <div className="flex justify-center lg:justify-start mb-6">
+                <Button
+                  type="button"
+                  text={<span>DOŁĄCZAM</span>}
+                  sectionId="magic-package"
+                  textSize="font-montserrat !font-extrabold text-[24px] leading-[100%] uppercase text-black"
+                  btnStyle="bg-ada-pink8 hover:opacity-90 hover:shadow-xl rounded-full py-6 px-12"
+                />
+              </div>
+
+              {/* Bottom text */}
+              <div className="font-montserrat font-bold text-[20px] md:text-[24px] leading-[100%] text-ada-magicOrange2 flex items-center justify-center lg:justify-start gap-2">
+                <StaticImage
+                  src="../../images/star-pink.webp"
+                  alt=""
+                  width={24}
+                  height={24}
+                  placeholder="blurred"
+                />
+                <span>MAGIC</span>
+              </div>
+            </div>
+
+            {/* Right column - Image */}
+            <div className="hidden lg:block">
+              <StaticImage
+                src="../../images/ada-magic-1.webp"
+                alt="Marketing Ads Girls Inside Club"
+                placeholder="blurred"
+                quality={90}
+                className="w-full h-auto rounded-[24px]"
+              />
+            </div>
           </div>
         </Section>
       )}
@@ -89,15 +122,17 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
             textStyle="text-adaTitle text-black font-bold"
           />
           <div className="relative my-6">
-            <p className="md:absolute text-[80px] left-[-10px] top-[-60px]">
+            <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12">
               🗓️
             </p>
             <p className="text-adaTitle font-bold text-white  bg-ada-magicPurple4 p-2 rounded-[24px] uppercase lg:min-w-[800px]">
               Pakiet miesięczny
             </p>
-            <p className="absolute right-0 md:text-[40px] md:right-[-10px] text-black w-[140px] h-[140px] top-[-60px] bg-ada-magicYellow flex items-center justify-center rounded-[100px] font-bold">
-              333zł
-            </p>
+            <div className="absolute right-0 md:right-[-10px] text-black w-[140px] h-[140px] top-[-60px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
+              <p className="text-[12px]">tylko do 2.02</p>
+              <p className="text-[32px] leading-tight">353 zł</p>
+              <p className="text-[16px] line-through opacity-60">557 zł</p>
+            </div>
           </div>
           <div className="xl:text-adaDesc flex flex-col md:flex-row bg-ada-white3 rounded-[24px] text-black text-left p-12 shadow-xl">
             <div>
@@ -133,10 +168,13 @@ const MagicSaleBanner = ({ version }: { version: number }) => {
             <Button
               type="button"
               text={<span>Tak, dołączam!</span>}
-              url="https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
-              textSize="text-xs md:text-adaSubtitleSecondary uppercase font-extrabold text-black"
+              url={
+                url ||
+                "https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+              }
+              textSize="text-xs md:text-adaSubtitleSecondary uppercase !font-extrabold text-black"
               btnStyle="bg-ada-magicPink4
-                      tracking-wide 
+                      tracking-wide
                       p-3 hover:opacity-90 rounded-full min-w-[130px] h-[64px] shadow-xl"
             />
           </div>
