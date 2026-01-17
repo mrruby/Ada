@@ -246,7 +246,7 @@ const MagicWhy = ({ part }: { part: number }) => {
               <div
                 className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromLeft" : ""}`}
               >
-                <ul className="max-w-md bg-ada-white3 py-8 border-[3px] rounded-3xl border-ada-magicPurple4 ">
+                <ul className="max-w-md bg-ada-white3 py-8 border-[3px] border-ada-magicPurple4 ">
                   <Typography
                     variant="h2"
                     className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
@@ -310,7 +310,7 @@ const MagicWhy = ({ part }: { part: number }) => {
               <div
                 className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromRight" : ""}`}
               >
-                <ul className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] rounded-3xl border-ada-magicPink4">
+                <ul className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] border-ada-magicPink4">
                   <Typography
                     variant="h2"
                     className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
@@ -418,7 +418,7 @@ const MagicWhy = ({ part }: { part: number }) => {
         </div>
       )}
       {part == 12 && (
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-8 -px-8">
           <div className="w-full text-ada-black -mb-8">
             <Typography
               variant="h1"

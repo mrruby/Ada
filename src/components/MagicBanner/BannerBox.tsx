@@ -45,7 +45,7 @@ const BannerBox = ({
         <IconImage iconKey={iconKey} />
       </div>
       <div
-        className={`${bgColor} rounded-3xl p-4 md:p-6 text-center flex flex-col items-center justify-center shadow-lg pt-16 ${styles}`}
+        className={`${bgColor} rounded-3xl p-4 md:p-6 text-center flex flex-col items-center justify-center shadow-lg pt-6 md:pt-16 ${styles}`}
       >
         {price}
         <p className="text-sm md:text-base leading-relaxed">{description}</p>

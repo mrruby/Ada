@@ -192,8 +192,8 @@ const MagicBanner2 = ({ version }: { version: number }) => {
               onMouseOver={handleMouseEnter}
             >
               <Typography variant="h2" className="animate-bounce uppercase">
-                <span className="text-ada-white4">MAGIC</span> to Twój podręczny
-                abonament na marketing
+                <span className="text-ada-magicPurple4">MAGIC</span> to Twój
+                podręczny abonament na marketing
               </Typography>
               <Typography
                 variant="h3"
@@ -203,7 +203,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
               </Typography>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 md:-mx-32 lg:-mx-48">
-              <div className="w-full md:w-auto flex-shrink-0 px-4 md:pl-0 md:pr-8 -mb-12">
+              <div className="w-full md:w-auto flex-shrink-0 px-4 md:pl-0 md:pr-8 -mb-12 hidden lg:block">
                 <StaticImage
                   loading="eager"
                   src="../../images/magic_adsy2.webp"

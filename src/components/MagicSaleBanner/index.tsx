@@ -1,7 +1,7 @@
+import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
 import React, { useEffect } from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import Section from "../shared/Section"
 
 declare global {
@@ -54,7 +54,7 @@ const MagicSaleBanner = ({
         <Section padding="pt-[56px] md:pt-[72px] pb-8 px-4 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left column - Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left order-2 lg:order-1">
               {/* Big heading */}
               <div className="flex items-start gap-3 justify-center lg:justify-start">
                 <h1 className="font-montserrat font-extrabold text-[40px] md:text-[56px] lg:text-[64px] leading-[100%] text-ada-magicOrange2 mb-6">
@@ -103,7 +103,7 @@ const MagicSaleBanner = ({
             </div>
 
             {/* Right column - Image */}
-            <div className="hidden lg:block">
+            <div className="lg:block order-1 lg:order-2 lg:-mb-10">
               <StaticImage
                 src="../../images/ada-magic-1.webp"
                 alt="Marketing Ads Girls Inside Club"
@@ -128,7 +128,7 @@ const MagicSaleBanner = ({
             <p className="text-adaTitle font-bold text-white  bg-ada-magicPurple4 p-2 rounded-[24px] uppercase lg:min-w-[800px]">
               Pakiet miesięczny
             </p>
-            <div className="absolute right-0 md:right-[-10px] text-black w-[140px] h-[140px] top-[-60px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
+            <div className="absolute right-0 md:right-[-10px] text-black w-[140px] h-[140px] top-[6px] lg:top-[-60px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
               <p className="text-[12px]">tylko do 2.02</p>
               <p className="text-[32px] leading-tight">353 zł</p>
               <p className="text-[16px] line-through opacity-60">557 zł</p>
