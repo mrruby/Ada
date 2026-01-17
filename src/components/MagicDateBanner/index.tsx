@@ -331,7 +331,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               ))}
             </div>
           </div>
-          <div className="md:-mt-[460px] mb-[-30px] md:mb-[-96px] md:left-1/2 max-w-[280px] md:max-w-none mx-auto">
+          <div className="md:-mt-[460px] mb-[-80px] md:mb-[-96px] md:left-1/2 max-w-[380px] md:max-w-none mx-auto">
             <StaticImage
               loading="eager"
               src="../../images/magic_adsy.webp"

@@ -21,7 +21,7 @@ const MagicTile2 = ({
     style={{ animationDelay: animationDelay }}
   >
     <div
-      className={`${colors} rounded-xl p-2 md:p-6 shadow-lg xd:min-h-[192px]`}
+      className={`${colors} rounded-xl p-4 md:p-6 shadow-lg xd:min-h-[192px]`}
     >
       <Typography variant="h3" className="uppercase">
         {title}
