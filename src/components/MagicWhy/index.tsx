@@ -300,7 +300,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                   text={
                     <span className=" !font-extrabold"> WCHODZĘ W TO!</span>
                   }
-                  sectionId="signup"
+                  sectionId="magic-package"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                   btnStyle="bg-ada-magicPurple4
                                       tracking-wide
@@ -367,7 +367,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                   text={
                     <span className=" !font-extrabold"> Tak, Dołączam!</span>
                   }
-                  sectionId="signup"
+                  sectionId="magic-package"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
                   btnStyle="bg-ada-magicPink4
                                       tracking-wide

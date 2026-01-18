@@ -9,7 +9,6 @@ import MagicComments from "components/MagicComments"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
-import MagicJoinClosed from "components/MagicJoinClosed"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
 import MagicVideo from "components/MagicVideo"
@@ -40,10 +39,6 @@ const MagicSalePage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicDateBanner version={4} />
       </MaxWithBgColorContainer>
-      <div id="magic-package"></div>
-      <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
-        <MagicJoinClosed />
-      </MaxWithBgColorContainer>
       <div className="bg-magic">
         <MaxWithBgColorContainer bgColor="bg-transparent">
           <MagicWhy part={12} />
@@ -58,6 +53,7 @@ const MagicSalePage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicCaseStudies />
       </MaxWithBgColorContainer>
+      <div id="magic-package"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
         <MagicSaleBanner version={2} />
       </MaxWithBgColorContainer>

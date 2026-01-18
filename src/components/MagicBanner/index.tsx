@@ -603,7 +603,7 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                       </span>
                     </>
                   }
-                  sectionId="signup"
+                  sectionId="magic-package"
                   textSize="text-sm md:text-base"
                   btnStyle="bg-ada-magicPink4 font-semibold tracking-wide h-[100px] px-6 shadow-xl hover:opacity-90 rounded-full min-w-[330px] mt-4 m-auto"
                 />
