@@ -35,7 +35,7 @@ const AdsEliksirPage = () => {
           }
           sectionId="magic-package"
           textSize="text-sm md:text-lg"
-          btnStyle="bg-ada-magicPink4 text-black
+          btnStyle="bg-ada-purple3 text-black
                     font-semibold tracking-wide h-[60px] md:h-[80px]
                     px-6 md:px-12 shadow-xl hover:opacity-90 rounded-full"
         />
