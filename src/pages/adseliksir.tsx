@@ -15,6 +15,7 @@ import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
 import SEO from "components/seo"
+import { Button } from "helpers/Button"
 import React from "react"
 
 const AdsEliksirPage = () => {
@@ -24,6 +25,21 @@ const AdsEliksirPage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicVideo version={3} />
       </MaxWithBgColorContainer>
+      <div className="bg-ada-pink8 text-center pb-12">
+        <Button
+          type="button"
+          text={
+            <span className="!font-extrabold uppercase">
+              Zmieniam wiedzę w działanie - sprawdzam MAGIC
+            </span>
+          }
+          sectionId="magic-package"
+          textSize="text-sm md:text-lg"
+          btnStyle="bg-ada-magicPink4 text-black
+                    font-semibold tracking-wide h-[60px] md:h-[80px]
+                    px-6 md:px-12 shadow-xl hover:opacity-90 rounded-full"
+        />
+      </div>
       <div className="bg-ada-white3">
         <MagicBanner1 version={4} />
       </div>
