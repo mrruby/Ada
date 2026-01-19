@@ -154,7 +154,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
             <div className="relative w-full max-w-[380px] overflow-hidden aspect-[9/16] rounded-lg mx-auto">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src={`https://player.vimeo.com/video/1155023182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
+                src={`https://player.vimeo.com/video/1155918940?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
