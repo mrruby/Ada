@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel"
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 
 const CASE_STUDY_VIDEOS = [
-  "1155023182",
+  "1155918940",
   "1155051959",
   "1155053529",
   "1155056185",
