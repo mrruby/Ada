@@ -12,8 +12,23 @@ const MagicVideo = ({ version }: { version?: number }) => {
     "https://player.vimeo.com/video/1117718298?badge=0&autopause=0&player_id=0&app_id=58479"
   const version2Title = "Nagranie_ Jesienny re-start"
 
-  const videoSrc = version === 2 ? version2VideoSrc : defaultVideoSrc
-  const videoTitle = version === 2 ? version2Title : defaultTitle
+  // Version 3 video (for adseliksir page)
+  const version3VideoSrc =
+    "https://player.vimeo.com/video/1156046181?badge=0&autopause=0&player_id=0&app_id=58479"
+  const version3Title = "ADS Eliksir"
+
+  const videoSrc =
+    version === 2
+      ? version2VideoSrc
+      : version === 3
+        ? version3VideoSrc
+        : defaultVideoSrc
+  const videoTitle =
+    version === 2
+      ? version2Title
+      : version === 3
+        ? version3Title
+        : defaultTitle
 
   return (
     <Section bgColor="bg-transparent">

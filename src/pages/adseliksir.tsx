@@ -21,11 +21,8 @@ const AdsEliksirPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MagicLogoHeader variant="pink" />
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
-        <MagicSaleBanner version={1} />
-      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicVideo />
+        <MagicVideo version={3} />
       </MaxWithBgColorContainer>
       <div className="bg-ada-white3">
         <MagicBanner1 version={4} />
