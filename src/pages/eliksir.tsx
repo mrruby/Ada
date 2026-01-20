@@ -48,9 +48,7 @@ const SowaPage = () => {
 
             {/* Date text */}
             <p className="font-normal text-[20px] md:text-[32px] leading-[152%] text-center mb-6">
-              <span className="text-ada-sowaGold">Warsztaty za 0 zł:</span>
-              <br />
-              <span className="text-white">18 stycznia o 12:00</span>
+              <span className="text-ada-sowaGold">Odbierz nagranie warsztatu za 0 zł</span>
             </p>
 
             {/* Form */}
@@ -67,9 +65,7 @@ const SowaPage = () => {
             <div className="flex flex-row items-start relative z-20">
               <div className="w-1/2">
                 <p className="font-normal text-[54px] leading-[152%]">
-                  <span className="text-ada-sowaGold">Warsztaty za 0 zł:</span>
-                  <br />
-                  <span className="text-white">18 stycznia o 12:00</span>
+                  <span className="text-ada-sowaGold">Odbierz nagranie warsztatu za 0 zł</span>
                 </p>
               </div>
               <div className="w-1/2 flex justify-end relative">
