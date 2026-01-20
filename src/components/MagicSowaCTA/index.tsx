@@ -26,14 +26,14 @@ const MagicSowaCTA = ({
         />
         <div className="container mx-auto text-center relative">
           <h2 className="font-playfair font-normal text-[48px] leading-[100%] uppercase text-black mb-8 max-w-[50%] mx-auto">
-            Nie czekaj - zapisz się, zanim Ads Eliksir…zniknie!
+            NIE CZEKAJ - ODBIERZ ADS ELIKSIR ZANIM… ZNIKNIE!
           </h2>
           <div className="bg-ada-sowaNavy rounded-2xl p-6 inline-block text-white mb-8">
             <p className="font-montserrat font-extrabold text-[32px] leading-[100%] text-center">
-              ⏰ Termin: 18.01
+              Odbiór do:
             </p>
             <p className="font-montserrat font-extrabold text-[32px] leading-[100%] text-center">
-              🕒 Godzina: 12:00
+              ⏰ 2 lutego
             </p>
           </div>
           <div>
@@ -42,7 +42,7 @@ const MagicSowaCTA = ({
               className="inline-flex items-center justify-center bg-black hover:bg-gray-800 px-12 py-4 rounded-full"
             >
               <span className="text-white font-montserrat font-bold text-[20px] md:text-[24px]">
-                Zapisuję się
+                Odbieram
               </span>
             </a>
           </div>
