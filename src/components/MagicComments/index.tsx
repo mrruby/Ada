@@ -4,7 +4,7 @@ import React from "react"
 
 const MagicComments = ({ version }: { version: number }) => {
   return (
-    <div className="w-screen pt-8">
+    <div className="w-screen pt-8 px-6">
       {version === 1 && (
         <div className="flex flex-col items-center text-ada-black">
           <h2 className="font-montserrat font-bold text-[32px] md:text-[48px] leading-[100%] text-center uppercase max-w-[500px] md:max-w-[800px]">

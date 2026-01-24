@@ -37,7 +37,7 @@ const MagicCommunityOpinions = ({
   const config = variantConfig[variant]
 
   return (
-    <Section bgColor={config.bgColor} className="pt-24 md:pt-32" id="opinie">
+    <Section bgColor={config.bgColor} className="pt-24 md:pt-32" id="opinie" padding="py-8 md:py-12 px-6">
       <div className="w-full">
         {variant === "sowa" ? (
           <h2
@@ -57,8 +57,8 @@ const MagicCommunityOpinions = ({
           </Typography>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+          <div className="flex flex-col gap-0">
             <StaticImage
               src="../../images/magic_reference_sell_1.webp"
               alt="Opinia o społeczności MAGIC"
@@ -93,7 +93,7 @@ const MagicCommunityOpinions = ({
             />
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-0">
             <StaticImage
               src="../../images/magic_reference_sell_5.webp"
               alt="Opinia o społeczności MAGIC"
@@ -128,7 +128,7 @@ const MagicCommunityOpinions = ({
             />
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-0">
             <StaticImage
               src="../../images/magic_reference_sell_9.webp"
               alt="Opinia o społeczności MAGIC"

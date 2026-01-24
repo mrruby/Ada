@@ -14,69 +14,77 @@ const carouselResponsive = {
 }
 
 const variant1Images = [
-  <StaticImage
-    key="v1a"
-    src="../../images/magda1a.webp"
-    alt="Magda – case study 1"
-    placeholder="blurred"
-  />,
-  <StaticImage
-    key="v1b"
-    src="../../images/magda1b.webp"
-    alt="Magda – case study 1"
-    placeholder="blurred"
-  />,
-  <StaticImage
-    key="v1c"
-    src="../../images/magda1c.webp"
-    alt="Magda – case study 1"
-    placeholder="blurred"
-  />,
-  <StaticImage
-    key="v1d"
-    src="../../images/magda1d.webp"
-    alt="Magda – case study 1"
-    placeholder="blurred"
-  />,
+  <div key="v1a" className="flex justify-center items-center h-full">
+    <StaticImage
+      src="../../images/magda1a.webp"
+      alt="Magda – case study 1"
+      placeholder="blurred"
+    />
+  </div>,
+  <div key="v1b" className="flex justify-center items-center h-full">
+    <StaticImage
+      src="../../images/magda1b.webp"
+      alt="Magda – case study 1"
+      placeholder="blurred"
+    />
+  </div>,
+  <div key="v1c" className="flex justify-center items-center h-full">
+    <StaticImage
+      src="../../images/magda1c.webp"
+      alt="Magda – case study 1"
+      placeholder="blurred"
+    />
+  </div>,
+  <div key="v1d" className="flex justify-center items-center h-full">
+    <StaticImage
+      src="../../images/magda1d.webp"
+      alt="Magda – case study 1"
+      placeholder="blurred"
+    />
+  </div>,
 ]
 
 const variant2Images = [
-  <StaticImage
-    key="v2a"
-    src="../../images/magda2a.webp"
-    alt="Magda – case study 2"
-    placeholder="blurred"
-  />,
-  <StaticImage
-    key="v2b"
-    src="../../images/magda2b.webp"
-    alt="Magda – case study 2"
-    placeholder="blurred"
-  />,
-  <StaticImage
-    key="v2c"
-    src="../../images/magda2c.webp"
-    alt="Magda – case study 2"
-    placeholder="blurred"
-  />,
-  <StaticImage
-    key="v2d"
-    src="../../images/magda2d.webp"
-    alt="Magda – case study 2"
-    placeholder="blurred"
-  />,
+  <div key="v2a" className="flex justify-center items-center h-full">
+    <StaticImage
+      src="../../images/magda2a.webp"
+      alt="Magda – case study 2"
+      placeholder="blurred"
+    />
+  </div>,
+  <div key="v2b" className="flex justify-center items-center h-full">
+    <StaticImage
+      src="../../images/magda2b.webp"
+      alt="Magda – case study 2"
+      placeholder="blurred"
+    />
+  </div>,
+  <div key="v2c" className="flex justify-center items-center h-full">
+    <StaticImage
+      src="../../images/magda2c.webp"
+      alt="Magda – case study 2"
+      placeholder="blurred"
+    />
+  </div>,
+  <div key="v2d" className="flex justify-center items-center h-full">
+    <StaticImage
+      src="../../images/magda2d.webp"
+      alt="Magda – case study 2"
+      placeholder="blurred"
+    />
+  </div>,
 ]
 
 const MagicBanner5 = ({ version }: { version: number }) => {
   return (
     <>
       <Section
-        className="text-black relative overflow-hidden"
-        padding="py-8 md:py-12"
+        className="text-black relative"
+        padding="py-8 md:py-12 px-6"
         maxWidth="2xl"
       >
         {version == 1 && (
-          <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center px-2">
+          <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center px-6">
             <Typography variant="h2" className="text-ada-black animate-bounce">
               💼
               <br />
@@ -89,11 +97,11 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               Jak <b>Magda</b> uporządkowała chaos reklamowy i zyskała pewność w
               prowadzeniu kampanii?
             </Typography>
-            <div className="my-4">
+            <div className="my-4 relative">
               <Carousel
                 responsive={carouselResponsive}
-                customLeftArrow={<CustomLeftArrow />}
-                customRightArrow={<CustomRightArrow />}
+                customLeftArrow={<CustomLeftArrow dark />}
+                customRightArrow={<CustomRightArrow dark />}
               >
                 {variant1Images}
               </Carousel>
@@ -123,7 +131,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
           </div>
         )}
         {version == 2 && (
-          <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center px-2">
+          <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center px-6">
             <Typography variant="h2" className="text-ada-black animate-bounce">
               👩‍💻
               <br />
@@ -136,11 +144,11 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               Jak <b>Magda</b> uporządkowała chaos reklamowy i zyskała pewność w
               prowadzeniu kampanii?
             </Typography>
-            <div className="my-4">
+            <div className="my-4 relative">
               <Carousel
                 responsive={carouselResponsive}
-                customLeftArrow={<CustomLeftArrow />}
-                customRightArrow={<CustomRightArrow />}
+                customLeftArrow={<CustomLeftArrow dark />}
+                customRightArrow={<CustomRightArrow dark />}
               >
                 {variant2Images}
               </Carousel>

@@ -527,7 +527,7 @@ const MagicBanner1 = ({ version }: { version: number }) => {
       {version == 4 && (
         <div className=" w-screen">
           <div className="text-black" onMouseOver={handleMouseEnter2}>
-            <div className="mx-auto max-w-5xl py-8 md:py-12 px-4">
+            <div className="mx-auto max-w-5xl py-8 md:py-12 px-6">
               <Typography
                 variant="h2"
                 className="text-black leading-snug mb-6 text-center"

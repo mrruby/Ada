@@ -111,7 +111,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
     <>
       <Section
         className="text-black relative overflow-hidden"
-        padding="py-8 md:py-12"
+        padding="py-8 md:py-12 px-6"
         maxWidth="2xl"
       >
         {version == 1 && (
@@ -217,10 +217,10 @@ const MagicBanner2 = ({ version }: { version: number }) => {
               </div>
               <div className="w-full md:w-3/4 flex flex-col justify-center px-4 md:px-0">
                 <div className="flex flex-col gap-4 md:gap-6 w-full">
-                  {/* First row: 2/3 and 1/3 */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
+                  {/* First row: 1/2 and 1/2 */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-stretch">
                     <div
-                      className={`md:col-span-2 h-full ${
+                      className={`h-full ${
                         hasAnimated
                           ? "lg:animate-slideInFromLeft opacity-100"
                           : " "
@@ -233,7 +233,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                       />
                     </div>
                     <div
-                      className={`md:col-span-1 h-full ${
+                      className={`h-full ${
                         hasAnimated
                           ? "lg:animate-slideInFromRight opacity-100"
                           : " "
@@ -246,10 +246,10 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                       />
                     </div>
                   </div>
-                  {/* Second row: 1/3 and 2/3 */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
+                  {/* Second row: 1/2 and 1/2 */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-stretch">
                     <div
-                      className={`md:col-span-1 h-full ${
+                      className={`h-full ${
                         hasAnimated
                           ? "lg:animate-slideInFromLeft opacity-100"
                           : " "
@@ -262,7 +262,7 @@ const MagicBanner2 = ({ version }: { version: number }) => {
                       />
                     </div>
                     <div
-                      className={`md:col-span-2 h-full ${
+                      className={`h-full ${
                         hasAnimated
                           ? "lg:animate-slideInFromRight opacity-100"
                           : " "

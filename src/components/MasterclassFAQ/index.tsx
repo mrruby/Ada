@@ -594,7 +594,7 @@ const MasterclassFAQ = ({
       : magicFAQList)
 
   return (
-    <div className="flex flex-col text-ada-blue items-center px-3">
+    <div className="flex flex-col text-ada-blue items-center px-6">
       {version === 1 && (
         <>
           <div className="relative flex flex-col md:flex-row gap-[90px] items-center w-full justify-center">

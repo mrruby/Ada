@@ -14,7 +14,7 @@ const MagicWhy = ({ part }: { part: number }) => {
   }
 
   return (
-    <Section bgColor="bg-transparent">
+    <Section bgColor="bg-transparent" padding="py-8 md:py-12 px-6">
       {part == 1 && (
         <div className="w-full text-white -mb-8">
           <Typography variant="h1" className="mb-8 text-center animate-bounce">

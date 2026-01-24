@@ -24,7 +24,9 @@
       "Bash(xargs:*)",
       "Bash(sips:*)",
       "Bash(brew list:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "WebFetch(domain:klublokalnychfirm.pl)",
+      "Bash(find:*)"
     ],
     "deny": []
   }

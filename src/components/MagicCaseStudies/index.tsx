@@ -28,7 +28,7 @@ const VideoItem = ({ videoId }: { videoId: string }) => (
 
 const MagicCaseStudies = () => {
   return (
-    <div className="py-12 px-4">
+    <div className="py-12 px-6">
       {/* Desktop: grid layout */}
       <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center max-w-6xl mx-auto">
         {CASE_STUDY_VIDEOS.map((videoId) => (
@@ -37,12 +37,12 @@ const MagicCaseStudies = () => {
       </div>
 
       {/* Mobile: carousel */}
-      <div className="md:hidden">
+      <div className="md:hidden px-12 relative">
         <Carousel
           responsive={videoResponsive}
           infinite={true}
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}
+          customLeftArrow={<CustomLeftArrow outside />}
+          customRightArrow={<CustomRightArrow outside />}
           ssr={true}
         >
           {CASE_STUDY_VIDEOS.map((videoId) => (

@@ -84,7 +84,7 @@ const PeopleResponsive = ({ showStamp = false }: { showStamp?: boolean }) => (
 const MagicBioBanner = ({ version }: { version: number }) => {
   return (
     <>
-      <Section>
+      <Section padding="py-8 md:py-12 px-6">
         {version === 1 && (
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 relative">
             {/* Left column: Circular image */}
@@ -215,7 +215,7 @@ const MagicBioBanner = ({ version }: { version: number }) => {
         )}
       </Section>
       {version === 4 && (
-        <div className="bg-ada-sowaNavy py-16 px-4">
+        <div className="bg-ada-sowaNavy py-16 px-6">
           <div className="container mx-auto">
             <h2 className="font-playfair font-normal text-[48px] md:text-[64px] leading-[130%] text-center text-white uppercase">
               Kto prowadzi{" "}

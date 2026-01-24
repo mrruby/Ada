@@ -11,6 +11,7 @@ import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
+import MagicStickyBar from "components/MagicStickyBar"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
@@ -20,7 +21,9 @@ import React from "react"
 const MagicSalePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <MagicLogoHeader variant="pink" />
+      <MagicStickyBar />
+      <div className="pt-14">
+        <MagicLogoHeader variant="pink" />
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicSaleBanner version={1} />
       </MaxWithBgColorContainer>
@@ -53,7 +56,7 @@ const MagicSalePage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicCaseStudies />
       </MaxWithBgColorContainer>
-      <div id="magic-package"></div>
+      <div id="magic-package" className="scroll-mt-14"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
         <MagicSaleBanner version={2} />
       </MaxWithBgColorContainer>
@@ -75,6 +78,7 @@ const MagicSalePage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicFinalCTA />
       </MaxWithBgColorContainer>
+      </div>
     </Layout>
   )
 }

@@ -51,7 +51,7 @@ const MagicSaleBanner = ({
   return (
     <>
       {version == 1 && (
-        <Section padding="pt-[56px] md:pt-[72px] pb-8 px-4 md:px-12">
+        <Section padding="pt-[56px] md:pt-[72px] pb-8 px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left column - Content */}
             <div className="text-center lg:text-left order-2 lg:order-1">
@@ -116,7 +116,7 @@ const MagicSaleBanner = ({
         </Section>
       )}
       {version == 2 && (
-        <Section padding="py-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
+        <Section padding="py-8 px-6 md:px-12 text-ada flex flex-col items-center text-center">
           <TypingAnimation
             text="Dołącz do MAGIC:"
             textStyle="text-adaTitle text-black font-bold"
@@ -164,7 +164,7 @@ const MagicSaleBanner = ({
             </div>
           </div>
 
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-8 w-full px-4 md:px-0">
             <Button
               type="button"
               text={<span>Tak, dołączam!</span>}
@@ -172,16 +172,16 @@ const MagicSaleBanner = ({
                 url ||
                 "https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
               }
-              textSize="text-xs md:text-adaSubtitleSecondary uppercase !font-extrabold text-black"
+              textSize="text-base md:text-adaSubtitleSecondary uppercase !font-extrabold text-black"
               btnStyle="bg-ada-magicPink4
                       tracking-wide
-                      p-3 hover:opacity-90 rounded-full min-w-[130px] h-[64px] shadow-xl"
+                      p-3 md:p-3 hover:opacity-90 rounded-full w-full md:w-auto md:min-w-[130px] h-[64px] shadow-xl"
             />
           </div>
         </Section>
       )}
       {version == 6 && (
-        <Section padding="py-8 px-2 md:px-12 text-ada flex flex-col items-center text-center">
+        <Section padding="py-8 px-6 md:px-12 text-ada flex flex-col items-center text-center">
           <h1 className="text-adaTitle2 font-bold text-ada-magicOrange2">
             Nagranie nie jest już dostępne, ale wciąż możesz dołączyć do MAGIC!
           </h1>

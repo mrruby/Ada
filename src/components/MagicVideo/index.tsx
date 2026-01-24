@@ -31,7 +31,7 @@ const MagicVideo = ({ version }: { version?: number }) => {
         : defaultTitle
 
   return (
-    <Section bgColor="bg-transparent">
+    <Section bgColor="bg-transparent" padding="py-8 md:py-12 px-6">
       <div className="max-w-4xl mx-auto">
         <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
           <iframe

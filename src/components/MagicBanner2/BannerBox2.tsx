@@ -23,12 +23,12 @@ const BannerBox2 = ({
         ✅
       </div>
       <div
-        className={`${bgColor} rounded-2xl p-6 md:p-8 pt-10 md:pt-12 text-center flex flex-col items-center justify-center min-h-[120px] h-full ${styles}`}
+        className={`${bgColor} rounded-2xl p-5 md:p-6 pt-10 md:pt-10 text-center flex flex-col items-center justify-center min-h-[140px] h-full ${styles}`}
       >
         <Typography variant="h2" className="mb-2">
           {title}
         </Typography>
-        <p className="text-sm md:text-base leading-relaxed">{description}</p>
+        <p className="text-base md:text-lg leading-relaxed">{description}</p>
       </div>
     </div>
   )

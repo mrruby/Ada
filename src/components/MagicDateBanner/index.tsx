@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
-import React, { useState } from "react"
+import React from "react"
 import Card from "../shared/Card"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
@@ -128,23 +128,8 @@ const magicTilesContent5 = [
 ]
 
 const MagicDateBanner = ({ version }: { version: number }) => {
-  const [hasAnimated, setHasAnimated] = useState(false)
-  const [hasAnimated2, setHasAnimated2] = useState(false)
-
-  const handleMouseEnter = () => {
-    if (!hasAnimated) {
-      setHasAnimated(true)
-    }
-  }
-
-  const handleMouseEnter2 = () => {
-    if (!hasAnimated2) {
-      setHasAnimated2(true)
-    }
-  }
-
   return (
-    <Section className="mb-12">
+    <Section className="mb-12" padding="py-8 md:py-12 px-6">
       {version == 1 && (
         <div className="grid gap-8 items-center">
           {/* Left column */}
@@ -189,13 +174,10 @@ const MagicDateBanner = ({ version }: { version: number }) => {
         </div>
       )}
       {version == 2 && (
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 items-center relative"
-          onMouseOver={handleMouseEnter}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center relative">
           {/* Left column */}
           <div className="text-black">
-            <Typography variant="h2" className="mb-2 animate-bounce">
+            <Typography variant="h2" className="mb-2">
               Co sprawia, że <span className="text-ada-pink7">MAGIC</span> jest
               wyjątkowy?
             </Typography>
@@ -209,14 +191,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
             <div className="flex flex-col md:flex-row gap-4 md:min-w-[650px] relative z-10">
               <div className="grid grid-cols-1 gap-6 lg:w-[320px] md:gap-2 pt-8">
                 {magicTilesContent1.map((item, i) => (
-                  <div
-                    key={i}
-                    className={`${
-                      hasAnimated
-                        ? "lg:animate-slideInFromLeft opacity-100"
-                        : " "
-                    }`}
-                  >
+                  <div key={i}>
                     <MagicTile
                       colors={item.colors}
                       title={item.title}
@@ -227,14 +202,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               </div>
               <div className="grid grid-cols-1 gap-6 lg:w-[320px] md:gap-2 md:pt-8">
                 {magicTilesContent2.map((item, i) => (
-                  <div
-                    key={i}
-                    className={`${
-                      hasAnimated
-                        ? "lg:animate-slideInFromRight opacity-100"
-                        : " "
-                    }`}
-                  >
+                  <div key={i}>
                     <MagicTile
                       colors={item.colors}
                       title={item.title}
@@ -280,10 +248,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
         </div>
       )}
       {version == 4 && (
-        <div
-          className="flex flex-col items-center relative"
-          onMouseOver={handleMouseEnter2}
-        >
+        <div className="flex flex-col items-center relative">
           <div className="flex flex-col xl:flex-row gap-6 xl:gap-4 relative z-10 text-black w-full pt-8">
             <div className="flex flex-col gap-6 md:gap-2 md:min-w-[360px]">
               {magicTilesContent3.map((item, i) => (
@@ -292,10 +257,8 @@ const MagicDateBanner = ({ version }: { version: number }) => {
                     colors={item.colors}
                     title={item.title}
                     description={item.description}
-                    animationClass={
-                      hasAnimated2 ? "animate-slideInFromLeft" : ""
-                    }
-                    animationDelay={hasAnimated2 ? `${i * 0.5}s` : "0s"}
+                    animationClass=""
+                    animationDelay="0s"
                   />
                 </div>
               ))}
@@ -307,10 +270,8 @@ const MagicDateBanner = ({ version }: { version: number }) => {
                     colors={item.colors}
                     title={item.title}
                     description={item.description}
-                    animationClass={
-                      hasAnimated2 ? "animate-slideInFromRight" : ""
-                    }
-                    animationDelay={hasAnimated2 ? `${i * 0.7}s` : "0s"}
+                    animationClass=""
+                    animationDelay="0s"
                   />
                 </div>
               ))}
@@ -322,10 +283,8 @@ const MagicDateBanner = ({ version }: { version: number }) => {
                     colors={item.colors}
                     title={item.title}
                     description={item.description}
-                    animationClass={
-                      hasAnimated2 ? "animate-slideInFromRight" : ""
-                    }
-                    animationDelay={hasAnimated2 ? `${i * 0.9}s` : "0s"}
+                    animationClass=""
+                    animationDelay="0s"
                   />
                 </div>
               ))}
