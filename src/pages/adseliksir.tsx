@@ -1,6 +1,5 @@
 import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import MagicBanner1 from "components/MagicBanner"
 import MagicBanner2 from "components/MagicBanner2"
 import MagicBanner5 from "components/MagicBanner5"
 import MagicBioBanner from "components/MagicBioBanner"
@@ -11,6 +10,7 @@ import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
+import MagicStickyBar from "components/MagicStickyBar"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
@@ -21,28 +21,30 @@ import React from "react"
 const AdsEliksirPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <MagicLogoHeader variant="pink" />
-      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicVideo version={3} />
-      </MaxWithBgColorContainer>
-      <div className="bg-ada-pink8 text-center pb-12">
-        <Button
-          type="button"
-          text={
-            <span className="!font-extrabold uppercase">
-              Zmieniam wiedzę w działanie - sprawdzam MAGIC
-            </span>
-          }
-          sectionId="magic-package"
-          textSize="text-sm md:text-lg"
-          btnStyle="bg-ada-purple3 text-black
-                    font-semibold tracking-wide h-[60px] md:h-[80px]
-                    px-6 md:px-12 shadow-xl hover:opacity-90 rounded-full"
-        />
-      </div>
-      <div className="bg-ada-white3">
-        <MagicBanner1 version={4} />
-      </div>
+      <MagicStickyBar />
+      <div className="pt-14">
+        <MagicLogoHeader variant="pink" />
+        <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+          <MagicVideo version={3} />
+        </MaxWithBgColorContainer>
+        <div className="bg-ada-pink8 text-center pb-12">
+          <p className="text-black font-semibold text-lg md:text-xl pb-6">
+            Obejrzałaś szkolenie? Czas wdrożyć plan w działanie!
+          </p>
+          <Button
+            type="button"
+            text={
+              <span className="!font-extrabold uppercase">
+                Zmieniam wiedzę w działanie - sprawdzam MAGIC
+              </span>
+            }
+            sectionId="magic-package"
+            textSize="text-sm md:text-lg"
+            btnStyle="bg-ada-purple3 text-black
+                      font-semibold tracking-wide h-[60px] md:h-[80px]
+                      px-6 md:px-12 shadow-xl hover:opacity-90 rounded-full"
+          />
+        </div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicWhy part={9} />
       </MaxWithBgColorContainer>
@@ -66,7 +68,7 @@ const AdsEliksirPage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicCaseStudies />
       </MaxWithBgColorContainer>
-      <div id="magic-package"></div>
+      <div id="magic-package" className="scroll-mt-14"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
         <MagicSaleBanner version={2} />
       </MaxWithBgColorContainer>
@@ -88,6 +90,7 @@ const AdsEliksirPage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicFinalCTA />
       </MaxWithBgColorContainer>
+      </div>
     </Layout>
   )
 }
