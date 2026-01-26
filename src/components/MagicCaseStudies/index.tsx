@@ -7,6 +7,7 @@ const CASE_STUDY_VIDEOS = [
   "1155051959",
   "1155053529",
   "1156039661",
+  "1158468977",
 ]
 
 const videoResponsive = {
@@ -30,7 +31,7 @@ const MagicCaseStudies = () => {
   return (
     <div className="py-12 px-6">
       {/* Desktop: grid layout */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center max-w-6xl mx-auto">
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center max-w-7xl mx-auto">
         {CASE_STUDY_VIDEOS.map((videoId) => (
           <VideoItem key={videoId} videoId={videoId} />
         ))}
