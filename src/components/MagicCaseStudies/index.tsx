@@ -7,8 +7,7 @@ const CASE_STUDY_VIDEOS = [
   "1155051959",
   "1155053529",
   "1156039661",
-  "",
-  "",
+  "1158468977",
 ]
 
 const videoResponsive = {
