@@ -11,13 +11,13 @@ const CASE_STUDY_VIDEOS = [
 ]
 
 const videoResponsive = {
-  desktop: { breakpoint: { max: 4000, min: 1024 }, items: 4 },
+  desktop: { breakpoint: { max: 4000, min: 1024 }, items: 3 },
   tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
   mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
 }
 
 const VideoItem = ({ videoId }: { videoId: string }) => (
-  <div className="relative w-full max-w-[280px] overflow-hidden aspect-[9/16] rounded-lg mx-auto bg-ada-magicGrey2">
+  <div className="relative w-full max-w-[340px] overflow-hidden aspect-[9/16] rounded-lg mx-auto bg-ada-magicGrey2">
     {videoId ? (
       <iframe
         className="absolute top-0 left-0 w-full h-full"
@@ -37,7 +37,7 @@ const MagicCaseStudies = () => {
   return (
     <div className="py-12 px-6">
       {/* Swipeable carousel for all screen sizes */}
-      <div className="px-12 relative max-w-6xl mx-auto">
+      <div className="px-12 relative max-w-7xl mx-auto">
         <Carousel
           responsive={videoResponsive}
           infinite={true}
