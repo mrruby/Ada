@@ -510,12 +510,12 @@ const MasterclassFAQ = ({
   const magicFAQList: ListItem[] = [
     {
       question: "🔍 Na jakiej platformie funkcjonuje MAGIC? ",
-      answer: <>MAGIC działa na platformie Circle.</>,
-    },
-    {
-      question: "👀 Dlaczego warto zapisać się na listę zainteresowanych?",
-      answer:
-        "Drzwi do MAGIC otwieramy tylko kilka razy w roku, by maksymalnie skupić się na potrzebach i celach Klubowiczek. Zapis na listę zainteresowanych gwarantuje Ci informację w pierwszej kolejności, gdy tylko pojawi się możliwość dołączenia do Klubu. Mogę też zdradzić, że osoby z listy zainteresowanych zawsze dostają ode mnie specjalną ofertę 💜",
+      answer: (
+        <>
+          MAGIC działa na platformie Circle. Tajna informacja: kod ALOHOMORA
+          działa cuda w koszyku! 🪄
+        </>
+      ),
     },
     {
       question: "💎 Co sprawia, że MAGIC jest wyjątkowy?",
