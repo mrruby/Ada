@@ -170,6 +170,10 @@ const magicBannerContent3 = [
           </span>
           <br /> Skonsultuj optymalizację budżetu w zależności od etapu lejka i
           branży.
+          <br />
+          <span className="font-bold">
+            Pssst! Sprawdź kod: ALOHOMORA w koszyku!
+          </span>
         </p>
       </>
     ),
@@ -285,6 +289,10 @@ const magicBannerContent5 = [
             Czujesz, że tracisz budżet reklamowy?
           </span>
           Skonsultuj optymalizację budżetu w zależności od etapu lejka i branży.
+          <br />
+          <span className="font-bold">
+            Pssst! Sprawdź kod: ALOHOMORA w koszyku!
+          </span>
         </p>
       </>
     ),
