@@ -41,8 +41,8 @@ const MagicCaseStudies = () => {
         <Carousel
           responsive={videoResponsive}
           infinite={true}
-          customLeftArrow={<CustomLeftArrow outside />}
-          customRightArrow={<CustomRightArrow outside />}
+          customLeftArrow={<CustomLeftArrow dark />}
+          customRightArrow={<CustomRightArrow dark />}
           ssr={true}
           swipeable={true}
           draggable={true}
