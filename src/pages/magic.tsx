@@ -22,7 +22,7 @@ const MagicSalePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MagicStickyBar />
-      <div className="pt-14">
+      <div className="pt-16">
         <MagicLogoHeader variant="pink" />
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicSaleBanner version={1} />

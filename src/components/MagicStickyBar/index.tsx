@@ -36,19 +36,19 @@ const MagicStickyBar = () => {
   if (!timeLeft) return null
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-ada-magicPurple4 py-2 px-4">
-      <div className="container mx-auto flex items-center justify-center gap-2 md:gap-4 flex-wrap">
-        <span className="text-white text-xs md:text-base font-medium">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-ada-magicPurple4 py-3 px-4">
+      <div className="container mx-auto flex items-center justify-center gap-3 md:gap-6 flex-wrap">
+        <span className="text-white text-sm md:text-xl font-medium">
           🔥 Niższa cena tylko do 2.02:
         </span>
-        <span className="text-ada-magicYellow font-bold text-xs md:text-base">
+        <span className="text-ada-magicYellow font-bold text-lg md:text-2xl">
           {pad(timeLeft.days)}d {pad(timeLeft.hours)}h {pad(timeLeft.minutes)}m {pad(timeLeft.seconds)}s
         </span>
         <Button
           type="button"
           text={<span className="font-bold">Dołączam!</span>}
           sectionId="magic-package"
-          btnStyle="bg-ada-magicPink4 text-black px-4 py-1 rounded-full text-sm hover:opacity-90"
+          btnStyle="bg-ada-magicPink4 text-black px-5 py-2 rounded-full text-base hover:opacity-90"
         />
       </div>
     </div>
