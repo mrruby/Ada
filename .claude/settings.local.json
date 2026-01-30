@@ -44,7 +44,8 @@
       "Bash(curl:*)",
       "Bash(pkill:*)",
       "Bash(tr:*)",
-      "WebFetch(domain:develop--ecstatic-darwin-4cecea.netlify.app)"
+      "WebFetch(domain:develop--ecstatic-darwin-4cecea.netlify.app)",
+      "Bash(git lfs:*)"
     ],
     "deny": []
   }
