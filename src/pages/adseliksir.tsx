@@ -21,6 +21,10 @@ import React from "react"
 const AdsEliksirPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <SEO
+        title="Magic: Marketing Ads Girls Inside Collective"
+        image="https://adrianna.com.pl/img/ada_purple.webp"
+      />
       <MagicStickyBar />
       <div className="pt-14">
         <MagicLogoHeader variant="pink" />
@@ -94,12 +98,5 @@ const AdsEliksirPage = () => {
     </Layout>
   )
 }
-
-export const Head = () => (
-  <SEO
-    title="Magic: Marketing Ads Girls Inside Collective"
-    image="https://adrianna.com.pl/img/ada_purple.webp"
-  />
-)
 
 export default AdsEliksirPage

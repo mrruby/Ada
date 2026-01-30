@@ -6,6 +6,7 @@ import React from "react"
 const PowtorkaMasterclass = () => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
+      <SEO title="Ogarnij swoje Adsy" />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <div className="flex flex-col items-center py-12 mt-8">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
@@ -34,7 +35,5 @@ const PowtorkaMasterclass = () => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Ogarnij swoje Adsy" />
 
 export default PowtorkaMasterclass

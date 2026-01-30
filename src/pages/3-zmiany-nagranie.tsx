@@ -7,6 +7,7 @@ import React from "react"
 const TrzyZmianyNagranie = () => {
   return (
     <Layout>
+      <SEO title="3 zmiany - nagranie webinaru" />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <div className="flex flex-col items-center py-12 mt-8">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
@@ -49,7 +50,5 @@ const TrzyZmianyNagranie = () => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="3 zmiany - nagranie webinaru" />
 
 export default TrzyZmianyNagranie

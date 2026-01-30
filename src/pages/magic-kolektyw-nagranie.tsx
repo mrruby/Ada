@@ -7,14 +7,12 @@ const MagicCollectivePage = () => {
     navigate("/magic-kolektyw/", { replace: true })
   }, [])
 
-  return <></>
+  return (
+    <SEO
+      title="Magic: Marketing Ads Girls Inside Collective"
+      image="https://adrianna.com.pl/img/ada_purple.webp"
+    />
+  )
 }
-
-export const Head = () => (
-  <SEO
-    title="Magic: Marketing Ads Girls Inside Collective"
-    image="https://adrianna.com.pl/img/ada_purple.webp"
-  />
-)
 
 export default MagicCollectivePage

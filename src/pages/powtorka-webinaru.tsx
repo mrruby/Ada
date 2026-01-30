@@ -19,6 +19,7 @@ import React from "react"
 const WebinarReplayPage = () => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
+      <SEO title="Ogarnij swoje Adsy" />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         {/* <MastermindVideo
           videoUrl="https://www.youtube.com/embed/y_HOSt8dcy4?si=aKR8v1BbLwZZ1cZq"
@@ -78,7 +79,5 @@ const WebinarReplayPage = () => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Ogarnij swoje Adsy" />
 
 export default WebinarReplayPage

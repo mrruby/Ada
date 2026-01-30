@@ -1,6 +1,30 @@
 import { Button } from "helpers/Button"
-import React from "react"
-import ScrollAnimation from "react-animate-on-scroll"
+import React, { useEffect, useRef, useState } from "react"
+
+const useInView = (threshold = 0.1) => {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return { ref, isVisible }
+}
 
 const PuzzleItem: React.FC<{
   day: string
@@ -9,35 +33,42 @@ const PuzzleItem: React.FC<{
   description: string
   icon: string
   isAlternate: boolean
-}> = ({ day, date, title, description, icon, isAlternate }) => (
-  <ScrollAnimation animateIn="fadeInUp" animateOnce>
-    <div className="relative">
-      <div className="flex flex-col md:flex-row items-start mb-8">
-        <div
-          className={`absolute ${
-            isAlternate ? "-left-40" : "-left-28"
-          } -top-2 z-10`}
-        >
-          <div className="relative">
-            <img
-              src={icon}
-              alt={`Puzzle Icon ${day}`}
-              className="w-full h-full"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20 font-bold text-adaSubtitle">
-              <span>{day}</span>
-              <span>{date}</span>
+}> = ({ day, date, title, description, icon, isAlternate }) => {
+  const { ref, isVisible } = useInView(0.1)
+
+  return (
+    <div
+      ref={ref}
+      className={`${isVisible ? "animate__animated animate__fadeInUp" : "opacity-0"}`}
+    >
+      <div className="relative">
+        <div className="flex flex-col md:flex-row items-start mb-8">
+          <div
+            className={`absolute ${
+              isAlternate ? "-left-40" : "-left-28"
+            } -top-2 z-10`}
+          >
+            <div className="relative">
+              <img
+                src={icon}
+                alt={`Puzzle Icon ${day}`}
+                className="w-full h-full"
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20 font-bold text-adaSubtitle">
+                <span>{day}</span>
+                <span>{date}</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mt-10 p-8 rounded-lg flex-grow bg-ada-pink2 pl-32">
-          <h3 className="text-ada-blue font-bold mb-2">{title}</h3>
-          <p className="text-ada-blue">{description}</p>
+          <div className="mt-10 p-8 rounded-lg flex-grow bg-ada-pink2 pl-32">
+            <h3 className="text-ada-blue font-bold mb-2">{title}</h3>
+            <p className="text-ada-blue">{description}</p>
+          </div>
         </div>
       </div>
     </div>
-  </ScrollAnimation>
-)
+  )
+}
 
 const PuzzleDays: React.FC = () => {
   const puzzleItems = [

@@ -48,12 +48,14 @@ const benefits = [
 
 const Andromeda2026Page = () => {
   return (
-    <TrainingLandingPage
-      heroBgColor="bg-ada-magicYellow"
-      formHTML={formHTML}
-      descriptionBullets={descriptionBullets}
-      benefits={benefits}
-      heroLeft={
+    <>
+      <SEO title="Andromeda 2026 - Mini-kurs" />
+      <TrainingLandingPage
+        heroBgColor="bg-ada-magicYellow"
+        formHTML={formHTML}
+        descriptionBullets={descriptionBullets}
+        benefits={benefits}
+        heroLeft={
         <>
           <p className="text-[20px] lg:text-[24px] font-bold text-black mb-4">
             Mini-kurs za 0zł:
@@ -69,9 +71,8 @@ const Andromeda2026Page = () => {
         </>
       }
     />
+    </>
   )
 }
-
-export const Head = () => <SEO title="Andromeda 2026 - Mini-kurs" />
 
 export default Andromeda2026Page

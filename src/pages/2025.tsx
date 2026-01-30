@@ -13,6 +13,10 @@ import React from "react"
 const MasterclassPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <SEO
+        title="WEBINAR: 3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku"
+        image="https://adrianna.com.pl/img/ada_purple.webp"
+      />
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
         <MagicTitle version={1} />
       </MaxWithBgColorContainer>
@@ -37,12 +41,5 @@ const MasterclassPage = () => {
     </Layout>
   )
 }
-
-export const Head = () => (
-  <SEO
-    title="WEBINAR: 3 zmiany w reklamach Twojego biznesu, które zadziałają w 2025 roku"
-    image="https://adrianna.com.pl/img/ada_purple.webp"
-  />
-)
 
 export default MasterclassPage

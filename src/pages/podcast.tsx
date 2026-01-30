@@ -55,13 +55,12 @@ const PodcastsPage = () => {
 
   return (
     <Layout>
+      <SEO title="Podcast" />
       <MaxWithBgColorContainer>
         <Podcasts postsData={edges} />
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Podcast" />
 
 export default PodcastsPage

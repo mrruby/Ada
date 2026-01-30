@@ -31,7 +31,6 @@ const SEO = ({ description, title, script, image }: Props) => {
 
   return (
     <>
-      <html lang="pl-PL" />
       <title>{`${title} | ${site.siteMetadata.title}`}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:type" content="website" />

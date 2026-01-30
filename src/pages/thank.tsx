@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 const ThankYouPage2 = () => {
   return (
     <Layout>
+      <SEO title="Thank you page" />
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <ThankBanner version={1} />
       </MaxWithBgColorContainer>
@@ -28,7 +29,5 @@ const ThankYouPage2 = () => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Thank you page" />
 
 export default ThankYouPage2

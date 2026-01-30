@@ -7,13 +7,12 @@ import SEO from "../components/seo"
 const ThankYouPage = () => {
   return (
     <Layout>
+      <SEO title="Thank you page" />
       <MaxWithBgColorContainer>
         <ThankBanner2 />
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Thank you page" />
 
 export default ThankYouPage

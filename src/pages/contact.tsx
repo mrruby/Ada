@@ -17,6 +17,7 @@ const ContactPage = ({ location }: ContactPageProps) => {
 
   return (
     <Layout>
+      <SEO title="Kontakt" />
       <ContactFormHeader />
       <MaxWithBgColorContainer bgColor="bg-linear" extraStyle="pt-[50px]">
         <ContactForm source={source} />
@@ -24,7 +25,5 @@ const ContactPage = ({ location }: ContactPageProps) => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Kontakt" />
 
 export default ContactPage

@@ -1,6 +1,6 @@
 /* Vendor CSS imports in consistent order */
 /* Import animate.css first */
-@import "animate.css/animate.compat.css";
+@import "animate.css/animate.min.css";
 
 /* Import react-multi-carousel second */
 @import "react-multi-carousel/lib/styles.css";

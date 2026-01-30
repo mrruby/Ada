@@ -48,12 +48,14 @@ const benefits = [
 
 const Meta2026Page = () => {
   return (
-    <TrainingLandingPage
-      heroBgColor="bg-ada-magicOrange2"
-      formHTML={formHTML}
-      descriptionBullets={descriptionBullets}
-      benefits={benefits}
-      heroLeft={
+    <>
+      <SEO title="Meta 2026 - Mini-kurs" />
+      <TrainingLandingPage
+        heroBgColor="bg-ada-magicOrange2"
+        formHTML={formHTML}
+        descriptionBullets={descriptionBullets}
+        benefits={benefits}
+        heroLeft={
         <>
           <p className="text-[20px] lg:text-[24px] font-bold text-black mb-4">
             Mini-kurs za 0zł:
@@ -68,9 +70,8 @@ const Meta2026Page = () => {
         </>
       }
     />
+    </>
   )
 }
-
-export const Head = () => <SEO title="Meta 2026 - Mini-kurs" />
 
 export default Meta2026Page

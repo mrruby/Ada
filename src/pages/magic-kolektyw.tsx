@@ -13,6 +13,10 @@ import React from "react"
 const MagicCollectivePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <SEO
+        title="Magic: Marketing Ads Girls Inside Collective"
+        image="https://adrianna.com.pl/img/ada_purple.webp"
+      />
       <MaxWithBgColorContainer bgColor="bg-ada-white2 reltive">
         <div className="z-10 relative">
           <MagicTitle version={3} />
@@ -69,12 +73,5 @@ const MagicCollectivePage = () => {
     </Layout>
   )
 }
-
-export const Head = () => (
-  <SEO
-    title="Magic: Marketing Ads Girls Inside Collective"
-    image="https://adrianna.com.pl/img/ada_purple.webp"
-  />
-)
 
 export default MagicCollectivePage

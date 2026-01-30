@@ -54,9 +54,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-scroll-reveal`,
 
     {
       resolve: `gatsby-plugin-manifest`,

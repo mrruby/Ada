@@ -34,6 +34,7 @@ const MentoringPage = () => {
       flowerBlue10={true}
       flowerBlue11={true}
     >
+      <SEO title="Meta Ads Masters Mentoring" />
       <MastermindBanner version={2} />
       <IconText version={1} />
       <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
@@ -92,7 +93,5 @@ const MentoringPage = () => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Meta Ads Masters Mentoring" />
 
 export default MentoringPage

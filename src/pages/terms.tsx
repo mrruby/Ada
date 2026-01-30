@@ -20,6 +20,7 @@ const TermsPage = ({
 }: TermsData) => {
   return (
     <Layout>
+      <SEO title="Polityka prywatności & plików cookies" />
       <MaxWithBgColorContainer>
         <LegalLayout markdown={rawMarkdownBody} />
       </MaxWithBgColorContainer>
@@ -28,8 +29,6 @@ const TermsPage = ({
 }
 
 export default TermsPage
-
-export const Head = () => <SEO title="Polityka prywatności & plików cookies" />
 
 export const termsQuery = graphql`
   query {

@@ -51,6 +51,7 @@ const AdsyAndChill = () => {
       drinks={true}
       showHeaderAndFooter={false}
     >
+      <SEO title="Adsy&chill 5 reklam oto" />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <div className="flex flex-col items-center mt-16">
           <iframe
@@ -124,7 +125,5 @@ const AdsyAndChill = () => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Adsy&chill 5 reklam oto" />
 
 export default AdsyAndChill

@@ -17,6 +17,10 @@ import React from "react"
 const MagicWebinarPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <SEO
+        title="OD PASJI DO ZYSKU: Zwiększ sprzedaż bez ciągłego podnoszenia budżetu reklamowego"
+        image="https://adrianna.com.pl/img/ada_purple.webp"
+      />
       <MagicWebinar1 />
       <MagicWebinar2 />
       <MagicWebinar3 />
@@ -32,11 +36,5 @@ const MagicWebinarPage = () => {
     </Layout>
   )
 }
-export const Head = () => (
-  <SEO
-    title="OD PASJI DO ZYSKU: Zwiększ sprzedaż bez ciągłego podnoszenia budżetu reklamowego"
-    image="https://adrianna.com.pl/img/ada_purple.webp"
-  />
-)
 
 export default MagicWebinarPage

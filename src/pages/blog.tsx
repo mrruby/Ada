@@ -59,6 +59,7 @@ const BlogPage = () => {
 
   return (
     <Layout flowerBlue={true} flowerBlue3={true} flowerWhite={true}>
+      <SEO title="Blog" />
       <MaxWithBgColorContainer>
         <CustomBanner
           title="Hej, tu Ada!"
@@ -106,7 +107,5 @@ const BlogPage = () => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Blog" />
 
 export default BlogPage

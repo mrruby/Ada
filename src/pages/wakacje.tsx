@@ -26,6 +26,7 @@ const MasterclassPage = () => {
       ball2={true}
       arrow={true}
     >
+      <SEO title="Szkolenie - Niech kampanie pracują na moje wakacje!" />
       <div className="pt-[70px] md:pt-[50px]">
         <CountdownBanner />
       </div>
@@ -54,9 +55,5 @@ const MasterclassPage = () => {
     </Layout>
   )
 }
-
-export const Head = () => (
-  <SEO title="Szkolenie - Niech kampanie pracują na moje wakacje!" />
-)
 
 export default MasterclassPage

@@ -29,7 +29,7 @@ const BlogPage = ({
   data: {
     markdownRemark: {
       rawMarkdownBody,
-      frontmatter: { title, date, tags },
+      frontmatter: { title, date, tags, description },
       fields: { slug },
     },
   },
@@ -41,6 +41,7 @@ const BlogPage = ({
   }
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <MaxWithBgColorContainer extraStyle="pt-[50px]">
         <BlogPostLayout
           title={title}
@@ -55,14 +56,6 @@ const BlogPage = ({
     </Layout>
   )
 }
-
-export const Head = ({
-  data: {
-    markdownRemark: {
-      frontmatter: { title, description },
-    },
-  },
-}: BlogData) => <SEO title={title} description={description} />
 
 export default BlogPage
 

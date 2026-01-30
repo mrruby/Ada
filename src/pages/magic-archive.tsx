@@ -16,6 +16,10 @@ import React from "react"
 const MagicPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
+      <SEO
+        title="Magic: Poznaj… Meta Ads Girls Inside Club"
+        image="https://adrianna.com.pl/img/ada_purple.webp"
+      />
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
         <MagicTitle version={2} />
       </MaxWithBgColorContainer>
@@ -67,12 +71,5 @@ const MagicPage = () => {
     </Layout>
   )
 }
-
-export const Head = () => (
-  <SEO
-    title="Magic: Poznaj… Meta Ads Girls Inside Club"
-    image="https://adrianna.com.pl/img/ada_purple.webp"
-  />
-)
 
 export default MagicPage

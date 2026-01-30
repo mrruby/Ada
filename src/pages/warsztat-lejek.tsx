@@ -37,6 +37,7 @@ const MasterclassPage = () => {
       sun1={true}
       showHeaderAndFooter={false}
     >
+      <SEO title="Masterclass - Kevin sam w menedżerze reklam" />
       <MasterclassTime1 />
       <MasterclassBanner />
       {/* <Opinions /> */}
@@ -75,9 +76,5 @@ const MasterclassPage = () => {
     </Layout>
   )
 }
-
-export const Head = () => (
-  <SEO title="Masterclass - Kevin sam w menedżerze reklam" />
-)
 
 export default MasterclassPage

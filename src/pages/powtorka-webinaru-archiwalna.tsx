@@ -19,6 +19,7 @@ import SEO from "../components/seo"
 const WebinarReplayPageArchive = () => {
   return (
     <Layout flowerWhite2={true} flowerWhite3={true}>
+      <SEO title="Ogarnij swoje Adsy" />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <MastermindVideo
           videoUrl="https://www.youtube.com/embed/T8BlrsS4lLE?si=Cd2vxXE0l7xTJDKE"
@@ -57,7 +58,5 @@ const WebinarReplayPageArchive = () => {
     </Layout>
   )
 }
-
-export const Head = () => <SEO title="Ogarnij swoje Adsy" />
 
 export default WebinarReplayPageArchive

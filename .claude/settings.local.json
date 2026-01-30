@@ -26,7 +26,25 @@
       "Bash(brew list:*)",
       "Bash(git checkout:*)",
       "WebFetch(domain:klublokalnychfirm.pl)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(yarn install)",
+      "Bash(yarn gatsby clean:*)",
+      "Bash(npm view:*)",
+      "Bash(npm info:*)",
+      "Bash(timeout 120 yarn gatsby develop:*)",
+      "Bash(node -e:*)",
+      "Bash(yarn gatsby develop:*)",
+      "Bash(yarn gatsby build:*)",
+      "Bash(for:*)",
+      "Bash(do)",
+      "Bash(if ! grep -q \"export const Head\" \"$file\")",
+      "Bash(then)",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(tr:*)",
+      "WebFetch(domain:develop--ecstatic-darwin-4cecea.netlify.app)"
     ],
     "deny": []
   }
