@@ -580,8 +580,10 @@ const MasterclassFAQ = ({
   ]
 
   const renderList = (list: ListItem[]) => {
-    return list.map((item, index) => (
-      <Accordion key={index} question={item.question} answer={item.answer} />
+    return list.map((item) => (
+      <li key={item.question} className="list-none">
+        <Accordion question={item.question} answer={item.answer} />
+      </li>
     ))
   }
 

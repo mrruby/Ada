@@ -48,7 +48,13 @@
       "Bash(git lfs:*)",
       "Bash(identify:*)",
       "Bash(npx sharp-cli --version)",
-      "Bash(npx sharp-cli:*)"
+      "Bash(npx sharp-cli:*)",
+      "WebFetch(domain:web.dev)",
+      "WebFetch(domain:www.gatsbyjs.com)",
+      "WebSearch",
+      "WebFetch(domain:developer.chrome.com)",
+      "WebFetch(domain:css-tricks.com)",
+      "Bash(yarn develop:*)"
     ],
     "deny": []
   }
