@@ -11,12 +11,12 @@ const MagicComments = ({ version }: { version: number }) => {
             Zobacz przykładowe pytania i odpowiedzi!
           </h2>
           <StaticImage
-            loading="eager"
             src="../../images/pyt-odp.webp"
             alt="Przykładowe pytania i odpowiedzi z MAGIC"
             placeholder="blurred"
+            width={500}
             formats={["auto", "webp", "avif"]}
-            quality={100}
+            quality={75}
             className="max-w-4xl -my-8"
           />
           <Button

@@ -114,12 +114,11 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               Przeczytaj, co <b>Magda</b> mówi o <b>MAGIC:</b>
             </Typography>
             <StaticImage
-              loading="eager"
               src="../../images/opiniaMagdy.webp"
               alt="Opinia Magdy o MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={90}
+              quality={75}
               width={800}
               className="max-w-4xl my-4"
             />

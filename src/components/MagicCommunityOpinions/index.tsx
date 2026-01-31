@@ -69,7 +69,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -77,7 +78,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -85,7 +87,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -93,7 +96,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
           </div>
@@ -104,7 +108,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -112,7 +117,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -120,7 +126,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -128,7 +135,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
           </div>
@@ -139,7 +147,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -147,7 +156,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -155,7 +165,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
             <StaticImage
@@ -163,7 +174,8 @@ const MagicCommunityOpinions = ({
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={75}
+              width={400}
               className="w-full"
             />
           </div>

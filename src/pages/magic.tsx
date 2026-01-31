@@ -1,22 +1,46 @@
+import React, { lazy, Suspense } from "react"
 import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
-import MagicBanner1 from "components/MagicBanner"
-import MagicBanner2 from "components/MagicBanner2"
-import MagicBanner5 from "components/MagicBanner5"
-import MagicBioBanner from "components/MagicBioBanner"
-import MagicCaseStudies from "components/MagicCaseStudies"
-import MagicComments from "components/MagicComments"
-import MagicCommunityOpinions from "components/MagicCommunityOpinions"
-import MagicDateBanner from "components/MagicDateBanner"
-import MagicFinalCTA from "components/MagicFinalCTA"
+import MagicStickyBar from "components/MagicStickyBar"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
-import MagicStickyBar from "components/MagicStickyBar"
-import MagicVideo from "components/MagicVideo"
-import MagicWhy from "components/MagicWhy"
-import MasterclassFAQ from "components/MasterclassFAQ"
 import SEO from "components/seo"
-import React from "react"
+
+// Lazy load below-fold component bundles (3 instead of 12)
+const MainContent = lazy(() => import("components/MagicBelowFold/MainContent"))
+const SocialProof = lazy(() => import("components/MagicBelowFold/SocialProof"))
+const Conversion = lazy(() => import("components/MagicBelowFold/Conversion"))
+
+// Skeleton fallbacks with proper heights and background colors to prevent CLS
+const MainContentSkeleton = () => (
+  <>
+    <div className="bg-ada-pink8 min-h-[400px]" />
+    <div className="bg-ada-white3 min-h-[300px]" />
+    <div className="bg-ada-pink8 min-h-[400px]" />
+    <div className="bg-ada-white3 min-h-[250px]" />
+    <div className="bg-ada-pink8 min-h-[250px]" />
+    <div className="bg-magic min-h-[600px]" />
+  </>
+)
+
+const SocialProofSkeleton = () => (
+  <>
+    <div className="bg-ada-pink8 min-h-[500px]" />
+    <div className="bg-ada-white3 min-h-[400px]" />
+    <div className="bg-ada-pink8 min-h-[500px]" />
+    <div className="bg-ada-white3 min-h-[400px]" />
+    <div className="bg-ada-magicPurple4 min-h-[600px]" />
+    <div className="bg-ada-magicPink4 min-h-[600px]" />
+  </>
+)
+
+const ConversionSkeleton = () => (
+  <>
+    <div className="bg-ada-pink8 min-h-[400px]" />
+    <div className="bg-ada-light-pink min-h-[400px]" />
+    <div className="bg-ada-white3 min-h-[300px]" />
+  </>
+)
 
 const MagicSalePage = () => {
   return (
@@ -31,57 +55,23 @@ const MagicSalePage = () => {
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner version={1} />
         </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-          <MagicVideo />
-        </MaxWithBgColorContainer>
-        <div className="bg-ada-white3">
-          <MagicBanner1 version={4} />
-        </div>
-        <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-          <MagicWhy part={9} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-white3">
-          <MagicDateBanner version={3} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-          <MagicDateBanner version={4} />
-        </MaxWithBgColorContainer>
-        <div className="bg-magic">
-          <MaxWithBgColorContainer bgColor="bg-transparent">
-            <MagicWhy part={12} />
-          </MaxWithBgColorContainer>
-        </div>
-        <div className="bg-ada-pink8">
-          <MagicComments version={1} />
-        </div>
-        <MaxWithBgColorContainer bgColor="bg-ada-white3">
-          <MagicBioBanner version={3} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-          <MagicCaseStudies />
-        </MaxWithBgColorContainer>
+
+        <Suspense fallback={<MainContentSkeleton />}>
+          <MainContent />
+        </Suspense>
+
         <div id="magic-package" className="scroll-mt-14"></div>
         <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
           <MagicSaleBanner version={2} />
         </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-white3">
-          <MagicCommunityOpinions />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-magicPurple4">
-          <MagicBanner5 version={1} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-magicPink4">
-          <MagicBanner5 version={2} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-          <MagicBanner2 version={2} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
-          <MasterclassFAQ version={5} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-white3">
-          <MagicFinalCTA />
-        </MaxWithBgColorContainer>
+
+        <Suspense fallback={<SocialProofSkeleton />}>
+          <SocialProof />
+        </Suspense>
+
+        <Suspense fallback={<ConversionSkeleton />}>
+          <Conversion />
+        </Suspense>
       </div>
     </Layout>
   )

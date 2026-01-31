@@ -14,7 +14,10 @@ module.exports = {
       options: {
         enableListener: true,
         mode: "async",
-        preconnect: ["https://fonts.gstatic.com"],
+        preconnect: [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+        ],
         web: [
           {
             name: "Montserrat",

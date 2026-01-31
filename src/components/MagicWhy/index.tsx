@@ -165,8 +165,9 @@ const MagicWhy = ({ part }: { part: number }) => {
             src="../../images/pyt-odp.webp"
             alt=""
             placeholder="blurred"
+            width={500}
             formats={["auto", "webp", "avif"]}
-            quality={100}
+            quality={75}
             className="max-w-4xl"
           />
           <Button
@@ -418,8 +419,9 @@ const MagicWhy = ({ part }: { part: number }) => {
             src="../../images/pyt-odp.webp"
             alt=""
             placeholder="blurred"
+            width={500}
             formats={["auto", "webp", "avif"]}
-            quality={100}
+            quality={75}
             className="max-w-4xl"
           />
         </div>
@@ -440,10 +442,9 @@ const MagicWhy = ({ part }: { part: number }) => {
             src="../../images/magic_kalendarz.webp"
             alt=""
             placeholder="blurred"
-            width={1499}
-            height={821}
+            width={500}
             formats={["auto", "webp", "avif"]}
-            quality={100}
+            quality={75}
           />
         </div>
       )}

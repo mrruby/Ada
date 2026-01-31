@@ -296,9 +296,8 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               src="../../images/magic_adsy.webp"
               alt="Ada w telefonie"
               placeholder="blurred"
-              width={500}
-              height={667}
-              quality={85}
+              width={450}
+              quality={75}
               className="object-contain ml-0 md:ml-14 mt-8 md:mt-40"
             />
           </div>

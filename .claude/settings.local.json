@@ -54,7 +54,11 @@
       "WebSearch",
       "WebFetch(domain:developer.chrome.com)",
       "WebFetch(domain:css-tricks.com)",
-      "Bash(yarn develop:*)"
+      "Bash(yarn develop:*)",
+      "Bash(du -h:*)",
+      "Bash(wc:*)",
+      "Bash(du:*)",
+      "Bash(file:*)"
     ],
     "deny": []
   }

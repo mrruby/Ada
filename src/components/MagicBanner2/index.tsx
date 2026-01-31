@@ -136,14 +136,13 @@ const MagicBanner2 = ({ version }: { version: number }) => {
             </div>
             <div className="z-1 md:absolute -left-12 top-40">
               <StaticImage
-                loading="eager"
                 src="../../images/ada_magic.webp"
                 alt="Ada w telefonie"
                 placeholder="blurred"
                 width={620}
                 height={600}
                 formats={["auto", "webp", "avif"]}
-                quality={100}
+                quality={75}
               />
             </div>
             <div className="w-full flex justify-end">
@@ -205,14 +204,12 @@ const MagicBanner2 = ({ version }: { version: number }) => {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 md:-mx-32 lg:-mx-48">
               <div className="w-full md:w-auto flex-shrink-0 px-4 md:pl-0 md:pr-8 -mb-12 hidden lg:block">
                 <StaticImage
-                  loading="eager"
                   src="../../images/magic_adsy2.webp"
                   alt="Ada w telefonie"
                   placeholder="blurred"
-                  width={540}
-                  height={722}
+                  width={450}
                   formats={["auto", "webp", "avif"]}
-                  quality={100}
+                  quality={75}
                 />
               </div>
               <div className="w-full md:w-3/4 flex flex-col justify-center px-4 md:px-0">

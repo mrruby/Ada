@@ -27,7 +27,7 @@ const referencesList: IReferencesList[] = [
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
-        quality={100}
+        quality={75}
       />
     ),
   },
@@ -40,7 +40,7 @@ const referencesList: IReferencesList[] = [
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
-        quality={100}
+        quality={75}
       />
     ),
   },
@@ -53,7 +53,7 @@ const referencesList: IReferencesList[] = [
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
-        quality={100}
+        quality={75}
       />
     ),
   },
@@ -66,7 +66,7 @@ const referencesList: IReferencesList[] = [
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
-        quality={100}
+        quality={75}
       />
     ),
   },
@@ -79,7 +79,7 @@ const referencesList: IReferencesList[] = [
         width={1414}
         height={2000}
         formats={["auto", "webp", "avif"]}
-        quality={100}
+        quality={75}
       />
     ),
   },

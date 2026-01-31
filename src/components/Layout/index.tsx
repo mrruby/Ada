@@ -1,8 +1,9 @@
-import React from "react"
+import React, { lazy, Suspense } from "react"
 import Footer from "../Footer"
 import Header from "../Header"
 import { LayoutElements } from "../Layout/elements"
-import Cookies from "components/Cookies"
+
+const Cookies = lazy(() => import("components/Cookies"))
 
 type LayoutElementsProps = {
   flowerBlue?: boolean
@@ -131,7 +132,9 @@ const Layout: React.FC<Props> = ({
 }) => {
   return (
     <div className="antialiased min-h-screen max-w-full overflow-hidden flex flex-col scroll-smooth relative text-ada-blue">
-      <Cookies />
+      <Suspense fallback={null}>
+        <Cookies />
+      </Suspense>
       {showHeaderAndFooter && <Header />}
       {children}
       {showHeaderAndFooter && <Footer />}

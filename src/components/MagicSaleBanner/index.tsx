@@ -108,8 +108,9 @@ const MagicSaleBanner = ({
                 src="../../images/ada-magic-1.webp"
                 alt="Marketing Ads Girls Inside Club"
                 placeholder="blurred"
-                quality={85}
-                width={600}
+                quality={75}
+                width={500}
+                loading="eager"
                 className="w-full h-auto rounded-[24px]"
               />
             </div>
