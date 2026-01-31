@@ -442,7 +442,7 @@ const MagicWhy = ({ part }: { part: number }) => {
             src="../../images/magic_kalendarz.webp"
             alt=""
             placeholder="blurred"
-            width={500}
+            width={1000}
             formats={["auto", "webp", "avif"]}
             quality={75}
           />
