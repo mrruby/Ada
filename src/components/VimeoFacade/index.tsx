@@ -4,14 +4,17 @@ interface VimeoFacadeProps {
   videoId: string
   title: string
   aspectRatio?: "16:9" | "9:16"
+  eager?: boolean
 }
 
 const VimeoFacade = ({
   videoId,
   title,
   aspectRatio = "16:9",
+  eager = false,
 }: VimeoFacadeProps) => {
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(eager)
+  const [shouldAutoplay, setShouldAutoplay] = useState(false)
   const preconnectAddedRef = useRef(false)
 
   const thumbnailUrl = `https://vumbnail.com/${videoId}.jpg`
@@ -22,6 +25,7 @@ const VimeoFacade = ({
   const paddingTop = aspectRatio === "16:9" ? "56.25%" : "177.78%"
 
   const handleClick = () => {
+    setShouldAutoplay(true)
     setIsLoaded(true)
   }
 
@@ -42,7 +46,7 @@ const VimeoFacade = ({
     <div style={{ padding: `${paddingTop} 0 0 0`, position: "relative" }}>
       {isLoaded ? (
         <iframe
-          src={`https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1`}
+          src={`https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&player_id=0&app_id=58479${shouldAutoplay ? "&autoplay=1" : ""}`}
           width="1920"
           height="1080"
           frameBorder="0"
@@ -87,7 +91,7 @@ const VimeoFacade = ({
             style={{
               width: "100%",
               height: "100%",
-              objectFit: "cover",
+              objectFit: "contain",
             }}
           />
           {/* Play button overlay */}

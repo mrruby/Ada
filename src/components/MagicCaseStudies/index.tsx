@@ -24,6 +24,7 @@ const VideoItem = ({ videoId }: { videoId: string }) => (
         videoId={videoId}
         title="Case study MAGIC"
         aspectRatio="9:16"
+        eager
       />
     ) : (
       <div className="relative aspect-[9/16] flex items-center justify-center text-ada-magicGrey text-center p-4">
