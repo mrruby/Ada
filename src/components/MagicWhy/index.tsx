@@ -27,100 +27,104 @@ const MagicWhy = ({ part }: { part: number }) => {
         <div className="flex flex-col items-center md:flex-row md:justify-between gap-8">
           <div className="w-full text-black">
             <div className="flex flex-col md:flex-row gap-8">
-              <ul className="max-w-md">
+              <div className="max-w-md">
                 <Typography
                   variant="h2"
                   className="mb-8 text-center animate-bounce"
                 >
                   🧑‍🎓 Przedsiębiorczyń:
                 </Typography>
-                <li className="mb-3">
-                  ✅ dla osób, które
-                  <span className="font-bold">
-                    {" "}
-                    jeszcze nie prowadziły reklam
-                  </span>{" "}
-                  i potrzebują pewnego startu w świecie płatnej promocji
-                </li>
-                <li className="mb-3">
-                  ✅ dla tych, którzy{" "}
-                  <span className="font-bold">
-                    boją się, że źle klikną i stracą budżet reklamowy
-                  </span>{" "}
-                  na nieefektywnych kampaniach
-                </li>
-                <li className="mb-3">
-                  ✅ które mają{" "}
-                  <span className="font-bold">
-                    pierwsze reklamy za sobą (lub klikały w &quot;promuj
-                    post&quot;)
-                  </span>{" "}
-                  ale nie są zadowolone z wyników
-                </li>
-                <li className="mb-3">
-                  ✅ które do tej pory
-                  <span className="font-bold">
-                    {" "}
-                    polegały głównie na działaniach organicznych
-                  </span>{" "}
-                  i chcą bezpiecznie wejść w reklamy
-                </li>
-                <li>
-                  ✅{" "}
-                  <span className="font-bold">
-                    {" "}
-                    dla osób, które zlecały reklamy na zewnątrz,
-                  </span>{" "}
-                  ale chcą przejąć kontrolę nad swoim budżetem reklamowym
-                </li>
-              </ul>
-              <ul className="max-w-md">
+                <ul>
+                  <li className="mb-3">
+                    ✅ dla osób, które
+                    <span className="font-bold">
+                      {" "}
+                      jeszcze nie prowadziły reklam
+                    </span>{" "}
+                    i potrzebują pewnego startu w świecie płatnej promocji
+                  </li>
+                  <li className="mb-3">
+                    ✅ dla tych, którzy{" "}
+                    <span className="font-bold">
+                      boją się, że źle klikną i stracą budżet reklamowy
+                    </span>{" "}
+                    na nieefektywnych kampaniach
+                  </li>
+                  <li className="mb-3">
+                    ✅ które mają{" "}
+                    <span className="font-bold">
+                      pierwsze reklamy za sobą (lub klikały w &quot;promuj
+                      post&quot;)
+                    </span>{" "}
+                    ale nie są zadowolone z wyników
+                  </li>
+                  <li className="mb-3">
+                    ✅ które do tej pory
+                    <span className="font-bold">
+                      {" "}
+                      polegały głównie na działaniach organicznych
+                    </span>{" "}
+                    i chcą bezpiecznie wejść w reklamy
+                  </li>
+                  <li>
+                    ✅{" "}
+                    <span className="font-bold">
+                      {" "}
+                      dla osób, które zlecały reklamy na zewnątrz,
+                    </span>{" "}
+                    ale chcą przejąć kontrolę nad swoim budżetem reklamowym
+                  </li>
+                </ul>
+              </div>
+              <div className="max-w-md">
                 <Typography
                   variant="h2"
                   className="mb-8 text-center animate-bounce"
                 >
                   🧑‍🎓 Marketerek:
                 </Typography>
-                <li className="mb-3">
-                  ✅ które chcą
-                  <span className="font-bold">
-                    {" "}
-                    poznać najnowsze trendy i narzędzia reklamowe, wyprzedzając
-                    konkurencję{" "}
-                  </span>
-                </li>
-                <li className="mb-3">
-                  ✅{" "}
-                  <span className="font-bold">
-                    dla social media managerek, wirtualnych asystentek,
-                  </span>{" "}
-                  które otrzymują zapytania o reklamy i{" "}
-                  <span className="font-bold">
-                    chcą zarabiać na prowadzeniu kampanii{" "}
-                  </span>
-                </li>
-                <li className="mb-3">
-                  ✅ dla tych, którzy
-                  <span className="font-bold">
-                    {" "}
-                    chcą nauczyć się lepiej gospodarować budżetem
-                  </span>{" "}
-                  i optymalizować koszty pozyskania klienta
-                </li>
-                <li className="mb-3">
-                  ✅ które chcą{" "}
-                  <span className="font-bold"> skonsultować swoje wyniki</span>{" "}
-                  i dowiedzieć się, jak je poprawić
-                </li>
-                <li className="mb-3">
-                  ✅ dla tych, którzy
-                  <span className="font-bold">
-                    {" "}
-                    już prowadzą reklamy i chcą robić to lepiej,
-                  </span>{" "}
-                  osiągając wyższe ROAS
-                </li>
-              </ul>
+                <ul>
+                  <li className="mb-3">
+                    ✅ które chcą
+                    <span className="font-bold">
+                      {" "}
+                      poznać najnowsze trendy i narzędzia reklamowe, wyprzedzając
+                      konkurencję{" "}
+                    </span>
+                  </li>
+                  <li className="mb-3">
+                    ✅{" "}
+                    <span className="font-bold">
+                      dla social media managerek, wirtualnych asystentek,
+                    </span>{" "}
+                    które otrzymują zapytania o reklamy i{" "}
+                    <span className="font-bold">
+                      chcą zarabiać na prowadzeniu kampanii{" "}
+                    </span>
+                  </li>
+                  <li className="mb-3">
+                    ✅ dla tych, którzy
+                    <span className="font-bold">
+                      {" "}
+                      chcą nauczyć się lepiej gospodarować budżetem
+                    </span>{" "}
+                    i optymalizować koszty pozyskania klienta
+                  </li>
+                  <li className="mb-3">
+                    ✅ które chcą{" "}
+                    <span className="font-bold"> skonsultować swoje wyniki</span>{" "}
+                    i dowiedzieć się, jak je poprawić
+                  </li>
+                  <li className="mb-3">
+                    ✅ dla tych, którzy
+                    <span className="font-bold">
+                      {" "}
+                      już prowadzą reklamy i chcą robić to lepiej,
+                    </span>{" "}
+                    osiągając wyższe ROAS
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -246,14 +250,14 @@ const MagicWhy = ({ part }: { part: number }) => {
               <div
                 className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromLeft" : ""}`}
               >
-                <ul className="max-w-md bg-ada-white3 py-8 border-[3px] border-ada-magicPurple4 ">
+                <div className="max-w-md bg-ada-white3 py-8 border-[3px] border-ada-magicPurple4 ">
                   <Typography
                     variant="h2"
                     className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
                     🧑‍🎓 Przedsiębiorczyń:
                   </Typography>
-                  <div className="px-8">
+                  <ul className="px-8">
                     <li className="mb-3">
                       ✅ dla osób, które
                       <span className="font-bold">
@@ -293,8 +297,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                       </span>{" "}
                       ale chcą przejąć kontrolę nad swoim budżetem reklamowym
                     </li>
-                  </div>
-                </ul>
+                  </ul>
+                </div>
                 <Button
                   type="button"
                   text={
@@ -310,14 +314,14 @@ const MagicWhy = ({ part }: { part: number }) => {
               <div
                 className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromRight" : ""}`}
               >
-                <ul className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] border-ada-magicPink4">
+                <div className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] border-ada-magicPink4">
                   <Typography
                     variant="h2"
                     className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
                     🧑‍🎓 Marketerek:
                   </Typography>
-                  <div className="px-8">
+                  <ul className="px-8">
                     <li className="mb-3">
                       ✅ które chcą
                       <span className="font-bold">
@@ -360,8 +364,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                       </span>{" "}
                       osiągając wyższe ROAS
                     </li>
-                  </div>
-                </ul>
+                  </ul>
+                </div>
                 <Button
                   type="button"
                   text={
@@ -552,7 +556,7 @@ const MagicWhy = ({ part }: { part: number }) => {
             />
           </div>
           <div className="flex justify-center items-center absolute bottom-[-120px] left-1/2 -translate-x-1/2 translate-y-[-54px] lg:-translate-y-6 w-[60px] lg:w-[80px]">
-            <a href="#pakiety">
+            <a href="#pakiety" aria-label="Przejdź do sekcji pakiety">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
                 alt=""

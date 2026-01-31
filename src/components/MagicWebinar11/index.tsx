@@ -35,7 +35,9 @@ const MagicWebinar11 = () => {
 
   const renderList = (list: ListItem[]) => {
     return list.map((item, index) => (
-      <Accordion key={index} question={item.question} answer={item.answer} />
+      <li key={index}>
+        <Accordion question={item.question} answer={item.answer} />
+      </li>
     ))
   }
 

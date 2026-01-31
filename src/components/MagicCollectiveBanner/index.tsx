@@ -1144,7 +1144,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             </div>
           </div>
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 lg:-translate-y-6">
-            <a href="#pakiety">
+            <a href="#pakiety" aria-label="Przejdź do sekcji pakiety">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
                 alt=""

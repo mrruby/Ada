@@ -603,7 +603,7 @@ const IconText = ({ version }: { version: number }) => {
           </div>
 
           <div className="flex justify-center items-center -translate-y-6 mt-8 mb-2 mx-auto w-full">
-            <a href="#pakiety">
+            <a href="#pakiety" aria-label="Przejdź do sekcji pakiety">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
                 alt=""

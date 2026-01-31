@@ -1,4 +1,5 @@
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
+import VimeoFacade from "components/VimeoFacade"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import React from "react"
@@ -118,7 +119,8 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               alt="Opinia Magdy o MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
-              quality={100}
+              quality={90}
+              width={800}
               className="max-w-4xl my-4"
             />
             <Button
@@ -159,15 +161,13 @@ const MagicBanner5 = ({ version }: { version: number }) => {
             >
               Posłuchaj, co <b>Magda</b> mówi o <b>MAGIC:</b>
             </Typography>
-            <div className="relative w-full max-w-[380px] overflow-hidden aspect-[9/16] rounded-lg mx-auto">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src={`https://player.vimeo.com/video/1155023182?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+            <div className="w-full max-w-[380px] overflow-hidden rounded-lg mx-auto">
+              <VimeoFacade
+                videoId="1155023182"
+                title="Opinia Magdy o MAGIC"
+                aspectRatio="9:16"
               />
             </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
             <Button
               type="button"
               text={<span className="!font-extrabold"> Dołączam!</span>}

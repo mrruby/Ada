@@ -1,6 +1,7 @@
 import React from "react"
 import Carousel from "react-multi-carousel"
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
+import VimeoFacade from "components/VimeoFacade"
 
 const CASE_STUDY_VIDEOS = [
   "1155918940",
@@ -17,16 +18,15 @@ const videoResponsive = {
 }
 
 const VideoItem = ({ videoId }: { videoId: string }) => (
-  <div className="relative w-full max-w-[340px] overflow-hidden aspect-[9/16] rounded-lg mx-auto bg-ada-magicGrey2">
+  <div className="w-full max-w-[340px] overflow-hidden rounded-lg mx-auto bg-ada-magicGrey2">
     {videoId ? (
-      <iframe
-        className="absolute top-0 left-0 w-full h-full"
-        src={`https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
+      <VimeoFacade
+        videoId={videoId}
+        title="Case study MAGIC"
+        aspectRatio="9:16"
       />
     ) : (
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-ada-magicGrey text-center p-4">
+      <div className="relative aspect-[9/16] flex items-center justify-center text-ada-magicGrey text-center p-4">
         <span className="text-sm">Wkrótce</span>
       </div>
     )}

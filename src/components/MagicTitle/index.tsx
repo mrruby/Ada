@@ -1,3 +1,4 @@
+import VimeoFacade from "components/VimeoFacade"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
@@ -181,18 +182,12 @@ const MagicTitle = ({ version }: { version: number }) => {
 
             {/* Right image (phone mockup) */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end mb-4">
-              <div
-                className="relative w-full max-w-[360px] overflow-hidden"
-                style={{ aspectRatio: "9 / 16" }}
-              >
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src={
-                    "https://player.vimeo.com/video/1050085535?h=b0386215c3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                  }
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+              <div className="w-full max-w-[360px] overflow-hidden rounded-lg">
+                <VimeoFacade
+                  videoId="1050085535"
+                  title="MAGIC wprowadzenie"
+                  aspectRatio="9:16"
+                />
               </div>
             </div>
           </div>
@@ -307,6 +302,7 @@ const MagicTitle = ({ version }: { version: number }) => {
                 }
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                title="MAGIC powtórka webinaru"
               ></iframe>
             </div>
             <Typography variant="h3" className="mt-2 mb-6 text-white">

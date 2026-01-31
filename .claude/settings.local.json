@@ -45,7 +45,10 @@
       "Bash(pkill:*)",
       "Bash(tr:*)",
       "WebFetch(domain:develop--ecstatic-darwin-4cecea.netlify.app)",
-      "Bash(git lfs:*)"
+      "Bash(git lfs:*)",
+      "Bash(identify:*)",
+      "Bash(npx sharp-cli --version)",
+      "Bash(npx sharp-cli:*)"
     ],
     "deny": []
   }
