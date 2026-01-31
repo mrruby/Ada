@@ -4,7 +4,7 @@ import MagicCollectiveBanner from "components/MagicCollectiveBanner"
 import SEO from "components/seo"
 import React from "react"
 
-const MagicInvitationePage = (): JSX.Element => {
+const MagicInvitationePage = (): React.JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
       <SEO

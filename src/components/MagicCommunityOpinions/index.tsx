@@ -37,7 +37,12 @@ const MagicCommunityOpinions = ({
   const config = variantConfig[variant]
 
   return (
-    <Section bgColor={config.bgColor} className="pt-24 md:pt-32" id="opinie" padding="py-8 md:py-12 px-6">
+    <Section
+      bgColor={config.bgColor}
+      className="pt-24 md:pt-32"
+      id="opinie"
+      padding="py-8 md:py-12 px-6"
+    >
       <div className="w-full">
         {variant === "sowa" ? (
           <h2

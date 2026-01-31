@@ -6,7 +6,11 @@ interface VimeoFacadeProps {
   aspectRatio?: "16:9" | "9:16"
 }
 
-const VimeoFacade = ({ videoId, title, aspectRatio = "16:9" }: VimeoFacadeProps) => {
+const VimeoFacade = ({
+  videoId,
+  title,
+  aspectRatio = "16:9",
+}: VimeoFacadeProps) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const preconnectAddedRef = useRef(false)
 

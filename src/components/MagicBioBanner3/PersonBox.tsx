@@ -5,7 +5,7 @@ import { CircleImage } from "./circleImages"
 type PersonBoxProps = {
   img: string
   name: string
-  description: JSX.Element
+  description: React.JSX.Element
 }
 const PersonBox = ({ img, name, description }: PersonBoxProps) => {
   return (

@@ -5,10 +5,10 @@ import React from "react"
 type MagicInfoBoxProps = {
   title: string
   color: string
-  subtitle: JSX.Element
-  subtitle2: JSX.Element
-  content: JSX.Element
-  description: JSX.Element
+  subtitle: React.JSX.Element
+  subtitle2: React.JSX.Element
+  content: React.JSX.Element
+  description: React.JSX.Element
 }
 
 const MagicInfoBox = ({

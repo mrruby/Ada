@@ -56,20 +56,20 @@ const Meta2026Page = () => {
         descriptionBullets={descriptionBullets}
         benefits={benefits}
         heroLeft={
-        <>
-          <p className="text-[20px] lg:text-[24px] font-bold text-black mb-4">
-            Mini-kurs za 0zł:
-          </p>
-          <h1 className="text-[32px] lg:text-[48px] font-anton font-normal leading-[125%] text-black">
-            W 45 minut pokażę Ci, jak{" "}
-            <span className="text-ada-magicPurple4">
-              zrozumieć reklamy Meta w 2026 roku
-            </span>{" "}
-            bez przepalania budżetu i nerwowego testowania!
-          </h1>
-        </>
-      }
-    />
+          <>
+            <p className="text-[20px] lg:text-[24px] font-bold text-black mb-4">
+              Mini-kurs za 0zł:
+            </p>
+            <h1 className="text-[32px] lg:text-[48px] font-anton font-normal leading-[125%] text-black">
+              W 45 minut pokażę Ci, jak{" "}
+              <span className="text-ada-magicPurple4">
+                zrozumieć reklamy Meta w 2026 roku
+              </span>{" "}
+              bez przepalania budżetu i nerwowego testowania!
+            </h1>
+          </>
+        }
+      />
     </>
   )
 }

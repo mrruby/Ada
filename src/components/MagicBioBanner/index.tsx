@@ -218,8 +218,7 @@ const MagicBioBanner = ({ version }: { version: number }) => {
         <div className="bg-ada-sowaNavy py-16 px-6">
           <div className="container mx-auto">
             <h2 className="font-playfair font-normal text-[48px] md:text-[64px] leading-[130%] text-center text-white uppercase">
-              Kto prowadzi{" "}
-              <span className="text-ada-sowaGold">warsztaty?</span>
+              Kto prowadzi <span className="text-ada-sowaGold">warsztaty?</span>
             </h2>
             <p className="text-center mt-6 text-white font-montserrat font-bold text-[24px] leading-[100%] max-w-2xl mx-auto">
               Nie jedna, nie dwie, nie trzy…{" "}

@@ -28,7 +28,11 @@ const MastermindVideo = ({ videoUrl, targetDate }: MastermindVideoProps) => {
         <h1 className="text-adaBase lg:text-adaTitle font-bold text-center leading-tight animate-bounce pb-8">
           Powtórka webinaru
         </h1>
-        <iframe className="w-full aspect-video" src={videoUrl} title="Powtórka webinaru"></iframe>
+        <iframe
+          className="w-full aspect-video"
+          src={videoUrl}
+          title="Powtórka webinaru"
+        ></iframe>
       </div>
     </div>
   )

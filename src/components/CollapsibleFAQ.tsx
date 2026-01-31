@@ -33,7 +33,10 @@ const CollapsibleFAQ = () => {
           </Typography>
         </div>
         {faqItems.map((item) => (
-          <details key={item.question} className="mb-4 group bg-white p-4 rounded-lg">
+          <details
+            key={item.question}
+            className="mb-4 group bg-white p-4 rounded-lg"
+          >
             <summary className="cursor-pointer font-semibold flex justify-between items-center list-none">
               <span>{item.question}</span>
               <span className="ml-2 transition-transform group-open:rotate-180">

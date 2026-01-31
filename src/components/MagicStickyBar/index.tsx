@@ -42,7 +42,8 @@ const MagicStickyBar = () => {
           🔥 Niższa cena tylko do 2.02:
         </span>
         <span className="text-ada-magicYellow font-extrabold text-lg md:text-2xl tracking-wide">
-          {pad(timeLeft.days)}d {pad(timeLeft.hours)}h {pad(timeLeft.minutes)}m {pad(timeLeft.seconds)}s
+          {pad(timeLeft.days)}d {pad(timeLeft.hours)}h {pad(timeLeft.minutes)}m{" "}
+          {pad(timeLeft.seconds)}s
         </span>
         <Button
           type="button"

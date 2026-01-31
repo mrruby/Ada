@@ -88,8 +88,8 @@ const MagicWhy = ({ part }: { part: number }) => {
                     ✅ które chcą
                     <span className="font-bold">
                       {" "}
-                      poznać najnowsze trendy i narzędzia reklamowe, wyprzedzając
-                      konkurencję{" "}
+                      poznać najnowsze trendy i narzędzia reklamowe,
+                      wyprzedzając konkurencję{" "}
                     </span>
                   </li>
                   <li className="mb-3">
@@ -112,7 +112,10 @@ const MagicWhy = ({ part }: { part: number }) => {
                   </li>
                   <li className="mb-3">
                     ✅ które chcą{" "}
-                    <span className="font-bold"> skonsultować swoje wyniki</span>{" "}
+                    <span className="font-bold">
+                      {" "}
+                      skonsultować swoje wyniki
+                    </span>{" "}
                     i dowiedzieć się, jak je poprawić
                   </li>
                   <li className="mb-3">

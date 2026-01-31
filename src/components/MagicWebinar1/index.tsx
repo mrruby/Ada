@@ -230,7 +230,13 @@ const MagicWebinar1 = ({ version = 1 }: { version?: number }) => {
       <header className={`text-white py-4 px-6 md:px-12 ${headerBgColor}`}>
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <img src={logoSrc} alt="Magic" width={192} height={48} className="h-12" />
+            <img
+              src={logoSrc}
+              alt="Magic"
+              width={192}
+              height={48}
+              className="h-12"
+            />
           </div>
         </div>
       </header>

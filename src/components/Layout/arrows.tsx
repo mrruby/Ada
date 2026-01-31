@@ -13,7 +13,11 @@ export const CustomLeftArrow = ({ onClick, outside, dark }: any) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M13.5 23L3 12.5L13.5 2" stroke="currentColor" strokeWidth="4" />
+        <path
+          d="M13.5 23L3 12.5L13.5 2"
+          stroke="currentColor"
+          strokeWidth="4"
+        />
       </svg>
     </div>
   )

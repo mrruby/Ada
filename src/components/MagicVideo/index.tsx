@@ -22,11 +22,7 @@ const MagicVideo = ({ version }: { version?: number }) => {
         ? version3VideoId
         : defaultVideoId
   const videoTitle =
-    version === 2
-      ? version2Title
-      : version === 3
-        ? version3Title
-        : defaultTitle
+    version === 2 ? version2Title : version === 3 ? version3Title : defaultTitle
 
   return (
     <Section bgColor="bg-transparent" padding="py-8 md:py-12 px-6">
