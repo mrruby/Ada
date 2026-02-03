@@ -94,18 +94,6 @@ body {
   animation: rotate 6s infinite;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(4deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 .bg-wave2-element {
   position: relative;
 }
@@ -140,18 +128,6 @@ body {
   animation: rotate 6s infinite;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(4deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 .bg-wave3-element {
   position: relative;
 }
@@ -184,18 +160,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   animation: rotate 6s infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(4deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 
 .bg-leaves-element {

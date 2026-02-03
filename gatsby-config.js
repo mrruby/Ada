@@ -100,6 +100,8 @@ module.exports = {
           "animate.css",
         ],
         purgeCSSOptions: {
+          keyframes: true,
+          variables: true,
           safelist: {
             standard: ["animate__animated", "animate__fadeInUp"],
           },

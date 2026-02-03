@@ -4,6 +4,7 @@ interface Props {
   text: string
   textStyle: string
   speed?: number
+  as?: "h1" | "h2" | "h3" | "p" | "span"
 }
 
 const useTypingEffect = (text: string, speed: number = 200) => {
@@ -49,16 +50,22 @@ const useTypingEffect = (text: string, speed: number = 200) => {
   return { displayedText, cursorVisible }
 }
 
-const TypingAnimation: React.FC<Props> = ({ text, textStyle, speed = 200 }) => {
+const TypingAnimation: React.FC<Props> = ({
+  text,
+  textStyle,
+  speed = 200,
+  as = "h3",
+}) => {
   const { displayedText, cursorVisible } = useTypingEffect(text, speed)
+  const HeadingTag = as
 
   return (
     <div className="relative inline-block min-w-[200px]">
       {/* Tekst animowany */}
-      <h3 className={`${textStyle} xl:whitespace-pre`}>
+      <HeadingTag className={`${textStyle} xl:whitespace-pre`}>
         {displayedText}
         {cursorVisible && <span className="animate-blink">|</span>}
-      </h3>
+      </HeadingTag>
     </div>
   )
 }

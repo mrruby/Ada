@@ -1,14 +1,8 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
-import React, { useEffect } from "react"
+import React from "react"
 import Section from "../shared/Section"
-
-declare global {
-  interface Window {
-    Koalendar: any
-  }
-}
 
 const MagicSaleBanner = ({
   version,
@@ -17,37 +11,6 @@ const MagicSaleBanner = ({
   version: number
   url?: string
 }) => {
-  // Load Koalendar script for version 5
-  useEffect(() => {
-    if (version === 5) {
-      // Load Koalendar script
-      const script1 = document.createElement("script")
-      script1.innerHTML = `window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};`
-      document.body.appendChild(script1)
-
-      const script2 = document.createElement("script")
-      script2.src = "https://koalendar.com/assets/widget.js"
-      script2.async = true
-      document.body.appendChild(script2)
-
-      script2.onload = () => {
-        // Initialize Koalendar after script loads
-        if (window.Koalendar) {
-          window.Koalendar("inline", {
-            url: "https://koalendar.com/e/porozmawiajmy-o-wspolpracy",
-            selector: "#inline-widget-porozmawiajmy-o-wspolpracy",
-          })
-        }
-      }
-
-      // Cleanup
-      return () => {
-        document.body.removeChild(script1)
-        document.body.removeChild(script2)
-      }
-    }
-  }, [version])
-
   return (
     <>
       {version == 1 && (
@@ -110,6 +73,8 @@ const MagicSaleBanner = ({
                 placeholder="blurred"
                 quality={75}
                 width={416}
+                height={378}
+                breakpoints={[240, 320, 416]}
                 sizes="(min-width: 1024px) 416px, 90vw"
                 loading="eager"
                 fetchPriority="high"
@@ -125,6 +90,7 @@ const MagicSaleBanner = ({
           <TypingAnimation
             text="Dołącz do MAGIC:"
             textStyle="text-adaTitle text-black font-bold"
+            as="h2"
           />
           <div className="relative my-6">
             <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12">
