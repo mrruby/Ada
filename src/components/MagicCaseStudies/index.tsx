@@ -1,5 +1,6 @@
 import React from "react"
 import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import VimeoFacade from "components/VimeoFacade"
 

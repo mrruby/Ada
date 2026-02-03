@@ -1,6 +1,7 @@
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import React from "react"
 import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import { responsive } from "values/const"
 import Question from "../../helpers/Question"
 

@@ -1,5 +1,6 @@
 import { Button } from "helpers/Button"
 import React, { useEffect, useRef, useState } from "react"
+import "animate.css/animate.min.css"
 
 const useInView = (threshold = 0.1) => {
   const ref = useRef<HTMLDivElement>(null)

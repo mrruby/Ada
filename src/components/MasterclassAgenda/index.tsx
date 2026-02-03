@@ -6,6 +6,7 @@ import { Button } from "helpers/Button"
 import CountdownTimer from "helpers/CountdownTimer"
 import React from "react"
 import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import { responsive } from "values/const"
 import Package from "../../helpers/Package"
 

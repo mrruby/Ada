@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import React from "react"
 import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
@@ -164,7 +165,8 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               <VimeoFacade
                 videoId="1155023182"
                 title="Opinia Magdy o MAGIC"
-                aspectRatio="9:16"
+                aspectRatio="16:9"
+                eager
               />
             </div>
             <Button

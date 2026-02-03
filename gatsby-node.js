@@ -65,7 +65,7 @@ const wrapper = (promise) =>
     return result
   })
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
   actions.setWebpackConfig({
     module: {
       rules: [
@@ -79,6 +79,18 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       ],
     },
   })
+
+  const config = getConfig()
+  const miniCssExtractPlugin = config.plugins.find(
+    (plugin) =>
+      plugin && plugin.constructor && plugin.constructor.name === "MiniCssExtractPlugin"
+  )
+
+  if (miniCssExtractPlugin) {
+    miniCssExtractPlugin.options.ignoreOrder = true
+  }
+
+  actions.replaceWebpackConfig(config)
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {

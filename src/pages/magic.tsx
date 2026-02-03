@@ -4,6 +4,7 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicStickyBar from "components/MagicStickyBar"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
+import DeferUntilVisible from "components/shared/DeferUntilVisible"
 import SEO from "components/seo"
 
 // Lazy load below-fold component bundles (3 instead of 12)
@@ -50,28 +51,43 @@ const MagicSalePage = () => {
         image="https://adrianna.com.pl/img/ada_purple.webp"
       />
       <MagicStickyBar />
-      <div className="pt-16">
+      <div className="pt-12">
         <MagicLogoHeader variant="pink" />
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner version={1} />
         </MaxWithBgColorContainer>
 
-        <Suspense fallback={<MainContentSkeleton />}>
-          <MainContent />
-        </Suspense>
+        <DeferUntilVisible
+          fallback={<MainContentSkeleton />}
+          rootMargin="800px"
+        >
+          <Suspense fallback={<MainContentSkeleton />}>
+            <MainContent />
+          </Suspense>
+        </DeferUntilVisible>
 
         <div id="magic-package" className="scroll-mt-14"></div>
         <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
           <MagicSaleBanner version={2} />
         </MaxWithBgColorContainer>
 
-        <Suspense fallback={<SocialProofSkeleton />}>
-          <SocialProof />
-        </Suspense>
+        <DeferUntilVisible
+          fallback={<SocialProofSkeleton />}
+          rootMargin="600px"
+        >
+          <Suspense fallback={<SocialProofSkeleton />}>
+            <SocialProof />
+          </Suspense>
+        </DeferUntilVisible>
 
-        <Suspense fallback={<ConversionSkeleton />}>
-          <Conversion />
-        </Suspense>
+        <DeferUntilVisible
+          fallback={<ConversionSkeleton />}
+          rootMargin="400px"
+        >
+          <Suspense fallback={<ConversionSkeleton />}>
+            <Conversion />
+          </Suspense>
+        </DeferUntilVisible>
       </div>
     </Layout>
   )

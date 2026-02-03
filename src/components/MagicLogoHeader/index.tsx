@@ -17,6 +17,8 @@ const MagicLogoHeader: React.FC<{ variant?: "pink" | "purple" }> = ({
             alt="Magic"
             width={192}
             height={48}
+            decoding="async"
+            fetchPriority="low"
             className="h-12"
           />
         </div>

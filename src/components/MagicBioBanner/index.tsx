@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"

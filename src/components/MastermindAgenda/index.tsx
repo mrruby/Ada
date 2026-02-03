@@ -3,6 +3,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
+import "react-vertical-timeline-component/style.min.css"
 
 const scrollToSection = (section: Element | null): void => {
   if (section) {

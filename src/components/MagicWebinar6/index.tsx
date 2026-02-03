@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Reference from "helpers/Reference"
 import React from "react"
 import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import { responsive } from "values/const"
 
 const MagicWebinar6 = ({ version = 1 }: { version?: number }) => {

@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import React from "react"
 import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import { responsive } from "values/const"
 import Reference from "../../helpers/Reference"
 

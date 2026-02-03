@@ -26,7 +26,7 @@ const AdsEliksirPage = () => {
         image="https://adrianna.com.pl/img/ada_purple.webp"
       />
       <MagicStickyBar />
-      <div className="pt-14">
+      <div className="pt-12">
         <MagicLogoHeader variant="pink" />
         <MaxWithBgColorContainer bgColor="bg-ada-pink8">
           <MagicVideo version={3} />

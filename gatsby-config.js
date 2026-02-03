@@ -125,5 +125,23 @@ module.exports = {
         environments: ["production", "development"],
       },
     },
+    {
+      resolve: "gatsby-plugin-purgecss",
+      options: {
+        tailwind: true,
+        printRejected: true,
+        develop: false,
+        ignore: [
+          "react-multi-carousel",
+          "react-vertical-timeline-component",
+          "animate.css",
+        ],
+        purgeCSSOptions: {
+          safelist: {
+            standard: ["animate__animated", "animate__fadeInUp"],
+          },
+        },
+      },
+    },
   ],
 }

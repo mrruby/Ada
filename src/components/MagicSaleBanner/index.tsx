@@ -111,6 +111,8 @@ const MagicSaleBanner = ({
                 quality={75}
                 width={500}
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto rounded-[24px]"
               />
             </div>
