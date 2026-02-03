@@ -10,43 +10,6 @@ module.exports = {
   adapter: adapter(),
   plugins: [
     {
-      resolve: "gatsby-omni-font-loader",
-      options: {
-        enableListener: true,
-        mode: "async",
-        preconnect: [
-          "https://fonts.googleapis.com",
-          "https://fonts.gstatic.com",
-        ],
-        web: [
-          {
-            name: "Montserrat",
-            file: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap",
-          },
-          {
-            name: "Lemon",
-            file: "https://fonts.googleapis.com/css2?family=Lemon&display=swap",
-          },
-          {
-            name: "Courier Prime",
-            file: "https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap",
-          },
-          {
-            name: "Anton",
-            file: "https://fonts.googleapis.com/css2?family=Anton&display=swap",
-          },
-          {
-            name: "Annie Use Your Telescope",
-            file: "https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap",
-          },
-          {
-            name: "Eagle Lake",
-            file: "https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap",
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: `adrianna-1`,

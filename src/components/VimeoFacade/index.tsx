@@ -5,6 +5,8 @@ interface VimeoFacadeProps {
   title: string
   aspectRatio?: "16:9" | "9:16"
   eager?: boolean
+  sizes?: string
+  maxThumbnailWidth?: 640 | 1280 | 1920
 }
 
 const VimeoFacade = ({
@@ -12,6 +14,8 @@ const VimeoFacade = ({
   title,
   aspectRatio = "16:9",
   eager = false,
+  sizes = "(max-width: 640px) 100vw, 640px",
+  maxThumbnailWidth = 640,
 }: VimeoFacadeProps) => {
   const [isLoaded, setIsLoaded] = useState(eager)
   const [shouldAutoplay, setShouldAutoplay] = useState(false)
@@ -21,6 +25,19 @@ const VimeoFacade = ({
   const thumbnailUrlSmall = `https://vumbnail.com/${videoId}_small.jpg`
   const thumbnailUrlMedium = `https://vumbnail.com/${videoId}_medium.jpg`
   const thumbnailUrlLarge = `https://vumbnail.com/${videoId}_large.jpg`
+
+  const thumbnailCandidates = [
+    { url: thumbnailUrlSmall, width: 320 },
+    { url: thumbnailUrlMedium, width: 640 },
+    { url: thumbnailUrlLarge, width: 1280 },
+    { url: thumbnailUrl, width: 1920 },
+  ].filter((candidate) => candidate.width <= maxThumbnailWidth)
+
+  const thumbnailSrcSet = thumbnailCandidates
+    .map((candidate) => `${candidate.url} ${candidate.width}w`)
+    .join(", ")
+  const fallbackThumbnail =
+    thumbnailCandidates[thumbnailCandidates.length - 1]?.url || thumbnailUrl
   // 16:9 = 56.25%, 9:16 = 177.78%
   const paddingTop = aspectRatio === "16:9" ? "56.25%" : "177.78%"
 
@@ -83,9 +100,9 @@ const VimeoFacade = ({
           }}
         >
           <img
-            src={thumbnailUrl}
-            srcSet={`${thumbnailUrlSmall} 320w, ${thumbnailUrlMedium} 640w, ${thumbnailUrlLarge} 1280w, ${thumbnailUrl} 1920w`}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1280px"
+            src={fallbackThumbnail}
+            srcSet={thumbnailSrcSet}
+            sizes={sizes}
             alt={title}
             loading="lazy"
             style={{
