@@ -100,9 +100,7 @@ const MagicSaleBanner = ({
               Pakiet miesięczny
             </p>
             <div className="absolute right-0 md:right-[-10px] text-black w-[140px] h-[140px] top-[6px] lg:top-[-60px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
-              <p className="text-[12px]">tylko do 2.02</p>
-              <p className="text-[32px] leading-tight">353 zł</p>
-              <p className="text-[16px] line-through opacity-60">557 zł</p>
+              <p className="text-[32px] leading-tight">557 zł</p>
             </div>
           </div>
           <div className="xl:text-adaDesc flex flex-col md:flex-row bg-ada-white3 rounded-[24px] text-black text-left p-12 shadow-xl">
