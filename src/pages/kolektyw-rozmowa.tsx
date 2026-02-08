@@ -1,0 +1,41 @@
+import Layout from "components/Layout"
+import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
+import MagicBanner4 from "components/MagicBanner4"
+import MagicCollectiveBanner from "components/MagicCollectiveBanner"
+import SEO from "components/seo"
+import React from "react"
+
+const MagicCollectiveTalkPage = () => {
+  return (
+    <Layout showHeaderAndFooter={false}>
+      <SEO
+        title="Magic: Marketing Ads Girls Inside Collective"
+        image="https://adrianna.com.pl/img/ada_purple.webp"
+      />
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+        <MagicCollectiveBanner version={15} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-magic-pink">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-ada-white2 py-8 px-4 md:px-8">
+            <MagicCollectiveBanner version={16} />
+          </div>
+        </div>
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white2 reltive">
+        <MagicBanner4 version={1} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen reltive">
+        <MagicBanner4 version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white2 reltive">
+        <MagicBanner4 version={3} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+        <MagicCollectiveBanner version={17} />
+      </MaxWithBgColorContainer>
+    </Layout>
+  )
+}
+
+export default MagicCollectiveTalkPage

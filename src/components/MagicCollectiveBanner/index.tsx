@@ -956,7 +956,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             />
           </div>
           <div className="flex flex-col md:flex-row w-full items-center gap-2 -mt-10">
-            <div className="z-10">
+            {/* <div className="z-10">
               <StaticImage
                 loading="eager"
                 src="../../images/ada_purple.webp"
@@ -967,7 +967,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
-            </div>
+            </div> */}
             <div>
               <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[300px] mx-auto uppercase">
                 <Typography
@@ -1017,7 +1017,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               Umów się na bezpłatną konsultację
             </Typography>
           </div>
-          <p className="text-adaDesc mt-10 mb-4">
+          <p className="text-adaDesc mt-10 mb-4 text-center max-w-[500px] mx-auto">
             Dołącz do <b>setek przedsiębiorczyń,</b> które tak jak Ty zbudowały{" "}
             <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
           </p>
