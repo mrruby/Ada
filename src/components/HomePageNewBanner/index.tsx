@@ -16,7 +16,7 @@ const HomePageNewBanner = () => {
           marketing dla Twojego biznesu.
         </p>
       </div>
-      <div className="lg:absolute right-[50px] bottom-0">
+      <div className="lg:absolute right-[-50px] bottom-0">
         <StaticImage
           loading="eager"
           src="../../images/homeImage.webp"
@@ -26,6 +26,17 @@ const HomePageNewBanner = () => {
           quality={75}
           className=""
         />
+      </div>
+      <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 -translate-y-2">
+        <a href="#content">
+          <StaticImage
+            src={"../../images/magicBtn.svg"}
+            alt=""
+            placeholder="blurred"
+            width={80}
+            height={80}
+          />
+        </a>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ import React from "react"
 
 const HomePageList = () => {
   return (
-    <div className="py-20 px-2">
+    <div className="py-20 px-2" id="content">
       <Typography
         variant="h1"
         className="text-black leading-snug mb-6 text-center pt-10"

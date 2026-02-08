@@ -205,12 +205,11 @@ const MagicTitle = ({ version }: { version: number }) => {
               <div className="flex justify-between items-center">
                 <Link to={"/"}>
                   <StaticImage
-                    src={"../../images/magic-logo.svg"}
+                    src={"../../images/magic-kolektyw.png"}
                     alt="Ada Promis"
                     placeholder="blurred"
                     formats={["auto", "webp", "avif"]}
-                    width={447}
-                    height={151}
+                    width={250}
                     quality={95}
                   />
                 </Link>
@@ -230,7 +229,7 @@ const MagicTitle = ({ version }: { version: number }) => {
               <Button
                 type="button"
                 text={
-                  <span className="font-normal text-ada-purple3 font-anton md:text-adaSubtitle">
+                  <span className="font-normal text-ada-magicOrange font-anton md:text-adaSubtitle">
                     Chcę z Wami pracować!
                   </span>
                 }
