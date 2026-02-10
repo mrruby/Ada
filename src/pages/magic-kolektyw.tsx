@@ -4,7 +4,6 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner3 from "components/MagicBanner3"
 import MagicBioBanner2 from "components/MagicBioBanner2"
 import MagicCollectiveBanner from "components/MagicCollectiveBanner"
-import MagicResultsTable from "components/MagicResultsTable"
 import MagicTitle from "components/MagicTitle"
 import ReferencesMentoring from "components/ReferencesMentoring"
 import SEO from "components/seo"
@@ -42,7 +41,7 @@ const MagicCollectivePage = () => {
         <MagicBanner3 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
-        <MagicResultsTable />
+        <MagicCollectiveBanner version={20} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-magic-pink">
         <div className="max-w-6xl mx-auto">
@@ -56,19 +55,22 @@ const MagicCollectivePage = () => {
         <MagicCollectiveBanner version={7} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
-        <MagicCollectiveBanner version={8} />
+        <MagicCollectiveBanner version={21} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-magicPink2 bg-magicWave">
-        <MagicCollectiveBanner version={9} />
+      <MaxWithBgColorContainer bgColor="bg-ada-magicPink2">
+        <MagicCollectiveBanner version={22} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+        <MagicCollectiveBanner version={23} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <ReferencesMentoring title6 />
       </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicPink2 bg-magicWave">
+        <MagicCollectiveBanner version={9} />
+      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-newPurple">
         <CollapsibleFAQ />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white2">
-        <MagicCollectiveBanner version={10} />
       </MaxWithBgColorContainer>
     </Layout>
   )

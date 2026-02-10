@@ -129,11 +129,11 @@ const magicInfoContentV2 = [
 
 const magicInfoContentV3 = [
   {
-    title: "ROAS 19,15",
-    color: "green",
+    title: "ROAS 50,56",
+    color: "",
     subtitle: (
       <p>
-        <b>5-dniowa</b> kampania <br /> sprzedażowa przyniosła
+        kampania sprzedażowa <b>produktu cyfrowego</b> przyniosła
       </p>
     ),
     subtitle2: <></>,
@@ -144,7 +144,7 @@ const magicInfoContentV3 = [
           <div className="flex flex-col text-left">
             <p className="text-adaDesc -mb-4"> Wydana kwota:</p>
             <TypingAnimation
-              text="203,72 zł"
+              text="249,84 zł"
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[220px]"
             />
           </div>
@@ -153,7 +153,7 @@ const magicInfoContentV3 = [
           <div className="flex flex-col text-left">
             <p className="text-adaDesc -mb-4"> Przychód:</p>
             <TypingAnimation
-              text="3900,80 zł"
+              text="12 632 zł"
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[230px]"
             />
           </div>
@@ -163,7 +163,7 @@ const magicInfoContentV3 = [
     ),
     description: (
       <>
-        <b>Z małym budżetem</b> też się da!
+        <b>Dobra strategia</b> to podstawa!
       </>
     ),
   },

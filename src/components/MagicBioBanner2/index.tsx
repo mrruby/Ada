@@ -6,7 +6,7 @@ import PersonBox from "./PersonBox"
 const peopleContent = [
   {
     name: "Adrianna Promis-Urbas",
-    title: "Specjalistka od kampanii reklamowych z 6-letnim doświadczeniem",
+    title: "Specjalistka od kampanii reklamowych z 10-letnim doświadczeniem",
     description: (
       <>
         Pomogłam ponad <b>200 kobietom</b> zwiększyć zyski i satysfakcję z
@@ -19,18 +19,17 @@ const peopleContent = [
     img: "ada",
   },
   {
-    name: "Justyna Król",
-    title: "Specjalistka od reklam i copywritingu z socjologicznym zacięciem",
+    name: "Nicola Kut",
+    title: "Koordynatorka projektów i specjalistka od reklam",
     description: (
       <>
-        Stworzyłam teksty reklamowe dla <b>kilkudziesięciu</b> polskich marek.
-        Specjalizuję się w przekształcaniu zwykłych komunikatów{" "}
-        <b>w emocjonalne historie,</b> które budują autentyczne relacje z
-        klientami i sprawiają, że
-        <b>marki stają się rozpoznawalne,</b> lubiane i wybierane.
+        Nadzoruję realizację projektów, dbając o każdy szczegół i dotrzymanie
+        terminów. Specjalizuję się <b>w pilnowaniu harmonogramów</b> i
+        zapewnianiu, że każdy element pracy jest wykonany zgodnie z planem, co
+        pozwala całemu zespołowi <b>działać sprawnie i efektywnie.</b>
       </>
     ),
-    img: "justyna",
+    img: "nicola",
   },
   {
     name: "Dorota Woźniak",
@@ -47,17 +46,21 @@ const peopleContent = [
     img: "dorota",
   },
   {
-    name: "Nicola Kut",
-    title: "Koordynatorka projektów i aspirująca analityczka biznesowa",
+    name: "Anna Ertekin",
+    title:
+      "Koordynatorka projektów i aspirująca analityczka biznesowMenedżerka projektów i kampanii reklamowych",
     description: (
       <>
-        Nadzoruję realizację projektów, dbając o każdy szczegół i dotrzymanie
-        terminów. Specjalizuję się <b>w pilnowaniu harmonogramów</b> i
-        zapewnianiu, że każdy element pracy jest wykonany zgodnie z planem, co
-        pozwala całemu zespołowi <b>działać sprawnie i efektywnie.</b>
+        Wspieram marki <b>w codziennych działaniach marketingowych,</b> dbając o
+        to, by pomysły, kampanie i strategie były nie tylko dobrze zaplanowane,
+        ale także skutecznie wdrażane.{" "}
+        <b>
+          Specjalizuję się w łączeniu działań marketingowych w spójną całość:
+        </b>{" "}
+        od pomysłu aż po analizę wyników.
       </>
     ),
-    img: "nicola",
+    img: "anna",
   },
   {
     name: "Papajka",

@@ -108,50 +108,58 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
           className="text-black overflow-hidden flex justify-center mb-20"
           padding="py-8 px-4 md:px-8"
         >
-          <div className="max-w-[510px] px-6">
-            <div className="text-center mb-8">
-              <span className="text-4xl">🧐</span>
+          <div className="flex flex-col lg:flex-row px-6 gap-10">
+            <div>
+              <div className="text-center mb-8">
+                <span className="text-4xl">🧐</span>
+              </div>
+              <div className="bg-ada-white2 border-ada-orange border rounded-full py-3 px-6 text-center mb-8 max-w-[340px] mx-auto">
+                <span className="font-normal text-ada-orange font-anton text-lg md:text-xl">
+                  Rozpoznajesz się w tym?
+                </span>
+              </div>
+              <div className="space-y-4 mb-12">
+                <Typography variant="body" className="font-courier">
+                  ❌ Masz super produkt, ale <b>nie wiesz</b> jak go sprzedać
+                </Typography>
+                <Typography variant="body" className="font-courier">
+                  ❌ <b>Tracisz godziny</b> na social media zamiast rozwijać
+                  biznes
+                </Typography>
+                <Typography variant="body" className="font-courier">
+                  ❌<b> Nie wiesz,</b> czy inwestujesz w marketing{" "}
+                  <b> skutecznie</b>
+                </Typography>
+                <Typography variant="body" className="font-courier">
+                  ❌ Chcesz skalować, ale{" "}
+                  <b> zespół in-house to za duży koszt</b>
+                </Typography>
+              </div>
             </div>
-            <div className="bg-ada-white2 border-ada-orange border rounded-full py-3 px-6 text-center mb-8">
-              <span className="font-normal text-ada-orange font-anton text-lg md:text-xl">
-                Znasz to?
-              </span>
-            </div>
-            <div className="space-y-4 mb-12">
-              <Typography variant="body" className="font-courier">
-                ❌ Masz super produkt, ale nie wiesz jak go sprzedać
-              </Typography>
-              <Typography variant="body" className="font-courier">
-                ❌ Tracisz godziny na social media zamiast rozwijać biznes
-              </Typography>
-              <Typography variant="body" className="font-courier">
-                ❌ Nie wiesz, czy inwestujesz w marketing skutecznie
-              </Typography>
-              <Typography variant="body" className="font-courier">
-                ❌ Chcesz skalować, ale zespół in-house to za duży koszt
-              </Typography>
-            </div>
-            <div className="text-center mb-8">
-              <span className="text-4xl">👀</span>
-            </div>
-            <div className="bg-ada-white2 border-ada-orange border rounded-full py-3 px-6 text-center mb-8">
-              <span className="font-normal text-ada-orange font-anton text-lg md:text-xl">
-                Co jeśli powiemy Ci, że możesz mieć:
-              </span>
-            </div>
-            <div className="space-y-4">
-              <Typography variant="body" className="font-courier">
-                ✅ Profesjonalne kampanie generujące stałe wyniki
-              </Typography>
-              <Typography variant="body" className="font-courier">
-                ✅ Czas na rozwój produktów zamiast "kręcenia się" w marketingu
-              </Typography>
-              <Typography variant="body" className="font-courier">
-                ✅ Przewidywalne wyniki i jasny ROI z każdej złotówki
-              </Typography>
-              <Typography variant="body" className="font-courier">
-                ✅ Ekspertki, którzy myślą o Twoim biznesie jak o swoim
-              </Typography>
+            <div>
+              <div className="text-center mb-8">
+                <span className="text-4xl">👀</span>
+              </div>
+              <div className="bg-ada-white2 border-ada-orange border rounded-full py-3 px-6 text-center mb-8 max-w-[360px] mx-auto">
+                <span className="font-normal text-ada-orange font-anton text-lg md:text-xl">
+                  Co jeśli powiemy Ci, że możesz mieć:
+                </span>
+              </div>
+              <div className="space-y-4">
+                <Typography variant="body" className="font-courier">
+                  ✅ Profesjonalne kampanie <b>generujące stałe wyniki,</b>
+                </Typography>
+                <Typography variant="body" className="font-courier">
+                  ✅ <b>Czas na rozwój produktów</b> zamiast "kręcenia się" w
+                  marketingu
+                </Typography>
+                <Typography variant="body" className="font-courier">
+                  ✅ <b>Przewidywalne wyniki i jasny ROI</b> z każdej złotówki
+                </Typography>
+                <Typography variant="body" className="font-courier">
+                  ✅<b> Ekspertki,</b> którzy myślą o Twoim biznesie jak o swoim
+                </Typography>
+              </div>
             </div>
           </div>
         </Section>
@@ -169,8 +177,8 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 textStyle="mt-[6px] md:m-5 text-ada-orange font-anton font-normal px-4 md:px-0 text-adaNav md:text-adaBase"
               />
             </div>
-            <div className="max-w-[438px] mx-auto px-10 md:px-0 space-y-3 md:space-y-4">
-              <div className="mt-14 md:mt-6 text-adaMin md:text-adaStandard">
+            <div className="max-w-[438px] mx-auto px-10 md:px-0 space-y-3 md:space-y-3">
+              <div className="mt-14 md:mt-4 text-adaMin md:text-adaStandard">
                 🤝 <span className="font-bold">Działamy jako Twój zespół</span>{" "}
                 - jesteśmy stałym partnerem w rozwoju Twojego biznesu
               </div>
@@ -230,7 +238,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                     />
                   </div>
                   <p className="mt-2">
-                    Prowadzą <b>biznes online</b>
+                    Prowadzą <b>ustabilizowany biznes online</b>
                     <br /> (kursy, mentoring, usługi)
                   </p>
                 </div>
@@ -262,8 +270,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                     />
                   </div>
                   <p className="mt-2">
-                    Współpracują z <b>podwykonawcami</b>,<br /> np. wirtualnymi
-                    asystentkami
+                    Zatrudniają minimum <b>1-2 osoby</b> w swoim zespole
                   </p>
                 </div>
                 <div className="flex gap-2 mt-2">
@@ -949,7 +956,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             />
           </div>
           <div className="flex flex-col md:flex-row w-full items-center gap-2 -mt-10">
-            <div className="z-10">
+            {/* <div className="z-10">
               <StaticImage
                 loading="eager"
                 src="../../images/ada_purple.webp"
@@ -960,7 +967,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
-            </div>
+            </div> */}
             <div>
               <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[300px] mx-auto uppercase">
                 <Typography
@@ -1010,7 +1017,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               Umów się na bezpłatną konsultację
             </Typography>
           </div>
-          <p className="text-adaDesc mt-10 mb-4">
+          <p className="text-adaDesc mt-10 mb-4 text-center max-w-[500px] mx-auto">
             Dołącz do <b>setek przedsiębiorczyń,</b> które tak jak Ty zbudowały{" "}
             <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
           </p>
@@ -1153,6 +1160,432 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 height={80}
               />
             </a>
+          </div>
+        </Section>
+      )}
+      {version == 20 && (
+        <Section bgColor="" className="text-black" padding="my-12 px-3">
+          <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[480px] mx-auto">
+            <Typography
+              variant="h2"
+              className="p-2 font-anton font-normal text-center text-ada-orange"
+            >
+              Nasze wyniki w liczbach
+            </Typography>
+          </div>
+          <div className="flex flex-col gap-20 py-10">
+            <StaticImage
+              loading="eager"
+              src="../../images/kolektyw1.webp"
+              alt=""
+              placeholder="blurred"
+              width={1360}
+              height={267}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+            <StaticImage
+              loading="eager"
+              src="../../images/kolektyw2.webp"
+              alt=""
+              placeholder="blurred"
+              width={1200}
+              height={312}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+            <StaticImage
+              loading="eager"
+              src="../../images/kolektyw3.webp"
+              alt=""
+              placeholder="blurred"
+              width={1360}
+              height={420}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+            <StaticImage
+              loading="eager"
+              src="../../images/kolektyw4.webp"
+              alt=""
+              placeholder="blurred"
+              width={1360}
+              height={330}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+            <StaticImage
+              loading="eager"
+              src="../../images/kolektyw5.webp"
+              alt=""
+              placeholder="blurred"
+              width={1360}
+              height={330}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+            <StaticImage
+              loading="eager"
+              src="../../images/kolektyw6.webp"
+              alt=""
+              placeholder="blurred"
+              width={1360}
+              height={330}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+            <StaticImage
+              loading="eager"
+              src="../../images/kolektyw7.webp"
+              alt=""
+              placeholder="blurred"
+              width={1000}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+          </div>
+        </Section>
+      )}
+      {version == 21 && (
+        <Section bgColor="bg-ada-magicGreen" className="text-black py-16">
+          <div className="max-w-6xl mx-auto px-4 space-y-16">
+            {/* Case Study 1 */}
+            <div>
+              {/* Title with decorative images */}
+              <div className="flex items-center justify-center mb-8">
+                <StaticImage
+                  src={"../../images/magicSign.svg"}
+                  alt=""
+                  placeholder="blurred"
+                  width={50}
+                  height={50}
+                  className="hidden md:block animate-spin-slow mr-5"
+                />
+                <div className="bg-ada-white2 border-ada-orange border rounded-3xl px-6 py-3">
+                  <h3 className="font-anton font-normal text-center text-ada-orange text-xl md:text-2xl">
+                    Case study z kampanii kierującej na Instagrama
+                  </h3>
+                </div>
+                <StaticImage
+                  src={"../../images/magicSign.svg"}
+                  alt=""
+                  placeholder="blurred"
+                  width={50}
+                  height={50}
+                  className="hidden md:block animate-spin-slow ml-5"
+                />
+              </div>
+              <div className="max-w-4xl mx-auto">
+                <StaticImage
+                  src={"../../images/kolektywInfo1.webp"}
+                  alt="Case study 1"
+                  placeholder="blurred"
+                  formats={["auto", "webp"]}
+                  className="mb-8 rounded-lg shadow-lg"
+                />
+                <div className="grid md:grid-cols-3 gap-x-8 gap-y-4 pl-4">
+                  {/* Left column */}
+                  <div className="md:col-span-2 space-y-4">
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Cel kampanii:
+                        </p>
+                      </div>
+                      <p className="text-sm">
+                        Monice zależało, żeby jej konto na Instagramie
+                        regularnie się rozwijało. Dzięki dobrze zaplanowanej
+                        kampanii na pozyskanie obserwujących{" "}
+                        <b>
+                          w ciągu 6 miesięcy zyskała 9306 nowych obserwujących.
+                          Dodatkowy efekt?43 osoby przesłały zapytania
+                        </b>{" "}
+                        o możliwość wykupienia zajęć językowych.
+                      </p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Czas trwania kampanii:
+                        </p>
+                      </div>
+                      <p className="text-sm">
+                        6 miesięcy (styczeń-czerwiec 2025)
+                      </p>
+                    </div>
+                  </div>
+                  {/* Right column */}
+                  <div className="space-y-4">
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wydany budżet:
+                        </p>
+                      </div>
+                      <p className="text-sm">5781,47 zł</p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Liczba nowych obserwujących:
+                        </p>
+                      </div>
+                      <p className="text-sm">9306</p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Liczba zapytań o zajęcia (dodatkowo):
+                        </p>
+                      </div>
+                      <p className="text-sm">43</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-4 max-w-[740px] mx-auto">
+                <StaticImage
+                  src={"../../images/kolektywInfo1a.webp"}
+                  alt="Case study 1"
+                  placeholder="blurred"
+                  formats={["auto", "webp"]}
+                  className="mb-8"
+                />
+              </div>
+            </div>
+          </div>
+        </Section>
+      )}
+      {version == 22 && (
+        <Section bgColor="bg-ada-magicPink2" className="text-black py-16">
+          <div className="max-w-6xl mx-auto px-4 space-y-16">
+            {/* Case Study 2 */}
+            <div>
+              {/* Title with decorative images */}
+              <div className="flex items-center justify-center mb-8">
+                <StaticImage
+                  src={"../../images/magicSign.svg"}
+                  alt=""
+                  placeholder="blurred"
+                  width={50}
+                  height={50}
+                  className="hidden md:block animate-spin-slow mr-5"
+                />
+                <div className="bg-ada-white2 border-ada-orange border rounded-3xl px-6 py-3">
+                  <h3 className="font-anton font-normal text-center text-ada-orange text-xl md:text-2xl">
+                    Case study kampanii z kampanii sprzedażowej
+                  </h3>
+                </div>
+                <StaticImage
+                  src={"../../images/magicSign.svg"}
+                  alt=""
+                  placeholder="blurred"
+                  width={50}
+                  height={50}
+                  className="hidden md:block animate-spin-slow ml-5"
+                />
+              </div>
+              <div className="max-w-4xl mx-auto">
+                <StaticImage
+                  src={"../../images/kolektywInfo2.webp"}
+                  alt="Case study 2"
+                  placeholder="blurred"
+                  formats={["auto", "webp"]}
+                  className="mb-8 rounded-lg shadow-lg"
+                />
+                <div className="grid md:grid-cols-3 gap-x-8 gap-y-4 pl-4">
+                  {/* Left column */}
+                  <div className="md:col-span-2 space-y-4">
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Cel kampanii:
+                        </p>
+                      </div>
+                      <p className="text-sm">
+                        kampania z celem zapis na listę mailową; po dołączeniu
+                        subskrybenci otrzymują one time offer na dostęp do
+                        platformy kursowej
+                      </p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Czas trwania kampanii:
+                        </p>
+                      </div>
+                      <p className="text-sm">2 miesiące</p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Liczba osób, która wypełniła formularz zapisu:
+                        </p>
+                      </div>
+                      <p className="text-sm">1949</p>
+                    </div>
+                  </div>
+                  {/* Right column */}
+                  <div className="space-y-4">
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wydany budżet:
+                        </p>
+                      </div>
+                      <p className="text-sm">6892,61 zł</p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Ilość zapisów:
+                        </p>
+                      </div>
+                      <p className="text-sm">28 x 2499 zł</p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wartość zakupów:
+                        </p>
+                      </div>
+                      <p className="text-sm">69 972 zł</p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          ROAS:
+                        </p>
+                      </div>
+                      <p className="text-sm">10,15</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-4 max-w-[740px] mx-auto">
+                <StaticImage
+                  src={"../../images/kolektywInfo2a.webp"}
+                  alt="Case study 1"
+                  placeholder="blurred"
+                  formats={["auto", "webp"]}
+                  className="mb-8"
+                />
+              </div>
+            </div>
+          </div>
+        </Section>
+      )}
+      {version == 23 && (
+        <Section bgColor="bg-ada-magicGreen" className="text-black py-16">
+          <div className="max-w-6xl mx-auto px-4 space-y-16">
+            {/* Case Study 3 */}
+            <div>
+              {/* Title with decorative images */}
+              <div className="flex items-center justify-center mb-8">
+                <StaticImage
+                  src={"../../images/magicSign.svg"}
+                  alt=""
+                  placeholder="blurred"
+                  width={50}
+                  height={50}
+                  className="hidden md:block animate-spin-slow mr-5"
+                />
+                <div className="bg-ada-white2 border-ada-orange border rounded-3xl px-6 py-3">
+                  <h3 className="font-anton font-normal text-center text-ada-orange text-xl md:text-2xl">
+                    Case study z kampanii sprzedażowej
+                  </h3>
+                </div>
+                <StaticImage
+                  src={"../../images/magicSign.svg"}
+                  alt=""
+                  placeholder="blurred"
+                  width={50}
+                  height={50}
+                  className="hidden md:block animate-spin-slow ml-5"
+                />
+              </div>
+              <div className="max-w-4xl mx-auto">
+                <StaticImage
+                  src={"../../images/kolektywInfo3.webp"}
+                  alt="Case study 3"
+                  placeholder="blurred"
+                  formats={["auto", "webp"]}
+                  className="mb-8 rounded-lg shadow-lg"
+                />
+                <div className="grid md:grid-cols-3 gap-x-8 gap-y-4 pl-4">
+                  {/* Left column */}
+                  <div className="md:col-span-2 space-y-4">
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Cel kampanii:
+                        </p>
+                      </div>
+                      <p className="text-sm">
+                        sprzedaż kursu dla właścicieli lokalnych firm
+                      </p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Czas trwania kampanii:
+                        </p>
+                      </div>
+                      <p className="text-sm">
+                        14 miesięcy (lipiec 2024 - wrzesień 2025)
+                      </p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Grupy docelowe:
+                        </p>
+                      </div>
+                      <p className="text-sm">
+                        osoby zainteresowane marketingiem, właściciele lokalnych
+                        biznesów
+                      </p>
+                    </div>
+                  </div>
+                  {/* Right column */}
+                  <div className="space-y-4">
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Wydany budżet:
+                        </p>
+                      </div>
+                      <p className="text-sm">55 858 zł</p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Liczba osób, które zapisały się na webinar:
+                        </p>
+                      </div>
+                      <p className="text-sm">10 376</p>
+                    </div>
+                    <div>
+                      <div className="mb-2">
+                        <p className="font-bold bg-ada-purple3 text-white inline-block">
+                          Liczba sprzedanych kursów:
+                        </p>
+                      </div>
+                      <p className="text-sm">172, około 120 000 złotych</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="pt-4 max-w-[740px] mx-auto">
+              <StaticImage
+                src={"../../images/kolektywInfo3a.webp"}
+                alt="Case study 1"
+                placeholder="blurred"
+                formats={["auto", "webp"]}
+                className="mb-8"
+              />
+            </div>
           </div>
         </Section>
       )}
