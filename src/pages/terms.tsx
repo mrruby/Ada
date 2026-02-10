@@ -20,13 +20,16 @@ const TermsPage = ({
 }: TermsData) => {
   return (
     <Layout>
-      <SEO title="Polityka prywatności & plików cookies" />
       <MaxWithBgColorContainer>
         <LegalLayout markdown={rawMarkdownBody} />
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
+
+export const Head = () => (
+  <SEO title="Polityka prywatności & plików cookies" />
+)
 
 export default TermsPage
 

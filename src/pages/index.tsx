@@ -8,7 +8,6 @@ import React from "react"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
       <MaxWithBgColorContainer bgColor="bg-magic-grid relative">
         <HomePageNewBanner />
       </MaxWithBgColorContainer>
@@ -18,5 +17,7 @@ const IndexPage = () => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Home" />
 
 export default IndexPage

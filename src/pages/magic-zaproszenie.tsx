@@ -7,10 +7,6 @@ import React from "react"
 const MagicInvitationePage = (): React.JSX.Element => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <SEO
-        title="Magic: Marketing Ads Girls Inside Collective"
-        image="https://adrianna.com.pl/img/ada_purple.webp"
-      />
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <MagicCollectiveBanner version={11} />
       </MaxWithBgColorContainer>
@@ -30,5 +26,12 @@ const MagicInvitationePage = (): React.JSX.Element => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <SEO
+    title="Magic: Marketing Ads Girls Inside Collective"
+    image="https://adrianna.com.pl/img/ada_purple.webp"
+  />
+)
 
 export default MagicInvitationePage

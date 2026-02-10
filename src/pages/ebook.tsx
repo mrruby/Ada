@@ -11,7 +11,6 @@ import React from "react"
 const EbookPage = () => {
   return (
     <Layout flowerBlue={true} starPink={true} flowerWhite={true}>
-      <SEO title="Ebook" />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <CustomBanner
           title="W e-booku przeczytasz o…."
@@ -58,5 +57,7 @@ const EbookPage = () => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Ebook" />
 
 export default EbookPage

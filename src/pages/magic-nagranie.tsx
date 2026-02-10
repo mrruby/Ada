@@ -15,10 +15,6 @@ import React from "react"
 const MagicNagraniePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <SEO
-        title="Nagranie nie jest już dostępne, ale wciąż możesz dołączyć do MAGIC!"
-        image="https://adrianna.com.pl/img/ada_purple.webp"
-      />
       <div id="top"></div>
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicSaleBanner version={6} />
@@ -63,5 +59,12 @@ const MagicNagraniePage = () => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <SEO
+    title="Nagranie nie jest już dostępne, ale wciąż możesz dołączyć do MAGIC!"
+    image="https://adrianna.com.pl/img/ada_purple.webp"
+  />
+)
 
 export default MagicNagraniePage

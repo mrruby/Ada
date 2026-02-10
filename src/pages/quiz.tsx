@@ -188,10 +188,6 @@ const QuizPage = () => {
 
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Quiz: Jaka jest Twoja Adsowa Osobowość?"
-        image="https://adrianna.com.pl/img/ada_purple.webp"
-      />
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <QuizTitle />
       </MaxWithBgColorContainer>
@@ -223,5 +219,12 @@ const QuizPage = () => {
     </div>
   )
 }
+
+export const Head = () => (
+  <SEO
+    title="Quiz: Jaka jest Twoja Adsowa Osobowość?"
+    image="https://adrianna.com.pl/img/ada_purple.webp"
+  />
+)
 
 export default QuizPage

@@ -17,7 +17,6 @@ import SEO from "../components/seo"
 const MastermindPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <SEO title="Ogarnij swoje Adsy Mentoring" />
       <WebinarBanner version={5} />
       <MaxWithBgColorContainer bgColor="bg-linear2">
         <IconText version={3} />
@@ -60,5 +59,7 @@ const MastermindPage = () => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Ogarnij swoje Adsy Mentoring" />
 
 export default MastermindPage

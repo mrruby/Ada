@@ -17,7 +17,6 @@ import React from "react"
 const PuzzlePage = () => {
   return (
     <Layout>
-      <SEO title="Wyzwanie puzzlowe" />
       <StaticImageComponent
         name="ada_puzzle.webp"
         alt="Ada Promis - hero"
@@ -85,5 +84,7 @@ const PuzzlePage = () => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Wyzwanie puzzlowe" />
 
 export default PuzzlePage

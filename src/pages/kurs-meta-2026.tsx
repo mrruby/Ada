@@ -5,10 +5,11 @@ import React from "react"
 const KursMeta2026Page = () => {
   return (
     <>
-      <SEO title="Kurs Meta 2026" />
       <KursPage storageKey="kursMeta2026EndTime" />
     </>
   )
 }
+
+export const Head = () => <SEO title="Kurs Meta 2026" />
 
 export default KursMeta2026Page

@@ -20,7 +20,6 @@ const SowaFormCard = ({ className = "" }: { className?: string }) => (
 const SowaPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <SEO title="Ads Eliksir" />
       <div className="font-playfair bg-ada-sowaBurgundy">
         {/* Section 1 - Hero (Burgundy) */}
 
@@ -200,5 +199,7 @@ const SowaPage = () => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Ads Eliksir" />
 
 export default SowaPage

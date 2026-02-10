@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Ta strona nie istnieje" />
     <MaxWithBgColorContainer extraStyle="h-[450px] md:h-[900px] pt-[60px] flex flex-col justify-center text-center">
       <h1 className="px-4 text-adaTitle font-bold pb-8">
         Ta strona nie istnieje, błąd 404.
@@ -20,5 +19,7 @@ const NotFoundPage = () => (
     </MaxWithBgColorContainer>
   </Layout>
 )
+
+export const Head = () => <SEO title="404: Ta strona nie istnieje" />
 
 export default NotFoundPage

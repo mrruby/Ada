@@ -13,7 +13,6 @@ import React from "react"
 const AboutPage = () => {
   return (
     <Layout twoBlueFlowers2={true}>
-      <SEO title="O mnie" />
       <HelloBanner />
       <MaxWithBgColorContainer bgColor="bg-linear4">
         <AdaBanner />
@@ -40,5 +39,7 @@ const AboutPage = () => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="O mnie" />
 
 export default AboutPage

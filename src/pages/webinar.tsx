@@ -18,7 +18,6 @@ const WebinarPage = () => {
       flowerBlue4={true}
       flowerBlue5={true}
     >
-      <SEO title="Webinar" />
       <MaxWithBgColorContainer bgColor="bg-linear3">
         <WebinarBanner version={1} />
       </MaxWithBgColorContainer>
@@ -40,5 +39,7 @@ const WebinarPage = () => {
     </Layout>
   )
 }
+
+export const Head = () => <SEO title="Webinar" />
 
 export default WebinarPage

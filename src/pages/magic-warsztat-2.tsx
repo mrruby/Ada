@@ -11,10 +11,6 @@ import React from "react"
 const MagicWebinarPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <SEO
-        title="Marketing Ads Girls Inside Club (MAGIC): Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod czujnym okiem profesjonalistek"
-        image="https://adrianna.com.pl/img/ada_purple.webp"
-      />
       <MagicWebinar1 version={2} />
       <MagicWebinar3 />
       <MagicWebinar4 version={2} />
@@ -24,5 +20,12 @@ const MagicWebinarPage = () => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <SEO
+    title="Marketing Ads Girls Inside Club (MAGIC): Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod czujnym okiem profesjonalistek"
+    image="https://adrianna.com.pl/img/ada_purple.webp"
+  />
+)
 
 export default MagicWebinarPage

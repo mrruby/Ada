@@ -8,10 +8,6 @@ import React from "react"
 const MagicCollectiveTalkPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <SEO
-        title="Magic: Marketing Ads Girls Inside Collective"
-        image="https://adrianna.com.pl/img/ada_purple.webp"
-      />
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <MagicCollectiveBanner version={15} />
       </MaxWithBgColorContainer>
@@ -37,5 +33,12 @@ const MagicCollectiveTalkPage = () => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <SEO
+    title="Magic: Marketing Ads Girls Inside Collective"
+    image="https://adrianna.com.pl/img/ada_purple.webp"
+  />
+)
 
 export default MagicCollectiveTalkPage

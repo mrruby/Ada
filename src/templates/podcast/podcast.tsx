@@ -41,7 +41,6 @@ const PodcastPage = ({ data }: PodcastData) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
       <MaxWithBgColorContainer extraStyle="pt-[70px] px-3 lg:px-5 flex flex-col w-6xl max-w-[920px] mx-auto">
         <Audio
           url={`https://podcastada.s3.eu-central-1.amazonaws.com/Podcast_${season}_${episodeNumber}.mp3`}
@@ -58,6 +57,13 @@ const PodcastPage = ({ data }: PodcastData) => {
     </Layout>
   )
 }
+
+export const Head = ({ data }: PodcastData) => (
+  <SEO
+    title={data.markdownRemark.frontmatter.title}
+    description={data.markdownRemark.frontmatter.description}
+  />
+)
 
 export default PodcastPage
 

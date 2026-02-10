@@ -20,13 +20,16 @@ const PolicyPage = ({
 }: PolicyData) => {
   return (
     <Layout>
-      <SEO title="Polityka prywatności & plików cookies" />
       <MaxWithBgColorContainer>
         <LegalLayout markdown={rawMarkdownBody} />
       </MaxWithBgColorContainer>
     </Layout>
   )
 }
+
+export const Head = () => (
+  <SEO title="Polityka prywatności & plików cookies" />
+)
 
 export default PolicyPage
 
