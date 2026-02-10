@@ -61,7 +61,7 @@ const HomePageList = () => {
           </div>
         }
         buttonText="Dołączam!"
-        buttonUrl="/adsy-chill-2025"
+        buttonUrl="/magic"
         image={
           <div className="lg:absolute bottom-0 right-[-40px]">
             <StaticImage
@@ -92,7 +92,7 @@ const HomePageList = () => {
           </div>
         }
         buttonText="WYBIERAM!"
-        buttonUrl="/adsy-chill-2025"
+        buttonUrl="/magic"
         image={
           <div className="lg:absolute bottom-[60px] right-[-40px]">
             <StaticImage
