@@ -76,10 +76,7 @@ const MagicSalePage = () => {
           </Suspense>
         </DeferUntilVisible>
 
-        <DeferUntilVisible
-          fallback={<ConversionSkeleton />}
-          rootMargin="400px"
-        >
+        <DeferUntilVisible fallback={<ConversionSkeleton />} rootMargin="400px">
           <Suspense fallback={<ConversionSkeleton />}>
             <Conversion />
           </Suspense>

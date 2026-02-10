@@ -27,9 +27,7 @@ const TermsPage = ({
   )
 }
 
-export const Head = () => (
-  <SEO title="Polityka prywatności & plików cookies" />
-)
+export const Head = () => <SEO title="Polityka prywatności & plików cookies" />
 
 export default TermsPage
 

@@ -27,9 +27,7 @@ const PolicyPage = ({
   )
 }
 
-export const Head = () => (
-  <SEO title="Polityka prywatności & plików cookies" />
-)
+export const Head = () => <SEO title="Polityka prywatności & plików cookies" />
 
 export default PolicyPage
 
