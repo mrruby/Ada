@@ -841,8 +841,8 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               src={"../../images/magic-kolektyw.png"}
               alt=""
               placeholder="blurred"
-              width={400}
-              height={227}
+              width={300}
+              height={170}
               className="-mb-4 md:my-4"
             />
           </div>
