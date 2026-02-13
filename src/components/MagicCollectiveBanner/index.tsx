@@ -119,18 +119,18 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 </span>
               </div>
               <div className="space-y-4 mb-12">
-                <Typography variant="body" className="font-courier">
+                <Typography variant="body" className="font-montserrat">
                   ❌ Masz super produkt, ale <b>nie wiesz</b> jak go sprzedać
                 </Typography>
-                <Typography variant="body" className="font-courier">
+                <Typography variant="body" className="font-montserrat">
                   ❌ <b>Tracisz godziny</b> na social media zamiast rozwijać
                   biznes
                 </Typography>
-                <Typography variant="body" className="font-courier">
+                <Typography variant="body" className="font-montserrat">
                   ❌<b> Nie wiesz,</b> czy inwestujesz w marketing{" "}
                   <b> skutecznie</b>
                 </Typography>
-                <Typography variant="body" className="font-courier">
+                <Typography variant="body" className="font-montserrat">
                   ❌ Chcesz skalować, ale{" "}
                   <b> zespół in-house to za duży koszt</b>
                 </Typography>
@@ -146,17 +146,17 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 </span>
               </div>
               <div className="space-y-4">
-                <Typography variant="body" className="font-courier">
+                <Typography variant="body" className="font-montserrat">
                   ✅ Profesjonalne kampanie <b>generujące stałe wyniki,</b>
                 </Typography>
-                <Typography variant="body" className="font-courier">
+                <Typography variant="body" className="font-montserrat">
                   ✅ <b>Czas na rozwój produktów</b> zamiast "kręcenia się" w
                   marketingu
                 </Typography>
-                <Typography variant="body" className="font-courier">
+                <Typography variant="body" className="font-montserrat">
                   ✅ <b>Przewidywalne wyniki i jasny ROI</b> z każdej złotówki
                 </Typography>
-                <Typography variant="body" className="font-courier">
+                <Typography variant="body" className="font-montserrat">
                   ✅<b> Ekspertki,</b> którzy myślą o Twoim biznesie jak o swoim
                 </Typography>
               </div>
@@ -325,7 +325,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
         >
           <div className="max-w-6xl mx-auto">
             {/* Title similar to previous section */}
-            <div className="bg-white border-ada-orange border rounded-3xl max-w-[600px] mx-auto mb-8">
+            <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[600px] mx-auto mb-8">
               <Typography
                 variant="h2"
                 className="p-2 font-anton font-normal text-center text-ada-orange"
