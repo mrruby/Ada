@@ -35,7 +35,7 @@ const BannerBox3 = ({
         <Button
           type="button"
           text={
-            <span className="font-normal font-anton text-md md:text-lg text-center">
+            <span className="font-normal font-anton text-lg md:text-xl text-center">
               <span className="text-ada-orange block">
                 SPRAWDŹ, CZY TO PAKIET DLA CIEBIE
               </span>
@@ -45,10 +45,10 @@ const BannerBox3 = ({
             </span>
           }
           url="https://koalendar.com/e/porozmawiajmy-o-wspolpracy/?month=2025-07&duration=30&date=2025-07-03"
-          textSize="text-sm"
+          textSize="text-base md:text-lg"
           btnStyle="bg-ada-white2
-                tracking-wide h-auto py-3 
-                px-6 hover:opacity-90 rounded-full min-w-[200px] md:min-w-[400px] border-ada-orange border"
+                tracking-wide h-auto py-4
+                px-8 hover:opacity-90 rounded-full min-w-[240px] md:min-w-[480px] border-ada-orange border"
         />
       </div>
     </div>
