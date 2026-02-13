@@ -86,7 +86,7 @@ const MagicCollectiveForm = () => {
   }
 
   const inputStyles =
-    "w-full px-4 py-4 bg-ada-pink4 border border-ada-magicOrange rounded-full text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-ada-magicOrange focus:ring-opacity-50 transition-all duration-200"
+    "w-full px-4 py-4 bg-[#F2F0E9] border border-ada-magicOrange rounded-full text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-ada-magicOrange focus:ring-opacity-50 transition-all duration-200"
   const labelStyles =
     "block text-white font-bold text-sm uppercase tracking-wider mb-3"
   const radioGroupStyles = "flex gap-3 justify-center"
@@ -214,7 +214,7 @@ const MagicCollectiveForm = () => {
                       metaAdsExperience: "Tak",
                     }))
                   }
-                  className={`${radioLabelStyles} py-3 px-8 ${formData.metaAdsExperience === "Tak" ? "bg-ada-orange2" : "bg-ada-pink4"} ${formData.metaAdsExperience === "Tak" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center uppercase tracking-wider`}
+                  className={`${radioLabelStyles} py-3 px-8 ${formData.metaAdsExperience === "Tak" ? "bg-ada-orange2" : "bg-[#F2F0E9]"} ${formData.metaAdsExperience === "Tak" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center uppercase tracking-wider`}
                 >
                   Tak
                 </button>
@@ -226,7 +226,7 @@ const MagicCollectiveForm = () => {
                       metaAdsExperience: "Nie",
                     }))
                   }
-                  className={`${radioLabelStyles} py-3 px-8 ${formData.metaAdsExperience === "Nie" ? "bg-ada-orange2" : "bg-ada-pink4"} ${formData.metaAdsExperience === "Nie" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center uppercase tracking-wider`}
+                  className={`${radioLabelStyles} py-3 px-8 ${formData.metaAdsExperience === "Nie" ? "bg-ada-orange2" : "bg-[#F2F0E9]"} ${formData.metaAdsExperience === "Nie" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center uppercase tracking-wider`}
                 >
                   Nie
                 </button>
@@ -243,7 +243,7 @@ const MagicCollectiveForm = () => {
                   onClick={() =>
                     setFormData((prev) => ({ ...prev, selfSetup: "Tak" }))
                   }
-                  className={`${radioLabelStyles} py-3 px-8 ${formData.selfSetup === "Tak" ? "bg-ada-orange2" : "bg-ada-pink4"} ${formData.selfSetup === "Tak" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center uppercase tracking-wider`}
+                  className={`${radioLabelStyles} py-3 px-8 ${formData.selfSetup === "Tak" ? "bg-ada-orange2" : "bg-[#F2F0E9]"} ${formData.selfSetup === "Tak" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center uppercase tracking-wider`}
                 >
                   Tak
                 </button>
@@ -252,7 +252,7 @@ const MagicCollectiveForm = () => {
                   onClick={() =>
                     setFormData((prev) => ({ ...prev, selfSetup: "Nie" }))
                   }
-                  className={`${radioLabelStyles} py-3 px-8 ${formData.selfSetup === "Nie" ? "bg-ada-orange2" : "bg-ada-pink4"} ${formData.selfSetup === "Nie" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center uppercase tracking-wider`}
+                  className={`${radioLabelStyles} py-3 px-8 ${formData.selfSetup === "Nie" ? "bg-ada-orange2" : "bg-[#F2F0E9]"} ${formData.selfSetup === "Nie" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center uppercase tracking-wider`}
                 >
                   Nie
                 </button>
@@ -284,41 +284,41 @@ const MagicCollectiveForm = () => {
                 <button
                   type="button"
                   onClick={() =>
-                    setFormData((prev) => ({ ...prev, budget: "1500-2499" }))
+                    setFormData((prev) => ({ ...prev, budget: "DO 2000" }))
                   }
-                  className={`py-3 px-4 ${formData.budget === "1500-2499" ? "bg-ada-orange2" : "bg-ada-pink4"} ${formData.budget === "1500-2499" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center`}
+                  className={`py-3 px-4 ${formData.budget === "DO 2000" ? "bg-ada-orange2" : "bg-[#F2F0E9]"} ${formData.budget === "DO 2000" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center`}
                 >
-                  1500-2499
+                  DO 2000
                 </button>
                 <button
                   type="button"
                   onClick={() =>
-                    setFormData((prev) => ({ ...prev, budget: "2500-3499" }))
+                    setFormData((prev) => ({ ...prev, budget: "2000-5000" }))
                   }
-                  className={`py-3 px-4 ${formData.budget === "2500-3499" ? "bg-ada-orange2" : "bg-ada-pink4"} ${formData.budget === "2500-3499" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center`}
+                  className={`py-3 px-4 ${formData.budget === "2000-5000" ? "bg-ada-orange2" : "bg-[#F2F0E9]"} ${formData.budget === "2000-5000" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center`}
                 >
-                  2500-3499
+                  2000-5000
                 </button>
                 <button
                   type="button"
                   onClick={() =>
-                    setFormData((prev) => ({ ...prev, budget: "3500-4499" }))
+                    setFormData((prev) => ({ ...prev, budget: "5000-10000" }))
                   }
-                  className={`py-3 px-4 ${formData.budget === "3500-4499" ? "bg-ada-orange2" : "bg-ada-pink4"} ${formData.budget === "3500-4499" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center`}
+                  className={`py-3 px-4 ${formData.budget === "5000-10000" ? "bg-ada-orange2" : "bg-[#F2F0E9]"} ${formData.budget === "5000-10000" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center`}
                 >
-                  3500-4499
+                  5000-10000
                 </button>
                 <button
                   type="button"
                   onClick={() =>
                     setFormData((prev) => ({
                       ...prev,
-                      budget: "4500 i wiecej",
+                      budget: "10000 I WIĘCEJ",
                     }))
                   }
-                  className={`py-3 px-4 ${formData.budget === "4500 i wiecej" ? "bg-ada-orange2" : "bg-ada-pink4"} ${formData.budget === "4500 i wiecej" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center`}
+                  className={`py-3 px-4 ${formData.budget === "10000 I WIĘCEJ" ? "bg-ada-orange2" : "bg-[#F2F0E9]"} ${formData.budget === "10000 I WIĘCEJ" ? "text-white" : "text-ada-magicOrange"} border border-ada-magicOrange font-bold rounded-full cursor-pointer hover:bg-ada-orange2 hover:text-white transition-all duration-200 text-center`}
                 >
-                  4500 i więcej
+                  10000 I WIĘCEJ
                 </button>
               </div>
             </div>
