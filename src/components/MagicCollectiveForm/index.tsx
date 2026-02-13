@@ -380,7 +380,7 @@ const MagicCollectiveForm = () => {
         <button
           onClick={handleSubmit}
           disabled={isSubmitting}
-          className={`w-full mt-6 py-4 px-6 bg-ada-magicOrange text-white font-bold text-lg rounded-full hover:bg-ada-orange2 transition-all duration-200 ${
+          className={`w-full mt-6 py-4 px-6 bg-ada-magicOrange text-white font-anton font-bold text-lg rounded-full hover:bg-ada-orange2 transition-all duration-200 ${
             isSubmitting ? "opacity-50 cursor-not-allowed" : ""
           }`}
         >
