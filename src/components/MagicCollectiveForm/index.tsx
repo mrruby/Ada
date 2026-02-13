@@ -2,6 +2,7 @@ import React, { useState } from "react"
 
 const MagicCollectiveForm = () => {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     phone: "",
     howToContact: "",
@@ -10,6 +11,7 @@ const MagicCollectiveForm = () => {
     results: "",
     budget: "",
     instagram: "",
+    emailList: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<
@@ -33,7 +35,7 @@ const MagicCollectiveForm = () => {
       "https://docs.google.com/forms/d/e/1FAIpQLScWWFTLKbI4z7gIHU7-6gDcBcKLmlDP1QgB3EfODdomkHmpYw/formResponse"
 
     const formPayload = new URLSearchParams({
-      "entry.847981100": formData.howToContact, // This field is for "how to contact you"
+      "entry.847981100": formData.name, // This field is for name (IMIĘ)
       "entry.1253582086": formData.email,
       "entry.1617673006": formData.phone,
       "entry.936258867": formData.metaAdsExperience,
@@ -41,6 +43,8 @@ const MagicCollectiveForm = () => {
       "entry.1818554089": formData.results,
       "entry.1285326409": formData.budget,
       "entry.901101836": formData.instagram,
+      "entry.1234567890": formData.howToContact, // This field is for "how to contact you"
+      "entry.9876543210": formData.emailList, // This field is for email list
     })
 
     try {
@@ -57,6 +61,7 @@ const MagicCollectiveForm = () => {
       setShowSuccessModal(true)
       setTimeout(() => {
         setFormData({
+          name: "",
           email: "",
           phone: "",
           howToContact: "",
@@ -65,6 +70,7 @@ const MagicCollectiveForm = () => {
           results: "",
           budget: "",
           instagram: "",
+          emailList: "",
         })
         setShowSuccessModal(false)
         setSubmitStatus("idle")
@@ -132,14 +138,14 @@ const MagicCollectiveForm = () => {
         <div className="p-8 bg-ada-magicPurple3 rounded-3xl shadow-2xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="howToContact" className={labelStyles}>
-                Jak najlepiej się do ciebie zwracać?
+              <label htmlFor="name" className={labelStyles}>
+                Imię
               </label>
               <input
                 type="text"
-                id="howToContact"
-                name="howToContact"
-                value={formData.howToContact}
+                id="name"
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
                 required
                 className={inputStyles}
@@ -180,7 +186,23 @@ const MagicCollectiveForm = () => {
             </div>
 
             <div>
-              <label className={labelStyles}>
+              <label htmlFor="howToContact" className={labelStyles}>
+                Jak najlepiej się do ciebie zwracać?
+              </label>
+              <input
+                type="text"
+                id="howToContact"
+                name="howToContact"
+                value={formData.howToContact}
+                onChange={handleChange}
+                required
+                className={inputStyles}
+                placeholder=""
+              />
+            </div>
+
+            <div>
+              <label className={`${labelStyles} text-center`}>
                 Czy korzystałaś już z reklam w systemie Meta?
               </label>
               <div className={radioGroupStyles}>
@@ -212,7 +234,7 @@ const MagicCollectiveForm = () => {
             </div>
 
             <div>
-              <label className={labelStyles}>
+              <label className={`${labelStyles} text-center`}>
                 Czy ustawiałaś je samodzielnie?
               </label>
               <div className={radioGroupStyles}>
@@ -254,9 +276,9 @@ const MagicCollectiveForm = () => {
             </div>
 
             <div>
-              <label className={labelStyles}>
-                Jaką kwotę możesz miesięcznie przeznaczyć na reklamy? minimalny
-                budżet reklamowy to 1500 zł
+              <label className={`${labelStyles} text-center`}>
+                Wybierz swój budżet na marketing (obsługa, budżet reklamowy i
+                inne)
               </label>
               <div className="grid grid-cols-2 gap-3">
                 <button
@@ -317,6 +339,21 @@ const MagicCollectiveForm = () => {
               />
             </div>
 
+            <div>
+              <label htmlFor="emailList" className={labelStyles}>
+                Czy posiadasz bazę mailową? Jeśli tak - ilu odbiorców liczy?
+              </label>
+              <textarea
+                id="emailList"
+                name="emailList"
+                value={formData.emailList}
+                onChange={handleChange}
+                rows={3}
+                className={`${inputStyles} rounded-3xl resize-none`}
+                placeholder=""
+              />
+            </div>
+
             {submitStatus === "error" && (
               <div className="p-4 bg-red-100 text-red-700 rounded-lg animate-pulse">
                 <div className="flex items-center">
@@ -347,13 +384,8 @@ const MagicCollectiveForm = () => {
             isSubmitting ? "opacity-50 cursor-not-allowed" : ""
           }`}
         >
-          {isSubmitting ? "Wysyłanie..." : "Wyślij zgłoszenie"}
+          {isSubmitting ? "Wysyłanie..." : "WYŚLIJ ZGŁOSZENIE"}
         </button>
-
-        <p className="mt-4 text-center text-white/60 text-sm">
-          Po kliknięciu przycisku Twoje zgłoszenie zostanie wysłane do nas i
-          skontaktujemy się z Tobą wkrótce.
-        </p>
       </div>
     </div>
   )
