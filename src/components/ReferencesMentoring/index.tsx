@@ -21,6 +21,7 @@ type IReferences = {
   title6?: boolean
   title7?: boolean
   title8?: boolean
+  title9?: boolean
 }
 
 // const referencesList: IReferencesList[] = [
@@ -472,6 +473,74 @@ const referencesMagicList2: IReferencesList[] = [
   },
 ]
 
+const referencesMagicList3: IReferencesList[] = [
+  {
+    image: (
+      <StaticImage
+        src={"../../images/OpiniaKolektyw1.webp"}
+        alt="Opinia o Magic"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/OpiniaKolektyw2.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/OpiniaKolektyw3.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/OpiniaKolektyw4.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/OpiniaKolektyw5.webp"}
+        alt="Opinia o programie mentoringowym"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
+]
+
 const ReferencesMentoring = ({
   title1,
   title2,
@@ -481,6 +550,7 @@ const ReferencesMentoring = ({
   title6,
   title7,
   title8,
+  title9,
 }: IReferences) => {
   return (
     <div className="pt-[40px]">
@@ -645,6 +715,31 @@ const ReferencesMentoring = ({
             />
           </div>
         </div>
+      )}
+      {title9 && (
+        <>
+          <Typography
+            variant="h2"
+            className="p-2 font-anton font-normal text-center uppercase text-ada-orange"
+          >
+            Co o współpracy z nami mówią <br /> zadowolone klientki?
+          </Typography>
+          <div className="max-h-[600px] mx-auto mt-5 pb-4">
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              customLeftArrow={<CustomLeftArrow />}
+              customRightArrow={<CustomRightArrow />}
+              ssr={true}
+              autoPlay
+              autoPlaySpeed={2000}
+            >
+              {referencesMagicList3.map((reference, index) => (
+                <Reference key={index} image={reference.image} />
+              ))}
+            </Carousel>
+          </div>
+        </>
       )}
     </div>
   )

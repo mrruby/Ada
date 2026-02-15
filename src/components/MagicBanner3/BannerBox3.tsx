@@ -35,7 +35,7 @@ const BannerBox3 = ({
         <Button
           type="button"
           text={
-            <span className="font-normal font-anton text-lg md:text-xl text-center">
+            <span className="font-normal font-anton text-lg md:text-adaSubtitle text-center">
               <span className="text-ada-orange block">
                 SPRAWDŹ, CZY TO PAKIET DLA CIEBIE
               </span>

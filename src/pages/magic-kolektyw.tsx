@@ -60,7 +60,7 @@ const MagicCollectivePage = () => {
         <MagicCollectiveBanner version={23} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
-        <ReferencesMentoring title6 />
+        <ReferencesMentoring title9 />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicPink2 bg-magicWave">
         <MagicCollectiveBanner version={9} />
