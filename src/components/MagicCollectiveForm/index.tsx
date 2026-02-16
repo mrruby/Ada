@@ -276,6 +276,37 @@ const MagicCollectiveForm = () => {
             </div>
 
             <div>
+              <label htmlFor="instagram" className={labelStyles}>
+                Podaj swój nick na IG
+              </label>
+              <input
+                type="text"
+                id="instagram"
+                name="instagram"
+                value={formData.instagram}
+                onChange={handleChange}
+                required
+                className={inputStyles}
+                placeholder=""
+              />
+            </div>
+
+            <div>
+              <label htmlFor="emailList" className={labelStyles}>
+                Czy posiadasz bazę mailową? Jeśli tak - ilu odbiorców liczy?
+              </label>
+              <textarea
+                id="emailList"
+                name="emailList"
+                value={formData.emailList}
+                onChange={handleChange}
+                rows={3}
+                className={`${inputStyles} rounded-3xl resize-none`}
+                placeholder=""
+              />
+            </div>
+
+            <div>
               <label className={`${labelStyles} text-center`}>
                 Wybierz swój budżet na marketing (obsługa, budżet reklamowy i
                 inne)
@@ -322,38 +353,6 @@ const MagicCollectiveForm = () => {
                 </button>
               </div>
             </div>
-
-            <div>
-              <label htmlFor="instagram" className={labelStyles}>
-                Podaj swój nick na IG
-              </label>
-              <input
-                type="text"
-                id="instagram"
-                name="instagram"
-                value={formData.instagram}
-                onChange={handleChange}
-                required
-                className={inputStyles}
-                placeholder=""
-              />
-            </div>
-
-            <div>
-              <label htmlFor="emailList" className={labelStyles}>
-                Czy posiadasz bazę mailową? Jeśli tak - ilu odbiorców liczy?
-              </label>
-              <textarea
-                id="emailList"
-                name="emailList"
-                value={formData.emailList}
-                onChange={handleChange}
-                rows={3}
-                className={`${inputStyles} rounded-3xl resize-none`}
-                placeholder=""
-              />
-            </div>
-
             {submitStatus === "error" && (
               <div className="p-4 bg-red-100 text-red-700 rounded-lg animate-pulse">
                 <div className="flex items-center">

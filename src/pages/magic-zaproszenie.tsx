@@ -1,6 +1,7 @@
 import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicCollectiveBanner from "components/MagicCollectiveBanner"
+import MagicCollectiveFooter from "components/MagicCollectiveFooter"
 import SEO from "components/seo"
 import React from "react"
 
@@ -22,6 +23,9 @@ const MagicInvitationePage = (): React.JSX.Element => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <MagicCollectiveBanner version={14} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicPink2">
+        <MagicCollectiveFooter version={1} />
       </MaxWithBgColorContainer>
     </Layout>
   )

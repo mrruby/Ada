@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import MagicCollectiveForm from "../MagicCollectiveForm"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
@@ -43,6 +43,14 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
       }
     }
   }, [version])
+
+  const [hasAnimated, setHasAnimated] = useState(false)
+
+  const handleMouseEnter = () => {
+    if (!hasAnimated) {
+      setHasAnimated(true)
+    }
+  }
 
   return (
     <>
@@ -841,8 +849,8 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               src={"../../images/magic-kolektyw.png"}
               alt=""
               placeholder="blurred"
-              width={400}
-              height={227}
+              width={320}
+              height={160}
               className="-mb-4 md:my-4"
             />
           </div>
@@ -874,7 +882,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 translate-y-6 z-2">
             <a href="#ankieta">
               <StaticImage
-                src={"../../images/magicBtn.svg"}
+                src={"../../images/magicBtn2.svg"}
                 alt=""
                 placeholder="blurred"
                 width={80}
@@ -897,7 +905,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 translate-y-6 z-2">
             <a href="#ankieta">
               <StaticImage
-                src={"../../images/magicBtn.svg"}
+                src={"../../images/magicBtn2.svg"}
                 alt=""
                 placeholder="blurred"
                 width={80}
@@ -1173,76 +1181,135 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               Nasze wyniki w liczbach
             </Typography>
           </div>
-          <div className="flex flex-col gap-20 py-10">
-            <StaticImage
-              loading="eager"
-              src="../../images/kolektyw1.webp"
-              alt=""
-              placeholder="blurred"
-              width={1360}
-              height={267}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
-            <StaticImage
-              loading="eager"
-              src="../../images/kolektyw2.webp"
-              alt=""
-              placeholder="blurred"
-              width={1200}
-              height={312}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
-            <StaticImage
-              loading="eager"
-              src="../../images/kolektyw3.webp"
-              alt=""
-              placeholder="blurred"
-              width={1360}
-              height={420}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
-            <StaticImage
-              loading="eager"
-              src="../../images/kolektyw4.webp"
-              alt=""
-              placeholder="blurred"
-              width={1360}
-              height={330}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
-            <StaticImage
-              loading="eager"
-              src="../../images/kolektyw5.webp"
-              alt=""
-              placeholder="blurred"
-              width={1360}
-              height={330}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
-            <StaticImage
-              loading="eager"
-              src="../../images/kolektyw6.webp"
-              alt=""
-              placeholder="blurred"
-              width={1360}
-              height={330}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
-            <StaticImage
-              loading="eager"
-              src="../../images/kolektyw7.webp"
-              alt=""
-              placeholder="blurred"
-              width={1000}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-            />
+          <div
+            className="flex flex-col gap-20 py-10"
+            onMouseOver={handleMouseEnter}
+          >
+            <div
+              className={`${
+                hasAnimated
+                  ? "lg:animate-slideInFromLeft opacity-100"
+                  : "lg:opacity-0"
+              }`}
+            >
+              <StaticImage
+                loading="eager"
+                src="../../images/kolektyw1.webp"
+                alt=""
+                placeholder="blurred"
+                width={1360}
+                height={267}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div
+              className={`${
+                hasAnimated
+                  ? "lg:animate-slideInFromRight opacity-100"
+                  : "lg:opacity-0"
+              }`}
+            >
+              <StaticImage
+                loading="eager"
+                src="../../images/kolektyw2.webp"
+                alt=""
+                placeholder="blurred"
+                width={1200}
+                height={312}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div
+              className={`${
+                hasAnimated
+                  ? "lg:animate-slideInFromLeft opacity-100"
+                  : "lg:opacity-0"
+              }`}
+            >
+              <StaticImage
+                loading="eager"
+                src="../../images/kolektyw3.webp"
+                alt=""
+                placeholder="blurred"
+                width={1360}
+                height={420}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div
+              className={`${
+                hasAnimated
+                  ? "lg:animate-slideInFromRight opacity-100"
+                  : "lg:opacity-0"
+              }`}
+            >
+              <StaticImage
+                loading="eager"
+                src="../../images/kolektyw4.webp"
+                alt=""
+                placeholder="blurred"
+                width={1360}
+                height={330}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div
+              className={`${
+                hasAnimated
+                  ? "lg:animate-slideInFromLeft opacity-100"
+                  : "lg:opacity-0"
+              }`}
+            >
+              <StaticImage
+                loading="eager"
+                src="../../images/kolektyw5.webp"
+                alt=""
+                placeholder="blurred"
+                width={1360}
+                height={330}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div
+              className={`${
+                hasAnimated
+                  ? "lg:animate-slideInFromRight opacity-100"
+                  : "lg:opacity-0"
+              }`}
+            >
+              <StaticImage
+                loading="eager"
+                src="../../images/kolektyw6.webp"
+                alt=""
+                placeholder="blurred"
+                width={1360}
+                height={330}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
+            <div
+              className={`${
+                hasAnimated
+                  ? "lg:animate-slideInFromLeft opacity-100"
+                  : "lg:opacity-0"
+              }`}
+            >
+              <StaticImage
+                loading="eager"
+                src="../../images/kolektyw7.webp"
+                alt=""
+                placeholder="blurred"
+                width={1000}
+                formats={["auto", "webp", "avif"]}
+                quality={100}
+              />
+            </div>
           </div>
         </Section>
       )}
