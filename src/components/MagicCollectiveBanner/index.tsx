@@ -63,7 +63,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                     SPRAWDŹ, JAK TO DZIAŁA - BEZPŁATNA KONSULTACJA
                   </span>
                 }
-                url="https://forms.gle/21QLQXWozG9EYQvt8"
+                url="https://forms.gle/rLgDQQ6QeSLih7jZ9"
                 textSize="text-xs md:text-sm"
                 btnStyle="bg-ada-white2
                       tracking-wide h-[44px] md:h-[52px] 
@@ -344,16 +344,20 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             </div>
 
             {/* Google Calendar Embed */}
-            <iframe
+            <div
               id="inline-widget-porozmawiajmy-o-wspolpracy"
-              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0zcRiXUr4-wUE8kWad3VOUdAuWCYFT8Sx9MdThd_nrVecbrxdhp52S2M_iVeoZHU40tpiiuoEn?gv=true"
-              style={{ border: 0 }}
-              width="100%"
-              height="600"
-              frameBorder="0"
-              title="Bezpłatna konsultacja"
-              className="max-w-[800px] mx-auto"
-            ></iframe>
+              className="max-w-[800px] mx-auto bg-white p-2 md:p-3"
+            >
+              <iframe
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0zcRiXUr4-wUE8kWad3VOUdAuWCYFT8Sx9MdThd_nrVecbrxdhp52S2M_iVeoZHU40tpiiuoEn?gv=true"
+                style={{ border: 0 }}
+                width="100%"
+                height="600"
+                frameBorder="0"
+                title="Bezpłatna konsultacja"
+                className="block w-full"
+              ></iframe>
+            </div>
           </div>
         </Section>
       )}
