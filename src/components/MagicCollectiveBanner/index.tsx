@@ -1252,7 +1252,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 alt=""
                 placeholder="blurred"
                 width={1360}
-                height={330}
+                height={360}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
