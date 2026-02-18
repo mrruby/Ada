@@ -44,7 +44,7 @@ const BannerBox3 = ({
               </span>
             </span>
           }
-          url="https://koalendar.com/e/porozmawiajmy-o-wspolpracy/?month=2025-07&duration=30&date=2025-07-03"
+          url="https://calendar.app.google/UwK6B7FAiut4VnZB7"
           textSize="text-base md:text-lg"
           btnStyle="bg-ada-white2
                 tracking-wide h-auto py-4

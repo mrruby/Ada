@@ -1,49 +1,12 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import MagicCollectiveForm from "../MagicCollectiveForm"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-declare global {
-  interface Window {
-    Koalendar: any
-  }
-}
-
 const MagicCollectiveBanner = ({ version }: { version: number }) => {
-  // Load Koalendar script for version 5
-  useEffect(() => {
-    if (version === 5) {
-      // Load Koalendar script
-      const script1 = document.createElement("script")
-      script1.innerHTML = `window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};`
-      document.body.appendChild(script1)
-
-      const script2 = document.createElement("script")
-      script2.src = "https://koalendar.com/assets/widget.js"
-      script2.async = true
-      document.body.appendChild(script2)
-
-      script2.onload = () => {
-        // Initialize Koalendar after script loads
-        if (window.Koalendar) {
-          window.Koalendar("inline", {
-            url: "https://koalendar.com/e/porozmawiajmy-o-wspolpracy",
-            selector: "#inline-widget-porozmawiajmy-o-wspolpracy",
-          })
-        }
-      }
-
-      // Cleanup
-      return () => {
-        document.body.removeChild(script1)
-        document.body.removeChild(script2)
-      }
-    }
-  }, [version])
-
   const [hasAnimated, setHasAnimated] = useState(false)
 
   const handleMouseEnter = () => {
@@ -380,11 +343,17 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               />
             </div>
 
-            {/* Koalendar Embed */}
-            <div
+            {/* Google Calendar Embed */}
+            <iframe
               id="inline-widget-porozmawiajmy-o-wspolpracy"
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0zcRiXUr4-wUE8kWad3VOUdAuWCYFT8Sx9MdThd_nrVecbrxdhp52S2M_iVeoZHU40tpiiuoEn?gv=true"
+              style={{ border: 0 }}
+              width="100%"
+              height="600"
+              frameBorder="0"
+              title="Bezpłatna konsultacja"
               className="max-w-[800px] mx-auto"
-            ></div>
+            ></iframe>
           </div>
         </Section>
       )}
