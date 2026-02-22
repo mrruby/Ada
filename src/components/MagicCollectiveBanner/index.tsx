@@ -866,7 +866,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
         </Section>
       )}
       {version == 13 && (
-        <Section bgColor="" className="text-black" padding="mt-12 mb-20 mx-4">
+        <Section bgColor="" className="text-black" padding="mt-20 mb-20 mx-4">
           <div className="border-ada-orange border rounded-3xl max-w-[400px] mx-auto bg-ada-magicGreen h-[200px]">
             <Typography
               variant="h2"
@@ -929,28 +929,27 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
           <div className="flex justify-end">
             <StaticImage
               src={"../../images/magic-kolektyw.png"}
-              alt=""
+              alt="Ada Promis"
               placeholder="blurred"
-              width={354}
-              height={200}
-              className="-mb-20"
+              formats={["auto", "webp", "avif"]}
+              width={250}
+              quality={95}
             />
           </div>
-          <div className="flex flex-col md:flex-row w-full items-center gap-2 -mt-10">
-            {/* <div className="z-10">
+          <div className="flex flex-col md:flex-row w-full items-center gap-2 -mt-10 px-3">
+            <div className="z-10">
               <StaticImage
                 loading="eager"
-                src="../../images/ada_purple.webp"
+                src="../../images/ada-show.webp"
                 alt="Ada"
                 placeholder="blurred"
-                width={600}
-                height={900}
+                width={400}
                 formats={["auto", "webp", "avif"]}
                 quality={100}
               />
-            </div> */}
+            </div>
             <div>
-              <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[300px] mx-auto uppercase">
+              <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[300px] uppercase">
                 <Typography
                   variant="h1"
                   className="p-2 font-anton font-normal text-center text-ada-orange"
@@ -971,7 +970,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 z-2 -bottom-4">
+          <div className="flex justify-center items-center mx-auto absolute left-1/2 -translate-x-1/2 z-2 lg:-bottom-4">
             <a href="#konsultacja">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
@@ -998,7 +997,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               Umów się na bezpłatną konsultację
             </Typography>
           </div>
-          <p className="text-adaDesc mt-10 mb-4 text-center max-w-[500px] mx-auto">
+          <p className="text-adaDesc mt-10 mb-4 text-center max-w-[590px] mx-auto">
             Dołącz do <b>setek przedsiębiorczyń,</b> które tak jak Ty zbudowały{" "}
             <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
           </p>
@@ -1027,7 +1026,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               <div className="md:flex gap-2 px-8 py-2 items-center justify center">
                 <Typography
                   variant="h2"
-                  className="p-2 font-anton font-normal text-center text-ada-magicGreen uppercase"
+                  className="p-2 font-anton font-normal text-center text-ada-magicGreen"
                 >
                   200+ kobiet
                 </Typography>
@@ -1038,12 +1037,19 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             </div>
             <div className="bg-ada-magicPurple3 rounded-3xl max-w-[600px] mx-auto border-ada-orange border">
               <div className="md:flex gap-2 px-8 py-2 items-center justify center">
-                <Typography
-                  variant="h2"
-                  className="p-2 font-anton font-normal text-center text-ada-magicGreen uppercase"
-                >
-                  2 tygodnie =
-                </Typography>
+                <div>
+                  <Typography
+                    variant="h2"
+                    className="p-2 font-anton font-normal text-center text-ada-magicGreen"
+                  >
+                    2 tygodnie
+                    <br />
+                  </Typography>
+                  <p className="text-white">działań płatnych</p>
+                </div>
+                <p className="p-2 font-anton font-normal text-center text-ada-magicGreen">
+                  =
+                </p>
                 <p className="text-white">
                   efekty jak po <b>3 miesiącach działań organicznych</b>
                 </p>
@@ -1053,7 +1059,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               <div className="md:flex gap-2 px-8 py-2 items-center justify center">
                 <Typography
                   variant="h2"
-                  className="p-2 font-anton font-normal text-center text-ada-magicGreen uppercase"
+                  className="p-2 font-anton font-normal text-center text-ada-magicGreen"
                 >
                   Maksymalne
                 </Typography>
@@ -1069,12 +1075,12 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
         <Section
           bgColor=""
           className="text-black"
-          padding="mt-12 mb-20"
+          padding="mt-10 mb-10"
           id="konsultacja"
         >
-          <p className="text-adaDesc mt-10 mb-4 text-center">
-            Dołącz do <b>setek przedsiębiorczyń,</b> które tak jak Ty zbudowały{" "}
-            <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
+          <p className="text-adaDesc mt-10 mb-4 text-center max-w-[400px] mx-auto">
+            <b>Dołącz do grona zadowolonych klientek, </b>które dzięki naszemu
+            wsparciu rozwinęły swoje biznesy
           </p>
           <div className="bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase">
             <Typography
