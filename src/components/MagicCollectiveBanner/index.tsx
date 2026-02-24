@@ -853,7 +853,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             </p>
           </div>
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 translate-y-6 z-2">
-            <a href="#ankieta">
+            <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src={"../../images/magicBtn2.svg"}
                 alt=""
@@ -876,7 +876,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             </Typography>
           </div>
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 translate-y-6 z-2">
-            <a href="#ankieta">
+            <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src={"../../images/magicBtn2.svg"}
                 alt=""
@@ -971,7 +971,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             </div>
           </div>
           <div className="flex justify-center items-center mx-auto absolute left-1/2 -translate-x-1/2 z-2 lg:-bottom-4">
-            <a href="#konsultacja">
+            <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
                 alt=""
@@ -1002,7 +1002,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
           </p>
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 z-2">
-            <a href="#konsultacja">
+            <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
                 alt=""
@@ -1082,14 +1082,14 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             <b>Dołącz do grona zadowolonych klientek, </b>które dzięki naszemu
             wsparciu rozwinęły swoje biznesy
           </p>
-          <div className="bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase">
+          <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer" className="block bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase hover:opacity-90">
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-white2"
             >
               Umów się na bezpłatną konsultację
             </Typography>
-          </div>
+          </a>
         </Section>
       )}
       {version == 19 && (
