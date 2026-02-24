@@ -69,7 +69,7 @@ const peopleContent = [
   },
 ]
 
-const MagicBioBanner2 = () => {
+const MagicBioBanner2 = ({ version }: { version: number }) => {
   return (
     <>
       <Section>
@@ -104,17 +104,16 @@ const MagicBioBanner2 = () => {
               />
             ))}
           </div>
-          <div className="flex flex-col md:flex-row gap-4 pt-2 mb-8 justify-center relative">
-            {[peopleContent[4]].map((item, i) => (
+          {version === 1 && (
+            <div className="flex flex-col md:flex-row gap-4 pt-2 mb-8 justify-center relative">
               <PersonBox
-                key={i}
-                name={item.name}
-                title={item.title}
-                description={item.description}
-                img={item.img}
+                name={peopleContent[4].name}
+                title={peopleContent[4].title}
+                description={peopleContent[4].description}
+                img={peopleContent[4].img}
               />
-            ))}
-          </div>
+            </div>
+          )}
         </div>
       </Section>
     </>

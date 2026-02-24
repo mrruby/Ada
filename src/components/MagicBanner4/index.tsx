@@ -31,7 +31,7 @@ const magicInfoContentV1 = [
             />
           </div>
         </div>
-        <div className="flex md:gap-2 items-center my-2">
+        <div className="flex flex-col lg:flex-row md:gap-2 items-center my-2">
           <div className="flex flex-col text-left">
             <p className="text-adaDesc -mb-4"> przyniósł</p>
             <TypingAnimation
@@ -47,7 +47,7 @@ const magicInfoContentV1 = [
           />
         </div>
         <div className="flex md:gap-2 items-center">
-          <div className="flex text-left items-end">
+          <div className="flex flex-col lg:flex-row text-left items-end">
             <div>
               <p className="text-adaDesc -mb-4"> oraz</p>
               <TypingAnimation
@@ -92,7 +92,7 @@ const magicInfoContentV2 = [
     ),
     content: (
       <div className="flex flex-col items-center mx-auto py-6">
-        <div className="flex gap-4 items-center">
+        <div className="flex flex-col lg:flex-row gap-4 items-center">
           <div className="text-[80px]">💰</div>
           <div className="flex flex-col text-left">
             <p className="md:text-adaDesc -mb-4"> za mniej niż</p>
@@ -101,9 +101,11 @@ const magicInfoContentV2 = [
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[160px]"
             />
           </div>
-          <div className="md:text-adaDesc">za jednego obserwatora</div>
+          <div className="md:text-adaDesc -mt-4 lg:mt-0">
+            za jednego obserwatora
+          </div>
         </div>
-        <div className="flex md:gap-4 items-center">
+        <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 md:gap-4 items-center">
           <div className="flex flex-col text-left">
             <TypingAnimation
               text="40"

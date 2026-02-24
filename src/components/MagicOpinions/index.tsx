@@ -11,42 +11,41 @@ const MagicOpinions = (): JSX.Element => {
         kampanie marketingowe takim przedsiębiorczyniom jak właścicielki kursów
         online, mentoringów i usług cyfrowych.
       </Typography>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mx-auto">
-        {/* Rząd 1 */}
-        <StaticImage
-          src="../../images/magicOpinia1.webp"
-          alt="Opinia 1"
-          placeholder="blurred"
-          width={400}
-        />
-        <StaticImage
-          src="../../images/magicOpinia2.webp"
-          alt="Opinia 2"
-          placeholder="blurred"
-        />
-        <StaticImage
-          src="../../images/magicOpinia3.webp"
-          alt="Opinia 3"
-          placeholder="blurred"
-        />
-
-        {/* Rząd 2 */}
-        <StaticImage
-          src="../../images/magicOpinia4.webp"
-          alt="Opinia 4"
-          placeholder="blurred"
-        />
-        <StaticImage
-          src="../../images/magicOpinia5.webp"
-          alt="Opinia 5"
-          placeholder="blurred"
-        />
-        <StaticImage
-          src="../../images/magicOpinia6.webp"
-          alt="Opinia 6"
-          placeholder="blurred"
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mx-auto">
+        <div className="flex flex-col gap-2">
+          <StaticImage
+            src="../../images/OpiniaKolektyw2a.webp"
+            alt="Opinia 1"
+            placeholder="blurred"
+            width={600}
+          />
+          <StaticImage
+            src="../../images/OpiniaKolektyw3a.webp"
+            alt="Opinia 2"
+            placeholder="blurred"
+            width={600}
+          />
+          <StaticImage
+            src="../../images/OpiniaKolektyw4a.webp"
+            alt="Opinia 3"
+            placeholder="blurred"
+            width={600}
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <StaticImage
+            src="../../images/OpiniaKolektyw1a.webp"
+            alt="Opinia 4"
+            placeholder="blurred"
+            width={600}
+          />
+          <StaticImage
+            src="../../images/OpiniaKolektyw5a.webp"
+            alt="Opinia 5"
+            placeholder="blurred"
+            width={600}
+          />
+        </div>
       </div>
     </Section>
   )

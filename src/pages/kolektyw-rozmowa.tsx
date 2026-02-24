@@ -1,19 +1,24 @@
 import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner4 from "components/MagicBanner4"
+import MagicBioBanner2 from "components/MagicBioBanner2"
 import MagicCollectiveBanner from "components/MagicCollectiveBanner"
+import MagicOpinions from "components/MagicOpinions"
 import SEO from "components/seo"
 import React from "react"
 
 const MagicCollectiveTalkPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <MagicCollectiveBanner version={15} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-magic-grid relative">
+        <MagicCollectiveBanner version={13} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-magic-pink">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-ada-white2 py-8 px-4 md:px-8">
+          <div className="bg-ada-magicGreen py-8 px-4 md:px-8">
             <MagicCollectiveBanner version={16} />
           </div>
         </div>
@@ -27,8 +32,21 @@ const MagicCollectiveTalkPage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-white2 reltive">
         <MagicBanner4 version={3} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <MagicCollectiveBanner version={17} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+        <MagicBioBanner2 version={2} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-white2">
+        <MagicOpinions />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-magic-pink">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-ada-magicGreen py-8 px-4 md:px-8">
+            <MagicCollectiveBanner version={18} />
+          </div>
+        </div>
       </MaxWithBgColorContainer>
     </Layout>
   )
