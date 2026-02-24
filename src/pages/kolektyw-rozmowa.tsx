@@ -13,9 +13,6 @@ const MagicCollectiveTalkPage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <MagicCollectiveBanner version={15} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-magic-grid relative">
-        <MagicCollectiveBanner version={13} />
-      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-magic-pink">
         <div className="max-w-6xl mx-auto">
           <div className="bg-ada-magicGreen py-8 px-4 md:px-8">
