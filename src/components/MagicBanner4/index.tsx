@@ -31,32 +31,29 @@ const magicInfoContentV1 = [
             />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row md:gap-2 items-center my-2">
-          <div className="flex flex-col text-left">
-            <p className="text-adaDesc -mb-4"> przyniósł</p>
+        <div className="flex flex-col lg:flex-row md:gap-2 items-center justify-center my-2">
+          <p className="text-adaDesc mr-2"> przyniósł</p>
+          <div className="flex items-center gap-1">
             <TypingAnimation
               text="28"
-              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie w-[100px]"
+              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"
             />
+            <div className="text-adaSubtitleThird md:text-[80px]">🛒</div>
           </div>
-          <div className="text-adaSubtitleThird md:text-[80px]">🛒</div>
           <p className="md:text-adaDesc mb-2 md:ml-2">zakupów o wartości</p>
           <TypingAnimation
             text="69 972 zł"
             textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[300px] -ml-4"
           />
         </div>
-        <div className="flex md:gap-2 items-center">
-          <div className="flex flex-col lg:flex-row text-left items-end">
-            <div>
-              <p className="text-adaDesc -mb-4"> oraz</p>
-              <TypingAnimation
-                text="1949"
-                textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[100px]"
-              />
-            </div>
-
-            <p className="md:text-adaDesc mb-6 ml-1 md:ml-2">
+        <div className="flex md:gap-2 items-center justify-center">
+          <p className="text-adaDesc mr-2"> oraz</p>
+          <div className="flex items-center gap-1">
+            <TypingAnimation
+              text="1949"
+              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"
+            />
+            <p className="md:text-adaDesc">
               nowych subskrybentów
             </p>
           </div>
@@ -92,7 +89,7 @@ const magicInfoContentV2 = [
     ),
     content: (
       <div className="flex flex-col items-center mx-auto py-6">
-        <div className="flex flex-col lg:flex-row gap-4 items-center">
+        <div className="flex flex-col lg:flex-row gap-4 items-center justify-center">
           <div className="text-[80px]">💰</div>
           <div className="flex flex-col text-left">
             <p className="md:text-adaDesc -mb-4"> za mniej niż</p>
@@ -105,15 +102,15 @@ const magicInfoContentV2 = [
             za jednego obserwatora
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 md:gap-4 items-center">
-          <div className="flex flex-col text-left">
+        <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 md:gap-4 items-center justify-center">
+          <div className="flex items-center gap-1">
             <TypingAnimation
               text="40"
-              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[100px]"
+              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"
             />
-            <p className="text-adaDesc -mb-4">osób</p>
+            <p className="text-adaDesc">osób</p>
+            <div className="text-[80px]">💬</div>
           </div>
-          <div className="text-[80px]">💬</div>
           <p className="md:text-adaDesc max-w-[300px] text-left">
             przesłało <b>zapytanie o współpracę</b> bezpośrednio
             <b> po odwiedzeniu profilu na Instagramie</b>
@@ -151,7 +148,7 @@ const magicInfoContentV3 = [
             />
           </div>
         </div>
-        <div className="flex md:gap-4 items-center">
+        <div className="flex md:gap-4 items-center justify-center">
           <div className="flex flex-col text-left">
             <p className="text-adaDesc -mb-4"> Przychód:</p>
             <TypingAnimation

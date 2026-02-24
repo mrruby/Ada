@@ -1002,7 +1002,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
           </p>
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 z-2">
-            <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScWWFTLKbI4z7gIHU7-6gDcBcKLmlDP1QgB3EfODdomkHmpYw/viewform" target="_blank" rel="noopener noreferrer">
               <StaticImage
                 src={"../../images/magicBtn.svg"}
                 alt=""
@@ -1082,7 +1082,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             <b>Dołącz do grona zadowolonych klientek, </b>które dzięki naszemu
             wsparciu rozwinęły swoje biznesy
           </p>
-          <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer" className="block bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase hover:opacity-90">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScWWFTLKbI4z7gIHU7-6gDcBcKLmlDP1QgB3EfODdomkHmpYw/viewform" target="_blank" rel="noopener noreferrer" className="block bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase hover:opacity-90">
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-white2"
