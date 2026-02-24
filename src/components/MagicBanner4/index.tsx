@@ -32,14 +32,14 @@ const magicInfoContentV1 = [
           </div>
         </div>
         <div className="flex flex-col lg:flex-row md:gap-2 items-center my-2">
-          <div className="flex flex-col text-left">
-            <p className="text-adaDesc -mb-4"> przyniósł</p>
+          <div className="flex items-center text-left gap-2">
+            <p className="text-adaDesc">przyniósł&nbsp;&nbsp;</p>
             <TypingAnimation
               text="28"
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie w-[100px]"
             />
+            <div className="text-adaSubtitleThird md:text-[80px]">🛒</div>
           </div>
-          <div className="text-adaSubtitleThird md:text-[80px]">🛒</div>
           <p className="md:text-adaDesc mb-2 md:ml-2">zakupów o wartości</p>
           <TypingAnimation
             text="69 972 zł"
@@ -106,14 +106,14 @@ const magicInfoContentV2 = [
           </div>
         </div>
         <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 md:gap-4 items-center">
-          <div className="flex flex-col text-left">
+          <div className="flex items-center gap-2">
             <TypingAnimation
               text="40"
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[100px]"
             />
-            <p className="text-adaDesc -mb-4">osób</p>
+            <p className="text-adaDesc">osób</p>
+            <div className="text-[80px]">💬</div>
           </div>
-          <div className="text-[80px]">💬</div>
           <p className="md:text-adaDesc max-w-[300px] text-left">
             przesłało <b>zapytanie o współpracę</b> bezpośrednio
             <b> po odwiedzeniu profilu na Instagramie</b>
