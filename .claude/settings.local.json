@@ -58,7 +58,9 @@
       "Bash(du -h:*)",
       "Bash(wc:*)",
       "Bash(du:*)",
-      "Bash(file:*)"
+      "Bash(file:*)",
+      "Bash(cwebp:*)",
+      "Bash(cd:*)"
     ],
     "deny": []
   }
