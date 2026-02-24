@@ -9,7 +9,7 @@ interface Props {
 const MaxWithBgColorContainer: React.FC<Props> = ({
   children,
   bgColor = "bg-transparent",
-  extraStyle,
+  extraStyle = "",
 }) => {
   return (
     <div className={`w-screen ${bgColor} ${extraStyle}`}>

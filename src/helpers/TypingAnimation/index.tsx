@@ -5,6 +5,7 @@ interface Props {
   textStyle: string
   speed?: number
   as?: "h1" | "h2" | "h3" | "p" | "span"
+  wrapperClassName?: string
 }
 
 const useTypingEffect = (text: string, speed: number = 200) => {
@@ -55,12 +56,13 @@ const TypingAnimation: React.FC<Props> = ({
   textStyle,
   speed = 200,
   as = "h3",
+  wrapperClassName = "min-w-[200px]",
 }) => {
   const { displayedText, cursorVisible } = useTypingEffect(text, speed)
   const HeadingTag = as
 
   return (
-    <div className="relative inline-block min-w-[200px]">
+    <div className={`relative inline-block ${wrapperClassName}`}>
       {/* Tekst animowany */}
       <HeadingTag className={`${textStyle} xl:whitespace-pre`}>
         {displayedText}

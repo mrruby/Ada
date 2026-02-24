@@ -11,6 +11,7 @@ const magicInfoContentV1 = [
   {
     title: "69 972 zł ",
     color: "green",
+    showArrow: true,
     subtitle: <></>,
     subtitle2: (
       <>
@@ -31,35 +32,37 @@ const magicInfoContentV1 = [
             />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row md:gap-2 items-center justify-center my-2">
-          <p className="text-adaDesc mr-2"> przyniósł</p>
-          <div className="flex items-center gap-1">
-            <TypingAnimation
-              text="28"
-              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"
-            />
-            <div className="text-adaSubtitleThird md:text-[80px]">🛒</div>
-          </div>
-          <p className="md:text-adaDesc mb-2 md:ml-2">zakupów o wartości</p>
+        <div className="flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 my-2">
+          <p className="text-adaDesc">przyniósł</p>
+          <TypingAnimation
+            text="28"
+            textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie leading-none"
+            wrapperClassName="min-w-0 w-auto"
+            as="span"
+          />
+          <span className="text-adaSubtitleThird md:text-[80px] leading-none">
+            🛒
+          </span>
+          <p className="md:text-adaDesc">zakupów o wartości</p>
           <TypingAnimation
             text="69 972 zł"
-            textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[300px] -ml-4"
+            textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie leading-none"
+            wrapperClassName="min-w-0 w-auto"
+            as="span"
           />
         </div>
-        <div className="flex md:gap-2 items-center justify-center">
-          <p className="text-adaDesc mr-2"> oraz</p>
-          <div className="flex items-center gap-1">
-            <TypingAnimation
-              text="1949"
-              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"
-            />
-            <p className="md:text-adaDesc">
-              nowych subskrybentów
-            </p>
-          </div>
-          <div className="text-adaSubtitleThird md:text-[80px] -rotate-90">
+        <div className="flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1">
+          <p className="text-adaDesc">oraz</p>
+          <TypingAnimation
+            text="1949"
+            textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie leading-none"
+            wrapperClassName="min-w-0 w-auto"
+            as="span"
+          />
+          <p className="md:text-adaDesc">nowych subskrybentów</p>
+          <span className="inline-block text-adaSubtitleThird md:text-[80px] leading-none -rotate-90">
             ☝️
-          </div>
+          </span>
         </div>
       </div>
     ),
@@ -77,6 +80,7 @@ const magicInfoContentV2 = [
   {
     title: "11 125",
     color: "",
+    showArrow: true,
     subtitle: (
       <p>
         Dzięki <b>kampanii kierującej na Instagrama</b> Monika zyskała
@@ -89,27 +93,27 @@ const magicInfoContentV2 = [
     ),
     content: (
       <div className="flex flex-col items-center mx-auto py-6">
-        <div className="flex flex-col lg:flex-row gap-4 items-center justify-center">
-          <div className="text-[80px]">💰</div>
-          <div className="flex flex-col text-left">
-            <p className="md:text-adaDesc -mb-4"> za mniej niż</p>
-            <TypingAnimation
-              text="0,43 zł"
-              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie md:w-[160px]"
-            />
-          </div>
-          <div className="md:text-adaDesc -mt-4 lg:mt-0">
-            za jednego obserwatora
-          </div>
+        <div className="flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1">
+          <span className="text-[80px] leading-none">💰</span>
+          <p className="md:text-adaDesc">za mniej niż</p>
+          <TypingAnimation
+            text="0,43 zł"
+            textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie leading-none"
+            wrapperClassName="min-w-0 w-auto"
+            as="span"
+          />
+          <p className="md:text-adaDesc">za jednego obserwatora</p>
         </div>
-        <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 md:gap-4 items-center justify-center">
-          <div className="flex items-center gap-1">
+        <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 items-start lg:items-baseline justify-center gap-y-3 lg:gap-x-4">
+          <div className="flex items-baseline gap-x-2 text-left">
             <TypingAnimation
               text="40"
-              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"
+              textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie leading-none"
+              wrapperClassName="min-w-0 w-auto"
+              as="span"
             />
             <p className="text-adaDesc">osób</p>
-            <div className="text-[80px]">💬</div>
+            <span className="text-[80px] leading-none">💬</span>
           </div>
           <p className="md:text-adaDesc max-w-[300px] text-left">
             przesłało <b>zapytanie o współpracę</b> bezpośrednio
@@ -130,6 +134,7 @@ const magicInfoContentV3 = [
   {
     title: "ROAS 50,56",
     color: "",
+    showArrow: false,
     subtitle: (
       <p>
         kampania sprzedażowa <b>produktu cyfrowego</b> przyniosła
@@ -184,7 +189,7 @@ const MagicBanner4 = ({ version = 1 }: MagicBanner4Props): JSX.Element => {
   }
 
   return (
-    <Section>
+    <Section className="relative" padding="pt-8 md:pt-12 pb-0 px-4">
       <div className="text-center">
         <div className="flex flex-col pt-2 justify-center">
           {content.map((item, i) => (
@@ -196,6 +201,7 @@ const MagicBanner4 = ({ version = 1 }: MagicBanner4Props): JSX.Element => {
               subtitle2={item.subtitle2}
               content={item.content}
               description={item.description}
+              showArrow={item.showArrow}
             />
           ))}
         </div>

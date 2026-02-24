@@ -7,6 +7,7 @@ interface SectionProps {
   maxWidth?: "sm" | "md" | "lg" | "xl" | "2xl" | "4xl" | "5xl"
   padding?: string
   id?: string
+  aos?: string | false
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -16,12 +17,13 @@ const Section: React.FC<SectionProps> = ({
   maxWidth = "5xl",
   padding = "py-8 md:py-12 px-4",
   id,
+  aos = "fade-up",
 }) => {
   return (
     <section
       className={`${bgColor} ${padding} ${className}`}
       id={id}
-      data-aos="fade-up"
+      data-aos={aos || undefined}
     >
       <div className={`max-w-${maxWidth} mx-auto`}>{children}</div>
     </section>

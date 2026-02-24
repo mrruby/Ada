@@ -6,6 +6,9 @@ import MagicCollectiveForm from "../MagicCollectiveForm"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
+const COLLECTIVE_CONSULTATION_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScWWFTLKbI4z7gIHU7-6gDcBcKLmlDP1QgB3EfODdomkHmpYw/viewform?usp=sharing&ouid=112663730817679195316"
+
 const MagicCollectiveBanner = ({ version }: { version: number }) => {
   const [hasAnimated, setHasAnimated] = useState(false)
 
@@ -853,7 +856,11 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             </p>
           </div>
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 translate-y-6 z-2">
-            <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://forms.gle/VQHwrGBqMuSJtWS99"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <StaticImage
                 src={"../../images/magicBtn2.svg"}
                 alt=""
@@ -876,7 +883,11 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             </Typography>
           </div>
           <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 translate-y-6 z-2">
-            <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://forms.gle/VQHwrGBqMuSJtWS99"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <StaticImage
                 src={"../../images/magicBtn2.svg"}
                 alt=""
@@ -925,7 +936,12 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
         </Section>
       )}
       {version == 15 && (
-        <Section bgColor="" className="text-black relative" padding="mx-1">
+        <Section
+          bgColor=""
+          className="text-black relative"
+          padding="mx-1"
+          aos={false}
+        >
           <div className="flex justify-end">
             <StaticImage
               src={"../../images/magic-kolektyw.png"}
@@ -970,60 +986,62 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center mx-auto absolute left-1/2 -translate-x-1/2 z-2 lg:-bottom-4">
-            <a href="https://forms.gle/VQHwrGBqMuSJtWS99" target="_blank" rel="noopener noreferrer">
-              <StaticImage
-                src={"../../images/magicBtn.svg"}
-                alt=""
-                placeholder="blurred"
-                width={80}
-                height={80}
-              />
-            </a>
+          <div
+            className="flex justify-center items-center mx-auto absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 pointer-events-none"
+            style={{ zIndex: 80 }}
+          >
+            <StaticImage
+              src={"../../images/magicBtn.svg"}
+              alt=""
+              placeholder="blurred"
+              width={80}
+              height={80}
+            />
           </div>
         </Section>
       )}
       {version == 16 && (
         <Section
           bgColor=""
-          className="text-black relative"
-          padding="mt-12 mb-20"
+          className="text-black relative z-50 pointer-events-auto overflow-visible"
+          padding="mt-12 pb-16"
+          aos={false}
         >
-          <div className="bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase">
+          <a
+            href={COLLECTIVE_CONSULTATION_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="kolektyw-cta relative block bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase hover:opacity-90 pointer-events-auto"
+            style={{ zIndex: 60 }}
+          >
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-white2"
             >
               Umów się na bezpłatną konsultację
             </Typography>
-          </div>
+          </a>
           <p className="text-adaDesc mt-10 mb-4 text-center max-w-[590px] mx-auto">
             Dołącz do <b>setek przedsiębiorczyń,</b> które tak jak Ty zbudowały{" "}
             <b>skuteczny marketing od zera,</b> a teraz na nim <b>zarabiają.</b>
           </p>
-          <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 z-2">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScWWFTLKbI4z7gIHU7-6gDcBcKLmlDP1QgB3EfODdomkHmpYw/viewform" target="_blank" rel="noopener noreferrer">
-              <StaticImage
-                src={"../../images/magicBtn.svg"}
-                alt=""
-                placeholder="blurred"
-                width={80}
-                height={80}
-              />
-            </a>
-          </div>
         </Section>
       )}
       {version == 17 && (
-        <Section bgColor="" className="text-black" padding="mt-12 mb-20 px-4">
-          <p className="text-adaDesc mt-10 mb-4 text-center max-w-[600px] mx-auto">
+        <Section
+          bgColor=""
+          className="text-black relative z-0 overflow-visible"
+          padding="pt-12 pb-8 px-4"
+          aos={false}
+        >
+          <p className="text-adaDesc mb-4 text-center max-w-[600px] mx-auto">
             Z naszego podejścia, w którym pokazujemy jak{" "}
             <b>krok po kroku zbudować skuteczny marketing,</b> skorzystały już
             setki przedsiębiorczyń:
           </p>
           <div className="flex flex-col gap-8">
             <div className="bg-ada-magicPurple3 rounded-3xl max-w-[600px] mx-auto border-ada-orange border">
-              <div className="md:flex gap-2 px-8 py-2 items-center justify center">
+              <div className="md:flex gap-2 px-8 py-2 items-center justify-center">
                 <Typography
                   variant="h2"
                   className="p-2 font-anton font-normal text-center text-ada-magicGreen"
@@ -1036,7 +1054,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               </div>
             </div>
             <div className="bg-ada-magicPurple3 rounded-3xl max-w-[600px] mx-auto border-ada-orange border">
-              <div className="md:flex gap-2 px-8 py-2 items-center justify center">
+              <div className="md:flex gap-2 px-8 py-2 items-center justify-center">
                 <div>
                   <Typography
                     variant="h2"
@@ -1056,7 +1074,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               </div>
             </div>
             <div className="bg-ada-magicPurple3 rounded-3xl max-w-[600px] mx-auto border-ada-orange border">
-              <div className="md:flex gap-2 px-8 py-2 items-center justify center">
+              <div className="md:flex gap-2 px-8 py-2 items-center justify-center">
                 <Typography
                   variant="h2"
                   className="p-2 font-anton font-normal text-center text-ada-magicGreen"
@@ -1077,12 +1095,19 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
           className="text-black"
           padding="mt-10 mb-10"
           id="konsultacja"
+          aos={false}
         >
           <p className="text-adaDesc mt-10 mb-4 text-center max-w-[400px] mx-auto">
             <b>Dołącz do grona zadowolonych klientek, </b>które dzięki naszemu
             wsparciu rozwinęły swoje biznesy
           </p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScWWFTLKbI4z7gIHU7-6gDcBcKLmlDP1QgB3EfODdomkHmpYw/viewform" target="_blank" rel="noopener noreferrer" className="block bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase hover:opacity-90">
+          <a
+            href={COLLECTIVE_CONSULTATION_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="kolektyw-cta relative block bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase hover:opacity-90 pointer-events-auto"
+            style={{ zIndex: 60 }}
+          >
             <Typography
               variant="h2"
               className="p-2 font-anton font-normal text-center text-ada-white2"

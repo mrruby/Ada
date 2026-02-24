@@ -9,6 +9,7 @@ type MagicInfoBoxProps = {
   subtitle2: React.JSX.Element
   content: React.JSX.Element
   description: React.JSX.Element
+  showArrow?: boolean
 }
 
 const MagicInfoBox = ({
@@ -18,11 +19,12 @@ const MagicInfoBox = ({
   subtitle2,
   content,
   description,
+  showArrow = true,
 }: MagicInfoBoxProps) => {
   const bgClass = color === "green" ? "bg-ada-magicGreen" : "bg-ada-white2"
 
   return (
-    <div className="text-center text-black max-w-[900px] mt-10 m-auto mx-4">
+    <div className="relative text-center text-black max-w-[900px] mt-10 m-auto mx-4 pb-16">
       <div
         className={`border-ada-orange border rounded-3xl px-12 py-4 mx-auto ${bgClass}`}
       >
@@ -38,17 +40,19 @@ const MagicInfoBox = ({
       >
         {description}
       </div>
-      <div className="flex justify-center items-center mx-auto z-2 mt-10">
-        <a href="#konsultacja">
-          <StaticImage
-            src={"../../images/magicBtn.svg"}
-            alt=""
-            placeholder="blurred"
-            width={80}
-            height={80}
-          />
-        </a>
-      </div>
+      {showArrow && (
+        <div className="flex justify-center items-center absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-20">
+          <a href="#konsultacja">
+            <StaticImage
+              src={"../../images/magicBtn.svg"}
+              alt=""
+              placeholder="blurred"
+              width={80}
+              height={80}
+            />
+          </a>
+        </div>
+      )}
     </div>
   )
 }

@@ -428,3 +428,20 @@ body {
     display: block;
   }
 }
+
+/* purgecss start ignore */
+/* /kolektyw-rozmowa: force CTA interactivity above decorative layers */
+.kolektyw-rozmowa-page [data-aos] {
+  pointer-events: auto !important;
+}
+
+.kolektyw-rozmowa-page .kolektyw-cta {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 60;
+}
+
+.kolektyw-rozmowa-page .kolektyw-cta * {
+  pointer-events: auto !important;
+}
+/* purgecss end ignore */
