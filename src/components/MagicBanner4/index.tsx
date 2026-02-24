@@ -32,8 +32,8 @@ const magicInfoContentV1 = [
           </div>
         </div>
         <div className="flex flex-col lg:flex-row md:gap-2 items-center justify-center my-2">
-          <p className="text-adaDesc mr-2"> przyniósł</p>
-          <div className="flex items-center gap-1">
+          <p className="text-adaDesc mr-4"> przyniósł</p>
+          <div className="flex items-center gap-4">
             <TypingAnimation
               text="28"
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"
@@ -47,8 +47,8 @@ const magicInfoContentV1 = [
           />
         </div>
         <div className="flex md:gap-2 items-center justify-center">
-          <p className="text-adaDesc mr-2"> oraz</p>
-          <div className="flex items-center gap-1">
+          <p className="text-adaDesc mr-4"> oraz</p>
+          <div className="flex items-center gap-4">
             <TypingAnimation
               text="1949"
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"
@@ -103,7 +103,7 @@ const magicInfoContentV2 = [
           </div>
         </div>
         <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 md:gap-4 items-center justify-center">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-4">
             <TypingAnimation
               text="40"
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie"

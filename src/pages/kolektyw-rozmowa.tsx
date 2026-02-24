@@ -13,13 +13,6 @@ const MagicCollectiveTalkPage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <MagicCollectiveBanner version={15} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-magic-pink">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-ada-magicGreen py-8 px-4 md:px-8">
-            <MagicCollectiveBanner version={16} />
-          </div>
-        </div>
-      </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white2 reltive">
         <MagicBanner4 version={1} />
       </MaxWithBgColorContainer>
@@ -31,6 +24,13 @@ const MagicCollectiveTalkPage = () => {
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-white2">
         <MagicCollectiveBanner version={17} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-magic-pink">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-ada-magicGreen py-8 px-4 md:px-8">
+            <MagicCollectiveBanner version={16} />
+          </div>
+        </div>
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <MagicBioBanner2 version={2} />
