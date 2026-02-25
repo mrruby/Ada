@@ -24,7 +24,7 @@ const MagicInfoBox = ({
   const bgClass = color === "green" ? "bg-ada-magicGreen" : "bg-ada-white2"
 
   return (
-    <div className="relative text-center text-black max-w-[900px] mt-10 m-auto mx-4 pb-16">
+    <div className="relative text-center text-black w-full max-w-[900px] mt-10 mx-auto px-4 md:px-0 pb-16">
       <div
         className={`border-ada-orange border rounded-3xl px-12 py-4 mx-auto ${bgClass}`}
       >
@@ -34,7 +34,7 @@ const MagicInfoBox = ({
         </p>
         <p className="text-adaDesc">{subtitle2}</p>
       </div>
-      <div>{content}</div>
+      <div className="mx-auto w-full max-w-[820px]">{content}</div>
       <div
         className={`border-ada-orange border rounded-3xl px-12 py-4 mx-auto text-adaDesc ${bgClass}`}
       >

@@ -104,8 +104,8 @@ const magicInfoContentV2 = [
           />
           <p className="md:text-adaDesc">za jednego obserwatora</p>
         </div>
-        <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 items-start lg:items-baseline justify-center gap-y-3 lg:gap-x-4">
-          <div className="flex items-baseline gap-x-2 text-left">
+        <div className="flex flex-col lg:flex-row mt-4 lg:mt-0 items-center justify-center gap-y-3 lg:gap-x-4">
+          <div className="flex items-baseline gap-x-2 text-center">
             <TypingAnimation
               text="40"
               textStyle="text-adaSubtitleThird md:text-adaTitle2 font-anie leading-none"
@@ -115,7 +115,7 @@ const magicInfoContentV2 = [
             <p className="text-adaDesc">osób</p>
             <span className="text-[80px] leading-none">💬</span>
           </div>
-          <p className="md:text-adaDesc max-w-[300px] text-left">
+          <p className="md:text-adaDesc max-w-[300px] text-center">
             przesłało <b>zapytanie o współpracę</b> bezpośrednio
             <b> po odwiedzeniu profilu na Instagramie</b>
           </p>
