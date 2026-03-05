@@ -60,7 +60,10 @@
       "Bash(du:*)",
       "Bash(file:*)",
       "Bash(cwebp:*)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(yarn outdated:*)",
+      "Bash(node:*)",
+      "Bash(yarn upgrade:*)"
     ],
     "deny": []
   }

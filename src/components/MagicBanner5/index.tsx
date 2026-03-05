@@ -83,7 +83,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
       <Section
         className="text-black relative"
         padding="py-8 md:py-12 px-6"
-        maxWidth="2xl"
+        maxWidth="5xl"
       >
         {version == 1 && (
           <div className="max-w-4xl mx-auto mb-8 md:mb-20 text-center px-6">
@@ -161,12 +161,14 @@ const MagicBanner5 = ({ version }: { version: number }) => {
             >
               Posłuchaj, co <b>Magda</b> mówi o <b>MAGIC:</b>
             </Typography>
-            <div className="w-full max-w-[380px] overflow-hidden rounded-lg mx-auto">
+            <div className="w-full max-w-4xl overflow-hidden rounded-lg mx-auto">
               <VimeoFacade
                 videoId="1155023182"
                 title="Opinia Magdy o MAGIC"
                 aspectRatio="16:9"
                 eager
+                sizes="(max-width: 640px) 92vw, (max-width: 1200px) 80vw, 960px"
+                maxThumbnailWidth={1280}
               />
             </div>
             <Button

@@ -66,20 +66,19 @@ const MagicSaleBanner = ({
             </div>
 
             {/* Right column - Image */}
-            <div className="lg:block order-1 lg:order-2 lg:-mb-10">
+            <div className="lg:block order-1 lg:order-2 lg:-mb-10 w-full max-w-[560px] mx-auto lg:mx-0">
               <StaticImage
                 src="../../images/ada-magic-1.webp"
                 alt="Marketing Ads Girls Inside Club"
                 placeholder="blurred"
-                quality={75}
-                width={416}
-                height={378}
-                breakpoints={[240, 320, 416]}
-                sizes="(min-width: 1024px) 416px, 90vw"
+                quality={100}
+                width={560}
+                height={509}
+                sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 92vw"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-auto rounded-[24px]"
+                className="w-full h-auto rounded-[24px] max-w-[560px]"
               />
             </div>
           </div>
