@@ -161,15 +161,6 @@ const MagicCommunityOpinions = ({
               className="w-full"
             />
             <StaticImage
-              src="../../images/magic_reference_sell_11.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={75}
-              width={400}
-              className="w-full"
-            />
-            <StaticImage
               src="../../images/magic_reference_sell_12.webp"
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
