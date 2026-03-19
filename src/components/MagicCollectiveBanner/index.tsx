@@ -1008,9 +1008,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
           aos={false}
         >
           <a
-            href={COLLECTIVE_CONSULTATION_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#konsultacja"
             className="kolektyw-cta relative block bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase hover:opacity-90 pointer-events-auto"
             style={{ zIndex: 60 }}
           >
@@ -1101,20 +1099,9 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             <b>Dołącz do grona zadowolonych klientek, </b>które dzięki naszemu
             wsparciu rozwinęły swoje biznesy
           </p>
-          <a
-            href={COLLECTIVE_CONSULTATION_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="kolektyw-cta relative block bg-ada-orange rounded-3xl max-w-[700px] mx-auto uppercase hover:opacity-90 pointer-events-auto"
-            style={{ zIndex: 60 }}
-          >
-            <Typography
-              variant="h2"
-              className="p-2 font-anton font-normal text-center text-ada-white2"
-            >
-              Umów się na bezpłatną konsultację
-            </Typography>
-          </a>
+          <div className="flex justify-center w-full mx-auto">
+            <MagicCollectiveForm />
+          </div>
         </Section>
       )}
       {version == 19 && (
