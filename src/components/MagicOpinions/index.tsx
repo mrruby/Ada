@@ -55,6 +55,14 @@ const MagicOpinions = (): JSX.Element => {
             className="w-full"
             imgClassName="block w-full h-auto"
           />
+          <StaticImage
+            src="../../images/OpiniaKolektyw6.webp"
+            alt="Opinia 6 - Sylwia Wasak"
+            placeholder="blurred"
+            width={640}
+            className="w-full"
+            imgClassName="block w-full h-auto"
+          />
         </div>
       </div>
     </Section>

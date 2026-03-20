@@ -539,6 +539,19 @@ const referencesMagicList3: IReferencesList[] = [
       />
     ),
   },
+  {
+    image: (
+      <StaticImage
+        src={"../../images/OpiniaKolektyw6.webp"}
+        alt="Opinia o Magic - Sylwia Wasak"
+        placeholder="blurred"
+        width={680}
+        height={680}
+        formats={["auto", "webp", "avif"]}
+        quality={100}
+      />
+    ),
+  },
 ]
 
 const ReferencesMentoring = ({
