@@ -256,14 +256,22 @@ exports.onPostBuild = async ({ graphql }) => {
       explicit,
     } = edge.node.frontmatter
 
-    const response = await fetch(
-      pluginOptions.audioUrl + `/Podcast_${season}_${episodeNumber}.mp3`,
-      { method: "head" }
-    )
+    let duration = 0
+    let size = 0
+    let type = "audio/mpeg"
 
-    const duration = response.headers.get("x-amz-meta-duration") || 0
-    const size = response.headers.get("content-length")
-    const type = response.headers.get("content-type")
+    try {
+      const response = await fetch(
+        pluginOptions.audioUrl + `/Podcast_${season}_${episodeNumber}.mp3`,
+        { method: "head" }
+      )
+
+      duration = response.headers.get("x-amz-meta-duration") || 0
+      size = response.headers.get("content-length") || 0
+      type = response.headers.get("content-type") || "audio/mpeg"
+    } catch (error) {
+      console.warn(`Warning: Could not fetch podcast metadata for S${season}E${episodeNumber}:`, error.message)
+    }
 
     // add an episode item to the feed using the options
     feed.item({
