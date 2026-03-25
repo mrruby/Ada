@@ -4,45 +4,47 @@ import React from "react"
 import formHTML from "../values/forms/form-marketerki.html"
 
 const descriptionBullets = [
-  "Dowiesz się, jak działa system Andromeda i zaczniesz działać z aktualną wiedzą!",
-  "Pokażę Ci, kiedy warto zaufać Advantage+, a kiedy lepiej zachować kontrolę nad targetowaniem.",
-  "Dostaniesz konkretne przykłady reklam i tekstów, które możesz wdrożyć u swoich klientek w 2026 - bez zgadywania i marnowania budżetów ✨",
+  "Dowiesz się, czym jest Advantage+ w systemie Meta",
+  "Pokażę Ci, kiedy warto zaufać Advantage+, a kiedy lepiej zachować kontrolę",
+  "Dostaniesz konkretne wskazówki, by świadomie wykorzystywać Advantage+ w swoich kampaniach",
 ]
 
 const benefits = [
   {
     bgClass: "bg-ada-magicPink3",
-    title: "🔥 Ogarniesz system Andromeda",
+    title: "🔥OGARNIESZ ADVANTAGE+",
     description:
       "Zrozumiesz, jak działa algorytm i co zmienić w kampaniach, żeby zacząć osiągać lepsze wyniki przy niższych kosztach.",
   },
   {
     bgClass: "bg-ada-magicYellow",
-    title: "🔝 Poznasz najlepszą strukturę kampanii na 2026",
+    title: "🎉 WYKORZYSTASZ SYSTEM STRATEGICZNIE",
     description:
-      "Dzięki której zaoszczędzisz budżety klientek i sprawisz, że ich kampanie szybciej wejdą w fazę uczenia.",
+      "Podejdziesz do swoich reklam świadomie, dzięki czemu nie przepalisz budżetu na niepotrzebne testy.",
   },
   {
     bgClass: "bg-ada-magicPurple4",
-    title: "📊 Ułożysz kreacje strategicznie",
-    description: "Poznasz zasady, które ułatwią Ci pracę z kampaniami.",
+    title: "🚀 UŁOŻYSZ STRATEGIĘ DZIAŁANIA",
+    description:
+      "Poznasz zasady, które ułatwią Ci pracę z kampaniami, nawet jeśli dopiero zaczynasz.",
   },
   {
     bgClass: "bg-ada-magicPink3",
-    title: "✨ Wykorzystasz Advantage+ świadomie",
+    title: "✅ ZROZUMIESZ FUNKCJE ADV+",
     description:
-      "Dowiesz się, kiedy Adv+ rzeczywiście pomaga w dotarciu do właściwych osób, a kiedy lepiej jej nie włączać.",
+      "Poznasz, co oferuje Ci Advantage+ na etapie kampanii, zestawu i reklamy.",
   },
   {
     bgClass: "bg-ada-magicYellow",
-    title: "🚀 Zobaczysz reklamy, które działają w praktyce",
+    title: "👀 OTRZYMASZ PRAKTYCZNE WSKAZÓWKI",
     description:
-      "Dostaniesz konkretne case studies i zrozumiesz, dlaczego te rozwiązania sprawdzają się w 2026 roku.",
+      "Skorzystasz z naszej wiedzy i doświadczenia z Meta Ads zupełnie za 0zł!",
   },
   {
     bgClass: "bg-ada-magicPurple4",
-    title: "😎 Otrzymasz praktyczne inspiracje",
-    description: "Pokażę Ci teksty i grafiki, które działają!",
+    title: "✨ DOWIESZ SIĘ, CZY TWOJE KONTO JEST GOTOWE NA ADV+",
+    description:
+      "Zrozumiesz, kiedy Advantage+ wesprze Twoje reklamy, a kiedy może im zaszkodzić",
   },
 ]
 
@@ -54,17 +56,20 @@ const AdvantagePage = () => {
         formHTML={formHTML}
         descriptionBullets={descriptionBullets}
         benefits={benefits}
+        sectionTitle="POBIERZ PDF ZA 0ZŁ"
+        benefitsTitle="Co zyskasz, dzięki tej ściądze?"
         heroLeft={
           <>
             <p className="text-[20px] lg:text-[24px] font-bold text-black mb-4">
-              Mini-kurs za 0zł:
+              ODBIERZ ŚCIĄGĘ ZA 0ZŁ:
             </p>
             <h1 className="text-[32px] lg:text-[48px] font-anton font-normal leading-[125%] text-black">
-              Dowiedz się, kiedy{" "}
+              Advantage+
+              <br />
               <span className="text-ada-magicPurple4">
-                Advantage+ może pomóc Twoim kampaniom
+                Kiedy może pomóc Twoim kampaniom
               </span>
-              , a kiedy Ci zaszkodzi.
+              , a kiedy może zaszkodzić?
             </h1>
           </>
         }

@@ -74,6 +74,8 @@ type TrainingLandingPageProps = {
   formHTML: string
   benefits?: Benefit[]
   descriptionBullets?: string[]
+  sectionTitle?: string
+  benefitsTitle?: React.ReactNode
 }
 
 const TrainingLandingPage = ({
@@ -82,6 +84,8 @@ const TrainingLandingPage = ({
   formHTML,
   benefits = DEFAULT_BENEFITS,
   descriptionBullets,
+  sectionTitle,
+  benefitsTitle,
 }: TrainingLandingPageProps) => {
   return (
     <Layout showHeaderAndFooter={false}>
@@ -99,7 +103,7 @@ const TrainingLandingPage = ({
         <div className="py-16 flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
           <div className="w-full lg:w-1/2 ">
             <h2 className="inline-block text-[48px] font-anton font-normal text-black bg-ada-magicOrange2 uppercase leading-none mb-8">
-              mini-kurs za 0zł
+              {sectionTitle || "mini-kurs za 0zł"}
             </h2>
             {descriptionBullets ? (
               <ul className="mt-6 text-[16px] font-normal text-black leading-relaxed list-disc pl-5 space-y-2">
@@ -134,8 +138,12 @@ const TrainingLandingPage = ({
       <MaxWithBgColorContainer bgColor="bg-white">
         <div className="py-16 px-4">
           <h2 className="text-[48px] font-anton font-normal uppercase leading-none text-center mb-12 text-black">
-            co zyskasz podczas{" "}
-            <span className="text-ada-magicPurple4">mini-kursu</span>
+            {benefitsTitle || (
+              <>
+                co zyskasz podczas{" "}
+                <span className="text-ada-magicPurple4">mini-kursu</span>
+              </>
+            )}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {benefits.map((b, idx) => (
