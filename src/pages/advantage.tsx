@@ -64,12 +64,9 @@ const AdvantagePage = () => {
               ODBIERZ ŚCIĄGĘ ZA 0ZŁ:
             </p>
             <h1 className="text-[32px] lg:text-[48px] font-anton font-normal leading-[125%] text-black">
-              Advantage+
+              <span className="text-ada-magicPurple4">Advantage+</span>
               <br />
-              <span className="text-ada-magicPurple4">
-                Kiedy może pomóc Twoim kampaniom
-              </span>
-              , a kiedy może zaszkodzić?
+              Kiedy może pomóc Twoim kampaniom, a kiedy może zaszkodzić?
             </h1>
           </>
         }
