@@ -76,6 +76,7 @@ type TrainingLandingPageProps = {
   descriptionBullets?: string[]
   sectionTitle?: string
   benefitsTitle?: React.ReactNode
+  mockupImage?: React.ReactNode
 }
 
 const TrainingLandingPage = ({
@@ -86,6 +87,7 @@ const TrainingLandingPage = ({
   descriptionBullets,
   sectionTitle,
   benefitsTitle,
+  mockupImage,
 }: TrainingLandingPageProps) => {
   return (
     <Layout showHeaderAndFooter={false}>
@@ -125,12 +127,14 @@ const TrainingLandingPage = ({
             )}
           </div>
           <div className="w-full lg:w-1/2">
-            <StaticImage
-              src="../../images/Reklamy w 2026.webp"
-              alt="Reklamy w 2026"
-              placeholder="blurred"
-              className="w-full"
-            />
+            {mockupImage || (
+              <StaticImage
+                src="../../images/Reklamy w 2026.webp"
+                alt="Reklamy w 2026"
+                placeholder="blurred"
+                className="w-full"
+              />
+            )}
           </div>
         </div>
       </MaxWithBgColorContainer>
