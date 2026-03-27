@@ -60,12 +60,14 @@ const AdvantagePage = () => {
         sectionTitle="POBIERZ PDF ZA 0ZŁ"
         benefitsTitle="Co zyskasz, dzięki tej ściądze?"
         mockupImage={
-          <StaticImage
-            src="../images/advantage-mockup.webp"
-            alt="Advantage+ Mockup"
-            placeholder="blurred"
-            className="w-full"
-          />
+          <div className="overflow-hidden">
+            <StaticImage
+              src="../images/advantage-mockup.webp"
+              alt="Advantage+ Mockup"
+              placeholder="blurred"
+              className="w-full -mt-16 -mb-24 lg:-mt-24 lg:-mb-32"
+            />
+          </div>
         }
         heroLeft={
           <>
@@ -73,7 +75,9 @@ const AdvantagePage = () => {
               ODBIERZ ŚCIĄGĘ ZA 0ZŁ:
             </p>
             <h1 className="text-[32px] lg:text-[48px] font-anton font-normal leading-[125%] text-black">
-              <span className="text-ada-magicPurple4 text-[40px] lg:text-[60px]">Advantage+</span>
+              <span className="text-ada-magicPurple4 text-[40px] lg:text-[60px]">
+                Advantage+
+              </span>
               <br />
               Kiedy może pomóc Twoim kampaniom, a kiedy może zaszkodzić?
             </h1>
