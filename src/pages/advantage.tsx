@@ -65,7 +65,7 @@ const AdvantagePage = () => {
               src="../images/advantage-mockup.webp"
               alt="Advantage+ Mockup"
               placeholder="blurred"
-              className="w-full -mt-16 -mb-24 lg:-mt-24 lg:-mb-32"
+              className="w-full -mt-20 -mb-28 lg:-mt-28 lg:-mb-36"
             />
           </div>
         }
