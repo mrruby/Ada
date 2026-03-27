@@ -102,7 +102,7 @@ const TrainingLandingPage = ({
       </MaxWithBgColorContainer>
 
       <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
-        <div className="pt-16 pb-4 flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
+        <div className="py-4 flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
           <div className="w-full lg:w-1/2 ">
             <h2 className="inline-block text-[48px] font-anton font-normal text-black bg-ada-magicOrange2 uppercase leading-none mb-8">
               {sectionTitle || "mini-kurs za 0zł"}
