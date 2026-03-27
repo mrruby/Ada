@@ -61,7 +61,7 @@ const AdvantagePage = () => {
         benefitsTitle="Co zyskasz, dzięki tej ściądze?"
         mockupImage={
           <StaticImage
-            src="../images/advantage-mockup.png"
+            src="../images/advantage-mockup.webp"
             alt="Advantage+ Mockup"
             placeholder="blurred"
             className="w-full"
