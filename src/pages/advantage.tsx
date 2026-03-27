@@ -30,19 +30,19 @@ const benefits = [
       "Poznasz zasady, które ułatwią Ci pracę z kampaniami, nawet jeśli dopiero zaczynasz.",
   },
   {
-    bgClass: "bg-ada-magicPink3",
+    bgClass: "bg-ada-magicPurple4",
     title: "✅ ZROZUMIESZ FUNKCJE ADV+",
     description:
       "Poznasz, co oferuje Ci Advantage+ na etapie kampanii, zestawu i reklamy.",
   },
   {
-    bgClass: "bg-ada-magicYellow",
+    bgClass: "bg-ada-magicPink3",
     title: "👀 OTRZYMASZ PRAKTYCZNE WSKAZÓWKI",
     description:
       "Skorzystasz z naszej wiedzy i doświadczenia z Meta Ads zupełnie za 0zł!",
   },
   {
-    bgClass: "bg-ada-magicPurple4",
+    bgClass: "bg-ada-magicYellow",
     title: "✨ DOWIESZ SIĘ, CZY TWOJE KONTO JEST GOTOWE NA ADV+",
     description:
       "Zrozumiesz, kiedy Advantage+ wesprze Twoje reklamy, a kiedy może im zaszkodzić",
