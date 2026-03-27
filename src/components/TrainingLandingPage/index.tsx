@@ -49,7 +49,7 @@ const DEFAULT_BENEFITS: Benefit[] = [
 ]
 
 const AdaOverlay = () => (
-  <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-0 z-10 max-w-[300px] lg:max-w-[400px]">
+  <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-0 z-10 max-w-[400px] lg:max-w-[500px]">
     <div className="relative">
       <StaticImage
         src="../../images/ada-show.webp"
@@ -100,13 +100,13 @@ const TrainingLandingPage = ({
       </MaxWithBgColorContainer>
 
       <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
-        <div className="py-16 flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
+        <div className="pt-16 pb-4 flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
           <div className="w-full lg:w-1/2 ">
             <h2 className="inline-block text-[48px] font-anton font-normal text-black bg-ada-magicOrange2 uppercase leading-none mb-8">
               {sectionTitle || "mini-kurs za 0zł"}
             </h2>
             {descriptionBullets ? (
-              <ul className="mt-6 text-[16px] font-normal text-black leading-relaxed list-disc pl-5 space-y-2">
+              <ul className="mt-6 text-[19px] font-normal text-black leading-relaxed list-disc pl-5 space-y-2">
                 {descriptionBullets.map((bullet, idx) => (
                   <li key={idx}>{bullet}</li>
                 ))}
