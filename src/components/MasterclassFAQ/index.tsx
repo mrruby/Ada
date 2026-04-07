@@ -10,15 +10,9 @@ interface ListItem {
 
 interface MasterclassFAQProps {
   version: number
-  customMagicList?: ListItem[]
-  hideMagicQuestions?: string[]
 }
 
-const MasterclassFAQ = ({
-  version,
-  customMagicList,
-  hideMagicQuestions,
-}: MasterclassFAQProps) => {
+const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
   const leftList: ListItem[] = [
     {
       question: "Czy te warsztaty są dla mnie?",
@@ -587,14 +581,6 @@ const MasterclassFAQ = ({
     ))
   }
 
-  const filteredMagicFAQList =
-    customMagicList ??
-    (hideMagicQuestions
-      ? magicFAQList.filter(
-          (item) => !hideMagicQuestions.includes(item.question)
-        )
-      : magicFAQList)
-
   return (
     <div className="flex flex-col text-ada-blue items-center px-6">
       {version === 1 && (
@@ -734,7 +720,7 @@ const MasterclassFAQ = ({
                 FAQ
               </h2>
               <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
-                {renderList(filteredMagicFAQList)}
+                {renderList(magicFAQList)}
               </ul>
             </div>
           </div>

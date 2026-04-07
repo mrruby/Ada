@@ -63,7 +63,8 @@
       "Bash(cd:*)",
       "Bash(yarn outdated:*)",
       "Bash(node:*)",
-      "Bash(yarn upgrade:*)"
+      "Bash(yarn upgrade:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": []
   }

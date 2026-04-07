@@ -7,6 +7,8 @@ interface Props {
   mobileRight?: string
   width?: string
   zIndex?: string
+  circleColor?: string
+  arrowColor?: string
 }
 
 const YellowCircleArrow: React.FC<Props> = ({
@@ -16,6 +18,8 @@ const YellowCircleArrow: React.FC<Props> = ({
   mobileRight,
   width = "67px",
   zIndex = "z-10",
+  circleColor = "#F4E105",
+  arrowColor = "#7B2D8E",
 }) => {
   const positionClasses = [
     mobileTop,
@@ -40,12 +44,12 @@ const YellowCircleArrow: React.FC<Props> = ({
         xmlns="http://www.w3.org/2000/svg"
       >
         {/* Yellow circle */}
-        <circle cx="30" cy="30" r="30" fill="#F4E105" />
+        <circle cx="30" cy="30" r="30" fill={circleColor} />
 
         {/* Simple thin purple down arrow - 2x bigger */}
         <path
           d="M30 45L18 33M30 45L42 33M30 45V15"
-          stroke="#7B2D8E"
+          stroke={arrowColor}
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"

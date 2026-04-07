@@ -48,22 +48,40 @@ const DEFAULT_BENEFITS: Benefit[] = [
   },
 ]
 
-const AdaOverlay = () => (
-  <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-0 z-10 max-w-[400px] lg:max-w-[500px]">
+const DefaultAdaCallout = () => (
+  <div className="absolute top-6 -right-4">
+    <StaticImage
+      src="../../images/wypelnij.webp"
+      alt="Wypelnij"
+      placeholder="blurred"
+      width={100}
+    />
+  </div>
+)
+
+const AdaOverlay = ({
+  alignRight = false,
+  figure,
+  children,
+}: {
+  alignRight?: boolean
+  figure?: React.ReactNode
+  children?: React.ReactNode
+}) => (
+  <div
+    className={`hidden lg:block absolute bottom-0 z-10 max-w-[400px] lg:max-w-[500px] ${
+      alignRight ? "right-4" : "left-1/2 -translate-x-1/2"
+    }`}
+  >
     <div className="relative">
-      <StaticImage
-        src="../../images/ada-show.webp"
-        alt="Ada"
-        placeholder="blurred"
-      />
-      <div className="absolute top-6 -right-4">
+      {figure || (
         <StaticImage
-          src="../../images/wypelnij.webp"
-          alt="Wypelnij"
+          src="../../images/ada-show.webp"
+          alt="Ada"
           placeholder="blurred"
-          width={100}
         />
-      </div>
+      )}
+      {children ?? <DefaultAdaCallout />}
     </div>
   </div>
 )
@@ -71,73 +89,109 @@ const AdaOverlay = () => (
 type TrainingLandingPageProps = {
   heroBgColor: string
   heroLeft: React.ReactNode
-  formHTML: string
+  formHTML?: string
+  afterHeroSection?: React.ReactNode
+  pinkSectionContent?: React.ReactNode
+  beforeBenefitsSection?: React.ReactNode
+  bottomSection?: React.ReactNode
   benefits?: Benefit[]
   descriptionBullets?: string[]
   sectionTitle?: string
   benefitsTitle?: React.ReactNode
   mockupImage?: React.ReactNode
+  heroFigure?: React.ReactNode
+  heroOverlay?: React.ReactNode
 }
 
 const TrainingLandingPage = ({
   heroBgColor,
   heroLeft,
   formHTML,
+  afterHeroSection,
+  pinkSectionContent,
+  beforeBenefitsSection,
+  bottomSection,
   benefits = DEFAULT_BENEFITS,
   descriptionBullets,
   sectionTitle,
   benefitsTitle,
   mockupImage,
+  heroFigure,
+  heroOverlay,
 }: TrainingLandingPageProps) => {
+  const hasForm = Boolean(formHTML)
+
   return (
     <Layout showHeaderAndFooter={false}>
       <MaxWithBgColorContainer bgColor={heroBgColor}>
-        <div className="py-16 flex flex-col lg:flex-row items-center lg:items-start justify-between px-4 relative">
-          <div className="w-full lg:w-1/2 lg:mb-72 max-w-lg">{heroLeft}</div>
-          <AdaOverlay />
-          <div className="w-full lg:w-auto mt-8 lg:mt-0">
-            <div dangerouslySetInnerHTML={{ __html: formHTML }} />
+        <div
+          className={`py-16 flex flex-col lg:flex-row items-center lg:items-start px-4 relative ${
+            hasForm ? "justify-between" : "justify-start"
+          }`}
+        >
+          <div
+            className={`w-full ${
+              hasForm
+                ? "lg:w-1/2 lg:mb-72 max-w-lg"
+                : "lg:max-w-[680px] lg:mb-56"
+            }`}
+          >
+            {heroLeft}
           </div>
+          <AdaOverlay alignRight={!hasForm} figure={heroFigure}>
+            {heroOverlay}
+          </AdaOverlay>
+          {formHTML ? (
+            <div className="w-full lg:w-auto mt-8 lg:mt-0">
+              <div dangerouslySetInnerHTML={{ __html: formHTML }} />
+            </div>
+          ) : null}
         </div>
       </MaxWithBgColorContainer>
 
+      {afterHeroSection}
+
       <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
-        <div className="pt-16 pb-4 flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
-          <div className="w-full lg:w-1/2 ">
-            <h2 className="inline-block text-[48px] font-anton font-normal text-black bg-ada-magicOrange2 uppercase leading-none mb-8">
-              {sectionTitle || "mini-kurs za 0zł"}
-            </h2>
-            {descriptionBullets ? (
-              <ul className="mt-6 text-[19px] font-normal text-black leading-relaxed list-disc pl-5 space-y-2">
-                {descriptionBullets.map((bullet, idx) => (
-                  <li key={idx}>{bullet}</li>
-                ))}
-              </ul>
-            ) : (
-              <p className="mt-6 text-[16px] font-normal text-black leading-relaxed">
-                W 45 minut pokażę Ci, jak prowadzić kampanie Meta w 2026 roku
-                dla swoich klientek - bez przepalania budżetów i nerwowego
-                testowania na oślep. Dowiesz się, jak działa system Andromeda i
-                zaczniesz działać z aktualną wiedzą! Pokażę Ci też, kiedy warto
-                zaufać Advantage+, a kiedy lepiej zachować kontrolę nad
-                targetowaniem. Dostaniesz konkretne przykłady reklam i tekstów,
-                które możesz wdrożyć u swoich klientek w 2026 - bez zgadywania i
-                marnowania budżetów ✨
-              </p>
-            )}
+        {pinkSectionContent || (
+          <div className="pt-16 pb-4 flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
+            <div className="w-full lg:w-1/2 ">
+              <h2 className="inline-block text-[48px] font-anton font-normal text-black bg-ada-magicOrange2 uppercase leading-none mb-8">
+                {sectionTitle || "mini-kurs za 0zł"}
+              </h2>
+              {descriptionBullets ? (
+                <ul className="mt-6 text-[19px] font-normal text-black leading-relaxed list-disc pl-5 space-y-2">
+                  {descriptionBullets.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-6 text-[16px] font-normal text-black leading-relaxed">
+                  W 45 minut pokażę Ci, jak prowadzić kampanie Meta w 2026 roku
+                  dla swoich klientek - bez przepalania budżetów i nerwowego
+                  testowania na oślep. Dowiesz się, jak działa system Andromeda
+                  i zaczniesz działać z aktualną wiedzą! Pokażę Ci też, kiedy
+                  warto zaufać Advantage+, a kiedy lepiej zachować kontrolę nad
+                  targetowaniem. Dostaniesz konkretne przykłady reklam i
+                  tekstów, które możesz wdrożyć u swoich klientek w 2026 - bez
+                  zgadywania i marnowania budżetów ✨
+                </p>
+              )}
+            </div>
+            <div className="w-full lg:w-1/2">
+              {mockupImage || (
+                <StaticImage
+                  src="../../images/Reklamy w 2026.webp"
+                  alt="Reklamy w 2026"
+                  placeholder="blurred"
+                  className="w-full"
+                />
+              )}
+            </div>
           </div>
-          <div className="w-full lg:w-1/2">
-            {mockupImage || (
-              <StaticImage
-                src="../../images/Reklamy w 2026.webp"
-                alt="Reklamy w 2026"
-                placeholder="blurred"
-                className="w-full"
-              />
-            )}
-          </div>
-        </div>
+        )}
       </MaxWithBgColorContainer>
+
+      {beforeBenefitsSection}
 
       <MaxWithBgColorContainer bgColor="bg-white">
         <div className="py-16 px-4">
@@ -155,10 +209,10 @@ const TrainingLandingPage = ({
                 key={`${b.title}-${idx}`}
                 className={`${b.bgClass} rounded-lg p-6 border border-black text-center`}
               >
-                <h3 className="text-[16px] font-bold text-black mb-2 uppercase">
+                <h3 className="text-[16px] font-bold text-black mb-2 uppercase whitespace-pre-line">
                   {b.title}
                 </h3>
-                <p className="text-[16px] font-normal text-black">
+                <p className="text-[16px] font-normal text-black whitespace-pre-line">
                   {b.description}
                 </p>
               </div>
@@ -167,26 +221,30 @@ const TrainingLandingPage = ({
         </div>
       </MaxWithBgColorContainer>
 
-      <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
-        <div className="py-16 px-4 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-4">
-          <div className="flex flex-col items-center justify-center">
-            <h2 className="text-[48px] lg:text-[72px] font-anton font-normal uppercase leading-none text-ada-darkGrey text-center">
-              WYPEŁNIJ
-              <br />
-              FORMULARZ!
-            </h2>
-            <StaticImage
-              src="../../images/arrow-right-spirng.webp"
-              alt="Arrow"
-              placeholder="blurred"
-              className="mt-4 max-w-[150px] rotate-90 lg:rotate-0"
-            />
+      {formHTML ? (
+        <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
+          <div className="py-16 px-4 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-4">
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="text-[48px] lg:text-[72px] font-anton font-normal uppercase leading-none text-ada-darkGrey text-center">
+                WYPEŁNIJ
+                <br />
+                FORMULARZ!
+              </h2>
+              <StaticImage
+                src="../../images/arrow-right-spirng.webp"
+                alt="Arrow"
+                placeholder="blurred"
+                className="mt-4 max-w-[150px] rotate-90 lg:rotate-0"
+              />
+            </div>
+            <div>
+              <div dangerouslySetInnerHTML={{ __html: formHTML }} />
+            </div>
           </div>
-          <div>
-            <div dangerouslySetInnerHTML={{ __html: formHTML }} />
-          </div>
-        </div>
-      </MaxWithBgColorContainer>
+        </MaxWithBgColorContainer>
+      ) : null}
+
+      {bottomSection}
     </Layout>
   )
 }

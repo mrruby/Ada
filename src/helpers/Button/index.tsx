@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
+type ButtonVariant = "default" | "dark" | "offer"
+
 interface Props {
   type: "button" | "submit" | "reset"
   text: string | React.JSX.Element
@@ -10,8 +12,17 @@ interface Props {
   sectionId?: string
   border?: boolean
   btnStyle?: string
+  variant?: ButtonVariant
   iconCalender?: boolean
   iconCalender2?: boolean
+}
+
+const VARIANT_STYLES: Record<ButtonVariant, string> = {
+  default:
+    "bg-ada-light-pink hover:bg-ada-pink hover:shadow-xl px-[20px] py-[6px]",
+  dark: "bg-black text-ada-magicYellow rounded-full shadow-[0_16px_38px_rgba(0,0,0,0.18)]",
+  offer:
+    "bg-ada-magicOrange2 text-black rounded-[14px] shadow-[0_8px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:brightness-95 hover:shadow-xl",
 }
 
 export const Button: React.FC<Props> = ({
@@ -22,6 +33,7 @@ export const Button: React.FC<Props> = ({
   sectionId,
   border,
   btnStyle,
+  variant = "default",
   iconCalender,
   iconCalender2,
 }) => {
@@ -40,7 +52,7 @@ export const Button: React.FC<Props> = ({
     <button
       onClick={handleButtonClick}
       type={type}
-      className={`bg-ada-light-pink ${textSize} font-medium px-[20px] py-[6px] hover:bg-ada-pink hover:shadow-xl ${borderStyles} ${btnStyle}`}
+      className={`${VARIANT_STYLES[variant]} ${textSize} font-medium ${borderStyles} ${btnStyle}`}
     >
       {text}
       {iconCalender && (
