@@ -51,10 +51,13 @@ export const wyzwanieHeroLeft = (
       <br />
       <span className="text-black">w pigułce</span>
     </h1>
-    <p className="inline-block bg-white px-4 py-2 text-[18px] lg:text-[20px] font-normal leading-[140%] text-black">
-      <span className="whitespace-nowrap">Twoja pierwsza (albo lepsza)</span>
-      <br />
-      <span>reklama sprzedażowa.</span>
-    </p>
+    <div className="flex flex-col items-start gap-1">
+      <span className="inline-block bg-white px-4 py-2 text-[18px] lg:text-[20px] font-normal leading-[140%] text-black whitespace-nowrap">
+        Twoja pierwsza (albo lepsza)
+      </span>
+      <span className="inline-block bg-white px-4 py-2 text-[18px] lg:text-[20px] font-normal leading-[140%] text-black">
+        kampania sprzedażowa.
+      </span>
+    </div>
   </>
 )
