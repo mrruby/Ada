@@ -48,11 +48,8 @@ export const wyzwanieHeroLeft = (
       <span className="text-ada-magicPurple4">Kampania sprzedażowa</span>{" "}
       <span className="text-black">w pigułce</span>
     </h1>
-    <p className="text-[18px] lg:text-[20px] font-normal leading-[140%] text-black mb-4">
+    <p className="inline-block bg-white px-4 py-2 text-[18px] lg:text-[20px] font-normal leading-[140%] text-black">
       Twoja pierwsza (albo lepsza) reklama sprzedażowa.
-    </p>
-    <p className="text-[20px] lg:text-[24px] font-bold leading-[135%] text-black">
-      7 dni, 4 ekspertki, 1 gotowa kampania
     </p>
   </>
 )

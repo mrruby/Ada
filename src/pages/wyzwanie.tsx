@@ -17,34 +17,56 @@ const OFFER_SECTION_ID = "oferta"
 // TODO: replace with the real easycart checkout URL
 const WYZWANIE_CHECKOUT_URL = "#TODO-checkout"
 
-const wyzwanieHeroOverlay = (
-  <div className="absolute -top-2 -right-28 z-0 w-[360px] xl:w-[420px] pointer-events-none">
-    <div className="relative">
-      <div className="drop-shadow-[0_22px_42px_rgba(0,0,0,0.28)]">
-        <StaticImage
-          src="../images/wyzwanie-laptop.webp"
-          alt="Podgląd kampanii sprzedażowej na laptopie"
-          placeholder="blurred"
-        />
-      </div>
-      <div className="absolute -bottom-4 right-0 w-[120px] xl:w-[140px] drop-shadow-[0_18px_36px_rgba(0,0,0,0.22)]">
-        <StaticImage
-          src="../images/wyzwanie-phone.webp"
-          alt="Podgląd społeczności na telefonie"
-          placeholder="blurred"
-        />
-      </div>
+const AprilCalendarPhone = () => (
+  <div className="w-[140px] xl:w-[160px] bg-white rounded-[24px] p-3 shadow-[0_18px_36px_rgba(0,0,0,0.22)]">
+    <div className="text-center mb-2">
+      <p className="text-[10px] font-bold text-black uppercase">Kwiecień 2026</p>
+    </div>
+    <div className="grid grid-cols-7 gap-[2px] text-[8px] text-center">
+      <span className="text-gray-400">Pn</span>
+      <span className="text-gray-400">Wt</span>
+      <span className="text-gray-400">Śr</span>
+      <span className="text-gray-400">Cz</span>
+      <span className="text-gray-400">Pt</span>
+      <span className="text-gray-400">Sb</span>
+      <span className="text-gray-400">Nd</span>
+      {/* Week 1: 1-5 */}
+      <span></span><span></span><span className="text-black">1</span><span className="text-black">2</span><span className="text-black">3</span><span className="text-black">4</span><span className="text-black">5</span>
+      {/* Week 2: 6-12 */}
+      <span className="text-black">6</span><span className="text-black">7</span><span className="text-black">8</span><span className="text-black">9</span><span className="text-black">10</span><span className="text-black">11</span><span className="text-black">12</span>
+      {/* Week 3: 13-19 */}
+      <span className="text-black">13</span><span className="text-black">14</span><span className="text-black">15</span><span className="text-black">16</span><span className="text-black">17</span><span className="text-black">18</span><span className="text-black">19</span>
+      {/* Week 4: 20-26 - highlighted dates */}
+      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto font-bold ring-2 ring-ada-pink7">20</span>
+      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto font-bold ring-2 ring-ada-pink7">21</span>
+      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">22</span>
+      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">23</span>
+      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">24</span>
+      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">25</span>
+      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">26</span>
+      {/* Week 5: 27-30 */}
+      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">27</span>
+      <span className="text-black">28</span><span className="text-black">29</span><span className="text-black">30</span><span></span><span></span><span></span>
     </div>
   </div>
 )
 
+const wyzwanieHeroOverlay = (
+  <div className="absolute -top-2 -right-16 z-0 pointer-events-none">
+    <AprilCalendarPhone />
+  </div>
+)
+
 const wyzwanieHeroFigure = (
-  <div className="relative z-10">
-    <StaticImage
-      src="../images/ada-show.webp"
-      alt="Ada"
-      placeholder="blurred"
-    />
+  <div className="relative z-10 flex justify-center">
+    <div className="w-[280px] xl:w-[340px] overflow-hidden">
+      <StaticImage
+        src="../images/ada_portrait.webp"
+        alt="Ada"
+        placeholder="blurred"
+        className="object-cover object-top"
+      />
+    </div>
   </div>
 )
 
@@ -76,6 +98,8 @@ const wyzwaniePinkSection = (
           mobileTop="top-0"
           mobileLeft="left-1/2 -translate-x-1/2"
           width="72px"
+          circleColor="#FFFFFF"
+          arrowColor="#000000"
         />
       </div>
       <h2 className="inline-block bg-ada-magicYellow px-4 py-3 text-[32px] lg:text-[56px] font-anton font-normal uppercase leading-[95%] text-black mb-8">
@@ -87,11 +111,12 @@ const wyzwaniePinkSection = (
           link i kupi.
         </span>{" "}
         A tymczasem Twoja konkurencja już puszcza reklamy i zbiera klientów,
-        którzy mogliby trafić do Ciebie.{" "}
+        którzy mogliby trafić do Ciebie.
+        <br /><br />
         <span className="font-bold">
-          W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i
-          grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii
-          sprzedażowej w Menedżerze Reklam.
+          W ciągu 7 dni przeprowadzimy Cię przez cały proces - od<br />
+          tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie<br />
+          kampanii sprzedażowej w Menedżerze Reklam.
         </span>{" "}
         Konkretne nagrania, wytyczne krok po kroku i wsparcie 4 ekspertek, które
         codziennie pracują z Meta Ads.
@@ -119,7 +144,7 @@ const wyzwanieDays: WyzwanieDay[] = [
     side: "left",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
-    numberBg: "bg-ada-magicYellow",
+    numberBg: "bg-black",
     titleBold:
       "Przywitanie od Ady + nagranie od Justyny z wytycznymi do tekstów sprzedażowych.",
     subtitle: "Dostajesz konkretne wskazówki, siadasz i piszesz.",
@@ -138,7 +163,7 @@ const wyzwanieDays: WyzwanieDay[] = [
     side: "right",
     sectionBg: "bg-ada-magicYellow",
     pillBg: "bg-ada-magicPurple4",
-    numberBg: "bg-ada-magicPurple4",
+    numberBg: "bg-black",
     titleBold:
       "Nagranie od Doroty: jak przygotować grafikę do reklamy, która zatrzymuje scroll.",
     subtitle:
@@ -158,7 +183,7 @@ const wyzwanieDays: WyzwanieDay[] = [
     side: "left",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
-    numberBg: "bg-ada-magicYellow",
+    numberBg: "bg-black",
     titleBold: "Piksel, zdarzenia, testowanie. Brzmi przerażająco?",
     subtitle: "Dostajesz nagranie z instrukcją krok po kroku.",
     portrait: (
@@ -176,7 +201,7 @@ const wyzwanieDays: WyzwanieDay[] = [
     side: "right",
     sectionBg: "bg-ada-magicYellow",
     pillBg: "bg-ada-magicPurple4",
-    numberBg: "bg-ada-magicPurple4",
+    numberBg: "bg-black",
     titleBold:
       "Spotkanie LIVE z Adą: ustawiamy kampanię sprzedażową razem + Q&A na żywo.",
     subtitle: "Otrzymujesz także dostęp do nagrania.",
@@ -195,7 +220,7 @@ const wyzwanieDays: WyzwanieDay[] = [
     side: "full",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
-    numberBg: "bg-ada-magicYellow",
+    numberBg: "bg-black",
     titleBold: "Czas na wdrożenie, pytania i konsultacje na platformie.",
     subtitle: "Wrzucasz materiały, dostajesz feedback.",
   },
@@ -231,7 +256,7 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
               >
                 {!isRight && (
                   <div
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${day.numberBg} text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]`}
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${day.numberBg} text-[28px] font-anton leading-none text-white lg:h-14 lg:w-14 lg:text-[36px]`}
                   >
                     {day.number}
                   </div>
@@ -247,7 +272,7 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
                 </p>
                 {isRight && (
                   <div
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${day.numberBg} text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]`}
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${day.numberBg} text-[28px] font-anton leading-none text-white lg:h-14 lg:w-14 lg:text-[36px]`}
                   >
                     {day.number}
                   </div>
@@ -281,41 +306,66 @@ const wyzwanieBeforeBenefitsSection = (
     {wyzwanieDays.map((day) => (
       <WyzwanieDaySection key={day.number} day={day} />
     ))}
+    {/* SPRAWDZAM button positioned between purple and light sections */}
+    <div className="relative">
+      <div className="absolute left-0 right-0 top-0 h-1/2 bg-ada-magicPurple4" />
+      <div className="absolute left-0 right-0 bottom-0 h-1/2 bg-white" />
+      <div className="relative z-10 flex justify-center py-4">
+        <Button
+          type="button"
+          variant="dark"
+          sectionId={OFFER_SECTION_ID}
+          text={<span className="font-bold uppercase text-ada-magicYellow">Sprawdzam</span>}
+          textSize="text-[20px] lg:text-[26px]"
+          btnStyle="px-10 lg:px-14 py-4"
+        />
+      </div>
+    </div>
   </>
 )
 
 const wyzwanieFaqList = [
   {
-    question: "Czy to wyzwanie jest dla mnie?",
-    answer:
-      "Tak, jeśli chcesz postawić swoją pierwszą kampanię sprzedażową albo poukładać obecną i przejść przez cały proces krok po kroku. To wyzwanie jest dla osób, które chcą działać praktycznie i od razu wdrażać kolejne elementy kampanii na swoim koncie.",
-  },
-  {
     question: "Czy muszę mieć doświadczenie z reklamami?",
     answer:
-      "Nie. Jeśli masz już jakieś próby za sobą, będzie Ci łatwiej, ale nie jest to warunek. Przeprowadzimy Cię przez cały proces od tekstu i grafiki po ustawienie kampanii sprzedażowej, więc możesz wejść w to także jako osoba początkująca.",
+      "Nie. Wyzwanie jest zaprojektowane tak, żebyś mogła postawić swoją pierwszą kampanię sprzedażową od zera. A jeśli już próbowałaś i czujesz, że przepalasz budżet - uporządkujesz cały proces i zrobisz to z głową.",
   },
   {
-    question: "Nie umiem w techniczne rzeczy, czy dam sobie radę?",
+    question: "Nie jestem techniczna. Dam radę?",
     answer:
-      "Tak. Wyzwanie zostało ułożone tak, żeby krok po kroku przejść przez kwestie techniczne bez zgadywania, a w razie blokady masz wsparcie zespołu. Piksel, zdarzenia i ustawienia kampanii rozkładamy na proste etapy.",
+      "Tak. Piksel, zdarzenia, Menedżer Reklam - brzmi strasznie, ale dostajesz nagrania krok po kroku i wsparcie. Nie musisz być techniczna, wystarczy odpalić nagranie i robić razem z nami.",
   },
   {
-    question: "Co jeśli nie będę mogła pojawić się na żywo?",
+    question: "Ile czasu dziennie muszę poświęcić?",
     answer:
-      "Materiały są rozpisane na kolejne dni, więc możesz pracować z nimi we własnym tempie w trakcie wyzwania. Jeśli nie wejdziesz na żywo w konkretnym momencie, dalej możesz wdrażać następne kroki i korzystać z przygotowanych materiałów oraz konsultacji.",
+      "Nagrania trwają max 30 minut. Razem z wdrożeniem wytycznych - godzina dziennie wystarczy, żeby pod koniec tygodnia mieć gotową kampanię.",
   },
   {
-    question: "Jaki budżet muszę przygotować na reklamy?",
+    question: "Czy spotkanie live z Adą jest nagrywane?",
     answer:
-      "Budżet reklamowy nie musi być ogromny, ale musi istnieć, żeby kampania mogła ruszyć. W praktyce start zwykle oznacza co najmniej kilkaset złotych przeznaczonych na test i pierwsze wyniki, a dokładną kwotę warto dopasować do oferty, celu i możliwości Twojego biznesu.",
+      "Tak, nagranie będzie dostępne na platformie.",
+  },
+  {
+    question: "Jak długo mam dostęp do materiałów?",
+    answer:
+      "Przez cały czas trwania wyzwania, czyli 20–27 kwietnia.",
+  },
+  {
+    question: "Dla kogo jest to wyzwanie?",
+    answer:
+      "Jeśli jesteś soloprzedsięborczynią, budujesz markę osobistą, prowadzisz sklep online, jesteś marketerką lub wirtualną asystentką - i chcesz ogarnąć reklamy sprzedażowe, które generują kasę, a nie tylko kliknięcia - to wyzwanie jest dla Ciebie.",
+  },
+  {
+    question: "Czy 97 zł to dużo?",
+    answer:
+      "Jedna źle ustawiona kampania potrafi przepalić więcej w jeden dzień. Za 97 zł dostajesz wiedzę od 4 ekspertek, gotowe wytyczne i spotkanie live, dzięki którym Twoja kampania ma szansę faktycznie zadziałać.",
   },
 ]
 
 const WyzwanieFaq = () => (
-  <div className="flex flex-col items-center px-6 text-ada-black">
-    <div className="pt-[60px] lg:pt-[76px]">
-      <h2 className="text-[20px] lg:text-adaTitle font-bold lg:mb-2 animate-bounce text-center mx-auto text-ada-pink7">
+  <div className="flex flex-col items-center px-6 text-black py-12 lg:py-16">
+    <div className="pt-[40px] lg:pt-[60px]">
+      <h2 className="text-[20px] lg:text-adaTitle font-bold lg:mb-2 animate-bounce text-center mx-auto text-black">
         FAQ
       </h2>
       <ul className="gap-10 md:gap-[120px] text-adaMin md:text-adaStandard">
@@ -331,7 +381,7 @@ const WyzwanieFaq = () => (
 
 const wyzwanieOfferBox = {
   eyebrow: "dostęp do szkolenia",
-  title: "KAMPANIA SPRZEDAŻOWA W PIGUŁCE",
+  title: "KAMPANIA\nSPRZEDAŻOWA\nW PIGUŁCE",
   priceLabel: "cena",
   price: "97 zł",
   ctaLabel: "KUPUJĘ DOSTĘP",
@@ -340,7 +390,7 @@ const wyzwanieOfferBox = {
       icon: "✍️",
       title: "konsultacje pisemne z ekspertkami",
       description:
-        'pytasz, dostajesz konkretną odpowiedź, nie "przypuszczę" i nie "też się chętnie dowiem"',
+        'pytasz, dostajesz konkretną odpowiedź, nie "przycupnę" i nie "też się chętnie dowiem"',
     },
     {
       icon: "🎥",
@@ -356,6 +406,109 @@ const wyzwanieOfferBox = {
   ],
 }
 
+const WyzwanieTestimonials = () => (
+  <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
+    <div className="py-12 lg:py-16 px-4">
+      <h2 className="text-[28px] lg:text-[42px] font-anton font-normal uppercase leading-[95%] text-center mb-10 text-black">
+        ZOBACZ CO CZŁONKINIE{" "}
+        <span className="text-ada-magicYellow">MAGIC</span> MÓWIĄ O SPOŁECZNOŚCI:
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-0">
+          <StaticImage
+            src="../images/magic_reference_sell_1.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+          <StaticImage
+            src="../images/magic_reference_sell_2.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+          <StaticImage
+            src="../images/magic_reference_sell_3.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+          <StaticImage
+            src="../images/magic_reference_sell_4.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+        </div>
+        <div className="flex flex-col gap-0">
+          <StaticImage
+            src="../images/magic_reference_sell_5.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+          <StaticImage
+            src="../images/magic_reference_sell_6.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+          <StaticImage
+            src="../images/magic_reference_sell_7.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+          <StaticImage
+            src="../images/magic_reference_sell_8.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+        </div>
+        <div className="flex flex-col gap-0">
+          <StaticImage
+            src="../images/magic_reference_sell_9.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+          <StaticImage
+            src="../images/magic_reference_sell_10.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+          <StaticImage
+            src="../images/magic_reference_sell_12.webp"
+            alt="Opinia o społeczności MAGIC"
+            placeholder="blurred"
+            className="w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </MaxWithBgColorContainer>
+)
+
+const WyzwanieCTA = () => (
+  <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
+    <div className="py-10 lg:py-14 px-4 text-center">
+      <p className="text-[18px] lg:text-[22px] leading-[140%] text-black max-w-2xl mx-auto mb-8">
+        Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads przestają być problemem i stają się przyjemnością
+      </p>
+      <Button
+        type="button"
+        variant="dark"
+        sectionId={OFFER_SECTION_ID}
+        text={<span className="font-bold uppercase text-ada-magicYellow">DOŁĄCZAM</span>}
+        textSize="text-[22px] lg:text-[28px]"
+        btnStyle="px-12 lg:px-16 py-5"
+      />
+    </div>
+  </MaxWithBgColorContainer>
+)
+
 const wyzwanieBottomSection = (
   <>
     <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
@@ -365,7 +518,7 @@ const wyzwanieBottomSection = (
           className="mx-auto w-full max-w-[340px] rounded-[24px] bg-[#f7f4ef] px-6 py-8 text-black shadow-[0_18px_36px_rgba(0,0,0,0.22)] lg:w-[30%] lg:max-w-none lg:px-7 lg:py-8"
         >
           <p className="text-[16px] leading-none">{wyzwanieOfferBox.eyebrow}</p>
-          <h2 className="mt-4 text-adaSubtitleThird font-anton uppercase leading-[92%]">
+          <h2 className="mt-4 text-[36px] lg:text-[42px] font-anton uppercase leading-[110%] whitespace-pre-line">
             {wyzwanieOfferBox.title}
           </h2>
 
@@ -387,8 +540,8 @@ const wyzwanieBottomSection = (
                 {wyzwanieOfferBox.ctaLabel}
               </span>
             }
-            textSize="text-[18px]"
-            btnStyle="mt-8 w-full px-3 py-4 cursor-pointer block text-center"
+            textSize="text-[22px] lg:text-[26px]"
+            btnStyle="mt-8 w-full px-3 py-5 cursor-pointer block text-center"
           />
 
           <div className="mt-8 space-y-6">
@@ -410,7 +563,10 @@ const wyzwanieBottomSection = (
       </div>
     </MaxWithBgColorContainer>
 
-    <MaxWithBgColorContainer bgColor="bg-white">
+    <WyzwanieTestimonials />
+    <WyzwanieCTA />
+
+    <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
       <WyzwanieFaq />
     </MaxWithBgColorContainer>
   </>
@@ -427,7 +583,8 @@ const WyzwaniePage = () => {
       benefitsTitle={
         <>
           Co dostajesz w{" "}
-          <span className="text-ada-magicPurple4">pakiecie?</span>
+          <span className="text-ada-magicPurple4">pakiecie</span>
+          <span className="text-black">?</span>
         </>
       }
       bottomSection={wyzwanieBottomSection}
