@@ -45,11 +45,13 @@ export const wyzwanieBenefits = [
 export const wyzwanieHeroLeft = (
   <>
     <h1 className="text-[48px] lg:text-adaBig font-anton font-normal leading-[95%] mb-5">
-      <span className="text-ada-magicPurple4">Kampania sprzedażowa</span>{" "}
-      <span className="text-black">w pigułce</span>
+      <span className="text-ada-magicPurple4 block">Kampania</span>
+      <span className="text-ada-magicPurple4 block">sprzedażowa</span>
+      <span className="text-black block">w pigułce</span>
     </h1>
     <p className="inline-block bg-white px-4 py-2 text-[18px] lg:text-[20px] font-normal leading-[140%] text-black">
-      Twoja pierwsza (albo lepsza) reklama sprzedażowa.
+      <span className="block">Twoja pierwsza (albo lepsza)</span>
+      <span className="block">reklama sprzedażowa.</span>
     </p>
   </>
 )
