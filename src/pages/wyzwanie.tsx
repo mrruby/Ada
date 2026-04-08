@@ -59,9 +59,9 @@ const wyzwanieHeroOverlay = (
 
 const wyzwanieHeroFigure = (
   <div className="relative z-10 flex justify-center">
-    <div className="w-[280px] xl:w-[340px] overflow-hidden">
+    <div className="w-[280px] xl:w-[340px] overflow-hidden rounded-[24px]">
       <StaticImage
-        src="../images/ada_portrait.webp"
+        src="../images/ada-magic-1.webp"
         alt="Ada"
         placeholder="blurred"
         className="object-cover object-top"
@@ -81,7 +81,7 @@ const wyzwanieAfterHeroSection = (
           type="button"
           variant="dark"
           sectionId={OFFER_SECTION_ID}
-          text={<span className="font-bold uppercase">Sprawdzam</span>}
+          text={<span className="font-anton uppercase">Sprawdzam</span>}
           textSize="text-[24px] lg:text-[30px]"
           btnStyle="px-10 lg:px-14 py-5"
         />
@@ -110,8 +110,7 @@ const wyzwaniePinkSection = (
           Wrzucasz posty, stories, reelsy… i czekasz, aż ktoś w końcu kliknie w
           link i kupi.
         </span>{" "}
-        A tymczasem Twoja konkurencja już puszcza reklamy i zbiera klientów,
-        którzy mogliby trafić do Ciebie.
+        A tymczasem Twoja konkurencja już <span className="whitespace-nowrap">puszcza reklamy i zbiera klientów, którzy mogliby trafić do Ciebie.</span>
         <br /><br />
         <span className="font-bold">
           W ciągu 7 dni przeprowadzimy Cię przez cały proces - od<br />
@@ -140,7 +139,7 @@ type WyzwanieDay = {
 const wyzwanieDays: WyzwanieDay[] = [
   {
     number: "1",
-    date: "PONIEDZIAŁEK 21.04",
+    date: "PONIEDZIAŁEK 20.04",
     side: "left",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
@@ -159,7 +158,7 @@ const wyzwanieDays: WyzwanieDay[] = [
   },
   {
     number: "2",
-    date: "WTOREK 22.04",
+    date: "WTOREK 21.04",
     side: "right",
     sectionBg: "bg-ada-magicYellow",
     pillBg: "bg-ada-magicPurple4",
@@ -179,7 +178,7 @@ const wyzwanieDays: WyzwanieDay[] = [
   },
   {
     number: "3",
-    date: "ŚRODA 23.04",
+    date: "ŚRODA 22.04",
     side: "left",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
@@ -197,7 +196,7 @@ const wyzwanieDays: WyzwanieDay[] = [
   },
   {
     number: "4",
-    date: "CZWARTEK 24.04",
+    date: "CZWARTEK 23.04",
     side: "right",
     sectionBg: "bg-ada-magicYellow",
     pillBg: "bg-ada-magicPurple4",
@@ -256,7 +255,7 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
               >
                 {!isRight && (
                   <div
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${day.numberBg} text-[28px] font-anton leading-none text-white lg:h-14 lg:w-14 lg:text-[36px]`}
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-black bg-transparent text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]"
                   >
                     {day.number}
                   </div>
@@ -272,7 +271,7 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
                 </p>
                 {isRight && (
                   <div
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${day.numberBg} text-[28px] font-anton leading-none text-white lg:h-14 lg:w-14 lg:text-[36px]`}
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-black bg-transparent text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]"
                   >
                     {day.number}
                   </div>
@@ -315,7 +314,7 @@ const wyzwanieBeforeBenefitsSection = (
           type="button"
           variant="dark"
           sectionId={OFFER_SECTION_ID}
-          text={<span className="font-bold uppercase text-ada-magicYellow">Sprawdzam</span>}
+          text={<span className="font-anton uppercase text-ada-magicYellow">Sprawdzam</span>}
           textSize="text-[20px] lg:text-[26px]"
           btnStyle="px-10 lg:px-14 py-4"
         />
@@ -326,37 +325,37 @@ const wyzwanieBeforeBenefitsSection = (
 
 const wyzwanieFaqList = [
   {
-    question: "Czy muszę mieć doświadczenie z reklamami?",
+    question: "🎯 Czy muszę mieć doświadczenie z reklamami?",
     answer:
       "Nie. Wyzwanie jest zaprojektowane tak, żebyś mogła postawić swoją pierwszą kampanię sprzedażową od zera. A jeśli już próbowałaś i czujesz, że przepalasz budżet - uporządkujesz cały proces i zrobisz to z głową.",
   },
   {
-    question: "Nie jestem techniczna. Dam radę?",
+    question: "💻 Nie jestem techniczna. Dam radę?",
     answer:
       "Tak. Piksel, zdarzenia, Menedżer Reklam - brzmi strasznie, ale dostajesz nagrania krok po kroku i wsparcie. Nie musisz być techniczna, wystarczy odpalić nagranie i robić razem z nami.",
   },
   {
-    question: "Ile czasu dziennie muszę poświęcić?",
+    question: "⏰ Ile czasu dziennie muszę poświęcić?",
     answer:
       "Nagrania trwają max 30 minut. Razem z wdrożeniem wytycznych - godzina dziennie wystarczy, żeby pod koniec tygodnia mieć gotową kampanię.",
   },
   {
-    question: "Czy spotkanie live z Adą jest nagrywane?",
+    question: "🎥 Czy spotkanie live z Adą jest nagrywane?",
     answer:
       "Tak, nagranie będzie dostępne na platformie.",
   },
   {
-    question: "Jak długo mam dostęp do materiałów?",
+    question: "📅 Jak długo mam dostęp do materiałów?",
     answer:
       "Przez cały czas trwania wyzwania, czyli 20–27 kwietnia.",
   },
   {
-    question: "Dla kogo jest to wyzwanie?",
+    question: "👩‍💼 Dla kogo jest to wyzwanie?",
     answer:
       "Jeśli jesteś soloprzedsięborczynią, budujesz markę osobistą, prowadzisz sklep online, jesteś marketerką lub wirtualną asystentką - i chcesz ogarnąć reklamy sprzedażowe, które generują kasę, a nie tylko kliknięcia - to wyzwanie jest dla Ciebie.",
   },
   {
-    question: "Czy 97 zł to dużo?",
+    question: "💸 Czy 97 zł to dużo?",
     answer:
       "Jedna źle ustawiona kampania potrafi przepalić więcej w jeden dzień. Za 97 zł dostajesz wiedzę od 4 ekspertek, gotowe wytyczne i spotkanie live, dzięki którym Twoja kampania ma szansę faktycznie zadziałać.",
   },
@@ -364,7 +363,7 @@ const wyzwanieFaqList = [
 
 const WyzwanieFaq = () => (
   <div className="flex flex-col items-center px-6 text-black py-12 lg:py-16">
-    <div className="pt-[40px] lg:pt-[60px]">
+    <div className="pt-[40px] lg:pt-[60px] bg-ada-magicPurple4 rounded-[24px] p-6 lg:p-10">
       <h2 className="text-[20px] lg:text-adaTitle font-bold lg:mb-2 animate-bounce text-center mx-auto text-black">
         FAQ
       </h2>
@@ -409,9 +408,11 @@ const wyzwanieOfferBox = {
 const WyzwanieTestimonials = () => (
   <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
     <div className="py-12 lg:py-16 px-4">
-      <h2 className="text-[28px] lg:text-[42px] font-anton font-normal uppercase leading-[95%] text-center mb-10 text-black">
+      <h2 className="text-[28px] lg:text-[42px] font-montserrat font-extrabold uppercase leading-[95%] text-center mb-10 text-black">
         ZOBACZ CO CZŁONKINIE{" "}
-        <span className="text-ada-magicYellow">MAGIC</span> MÓWIĄ O SPOŁECZNOŚCI:
+        <span className="text-ada-magicYellow">MAGIC</span>
+        <br />
+        MÓWIĄ O SPOŁECZNOŚCI:
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 max-w-6xl mx-auto">
         <div className="flex flex-col gap-0">
@@ -501,7 +502,7 @@ const WyzwanieCTA = () => (
         type="button"
         variant="dark"
         sectionId={OFFER_SECTION_ID}
-        text={<span className="font-bold uppercase text-ada-magicYellow">DOŁĄCZAM</span>}
+        text={<span className="font-anton uppercase text-ada-magicYellow">DOŁĄCZAM</span>}
         textSize="text-[22px] lg:text-[28px]"
         btnStyle="px-12 lg:px-16 py-5"
       />
@@ -566,7 +567,7 @@ const wyzwanieBottomSection = (
     <WyzwanieTestimonials />
     <WyzwanieCTA />
 
-    <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+    <MaxWithBgColorContainer bgColor="bg-white">
       <WyzwanieFaq />
     </MaxWithBgColorContainer>
   </>
