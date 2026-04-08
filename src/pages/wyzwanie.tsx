@@ -82,8 +82,8 @@ const wyzwanieAfterHeroSection = (
           variant="dark"
           sectionId={OFFER_SECTION_ID}
           text={<span className="font-anton uppercase">Sprawdzam</span>}
-          textSize="text-[24px] lg:text-[30px]"
-          btnStyle="px-10 lg:px-14 py-5"
+          textSize="text-[26px] lg:text-[32px]"
+          btnStyle="px-16 lg:px-24 py-4"
         />
       </div>
     </div>
@@ -315,8 +315,8 @@ const wyzwanieBeforeBenefitsSection = (
           variant="dark"
           sectionId={OFFER_SECTION_ID}
           text={<span className="font-anton uppercase text-ada-magicYellow">Sprawdzam</span>}
-          textSize="text-[20px] lg:text-[26px]"
-          btnStyle="px-10 lg:px-14 py-4"
+          textSize="text-[22px] lg:text-[28px]"
+          btnStyle="px-16 lg:px-24 py-3"
         />
       </div>
     </div>
@@ -363,7 +363,7 @@ const wyzwanieFaqList = [
 
 const WyzwanieFaq = () => (
   <div className="flex flex-col items-center px-6 text-black py-12 lg:py-16">
-    <div className="pt-[40px] lg:pt-[60px] bg-ada-magicPurple4 rounded-[24px] p-6 lg:p-10">
+    <div className="pt-[40px] lg:pt-[60px] bg-ada-light-pink rounded-[24px] p-6 lg:p-10">
       <h2 className="text-[20px] lg:text-adaTitle font-bold lg:mb-2 animate-bounce text-center mx-auto text-black">
         FAQ
       </h2>
@@ -408,9 +408,9 @@ const wyzwanieOfferBox = {
 const WyzwanieTestimonials = () => (
   <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
     <div className="py-12 lg:py-16 px-4">
-      <h2 className="text-[28px] lg:text-[42px] font-montserrat font-extrabold uppercase leading-[95%] text-center mb-10 text-black">
+      <h2 className="text-[32px] lg:text-[48px] font-montserrat font-extrabold uppercase leading-[95%] text-center mb-10 text-black">
         ZOBACZ CO CZŁONKINIE{" "}
-        <span className="text-ada-magicYellow">MAGIC</span>
+        <span className="text-ada-magicOrange2">MAGIC</span>
         <br />
         MÓWIĄ O SPOŁECZNOŚCI:
       </h2>
@@ -504,7 +504,7 @@ const WyzwanieCTA = () => (
         sectionId={OFFER_SECTION_ID}
         text={<span className="font-anton uppercase text-ada-magicYellow">DOŁĄCZAM</span>}
         textSize="text-[22px] lg:text-[28px]"
-        btnStyle="px-12 lg:px-16 py-5"
+        btnStyle="px-20 lg:px-28 py-4"
       />
     </div>
   </MaxWithBgColorContainer>
@@ -537,12 +537,12 @@ const wyzwanieBottomSection = (
             variant="offer"
             url={WYZWANIE_CHECKOUT_URL}
             text={
-              <span className="font-extrabold uppercase">
+              <span className="font-montserrat font-extrabold uppercase">
                 {wyzwanieOfferBox.ctaLabel}
               </span>
             }
             textSize="text-[22px] lg:text-[26px]"
-            btnStyle="mt-8 w-full px-3 py-5 cursor-pointer block text-center"
+            btnStyle="mt-8 w-[85%] mx-auto px-3 py-5 cursor-pointer block text-center"
           />
 
           <div className="mt-8 space-y-6">
