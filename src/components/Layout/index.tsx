@@ -29,6 +29,7 @@ type LayoutElementsProps = {
   waves4?: boolean
   waves5?: boolean
   showHeaderAndFooter?: boolean
+  showHeader?: boolean
   sun1?: boolean
   sun2?: boolean
   sun3?: boolean
@@ -128,6 +129,7 @@ const defaultProps: LayoutElementsProps = {
 const Layout: React.FC<Props> = ({
   children,
   showHeaderAndFooter = true,
+  showHeader = true,
   ...layoutElements
 }) => {
   return (
@@ -135,7 +137,7 @@ const Layout: React.FC<Props> = ({
       <Suspense fallback={null}>
         <Cookies />
       </Suspense>
-      {showHeaderAndFooter && <Header />}
+      {showHeaderAndFooter && showHeader && <Header />}
       {children}
       {showHeaderAndFooter && <Footer />}
       <LayoutElements {...defaultProps} {...layoutElements} />

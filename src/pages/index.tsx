@@ -7,7 +7,7 @@ import React from "react"
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout showHeader={false}>
       <MaxWithBgColorContainer bgColor="bg-magic-grid relative">
         <HomePageNewBanner />
       </MaxWithBgColorContainer>

@@ -92,7 +92,7 @@ const HomePageList = () => {
           </div>
         }
         buttonText="WYBIERAM!"
-        buttonUrl="/adsy-chill-2025"
+        buttonUrl="/adsy-chill"
         image={
           <div className="lg:absolute bottom-[60px] right-[-40px]">
             <StaticImage
