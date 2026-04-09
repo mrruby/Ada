@@ -36,8 +36,6 @@ const Menu = ({ open, setOpen }: Props) => {
       ],
     },
     { to: "/about", text: "o mnie" },
-    { to: "/materials", text: "materiały" },
-    { to: "/blog", text: "blog" },
     { to: "/contact", text: "kontakt" },
   ]
 

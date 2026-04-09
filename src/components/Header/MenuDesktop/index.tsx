@@ -30,8 +30,6 @@ const MenuDesktop = () => {
       ],
     },
     { to: "/about", text: "o mnie" },
-    { to: "/materials", text: "materiały" },
-    { to: "/blog", text: "blog" },
     { to: "/contact", text: "kontakt" },
   ]
 

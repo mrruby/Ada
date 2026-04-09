@@ -20,7 +20,7 @@ const TextBanner = ({
   socials,
 }: Props) => {
   return (
-    <div className="py-6 px-4 lg:pt-[68px] lg:pb-[40px] abu" id="blog-posts">
+    <div className="py-6 px-4 lg:pt-[68px] lg:pb-[40px] abu" id="text-banner">
       <div className="text-ada-blue flex flex-col items-center ">
         <div className="flex flex-col items-center text-center max-w-[864px]">
           <p className="font-bold h-[110px] lg:h-[58px] text-adaTitle lg:text-adaBig text-ada-grey">

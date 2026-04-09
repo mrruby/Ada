@@ -10,26 +10,6 @@ module.exports = {
   adapter: adapter(),
   plugins: [
     {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `adrianna-1`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/podcast`,
-        name: `podcast`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
