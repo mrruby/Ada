@@ -17,54 +17,14 @@ const OFFER_SECTION_ID = "oferta"
 // TODO: replace with the real easycart checkout URL
 const WYZWANIE_CHECKOUT_URL = "#TODO-checkout"
 
-const AprilCalendarPhone = () => (
-  <div className="w-[140px] xl:w-[160px] bg-white rounded-[24px] p-3 shadow-[0_18px_36px_rgba(0,0,0,0.22)]">
-    <div className="text-center mb-2">
-      <p className="text-[10px] font-bold text-black uppercase">Kwiecień 2026</p>
-    </div>
-    <div className="grid grid-cols-7 gap-[2px] text-[8px] text-center">
-      <span className="text-gray-400">Pn</span>
-      <span className="text-gray-400">Wt</span>
-      <span className="text-gray-400">Śr</span>
-      <span className="text-gray-400">Cz</span>
-      <span className="text-gray-400">Pt</span>
-      <span className="text-gray-400">Sb</span>
-      <span className="text-gray-400">Nd</span>
-      {/* Week 1: 1-5 */}
-      <span></span><span></span><span className="text-black">1</span><span className="text-black">2</span><span className="text-black">3</span><span className="text-black">4</span><span className="text-black">5</span>
-      {/* Week 2: 6-12 */}
-      <span className="text-black">6</span><span className="text-black">7</span><span className="text-black">8</span><span className="text-black">9</span><span className="text-black">10</span><span className="text-black">11</span><span className="text-black">12</span>
-      {/* Week 3: 13-19 */}
-      <span className="text-black">13</span><span className="text-black">14</span><span className="text-black">15</span><span className="text-black">16</span><span className="text-black">17</span><span className="text-black">18</span><span className="text-black">19</span>
-      {/* Week 4: 20-26 - highlighted dates */}
-      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto font-bold ring-2 ring-ada-pink7">20</span>
-      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto font-bold ring-2 ring-ada-pink7">21</span>
-      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">22</span>
-      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">23</span>
-      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">24</span>
-      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">25</span>
-      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">26</span>
-      {/* Week 5: 27-30 */}
-      <span className="bg-ada-magicPink3 text-black rounded-full w-5 h-5 flex items-center justify-center mx-auto">27</span>
-      <span className="text-black">28</span><span className="text-black">29</span><span className="text-black">30</span><span></span><span></span><span></span>
-    </div>
-  </div>
-)
-
-const wyzwanieHeroOverlay = (
-  <div className="absolute -top-2 -right-16 z-0 pointer-events-none">
-    <AprilCalendarPhone />
-  </div>
-)
-
 const wyzwanieHeroFigure = (
   <div className="relative z-10 flex justify-center">
-    <div className="w-[280px] xl:w-[340px] overflow-hidden rounded-[24px]">
+    <div className="w-[640px] xl:w-[780px]">
       <StaticImage
-        src="../images/ada-magic-1.webp"
-        alt="Ada"
+        src="../images/wyzwanie-hero-combined.webp"
+        alt="Kampania sprzedażowa w pigułce - hero"
         placeholder="blurred"
-        className="object-cover object-top"
+        className="w-full"
       />
     </div>
   </div>
@@ -110,11 +70,17 @@ const wyzwaniePinkSection = (
           Wrzucasz posty, stories, reelsy… i czekasz, aż ktoś w końcu kliknie w
           link i kupi.
         </span>{" "}
-        A tymczasem Twoja konkurencja już <span className="whitespace-nowrap">puszcza reklamy i zbiera klientów, którzy mogliby trafić do Ciebie.</span>
-        <br /><br />
+        A tymczasem Twoja konkurencja już{" "}
+        <span className="whitespace-nowrap">
+          puszcza reklamy i zbiera klientów, którzy mogliby trafić do Ciebie.
+        </span>
+        <br />
+        <br />
         <span className="font-bold">
-          W ciągu 7 dni przeprowadzimy Cię przez cały proces - od<br />
-          tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie<br />
+          W ciągu 7 dni przeprowadzimy Cię przez cały proces - od
+          <br />
+          tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie
+          <br />
           kampanii sprzedażowej w Menedżerze Reklam.
         </span>{" "}
         Konkretne nagrania, wytyczne krok po kroku i wsparcie 4 ekspertek, które
@@ -254,9 +220,7 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
                 }`}
               >
                 {!isRight && (
-                  <div
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-black bg-transparent text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]"
-                  >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-black bg-transparent text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]">
                     {day.number}
                   </div>
                 )}
@@ -270,9 +234,7 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
                   {day.date}
                 </p>
                 {isRight && (
-                  <div
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-black bg-transparent text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]"
-                  >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-black bg-transparent text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]">
                     {day.number}
                   </div>
                 )}
@@ -314,7 +276,11 @@ const wyzwanieBeforeBenefitsSection = (
           type="button"
           variant="dark"
           sectionId={OFFER_SECTION_ID}
-          text={<span className="font-anton uppercase text-ada-magicYellow">Sprawdzam</span>}
+          text={
+            <span className="font-anton uppercase text-ada-magicYellow">
+              Sprawdzam
+            </span>
+          }
           textSize="text-[22px] lg:text-[28px]"
           btnStyle="px-16 lg:px-24 py-3"
         />
@@ -341,13 +307,11 @@ const wyzwanieFaqList = [
   },
   {
     question: "🎥 Czy spotkanie live z Adą jest nagrywane?",
-    answer:
-      "Tak, nagranie będzie dostępne na platformie.",
+    answer: "Tak, nagranie będzie dostępne na platformie.",
   },
   {
     question: "📅 Jak długo mam dostęp do materiałów?",
-    answer:
-      "Przez cały czas trwania wyzwania, czyli 20–27 kwietnia.",
+    answer: "Przez cały czas trwania wyzwania, czyli 20–27 kwietnia.",
   },
   {
     question: "👩‍💼 Dla kogo jest to wyzwanie?",
@@ -496,13 +460,18 @@ const WyzwanieCTA = () => (
   <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
     <div className="py-10 lg:py-14 px-4 text-center">
       <p className="text-[18px] lg:text-[22px] leading-[140%] text-black max-w-2xl mx-auto mb-8">
-        Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads przestają być problemem i stają się przyjemnością
+        Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads
+        przestają być problemem i stają się przyjemnością
       </p>
       <Button
         type="button"
         variant="dark"
         sectionId={OFFER_SECTION_ID}
-        text={<span className="font-anton uppercase text-ada-magicYellow">DOŁĄCZAM</span>}
+        text={
+          <span className="font-anton uppercase text-ada-magicYellow">
+            DOŁĄCZAM
+          </span>
+        }
         textSize="text-[22px] lg:text-[28px]"
         btnStyle="px-20 lg:px-28 py-4"
       />
@@ -583,15 +552,14 @@ const WyzwaniePage = () => {
       benefits={wyzwanieBenefits}
       benefitsTitle={
         <>
-          Co dostajesz w{" "}
-          <span className="text-ada-magicPurple4">pakiecie</span>
+          Co dostajesz w <span className="text-ada-magicPurple4">pakiecie</span>
           <span className="text-black">?</span>
         </>
       }
       bottomSection={wyzwanieBottomSection}
       heroLeft={wyzwanieHeroLeft}
       heroFigure={wyzwanieHeroFigure}
-      heroOverlay={wyzwanieHeroOverlay}
+      heroWrapperClassName="lg:right-0 lg:max-w-[640px] xl:-right-6 xl:max-w-[780px]"
     />
   )
 }

@@ -63,15 +63,17 @@ const AdaOverlay = ({
   alignRight = false,
   figure,
   children,
+  wrapperClassName = "",
 }: {
   alignRight?: boolean
   figure?: React.ReactNode
   children?: React.ReactNode
+  wrapperClassName?: string
 }) => (
   <div
     className={`hidden lg:block absolute bottom-0 z-10 max-w-[400px] lg:max-w-[500px] ${
       alignRight ? "right-4" : "left-1/2 -translate-x-1/2"
-    }`}
+    } ${wrapperClassName}`}
   >
     <div className="relative">
       {figure || (
@@ -101,6 +103,7 @@ type TrainingLandingPageProps = {
   mockupImage?: React.ReactNode
   heroFigure?: React.ReactNode
   heroOverlay?: React.ReactNode
+  heroWrapperClassName?: string
 }
 
 const TrainingLandingPage = ({
@@ -118,6 +121,7 @@ const TrainingLandingPage = ({
   mockupImage,
   heroFigure,
   heroOverlay,
+  heroWrapperClassName,
 }: TrainingLandingPageProps) => {
   const hasForm = Boolean(formHTML)
 
@@ -138,7 +142,11 @@ const TrainingLandingPage = ({
           >
             {heroLeft}
           </div>
-          <AdaOverlay alignRight={!hasForm} figure={heroFigure}>
+          <AdaOverlay
+            alignRight={!hasForm}
+            figure={heroFigure}
+            wrapperClassName={heroWrapperClassName}
+          >
             {heroOverlay}
           </AdaOverlay>
           {formHTML ? (
