@@ -14,8 +14,7 @@ import {
 } from "values/wyzwanieLanding"
 
 const OFFER_SECTION_ID = "oferta"
-// TODO: replace with the real easycart checkout URL
-const WYZWANIE_CHECKOUT_URL = "#TODO-checkout"
+const WYZWANIE_CHECKOUT_URL = "https://easl.ink/Yib03"
 
 const wyzwanieHeroFigure = (
   <div className="relative z-10 flex justify-center items-center">
@@ -653,6 +652,7 @@ const WyzwaniePage = () => {
       heroLeft={wyzwanieHeroLeft}
       heroFigure={wyzwanieHeroFigure}
       heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px]"
+      heroOverlay={<></>}
     />
   )
 }
