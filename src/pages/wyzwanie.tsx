@@ -18,13 +18,14 @@ const OFFER_SECTION_ID = "oferta"
 const WYZWANIE_CHECKOUT_URL = "#TODO-checkout"
 
 const wyzwanieHeroFigure = (
-  <div className="relative z-10 flex justify-center">
-    <div className="w-[640px] xl:w-[780px]">
+  <div className="relative z-10 flex justify-center items-center">
+    <div className="w-full max-w-[800px] xl:max-w-[950px]">
       <StaticImage
         src="../images/wyzwanie-hero-combined.webp"
         alt="Kampania sprzedażowa w pigułce - hero"
         placeholder="blurred"
         className="w-full"
+        objectFit="contain"
       />
     </div>
   </div>
@@ -100,6 +101,7 @@ type WyzwanieDay = {
   titleBold: string
   subtitle: string
   portrait?: React.ReactNode
+  noShadow?: boolean
 }
 
 const wyzwanieDays: WyzwanieDay[] = [
@@ -178,6 +180,7 @@ const wyzwanieDays: WyzwanieDay[] = [
         className="h-full w-full"
       />
     ),
+    noShadow: true,
   },
   {
     number: "5",
@@ -250,7 +253,7 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
               <div
                 className={`mt-8 flex justify-center lg:absolute ${portraitPosition} lg:top-[-28px] lg:mt-0`}
               >
-                <div className="h-[180px] w-[180px] overflow-hidden rounded-full bg-white shadow-[0_18px_42px_rgba(0,0,0,0.18)] lg:h-[220px] lg:w-[220px]">
+                <div className={`h-[180px] w-[180px] overflow-hidden rounded-full bg-white lg:h-[220px] lg:w-[220px] ${day.noShadow ? "" : "shadow-[0_18px_42px_rgba(0,0,0,0.18)]"}`}>
                   {day.portrait}
                 </div>
               </div>
@@ -458,8 +461,8 @@ const WyzwanieTestimonials = () => (
 
 const WyzwanieCTA = () => (
   <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
-    <div className="py-10 lg:py-14 px-4 text-center">
-      <p className="text-[18px] lg:text-[22px] leading-[140%] text-black max-w-2xl mx-auto mb-8">
+    <div className="py-6 lg:py-8 px-4 text-center">
+      <p className="text-[20px] lg:text-[26px] leading-[140%] text-black max-w-2xl mx-auto mb-6">
         Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads
         przestają być problemem i stają się przyjemnością
       </p>
@@ -475,6 +478,62 @@ const WyzwanieCTA = () => (
         textSize="text-[22px] lg:text-[28px]"
         btnStyle="px-20 lg:px-28 py-4"
       />
+    </div>
+  </MaxWithBgColorContainer>
+)
+
+const WyzwanieResultsInNumbers = () => (
+  <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+    <div className="py-12 px-3">
+      <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[480px] mx-auto">
+        <h2 className="p-2 font-anton font-normal text-center text-ada-orange text-[32px] lg:text-adaSubtitle">
+          Nasze wyniki w liczbach
+        </h2>
+      </div>
+      <div className="flex flex-col gap-10 lg:gap-20 py-10 max-w-6xl mx-auto">
+        <StaticImage
+          src="../images/kolektyw1.webp"
+          alt="Wyniki - statystyki"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw2.webp"
+          alt="Wyniki - statystyki"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw3.webp"
+          alt="Wyniki - statystyki"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw4.webp"
+          alt="Wyniki - statystyki"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw5.webp"
+          alt="Wyniki - statystyki"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw6.webp"
+          alt="Wyniki - statystyki"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw7.webp"
+          alt="Wyniki - statystyki"
+          placeholder="blurred"
+          className="w-full"
+        />
+      </div>
     </div>
   </MaxWithBgColorContainer>
 )
@@ -535,6 +594,7 @@ const wyzwanieBottomSection = (
 
     <WyzwanieTestimonials />
     <WyzwanieCTA />
+    <WyzwanieResultsInNumbers />
 
     <MaxWithBgColorContainer bgColor="bg-white">
       <WyzwanieFaq />
@@ -559,7 +619,7 @@ const WyzwaniePage = () => {
       bottomSection={wyzwanieBottomSection}
       heroLeft={wyzwanieHeroLeft}
       heroFigure={wyzwanieHeroFigure}
-      heroWrapperClassName="lg:right-0 lg:max-w-[640px] xl:-right-6 xl:max-w-[780px]"
+      heroWrapperClassName="lg:right-0 lg:max-w-[800px] xl:-right-6 xl:max-w-[950px]"
     />
   )
 }
