@@ -180,7 +180,6 @@ const wyzwanieDays: WyzwanieDay[] = [
         className="h-full w-full"
       />
     ),
-    noShadow: true,
   },
   {
     number: "5",
@@ -462,9 +461,11 @@ const WyzwanieTestimonials = () => (
 const WyzwanieCTA = () => (
   <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
     <div className="py-6 lg:py-8 px-4 text-center">
-      <p className="text-[20px] lg:text-[26px] leading-[140%] text-black max-w-2xl mx-auto mb-6">
-        Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads
-        przestają być problemem i stają się przyjemnością
+      <p className="text-[20px] lg:text-[26px] leading-[140%] text-black max-w-2xl mx-auto mb-6 font-bold">
+        Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads przestają być problemem.
+      </p>
+      <p className="text-[20px] lg:text-[26px] leading-[140%] text-black max-w-2xl mx-auto mb-6 font-bold">
+        Stają się przyjemnością
       </p>
       <Button
         type="button"
@@ -484,13 +485,13 @@ const WyzwanieCTA = () => (
 
 const WyzwanieResultsInNumbers = () => (
   <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
-    <div className="py-12 px-3">
-      <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[480px] mx-auto">
-        <h2 className="p-2 font-anton font-normal text-center text-ada-orange text-[32px] lg:text-adaSubtitle">
+    <div className="py-10 px-3">
+      <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[400px] mx-auto">
+        <h2 className="p-2 font-anton font-normal text-center text-ada-orange text-[26px] lg:text-[32px]">
           Nasze wyniki w liczbach
         </h2>
       </div>
-      <div className="flex flex-col gap-10 lg:gap-20 py-10 max-w-6xl mx-auto">
+      <div className="flex flex-col gap-6 lg:gap-12 py-8 max-w-4xl mx-auto">
         <StaticImage
           src="../images/kolektyw1.webp"
           alt="Wyniki - statystyki"
@@ -596,6 +597,24 @@ const wyzwanieBottomSection = (
     <WyzwanieCTA />
     <WyzwanieResultsInNumbers />
 
+    {/* Button between Results and FAQ */}
+    <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+      <div className="pb-12 px-4 text-center">
+        <Button
+          type="button"
+          variant="dark"
+          sectionId={OFFER_SECTION_ID}
+          text={
+            <span className="font-anton uppercase text-ada-magicYellow">
+              DOŁĄCZAM
+            </span>
+          }
+          textSize="text-[22px] lg:text-[28px]"
+          btnStyle="px-20 lg:px-28 py-4"
+        />
+      </div>
+    </MaxWithBgColorContainer>
+
     <MaxWithBgColorContainer bgColor="bg-white">
       <WyzwanieFaq />
     </MaxWithBgColorContainer>
@@ -619,7 +638,7 @@ const WyzwaniePage = () => {
       bottomSection={wyzwanieBottomSection}
       heroLeft={wyzwanieHeroLeft}
       heroFigure={wyzwanieHeroFigure}
-      heroWrapperClassName="lg:right-0 lg:max-w-[800px] xl:-right-6 xl:max-w-[950px]"
+      heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px] lg:-bottom-12"
     />
   )
 }
