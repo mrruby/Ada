@@ -121,6 +121,8 @@ const wyzwanieDays: WyzwanieDay[] = [
         alt="Justyna Król"
         placeholder="blurred"
         className="h-full w-full"
+        objectFit="cover"
+        objectPosition="50% 50%"
       />
     ),
   },
@@ -141,6 +143,8 @@ const wyzwanieDays: WyzwanieDay[] = [
         alt="Dorota Woźniak"
         placeholder="blurred"
         className="h-full w-full"
+        objectFit="cover"
+        objectPosition="50% 50%"
       />
     ),
   },
@@ -159,6 +163,8 @@ const wyzwanieDays: WyzwanieDay[] = [
         alt="Nicola Kut"
         placeholder="blurred"
         className="h-full w-full"
+        objectFit="cover"
+        objectPosition="50% 50%"
       />
     ),
   },
@@ -178,6 +184,9 @@ const wyzwanieDays: WyzwanieDay[] = [
         alt="Adrianna Promis-Urbas"
         placeholder="blurred"
         className="h-full w-full"
+        objectFit="cover"
+        objectPosition="50% 50%"
+        imgStyle={{ transform: "scale(1.12)" }}
       />
     ),
   },
@@ -252,7 +261,11 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
               <div
                 className={`mt-8 flex justify-center lg:absolute ${portraitPosition} lg:top-[-28px] lg:mt-0`}
               >
-                <div className={`h-[180px] w-[180px] overflow-hidden rounded-full bg-white lg:h-[220px] lg:w-[220px] ${day.noShadow ? "" : "shadow-[0_18px_42px_rgba(0,0,0,0.18)]"}`}>
+                <div
+                  className={`h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full lg:h-[220px] lg:w-[220px] ${
+                    day.noShadow ? "" : "shadow-[0_18px_42px_rgba(0,0,0,0.18)]"
+                  }`}
+                >
                   {day.portrait}
                 </div>
               </div>
@@ -462,7 +475,8 @@ const WyzwanieCTA = () => (
   <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
     <div className="py-6 lg:py-8 px-4 text-center">
       <p className="text-[20px] lg:text-[26px] leading-[140%] text-black max-w-2xl mx-auto mb-6 font-bold">
-        Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads przestają być problemem.
+        Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads
+        przestają być problemem.
       </p>
       <p className="text-[20px] lg:text-[26px] leading-[140%] text-black max-w-2xl mx-auto mb-6 font-bold">
         Stają się przyjemnością
@@ -638,7 +652,7 @@ const WyzwaniePage = () => {
       bottomSection={wyzwanieBottomSection}
       heroLeft={wyzwanieHeroLeft}
       heroFigure={wyzwanieHeroFigure}
-      heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px] lg:-bottom-12"
+      heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px]"
     />
   )
 }
