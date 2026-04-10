@@ -17,7 +17,7 @@ const bannerContent = [
           <li>💼 Kompleksowa obsługa prekampanii i kampanii sprzedażowej</li>
           <li>📊 Strategia, wdrożenie i optymalizacja reklam</li>
           <li>💡 Analiza wyników i rekomendacje na przyszłość</li>
-          <li>📈 Obsługa reklam Meta/TikTok/LinkedIn</li>
+          <li>📈 Obsługa reklam Meta</li>
         </ul>
         <p className="font-bold mb-4">Dla kogo:</p>
         <ul className="space-y-2">
@@ -34,14 +34,14 @@ const bannerContent = [
     bgColor: "bg-ada-magicPink",
     title: "⭐ MARKETING PARTNER",
     subtitle:
-      "Kompleksowe zarządzanie kampaniami na wszystkich kluczowych platformach (stała współpraca)",
+      "Kompleksowe zarządzanie kampaniami na wszystkich kluczowych platformach w systemie Meta (stała współpraca)",
     description: (
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
         <ul className="space-y-2 mb-6">
           <li>
             👩‍💻 Kompleksowe zarządzanie kampaniami na wszystkich kluczowych
-            platformach
+            platformach w systemie Meta
           </li>
           <li>📈 Strategia, wdrożenie, optymalizacja i raportowanie</li>
           <li>😎 Dostęp do specjalistek od każdej platformy reklamowej</li>
@@ -66,12 +66,12 @@ const bannerContent = [
     bgColor: "bg-ada-purple3",
     title: "💎 GROWTH INTENSIVE",
     subtitle:
-      "Obsługa reklam Meta, TikTok, LinkedIn + konsultacje strategiczne 1:1 (premium)",
+      "Obsługa reklam Meta + konsultacje strategiczne 1:1 (premium)",
     description: (
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
         <ul className="space-y-2 mb-6">
-          <li>👩‍💻 Prowadzenie kampanii reklamowych na wszystkich platformach</li>
+          <li>👩‍💻 Prowadzenie kampanii reklamowych na kluczowych platformach w systemie Meta</li>
           <li>
             🤝 Regularne sesje konsultacyjne z ekspertkami (2x w miesiącu)
           </li>
@@ -93,13 +93,13 @@ const bannerContent = [
     bgColor: "bg-ada-magicPink2",
     title: "💌 NEWSLETTER MASTER",
     subtitle:
-      "Wdrożenie newslettera + obsługa reklam Meta, TikTok, LinkedIn + prowadzenie newslettera",
+      "Wdrożenie newslettera + obsługa reklam Meta + prowadzenie newslettera",
     description: (
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
         <ul className="space-y-2 mb-6">
           <li>📫 Kompleksowe wdrożenie systemu mailingowego</li>
-          <li>🖥️ Prowadzenie kampanii reklamowych na wszystkich platformach</li>
+          <li>🖥️ Prowadzenie kampanii reklamowych na kluczowych platformach w systemie Meta</li>
           <li>📯 Regularne prowadzenie komunikacji e-mail</li>
           <li>📊 Analiza wyników i optymalizacja strategii</li>
         </ul>
