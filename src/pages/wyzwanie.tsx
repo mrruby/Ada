@@ -201,7 +201,39 @@ const wyzwanieDays: WyzwanieDay[] = [
   },
 ]
 
-const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
+const useInView = () => {
+  const ref = React.useRef<HTMLDivElement>(null)
+  const [isInView, setIsInView] = React.useState(false)
+
+  React.useEffect(() => {
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      setIsInView(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    const currentRef = ref.current
+    if (currentRef) {
+      observer.observe(currentRef)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return { ref, isInView }
+}
+
+const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number }) => {
+  const { ref, isInView } = useInView()
   const isFull = day.side === "full"
   const isRight = day.side === "right"
   const pillExtraPadding = isFull
@@ -216,10 +248,12 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
       : "lg:pr-[240px]"
   const portraitPosition = isRight ? "lg:-left-2" : "lg:-right-2"
 
+  const slideAnimation = index % 2 === 0 ? "animate-slideInFromLeft" : "animate-slideInFromRight"
+
   return (
     <MaxWithBgColorContainer bgColor={day.sectionBg}>
-      <div className="px-4 py-10 lg:py-12">
-        <div className="mx-auto flex w-full max-w-5xl flex-col items-center lg:w-1/2 lg:max-w-none">
+      <div ref={ref} className="px-4 py-10 lg:py-12 overflow-hidden">
+        <div className={`mx-auto flex w-full max-w-5xl flex-col items-center lg:w-1/2 lg:max-w-none ${isInView ? slideAnimation : "opacity-0"}`}>
           <div
             className={`relative w-full ${isFull ? "" : "lg:min-h-[220px]"}`}
           >
@@ -278,8 +312,8 @@ const WyzwanieDaySection = ({ day }: { day: WyzwanieDay }) => {
 
 const wyzwanieBeforeBenefitsSection = (
   <>
-    {wyzwanieDays.map((day) => (
-      <WyzwanieDaySection key={day.number} day={day} />
+    {wyzwanieDays.map((day, index) => (
+      <WyzwanieDaySection key={day.number} day={day} index={index} />
     ))}
     {/* SPRAWDZAM button positioned between purple and light sections */}
     <div className="relative">
