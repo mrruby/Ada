@@ -1,5 +1,6 @@
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import TrainingLandingPage from "components/TrainingLandingPage"
+import WyzwanieStickyCountdown from "components/WyzwanieStickyCountdown"
 import SEO from "components/seo"
 import { StaticImage } from "gatsby-plugin-image"
 import { Accordion } from "helpers/Accordion"
@@ -34,9 +35,6 @@ const wyzwanieAfterHeroSection = (
   <MaxWithBgColorContainer bgColor="bg-white">
     <div className="py-16 px-4">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        <p className="text-[28px] lg:text-adaSubtitleThird font-anton font-normal text-black leading-none mb-8">
-          🗓️ 20.04 - start wyzwania
-        </p>
         <Button
           type="button"
           variant="dark"
@@ -77,7 +75,7 @@ const wyzwaniePinkSection = (
         <br />
         <br />
         <span className="font-bold">
-          W ciągu 7 dni przeprowadzimy Cię przez cały proces - od
+          W ciągu 8 dni przeprowadzimy Cię przez cały proces - od
           <br />
           tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie
           <br />
@@ -292,7 +290,7 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
             </div>
             {day.portrait && (
               <div
-                className={`mt-8 flex justify-center lg:absolute ${portraitPosition} lg:top-[-28px] lg:mt-0`}
+                className={`mt-8 flex justify-center lg:absolute ${portraitPosition} lg:top-0 lg:mt-0`}
               >
                 <div
                   className={`h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full lg:h-[220px] lg:w-[220px] ${
@@ -426,79 +424,45 @@ const WyzwanieTestimonials = () => (
         <br />
         MÓWIĄ O SPOŁECZNOŚCI:
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 max-w-6xl mx-auto">
-        <div className="flex flex-col gap-0">
-          <StaticImage
-            src="../images/magic_reference_sell_1.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-          <StaticImage
-            src="../images/magic_reference_sell_2.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-          <StaticImage
-            src="../images/magic_reference_sell_3.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-          <StaticImage
-            src="../images/magic_reference_sell_4.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-        </div>
-        <div className="flex flex-col gap-0">
-          <StaticImage
-            src="../images/magic_reference_sell_5.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-          <StaticImage
-            src="../images/magic_reference_sell_6.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-          <StaticImage
-            src="../images/magic_reference_sell_7.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-          <StaticImage
-            src="../images/magic_reference_sell_8.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-        </div>
-        <div className="flex flex-col gap-0">
-          <StaticImage
-            src="../images/magic_reference_sell_9.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-          <StaticImage
-            src="../images/magic_reference_sell_10.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-          <StaticImage
-            src="../images/magic_reference_sell_12.webp"
-            alt="Opinia o społeczności MAGIC"
-            placeholder="blurred"
-            className="w-full"
-          />
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        {/* Row 1 - Magda Sikorska, Paulina Leopold, Angelika Woźniak */}
+        <StaticImage
+          src="../images/magic_reference_sell_1.webp"
+          alt="Opinia - Magda Sikorska"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/magic_reference_sell_2.webp"
+          alt="Opinia - Paulina Leopold"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/magic_reference_sell_3.webp"
+          alt="Opinia - Angelika Woźniak"
+          placeholder="blurred"
+          className="w-full"
+        />
+        {/* Row 2 - Aleksandra Ziober, Agnieszka, Martyna Żmuda */}
+        <StaticImage
+          src="../images/magic_reference_sell_4.webp"
+          alt="Opinia - Aleksandra Ziober"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/magic_reference_sell_5.webp"
+          alt="Opinia - Agnieszka"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/magic_reference_sell_6.webp"
+          alt="Opinia - Martyna Żmuda"
+          placeholder="blurred"
+          className="w-full"
+        />
       </div>
     </div>
   </MaxWithBgColorContainer>
@@ -526,6 +490,38 @@ const WyzwanieCTA = () => (
         textSize="text-[22px] lg:text-[28px]"
         btnStyle="px-20 lg:px-28 py-4"
       />
+    </div>
+  </MaxWithBgColorContainer>
+)
+
+const WyzwanieSalesResults = () => (
+  <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+    <div className="py-10 px-3">
+      <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[500px] mx-auto">
+        <h2 className="p-2 font-anton font-normal text-center text-ada-orange text-[26px] lg:text-[32px]">
+          Ty też możesz mieć takie wyniki
+        </h2>
+      </div>
+      <div className="flex flex-col gap-6 lg:gap-12 py-8 max-w-4xl mx-auto">
+        <StaticImage
+          src="../images/kolektyw1.webp"
+          alt="Wyniki sprzedażowe"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw2.webp"
+          alt="Wyniki sprzedażowe"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw3.webp"
+          alt="Wyniki sprzedażowe"
+          placeholder="blurred"
+          className="w-full"
+        />
+      </div>
     </div>
   </MaxWithBgColorContainer>
 )
@@ -641,6 +637,7 @@ const wyzwanieBottomSection = (
     </MaxWithBgColorContainer>
 
     <WyzwanieTestimonials />
+    <WyzwanieSalesResults />
     <WyzwanieCTA />
     <WyzwanieResultsInNumbers />
 
@@ -670,24 +667,29 @@ const wyzwanieBottomSection = (
 
 const WyzwaniePage = () => {
   return (
-    <TrainingLandingPage
-      heroBgColor={wyzwanieHeroBgColor}
-      afterHeroSection={wyzwanieAfterHeroSection}
-      pinkSectionContent={wyzwaniePinkSection}
-      beforeBenefitsSection={wyzwanieBeforeBenefitsSection}
-      benefits={wyzwanieBenefits}
-      benefitsTitle={
-        <>
-          Co dostajesz w <span className="text-ada-magicPurple4">pakiecie</span>
-          <span className="text-black">?</span>
-        </>
-      }
-      bottomSection={wyzwanieBottomSection}
-      heroLeft={wyzwanieHeroLeft}
-      heroFigure={wyzwanieHeroFigure}
-      heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px]"
-      heroOverlay={<></>}
-    />
+    <>
+      <WyzwanieStickyCountdown />
+      <div className="pt-12">
+        <TrainingLandingPage
+          heroBgColor={wyzwanieHeroBgColor}
+          afterHeroSection={wyzwanieAfterHeroSection}
+          pinkSectionContent={wyzwaniePinkSection}
+          beforeBenefitsSection={wyzwanieBeforeBenefitsSection}
+          benefits={wyzwanieBenefits}
+          benefitsTitle={
+            <>
+              Co dostajesz w <span className="text-ada-magicPurple4">pakiecie</span>
+              <span className="text-black">?</span>
+            </>
+          }
+          bottomSection={wyzwanieBottomSection}
+          heroLeft={wyzwanieHeroLeft}
+          heroFigure={wyzwanieHeroFigure}
+          heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px]"
+          heroOverlay={<></>}
+        />
+      </div>
+    </>
   )
 }
 
