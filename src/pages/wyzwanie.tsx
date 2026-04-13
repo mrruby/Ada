@@ -244,7 +244,7 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
     : isRight
       ? "lg:pl-[240px]"
       : "lg:pr-[240px]"
-  const portraitPosition = isRight ? "lg:-left-2" : "lg:-right-2"
+  const portraitPosition = isRight ? "lg:left-0" : "lg:right-0"
 
   const slideAnimation = index % 2 === 0 ? "animate-slideInFromLeft" : "animate-slideInFromRight"
 
@@ -521,59 +521,27 @@ const WyzwanieSalesResults = () => (
           placeholder="blurred"
           className="w-full"
         />
-      </div>
-    </div>
-  </MaxWithBgColorContainer>
-)
-
-const WyzwanieResultsInNumbers = () => (
-  <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
-    <div className="py-10 px-3">
-      <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[400px] mx-auto">
-        <h2 className="p-2 font-anton font-normal text-center text-ada-orange text-[26px] lg:text-[32px]">
-          Nasze wyniki w liczbach
-        </h2>
-      </div>
-      <div className="flex flex-col gap-6 lg:gap-12 py-8 max-w-4xl mx-auto">
-        <StaticImage
-          src="../images/kolektyw1.webp"
-          alt="Wyniki - statystyki"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw2.webp"
-          alt="Wyniki - statystyki"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw3.webp"
-          alt="Wyniki - statystyki"
-          placeholder="blurred"
-          className="w-full"
-        />
         <StaticImage
           src="../images/kolektyw4.webp"
-          alt="Wyniki - statystyki"
+          alt="Wyniki sprzedażowe"
           placeholder="blurred"
           className="w-full"
         />
         <StaticImage
           src="../images/kolektyw5.webp"
-          alt="Wyniki - statystyki"
+          alt="Wyniki sprzedażowe"
           placeholder="blurred"
           className="w-full"
         />
         <StaticImage
           src="../images/kolektyw6.webp"
-          alt="Wyniki - statystyki"
+          alt="Wyniki sprzedażowe"
           placeholder="blurred"
           className="w-full"
         />
         <StaticImage
           src="../images/kolektyw7.webp"
-          alt="Wyniki - statystyki"
+          alt="Wyniki sprzedażowe"
           placeholder="blurred"
           className="w-full"
         />
@@ -639,7 +607,6 @@ const wyzwanieBottomSection = (
     <WyzwanieTestimonials />
     <WyzwanieSalesResults />
     <WyzwanieCTA />
-    <WyzwanieResultsInNumbers />
 
     {/* Button between Results and FAQ */}
     <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
