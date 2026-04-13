@@ -4,13 +4,17 @@ interface CountdownTimerProps {
   targetDate: Date
   text?: string
   color?: string
+  textColor?: string
 }
 
-const TimeSegment: React.FC<{ label: string; value: number }> = ({
-  label,
-  value,
-}) => (
-  <div className="flex flex-col items-center font-bold text-sm sm:text-base md:text-adaBase">
+const TimeSegment: React.FC<{
+  label: string
+  value: number
+  textColor?: string
+}> = ({ label, value, textColor }) => (
+  <div
+    className={`flex flex-col items-center font-bold text-sm sm:text-base md:text-adaBase ${textColor || ""}`}
+  >
     <p className="font-medium">{label}</p>
     <div className="text-xl sm:text-2xl">
       {value.toString().padStart(2, "0")}
@@ -22,6 +26,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
   targetDate,
   text,
   color,
+  textColor,
 }) => {
   const calculateTimeLeft = () => {
     const difference = +targetDate - +new Date()
@@ -57,8 +62,10 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
   return (
     <div className="flex flex-col items-center px-2 sm:px-4">
       {text && (
-        <p className="mb-2 text-lg sm:text-xl md:text-2xl font-bold text-center">
-          ✨ {text} ✨
+        <p
+          className={`mb-2 text-lg sm:text-xl md:text-2xl font-bold text-center ${textColor || ""}`}
+        >
+          {text}
         </p>
       )}
       <div
@@ -66,10 +73,22 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
         style={!isTailwindClass && color ? { backgroundColor: color } : {}}
       >
         {" "}
-        <TimeSegment label="DNI" value={timeLeft.days} />
-        <TimeSegment label="GODZIN" value={timeLeft.hours} />
-        <TimeSegment label="MINUT" value={timeLeft.minutes} />
-        <TimeSegment label="SEKUND" value={timeLeft.seconds} />
+        <TimeSegment label="DNI" value={timeLeft.days} textColor={textColor} />
+        <TimeSegment
+          label="GODZIN"
+          value={timeLeft.hours}
+          textColor={textColor}
+        />
+        <TimeSegment
+          label="MINUT"
+          value={timeLeft.minutes}
+          textColor={textColor}
+        />
+        <TimeSegment
+          label="SEKUND"
+          value={timeLeft.seconds}
+          textColor={textColor}
+        />
       </div>
     </div>
   )

@@ -1,7 +1,9 @@
+import CountdownTimer from "helpers/CountdownTimer"
 import React from "react"
 
 export const WYZWANIE_PAGE_TITLE = "Kampania sprzedażowa w pigułce - Wyzwanie"
 export const wyzwanieHeroBgColor = "bg-ada-magicYellow"
+export const WYZWANIE_START_DATE = new Date("2026-04-20T00:00:00")
 
 export const wyzwanieBenefits = [
   {
@@ -58,6 +60,14 @@ export const wyzwanieHeroLeft = (
       <span className="inline-block bg-white px-4 py-2 text-[18px] lg:text-[20px] font-normal leading-[140%] text-black">
         kampania sprzedażowa.
       </span>
+    </div>
+    <div className="mt-6">
+      <CountdownTimer
+        targetDate={WYZWANIE_START_DATE}
+        text="wyzwanie startuje za"
+        color="bg-black"
+        textColor="text-white"
+      />
     </div>
   </>
 )
