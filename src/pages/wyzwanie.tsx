@@ -237,13 +237,13 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
   const pillExtraPadding = isFull
     ? ""
     : isRight
-      ? "lg:pl-[180px]"
-      : "lg:pr-[180px]"
+      ? "lg:pl-[230px]"
+      : "lg:pr-[230px]"
   const subtitleExtraPadding = isFull
     ? ""
     : isRight
-      ? "lg:pl-[240px]"
-      : "lg:pr-[240px]"
+      ? "lg:pl-[250px]"
+      : "lg:pr-[250px]"
   const portraitPosition = isRight ? "lg:left-0" : "lg:right-0"
 
   const slideAnimation = index % 2 === 0 ? "animate-slideInFromLeft" : "animate-slideInFromRight"
@@ -251,9 +251,9 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
   return (
     <MaxWithBgColorContainer bgColor={day.sectionBg}>
       <div ref={ref} className="px-4 py-10 lg:py-12 overflow-hidden">
-        <div className={`mx-auto flex w-full max-w-5xl flex-col items-center lg:w-1/2 lg:max-w-none ${isInView ? slideAnimation : "opacity-0"}`}>
+        <div className={`mx-auto w-full max-w-5xl ${isInView ? slideAnimation : "opacity-0"}`}>
           <div
-            className={`relative w-full ${isFull ? "" : "lg:min-h-[220px]"}`}
+            className={`relative w-full ${isFull ? "" : "lg:min-h-[260px]"}`}
           >
             <div className="w-full">
               <div
@@ -290,7 +290,7 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
             </div>
             {day.portrait && (
               <div
-                className={`mt-8 flex justify-center lg:absolute ${portraitPosition} lg:top-0 lg:mt-0`}
+                className={`mt-8 flex justify-center lg:absolute ${portraitPosition} lg:top-1/2 lg:mt-0 lg:-translate-y-1/2`}
               >
                 <div
                   className={`h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full lg:h-[220px] lg:w-[220px] ${
@@ -504,44 +504,20 @@ const WyzwanieSalesResults = () => (
       </div>
       <div className="flex flex-col gap-6 lg:gap-12 py-8 max-w-4xl mx-auto">
         <StaticImage
-          src="../images/kolektyw1.webp"
-          alt="Wyniki sprzedażowe"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw2.webp"
-          alt="Wyniki sprzedażowe"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw3.webp"
-          alt="Wyniki sprzedażowe"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw4.webp"
-          alt="Wyniki sprzedażowe"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw5.webp"
-          alt="Wyniki sprzedażowe"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
           src="../images/kolektyw6.webp"
-          alt="Wyniki sprzedażowe"
+          alt="Wyniki sprzedażowe - dodania do koszyka"
           placeholder="blurred"
           className="w-full"
         />
         <StaticImage
           src="../images/kolektyw7.webp"
-          alt="Wyniki sprzedażowe"
+          alt="Wyniki sprzedażowe - ciepła"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw3.webp"
+          alt="Wyniki sprzedażowe - www kontakty"
           placeholder="blurred"
           className="w-full"
         />
@@ -607,24 +583,6 @@ const wyzwanieBottomSection = (
     <WyzwanieTestimonials />
     <WyzwanieSalesResults />
     <WyzwanieCTA />
-
-    {/* Button between Results and FAQ */}
-    <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
-      <div className="pb-12 px-4 text-center">
-        <Button
-          type="button"
-          variant="dark"
-          sectionId={OFFER_SECTION_ID}
-          text={
-            <span className="font-anton uppercase text-ada-magicYellow">
-              DOŁĄCZAM
-            </span>
-          }
-          textSize="text-[22px] lg:text-[28px]"
-          btnStyle="px-20 lg:px-28 py-4"
-        />
-      </div>
-    </MaxWithBgColorContainer>
 
     <MaxWithBgColorContainer bgColor="bg-white">
       <WyzwanieFaq />
