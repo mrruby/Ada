@@ -35,7 +35,7 @@ const wyzwanieAfterHeroSection = (
   <MaxWithBgColorContainer bgColor="bg-white">
     <div className="py-16 px-4">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        <p className="mb-6 text-[24px] lg:text-[32px] font-bold text-black">
+        <p className="mb-6 text-[24px] lg:text-[32px] font-black text-black">
           🗓️ 20.04 - start wyzwania
         </p>
         <Button
@@ -191,7 +191,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     pillBg: "bg-ada-magicYellow",
     numberBg: "bg-black",
     titleBold: "Masz pytanie? Nie googluj - napisz do nas.",
-    subtitle: "Przez 8 dni masz dostęp do mnie, Justyny, Doroty i Nicoli na platformie. Wrzucasz swój tekst - dostajesz feedback. Nie wiesz, czy grafika jest ok - sprawdzimy. Coś nie działa w Menedżerze - pomożemy. To jak mieć mini-agencję w kieszeni, tylko że ta agencja naprawdę Ci tłumaczy, co i dlaczego.",
+    subtitle:
+      "Przez 8 dni masz dostęp do mnie, Justyny, Doroty i Nicoli na platformie. Wrzucasz swój tekst - dostajesz feedback. Nie wiesz, czy grafika jest ok - sprawdzimy. Coś nie działa w Menedżerze - pomożemy. To jak mieć mini-agencję w kieszeni, tylko że ta agencja naprawdę Ci tłumaczy, co i dlaczego.",
   },
 ]
 
@@ -311,7 +312,12 @@ const DlaKogoSection = () => (
         {/* Left column - FOR WHOM */}
         <div className="flex flex-col">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="text-[32px] lg:text-[42px]">✅</span>
+            <span className="inline-block shrink-0 relative -left-1 -top-[2px] text-[32px] lg:text-[42px] -rotate-[10deg]">
+              ✅
+                  
+                 
+                
+            </span>
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
               <span className="block">DLA KOGO JEST</span>
               <span className="block">TO WYZWANIE?</span>
@@ -321,23 +327,48 @@ const DlaKogoSection = () => (
             <ul className="space-y-4 text-black text-[14px] lg:text-[16px] leading-[140%]">
               <li className="flex gap-3">
                 <span className="shrink-0">👩‍💻</span>
-                <span>Prowadzisz swój biznes i chcesz samodzielnie ustawiać reklamy, nie masz budżetu lub nie chcesz zlecać reklam innym</span>
+                <span>
+                  Prowadzisz swój biznes i chcesz samodzielnie ustawiać reklamy,
+                  nie masz budżetu lub nie chcesz zlecać reklam innym
+                </span>
               </li>
               <li className="flex gap-3">
                 <span className="shrink-0">💼</span>
-                <span>Obsługujesz klientów jako freelancerka i chcesz pewniej stawiać kampanie sprzedażowe</span>
+                <span>
+                  Obsługujesz klientów jako freelancerka i chcesz pewniej
+                  stawiać kampanie sprzedażowe
+                </span
+                  >
+                 
+                
               </li>
               <li className="flex gap-3">
                 <span className="shrink-0">🖱️</span>
-                <span>Próbowałaś już klikać w Menedżerze Reklam, ale nie masz pewności, czy robisz to dobrze (masz konto reklamowe)</span>
+                <span>
+                  
+                 
+                
+                  Próbowałaś już klikać w Menedżerze Reklam, ale nie masz
+                  pewności, czy robisz to dobrze (masz konto reklamowe)
+                </span>
               </li>
+                  
+                 
+                
               <li className="flex gap-3">
                 <span className="shrink-0">💰</span>
                 <span>Masz mały budżet reklamowy (do 2000 zł miesięcznie)</span>
               </li>
+                  
+                 
+                 
+                
               <li className="flex gap-3">
                 <span className="shrink-0">🚀</span>
-                <span>Chcesz w końcu przestać "promować posty" i zacząć prowadzić kampanie sprzedażowe</span>
+                <span>
+                  Chcesz w końcu przestać "promować posty" i zacząć prowadzić
+                  kampanie sprzedażowe
+                </span>
               </li>
             </ul>
           </div>
@@ -346,7 +377,9 @@ const DlaKogoSection = () => (
         {/* Right column - NOT FOR WHOM */}
         <div className="flex flex-col">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="text-[32px] lg:text-[42px]">❌</span>
+            <span className="inline-block shrink-0 relative -left-1 top-[2px] text-[32px] lg:text-[42px] -rotate-[10deg]">
+              ❌
+            </span>
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
               <span className="block">DLA KOGO NIE JEST</span>
               <span className="block">TO WYZWANIE?</span>
@@ -356,19 +389,32 @@ const DlaKogoSection = () => (
             <ul className="space-y-4 text-black text-[14px] lg:text-[16px] leading-[140%]">
               <li className="flex gap-3">
                 <span className="shrink-0">📈</span>
-                <span>Masz już doświadczenie w kampaniach sprzedażowych i szukasz zaawansowanych strategii skalowania</span>
+                <span>
+                  Masz już doświadczenie w kampaniach sprzedażowych i szukasz
+                  zaawansowanych strategii skalowania
+                </span>
               </li>
               <li className="flex gap-3">
                 <span className="shrink-0">🚫</span>
-                <span>Nie planujesz w ogóle korzystać z płatnych reklam w swoim biznesie</span>
+                <span>
+                  Nie planujesz w ogóle korzystać z płatnych reklam w swoim
+                  biznesie
+                </span>
               </li>
               <li className="flex gap-3">
                 <span className="shrink-0">🙅‍♀️</span>
-                <span>Szukasz gotowej usługi "zrób to za mnie" - tutaj uczysz się robić to sama</span>
+                <span>
+                  Szukasz gotowej usługi "zrób to za mnie" - tutaj uczysz się
+                  robić to sama
+                </span>
               </li>
               <li className="flex gap-3">
                 <span className="shrink-0">🛒</span>
-                <span>Nie masz produktu ani usługi do sprzedania (jeszcze!) - wróć do nas, kiedy będziesz gotowa: do wyzwania potrzebujesz koszyka/sklepu internetowego</span>
+                <span>
+                  Nie masz produktu ani usługi do sprzedania (jeszcze!) - wróć
+                  do nas, kiedy będziesz gotowa: do wyzwania potrzebujesz
+                  koszyka/sklepu internetowego
+                </span>
               </li>
             </ul>
           </div>
@@ -378,33 +424,78 @@ const DlaKogoSection = () => (
   </MaxWithBgColorContainer>
 )
 
+const WyzwanieSalesResultsCallout = ({
+  title,
+  body,
+  className = "",
+}: {
+  title: string
+  body: string
+  className?: string
+}) => (
+  <div
+    className={`relative z-10 w-full max-w-[250px] bg-ada-magicYellow px-4 py-3 text-center text-black ${className}`}
+  >
+    <p className="text-[15px] font-black leading-[110%]">{title}</p>
+    <p className="mt-1 text-[12px] font-semibold leading-[115%]">{body}</p>
+  </div>
+)
+
 const WyzwanieSalesResults = () => (
   <MaxWithBgColorContainer bgColor="bg-white">
-    <div className="py-10 px-3">
+    <div className="py-10 px-3 lg:px-6">
       <h2 className="font-anton font-normal text-center text-black text-[26px] lg:text-[32px] mb-8">
-        Jeżeli chcesz osiągać takie wyniki:
+        Tak mogą wyglądać Twoje wyniki po wyzwaniu.
       </h2>
-      <div className="flex flex-col gap-6 lg:gap-12 py-8 max-w-4xl mx-auto">
-        <StaticImage
-          src="../images/kolektyw6.webp"
-          alt="Wyniki sprzedażowe - dodania do koszyka"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw7.webp"
-          alt="Wyniki sprzedażowe - ciepła"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw3.webp"
-          alt="Wyniki sprzedażowe - www kontakty"
-          placeholder="blurred"
-          className="w-full"
-        />
+
+      <div className="mx-auto flex max-w-[440px] flex-col gap-8 py-6 lg:max-w-[700px]">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-full max-w-[320px] lg:max-w-[560px]">
+            <StaticImage
+              src="../images/wyzwanie-sales-result-1.webp"
+              alt="Wyniki sprzedażowe - 10 zakupów"
+              placeholder="blurred"
+              className="w-full"
+            />
+          </div>
+          <WyzwanieSalesResultsCallout
+            title="10 zakupów produktu za"
+            body="kilkaset złotych w 8-dniowym okienku sprzedażowym!"
+          />
+        </div>
+
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-full max-w-[380px] lg:max-w-[665px]">
+            <StaticImage
+              src="../images/wyzwanie-sales-result-2.webp"
+              alt="Wyniki sprzedażowe - wartość konwersji 12 632,20 zł"
+              placeholder="blurred"
+              className="w-full"
+            />
+          </div>
+          <WyzwanieSalesResultsCallout
+            title="329 zł przeznaczonych na reklamy"
+            body="wygenerowało zakupy produktu cyfrowego na ponad 12 tysięcy złotych."
+          />
+        </div>
+
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-full max-w-[360px] lg:max-w-[630px]">
+            <StaticImage
+              src="../images/wyzwanie-sales-result-3.webp"
+              alt="Wyniki sprzedażowe - koszt zakupu 31,94 zł"
+              placeholder="blurred"
+              className="w-full"
+            />
+          </div>
+          <WyzwanieSalesResultsCallout
+            title="351 złotych przeznaczonych na reklamy"
+            body="wygenerowało zakupy na ponad 2000 złotych."
+          />
+        </div>
       </div>
-      <div className="flex justify-center pt-4 pb-6">
+
+      <div className="flex justify-center pt-6 pb-6">
         <Button
           type="button"
           variant="dark"
@@ -480,6 +571,7 @@ const wyzwanieFaqList = [
     answer:
       "Jeśli jesteś soloprzedsięborczynią, budujesz markę osobistą, prowadzisz sklep online, jesteś marketerką lub wirtualną asystentką - i chcesz ogarnąć reklamy sprzedażowe, które generują kasę, a nie tylko kliknięcia - to wyzwanie jest dla Ciebie.",
   },
+       
   {
     question: "💸 Czy 97 zł to dużo?",
     answer:
@@ -531,7 +623,8 @@ const wyzwanieOfferBox = {
     {
       icon: "💡",
       title: "Tyle co jeden obiad z deserem. Tyle co 15 minut pracy agencji.",
-      description: "A dostajesz 8 dni z 4 ekspertkami i gotowy system na kampanię.",
+      description:
+        "A dostajesz 8 dni z 4 ekspertkami i gotowy system na kampanię.",
     },
   ],
 }
@@ -548,38 +641,38 @@ const WyzwanieTestimonials = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
         {/* Row 1 - Magda Sikorska, Paulina Leopold, Angelika Woźniak */}
         <StaticImage
-          src="../images/magic_reference_sell_1.webp"
+          src="../images/magic_reference_sell_4.webp"
           alt="Opinia - Magda Sikorska"
           placeholder="blurred"
           className="w-full"
         />
         <StaticImage
-          src="../images/magic_reference_sell_2.webp"
+          src="../images/magic_reference_sell_3.webp"
           alt="Opinia - Paulina Leopold"
           placeholder="blurred"
           className="w-full"
         />
         <StaticImage
-          src="../images/magic_reference_sell_3.webp"
+          src="../images/magic_reference_sell_5.webp"
           alt="Opinia - Angelika Woźniak"
           placeholder="blurred"
           className="w-full"
         />
         {/* Row 2 - Aleksandra Ziober, Agnieszka, Martyna Żmuda */}
         <StaticImage
-          src="../images/magic_reference_sell_4.webp"
+          src="../images/magic_reference_sell_6.webp"
           alt="Opinia - Aleksandra Ziober"
           placeholder="blurred"
           className="w-full"
         />
         <StaticImage
-          src="../images/magic_reference_sell_5.webp"
+          src="../images/magic_reference_sell_10.webp"
           alt="Opinia - Agnieszka"
           placeholder="blurred"
           className="w-full"
         />
         <StaticImage
-          src="../images/magic_reference_sell_6.webp"
+          src="../images/magic_reference_sell_martyna_zmuda.webp"
           alt="Opinia - Martyna Żmuda"
           placeholder="blurred"
           className="w-full"
@@ -712,7 +805,8 @@ const WyzwaniePage = () => {
           benefits={wyzwanieBenefits}
           benefitsTitle={
             <>
-              Co dostajesz w <span className="text-ada-magicPurple4">pakiecie</span>
+              Co dostajesz w{" "}
+              <span className="text-ada-magicPurple4">pakiecie</span>
               <span className="text-black">?</span>
             </>
           }
