@@ -333,26 +333,31 @@ const DlaKogoSection = () => (
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="text-[32px] lg:text-[42px]">✅</span>
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
-              DLA KOGO JEST TO WYZWANIE?
+              <span className="block">DLA KOGO JEST</span>
+              <span className="block">TO WYZWANIE?</span>
             </h3>
           </div>
           <div className="border-2 border-black bg-ada-magicYellow rounded-lg p-6 flex-grow">
             <ul className="space-y-4 text-black text-[14px] lg:text-[16px] leading-[140%]">
               <li className="flex gap-3">
                 <span className="shrink-0">👩‍💻</span>
-                <span>konsultacje pisemne z ekspertkami - pytasz, dostajesz konkretną odpowiedź, nie "przycupnę" i nie "też się chętnie dowiem"</span>
+                <span>Prowadzisz swój biznes i chcesz samodzielnie ustawiać reklamy, nie masz budżetu lub nie chcesz zlecać reklam innym</span>
               </li>
               <li className="flex gap-3">
-                <span className="shrink-0">🎥</span>
-                <span>materiały szkoleniowe video z tworzenia tekstów, grafik i ustawiania kampanii sprzedażowej — odtwarzasz, robisz, masz gotowe</span>
+                <span className="shrink-0">💼</span>
+                <span>Obsługujesz klientów jako freelancerka i chcesz pewniej stawiać kampanie sprzedażowe</span>
               </li>
               <li className="flex gap-3">
-                <span className="shrink-0">👩‍💻</span>
-                <span>dostęp do platformy z nagraniami, wytycznymi i wsparciem przez cały tydzień wyzwania</span>
+                <span className="shrink-0">🖱️</span>
+                <span>Próbowałaś już klikać w Menedżerze Reklam, ale nie masz pewności, czy robisz to dobrze (masz konto reklamowe)</span>
               </li>
               <li className="flex gap-3">
-                <span className="shrink-0">👩‍💻</span>
-                <span>dla osób, które chcą takich wyników:</span>
+                <span className="shrink-0">💰</span>
+                <span>Masz mały budżet reklamowy (do 2000 zł miesięcznie)</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0">🚀</span>
+                <span>Chcesz w końcu przestać "promować posty" i zacząć prowadzić kampanie sprzedażowe</span>
               </li>
             </ul>
           </div>
@@ -363,26 +368,27 @@ const DlaKogoSection = () => (
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="text-[32px] lg:text-[42px]">❌</span>
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
-              DLA KOGO NIE JEST TO WYZWANIE?
+              <span className="block">DLA KOGO NIE JEST</span>
+              <span className="block">TO WYZWANIE?</span>
             </h3>
           </div>
           <div className="border-2 border-black bg-ada-magicYellow rounded-lg p-6 flex-grow">
             <ul className="space-y-4 text-black text-[14px] lg:text-[16px] leading-[140%]">
               <li className="flex gap-3">
-                <span className="shrink-0">👩‍💻</span>
-                <span>konsultacje pisemne z ekspertkami - pytasz, dostajesz konkretną odpowiedź, nie "przycupnę" i nie "też się chętnie dowiem"</span>
+                <span className="shrink-0">📈</span>
+                <span>Masz już doświadczenie w kampaniach sprzedażowych i szukasz zaawansowanych strategii skalowania</span>
               </li>
               <li className="flex gap-3">
-                <span className="shrink-0">🎥</span>
-                <span>materiały szkoleniowe video z tworzenia tekstów, grafik i ustawiania kampanii sprzedażowej — odtwarzasz, robisz, masz gotowe</span>
+                <span className="shrink-0">🚫</span>
+                <span>Nie planujesz w ogóle korzystać z płatnych reklam w swoim biznesie</span>
               </li>
               <li className="flex gap-3">
-                <span className="shrink-0">👩‍💻</span>
-                <span>dostęp do platformy z nagraniami, wytycznymi i wsparciem przez cały tydzień wyzwania</span>
+                <span className="shrink-0">🙅‍♀️</span>
+                <span>Szukasz gotowej usługi "zrób to za mnie" - tutaj uczysz się robić to sama</span>
               </li>
               <li className="flex gap-3">
-                <span className="shrink-0">👩‍💻</span>
-                <span>dla osób, które chcą takich wyników:</span>
+                <span className="shrink-0">🛒</span>
+                <span>Nie masz produktu ani usługi do sprzedania (jeszcze!) - wróć do nas, kiedy będziesz gotowa: do wyzwania potrzebujesz koszyka/sklepu internetowego</span>
               </li>
             </ul>
           </div>
@@ -479,7 +485,7 @@ const wyzwanieFaqList = [
   {
     question: "⏰ Ile czasu dziennie muszę poświęcić?",
     answer:
-      "Nagrania trwają max 30 minut. Razem z wdrożeniem wytycznych - godzina dziennie wystarczy, żeby pod koniec tygodnia mieć gotową kampanię.",
+      "Nagrania trwają około 30-40 minut, z wyjątkiem czwartkowego spotkania, na które najlepiej zarezerwować około 1,5 godziny. Około 4-5 godzin wystarczy Ci, aby przygotować całą kampanię od zera.",
   },
   {
     question: "🎥 Czy spotkanie live z Adą jest nagrywane?",
@@ -526,21 +532,26 @@ const wyzwanieOfferBox = {
   ctaLabel: "KUPUJĘ DOSTĘP",
   benefits: [
     {
-      icon: "✍️",
-      title: "konsultacje pisemne z ekspertkami",
+      icon: "🔒",
+      title: "Konsultacje pisemne z ekspertkami",
       description:
-        'pytasz, dostajesz konkretną odpowiedź, nie "przycupnę" i nie "też się chętnie dowiem"',
+        "nie tylko w temacie reklam, ale także piksela, grafik, tekstów reklamowych",
     },
     {
-      icon: "🎥",
+      icon: "🎬",
       title:
-        "materiały szkoleniowe wideo z tworzenia tekstów, grafiki i ustawiania kampanii sprzedażowej",
-      description: "odtwarzasz, robisz, masz gotowe",
+        "Materiały szkoleniowe video z tworzenia tekstów, grafik i ustawiania kampanii sprzedażowej",
+      description: "",
     },
     {
-      icon: "👩‍💻",
-      title: "dostęp do platformy z nagraniami, wytycznymi i wsparciem",
+      icon: "🔓",
+      title: "Dostęp do platformy z nagraniami, wytycznymi i wsparciem",
       description: "przez cały tydzień wyzwania",
+    },
+    {
+      icon: "💡",
+      title: "Tyle co jeden obiad z deserem. Tyle co 15 minut pracy agencji.",
+      description: "A dostajesz 8 dni z 4 ekspertkami i gotowy system na kampanię.",
     },
   ],
 }
