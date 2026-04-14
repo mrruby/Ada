@@ -376,7 +376,51 @@ const DlaKogoSection = () => (
   </MaxWithBgColorContainer>
 )
 
-const wyzwanieBeforeBenefitsSection = (
+const WyzwanieSalesResults = () => (
+  <MaxWithBgColorContainer bgColor="bg-ada-magicGrey">
+    <div className="py-10 px-3">
+      <h2 className="font-anton font-normal text-center text-black text-[26px] lg:text-[32px] mb-8">
+        Jeżeli chcesz osiągać takie wyniki:
+      </h2>
+      <div className="flex flex-col gap-6 lg:gap-12 py-8 max-w-4xl mx-auto">
+        <StaticImage
+          src="../images/kolektyw6.webp"
+          alt="Wyniki sprzedażowe - dodania do koszyka"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw7.webp"
+          alt="Wyniki sprzedażowe - ciepła"
+          placeholder="blurred"
+          className="w-full"
+        />
+        <StaticImage
+          src="../images/kolektyw3.webp"
+          alt="Wyniki sprzedażowe - www kontakty"
+          placeholder="blurred"
+          className="w-full"
+        />
+      </div>
+      <div className="flex justify-center pt-4 pb-6">
+        <Button
+          type="button"
+          variant="dark"
+          sectionId={OFFER_SECTION_ID}
+          text={
+            <span className="font-anton uppercase text-ada-magicYellow">
+              DOŁĄCZ
+            </span>
+          }
+          textSize="text-[22px] lg:text-[28px]"
+          btnStyle="px-20 lg:px-28 py-4"
+        />
+      </div>
+    </div>
+  </MaxWithBgColorContainer>
+)
+
+const WyzwanieBeforeBenefitsSection = () => (
   <>
     {wyzwanieDays.map((day, index) => (
       <WyzwanieDaySection key={day.number} day={day} index={index} />
@@ -401,6 +445,7 @@ const wyzwanieBeforeBenefitsSection = (
       </div>
     </div>
     <DlaKogoSection />
+    <WyzwanieSalesResults />
   </>
 )
 
@@ -563,39 +608,29 @@ const WyzwanieCTA = () => (
   </MaxWithBgColorContainer>
 )
 
-const WyzwanieSalesResults = () => (
-  <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
-    <div className="py-10 px-3">
-      <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[500px] mx-auto">
-        <h2 className="p-2 font-anton font-normal text-center text-ada-orange text-[26px] lg:text-[32px]">
-          Ty też możesz mieć takie wyniki
-        </h2>
-      </div>
-      <div className="flex flex-col gap-6 lg:gap-12 py-8 max-w-4xl mx-auto">
-        <StaticImage
-          src="../images/kolektyw6.webp"
-          alt="Wyniki sprzedażowe - dodania do koszyka"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw7.webp"
-          alt="Wyniki sprzedażowe - ciepła"
-          placeholder="blurred"
-          className="w-full"
-        />
-        <StaticImage
-          src="../images/kolektyw3.webp"
-          alt="Wyniki sprzedażowe - www kontakty"
-          placeholder="blurred"
-          className="w-full"
-        />
-      </div>
+const WyzwanieStartSection = () => (
+  <MaxWithBgColorContainer bgColor="bg-white">
+    <div className="py-12 lg:py-16 px-4 text-center">
+      <h2 className="font-anton font-normal text-black text-[28px] lg:text-[42px] mb-8">
+        {"\u{1F5D3}"} 20.04 - start wyzwania
+      </h2>
+      <Button
+        type="button"
+        variant="dark"
+        sectionId={OFFER_SECTION_ID}
+        text={
+          <span className="font-anton uppercase text-ada-magicYellow">
+            SPRAWDZAM
+          </span>
+        }
+        textSize="text-[22px] lg:text-[28px]"
+        btnStyle="px-20 lg:px-28 py-4"
+      />
     </div>
   </MaxWithBgColorContainer>
 )
 
-const wyzwanieBottomSection = (
+const WyzwanieBottomSection = () => (
   <>
     <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
       <div className="px-4 py-14 lg:py-20">
@@ -650,12 +685,13 @@ const wyzwanieBottomSection = (
     </MaxWithBgColorContainer>
 
     <WyzwanieTestimonials />
-    <WyzwanieSalesResults />
     <WyzwanieCTA />
 
     <MaxWithBgColorContainer bgColor="bg-white">
       <WyzwanieFaq />
     </MaxWithBgColorContainer>
+
+    <WyzwanieStartSection />
   </>
 )
 
@@ -668,7 +704,7 @@ const WyzwaniePage = () => {
           heroBgColor={wyzwanieHeroBgColor}
           afterHeroSection={wyzwanieAfterHeroSection}
           pinkSectionContent={wyzwaniePinkSection}
-          beforeBenefitsSection={wyzwanieBeforeBenefitsSection}
+          beforeBenefitsSection={<WyzwanieBeforeBenefitsSection />}
           benefits={wyzwanieBenefits}
           benefitsTitle={
             <>
@@ -676,7 +712,7 @@ const WyzwaniePage = () => {
               <span className="text-black">?</span>
             </>
           }
-          bottomSection={wyzwanieBottomSection}
+          bottomSection={<WyzwanieBottomSection />}
           heroLeft={wyzwanieHeroLeft}
           heroFigure={wyzwanieHeroFigure}
           heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px]"
