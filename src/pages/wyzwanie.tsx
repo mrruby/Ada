@@ -35,15 +35,15 @@ const wyzwanieAfterHeroSection = (
   <MaxWithBgColorContainer bgColor="bg-white">
     <div className="py-16 px-4">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        <p className="mb-6 text-[20px] lg:text-[24px] font-bold text-black">
-          📅 20.04 - start wyzwania
+        <p className="mb-6 text-[24px] lg:text-[32px] font-bold text-black">
+          🗓️ 20.04 - start wyzwania
         </p>
         <Button
           type="button"
           variant="dark"
           sectionId={OFFER_SECTION_ID}
           text={<span className="font-anton uppercase">Sprawdzam</span>}
-          textSize="text-[26px] lg:text-[32px]"
+          textSize="text-[32px] lg:text-[40px]"
           btnStyle="px-16 lg:px-24 py-4"
         />
       </div>
@@ -79,19 +79,19 @@ const wyzwaniePinkSection = (
         <p className="mb-6">
           <span className="font-bold">W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie 4 ekspertek, które codziennie pracują z Meta Ads. Również na małych budżetach i z małymi markami - takimi jak Twoja.
         </p>
-        <p className="mb-4 font-bold">1 - PONIEDZIAŁEK 21.04</p>
+        <p className="mb-4 font-bold">1 - PONIEDZIAŁEK 20.04</p>
         <p className="mb-6">
           <span className="font-bold">Słowa, które sprzedają.</span> Justyna na co dzień pisze teksty, które sprzedają - od sekwencji mailowych, przez landing page'e, po kreacje reklamowe. Dostaniesz od niej nagranie z gotowym schematem na tekst do reklamy sprzedażowej. Żadnego "pisz z serca" - konkretna struktura, którą wypełnisz swoimi słowami. Tego samego dnia siadasz i masz gotowy tekst.
         </p>
-        <p className="mb-4 font-bold">2 - WTOREK 22.04</p>
+        <p className="mb-4 font-bold">2 - WTOREK 21.04</p>
         <p className="mb-6">
           <span className="font-bold">Grafiki do reklam sprzedażowych</span> Dorota zajmuje się brandingiem i identyfikacją wizualną, a w MAGIC uczy, jak tworzyć kreacje, które wyglądają profesjonalnie - nawet w Canvie, nawet bez budżetu na graficzkę. Po tym nagraniu będziesz wiedzieć, czym się różni grafika, którą ludzie przewijają, od grafiki, przy której się zatrzymują i stworzysz takie dla siebie.
         </p>
-        <p className="mb-4 font-bold">3 - ŚRODA 23.04</p>
+        <p className="mb-4 font-bold">3 - ŚRODA 22.04</p>
         <p className="mb-6">
           <span className="font-bold">Piksel przestanie być straszny. Obiecujemy.</span> Nicola ogarnia reklamy i techniczne zaplecze - piksel, zdarzenia, testowanie. To ona pomaga naszym klubowiczkom w MAGIC ogarnąć tę część, której większość się boi. Dostajesz nagranie z instrukcją krok po kroku. Żadnego żargonu, żadnego "to proste, wystarczy dodać kod" - Nicola pokaże Ci każdy klik.
         </p>
-        <p className="mb-4 font-bold">4 - CZWARTEK 24.04</p>
+        <p className="mb-4 font-bold">4 - CZWARTEK 23.04</p>
         <p className="mb-6">
           <span className="font-bold">Ustawiasz swoją kampanię sprzedażową. Na żywo. Ze mną.</span> To jest serce wyzwania. Spotkanie LIVE, na którym razem przechodzimy przez Menedżera Reklam i stawiasz swoją kampanię. Nie "oglądam, jak Ada klika" - Ty klikasz razem ze mną, pytasz, pokazujesz swój przypadek. Dostajesz też nagranie, żebyś mogła wrócić do każdego kroku podczas wyzwania.
         </p>
@@ -126,8 +126,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     pillBg: "bg-ada-magicYellow",
     numberBg: "bg-black",
     titleBold:
-      "Przywitanie od Ady + nagranie od Justyny z wytycznymi do tekstów sprzedażowych.",
-    subtitle: "Dostajesz konkretne wskazówki, siadasz i piszesz.",
+      "Słowa, które sprzedają.",
+    subtitle: "Justyna na co dzień pisze teksty, które sprzedają - od sekwencji mailowych, przez landing page'e, po kreacje reklamowe. Dostaniesz od niej nagranie z gotowym schematem na tekst do reklamy sprzedażowej. Żadnego \"pisz z serca\" - konkretna struktura, którą wypełnisz swoimi słowami. Tego samego dnia siadasz i masz gotowy tekst.",
     portrait: (
       <StaticImage
         src="../images/justyna_portrait.webp"
@@ -147,9 +147,9 @@ const wyzwanieDays: WyzwanieDay[] = [
     pillBg: "bg-ada-magicPurple4",
     numberBg: "bg-black",
     titleBold:
-      "Nagranie od Doroty: jak przygotować grafikę do reklamy, która zatrzymuje scroll.",
+      "Grafiki do reklam sprzedażowych",
     subtitle:
-      "Bo najlepszy tekst nie zadziała, jeśli nikt nie zatrzyma się na Twojej kreacji.",
+      "Dorota zajmuje się brandingiem i identyfikacją wizualną, a w MAGIC uczy, jak tworzyć kreacje, które wyglądają profesjonalnie - nawet w Canvie, nawet bez budżetu na graficzkę. Po tym nagraniu będziesz wiedzieć, czym się różni grafika, którą ludzie przewijają, od grafiki, przy której się zatrzymują i stworzysz takie dla siebie.",
     portrait: (
       <StaticImage
         src="../images/dorota_portrait.webp"
@@ -168,8 +168,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
     numberBg: "bg-black",
-    titleBold: "Piksel, zdarzenia, testowanie. Brzmi przerażająco?",
-    subtitle: "Dostajesz nagranie z instrukcją krok po kroku.",
+    titleBold: "Piksel przestanie być straszny. Obiecujemy.",
+    subtitle: "Nicola ogarnia reklamy i techniczne zaplecze - piksel, zdarzenia, testowanie. To ona pomaga naszym klubowiczkom w MAGIC ogarnąć tę część, której większość się boi. Dostajesz nagranie z instrukcją krok po kroku. Żadnego żargonu, żadnego \"to proste, wystarczy dodać kod\" - Nicola pokaże Ci każdy klik.",
     portrait: (
       <StaticImage
         src="../images/nicola_portrait.webp"
@@ -189,8 +189,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     pillBg: "bg-ada-magicPurple4",
     numberBg: "bg-black",
     titleBold:
-      "Spotkanie LIVE z Adą: ustawiamy kampanię sprzedażową razem + Q&A na żywo.",
-    subtitle: "Otrzymujesz także dostęp do nagrania.",
+      "Ustawiasz swoją kampanię sprzedażową. Na żywo. Ze mną.",
+    subtitle: "To jest serce wyzwania. Spotkanie LIVE, na którym razem przechodzimy przez Menedżera Reklam i stawiasz swoją kampanię. Nie \"oglądam, jak Ada klika\" - Ty klikasz razem ze mną, pytasz, pokazujesz swój przypadek. Dostajesz też nagranie, żebyś mogła wrócić do każdego kroku podczas wyzwania.",
     portrait: (
       <StaticImage
         src="../images/ada_portrait.webp"
@@ -210,8 +210,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
     numberBg: "bg-black",
-    titleBold: "Czas na wdrożenie, pytania i konsultacje na platformie.",
-    subtitle: "Wrzucasz materiały, dostajesz feedback.",
+    titleBold: "Masz pytanie? Nie googluj - napisz do nas.",
+    subtitle: "Przez 8 dni masz dostęp do mnie, Justyny, Doroty i Nicoli na platformie. Wrzucasz swój tekst - dostajesz feedback. Nie wiesz, czy grafika jest ok - sprawdzimy. Coś nie działa w Menedżerze - pomożemy. To jak mieć mini-agencję w kieszeni, tylko że ta agencja naprawdę Ci tłumaczy, co i dlaczego.",
   },
 ]
 
