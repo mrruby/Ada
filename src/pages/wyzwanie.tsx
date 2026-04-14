@@ -189,7 +189,7 @@ const wyzwanieDays: WyzwanieDay[] = [
   },
   {
     number: "5",
-    date: "PIĄTEK – PONIEDZIAŁEK 27.04",
+    date: "PRZEZ CAŁY CZAS WYZWANIA",
     side: "full",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
@@ -308,6 +308,92 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
   )
 }
 
+const dlaKogoJestItems = [
+  {
+    icon: "👩‍💻",
+    text: 'konsultacje pisemne z ekspertkami - pytasz, dostajesz konkretną odpowiedź, nie "przycupnę" i nie "też się chętnie dowiem"',
+  },
+  {
+    icon: "🎥",
+    text: "materiały szkoleniowe video z tworzenia tekstów, grafik i ustawiania kampanii sprzedażowej — odtwarzasz, robisz, masz gotowe",
+  },
+  {
+    icon: "👩‍💻",
+    text: "dostęp do platformy z nagraniami, wytycznymi i wsparciem przez cały tydzień wyzwania",
+  },
+  {
+    icon: "👩‍💻",
+    text: "dla osób, które chcą takich wyników:",
+  },
+]
+
+const dlaKogoNieJestItems = [
+  {
+    icon: "👩‍💻",
+    text: 'konsultacje pisemne z ekspertkami - pytasz, dostajesz konkretną odpowiedź, nie "przycupnę" i nie "też się chętnie dowiem"',
+  },
+  {
+    icon: "🎥",
+    text: "materiały szkoleniowe video z tworzenia tekstów, grafik i ustawiania kampanii sprzedażowej — odtwarzasz, robisz, masz gotowe",
+  },
+  {
+    icon: "👩‍💻",
+    text: "dostęp do platformy z nagraniami, wytycznymi i wsparciem przez cały tydzień wyzwania",
+  },
+  {
+    icon: "👩‍💻",
+    text: "dla osób, które chcą takich wyników:",
+  },
+]
+
+const WyzwanieDlaKogoSection = () => (
+  <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+    <div className="py-12 lg:py-16 px-4">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        {/* Left column - DLA KOGO JEST */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-2xl">✅</span>
+            <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
+              DLA KOGO JEST TO WYZWANIE?
+            </h3>
+          </div>
+          <div className="bg-ada-magicYellow border-2 border-black rounded-lg p-6">
+            <ul className="space-y-4">
+              {dlaKogoJestItems.map((item, index) => (
+                <li key={index} className="flex gap-3 text-black">
+                  <span className="text-lg shrink-0">{item.icon}</span>
+                  <span className="text-[15px] lg:text-[16px] leading-[140%]">{item.text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Right column - DLA KOGO NIE JEST */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-2xl">❌</span>
+            <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
+              DLA KOGO NIE JEST TO WYZWANIE?
+            </h3>
+          </div>
+          <div className="bg-ada-magicYellow border-2 border-black rounded-lg p-6">
+            <ul className="space-y-4">
+              {dlaKogoNieJestItems.map((item, index) => (
+                <li key={index} className="flex gap-3 text-black">
+                  <span className="text-lg shrink-0">{item.icon}</span>
+                  <span className="text-[15px] lg:text-[16px] leading-[140%]">{item.text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </MaxWithBgColorContainer>
+)
+
 const wyzwanieBeforeBenefitsSection = (
   <>
     {wyzwanieDays.map((day, index) => (
@@ -316,7 +402,7 @@ const wyzwanieBeforeBenefitsSection = (
     {/* SPRAWDZAM button positioned between purple and light sections */}
     <div className="relative">
       <div className="absolute left-0 right-0 top-0 h-1/2 bg-ada-magicPurple4" />
-      <div className="absolute left-0 right-0 bottom-0 h-1/2 bg-white" />
+      <div className="absolute left-0 right-0 bottom-0 h-1/2 bg-ada-light-pink" />
       <div className="relative z-10 flex justify-center py-4">
         <Button
           type="button"
@@ -332,6 +418,8 @@ const wyzwanieBeforeBenefitsSection = (
         />
       </div>
     </div>
+    <WyzwanieDlaKogoSection />
+    <WyzwanieSalesResults />
   </>
 )
 
@@ -495,13 +583,11 @@ const WyzwanieCTA = () => (
 )
 
 const WyzwanieSalesResults = () => (
-  <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
+  <MaxWithBgColorContainer bgColor="bg-ada-magicGrey">
     <div className="py-10 px-3">
-      <div className="bg-ada-white2 border-ada-orange border rounded-3xl max-w-[500px] mx-auto">
-        <h2 className="p-2 font-anton font-normal text-center text-ada-orange text-[26px] lg:text-[32px]">
-          Ty też możesz mieć takie wyniki
-        </h2>
-      </div>
+      <h2 className="font-anton font-normal text-center text-black text-[26px] lg:text-[36px] mb-8">
+        Jeżeli chcesz osiągać takie wyniki:
+      </h2>
       <div className="flex flex-col gap-6 lg:gap-12 py-8 max-w-4xl mx-auto">
         <StaticImage
           src="../images/kolektyw6.webp"
@@ -520,6 +606,20 @@ const WyzwanieSalesResults = () => (
           alt="Wyniki sprzedażowe - www kontakty"
           placeholder="blurred"
           className="w-full"
+        />
+      </div>
+      <div className="flex justify-center pt-4">
+        <Button
+          type="button"
+          variant="dark"
+          sectionId={OFFER_SECTION_ID}
+          text={
+            <span className="font-anton uppercase text-ada-magicYellow">
+              DOŁĄCZ
+            </span>
+          }
+          textSize="text-[22px] lg:text-[28px]"
+          btnStyle="px-16 lg:px-24 py-3"
         />
       </div>
     </div>
@@ -581,11 +681,30 @@ const wyzwanieBottomSection = (
     </MaxWithBgColorContainer>
 
     <WyzwanieTestimonials />
-    <WyzwanieSalesResults />
     <WyzwanieCTA />
 
     <MaxWithBgColorContainer bgColor="bg-white">
       <WyzwanieFaq />
+    </MaxWithBgColorContainer>
+
+    <MaxWithBgColorContainer bgColor="bg-white">
+      <div className="py-12 lg:py-16 px-4 text-center">
+        <h2 className="font-anton font-normal text-black text-[28px] lg:text-[42px] mb-8">
+          📅 20.04 - start wyzwania
+        </h2>
+        <Button
+          type="button"
+          variant="dark"
+          sectionId={OFFER_SECTION_ID}
+          text={
+            <span className="font-anton uppercase text-ada-magicYellow">
+              SPRAWDZAM
+            </span>
+          }
+          textSize="text-[22px] lg:text-[28px]"
+          btnStyle="px-16 lg:px-24 py-3"
+        />
+      </div>
     </MaxWithBgColorContainer>
   </>
 )

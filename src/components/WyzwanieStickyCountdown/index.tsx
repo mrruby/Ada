@@ -70,6 +70,17 @@ const WyzwanieStickyCountdown = () => {
         >
           SPRAWDZAM
         </button>
+        <button
+          onClick={() => {
+            const section = document.getElementById(OFFER_SECTION_ID)
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth" })
+            }
+          }}
+          className="bg-ada-pink text-white font-anton uppercase text-sm md:text-lg px-4 md:px-6 py-1 md:py-2 rounded-full shadow-md hover:brightness-95 transition-all"
+        >
+          DOŁĄCZAM
+        </button>
       </div>
     </div>
   )
