@@ -237,14 +237,14 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
   const pillExtraPadding = isFull
     ? ""
     : isRight
-      ? "lg:pl-[230px]"
-      : "lg:pr-[230px]"
+      ? "lg:pr-[230px]"
+      : "lg:pl-[230px]"
   const subtitleExtraPadding = isFull
     ? ""
     : isRight
-      ? "lg:pl-[250px]"
-      : "lg:pr-[250px]"
-  const portraitPosition = isRight ? "lg:left-0" : "lg:right-0"
+      ? "lg:pr-[250px]"
+      : "lg:pl-[250px]"
+  const portraitPosition = isRight ? "lg:right-0" : "lg:left-0"
 
   const slideAnimation = index % 2 === 0 ? "animate-slideInFromLeft" : "animate-slideInFromRight"
 
