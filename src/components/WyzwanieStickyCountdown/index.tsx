@@ -66,9 +66,9 @@ const WyzwanieStickyCountdown = () => {
               section.scrollIntoView({ behavior: "smooth" })
             }
           }}
-          className="bg-ada-magicYellow text-black font-anton uppercase text-sm md:text-lg px-4 md:px-6 py-1 md:py-2 rounded-full shadow-md hover:brightness-95 transition-all"
+          className="bg-ada-magicPink text-white font-anton uppercase text-sm md:text-lg px-4 md:px-6 py-1 md:py-2 rounded-full shadow-md hover:brightness-95 transition-all"
         >
-          SPRAWDZAM
+          DOŁĄCZAM
         </button>
       </div>
     </div>

@@ -189,7 +189,7 @@ const wyzwanieDays: WyzwanieDay[] = [
   },
   {
     number: "5",
-    date: "PIĄTEK – PONIEDZIAŁEK 27.04",
+    date: "PRZEZ CAŁY CZAS WYZWANIA",
     side: "full",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
@@ -308,6 +308,74 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
   )
 }
 
+const DlaKogoSection = () => (
+  <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+    <div className="py-12 lg:py-16 px-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        {/* Left column - FOR WHOM */}
+        <div className="flex flex-col">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-[28px] lg:text-[36px]">✅</span>
+            <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
+              DLA KOGO JEST TO WYZWANIE?
+            </h3>
+          </div>
+          <div className="border-2 border-black bg-ada-magicYellow rounded-lg p-6 flex-grow">
+            <ul className="space-y-4 text-black text-[14px] lg:text-[16px] leading-[140%]">
+              <li className="flex gap-3">
+                <span className="shrink-0">👩‍💻</span>
+                <span>konsultacje pisemne z ekspertkami - pytasz, dostajesz konkretną odpowiedź, nie "przycupnę" i nie "też się chętnie dowiem"</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0">🎥</span>
+                <span>materiały szkoleniowe video z tworzenia tekstów, grafik i ustawiania kampanii sprzedażowej — odtwarzasz, robisz, masz gotowe</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0">👩‍💻</span>
+                <span>dostęp do platformy z nagraniami, wytycznymi i wsparciem przez cały tydzień wyzwania</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0">👩‍💻</span>
+                <span>dla osób, które chcą takich wyników:</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Right column - NOT FOR WHOM */}
+        <div className="flex flex-col">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-[28px] lg:text-[36px]">❌</span>
+            <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
+              DLA KOGO NIE JEST TO WYZWANIE?
+            </h3>
+          </div>
+          <div className="border-2 border-black bg-ada-magicYellow rounded-lg p-6 flex-grow">
+            <ul className="space-y-4 text-black text-[14px] lg:text-[16px] leading-[140%]">
+              <li className="flex gap-3">
+                <span className="shrink-0">👩‍💻</span>
+                <span>konsultacje pisemne z ekspertkami - pytasz, dostajesz konkretną odpowiedź, nie "przycupnę" i nie "też się chętnie dowiem"</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0">🎥</span>
+                <span>materiały szkoleniowe video z tworzenia tekstów, grafik i ustawiania kampanii sprzedażowej — odtwarzasz, robisz, masz gotowe</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0">👩‍💻</span>
+                <span>dostęp do platformy z nagraniami, wytycznymi i wsparciem przez cały tydzień wyzwania</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0">👩‍💻</span>
+                <span>dla osób, które chcą takich wyników:</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </MaxWithBgColorContainer>
+)
+
 const wyzwanieBeforeBenefitsSection = (
   <>
     {wyzwanieDays.map((day, index) => (
@@ -316,7 +384,7 @@ const wyzwanieBeforeBenefitsSection = (
     {/* SPRAWDZAM button positioned between purple and light sections */}
     <div className="relative">
       <div className="absolute left-0 right-0 top-0 h-1/2 bg-ada-magicPurple4" />
-      <div className="absolute left-0 right-0 bottom-0 h-1/2 bg-white" />
+      <div className="absolute left-0 right-0 bottom-0 h-1/2 bg-ada-light-pink" />
       <div className="relative z-10 flex justify-center py-4">
         <Button
           type="button"
@@ -332,6 +400,7 @@ const wyzwanieBeforeBenefitsSection = (
         />
       </div>
     </div>
+    <DlaKogoSection />
   </>
 )
 
