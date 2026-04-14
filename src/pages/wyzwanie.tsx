@@ -43,6 +43,9 @@ const wyzwanieAfterHeroSection = (
           textSize="text-[26px] lg:text-[32px]"
           btnStyle="px-16 lg:px-24 py-4"
         />
+        <p className="mt-6 text-[20px] lg:text-[24px] font-semibold text-black">
+          📅 20.04 - start wyzwania
+        </p>
       </div>
     </div>
   </MaxWithBgColorContainer>
@@ -257,7 +260,7 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
           >
             <div className="w-full">
               <div
-                className={`inline-flex w-full items-center gap-3 rounded-full ${day.pillBg} px-4 py-3 shadow-[0_12px_26px_rgba(0,0,0,0.14)] lg:gap-5 lg:px-6 lg:py-4 ${pillExtraPadding} ${
+                className={`inline-flex ${isFull ? "w-fit" : "w-full"} items-center gap-3 rounded-full ${day.pillBg} px-4 py-3 shadow-[0_12px_26px_rgba(0,0,0,0.14)] lg:gap-5 lg:px-6 lg:py-4 ${pillExtraPadding} ${
                   isRight ? "justify-end" : ""
                 }`}
               >
@@ -314,10 +317,13 @@ const DlaKogoSection = () => (
       <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Left column - FOR WHOM */}
         <div className="flex flex-col">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-[28px] lg:text-[36px]">✅</span>
+          <div className="flex flex-col items-center text-center mb-6">
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
-              DLA KOGO JEST TO WYZWANIE?
+              DLA KOGO
+            </h3>
+            <span className="text-[28px] lg:text-[36px] my-2">✅</span>
+            <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
+              JEST TO WYZWANIE?
             </h3>
           </div>
           <div className="border-2 border-black bg-ada-magicYellow rounded-lg p-6 flex-grow">
@@ -344,10 +350,13 @@ const DlaKogoSection = () => (
 
         {/* Right column - NOT FOR WHOM */}
         <div className="flex flex-col">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-[28px] lg:text-[36px]">❌</span>
+          <div className="flex flex-col items-center text-center mb-6">
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
-              DLA KOGO NIE JEST TO WYZWANIE?
+              DLA KOGO
+            </h3>
+            <span className="text-[28px] lg:text-[36px] my-2">❌</span>
+            <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
+              NIE JEST TO WYZWANIE?
             </h3>
           </div>
           <div className="border-2 border-black bg-ada-magicYellow rounded-lg p-6 flex-grow">
@@ -377,7 +386,7 @@ const DlaKogoSection = () => (
 )
 
 const WyzwanieSalesResults = () => (
-  <MaxWithBgColorContainer bgColor="bg-ada-magicGrey">
+  <MaxWithBgColorContainer bgColor="bg-white">
     <div className="py-10 px-3">
       <h2 className="font-anton font-normal text-center text-black text-[26px] lg:text-[32px] mb-8">
         Jeżeli chcesz osiągać takie wyniki:
@@ -487,7 +496,7 @@ const wyzwanieFaqList = [
 
 const WyzwanieFaq = () => (
   <div className="flex flex-col items-center px-6 text-black py-12 lg:py-16">
-    <div className="pt-[40px] lg:pt-[60px] bg-ada-light-pink rounded-[24px] p-6 lg:p-10">
+    <div className="pt-[40px] lg:pt-[60px] bg-white rounded-[24px] p-6 lg:p-10">
       <h2 className="text-[20px] lg:text-adaTitle font-bold lg:mb-2 animate-bounce text-center mx-auto text-black">
         FAQ
       </h2>
@@ -687,7 +696,7 @@ const WyzwanieBottomSection = () => (
     <WyzwanieTestimonials />
     <WyzwanieCTA />
 
-    <MaxWithBgColorContainer bgColor="bg-white">
+    <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
       <WyzwanieFaq />
     </MaxWithBgColorContainer>
 
