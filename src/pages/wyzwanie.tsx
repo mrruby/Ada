@@ -79,26 +79,6 @@ const wyzwaniePinkSection = (
         <p className="mb-6">
           <span className="font-bold">W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie 4 ekspertek, które codziennie pracują z Meta Ads. Również na małych budżetach i z małymi markami - takimi jak Twoja.
         </p>
-        <p className="mb-4 font-bold">1 - PONIEDZIAŁEK 20.04</p>
-        <p className="mb-6">
-          <span className="font-bold">Słowa, które sprzedają.</span> Justyna na co dzień pisze teksty, które sprzedają - od sekwencji mailowych, przez landing page'e, po kreacje reklamowe. Dostaniesz od niej nagranie z gotowym schematem na tekst do reklamy sprzedażowej. Żadnego "pisz z serca" - konkretna struktura, którą wypełnisz swoimi słowami. Tego samego dnia siadasz i masz gotowy tekst.
-        </p>
-        <p className="mb-4 font-bold">2 - WTOREK 21.04</p>
-        <p className="mb-6">
-          <span className="font-bold">Grafiki do reklam sprzedażowych</span> Dorota zajmuje się brandingiem i identyfikacją wizualną, a w MAGIC uczy, jak tworzyć kreacje, które wyglądają profesjonalnie - nawet w Canvie, nawet bez budżetu na graficzkę. Po tym nagraniu będziesz wiedzieć, czym się różni grafika, którą ludzie przewijają, od grafiki, przy której się zatrzymują i stworzysz takie dla siebie.
-        </p>
-        <p className="mb-4 font-bold">3 - ŚRODA 22.04</p>
-        <p className="mb-6">
-          <span className="font-bold">Piksel przestanie być straszny. Obiecujemy.</span> Nicola ogarnia reklamy i techniczne zaplecze - piksel, zdarzenia, testowanie. To ona pomaga naszym klubowiczkom w MAGIC ogarnąć tę część, której większość się boi. Dostajesz nagranie z instrukcją krok po kroku. Żadnego żargonu, żadnego "to proste, wystarczy dodać kod" - Nicola pokaże Ci każdy klik.
-        </p>
-        <p className="mb-4 font-bold">4 - CZWARTEK 23.04</p>
-        <p className="mb-6">
-          <span className="font-bold">Ustawiasz swoją kampanię sprzedażową. Na żywo. Ze mną.</span> To jest serce wyzwania. Spotkanie LIVE, na którym razem przechodzimy przez Menedżera Reklam i stawiasz swoją kampanię. Nie "oglądam, jak Ada klika" - Ty klikasz razem ze mną, pytasz, pokazujesz swój przypadek. Dostajesz też nagranie, żebyś mogła wrócić do każdego kroku podczas wyzwania.
-        </p>
-        <p className="mb-4 font-bold">5 - PRZEZ CAŁY CZAS WYZWANIA</p>
-        <p>
-          <span className="font-bold">Masz pytanie? Nie googluj - napisz do nas.</span> Przez 8 dni masz dostęp do mnie, Justyny, Doroty i Nicoli na platformie. Wrzucasz swój tekst - dostajesz feedback. Nie wiesz, czy grafika jest ok - sprawdzimy. Coś nie działa w Menedżerze - pomożemy. To jak mieć mini-agencję w kieszeni, tylko że ta agencja naprawdę Ci tłumaczy, co i dlaczego.
-        </p>
       </div>
     </div>
   </div>
@@ -639,7 +619,7 @@ const WyzwanieStartSection = () => (
   <MaxWithBgColorContainer bgColor="bg-white">
     <div className="py-12 lg:py-16 px-4 text-center">
       <h2 className="font-anton font-normal text-black text-[28px] lg:text-[42px] mb-8">
-        {"\u{1F5D3}"} 20.04 - start wyzwania
+        🗓️ 20.04 - start wyzwania
       </h2>
       <Button
         type="button"
