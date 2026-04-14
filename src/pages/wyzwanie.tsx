@@ -35,6 +35,9 @@ const wyzwanieAfterHeroSection = (
   <MaxWithBgColorContainer bgColor="bg-white">
     <div className="py-16 px-4">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+        <p className="mb-6 text-[20px] lg:text-[24px] font-bold text-black">
+          📅 20.04 - start wyzwania
+        </p>
         <Button
           type="button"
           variant="dark"
@@ -43,9 +46,6 @@ const wyzwanieAfterHeroSection = (
           textSize="text-[26px] lg:text-[32px]"
           btnStyle="px-16 lg:px-24 py-4"
         />
-        <p className="mt-6 text-[20px] lg:text-[24px] font-semibold text-black">
-          📅 20.04 - start wyzwania
-        </p>
       </div>
     </div>
   </MaxWithBgColorContainer>
@@ -53,7 +53,7 @@ const wyzwanieAfterHeroSection = (
 
 const wyzwaniePinkSection = (
   <div className="py-16 lg:py-20 px-4">
-    <div className="mx-auto flex max-w-5xl flex-col items-center text-center lg:max-w-[50%]">
+    <div className="mx-auto flex max-w-5xl flex-col items-center text-center lg:max-w-[70%]">
       <div className="relative w-full h-[84px] mb-2">
         <YellowCircleArrow
           mobileTop="top-0"
@@ -66,27 +66,40 @@ const wyzwaniePinkSection = (
       <h2 className="inline-block bg-ada-magicYellow px-4 py-3 text-[32px] lg:text-[56px] font-anton font-normal uppercase leading-[95%] text-black mb-8">
         O CO CHODZI W TYM WYZWANIU?
       </h2>
-      <p className="max-w-4xl text-[18px] lg:text-[24px] leading-[150%] text-black">
-        <span className="font-bold">
-          Wrzucasz posty, stories, reelsy… i czekasz, aż ktoś w końcu kliknie w
-          link i kupi.
-        </span>{" "}
-        A tymczasem Twoja konkurencja już{" "}
-        <span className="whitespace-nowrap">
-          puszcza reklamy i zbiera klientów, którzy mogliby trafić do Ciebie.
-        </span>
-        <br />
-        <br />
-        <span className="font-bold">
-          W ciągu 8 dni przeprowadzimy Cię przez cały proces - od
-          <br />
-          tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie
-          <br />
-          kampanii sprzedażowej w Menedżerze Reklam.
-        </span>{" "}
-        Konkretne nagrania, wytyczne krok po kroku i wsparcie 4 ekspertek, które
-        codziennie pracują z Meta Ads.
-      </p>
+      <div className="max-w-4xl text-[16px] lg:text-[20px] leading-[160%] text-black text-left">
+        <p className="mb-6">
+          Widzisz, jak inni puszczają reklamy, testują kreacje, analizują wyniki... i wydaje Ci się, że za tym stoi cały zespół. Graficzka, copywriterka, specjalistka od adsów, ktoś od strategii.
+        </p>
+        <p className="mb-6">
+          A za Twoim biznesem stoisz Ty. Jedna osoba. Robisz grafiki, piszesz teksty, ogarniasz klientów, wystawiasz faktury - i gdzieś pomiędzy tym wszystkim masz jeszcze "nauczyć się reklam".
+        </p>
+        <p className="mb-6">
+          Prawda jest taka: <span className="font-bold">nie potrzebujesz zespołu, żeby postawić skuteczną kampanię sprzedażową. Potrzebujesz kogoś, kto Ci pokaże jak - krok po kroku, bez lania wody, w tempie, które jest realne dla osoby, która robi wszystko sama.</span>
+        </p>
+        <p className="mb-6">
+          <span className="font-bold">W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie 4 ekspertek, które codziennie pracują z Meta Ads. Również na małych budżetach i z małymi markami - takimi jak Twoja.
+        </p>
+        <p className="mb-4 font-bold">1 - PONIEDZIAŁEK 21.04</p>
+        <p className="mb-6">
+          <span className="font-bold">Słowa, które sprzedają.</span> Justyna na co dzień pisze teksty, które sprzedają - od sekwencji mailowych, przez landing page'e, po kreacje reklamowe. Dostaniesz od niej nagranie z gotowym schematem na tekst do reklamy sprzedażowej. Żadnego "pisz z serca" - konkretna struktura, którą wypełnisz swoimi słowami. Tego samego dnia siadasz i masz gotowy tekst.
+        </p>
+        <p className="mb-4 font-bold">2 - WTOREK 22.04</p>
+        <p className="mb-6">
+          <span className="font-bold">Grafiki do reklam sprzedażowych</span> Dorota zajmuje się brandingiem i identyfikacją wizualną, a w MAGIC uczy, jak tworzyć kreacje, które wyglądają profesjonalnie - nawet w Canvie, nawet bez budżetu na graficzkę. Po tym nagraniu będziesz wiedzieć, czym się różni grafika, którą ludzie przewijają, od grafiki, przy której się zatrzymują i stworzysz takie dla siebie.
+        </p>
+        <p className="mb-4 font-bold">3 - ŚRODA 23.04</p>
+        <p className="mb-6">
+          <span className="font-bold">Piksel przestanie być straszny. Obiecujemy.</span> Nicola ogarnia reklamy i techniczne zaplecze - piksel, zdarzenia, testowanie. To ona pomaga naszym klubowiczkom w MAGIC ogarnąć tę część, której większość się boi. Dostajesz nagranie z instrukcją krok po kroku. Żadnego żargonu, żadnego "to proste, wystarczy dodać kod" - Nicola pokaże Ci każdy klik.
+        </p>
+        <p className="mb-4 font-bold">4 - CZWARTEK 24.04</p>
+        <p className="mb-6">
+          <span className="font-bold">Ustawiasz swoją kampanię sprzedażową. Na żywo. Ze mną.</span> To jest serce wyzwania. Spotkanie LIVE, na którym razem przechodzimy przez Menedżera Reklam i stawiasz swoją kampanię. Nie "oglądam, jak Ada klika" - Ty klikasz razem ze mną, pytasz, pokazujesz swój przypadek. Dostajesz też nagranie, żebyś mogła wrócić do każdego kroku podczas wyzwania.
+        </p>
+        <p className="mb-4 font-bold">5 - PRZEZ CAŁY CZAS WYZWANIA</p>
+        <p>
+          <span className="font-bold">Masz pytanie? Nie googluj - napisz do nas.</span> Przez 8 dni masz dostęp do mnie, Justyny, Doroty i Nicoli na platformie. Wrzucasz swój tekst - dostajesz feedback. Nie wiesz, czy grafika jest ok - sprawdzimy. Coś nie działa w Menedżerze - pomożemy. To jak mieć mini-agencję w kieszeni, tylko że ta agencja naprawdę Ci tłumaczy, co i dlaczego.
+        </p>
+      </div>
     </div>
   </div>
 )
@@ -317,13 +330,10 @@ const DlaKogoSection = () => (
       <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Left column - FOR WHOM */}
         <div className="flex flex-col">
-          <div className="flex flex-col items-center text-center mb-6">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <span className="text-[32px] lg:text-[42px]">✅</span>
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
-              DLA KOGO
-            </h3>
-            <span className="text-[28px] lg:text-[36px] my-2">✅</span>
-            <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
-              JEST TO WYZWANIE?
+              DLA KOGO JEST TO WYZWANIE?
             </h3>
           </div>
           <div className="border-2 border-black bg-ada-magicYellow rounded-lg p-6 flex-grow">
@@ -350,13 +360,10 @@ const DlaKogoSection = () => (
 
         {/* Right column - NOT FOR WHOM */}
         <div className="flex flex-col">
-          <div className="flex flex-col items-center text-center mb-6">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <span className="text-[32px] lg:text-[42px]">❌</span>
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
-              DLA KOGO
-            </h3>
-            <span className="text-[28px] lg:text-[36px] my-2">❌</span>
-            <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
-              NIE JEST TO WYZWANIE?
+              DLA KOGO NIE JEST TO WYZWANIE?
             </h3>
           </div>
           <div className="border-2 border-black bg-ada-magicYellow rounded-lg p-6 flex-grow">
