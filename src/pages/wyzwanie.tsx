@@ -593,11 +593,8 @@ const WyzwanieCTA = () => (
   <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
     <div className="py-6 lg:py-8 px-4 text-center">
       <p className="text-[20px] lg:text-[26px] leading-[140%] text-black max-w-2xl mx-auto mb-6 font-bold">
-        Kliknij przycisk i dołącz do społeczności, w której reklamy Meta Ads
-        przestają być problemem.
-      </p>
-      <p className="text-[20px] lg:text-[26px] leading-[140%] text-black max-w-2xl mx-auto mb-6 font-bold">
-        Stają się przyjemnością
+        Kliknij i dołącz do wyzwania w społeczności, dla której Meta Ads
+        przestają być problemem - a stają się realnym wsparciem biznesu.
       </p>
       <Button
         type="button"
