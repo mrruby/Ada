@@ -103,6 +103,31 @@ const MagicSaleBanner = ({
               <div className="absolute right-0 md:right-[-10px] text-black w-[100px] h-[100px] top-[6px] lg:top-[-40px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
                 <p className="text-[24px] leading-tight">557 zł</p>
               </div>
+              {/* Features list for Pakiet miesięczny */}
+              <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-6 shadow-xl mt-6">
+                <p className="pb-4">
+                  👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+                </p>
+                <p className="pb-4">
+                  🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                  reklamowych i nie tylko
+                </p>
+                <p className="pb-4">
+                  🚀 dostęp do <b>wewnętrznej bazy wiedzy </b>
+                </p>
+                <p className="pb-4">
+                  🗓️ udział w dwóch{" "}
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b>
+                  miesięcznie
+                </p>
+                <p className="pb-4">
+                  💡 udział w dwóch <b> autorskich warsztatach tematycznych</b> w
+                  miesiącu
+                </p>
+                <p>
+                  👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+              </div>
             </div>
             {/* Buduj z MAGIC */}
             <div className="relative flex flex-col">
@@ -112,6 +137,31 @@ const MagicSaleBanner = ({
               <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
                 Buduj z MAGIC
               </p>
+              {/* Features list for Buduj z MAGIC */}
+              <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-6 shadow-xl mt-6">
+                <p className="pb-4">
+                  👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+                </p>
+                <p className="pb-4">
+                  🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                  reklamowych i nie tylko
+                </p>
+                <p className="pb-4">
+                  🚀 dostęp do <b>wewnętrznej bazy wiedzy </b>
+                </p>
+                <p className="pb-4">
+                  🗓️ udział w dwóch{" "}
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b>
+                  miesięcznie
+                </p>
+                <p className="pb-4">
+                  💡 udział w dwóch <b> autorskich warsztatach tematycznych</b> w
+                  miesiącu
+                </p>
+                <p>
+                  👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+              </div>
             </div>
             {/* Skaluj z MAGIC */}
             <div className="relative flex flex-col">
@@ -121,35 +171,31 @@ const MagicSaleBanner = ({
               <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
                 Skaluj z MAGIC
               </p>
-            </div>
-          </div>
-          <div className="xl:text-adaDesc flex flex-col md:flex-row bg-ada-white3 rounded-[24px] text-black text-left p-12 shadow-xl">
-            <div>
-              <p className="pb-4">
-                👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
-              </p>
-              <p className="pb-4">
-                🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
-                reklamowych i nie tylko
-              </p>
-              <p>
-                🚀 dostęp do <b>wewnętrznej bazy wiedzy </b>
-              </p>
-              {/* Bonus removed per brief */}
-            </div>
-            <div>
-              <p className="pb-4">
-                🗓️ udział w dwóch{" "}
-                <b>1,5-godzinnych sesjach konsultacji grupowych</b>
-                miesięcznie
-              </p>
-              <p className="pb-4">
-                💡 udział w dwóch <b> autorskich warsztatach tematycznych</b> w
-                miesiącu
-              </p>
-              <p>
-                👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
-              </p>
+              {/* Features list for Skaluj z MAGIC */}
+              <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-6 shadow-xl mt-6">
+                <p className="pb-4">
+                  👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+                </p>
+                <p className="pb-4">
+                  🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                  reklamowych i nie tylko
+                </p>
+                <p className="pb-4">
+                  🚀 dostęp do <b>wewnętrznej bazy wiedzy </b>
+                </p>
+                <p className="pb-4">
+                  🗓️ udział w dwóch{" "}
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b>
+                  miesięcznie
+                </p>
+                <p className="pb-4">
+                  💡 udział w dwóch <b> autorskich warsztatach tematycznych</b> w
+                  miesiącu
+                </p>
+                <p>
+                  👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+              </div>
             </div>
           </div>
 
