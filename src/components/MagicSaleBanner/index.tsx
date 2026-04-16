@@ -91,44 +91,115 @@ const MagicSaleBanner = ({
             textStyle="text-adaTitle text-black font-bold"
             as="h2"
           />
-          <div className="relative my-6">
-            <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12">
-              🗓️
-            </p>
-            <p className="text-adaTitle font-bold text-white  bg-ada-magicPurple4 p-2 rounded-[24px] uppercase lg:min-w-[800px]">
-              Pakiet miesięczny
-            </p>
-            <div className="absolute right-0 md:right-[-10px] text-black w-[140px] h-[140px] top-[6px] lg:top-[-60px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
-              <p className="text-[32px] leading-tight">557 zł</p>
+
+          {/* Three-column layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full mt-8">
+            {/* Column 1: Pakiet miesięczny */}
+            <div className="flex flex-col items-center">
+              <div className="relative my-6">
+                <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12">
+                  🗓️
+                </p>
+                <p className="text-adaTitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
+                  Pakiet miesięczny
+                </p>
+                <div className="absolute right-0 md:right-[-10px] text-black w-[140px] h-[140px] top-[6px] lg:top-[-60px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
+                  <p className="text-[32px] leading-tight">557 zł</p>
+                </div>
+              </div>
+              <div className="xl:text-adaDesc bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl mt-8 flex-1">
+                <p className="pb-4">
+                  👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+                </p>
+                <p className="pb-4">
+                  🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                  reklamowych i nie tylko
+                </p>
+                <p className="pb-4">
+                  🚀 dostęp do <b>wewnętrznej bazy wiedzy</b>
+                </p>
+                <p className="pb-4">
+                  🗓️ udział w dwóch{" "}
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b> miesięcznie
+                </p>
+                <p className="pb-4">
+                  💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
+                  miesiącu
+                </p>
+                <p>
+                  👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="xl:text-adaDesc flex flex-col md:flex-row bg-ada-white3 rounded-[24px] text-black text-left p-12 shadow-xl">
-            <div>
-              <p className="pb-4">
-                👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
-              </p>
-              <p className="pb-4">
-                🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
-                reklamowych i nie tylko
-              </p>
-              <p>
-                🚀 dostęp do <b>wewnętrznej bazy wiedzy </b>
-              </p>
-              {/* Bonus removed per brief */}
+
+            {/* Column 2: Buduj z MAGIC */}
+            <div className="flex flex-col items-center">
+              <div className="relative my-6">
+                <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12">
+                  🏗️
+                </p>
+                <p className="text-adaTitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
+                  Buduj z MAGIC
+                </p>
+              </div>
+              <div className="xl:text-adaDesc bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl mt-8 flex-1">
+                <p className="pb-4">
+                  👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+                </p>
+                <p className="pb-4">
+                  🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                  reklamowych i nie tylko
+                </p>
+                <p className="pb-4">
+                  🚀 dostęp do <b>wewnętrznej bazy wiedzy</b>
+                </p>
+                <p className="pb-4">
+                  🗓️ udział w dwóch{" "}
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b> miesięcznie
+                </p>
+                <p className="pb-4">
+                  💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
+                  miesiącu
+                </p>
+                <p>
+                  👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="pb-4">
-                🗓️ udział w dwóch{" "}
-                <b>1,5-godzinnych sesjach konsultacji grupowych</b>
-                miesięcznie
-              </p>
-              <p className="pb-4">
-                💡 udział w dwóch <b> autorskich warsztatach tematycznych</b> w
-                miesiącu
-              </p>
-              <p>
-                👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
-              </p>
+
+            {/* Column 3: Skaluj z MAGIC */}
+            <div className="flex flex-col items-center">
+              <div className="relative my-6">
+                <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12">
+                  📈
+                </p>
+                <p className="text-adaTitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
+                  Skaluj z MAGIC
+                </p>
+              </div>
+              <div className="xl:text-adaDesc bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl mt-8 flex-1">
+                <p className="pb-4">
+                  👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+                </p>
+                <p className="pb-4">
+                  🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                  reklamowych i nie tylko
+                </p>
+                <p className="pb-4">
+                  🚀 dostęp do <b>wewnętrznej bazy wiedzy</b>
+                </p>
+                <p className="pb-4">
+                  🗓️ udział w dwóch{" "}
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b> miesięcznie
+                </p>
+                <p className="pb-4">
+                  💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
+                  miesiącu
+                </p>
+                <p>
+                  👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+              </div>
             </div>
           </div>
 
