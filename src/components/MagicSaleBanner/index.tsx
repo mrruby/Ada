@@ -91,15 +91,36 @@ const MagicSaleBanner = ({
             textStyle="text-adaTitle text-black font-bold"
             as="h2"
           />
-          <div className="relative my-6">
-            <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12">
-              🗓️
-            </p>
-            <p className="text-adaTitle font-bold text-white  bg-ada-magicPurple4 p-2 rounded-[24px] uppercase lg:min-w-[800px]">
-              Pakiet miesięczny
-            </p>
-            <div className="absolute right-0 md:right-[-10px] text-black w-[140px] h-[140px] top-[6px] lg:top-[-60px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
-              <p className="text-[32px] leading-tight">557 zł</p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 my-6 w-full max-w-[1200px]">
+            {/* Pakiet miesięczny */}
+            <div className="relative flex flex-col">
+              <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12 hidden md:block">
+                🗓️
+              </p>
+              <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
+                Pakiet miesięczny
+              </p>
+              <div className="absolute right-0 md:right-[-10px] text-black w-[100px] h-[100px] top-[6px] lg:top-[-40px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
+                <p className="text-[24px] leading-tight">557 zł</p>
+              </div>
+            </div>
+            {/* Buduj z MAGIC */}
+            <div className="relative flex flex-col">
+              <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12 hidden md:block">
+                🏗️
+              </p>
+              <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
+                Buduj z MAGIC
+              </p>
+            </div>
+            {/* Skaluj z MAGIC */}
+            <div className="relative flex flex-col">
+              <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12 hidden md:block">
+                📈
+              </p>
+              <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
+                Skaluj z MAGIC
+              </p>
             </div>
           </div>
           <div className="xl:text-adaDesc flex flex-col md:flex-row bg-ada-white3 rounded-[24px] text-black text-left p-12 shadow-xl">
