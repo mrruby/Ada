@@ -119,7 +119,7 @@ const MagicSaleBanner = ({
             <div>
               <p className="pb-4">
                 🗓️ udział w dwóch{" "}
-                <b>1,5-godzinnych sesjach konsultacji grupowych</b>
+                <b>1,5-godzinnych sesjach konsultacji grupowych</b>{" "}
                 miesięcznie
               </p>
               <p className="pb-4">
