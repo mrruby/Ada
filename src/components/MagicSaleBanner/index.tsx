@@ -133,7 +133,7 @@ const MagicSaleBanner = ({
               <div className="mt-6">
                 <Button
                   type="button"
-                  text={<span>Tak, dołączam!</span>}
+                  text={<span>DOŁĄCZAM!</span>}
                   url={
                     url ||
                     "https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
