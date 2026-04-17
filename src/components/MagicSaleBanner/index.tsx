@@ -101,7 +101,7 @@ const MagicSaleBanner = ({
                   🗓️
                 </p>
                 <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
-                  Pakiet miesięczny
+                  TESTUJ Z MAGIC
                 </p>
                 <div className="absolute right-[-10px] text-black w-[100px] h-[100px] top-[-30px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
                   <p className="text-[24px] leading-tight">557 zł</p>
@@ -177,6 +177,18 @@ const MagicSaleBanner = ({
                   👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
                 </p>
               </div>
+              <div className="mt-6">
+                <Button
+                  type="button"
+                  text={<span>DOŁĄCZAM!</span>}
+                  url={
+                    url ||
+                    "https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+                  }
+                  textSize="text-base md:text-adaSubtitleSecondary uppercase !font-extrabold text-black"
+                  btnStyle="bg-ada-magicPink4 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[180px] h-[56px] shadow-xl"
+                />
+              </div>
             </div>
 
             {/* Column 3: Skaluj z MAGIC */}
@@ -211,6 +223,18 @@ const MagicSaleBanner = ({
                 <p>
                   👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
                 </p>
+              </div>
+              <div className="mt-6">
+                <Button
+                  type="button"
+                  text={<span>DOŁĄCZAM!</span>}
+                  url={
+                    url ||
+                    "https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+                  }
+                  textSize="text-base md:text-adaSubtitleSecondary uppercase !font-extrabold text-black"
+                  btnStyle="bg-ada-magicPink4 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[180px] h-[56px] shadow-xl"
+                />
               </div>
             </div>
           </div>
