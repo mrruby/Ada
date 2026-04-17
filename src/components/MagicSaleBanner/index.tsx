@@ -3,6 +3,7 @@ import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
 import React from "react"
 import Section from "../shared/Section"
+import StarBadge from "../shared/StarBadge"
 
 const MagicSaleBanner = ({
   version,
@@ -148,7 +149,12 @@ const MagicSaleBanner = ({
             </div>
 
             {/* Column 2: Buduj z MAGIC */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center relative">
+              <StarBadge
+                label={"top\nwybór!"}
+                color="#F5B000"
+                className="rotate-[8deg] -top-6 right-4"
+              />
               <div className={`xl:text-adaDesc flex flex-col ${column2BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}>
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 3-miesięczna</p>
@@ -194,7 +200,12 @@ const MagicSaleBanner = ({
             </div>
 
             {/* Column 3: Skaluj z MAGIC */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center relative">
+              <StarBadge
+                label="najtaniej!"
+                color="#F3D5E8"
+                className="-rotate-6 -top-6 right-4"
+              />
               <div className={`xl:text-adaDesc flex flex-col ${column3BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}>
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 6-miesięczna</p>
