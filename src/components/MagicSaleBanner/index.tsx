@@ -164,7 +164,7 @@ const MagicSaleBanner = ({
                 variant="yellow"
                 className="left-1/2 top-0 translate-x-[41%] -translate-y-[42%] rotate-[10deg] lg:translate-x-[45%] lg:-translate-y-[50%]"
                 sizeClassName="h-[112px] w-[112px] md:h-[122px] md:w-[122px] lg:h-[118px] lg:w-[118px]"
-                labelClassName="max-w-[74px] -translate-x-[8px] -translate-y-[1px] text-[17px] md:text-[20px]"
+                labelClassName="max-w-[74px] -translate-x-[12px] -translate-y-[1px] text-[17px] md:text-[20px]"
               />
               <div
                 className={`xl:text-adaDesc flex flex-col ${column2BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}
@@ -225,7 +225,7 @@ const MagicSaleBanner = ({
                 variant="pink"
                 className="right-0 top-0 translate-x-[41%] -translate-y-[34%] -rotate-[11deg] md:right-0 md:translate-x-[45%] md:-translate-y-[38%] lg:right-0 lg:translate-x-[47%] lg:-translate-y-[44%]"
                 sizeClassName="h-[88px] w-[88px] md:h-[98px] md:w-[98px]"
-                labelClassName="max-w-[72px] -translate-x-[7px] -translate-y-[2px] text-[14px] md:text-[16px]"
+                labelClassName="max-w-[72px] -translate-x-[11px] -translate-y-[2px] text-[14px] md:text-[16px]"
               />
               <div
                 className={`xl:text-adaDesc flex flex-col ${column3BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}
