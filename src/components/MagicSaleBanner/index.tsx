@@ -7,9 +7,13 @@ import Section from "../shared/Section"
 const MagicSaleBanner = ({
   version,
   url,
+  column2BgColor = "bg-ada-white3",
+  column3BgColor = "bg-ada-white3",
 }: {
   version: number
   url?: string
+  column2BgColor?: string
+  column3BgColor?: string
 }) => {
   return (
     <>
@@ -154,7 +158,7 @@ const MagicSaleBanner = ({
                   Buduj z MAGIC
                 </p>
               </div>
-              <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full">
+              <div className={`xl:text-adaDesc flex flex-col ${column2BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full`}>
                 <p className="pb-4">
                   👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
                 </p>
@@ -201,7 +205,7 @@ const MagicSaleBanner = ({
                   Skaluj z MAGIC
                 </p>
               </div>
-              <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full">
+              <div className={`xl:text-adaDesc flex flex-col ${column3BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full`}>
                 <p className="pb-4">
                   👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
                 </p>
