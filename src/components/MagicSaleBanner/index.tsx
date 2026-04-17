@@ -155,8 +155,26 @@ const MagicSaleBanner = ({
                 </p>
               </div>
               <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full">
-                <p className="text-center text-gray-500 py-8">
-                  Wkrótce więcej informacji
+                <p className="pb-4">
+                  👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+                </p>
+                <p className="pb-4">
+                  🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                  reklamowych i nie tylko
+                </p>
+                <p className="pb-4">
+                  🚀 dostęp do <b>wewnętrznej bazy wiedzy</b>
+                </p>
+                <p className="pb-4">
+                  🗓️ udział w dwóch{" "}
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b> miesięcznie
+                </p>
+                <p className="pb-4">
+                  💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
+                  miesiącu
+                </p>
+                <p>
+                  👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
                 </p>
               </div>
             </div>
@@ -172,8 +190,26 @@ const MagicSaleBanner = ({
                 </p>
               </div>
               <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full">
-                <p className="text-center text-gray-500 py-8">
-                  Wkrótce więcej informacji
+                <p className="pb-4">
+                  👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+                </p>
+                <p className="pb-4">
+                  🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                  reklamowych i nie tylko
+                </p>
+                <p className="pb-4">
+                  🚀 dostęp do <b>wewnętrznej bazy wiedzy</b>
+                </p>
+                <p className="pb-4">
+                  🗓️ udział w dwóch{" "}
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b> miesięcznie
+                </p>
+                <p className="pb-4">
+                  💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
+                  miesiącu
+                </p>
+                <p>
+                  👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
                 </p>
               </div>
             </div>
