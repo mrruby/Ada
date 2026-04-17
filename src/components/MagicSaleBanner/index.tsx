@@ -97,19 +97,27 @@ const MagicSaleBanner = ({
             as="h2"
           />
           <p className="text-adaSubtitle mt-4 text-[#000000]">
-            <span className="bg-[#FFD1F0] px-4 py-2 rounded-lg inline-block"><b>3 opcje czasowe subskrypcji</b> - wybierz model najlepszy dla Ciebie!</span>
+            <span className="bg-[#FFD1F0] px-4 py-2 rounded-lg inline-block">
+              <b>3 opcje czasowe subskrypcji</b> - wybierz model najlepszy dla
+              Ciebie!
+            </span>
           </p>
 
           {/* 3-column pricing grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-[1200px] mt-8">
+          <div className="grid w-full max-w-[1200px] grid-cols-1 gap-x-6 gap-y-14 mt-10 md:gap-y-16 lg:grid-cols-3 lg:gap-y-6">
             {/* Column 1: Pakiet miesięczny */}
             <div className="flex flex-col items-center">
               <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black">
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja miesięczna</p>
-                  <p className="text-adaSubtitleThird font-bold uppercase">TESTUJ Z MAGIC</p>
+                  <p className="text-adaSubtitleThird font-bold uppercase">
+                    TESTUJ Z MAGIC
+                  </p>
                   <p className="text-adaDesc">cena</p>
-                  <p><span className="text-adaSubtitleThird font-bold">509</span> <span className="text-adaDesc font-bold">ZŁ/MIESIĄC</span></p>
+                  <p>
+                    <span className="text-adaSubtitleThird font-bold">509</span>{" "}
+                    <span className="text-adaDesc font-bold">ZŁ/MIESIĄC</span>
+                  </p>
                 </div>
                 <div className="mb-6 text-center">
                   <Button
@@ -136,7 +144,8 @@ const MagicSaleBanner = ({
                 </p>
                 <p className="pb-4 text-sm">
                   🗓️ udział w dwóch{" "}
-                  <b>1,5-godzinnych sesjach konsultacji grupowych</b> miesięcznie
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b>{" "}
+                  miesięcznie
                 </p>
                 <p className="pb-4 text-sm">
                   💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
@@ -152,15 +161,24 @@ const MagicSaleBanner = ({
             <div className="flex flex-col items-center relative">
               <StarBadge
                 label={"top\nwybór!"}
-                color="#F5B000"
-                className="rotate-[8deg] -top-6 right-4"
+                variant="yellow"
+                className="left-1/2 top-0 translate-x-[41%] -translate-y-[42%] rotate-[10deg] lg:translate-x-[45%] lg:-translate-y-[50%]"
+                sizeClassName="h-[112px] w-[112px] md:h-[122px] md:w-[122px] lg:h-[118px] lg:w-[118px]"
+                labelClassName="max-w-[74px] -translate-x-[8px] -translate-y-[1px] text-[17px] md:text-[20px]"
               />
-              <div className={`xl:text-adaDesc flex flex-col ${column2BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}>
+              <div
+                className={`xl:text-adaDesc flex flex-col ${column2BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}
+              >
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 3-miesięczna</p>
-                  <p className="text-adaSubtitleThird font-bold uppercase">BUDUJ Z MAGIC</p>
+                  <p className="text-adaSubtitleThird font-bold uppercase">
+                    BUDUJ Z MAGIC
+                  </p>
                   <p className="text-adaDesc">cena</p>
-                  <p><span className="text-adaSubtitleThird font-bold">409</span> <span className="text-adaDesc font-bold">ZŁ/MIESIĄC</span></p>
+                  <p>
+                    <span className="text-adaSubtitleThird font-bold">409</span>{" "}
+                    <span className="text-adaDesc font-bold">ZŁ/MIESIĄC</span>
+                  </p>
                 </div>
                 <div className="mb-6 text-center">
                   <Button
@@ -187,7 +205,8 @@ const MagicSaleBanner = ({
                 </p>
                 <p className="pb-4 text-sm">
                   🗓️ udział w dwóch{" "}
-                  <b>1,5-godzinnych sesjach konsultacji grupowych</b> miesięcznie
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b>{" "}
+                  miesięcznie
                 </p>
                 <p className="pb-4 text-sm">
                   💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
@@ -203,15 +222,24 @@ const MagicSaleBanner = ({
             <div className="flex flex-col items-center relative">
               <StarBadge
                 label="najtaniej!"
-                color="#F3D5E8"
-                className="-rotate-6 -top-6 right-4"
+                variant="pink"
+                className="right-0 top-0 translate-x-[41%] -translate-y-[34%] -rotate-[11deg] md:right-0 md:translate-x-[45%] md:-translate-y-[38%] lg:right-0 lg:translate-x-[47%] lg:-translate-y-[44%]"
+                sizeClassName="h-[88px] w-[88px] md:h-[98px] md:w-[98px]"
+                labelClassName="max-w-[72px] -translate-x-[7px] -translate-y-[2px] text-[14px] md:text-[16px]"
               />
-              <div className={`xl:text-adaDesc flex flex-col ${column3BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}>
+              <div
+                className={`xl:text-adaDesc flex flex-col ${column3BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}
+              >
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 6-miesięczna</p>
-                  <p className="text-adaSubtitleThird font-bold uppercase">SKALUJ Z MAGIC</p>
+                  <p className="text-adaSubtitleThird font-bold uppercase">
+                    SKALUJ Z MAGIC
+                  </p>
                   <p className="text-adaDesc">cena</p>
-                  <p><span className="text-adaSubtitleThird font-bold">379</span> <span className="text-adaDesc font-bold">ZŁ/MIESIĄC</span></p>
+                  <p>
+                    <span className="text-adaSubtitleThird font-bold">379</span>{" "}
+                    <span className="text-adaDesc font-bold">ZŁ/MIESIĄC</span>
+                  </p>
                 </div>
                 <div className="mb-6 text-center">
                   <Button
@@ -238,7 +266,8 @@ const MagicSaleBanner = ({
                 </p>
                 <p className="pb-4 text-sm">
                   🗓️ udział w dwóch{" "}
-                  <b>1,5-godzinnych sesjach konsultacji grupowych</b> miesięcznie
+                  <b>1,5-godzinnych sesjach konsultacji grupowych</b>{" "}
+                  miesięcznie
                 </p>
                 <p className="pb-4 text-sm">
                   💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
