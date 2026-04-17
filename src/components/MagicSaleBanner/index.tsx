@@ -95,21 +95,19 @@ const MagicSaleBanner = ({
             textStyle="text-adaTitle text-black font-bold"
             as="h2"
           />
+          <p className="text-adaSubtitle mt-4">
+            <b>3 opcje czasowe subskrypcji</b> - wybierz model najlepszy dla Ciebie!
+          </p>
 
           {/* 3-column pricing grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-[1200px] mt-8">
             {/* Column 1: Pakiet miesięczny */}
             <div className="flex flex-col items-center">
-              <div className="relative mb-6 w-full">
-                <p className="md:absolute text-[60px] left-[-10px] top-[-50px] -rotate-12">
-                  🗓️
-                </p>
-                <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
-                  TESTUJ Z MAGIC
-                </p>
-                <div className="absolute right-[-10px] text-black w-[100px] h-[100px] top-[-30px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
-                  <p className="text-[24px] leading-tight">557 zł</p>
-                </div>
+              <div className="mb-4 text-center">
+                <p className="text-adaDesc">subskrypcja miesięczna</p>
+                <p className="text-adaSubtitle font-bold uppercase">TESTUJ Z MAGIC</p>
+                <p className="text-adaDesc">cena</p>
+                <p className="text-adaSubtitle font-bold">509 ZŁ/MIESIĄC</p>
               </div>
               <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full">
                 <p className="pb-4">
@@ -150,13 +148,11 @@ const MagicSaleBanner = ({
 
             {/* Column 2: Buduj z MAGIC */}
             <div className="flex flex-col items-center">
-              <div className="relative mb-6 w-full">
-                <p className="md:absolute text-[60px] left-[-10px] top-[-50px] -rotate-12">
-                  🏗️
-                </p>
-                <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
-                  Buduj z MAGIC
-                </p>
+              <div className="mb-4 text-center">
+                <p className="text-adaDesc">subskrypcja miesięczna</p>
+                <p className="text-adaSubtitle font-bold uppercase">BUDUJ Z MAGIC</p>
+                <p className="text-adaDesc">cena</p>
+                <p className="text-adaSubtitle font-bold">409 ZŁ/MIESIĄC</p>
               </div>
               <div className={`xl:text-adaDesc flex flex-col ${column2BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full`}>
                 <p className="pb-4">
@@ -197,13 +193,11 @@ const MagicSaleBanner = ({
 
             {/* Column 3: Skaluj z MAGIC */}
             <div className="flex flex-col items-center">
-              <div className="relative mb-6 w-full">
-                <p className="md:absolute text-[60px] left-[-10px] top-[-50px] -rotate-12">
-                  🚀
-                </p>
-                <p className="text-adaSubtitle font-bold text-white bg-ada-magicPurple4 p-2 rounded-[24px] uppercase">
-                  Skaluj z MAGIC
-                </p>
+              <div className="mb-4 text-center">
+                <p className="text-adaDesc">subskrypcja miesięczna</p>
+                <p className="text-adaSubtitle font-bold uppercase">SKALUJ Z MAGIC</p>
+                <p className="text-adaDesc">cena</p>
+                <p className="text-adaSubtitle font-bold">379 ZŁ/MIESIĄC</p>
               </div>
               <div className={`xl:text-adaDesc flex flex-col ${column3BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full`}>
                 <p className="pb-4">
