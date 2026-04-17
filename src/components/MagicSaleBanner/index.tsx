@@ -8,14 +8,16 @@ import StarBadge from "../shared/StarBadge"
 const MagicSaleBanner = ({
   version,
   url,
-  column2BgColor = "bg-ada-white3",
-  column3BgColor = "bg-ada-white3",
+  column2BgColor,
+  column3BgColor,
 }: {
   version: number
   url?: string
   column2BgColor?: string
   column3BgColor?: string
 }) => {
+  const useThreeColumnLayout = column2BgColor || column3BgColor
+
   return (
     <>
       {version == 1 && (
@@ -89,7 +91,70 @@ const MagicSaleBanner = ({
           </div>
         </Section>
       )}
-      {version == 2 && (
+      {version == 2 && !useThreeColumnLayout && (
+        <Section padding="py-8 px-6 md:px-12 text-ada flex flex-col items-center text-center">
+          <TypingAnimation
+            text="Dołącz do MAGIC:"
+            textStyle="text-adaTitle text-black font-bold"
+            as="h2"
+          />
+          <div className="relative my-6">
+            <p className="md:absolute text-[80px] left-[-10px] top-[-60px] -rotate-12">
+              🗓️
+            </p>
+            <p className="text-adaTitle font-bold text-white  bg-ada-magicPurple4 p-2 rounded-[24px] uppercase lg:min-w-[800px]">
+              Pakiet miesięczny
+            </p>
+            <div className="absolute right-0 md:right-[-10px] text-black w-[140px] h-[140px] top-[6px] lg:top-[-60px] bg-ada-magicYellow flex flex-col items-center justify-center rounded-[100px] font-bold rotate-12">
+              <p className="text-[32px] leading-tight">557 zł</p>
+            </div>
+          </div>
+          <div className="xl:text-adaDesc flex flex-col md:flex-row bg-ada-white3 rounded-[24px] text-black text-left p-12 shadow-xl">
+            <div>
+              <p className="pb-4">
+                👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
+              </p>
+              <p className="pb-4">
+                🎥 <b>materiały szkoleniowe video</b> z ustawiania kampanii
+                reklamowych i nie tylko
+              </p>
+              <p>
+                🚀 dostęp do <b>wewnętrznej bazy wiedzy </b>
+              </p>
+            </div>
+            <div>
+              <p className="pb-4">
+                🗓️ udział w dwóch{" "}
+                <b>1,5-godzinnych sesjach konsultacji grupowych</b>
+                miesięcznie
+              </p>
+              <p className="pb-4">
+                💡 udział w dwóch <b> autorskich warsztatach tematycznych</b> w
+                miesiącu
+              </p>
+              <p>
+                👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center mt-8 w-full px-4 md:px-0">
+            <Button
+              type="button"
+              text={<span>Tak, dołączam!</span>}
+              url={
+                url ||
+                "https://slowmarketing.zanfia.co/c/magic-pakiet-basic-rXx5"
+              }
+              textSize="text-base md:text-adaSubtitleSecondary uppercase !font-extrabold text-black"
+              btnStyle="bg-ada-magicPink4
+                      tracking-wide
+                      p-3 md:p-3 hover:opacity-90 rounded-full w-full md:w-auto md:min-w-[130px] h-[64px] shadow-xl"
+            />
+          </div>
+        </Section>
+      )}
+      {version == 2 && useThreeColumnLayout && (
         <Section padding="py-8 px-6 md:px-12 text-ada flex flex-col items-center text-center">
           <TypingAnimation
             text="Dołącz do MAGIC:"
@@ -167,7 +232,7 @@ const MagicSaleBanner = ({
                 labelClassName="max-w-[74px] -translate-x-[12px] -translate-y-[1px] text-[17px] md:text-[20px]"
               />
               <div
-                className={`xl:text-adaDesc flex flex-col ${column2BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}
+                className={`xl:text-adaDesc flex flex-col ${column2BgColor || "bg-ada-white3"} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}
               >
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 3-miesięczna</p>
@@ -228,7 +293,7 @@ const MagicSaleBanner = ({
                 labelClassName="max-w-[72px] -translate-x-[11px] -translate-y-[2px] text-[14px] md:text-[16px]"
               />
               <div
-                className={`xl:text-adaDesc flex flex-col ${column3BgColor} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}
+                className={`xl:text-adaDesc flex flex-col ${column3BgColor || "bg-ada-white3"} rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black`}
               >
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 6-miesięczna</p>
