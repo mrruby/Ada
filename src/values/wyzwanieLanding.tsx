@@ -2,7 +2,7 @@ import React from "react"
 
 export const WYZWANIE_PAGE_TITLE = "Kampania sprzedażowa w pigułce - Wyzwanie"
 export const wyzwanieHeroBgColor = "bg-ada-magicYellow"
-export const WYZWANIE_START_DATE = new Date("2026-04-20T00:00:00")
+export const WYZWANIE_START_DATE = new Date("2026-04-23T17:00:00")
 
 export const wyzwanieBenefits = [
   {
