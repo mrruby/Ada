@@ -36,7 +36,7 @@ const WyzwanieStickyCountdown = () => {
     <div className="fixed top-0 left-0 right-0 z-50 bg-black py-2 px-4">
       <div className="container mx-auto flex items-center justify-center gap-2 md:gap-4 flex-wrap">
         <span className="text-white text-sm md:text-lg font-semibold">
-          Wyzwanie startuje za
+          Zamykamy drzwi za
         </span>
         <div className="flex items-center gap-1 md:gap-3 text-white font-bold">
           <div className="flex flex-col items-center">
