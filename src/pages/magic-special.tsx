@@ -41,7 +41,7 @@ const MagicSpecialPage = () => {
       <MaxWithBgColorContainer bgColor="bg-white">
         <MagicSaleBanner
           version={2}
-          url="https://slowmarketing.zanfia.co/c/sesame/magic-pakiet-basic-rXx5?variant=ad0a7a4d-a612-4afc-870d-d1a660b44872"
+          url="https://cart.easy.tools/checkout/81632369/magic-subskrypcja"
           column2BgColor="bg-[#F5CEE2]"
           column3BgColor="bg-[#E8F6CD]"
         />

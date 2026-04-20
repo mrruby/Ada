@@ -176,7 +176,8 @@ const MagicSaleBanner = ({
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja miesięczna</p>
                   <p className="text-adaSubtitleThird font-bold uppercase">
-                    TESTUJ Z MAGIC
+                    TESTUJ
+                    <br />Z MAGIC
                   </p>
                   <p className="text-adaDesc">cena</p>
                   <p>
@@ -237,7 +238,8 @@ const MagicSaleBanner = ({
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 3-miesięczna</p>
                   <p className="text-adaSubtitleThird font-bold uppercase">
-                    BUDUJ Z MAGIC
+                    BUDUJ
+                    <br />Z MAGIC
                   </p>
                   <p className="text-adaDesc">cena</p>
                   <p>
@@ -298,7 +300,8 @@ const MagicSaleBanner = ({
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 6-miesięczna</p>
                   <p className="text-adaSubtitleThird font-bold uppercase">
-                    SKALUJ Z MAGIC
+                    SKALUJ
+                    <br />Z MAGIC
                   </p>
                   <p className="text-adaDesc">cena</p>
                   <p>
