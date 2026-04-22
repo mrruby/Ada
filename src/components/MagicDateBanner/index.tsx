@@ -127,9 +127,41 @@ const magicTilesContent5 = [
   },
 ]
 
-const MagicDateBanner = ({ version }: { version: number }) => {
+type MagicDateBannerLayout = "default" | "magic-special"
+
+interface MagicDateBannerProps {
+  version: number
+  layout?: MagicDateBannerLayout
+}
+
+const MagicDateBanner = ({
+  version,
+  layout = "default",
+}: MagicDateBannerProps) => {
+  const isMagicSpecialLayout = layout === "magic-special"
+  const sectionClassName =
+    isMagicSpecialLayout && version === 3 ? "" : "mb-12"
+  const sectionPadding =
+    isMagicSpecialLayout && version === 3
+      ? "pt-8 md:pt-12 pb-2 md:pb-4 px-6"
+      : isMagicSpecialLayout && version === 4
+        ? "pt-8 md:pt-12 px-6"
+      : "py-8 md:py-12 px-6"
+  const version3WrapperClassName = isMagicSpecialLayout
+    ? "text-center text-black"
+    : "text-center text-black -mb-10"
+  const version4GridClassName = isMagicSpecialLayout
+    ? "flex flex-col xl:flex-row gap-6 xl:gap-4 relative z-10 text-black w-full"
+    : "flex flex-col xl:flex-row gap-6 xl:gap-4 relative z-10 text-black w-full pt-8"
+  const version4ImageWrapperClassName = isMagicSpecialLayout
+    ? "md:-mt-[400px] mb-0 md:mb-0 md:left-1/2 max-w-[250px] md:max-w-[290px] lg:max-w-[310px] mx-auto pt-16 md:pt-20"
+    : "md:-mt-[460px] mb-[-80px] md:mb-[-96px] md:left-1/2 max-w-[380px] md:max-w-none mx-auto"
+  const version4ImageClassName = isMagicSpecialLayout
+    ? "w-full object-contain ml-0 md:ml-14 mt-8"
+    : "object-contain ml-0 md:ml-14 mt-8 md:mt-40"
+
   return (
-    <Section className="mb-12" padding="py-8 md:py-12 px-6">
+    <Section className={sectionClassName} padding={sectionPadding}>
       {version == 1 && (
         <div className="grid gap-8 items-center">
           {/* Left column */}
@@ -228,7 +260,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
         </div>
       )}
       {version == 3 && (
-        <div className="text-center text-black -mb-10">
+        <div className={version3WrapperClassName}>
           <div className="text-black">
             <TypingAnimation
               text="Co sprawia, że MAGIC jest
@@ -249,7 +281,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
       )}
       {version == 4 && (
         <div className="flex flex-col items-center relative">
-          <div className="flex flex-col xl:flex-row gap-6 xl:gap-4 relative z-10 text-black w-full pt-8">
+          <div className={version4GridClassName}>
             <div className="flex flex-col gap-6 md:gap-2 md:min-w-[360px]">
               {magicTilesContent3.map((item, i) => (
                 <div key={i}>
@@ -290,7 +322,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               ))}
             </div>
           </div>
-          <div className="md:-mt-[460px] mb-[-80px] md:mb-[-96px] md:left-1/2 max-w-[380px] md:max-w-none mx-auto">
+          <div className={version4ImageWrapperClassName}>
             <StaticImage
               loading="eager"
               src="../../images/magic_adsy.webp"
@@ -298,7 +330,7 @@ const MagicDateBanner = ({ version }: { version: number }) => {
               placeholder="blurred"
               width={450}
               quality={75}
-              className="object-contain ml-0 md:ml-14 mt-8 md:mt-40"
+              className={version4ImageClassName}
             />
           </div>
         </div>
