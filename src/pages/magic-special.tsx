@@ -48,6 +48,16 @@ const MagicSpecialPage = () => {
           column2BgColor="bg-[#F5CEE2]"
           column3BgColor="bg-[#E8F6CD]"
         />
+        <div className="max-w-4xl mx-auto px-4 pb-12 pt-6">
+          <p className="text-lg text-center text-ada-blue">
+            🎁 <strong>Bonus tylko dla Was, uczestniczek wyzwania:</strong> Pierwszych{" "}
+            <strong>5 osób</strong>, które dołączą do MAGIC, dostaje{" "}
+            <strong>indywidualne spotkanie z analizą lejka reklamowego na start</strong>.
+            Siadamy razem 1:1, patrzymy na Twój biznes, Twoją kampanię z wyzwania i
+            układamy, co dalej: aby to, co szykujesz w trakcie wyzwania, działało jeszcze
+            skuteczniej i przynosiło regularne efekty.
+          </p>
+        </div>
       </MaxWithBgColorContainer>
       <div className="bg-magic">
         <MaxWithBgColorContainer bgColor="bg-transparent">
