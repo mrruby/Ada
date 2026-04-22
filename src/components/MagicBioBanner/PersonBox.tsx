@@ -21,7 +21,7 @@ const PersonBox = ({
 }: PersonBoxProps) => {
   return (
     <div
-      className={`text-center ${textColor} flex flex-col justify-center items-center pt-4 md:max-w-[300px]`}
+      className={`text-center ${textColor} flex flex-col justify-center items-center pt-4 w-full max-w-[280px]`}
     >
       <div className="relative">
         <CircleImage circleKey={img} />
@@ -37,7 +37,7 @@ const PersonBox = ({
       <Typography variant="h3" className="mb-2 mt-2 whitespace-nowrap">
         {name}
       </Typography>
-      <p className="text-sm md:text-base leading-relaxed">{description}</p>
+      <p className="text-sm md:text-base leading-relaxed max-w-full">{description}</p>
     </div>
   )
 }

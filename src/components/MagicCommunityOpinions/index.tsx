@@ -82,6 +82,9 @@ const MagicCommunityOpinions = ({
               width={400}
               className="w-full"
             />
+          </div>
+
+          <div className="flex flex-col gap-0">
             <StaticImage
               src="../../images/magic_reference_sell_3.webp"
               alt="Opinia o społeczności MAGIC"
@@ -114,54 +117,6 @@ const MagicCommunityOpinions = ({
             />
             <StaticImage
               src="../../images/magic_reference_sell_6.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={75}
-              width={400}
-              className="w-full"
-            />
-            <StaticImage
-              src="../../images/magic_reference_sell_7.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={75}
-              width={400}
-              className="w-full"
-            />
-            <StaticImage
-              src="../../images/magic_reference_sell_8.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={75}
-              width={400}
-              className="w-full"
-            />
-          </div>
-
-          <div className="flex flex-col gap-0">
-            <StaticImage
-              src="../../images/magic_reference_sell_9.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={75}
-              width={400}
-              className="w-full"
-            />
-            <StaticImage
-              src="../../images/magic_reference_sell_10.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={75}
-              width={400}
-              className="w-full"
-            />
-            <StaticImage
-              src="../../images/magic_reference_sell_12.webp"
               alt="Opinia o społeczności MAGIC"
               placeholder="blurred"
               formats={["auto", "webp", "avif"]}
