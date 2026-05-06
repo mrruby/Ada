@@ -35,9 +35,6 @@ const wyzwanieAfterHeroSection = (
   <MaxWithBgColorContainer bgColor="bg-white">
     <div className="py-16 px-4">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        <p className="mb-6 text-[24px] lg:text-[32px] font-black text-black">
-          🗓️ 20.04 - start wyzwania
-        </p>
         <Button
           type="button"
           variant="dark"
@@ -77,7 +74,7 @@ const wyzwaniePinkSection = (
           Prawda jest taka: <span className="font-bold">nie potrzebujesz zespołu, żeby postawić skuteczną kampanię sprzedażową. Potrzebujesz kogoś, kto Ci pokaże jak - krok po kroku, bez lania wody, w tempie, które jest realne dla osoby, która robi wszystko sama.</span>
         </p>
         <p className="mb-6">
-          <span className="font-bold">W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie 4 ekspertek, które codziennie pracują z Meta Ads. Również na małych budżetach i z małymi markami - takimi jak Twoja.
+          <span className="font-bold">W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie Kapibary Barbary, która jest naszą asystentką AI - napędzaną całą wiedzą z materiałów MAGIC. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę o to co możesz poprawić w swoich kampaniach.
         </p>
       </div>
     </div>
@@ -169,8 +166,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     pillBg: "bg-ada-magicPurple4",
     numberBg: "bg-black",
     titleBold:
-      "Ustawiasz swoją kampanię sprzedażową. Na żywo. Ze mną.",
-    subtitle: "To jest serce wyzwania. Spotkanie LIVE, na którym razem przechodzimy przez Menedżera Reklam i stawiasz swoją kampanię. Nie \"oglądam, jak Ada klika\" - Ty klikasz razem ze mną, pytasz, pokazujesz swój przypadek. Dostajesz też nagranie, żebyś mogła wrócić do każdego kroku podczas wyzwania.",
+      "Obejrzysz nagranie z LIVE, gdzie krok po kroku ustawiałam kampanię sprzedażową",
+    subtitle: "To jest serce wyzwania. Nagranie LIVE, na którym pokazuję jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam. Oglądasz i ustawiasz we własnym tempie.",
     portrait: (
       <StaticImage
         src="../images/ada_portrait.webp"
@@ -190,9 +187,9 @@ const wyzwanieDays: WyzwanieDay[] = [
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
     numberBg: "bg-black",
-    titleBold: "Masz pytanie? Nie googluj - napisz do nas.",
+    titleBold: "Masz pytanie? Nie googluj - napisz do Kapibary Barbary.",
     subtitle:
-      "Przez 8 dni masz dostęp do mnie, Justyny, Doroty i Nicoli na platformie. Wrzucasz swój tekst - dostajesz feedback. Nie wiesz, czy grafika jest ok - sprawdzimy. Coś nie działa w Menedżerze - pomożemy. To jak mieć mini-agencję w kieszeni, tylko że ta agencja naprawdę Ci tłumaczy, co i dlaczego.",
+      "Przez 7 dni masz do niej dostęp na platformie. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę.",
   },
 ]
 
@@ -551,7 +548,7 @@ const wyzwanieFaqList = [
   {
     question: "💻 Nie jestem techniczna. Dam radę?",
     answer:
-      "Tak. Piksel, zdarzenia, Menedżer Reklam - brzmi strasznie, ale dostajesz nagrania krok po kroku i wsparcie. Nie musisz być techniczna, wystarczy odpalić nagranie i robić razem z nami.",
+      "Tak. Piksel, zdarzenia, Menedżer Reklam - brzmi strasznie, ale dostajesz nagrania krok po kroku. Nie musisz być techniczna, wystarczy odpalić nagranie i robić razem z nami.",
   },
   {
     question: "⏰ Ile czasu dziennie muszę poświęcić?",
@@ -559,23 +556,13 @@ const wyzwanieFaqList = [
       "Nagrania trwają około 30-40 minut, z wyjątkiem czwartkowego spotkania, na które najlepiej zarezerwować około 1,5 godziny. Około 4-5 godzin wystarczy Ci, aby przygotować całą kampanię od zera.",
   },
   {
-    question: "🎥 Czy spotkanie live z Adą jest nagrywane?",
-    answer: "Tak, nagranie będzie dostępne na platformie.",
-  },
-  {
     question: "📅 Jak długo mam dostęp do materiałów?",
-    answer: "Przez cały czas trwania wyzwania, czyli 20–27 kwietnia.",
+    answer: "Przez 14 dni od dołączenia",
   },
   {
     question: "👩‍💼 Dla kogo jest to wyzwanie?",
     answer:
       "Jeśli jesteś soloprzedsięborczynią, budujesz markę osobistą, prowadzisz sklep online, jesteś marketerką lub wirtualną asystentką - i chcesz ogarnąć reklamy sprzedażowe, które generują kasę, a nie tylko kliknięcia - to wyzwanie jest dla Ciebie.",
-  },
-       
-  {
-    question: "💸 Czy 97 zł to dużo?",
-    answer:
-      "Jedna źle ustawiona kampania potrafi przepalić więcej w jeden dzień. Za 97 zł dostajesz wiedzę od 4 ekspertek, gotowe wytyczne i spotkanie live, dzięki którym Twoja kampania ma szansę faktycznie zadziałać.",
   },
 ]
 
@@ -600,7 +587,7 @@ const wyzwanieOfferBox = {
   eyebrow: "dostęp do szkolenia",
   title: "KAMPANIA\nSPRZEDAŻOWA\nW PIGUŁCE",
   priceLabel: "cena",
-  price: "97 zł",
+  price: "119 zł",
   ctaLabel: "KUPUJĘ DOSTĘP",
   benefits: [
     {
@@ -708,9 +695,6 @@ const WyzwanieCTA = () => (
 const WyzwanieStartSection = () => (
   <MaxWithBgColorContainer bgColor="bg-white">
     <div className="py-12 lg:py-16 px-4 text-center">
-      <h2 className="font-anton font-normal text-black text-[28px] lg:text-[42px] mb-8">
-        🗓️ 20.04 - start wyzwania
-      </h2>
       <Button
         type="button"
         variant="dark"
