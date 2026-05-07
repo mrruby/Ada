@@ -12,18 +12,6 @@ export const wyzwanieBenefits = [
       "Jest 23:00, ekspertki śpią, a Ty masz pytanie o kampanię? Barbara nie śpi. Nasza asystentka AI jest napędzana wiedzą z materiałów MAGIC - możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę. Odpowiada po polsku, tylko o marketingu i bez halucynacji - konkret z naszej bazy wiedzy.",
   },
   {
-    bgClass: "bg-ada-magicYellow",
-    title: "👩‍👩‍👧‍👧 DOSTĘP DO ZESPOŁU 4 EKSPERTEK",
-    description:
-      "Ada, Justyna, Dorota i Nicola pomogą Ci w: reklamach Meta Ads, tekstach, grafikach i organizacji kampanii. Jak mieć mini-agencję na wyciągnięcie ręki - za ułamek ceny.",
-  },
-  {
-    bgClass: "bg-ada-magicPurple4",
-    title: "🤝 SPOŁECZNOŚĆ I ZROZUMIENIE",
-    description:
-      'Dołączasz do grupy kobiet, które też chcą ogarnąć reklamy - bez googlowania, bez czekania 4 dni na odpowiedź w facebookowej grupie i bez "sama sobie". Tutaj nikt nie ocenia "głupich pytań".',
-  },
-  {
     bgClass: "bg-ada-magicPurple4",
     title: "🎬 NAGRANIA KROK PO KROKU",
     description:
@@ -31,15 +19,9 @@ export const wyzwanieBenefits = [
   },
   {
     bgClass: "bg-ada-magicPink3",
-    title: "👥 SPOTKANIE LIVE Z ADĄ",
+    title: "👥 NAGRANIE LIVE Z ADĄ",
     description:
-      "Razem ustawiamy kampanię sprzedażową + Q&A. Zadajesz pytanie, pokazujesz swój przypadek i dostajesz odpowiedź na żywo. Jak konsultacja, tylko w cenie wyzwania.",
-  },
-  {
-    bgClass: "bg-ada-magicYellow",
-    title: "💎 KONSULTACJE NA PLATFORMIE",
-    description:
-      "Od czwartku do poniedziałku wrzucasz swoje materiały do skonsultowania. Tekst, grafika, ustawienia - sprawdzimy i powiemy, co poprawić. Konkretny feedback, nie ogólniki.",
+      "Nagranie LIVE, na którym zobaczysz jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam.",
   },
 ]
 
