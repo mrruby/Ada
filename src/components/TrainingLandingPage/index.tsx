@@ -104,6 +104,7 @@ type TrainingLandingPageProps = {
   heroFigure?: React.ReactNode
   heroOverlay?: React.ReactNode
   heroWrapperClassName?: string
+  centerLastRowBenefits?: boolean
 }
 
 const TrainingLandingPage = ({
@@ -122,8 +123,10 @@ const TrainingLandingPage = ({
   heroFigure,
   heroOverlay,
   heroWrapperClassName,
+  centerLastRowBenefits = false,
 }: TrainingLandingPageProps) => {
   const hasForm = Boolean(formHTML)
+  const orphanCount = centerLastRowBenefits ? benefits.length % 3 : 0
 
   return (
     <Layout showHeaderAndFooter={false}>
@@ -211,20 +214,39 @@ const TrainingLandingPage = ({
               </>
             )}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {benefits.map((b, idx) => (
-              <div
-                key={`${b.title}-${idx}`}
-                className={`${b.bgClass} rounded-lg p-6 border border-black text-center`}
-              >
-                <h3 className="text-[16px] font-bold text-black mb-2 uppercase whitespace-pre-line">
-                  {b.title}
-                </h3>
-                <p className="text-[16px] font-normal text-black whitespace-pre-line">
-                  {b.description}
-                </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.slice(0, benefits.length - orphanCount).map((b, idx) => (
+                <div
+                  key={`${b.title}-${idx}`}
+                  className={`${b.bgClass} rounded-lg p-6 border border-black text-center`}
+                >
+                  <h3 className="text-[16px] font-bold text-black mb-2 uppercase whitespace-pre-line">
+                    {b.title}
+                  </h3>
+                  <p className="text-[16px] font-normal text-black whitespace-pre-line">
+                    {b.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            {orphanCount > 0 && (
+              <div className="flex justify-center gap-6 mt-6 flex-wrap">
+                {benefits.slice(benefits.length - orphanCount).map((b, idx) => (
+                  <div
+                    key={`${b.title}-orphan-${idx}`}
+                    className={`${b.bgClass} rounded-lg p-6 border border-black text-center w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]`}
+                  >
+                    <h3 className="text-[16px] font-bold text-black mb-2 uppercase whitespace-pre-line">
+                      {b.title}
+                    </h3>
+                    <p className="text-[16px] font-normal text-black whitespace-pre-line">
+                      {b.description}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
         </div>
       </MaxWithBgColorContainer>
