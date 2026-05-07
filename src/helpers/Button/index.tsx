@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
-type ButtonVariant = "default" | "dark" | "offer"
+type ButtonVariant = "default" | "dark" | "offer" | "pink"
 
 interface Props {
   type: "button" | "submit" | "reset"
@@ -23,6 +23,8 @@ const VARIANT_STYLES: Record<ButtonVariant, string> = {
   dark: "bg-black text-ada-magicYellow rounded-full shadow-[0_16px_38px_rgba(0,0,0,0.18)]",
   offer:
     "bg-ada-magicOrange2 text-black rounded-[14px] shadow-[0_8px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:brightness-95 hover:shadow-xl",
+  pink:
+    "bg-ada-pink7 text-white rounded-[14px] shadow-[0_8px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:brightness-95 hover:shadow-xl",
 }
 
 export const Button: React.FC<Props> = ({

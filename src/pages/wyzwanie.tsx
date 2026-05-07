@@ -6,6 +6,14 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Accordion } from "helpers/Accordion"
 import { Button } from "helpers/Button"
 import YellowCircleArrow from "helpers/YellowCircleArrow"
+import {
+  useOtoTimer,
+  OTO_PRICE,
+  OTO_OLD_PRICE,
+  REGULAR_PRICE,
+  OTO_URL,
+  REGULAR_URL,
+} from "hooks/useOtoTimer"
 import React from "react"
 import {
   WYZWANIE_PAGE_TITLE,
@@ -15,7 +23,6 @@ import {
 } from "values/wyzwanieLanding"
 
 const OFFER_SECTION_ID = "oferta"
-const WYZWANIE_CHECKOUT_URL = "https://easl.ink/Yib03"
 
 const wyzwanieHeroFigure = (
   <div className="relative z-10 flex justify-center items-center">
@@ -257,7 +264,7 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
                 }`}
               >
                 <p
-                  className={`font-anton font-bold uppercase leading-none text-black ${
+                  className={`font-anton font-normal uppercase leading-none text-black ${
                     isFull
                       ? "text-[22px] lg:text-[42px]"
                       : "text-[24px] lg:text-adaTitle"
@@ -708,75 +715,89 @@ const WyzwanieStartSection = () => (
   </MaxWithBgColorContainer>
 )
 
-const WyzwanieBottomSection = () => (
-  <>
-    <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
-      <div className="px-4 py-14 lg:py-20">
-        <div
-          id={OFFER_SECTION_ID}
-          className="mx-auto w-full max-w-[340px] rounded-[24px] bg-[#f7f4ef] px-6 py-8 text-black shadow-[0_18px_36px_rgba(0,0,0,0.22)] lg:w-[30%] lg:max-w-none lg:px-7 lg:py-8"
-        >
-          <p className="text-[16px] leading-none">{wyzwanieOfferBox.eyebrow}</p>
-          <h2 className="mt-4 text-[36px] lg:text-[42px] font-anton uppercase leading-[110%] whitespace-pre-line">
-            {wyzwanieOfferBox.title}
-          </h2>
+const WyzwanieBottomSection = () => {
+  const { isOtoActive } = useOtoTimer()
+  const currentPrice = isOtoActive ? OTO_PRICE : REGULAR_PRICE
+  const currentUrl = isOtoActive ? OTO_URL : REGULAR_URL
+  const ctaLabel = isOtoActive ? "KUPUJĘ ZA 67 ZŁ" : "KUPUJĘ DOSTĘP"
 
-          <div className="mt-8">
-            <p className="text-[16px] leading-none">
-              {wyzwanieOfferBox.priceLabel}
-            </p>
-            <div className="mt-2 flex items-center gap-3">
-              <p className="text-adaSubtitleThird font-anton uppercase leading-none lg:text-[44px]">
-                {wyzwanieOfferBox.price}
+  return (
+    <>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
+        <div className="px-4 py-14 lg:py-20">
+          <div
+            id={OFFER_SECTION_ID}
+            className="mx-auto w-full max-w-[340px] rounded-[24px] bg-[#f7f4ef] px-6 py-8 text-black shadow-[0_18px_36px_rgba(0,0,0,0.22)] lg:w-[30%] lg:max-w-none lg:px-7 lg:py-8"
+          >
+            <p className="text-[16px] leading-none">{wyzwanieOfferBox.eyebrow}</p>
+            <h2 className="mt-4 text-[36px] lg:text-[42px] font-anton uppercase leading-[110%] whitespace-pre-line">
+              {wyzwanieOfferBox.title}
+            </h2>
+
+            <div className="mt-8">
+              <p className="text-[16px] leading-none">
+                {wyzwanieOfferBox.priceLabel}
               </p>
-              <p className="text-[24px] lg:text-[32px] font-anton uppercase leading-none text-gray-400 line-through">
-                {wyzwanieOfferBox.oldPrice}
-              </p>
+              <div className="mt-2 flex items-center gap-3">
+                <p className={`font-anton uppercase leading-none ${isOtoActive ? "text-[48px] lg:text-[56px] text-ada-pink7" : "text-adaSubtitleThird lg:text-[44px]"}`}>
+                  {currentPrice}
+                </p>
+                {isOtoActive && (
+                  <p className="text-[24px] lg:text-[32px] font-anton uppercase leading-none text-gray-400 line-through">
+                    {OTO_OLD_PRICE}
+                  </p>
+                )}
+              </div>
+              {isOtoActive && (
+                <p className="mt-2 text-[14px] font-semibold text-ada-pink7">
+                  Oferta ograniczona czasowo - tylko przez 30 minut!
+                </p>
+              )}
+            </div>
+
+            <Button
+              type="button"
+              variant={isOtoActive ? "pink" : "offer"}
+              url={currentUrl}
+              text={
+                <span className="font-montserrat font-extrabold uppercase">
+                  {ctaLabel}
+                </span>
+              }
+              textSize="text-[22px] lg:text-[26px]"
+              btnStyle="mt-8 w-[85%] mx-auto px-3 py-5 cursor-pointer block text-center"
+            />
+
+            <div className="mt-8 space-y-6">
+              {wyzwanieOfferBox.benefits.map((benefit) => (
+                <div key={benefit.title} className="flex gap-3">
+                  <span className="mt-[2px] text-[18px] leading-none">
+                    {benefit.icon}
+                  </span>
+                  <p className="text-[15px] leading-[120%] lg:text-[14px]">
+                    <span className="block font-bold">{benefit.title}</span>
+                    <span className="block font-normal">
+                      {benefit.description}
+                    </span>
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
-
-          <Button
-            type="button"
-            variant="offer"
-            url={WYZWANIE_CHECKOUT_URL}
-            text={
-              <span className="font-montserrat font-extrabold uppercase">
-                {wyzwanieOfferBox.ctaLabel}
-              </span>
-            }
-            textSize="text-[22px] lg:text-[26px]"
-            btnStyle="mt-8 w-[85%] mx-auto px-3 py-5 cursor-pointer block text-center"
-          />
-
-          <div className="mt-8 space-y-6">
-            {wyzwanieOfferBox.benefits.map((benefit) => (
-              <div key={benefit.title} className="flex gap-3">
-                <span className="mt-[2px] text-[18px] leading-none">
-                  {benefit.icon}
-                </span>
-                <p className="text-[15px] leading-[120%] lg:text-[14px]">
-                  <span className="block font-bold">{benefit.title}</span>
-                  <span className="block font-normal">
-                    {benefit.description}
-                  </span>
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
-      </div>
-    </MaxWithBgColorContainer>
+      </MaxWithBgColorContainer>
 
-    <WyzwanieTestimonials />
-    <WyzwanieCTA />
+      <WyzwanieTestimonials />
+      <WyzwanieCTA />
 
-    <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
-      <WyzwanieFaq />
-    </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicPink3">
+        <WyzwanieFaq />
+      </MaxWithBgColorContainer>
 
-    <WyzwanieStartSection />
-  </>
-)
+      <WyzwanieStartSection />
+    </>
+  )
+}
 
 const WyzwaniePage = () => {
   return (
@@ -801,6 +822,7 @@ const WyzwaniePage = () => {
           heroFigure={wyzwanieHeroFigure}
           heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px]"
           heroOverlay={<></>}
+          centerLastRowBenefits
         />
       </div>
     </>
