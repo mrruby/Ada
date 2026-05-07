@@ -74,7 +74,7 @@ const wyzwaniePinkSection = (
           Prawda jest taka: <span className="font-bold">nie potrzebujesz zespołu, żeby postawić skuteczną kampanię sprzedażową. Potrzebujesz kogoś, kto Ci pokaże jak - krok po kroku, bez lania wody, w tempie, które jest realne dla osoby, która robi wszystko sama.</span>
         </p>
         <p className="mb-6">
-          <span className="font-bold">W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie Kapibary Barbary, która jest naszą asystentką AI - napędzaną całą wiedzą z materiałów MAGIC. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę o to co możesz poprawić w swoich kampaniach.
+          <span className="font-bold">W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie Kapibary Barbary, która jest naszą asystentką AI - napędzaną całą wiedzą z materiałów MAGIC. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę, o to co możesz poprawić w swoich kampaniach.
         </p>
       </div>
     </div>
@@ -557,7 +557,7 @@ const wyzwanieFaqList = [
   },
   {
     question: "📅 Jak długo mam dostęp do materiałów?",
-    answer: "Przez 14 dni od dołączenia",
+    answer: "Przez 14 dni od dołączenia.",
   },
   {
     question: "👩‍💼 Dla kogo jest to wyzwanie?",
@@ -604,14 +604,14 @@ const wyzwanieOfferBox = {
     },
     {
       icon: "🔓",
-      title: "Dostęp do platformy z nagraniami, wytycznymi i wsparciem",
-      description: "przez cały tydzień wyzwania",
+      title: "Dostęp do platformy z nagraniami i Kapibarą Barbarą przez całe 14 dni.",
+      description: "",
     },
     {
       icon: "💡",
       title: "Tyle co jeden obiad z deserem. Tyle co 15 minut pracy agencji.",
       description:
-        "A dostajesz 8 dni z 4 ekspertkami i gotowy system na kampanię.",
+        "A dostajesz gotowy system na kampanię i dostęp do asystentki AI napędzanej wiedzą z MAGIC.",
     },
   ],
 }
