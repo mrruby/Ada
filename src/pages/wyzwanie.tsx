@@ -739,7 +739,7 @@ const WyzwanieBottomSection = () => {
                 {wyzwanieOfferBox.priceLabel}
               </p>
               <div className="mt-2 flex items-center gap-3">
-                <p className={`font-anton uppercase leading-none ${isOtoActive ? "text-[48px] lg:text-[56px] text-ada-pink7" : "text-adaSubtitleThird lg:text-[44px]"}`}>
+                <p className={`font-anton uppercase leading-none ${isOtoActive ? "text-[48px] lg:text-[56px] text-black" : "text-adaSubtitleThird lg:text-[44px]"}`}>
                   {currentPrice}
                 </p>
                 {isOtoActive && (
@@ -757,7 +757,7 @@ const WyzwanieBottomSection = () => {
 
             <Button
               type="button"
-              variant={isOtoActive ? "pink" : "offer"}
+              variant="offer"
               url={currentUrl}
               text={
                 <span className="font-montserrat font-extrabold uppercase">
