@@ -25,9 +25,9 @@ export const wyzwanieBenefits = [
   },
   {
     bgClass: "bg-ada-magicPurple4",
-    title: "🎬 NAGRANIE Z LIVE",
+    title: "🎬 NAGRANIE LIVE PROWADZONEGO PRZEZ ADĘ",
     description:
-      "Na którym Ada pokazuje jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam.",
+      "To jest serce całego wyzwania. W tym nagraniu Ada pokazuje jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam.",
   },
   {
     bgClass: "bg-ada-magicPink3",
