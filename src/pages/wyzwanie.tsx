@@ -65,16 +65,7 @@ const wyzwaniePinkSection = (
       </h2>
       <div className="max-w-4xl text-[16px] lg:text-[20px] leading-[160%] text-black text-left">
         <p className="mb-6">
-          Widzisz, jak inni puszczają reklamy, testują kreacje, analizują wyniki... i wydaje Ci się, że za tym stoi cały zespół. Graficzka, copywriterka, specjalistka od adsów, ktoś od strategii.
-        </p>
-        <p className="mb-6">
-          A za Twoim biznesem stoisz Ty. Jedna osoba. Robisz grafiki, piszesz teksty, ogarniasz klientów, wystawiasz faktury - i gdzieś pomiędzy tym wszystkim masz jeszcze "nauczyć się reklam".
-        </p>
-        <p className="mb-6">
-          Prawda jest taka: <span className="font-bold">nie potrzebujesz zespołu, żeby postawić skuteczną kampanię sprzedażową. Potrzebujesz kogoś, kto Ci pokaże jak - krok po kroku, bez lania wody, w tempie, które jest realne dla osoby, która robi wszystko sama.</span>
-        </p>
-        <p className="mb-6">
-          <span className="font-bold">W ciągu 7 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie Kapibary Barbary, która jest naszą asystentką AI - napędzaną całą wiedzą z materiałów MAGIC. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę, o to co możesz poprawić w swoich kampaniach.
+          <span className="font-bold">W ciągu 14 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie Kapibary Barbary, która jest naszą asystentką AI - napędzaną całą wiedzą z materiałów MAGIC. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę, o to co możesz poprawić w swoich kampaniach.
         </p>
       </div>
     </div>
@@ -96,8 +87,8 @@ type WyzwanieDay = {
 
 const wyzwanieDays: WyzwanieDay[] = [
   {
-    number: "1",
-    date: "PONIEDZIAŁEK 20.04",
+    number: "",
+    date: "DZIEŃ 1",
     side: "left",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
@@ -117,8 +108,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     ),
   },
   {
-    number: "2",
-    date: "WTOREK 21.04",
+    number: "",
+    date: "DZIEŃ 2",
     side: "right",
     sectionBg: "bg-ada-magicYellow",
     pillBg: "bg-ada-magicPurple4",
@@ -139,8 +130,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     ),
   },
   {
-    number: "3",
-    date: "ŚRODA 22.04",
+    number: "",
+    date: "DZIEŃ 3",
     side: "left",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
@@ -159,8 +150,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     ),
   },
   {
-    number: "4",
-    date: "CZWARTEK 23.04",
+    number: "",
+    date: "DZIEŃ 4",
     side: "right",
     sectionBg: "bg-ada-magicYellow",
     pillBg: "bg-ada-magicPurple4",
@@ -181,15 +172,25 @@ const wyzwanieDays: WyzwanieDay[] = [
     ),
   },
   {
-    number: "5",
+    number: "",
     date: "PRZEZ CAŁY CZAS WYZWANIA",
-    side: "full",
+    side: "left",
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
     numberBg: "bg-black",
     titleBold: "Masz pytanie? Nie googluj - napisz do Kapibary Barbary.",
     subtitle:
-      "Przez 7 dni masz do niej dostęp na platformie. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę.",
+      "Przez 14 dni masz do niej dostęp na platformie. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę.",
+    portrait: (
+      <StaticImage
+        src="../images/kapibara_barbara_portrait.webp"
+        alt="Kapibara Barbara"
+        placeholder="blurred"
+        className="h-full w-full"
+        objectFit="cover"
+        objectPosition="50% 50%"
+      />
+    ),
   },
 ]
 
@@ -251,17 +252,12 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
           >
             <div className="w-full">
               <div
-                className={`inline-flex ${isFull ? "w-fit" : "w-full"} items-center gap-3 rounded-full ${day.pillBg} px-4 py-3 shadow-[0_12px_26px_rgba(0,0,0,0.14)] lg:gap-5 lg:px-6 lg:py-4 ${pillExtraPadding} ${
+                className={`inline-flex w-full items-center gap-3 rounded-full ${day.pillBg} px-4 py-3 shadow-[0_12px_26px_rgba(0,0,0,0.14)] lg:gap-5 lg:px-6 lg:py-4 ${pillExtraPadding} ${
                   isRight ? "justify-end" : ""
                 }`}
               >
-                {!isRight && (
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-black bg-transparent text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]">
-                    {day.number}
-                  </div>
-                )}
                 <p
-                  className={`font-anton uppercase leading-none text-black ${
+                  className={`font-anton font-bold uppercase leading-none text-black ${
                     isFull
                       ? "text-[22px] lg:text-[42px]"
                       : "text-[24px] lg:text-adaTitle"
@@ -269,11 +265,6 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
                 >
                   {day.date}
                 </p>
-                {isRight && (
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-black bg-transparent text-[28px] font-anton leading-none text-black lg:h-14 lg:w-14 lg:text-[36px]">
-                    {day.number}
-                  </div>
-                )}
               </div>
               <p
                 className={`mt-6 text-[16px] leading-[120%] text-black lg:text-[18px] ${subtitleExtraPadding}`}
@@ -564,6 +555,11 @@ const wyzwanieFaqList = [
     answer:
       "Jeśli jesteś soloprzedsięborczynią, budujesz markę osobistą, prowadzisz sklep online, jesteś marketerką lub wirtualną asystentką - i chcesz ogarnąć reklamy sprzedażowe, które generują kasę, a nie tylko kliknięcia - to wyzwanie jest dla Ciebie.",
   },
+  {
+    question: "🐨 Kim jest Kapibara Barbara?",
+    answer:
+      "Kapibara Barbara jest naszą Asystentką AI napędzaną całą wiedzą z MAGIC. Możesz z nią skonsultować swoje zagwostki związane z reklamami, pokazać wyniki, nagrać głosówkę i traktować jak swoją adsową koleżankę.",
+  },
 ]
 
 const WyzwanieFaq = () => (
@@ -587,7 +583,8 @@ const wyzwanieOfferBox = {
   eyebrow: "dostęp do szkolenia",
   title: "KAMPANIA\nSPRZEDAŻOWA\nW PIGUŁCE",
   priceLabel: "cena",
-  price: "119 zł",
+  price: "67 zł",
+  oldPrice: "119 zł",
   ctaLabel: "KUPUJĘ DOSTĘP",
   benefits: [
     {
@@ -728,9 +725,14 @@ const WyzwanieBottomSection = () => (
             <p className="text-[16px] leading-none">
               {wyzwanieOfferBox.priceLabel}
             </p>
-            <p className="mt-2 text-adaSubtitleThird font-anton uppercase leading-none lg:text-[44px]">
-              {wyzwanieOfferBox.price}
-            </p>
+            <div className="mt-2 flex items-center gap-3">
+              <p className="text-adaSubtitleThird font-anton uppercase leading-none lg:text-[44px]">
+                {wyzwanieOfferBox.price}
+              </p>
+              <p className="text-[24px] lg:text-[32px] font-anton uppercase leading-none text-gray-400 line-through">
+                {wyzwanieOfferBox.oldPrice}
+              </p>
+            </div>
           </div>
 
           <Button

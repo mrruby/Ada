@@ -7,21 +7,33 @@ export const WYZWANIE_START_DATE = new Date("2026-04-23T17:00:00")
 export const wyzwanieBenefits = [
   {
     bgClass: "bg-ada-magicPink3",
-    title: "🤖 ASYSTENTKA AI - KAPIBARA BARBARA",
+    title: "✍️ NAGRANIE Z PISANIA TEKSTÓW SPRZEDAŻOWYCH",
     description:
-      "Jest 23:00, ekspertki śpią, a Ty masz pytanie o kampanię? Barbara nie śpi. Nasza asystentka AI jest napędzana wiedzą z materiałów MAGIC - możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę. Odpowiada po polsku, tylko o marketingu i bez halucynacji - konkret z naszej bazy wiedzy.",
+      "Justyna pokazuje 3 kroki, które powtarza przy pisaniu tekstów reklamowych do każdej kampanii sprzedażowej. Na nagraniu poznasz gotowe schematy i prompty, które możesz zastosować od razu.",
   },
   {
     bgClass: "bg-ada-magicPurple4",
-    title: "🎬 NAGRANIA KROK PO KROKU",
+    title: "🎨 NAGRANIE Z TWORZENIA GRAFIK SPRZEDAŻOWYCH",
     description:
-      "Tekst, grafika, piksel, kampania. Konkretne nagrania i wytyczne, zero lania wody, 100% praktyki. Odtwarzasz, robisz, masz gotowe.",
+      "Po nagraniu Doroty będziesz wiedziała czym różni się grafika, którą ludzie przewijają, od grafiki, przy której się zatrzymują i stworzysz takie dla siebie.",
   },
   {
     bgClass: "bg-ada-magicPink3",
-    title: "👥 NAGRANIE LIVE Z ADĄ",
+    title: "🔧 NAGRANIA Z INSTRUKCJĄ TWORZENIA PIKSELA I TESTOWANIA ZDARZEŃ",
     description:
-      "Nagranie LIVE, na którym zobaczysz jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam.",
+      "Nicola nagrała dwie instrukcje jak krok po kroku ogarnąć piksel i testowanie zdarzeń - dzięki nim te techniczne sprawy przestaną być takie straszne.",
+  },
+  {
+    bgClass: "bg-ada-magicPurple4",
+    title: "🎬 NAGRANIE Z LIVE",
+    description:
+      "Na którym Ada pokazuje jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam.",
+  },
+  {
+    bgClass: "bg-ada-magicPink3",
+    title: "🤖 ASYSTENTKA AI - KAPIBARA BARBARA",
+    description:
+      "Jest 23:00, a Ty masz pytanie o kampanię? Barbara nie śpi. Nasza asystentka AI jest napędzana wiedzą z materiałów MAGIC - możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę.",
   },
 ]
 
