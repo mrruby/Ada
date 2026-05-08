@@ -28,12 +28,16 @@ const WyzwanieStickyCountdown = () => {
         </span>
         <div className="flex items-center gap-1 md:gap-3 text-white font-bold">
           <div className="flex flex-col items-center">
-            <span className="text-lg md:text-2xl">{padNumber(timeLeft.minutes)}</span>
+            <span className="text-lg md:text-2xl">
+              {padNumber(timeLeft.minutes)}
+            </span>
             <span className="text-[10px] md:text-xs uppercase">min</span>
           </div>
           <span className="text-lg md:text-2xl">:</span>
           <div className="flex flex-col items-center">
-            <span className="text-lg md:text-2xl">{padNumber(timeLeft.seconds)}</span>
+            <span className="text-lg md:text-2xl">
+              {padNumber(timeLeft.seconds)}
+            </span>
             <span className="text-[10px] md:text-xs uppercase">sek</span>
           </div>
         </div>

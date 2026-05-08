@@ -23,9 +23,15 @@ const VARIANT_STYLES: Record<ButtonVariant, string> = {
   dark: "bg-black text-ada-magicYellow rounded-full shadow-[0_16px_38px_rgba(0,0,0,0.18)]",
   offer:
     "bg-ada-magicOrange2 text-black rounded-[14px] shadow-[0_8px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:brightness-95 hover:shadow-xl",
-  pink:
-    "bg-ada-pink7 text-white rounded-[14px] shadow-[0_8px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:brightness-95 hover:shadow-xl",
+  pink: "bg-ada-pink7 text-white rounded-[14px] shadow-[0_8px_16px_rgba(0,0,0,0.14)] transition-all duration-200 hover:brightness-95 hover:shadow-xl",
 }
+
+const shouldUseAnchor = (url: string): boolean =>
+  url.startsWith("http://") ||
+  url.startsWith("https://") ||
+  url.startsWith("/api/") ||
+  url.startsWith("mailto:") ||
+  url.startsWith("tel:")
 
 export const Button: React.FC<Props> = ({
   type,
@@ -49,13 +55,10 @@ export const Button: React.FC<Props> = ({
   }
 
   const borderStyles = border ? "border border-ada-blue" : ""
+  const className = `${VARIANT_STYLES[variant]} ${textSize} font-medium ${borderStyles} ${btnStyle}`
 
-  const buttonContent = (
-    <button
-      onClick={handleButtonClick}
-      type={type}
-      className={`${VARIANT_STYLES[variant]} ${textSize} font-medium ${borderStyles} ${btnStyle}`}
-    >
+  const content = (
+    <>
       {text}
       {iconCalender && (
         <StaticImage
@@ -77,8 +80,24 @@ export const Button: React.FC<Props> = ({
           className="w-[24px] md:w-[48px] ml-4 md:mt-[10px]"
         />
       )}
+    </>
+  )
+
+  const buttonContent = (
+    <button onClick={handleButtonClick} type={type} className={className}>
+      {content}
     </button>
   )
 
-  return url ? <Link to={url}>{buttonContent}</Link> : buttonContent
+  if (!url) return buttonContent
+
+  return shouldUseAnchor(url) ? (
+    <a href={url} className={className}>
+      {content}
+    </a>
+  ) : (
+    <Link to={url} className={className}>
+      {content}
+    </Link>
+  )
 }

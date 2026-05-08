@@ -11,8 +11,7 @@ import {
   OTO_PRICE,
   OTO_OLD_PRICE,
   REGULAR_PRICE,
-  OTO_URL,
-  REGULAR_URL,
+  OTO_CHECKOUT_URL,
 } from "hooks/useOtoTimer"
 import React from "react"
 import {
@@ -716,10 +715,13 @@ const WyzwanieStartSection = () => (
 )
 
 const WyzwanieBottomSection = () => {
-  const { isOtoActive } = useOtoTimer()
+  const { isLoading, isOtoActive } = useOtoTimer()
   const currentPrice = isOtoActive ? OTO_PRICE : REGULAR_PRICE
-  const currentUrl = isOtoActive ? OTO_URL : REGULAR_URL
-  const ctaLabel = isOtoActive ? "KUPUJĘ ZA 67 ZŁ" : "KUPUJĘ DOSTĘP"
+  const ctaLabel = isLoading
+    ? "SPRAWDZAM OFERTĘ"
+    : isOtoActive
+      ? "KUPUJĘ ZA 67 ZŁ"
+      : "KUPUJĘ DOSTĘP"
 
   return (
     <>
@@ -758,14 +760,16 @@ const WyzwanieBottomSection = () => {
             <Button
               type="button"
               variant="offer"
-              url={currentUrl}
+              url={isLoading ? undefined : OTO_CHECKOUT_URL}
               text={
                 <span className="font-montserrat font-extrabold uppercase">
                   {ctaLabel}
                 </span>
               }
               textSize="text-[22px] lg:text-[26px]"
-              btnStyle="mt-8 w-[85%] mx-auto px-3 py-5 cursor-pointer block text-center"
+              btnStyle={`mt-8 w-[85%] mx-auto px-3 py-5 block text-center ${
+                isLoading ? "cursor-wait opacity-80" : "cursor-pointer"
+              }`}
             />
 
             <div className="mt-8 space-y-6">
