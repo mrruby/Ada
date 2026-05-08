@@ -20,7 +20,13 @@ import {
 const redirectToRegularCheckout = (
   campaign: NonNullable<ReturnType<typeof getRequestCampaign>>,
   res: GatsbyFunctionResponse
-) => res.redirect(302, getCampaignRegularCheckoutUrl(campaign))
+) => sendRedirect(res, getCampaignRegularCheckoutUrl(campaign))
+
+const sendRedirect = (res: GatsbyFunctionResponse, location: string) => {
+  res.statusCode = 302
+  res.setHeader("Location", location)
+  return res.end()
+}
 
 export default async function handler(
   req: GatsbyFunctionRequest,
@@ -35,10 +41,10 @@ export default async function handler(
   const campaign = getRequestCampaign(req)
   if (!campaign) return sendInvalidCampaign(res)
 
-  const sessionCookie = readSessionCookie(req, campaign.id)
-  if (!sessionCookie) return redirectToRegularCheckout(campaign, res)
-
   try {
+    const sessionCookie = readSessionCookie(req, campaign.id)
+    if (!sessionCookie) return redirectToRegularCheckout(campaign, res)
+
     const storedSession = await getSession(
       campaign.id,
       sessionCookie.subjectHash
@@ -69,8 +75,8 @@ export default async function handler(
           sessionCookie.subjectHash
         )
         if (refreshedSession?.session.promoCode) {
-          return res.redirect(
-            302,
+          return sendRedirect(
+            res,
             buildEasyCheckoutUrlWithPromo(
               campaign,
               refreshedSession.session.promoCode
@@ -84,8 +90,8 @@ export default async function handler(
       throw new Error("Promotion code was not created")
     }
 
-    return res.redirect(
-      302,
+    return sendRedirect(
+      res,
       buildEasyCheckoutUrlWithPromo(campaign, sessionWithPromo.promoCode)
     )
   } catch (error) {
