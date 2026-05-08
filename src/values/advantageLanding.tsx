@@ -68,7 +68,7 @@ export const advantageHeroLeft = (
       ODBIERZ ŚCIĄGĘ ZA 0ZŁ:
     </p>
     <h1 className="text-[32px] lg:text-[48px] font-anton font-normal leading-[125%] text-black">
-      <span className="text-ada-magicPurple4 text-[40px] lg:text-[60px]">
+      <span className="text-[40px] lg:text-[60px]" style={{ color: "#B1A1FA" }}>
         Advantage+
       </span>
       <br />
