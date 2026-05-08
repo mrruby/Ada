@@ -22,6 +22,16 @@ const CAMPAIGNS: Record<OtoCampaignId, OtoCampaignConfig> = {
   },
 }
 
+const ENV = {
+  OTO_COOKIE_SECRET: process.env.OTO_COOKIE_SECRET,
+  OTO_TOKEN_SECRET: process.env.OTO_TOKEN_SECRET,
+  OTO_WYZWANIE_EASY_CHECKOUT_URL: process.env.OTO_WYZWANIE_EASY_CHECKOUT_URL,
+  OTO_WYZWANIE_REGULAR_CHECKOUT_URL:
+    process.env.OTO_WYZWANIE_REGULAR_CHECKOUT_URL,
+  STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+  STRIPE_WYZWANIE_OTO_COUPON_ID: process.env.STRIPE_WYZWANIE_OTO_COUPON_ID,
+}
+
 export const DEFAULT_OTO_CAMPAIGN_ID: OtoCampaignId = "wyzwanie"
 
 export const getCampaignConfig = (
@@ -30,7 +40,7 @@ export const getCampaignConfig = (
   campaignId in CAMPAIGNS ? CAMPAIGNS[campaignId as OtoCampaignId] : null
 
 export const requireEnv = (name: string): string => {
-  const value = process.env[name]
+  const value = ENV[name as keyof typeof ENV]
   if (!value) {
     throw new Error(`Missing required environment variable: ${name}`)
   }
@@ -44,7 +54,7 @@ export const getCampaignEasyCheckoutUrl = (
 export const getCampaignRegularCheckoutUrl = (
   campaign: OtoCampaignConfig
 ): string =>
-  process.env[campaign.regularCheckoutUrlEnv] ??
+  ENV[campaign.regularCheckoutUrlEnv as keyof typeof ENV] ??
   requireEnv(campaign.easyCheckoutUrlEnv)
 
 export const getCampaignStripeCouponId = (
