@@ -43,7 +43,9 @@ export const getCampaignEasyCheckoutUrl = (
 
 export const getCampaignRegularCheckoutUrl = (
   campaign: OtoCampaignConfig
-): string => requireEnv(campaign.regularCheckoutUrlEnv)
+): string =>
+  process.env[campaign.regularCheckoutUrlEnv] ??
+  requireEnv(campaign.easyCheckoutUrlEnv)
 
 export const getCampaignStripeCouponId = (
   campaign: OtoCampaignConfig
