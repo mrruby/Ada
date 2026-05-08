@@ -1,10 +1,20 @@
 import React from "react"
-import { useOtoTimer, OTO_URL } from "hooks/useOtoTimer"
+import { useOtoTimer } from "hooks/useOtoTimer"
+
+const OFFER_SECTION_ID = "oferta"
 
 const WyzwanieStickyCountdown = () => {
   const { isOtoActive, timeLeft } = useOtoTimer()
 
   const padNumber = (num: number) => num.toString().padStart(2, "0")
+
+  const handleScrollToOffer = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    const element = document.getElementById(OFFER_SECTION_ID)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   if (!isOtoActive) {
     return null
@@ -27,12 +37,12 @@ const WyzwanieStickyCountdown = () => {
             <span className="text-[10px] md:text-xs uppercase">sek</span>
           </div>
         </div>
-        <a
-          href={OTO_URL}
+        <button
+          onClick={handleScrollToOffer}
           className="bg-ada-pink7 text-white font-anton uppercase text-sm md:text-lg px-4 md:px-6 py-1 md:py-2 rounded-full shadow-md hover:brightness-95 transition-all"
         >
-          DOŁĄCZAM W NIŻSZEJ CENIE
-        </a>
+          DOŁĄCZAM ZA 67 ZŁ
+        </button>
       </div>
     </div>
   )

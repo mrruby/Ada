@@ -800,10 +800,12 @@ const WyzwanieBottomSection = () => {
 }
 
 const WyzwaniePage = () => {
+  const { isOtoActive } = useOtoTimer()
+
   return (
     <>
       <WyzwanieStickyCountdown />
-      <div className="pt-12">
+      <div className={isOtoActive ? "pt-12" : ""}>
         <TrainingLandingPage
           heroBgColor={wyzwanieHeroBgColor}
           afterHeroSection={wyzwanieAfterHeroSection}
