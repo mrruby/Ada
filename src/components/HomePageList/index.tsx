@@ -141,6 +141,35 @@ const HomePageList = () => {
             <Typography
               variant="h2"
               className="leading-snug mb-6 font-anton font-normal lg:text-adaTitle"
+              style={{ color: "#B1A1FA" }}
+            >
+              ADVANTAGE+
+            </Typography>
+            <p>Kiedy może pomóc Twoim kampaniom, a kiedy może zaszkodzić?</p>
+          </div>
+        }
+        buttonText="POBIERAM PDF"
+        buttonUrl="/advantage/"
+        image={
+          <div className="lg:ml-[30px]">
+            <StaticImage
+              src={"../../images/advantage-mockup.webp"}
+              alt="Advantage+ PDF"
+              placeholder="blurred"
+              width={400}
+              height={400}
+              formats={["auto", "webp", "avif"]}
+              quality={100}
+            />
+          </div>
+        }
+      />
+      <HomePageSection
+        text={
+          <div>
+            <Typography
+              variant="h2"
+              className="leading-snug mb-6 font-anton font-normal lg:text-adaTitle"
             >
               SKLEP
             </Typography>
@@ -170,7 +199,7 @@ const HomePageList = () => {
             >
               KONTAKT
             </Typography>
-            <p>Napisz, jeśli chcesz skontaktować się w innej sprawie!</p>
+            <p>Chcesz pogadać o współpracy, zaprosić na ciekawą rozmowę lub zapytać o reklamy?</p>
           </div>
         }
         buttonText="WYŚLIJ WIADOMOŚĆ!"
