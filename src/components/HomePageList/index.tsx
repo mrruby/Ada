@@ -156,8 +156,8 @@ const HomePageList = () => {
               src={"../../images/advantage-mockup.webp"}
               alt="Advantage+ PDF"
               placeholder="blurred"
-              width={400}
-              height={400}
+              width={460}
+              height={460}
               formats={["auto", "webp", "avif"]}
               quality={100}
             />
