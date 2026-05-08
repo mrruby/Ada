@@ -27,12 +27,31 @@ export type OtoStatusResponse = {
 
 const STORE_NAME = "oto-sessions"
 
+const getRuntimeEnv = (name: string): string | undefined => {
+  const globalWithProcess = globalThis as typeof globalThis & {
+    process?: { env?: Record<string, string | undefined> }
+  }
+
+  return globalWithProcess.process?.env?.[name]
+}
+
 export const getSessionKey = (
   campaignId: string,
   subjectHash: string
 ): string => `oto:${campaignId}:${subjectHash}`
 
-const getSessionStore = () => getStore(STORE_NAME)
+const getSessionStore = () => {
+  const siteID =
+    getRuntimeEnv("NETLIFY_BLOBS_SITE_ID") ?? getRuntimeEnv("SITE_ID")
+  const token =
+    getRuntimeEnv("NETLIFY_BLOBS_TOKEN") ?? getRuntimeEnv("NETLIFY_AUTH_TOKEN")
+
+  if (siteID && token) {
+    return getStore({ name: STORE_NAME, siteID, token })
+  }
+
+  return getStore(STORE_NAME)
+}
 
 const isOtoSession = (value: unknown): value is OtoSession => {
   if (!value || typeof value !== "object") return false
