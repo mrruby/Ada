@@ -1,4 +1,9 @@
-import { hashSubject, signTokenPayload, verifyTokenPayload } from "./crypto"
+import {
+  hashSubject,
+  randomHex,
+  signTokenPayload,
+  verifyTokenPayload,
+} from "./crypto"
 
 export type OtoTokenPayload = {
   campaignId: string
@@ -37,3 +42,6 @@ export const createOtoToken = (payload: OtoTokenPayload): string =>
 
 export const getSubjectHash = (campaignId: string, subjectId: string): string =>
   hashSubject(campaignId, subjectId.trim().toLowerCase())
+
+export const createAnonymousSubjectHash = (campaignId: string): string =>
+  hashSubject(campaignId, `anonymous:${randomHex(16)}`)

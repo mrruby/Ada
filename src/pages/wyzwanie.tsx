@@ -717,6 +717,7 @@ const WyzwanieStartSection = () => (
 const WyzwanieBottomSection = () => {
   const { isLoading, isOtoActive } = useOtoTimer()
   const currentPrice = isOtoActive ? OTO_PRICE : REGULAR_PRICE
+  const priceLabel = isLoading ? "..." : currentPrice
   const ctaLabel = isLoading
     ? "SPRAWDZAM OFERTĘ"
     : isOtoActive
@@ -741,8 +742,14 @@ const WyzwanieBottomSection = () => {
                 {wyzwanieOfferBox.priceLabel}
               </p>
               <div className="mt-2 flex items-center gap-3">
-                <p className={`font-anton uppercase leading-none ${isOtoActive ? "text-[48px] lg:text-[56px] text-black" : "text-adaSubtitleThird lg:text-[44px]"}`}>
-                  {currentPrice}
+                <p
+                  className={`font-anton uppercase leading-none ${
+                    isOtoActive
+                      ? "text-[48px] lg:text-[56px] text-black"
+                      : "text-adaSubtitleThird lg:text-[44px]"
+                  }`}
+                >
+                  {priceLabel}
                 </p>
                 {isOtoActive && (
                   <p className="text-[24px] lg:text-[32px] font-anton uppercase leading-none text-gray-400 line-through">

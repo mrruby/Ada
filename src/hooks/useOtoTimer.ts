@@ -8,22 +8,23 @@ type OtoStatusResponse = {
 
 const DEFAULT_TIME_LEFT = { minutes: 0, seconds: 0 }
 const CAMPAIGN_ID = "wyzwanie"
+let otoStatusRequest: Promise<OtoStatusResponse | null> | null = null
+let otoStatusRequestEndpoint: string | null = null
 
 const getOtoToken = () => {
   if (typeof window === "undefined") return null
   return new URLSearchParams(window.location.search).get("oto")
 }
 
-const getStatusEndpoint = () => {
+const getStartEndpoint = () => {
   const token = getOtoToken()
   const params = new URLSearchParams({ campaign: CAMPAIGN_ID })
 
   if (token) {
     params.set("oto", token)
-    return `/api/oto/start?${params.toString()}`
   }
 
-  return `/api/oto/status?${params.toString()}`
+  return `/api/oto/start?${params.toString()}`
 }
 
 const getTimeLeft = (endsAt: string) => {
@@ -37,6 +38,26 @@ const getTimeLeft = (endsAt: string) => {
   }
 }
 
+const requestOtoStatus = () => {
+  const endpoint = getStartEndpoint()
+
+  if (!otoStatusRequest || otoStatusRequestEndpoint !== endpoint) {
+    otoStatusRequestEndpoint = endpoint
+    otoStatusRequest = fetch(endpoint, {
+      credentials: "include",
+    })
+      .then((response) =>
+        response.ok ? (response.json() as Promise<OtoStatusResponse>) : null
+      )
+      .catch((error) => {
+        console.error("Error loading OTO status:", error)
+        return null
+      })
+  }
+
+  return otoStatusRequest
+}
+
 export const useOtoTimer = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [isOtoActive, setIsOtoActive] = useState(false)
@@ -44,7 +65,15 @@ export const useOtoTimer = () => {
   const [timeLeft, setTimeLeft] = useState(DEFAULT_TIME_LEFT)
 
   const applyStatus = useCallback((status: OtoStatusResponse | null) => {
-    if (!status?.active || !status.endsAt) {
+    const nextTimeLeft = status?.endsAt
+      ? getTimeLeft(status.endsAt)
+      : DEFAULT_TIME_LEFT
+
+    if (
+      !status?.active ||
+      !status.endsAt ||
+      (nextTimeLeft.minutes === 0 && nextTimeLeft.seconds === 0)
+    ) {
       setIsOtoActive(false)
       setEndsAt(null)
       setTimeLeft(DEFAULT_TIME_LEFT)
@@ -53,7 +82,7 @@ export const useOtoTimer = () => {
 
     setIsOtoActive(true)
     setEndsAt(status.endsAt)
-    setTimeLeft(getTimeLeft(status.endsAt))
+    setTimeLeft(nextTimeLeft)
   }, [])
 
   useEffect(() => {
@@ -63,12 +92,7 @@ export const useOtoTimer = () => {
       if (typeof window === "undefined") return
 
       try {
-        const response = await fetch(getStatusEndpoint(), {
-          credentials: "include",
-        })
-        const status = response.ok
-          ? ((await response.json()) as OtoStatusResponse)
-          : null
+        const status = await requestOtoStatus()
 
         if (isMounted) applyStatus(status)
       } catch (error) {

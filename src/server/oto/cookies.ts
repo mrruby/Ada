@@ -1,6 +1,7 @@
 import { signCookiePayload, verifyCookiePayload } from "./crypto"
 
 export const OTO_SESSION_COOKIE = "ada_oto_session"
+const REMEMBER_COOKIE_MAX_AGE_SECONDS = 180 * 24 * 60 * 60
 
 export type OtoSessionCookiePayload = {
   campaignId: string
@@ -41,12 +42,9 @@ export const getCookie = (
 
 export const createSessionCookie = (
   payload: OtoSessionCookiePayload,
-  endsAt: string
+  maxAgeSeconds = REMEMBER_COOKIE_MAX_AGE_SECONDS
 ): string => {
-  const maxAge = Math.max(
-    0,
-    Math.ceil((new Date(endsAt).getTime() - Date.now()) / 1000)
-  )
+  const maxAge = Math.max(0, maxAgeSeconds)
   const signedPayload = signCookiePayload(payload)
   const secure = isProduction() ? "; Secure" : ""
 
