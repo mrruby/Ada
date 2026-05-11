@@ -52,7 +52,7 @@ const PEOPLE_CONTENT = [
 const PeopleResponsive = ({ showStamp = false }: { showStamp?: boolean }) => (
   <>
     {/* Desktop: grid layout */}
-    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-6 pt-8 justify-items-center items-start">
+    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 pt-8 justify-items-center items-start">
       {PEOPLE_CONTENT.map((item) => (
         <PersonBox
           key={item.name}
@@ -185,10 +185,11 @@ const MagicBioBanner = ({ version }: { version: number }) => {
               variant="h3"
               className="mt-8 mb-4 text-ada-magicPink4 font-bold"
             >
-              4 specjalistki pod jednym dachem:
+              5 specjalistów pod jednym dachem:
             </Typography>
             <Typography variant="h3" className="mb-8 text-ada-black">
-              Meta Ads | Copywriting | Grafika | Koordynacja kampanii
+              Meta Ads | Copywriting | Grafika | Koordynacja kampanii | AI i
+              automatyzacje
             </Typography>
             <PeopleResponsive />
             <Typography

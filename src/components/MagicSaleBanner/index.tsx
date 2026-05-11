@@ -52,7 +52,7 @@ const MagicSaleBanner = ({
               {/* Subtext */}
               <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-black mb-8 max-w-[500px] mx-auto lg:mx-0">
                 Społeczność kobiet, które skalują swoje biznesy z pomocą reklam
-                pod czujnym okiem specjalistów
+                i sztucznej inteligencji pod czujnym okiem specjalistów.
               </p>
 
               {/* Button */}
