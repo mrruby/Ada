@@ -21,9 +21,9 @@ const PersonBox = ({
 }: PersonBoxProps) => {
   return (
     <div
-      className={`text-center ${textColor} flex flex-col justify-center items-center pt-4 w-full max-w-[280px]`}
+      className={`text-center ${textColor} flex flex-col justify-start items-center pt-4 w-full max-w-[220px]`}
     >
-      <div className="relative">
+      <div className="relative flex-shrink-0 w-[180px] h-[180px] overflow-hidden rounded-full">
         <CircleImage circleKey={img} />
         {showStamp && (
           <StaticImage
@@ -34,10 +34,10 @@ const PersonBox = ({
           />
         )}
       </div>
-      <Typography variant="h3" className="mb-2 mt-2 whitespace-nowrap">
+      <Typography variant="h3" className="mb-2 mt-4 whitespace-nowrap">
         {name}
       </Typography>
-      <p className="text-sm md:text-base leading-relaxed max-w-full">{description}</p>
+      <p className="text-sm leading-relaxed">{description}</p>
     </div>
   )
 }

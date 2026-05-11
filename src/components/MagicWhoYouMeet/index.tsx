@@ -12,12 +12,12 @@ const MagicWhoYouMeet = () => {
         </Typography>
 
         <Typography variant="h3" className="mb-6 text-ada-white4 font-bold">
-          4 specjalistki pod jednym dachem:
+          5 specjalistów pod jednym dachem:
         </Typography>
 
         <Typography variant="h3" className="text-white">
           Meta Ads | Copywriting | Grafika |<br />
-          Koordynacja kampanii
+          Koordynacja kampanii | AI i automatyzacje
         </Typography>
       </div>
     </Section>

@@ -23,9 +23,9 @@ const magicTilesContent1 = [
   },
   {
     colors: "bg-ada-purple2 text-ada-white",
-    title: "dostęp do zespołu 4  ekspertek",
+    title: "dostęp do zespołu 5 specjalistów",
     description:
-      "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach",
+      "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, AI i automatyzacjach.",
   },
   {
     colors: "bg-ada-pink8 text-ada-purple2",
@@ -99,9 +99,9 @@ const magicTilesContent4 = [
   },
   {
     colors: "bg-ada-magicOrange2 text-ada-text",
-    title: "👥 dostęp do zespołu 4  ekspertek",
+    title: "👥 dostęp do zespołu 5 specjalistów",
     description:
-      "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach",
+      "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, AI i automatyzacjach.",
   },
 ]
 
