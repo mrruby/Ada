@@ -504,12 +504,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
   const magicFAQList: ListItem[] = [
     {
       question: "🔍 Na jakiej platformie funkcjonuje MAGIC? ",
-      answer: (
-        <>
-          MAGIC działa na platformie Circle. Tajna informacja: kod ALOHOMORA
-          działa cuda w koszyku! 🪄
-        </>
-      ),
+      answer: <>MAGIC działa na platformie Circle.</>,
     },
     {
       question: "💎 Co sprawia, że MAGIC jest wyjątkowy?",
@@ -558,7 +553,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
       ),
     },
     {
-      question: "Ile czasu zajmuje MAGIC?",
+      question: "⏰ Ile czasu zajmuje MAGIC?",
       answer: (
         <>
           2-3 godziny tygodniowo, jeśli chcesz skorzystać z bieżących spotkań.
@@ -568,6 +563,17 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
           nagrywane, więc możesz z nich skorzystać w dowolnym momencie. Wiemy,
           że biznes to nie 9-17. Działamy dokładnie tak samo - bez sztywnych ram
           czasowych!
+        </>
+      ),
+    },
+    {
+      question: "🐨 Kim jest Kapibara Barbara?",
+      answer: (
+        <>
+          Kapibara Barbara jest naszą Asystentką AI napędzaną całą wiedzą z
+          MAGIC. Możesz z nią skonsultować swoje zagwostki związane z reklamami,
+          pokazać wyniki, nagrać głosówkę i traktować jak swoją adsową
+          koleżankę.
         </>
       ),
     },

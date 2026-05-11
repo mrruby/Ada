@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
+import TypingWordSwitch from "helpers/TypingWordSwitch"
 import React from "react"
 import Section from "../shared/Section"
 import StarBadge from "../shared/StarBadge"
@@ -28,7 +29,13 @@ const MagicSaleBanner = ({
               {/* Big heading */}
               <div className="flex items-start gap-3 justify-center lg:justify-start">
                 <h1 className="font-montserrat font-extrabold text-[40px] md:text-[56px] lg:text-[64px] leading-[100%] text-ada-magicOrange2 mb-6">
-                  Marketing Ads Girls
+                  Meta{" "}
+                  <TypingWordSwitch
+                    words={["Ads", "AI"]}
+                    speed={150}
+                    pauseDuration={2000}
+                  />
+                  {" "}Girls
                   <br />
                   Inside Club
                 </h1>
@@ -45,7 +52,7 @@ const MagicSaleBanner = ({
               {/* Subtext */}
               <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-black mb-8 max-w-[500px] mx-auto lg:mx-0">
                 Społeczność kobiet, które skalują swoje biznesy z pomocą reklam
-                pod czujnym okiem profesjonalistek
+                pod czujnym okiem specjalistów
               </p>
 
               {/* Button */}
