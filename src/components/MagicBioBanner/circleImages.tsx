@@ -64,6 +64,18 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           quality={90}
         />
       )
+    case "dawid":
+      return (
+        <StaticImage
+          src="../../images/dawid_portrait.webp"
+          alt=""
+          layout="fixed"
+          width={240}
+          height={240}
+          placeholder="blurred"
+          quality={90}
+        />
+      )
     default:
       return null
   }

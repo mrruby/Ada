@@ -9,7 +9,7 @@ import PersonBox from "./PersonBox"
 
 // Responsive config for bio slider (show 1 on mobile, all on desktop)
 const bioResponsive = {
-  desktop: { breakpoint: { max: 4000, min: 768 }, items: 4 },
+  desktop: { breakpoint: { max: 4000, min: 768 }, items: 5 },
   tablet: { breakpoint: { max: 768, min: 464 }, items: 2 },
   mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
 }
@@ -40,13 +40,19 @@ const PEOPLE_CONTENT = [
       "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisy pracy.",
     img: "nicola",
   },
+  {
+    name: "Dawid Urbas",
+    description:
+      "Pasjonat AI i automatyzacji. Pokazuje, jak nowe technologie mogą być Twoją tajną bronią, oszczędzając czas i otwierając nowe możliwości dla Twojego biznesu.",
+    img: "dawid",
+  },
 ]
 
 // Responsive people display: flex row on desktop, carousel on mobile
 const PeopleResponsive = ({ showStamp = false }: { showStamp?: boolean }) => (
   <>
     {/* Desktop: grid layout */}
-    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 justify-items-center">
+    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-6 pt-8 justify-items-center items-start">
       {PEOPLE_CONTENT.map((item) => (
         <PersonBox
           key={item.name}

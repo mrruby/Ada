@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from "react"
 import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicStickyBar from "components/MagicStickyBar"
-import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
 import DeferUntilVisible from "components/shared/DeferUntilVisible"
 import SEO from "components/seo"
@@ -48,7 +47,6 @@ const MagicSalePage = () => {
     <Layout showHeaderAndFooter={false}>
       <MagicStickyBar />
       <div className="pt-12">
-        <MagicLogoHeader variant="pink" />
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner version={1} />
         </MaxWithBgColorContainer>
