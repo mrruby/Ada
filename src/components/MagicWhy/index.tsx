@@ -242,8 +242,7 @@ const MagicWhy = ({ part }: { part: number }) => {
         <div>
           <div className="w-full text-black mb-20">
             <Typography variant="h1" className="mb-8 text-center uppercase">
-              <span className="text-white">MAGIC </span>
-              jest dla...
+              JEŚLI PROWADZISZ MARKETING DLA...
             </Typography>
           </div>
           <div
@@ -259,7 +258,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                     variant="h2"
                     className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
-                    🧑‍🎓 Przedsiębiorczyń:
+                    SWOJEGO BIZNESU
                   </Typography>
                   <ul className="px-8">
                     <li className="mb-3">
@@ -321,9 +320,9 @@ const MagicWhy = ({ part }: { part: number }) => {
                 <div className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] border-ada-magicPink4">
                   <Typography
                     variant="h2"
-                    className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
+                    className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
-                    🧑‍🎓 Marketerek:
+                    DLA KLIENTÓW
                   </Typography>
                   <ul className="px-8">
                     <li className="mb-3">

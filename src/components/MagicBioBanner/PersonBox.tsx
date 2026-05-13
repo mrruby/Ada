@@ -6,7 +6,7 @@ import { CircleImage } from "./circleImages"
 
 type PersonBoxProps = {
   img: string
-  name: string
+  name: string | React.ReactNode
   description: string
   showStamp?: boolean
   textColor?: string
@@ -34,7 +34,7 @@ const PersonBox = ({
           />
         )}
       </div>
-      <Typography variant="h3" className="mb-2 mt-2 whitespace-nowrap">
+      <Typography variant="h3" className="mb-2 mt-2 text-center">
         {name}
       </Typography>
       <p className="text-sm md:text-base leading-relaxed max-w-full">{description}</p>

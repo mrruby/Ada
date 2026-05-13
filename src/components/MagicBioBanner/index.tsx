@@ -17,25 +17,49 @@ const bioResponsive = {
 // Static array moved outside component
 const PEOPLE_CONTENT = [
   {
-    name: "Adrianna Promis-Urbas",
+    name: (
+      <>
+        Adrianna
+        <br />
+        Promis-Urbas
+      </>
+    ),
     description:
       "Kreatywna dusza i mózg MAGIC. Specjalizuje się w kampaniach Meta Ads i marketingu zbudowanym na relacjach.",
     img: "ada",
   },
   {
-    name: "Justyna Król",
+    name: (
+      <>
+        Justyna
+        <br />
+        Król
+      </>
+    ),
     description:
       "Socjolożka i zaklinaczka słów. Tworzy teksty reklamowe budujące autentyczne relacje między marką a klientami.",
     img: "justyna",
   },
   {
-    name: "Dorota Woźniak",
+    name: (
+      <>
+        Dorota
+        <br />
+        Woźniak
+      </>
+    ),
     description:
       "Architektka z pasją do projektowania. Zamienia nudne reklamy w przyciągające wzrok kreacje graficzne.",
     img: "dorota",
   },
   {
-    name: "Nicola Kut",
+    name: (
+      <>
+        Nicola
+        <br />
+        Kut
+      </>
+    ),
     description:
       "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisy pracy.",
     img: "nicola",
@@ -46,10 +70,10 @@ const PEOPLE_CONTENT = [
 const PeopleResponsive = ({ showStamp = false }: { showStamp?: boolean }) => (
   <>
     {/* Desktop: grid layout */}
-    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 justify-items-center">
-      {PEOPLE_CONTENT.map((item) => (
+    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 justify-items-center items-start">
+      {PEOPLE_CONTENT.map((item, index) => (
         <PersonBox
-          key={item.name}
+          key={index}
           name={item.name}
           description={item.description}
           img={item.img}
@@ -67,8 +91,8 @@ const PeopleResponsive = ({ showStamp = false }: { showStamp?: boolean }) => (
         customRightArrow={<CustomRightArrow />}
         ssr={true}
       >
-        {PEOPLE_CONTENT.map((item) => (
-          <div key={item.name} className="px-2">
+        {PEOPLE_CONTENT.map((item, index) => (
+          <div key={index} className="px-2">
             <PersonBox
               name={item.name}
               description={item.description}
@@ -228,10 +252,10 @@ const MagicBioBanner = ({ version }: { version: number }) => {
             </p>
 
             {/* Desktop: grid layout */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 justify-items-center">
-              {PEOPLE_CONTENT.map((item) => (
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 justify-items-center items-start">
+              {PEOPLE_CONTENT.map((item, index) => (
                 <PersonBox
-                  key={item.name}
+                  key={index}
                   name={item.name}
                   description={item.description}
                   img={item.img}
@@ -250,8 +274,8 @@ const MagicBioBanner = ({ version }: { version: number }) => {
                 customRightArrow={<CustomRightArrow />}
                 ssr={true}
               >
-                {PEOPLE_CONTENT.map((item) => (
-                  <div key={item.name} className="px-2">
+                {PEOPLE_CONTENT.map((item, index) => (
+                  <div key={index} className="px-2">
                     <PersonBox
                       name={item.name}
                       description={item.description}

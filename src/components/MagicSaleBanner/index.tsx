@@ -28,9 +28,9 @@ const MagicSaleBanner = ({
               {/* Big heading */}
               <div className="flex items-start gap-3 justify-center lg:justify-start">
                 <h1 className="font-montserrat font-extrabold text-[40px] md:text-[56px] lg:text-[64px] leading-[100%] text-ada-magicOrange2 mb-6">
-                  Marketing Ads Girls
+                  Marketing Ads
                   <br />
-                  Inside Club
+                  Girls Inside Club
                 </h1>
                 <StaticImage
                   src="../../images/star-pink.webp"

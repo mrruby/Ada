@@ -15,9 +15,6 @@ const MainContent = () => {
         <MagicBanner version={4} />
       </div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicWhy part={9} />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicDateBanner version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
