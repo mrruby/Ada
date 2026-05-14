@@ -3,9 +3,9 @@ import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicCaseStudies from "components/MagicCaseStudies"
 import MagicVideo from "components/MagicVideo"
 import MagicBanner from "components/MagicBanner"
-import MagicWhy from "components/MagicWhy"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicBioBanner from "components/MagicBioBanner"
+import MagicWhy from "components/MagicWhy"
 
 const MainContent = () => {
   return (
@@ -20,9 +20,6 @@ const MainContent = () => {
         <MagicBanner version={4} />
       </div>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicWhy part={9} />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicDateBanner version={3} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">

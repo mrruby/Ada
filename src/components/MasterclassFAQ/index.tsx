@@ -567,7 +567,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
       ),
     },
     {
-      question: "🐨 Kim jest Kapibara Barbara?",
+      question: "🦫 Kim jest Kapibara Barbara?",
       answer: (
         <>
           Kapibara Barbara jest naszą Asystentką AI napędzaną całą wiedzą z

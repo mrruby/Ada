@@ -19,6 +19,10 @@ const PersonBox = ({
   showStamp,
   textColor = "text-ada-black",
 }: PersonBoxProps) => {
+  const nameParts = name.split(" ")
+  const firstName = nameParts[0]
+  const lastName = nameParts.slice(1).join(" ")
+
   return (
     <div
       className={`text-center ${textColor} flex flex-col justify-start items-center pt-4 w-full max-w-[220px]`}
@@ -35,7 +39,9 @@ const PersonBox = ({
         )}
       </div>
       <Typography variant="h3" className="mb-2 mt-4">
-        {name}
+        {firstName}
+        <br />
+        {lastName}
       </Typography>
       <p className="text-sm leading-relaxed">{description}</p>
     </div>
