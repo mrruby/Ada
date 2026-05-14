@@ -99,7 +99,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               Jak <b>Magda</b> uporządkowała chaos reklamowy i zyskała pewność w
               prowadzeniu kampanii?
             </Typography>
-            <div className="my-2 relative">
+            <div className="mb-2 relative">
               <Carousel
                 responsive={carouselResponsive}
                 customLeftArrow={<CustomLeftArrow dark />}
@@ -110,7 +110,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
             </div>
             <Typography
               variant="h3"
-              className="text-ada-black font-medium pt-4"
+              className="text-ada-black font-medium pt-2"
             >
               Przeczytaj, co <b>Magda</b> mówi o <b>MAGIC:</b>
             </Typography>
@@ -121,7 +121,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               formats={["auto", "webp", "avif"]}
               quality={75}
               width={800}
-              className="max-w-4xl my-4"
+              className="max-w-4xl mt-2 mb-4"
             />
             <Button
               type="button"

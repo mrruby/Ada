@@ -246,7 +246,7 @@ const MagicWhy = ({ part }: { part: number }) => {
             </Typography>
           </div>
           <div
-            className="flex flex-col md:flex-row justify-center items-center gap-8"
+            className="flex flex-col md:flex-row justify-center items-center gap-8 text-black"
             onMouseOver={handleMouseEnter}
           >
             <div className="flex flex-col md:flex-row gap-8">
@@ -258,7 +258,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                     variant="h2"
                     className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
-                    🧑‍🎓 DLA KLIENTÓW
+                    🧑‍🎓 KLIENTÓW
                   </Typography>
                   <ul className="px-8">
                     <li className="mb-3">
