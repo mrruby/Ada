@@ -25,10 +25,10 @@ const OFFER_SECTION_ID = "oferta"
 
 const wyzwanieHeroFigure = (
   <div className="relative z-10 flex justify-center items-center">
-    <div className="w-full max-w-[800px] xl:max-w-[950px]">
+    <div className="w-full max-w-[560px] xl:max-w-[650px]">
       <StaticImage
-        src="../images/wyzwanie-hero-combined.webp"
-        alt="Kampania sprzedażowa w pigułce - hero"
+        src="../images/wyzwanie-hero-new.png"
+        alt="Kampania sprzedażowa w pigułce - 14 dni, gotowa kampania i 4 ekspertki"
         placeholder="blurred"
         className="w-full"
         objectFit="contain"
@@ -71,7 +71,16 @@ const wyzwaniePinkSection = (
       </h2>
       <div className="max-w-4xl text-[16px] lg:text-[20px] leading-[160%] text-black text-left">
         <p className="mb-6">
-          <span className="font-bold">W ciągu 14 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.</span> Konkretne nagrania, wytyczne krok po kroku i wsparcie Kapibary Barbary, która jest naszą asystentką AI - napędzaną całą wiedzą z materiałów MAGIC. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę, o to co możesz poprawić w swoich kampaniach.
+          <span className="font-bold">
+            W ciągu 14 dni przeprowadzimy Cię przez cały proces - od tekstu i
+            grafiki, przez piksel i zdarzenia, aż po ustawienie kampanii
+            sprzedażowej w Menedżerze Reklam.
+          </span>{" "}
+          Konkretne nagrania, wytyczne krok po kroku i wsparcie Kapibary
+          Barbary, która jest naszą asystentką AI - napędzaną całą wiedzą z
+          materiałów MAGIC. Możesz jej wysłać screena, nagrać notatkę głosową
+          albo po prostu zapytać jak koleżankę, o to co możesz poprawić w swoich
+          kampaniach.
         </p>
       </div>
     </div>
@@ -99,9 +108,9 @@ const wyzwanieDays: WyzwanieDay[] = [
     sectionBg: "bg-ada-magicPurple4",
     pillBg: "bg-ada-magicYellow",
     numberBg: "bg-black",
-    titleBold:
-      "Słowa, które sprzedają.",
-    subtitle: "Justyna na co dzień pisze teksty, które sprzedają - od sekwencji mailowych, przez landing page'e, po kreacje reklamowe. Dostaniesz od niej nagranie z gotowym schematem na tekst do reklamy sprzedażowej. Żadnego \"pisz z serca\" - konkretna struktura, którą wypełnisz swoimi słowami. Tego samego dnia siadasz i masz gotowy tekst.",
+    titleBold: "Słowa, które sprzedają.",
+    subtitle:
+      'Justyna na co dzień pisze teksty, które sprzedają - od sekwencji mailowych, przez landing page\'e, po kreacje reklamowe. Dostaniesz od niej nagranie z gotowym schematem na tekst do reklamy sprzedażowej. Żadnego "pisz z serca" - konkretna struktura, którą wypełnisz swoimi słowami. Tego samego dnia siadasz i masz gotowy tekst.',
     portrait: (
       <StaticImage
         src="../images/justyna_portrait.webp"
@@ -120,8 +129,7 @@ const wyzwanieDays: WyzwanieDay[] = [
     sectionBg: "bg-ada-magicYellow",
     pillBg: "bg-ada-magicPurple4",
     numberBg: "bg-black",
-    titleBold:
-      "Grafiki do reklam sprzedażowych",
+    titleBold: "Grafiki do reklam sprzedażowych",
     subtitle:
       "Dorota zajmuje się brandingiem i identyfikacją wizualną, a w MAGIC uczy, jak tworzyć kreacje, które wyglądają profesjonalnie - nawet w Canvie, nawet bez budżetu na graficzkę. Po tym nagraniu będziesz wiedzieć, czym się różni grafika, którą ludzie przewijają, od grafiki, przy której się zatrzymują i stworzysz takie dla siebie.",
     portrait: (
@@ -143,7 +151,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     pillBg: "bg-ada-magicYellow",
     numberBg: "bg-black",
     titleBold: "Piksel przestanie być straszny. Obiecujemy.",
-    subtitle: "Nicola ogarnia reklamy i techniczne zaplecze - piksel, zdarzenia, testowanie. To ona pomaga naszym klubowiczkom w MAGIC ogarnąć tę część, której większość się boi. Dostajesz nagranie z instrukcją krok po kroku. Żadnego żargonu, żadnego \"to proste, wystarczy dodać kod\" - Nicola pokaże Ci każdy klik.",
+    subtitle:
+      'Nicola ogarnia reklamy i techniczne zaplecze - piksel, zdarzenia, testowanie. To ona pomaga naszym klubowiczkom w MAGIC ogarnąć tę część, której większość się boi. Dostajesz nagranie z instrukcją krok po kroku. Żadnego żargonu, żadnego "to proste, wystarczy dodać kod" - Nicola pokaże Ci każdy klik.',
     portrait: (
       <StaticImage
         src="../images/nicola_portrait.webp"
@@ -164,7 +173,8 @@ const wyzwanieDays: WyzwanieDay[] = [
     numberBg: "bg-black",
     titleBold:
       "Obejrzysz nagranie z LIVE, gdzie krok po kroku ustawiałam kampanię sprzedażową",
-    subtitle: "To jest serce wyzwania. Nagranie LIVE, na którym pokazuję jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam. Oglądasz i ustawiasz we własnym tempie.",
+    subtitle:
+      "To jest serce wyzwania. Nagranie LIVE, na którym pokazuję jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam. Oglądasz i ustawiasz we własnym tempie.",
     portrait: (
       <StaticImage
         src="../images/ada_portrait.webp"
@@ -189,12 +199,12 @@ const wyzwanieDays: WyzwanieDay[] = [
       "Przez 14 dni masz do niej dostęp na platformie. Możesz jej wysłać screena, nagrać notatkę głosową albo po prostu zapytać jak koleżankę.",
     portrait: (
       <StaticImage
-        src="../images/kapibara_barbara_portrait.webp"
+        src="../images/kapibara-barbara-photo.png"
         alt="Kapibara Barbara"
         placeholder="blurred"
         className="h-full w-full"
         objectFit="cover"
-        objectPosition="50% 50%"
+        objectPosition="50% 45%"
       />
     ),
   },
@@ -231,7 +241,13 @@ const useInView = () => {
   return { ref, isInView }
 }
 
-const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number }) => {
+const WyzwanieDaySection = ({
+  day,
+  index,
+}: {
+  day: WyzwanieDay
+  index: number
+}) => {
   const { ref, isInView } = useInView()
   const isFull = day.side === "full"
   const isRight = day.side === "right"
@@ -247,12 +263,15 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
       : "lg:pr-[250px]"
   const portraitPosition = isRight ? "lg:left-0" : "lg:right-0"
 
-  const slideAnimation = index % 2 === 0 ? "animate-slideInFromLeft" : "animate-slideInFromRight"
+  const slideAnimation =
+    index % 2 === 0 ? "animate-slideInFromLeft" : "animate-slideInFromRight"
 
   return (
     <MaxWithBgColorContainer bgColor={day.sectionBg}>
       <div ref={ref} className="px-4 py-10 lg:py-12 overflow-hidden">
-        <div className={`mx-auto w-full max-w-5xl ${isInView ? slideAnimation : "opacity-0"}`}>
+        <div
+          className={`mx-auto w-full max-w-5xl ${isInView ? slideAnimation : "opacity-0"}`}
+        >
           <div
             className={`relative w-full ${isFull ? "" : "lg:min-h-[260px]"}`}
           >
@@ -281,7 +300,7 @@ const WyzwanieDaySection = ({ day, index }: { day: WyzwanieDay; index: number })
             </div>
             {day.portrait && (
               <div
-                className={`mt-8 flex justify-center lg:absolute ${portraitPosition} lg:top-1/2 lg:mt-0 lg:-translate-y-1/2`}
+                className={`mt-8 flex justify-center lg:absolute ${portraitPosition} lg:top-10 lg:mt-0`}
               >
                 <div
                   className={`h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full lg:h-[220px] lg:w-[220px] ${
@@ -308,9 +327,6 @@ const DlaKogoSection = () => (
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="inline-block shrink-0 relative -left-1 -top-[2px] text-[32px] lg:text-[42px] -rotate-[10deg]">
               ✅
-                  
-                 
-                
             </span>
             <h3 className="font-anton uppercase text-black text-[24px] lg:text-[32px] leading-[110%]">
               <span className="block">DLA KOGO JEST</span>
@@ -331,32 +347,21 @@ const DlaKogoSection = () => (
                 <span>
                   Obsługujesz klientów jako freelancerka i chcesz pewniej
                   stawiać kampanie sprzedażowe
-                </span
-                  >
-                 
-                
+                </span>
               </li>
               <li className="flex gap-3">
                 <span className="shrink-0">🖱️</span>
                 <span>
-                  
-                 
-                
                   Próbowałaś już klikać w Menedżerze Reklam, ale nie masz
                   pewności, czy robisz to dobrze (masz konto reklamowe)
                 </span>
               </li>
-                  
-                 
-                
+
               <li className="flex gap-3">
                 <span className="shrink-0">💰</span>
                 <span>Masz mały budżet reklamowy (do 2000 zł miesięcznie)</span>
               </li>
-                  
-                 
-                 
-                
+
               <li className="flex gap-3">
                 <span className="shrink-0">🚀</span>
                 <span>
@@ -607,7 +612,8 @@ const wyzwanieOfferBox = {
     },
     {
       icon: "🔓",
-      title: "Dostęp do platformy z nagraniami i Kapibarą Barbarą przez całe 14 dni.",
+      title:
+        "Dostęp do platformy z nagraniami i Kapibarą Barbarą przez całe 14 dni.",
       description: "",
     },
     {
@@ -732,7 +738,9 @@ const WyzwanieBottomSection = () => {
             id={OFFER_SECTION_ID}
             className="mx-auto w-full max-w-[340px] rounded-[24px] bg-[#f7f4ef] px-6 py-8 text-black shadow-[0_18px_36px_rgba(0,0,0,0.22)] lg:w-[30%] lg:max-w-none lg:px-7 lg:py-8"
           >
-            <p className="text-[16px] leading-none">{wyzwanieOfferBox.eyebrow}</p>
+            <p className="text-[16px] leading-none">
+              {wyzwanieOfferBox.eyebrow}
+            </p>
             <h2 className="mt-4 text-[36px] lg:text-[42px] font-anton uppercase leading-[110%] whitespace-pre-line">
               {wyzwanieOfferBox.title}
             </h2>
@@ -831,9 +839,16 @@ const WyzwaniePage = () => {
             </>
           }
           bottomSection={<WyzwanieBottomSection />}
-          heroLeft={wyzwanieHeroLeft}
+          heroLeft={
+            <>
+              {wyzwanieHeroLeft}
+              <div className="mt-8 flex justify-center lg:hidden">
+                {wyzwanieHeroFigure}
+              </div>
+            </>
+          }
           heroFigure={wyzwanieHeroFigure}
-          heroWrapperClassName="lg:right-8 lg:max-w-[800px] xl:right-4 xl:max-w-[950px]"
+          heroWrapperClassName="lg:right-6 lg:max-w-[560px] xl:right-16 xl:max-w-[650px]"
           heroOverlay={<></>}
           centerLastRowBenefits
         />
