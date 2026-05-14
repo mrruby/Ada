@@ -14,6 +14,9 @@ const MainContent = () => {
         <MagicCaseStudies />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+        <MagicWhy part={9} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicVideo />
       </MaxWithBgColorContainer>
       <div className="bg-ada-white3">

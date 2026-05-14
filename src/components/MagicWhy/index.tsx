@@ -239,8 +239,8 @@ const MagicWhy = ({ part }: { part: number }) => {
         </div>
       )}
       {part == 9 && (
-        <div>
-          <div className="w-full text-black mb-20">
+        <div className="text-black">
+          <div className="w-full mb-10 md:mb-14">
             <Typography variant="h1" className="mb-8 text-center uppercase">
               JEŚLI PROWADZISZ MARKETING DLA...
             </Typography>
@@ -258,7 +258,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                     variant="h2"
                     className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
-                    🧑‍🎓 KLIENTÓW
+                    KLIENTÓW
                   </Typography>
                   <ul className="px-8">
                     <li className="mb-3">

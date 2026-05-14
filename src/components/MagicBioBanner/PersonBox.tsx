@@ -27,7 +27,7 @@ const PersonBox = ({
     <div
       className={`text-center ${textColor} flex flex-col justify-start items-center pt-4 w-full max-w-[220px]`}
     >
-      <div className="relative flex-shrink-0 w-[180px] h-[180px] overflow-hidden rounded-full">
+      <div className="relative flex-shrink-0 w-[184px] h-[184px] overflow-hidden rounded-full border-[3px] border-ada-magicPurple4 bg-ada-white3">
         <CircleImage circleKey={img} />
         {showStamp && (
           <StaticImage

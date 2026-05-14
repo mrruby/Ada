@@ -139,14 +139,13 @@ const MagicDateBanner = ({
   layout = "default",
 }: MagicDateBannerProps) => {
   const isMagicSpecialLayout = layout === "magic-special"
-  const sectionClassName =
-    isMagicSpecialLayout && version === 3 ? "" : "mb-12"
+  const sectionClassName = version === 3 || version === 4 ? "" : "mb-12"
   const sectionPadding =
     isMagicSpecialLayout && version === 3
       ? "pt-8 md:pt-12 pb-2 md:pb-4 px-6"
       : isMagicSpecialLayout && version === 4
         ? "pt-8 md:pt-12 px-6"
-      : "py-8 md:py-12 px-6"
+        : "py-8 md:py-12 px-6"
   const version3WrapperClassName = isMagicSpecialLayout
     ? "text-center text-black"
     : "text-center text-black -mb-10"

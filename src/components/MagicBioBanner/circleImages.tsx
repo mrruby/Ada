@@ -10,10 +10,13 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/ada_portrait.webp"
           alt=""
           layout="fixed"
-          width={180}
-          height={180}
+          width={200}
+          height={200}
           placeholder="blurred"
           quality={90}
+          className="!-m-2 !h-[200px] !w-[200px] rounded-full"
+          imgClassName="!h-full !w-full !object-cover rounded-full"
+          objectFit="cover"
         />
       )
     case "justyna":
@@ -22,10 +25,13 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/justyna_portrait.webp"
           alt=""
           layout="fixed"
-          width={180}
-          height={180}
+          width={184}
+          height={184}
           placeholder="blurred"
           quality={90}
+          className="!h-full !w-full rounded-full"
+          imgClassName="!h-full !w-full !object-cover rounded-full"
+          objectFit="cover"
         />
       )
     case "dorota":
@@ -34,10 +40,13 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/dorota_portrait.webp"
           alt=""
           layout="fixed"
-          width={180}
-          height={180}
+          width={184}
+          height={184}
           placeholder="blurred"
           quality={90}
+          className="!h-full !w-full rounded-full"
+          imgClassName="!h-full !w-full !object-cover rounded-full"
+          objectFit="cover"
         />
       )
     case "marianna":
@@ -46,10 +55,13 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/marianna_portrait.webp"
           alt=""
           layout="fixed"
-          width={180}
-          height={180}
+          width={184}
+          height={184}
           placeholder="blurred"
           quality={90}
+          className="!h-full !w-full rounded-full"
+          imgClassName="!h-full !w-full !object-cover rounded-full"
+          objectFit="cover"
         />
       )
     case "nicola":
@@ -58,10 +70,13 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/nicola_portrait.webp"
           alt=""
           layout="fixed"
-          width={180}
-          height={180}
+          width={184}
+          height={184}
           placeholder="blurred"
           quality={90}
+          className="!h-full !w-full rounded-full"
+          imgClassName="!h-full !w-full !object-cover rounded-full"
+          objectFit="cover"
         />
       )
     case "dawid":
@@ -70,10 +85,13 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
           src="../../images/dawid_portrait.webp"
           alt=""
           layout="fixed"
-          width={180}
-          height={180}
+          width={184}
+          height={184}
           placeholder="blurred"
           quality={90}
+          className="!h-full !w-full rounded-full"
+          imgClassName="!h-full !w-full !object-cover rounded-full"
+          objectFit="cover"
         />
       )
     default:

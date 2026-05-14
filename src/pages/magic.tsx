@@ -15,6 +15,7 @@ const Conversion = lazy(() => import("components/MagicBelowFold/Conversion"))
 const MainContentSkeleton = () => (
   <>
     <div className="bg-ada-pink8 min-h-[400px]" />
+    <div className="bg-ada-pink8 min-h-[560px]" />
     <div className="bg-ada-white3 min-h-[300px]" />
     <div className="bg-ada-pink8 min-h-[400px]" />
     <div className="bg-ada-white3 min-h-[250px]" />
@@ -25,8 +26,6 @@ const MainContentSkeleton = () => (
 
 const SocialProofSkeleton = () => (
   <>
-    <div className="bg-ada-pink8 min-h-[500px]" />
-    <div className="bg-ada-white3 min-h-[400px]" />
     <div className="bg-ada-pink8 min-h-[500px]" />
     <div className="bg-ada-white3 min-h-[400px]" />
     <div className="bg-ada-magicPurple4 min-h-[600px]" />

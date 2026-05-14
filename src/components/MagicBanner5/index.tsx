@@ -82,11 +82,11 @@ const MagicBanner5 = ({ version }: { version: number }) => {
     <>
       <Section
         className="text-black relative"
-        padding="py-8 md:py-12 px-6"
+        padding="py-6 md:py-8 px-6"
         maxWidth="5xl"
       >
         {version == 1 && (
-          <div className="max-w-4xl mx-auto mb-4 md:mb-10 text-center px-6">
+          <div className="max-w-4xl mx-auto text-center px-4 md:px-6">
             <Typography variant="h2" className="text-ada-black animate-bounce">
               💼
               <br />
@@ -94,12 +94,12 @@ const MagicBanner5 = ({ version }: { version: number }) => {
             </Typography>
             <Typography
               variant="h3"
-              className="text-ada-black font-medium pt-4"
+              className="text-ada-black font-medium pt-2"
             >
               Jak <b>Magda</b> uporządkowała chaos reklamowy i zyskała pewność w
               prowadzeniu kampanii?
             </Typography>
-            <div className="mb-2 relative">
+            <div className="relative -mt-1 mb-1 md:-mt-2">
               <Carousel
                 responsive={carouselResponsive}
                 customLeftArrow={<CustomLeftArrow dark />}
@@ -108,10 +108,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
                 {variant1Images}
               </Carousel>
             </div>
-            <Typography
-              variant="h3"
-              className="text-ada-black font-medium pt-2"
-            >
+            <Typography variant="h3" className="text-ada-black font-medium">
               Przeczytaj, co <b>Magda</b> mówi o <b>MAGIC:</b>
             </Typography>
             <StaticImage
@@ -121,19 +118,19 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               formats={["auto", "webp", "avif"]}
               quality={75}
               width={800}
-              className="max-w-4xl mt-2 mb-4"
+              className="max-w-4xl mt-1 mb-2"
             />
             <Button
               type="button"
               text={<span className="!font-extrabold"> Dołączam!</span>}
               sectionId="magic-package"
               textSize="text-xs md:text-adaBase uppercase text-black"
-              btnStyle="bg-ada-pink8 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl mt-4"
+              btnStyle="bg-ada-pink8 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl mt-3"
             />
           </div>
         )}
         {version == 2 && (
-          <div className="max-w-4xl mx-auto mb-4 md:mb-10 text-center px-6">
+          <div className="max-w-4xl mx-auto text-center px-4 md:px-6">
             <Typography variant="h2" className="text-ada-black animate-bounce">
               👩‍💻
               <br />
@@ -141,12 +138,12 @@ const MagicBanner5 = ({ version }: { version: number }) => {
             </Typography>
             <Typography
               variant="h3"
-              className="text-ada-black font-medium pt-4"
+              className="text-ada-black font-medium pt-2"
             >
               Jak <b>Magda</b> uporządkowała chaos reklamowy i zyskała pewność w
               prowadzeniu kampanii?
             </Typography>
-            <div className="my-2 relative">
+            <div className="relative my-1 md:-mt-1">
               <Carousel
                 responsive={carouselResponsive}
                 customLeftArrow={<CustomLeftArrow dark />}
@@ -157,7 +154,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
             </div>
             <Typography
               variant="h3"
-              className="text-ada-black font-medium py-4"
+              className="text-ada-black font-medium py-2"
             >
               Posłuchaj, co <b>Magda</b> mówi o <b>MAGIC:</b>
             </Typography>
@@ -176,7 +173,7 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               text={<span className="!font-extrabold"> Dołączam!</span>}
               sectionId="magic-package"
               textSize="text-xs md:text-adaBase uppercase text-black"
-              btnStyle="bg-ada-magicPurple4 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl mt-4"
+              btnStyle="bg-ada-magicPurple4 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl mt-3"
             />
           </div>
         )}
