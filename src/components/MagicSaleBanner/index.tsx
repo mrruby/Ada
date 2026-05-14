@@ -35,9 +35,8 @@ const MagicSaleBanner = ({
                     speed={150}
                     pauseDuration={2000}
                   />
-                  {" "}Girls
                   <br />
-                  Inside Club
+                  Girls Inside Club
                 </h1>
                 <StaticImage
                   src="../../images/star-pink.webp"
