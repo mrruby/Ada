@@ -292,7 +292,9 @@ const WyzwanieDaySection = ({
                 </p>
               </div>
               <p
-                className={`mt-6 text-[16px] leading-[120%] text-black lg:text-[18px] ${subtitleExtraPadding}`}
+                className={`mt-6 text-[16px] leading-[120%] text-black lg:text-[18px] ${subtitleExtraPadding} ${
+                  isRight ? "lg:text-right" : "lg:text-left"
+                }`}
               >
                 <span className="block font-bold">{day.titleBold}</span>
                 <span className="mt-1 block font-normal">{day.subtitle}</span>
