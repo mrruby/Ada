@@ -94,7 +94,7 @@ type WyzwanieDay = {
   sectionBg: string
   pillBg: string
   numberBg: string
-  titleBold: string
+  titleBold: React.ReactNode
   subtitle: string
   portrait?: React.ReactNode
   noShadow?: boolean
@@ -171,8 +171,13 @@ const wyzwanieDays: WyzwanieDay[] = [
     sectionBg: "bg-ada-magicYellow",
     pillBg: "bg-ada-magicPurple4",
     numberBg: "bg-black",
-    titleBold:
-      "Obejrzysz nagranie z LIVE, gdzie krok po kroku ustawiałam kampanię sprzedażową",
+    titleBold: (
+      <>
+        Obejrzysz nagranie z LIVE, gdzie krok po kroku ustawiałam kampanię
+        <br />
+        sprzedażową
+      </>
+    ),
     subtitle:
       "To jest serce wyzwania. Nagranie LIVE, na którym pokazuję jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam. Oglądasz i ustawiasz we własnym tempie.",
     portrait: (
