@@ -172,12 +172,12 @@ const wyzwanieDays: WyzwanieDay[] = [
     pillBg: "bg-ada-magicPurple4",
     numberBg: "bg-black",
     titleBold: (
-      <>
+      <span className="inline-block max-w-full text-left">
         <span className="block">
           Obejrzysz nagranie z LIVE, gdzie krok po kroku ustawiałam kampanię
         </span>
         <span className="block">sprzedażową</span>
-      </>
+      </span>
     ),
     subtitle:
       "To jest serce wyzwania. Nagranie LIVE, na którym pokazuję jak krok po kroku ustawić kampanię sprzedażową, w Menedżerze Reklam. Oglądasz i ustawiasz we własnym tempie.",
