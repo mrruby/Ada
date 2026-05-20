@@ -258,7 +258,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                     variant="h2"
                     className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
-                    KLIENTÓW
+                    🎓 SWOJEGO BIZNESU
                   </Typography>
                   <ul className="px-8">
                     <li className="mb-3">
@@ -322,7 +322,7 @@ const MagicWhy = ({ part }: { part: number }) => {
                     variant="h2"
                     className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
                   >
-                    🧑‍🎓 SWOJEGO BIZNESU
+                    🎓 KLIENTÓW
                   </Typography>
                   <ul className="px-8">
                     <li className="mb-3">
