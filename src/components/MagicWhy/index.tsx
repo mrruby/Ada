@@ -253,71 +253,7 @@ const MagicWhy = ({ part }: { part: number }) => {
               <div
                 className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromLeft" : ""}`}
               >
-                <div className="max-w-md bg-ada-white3 py-8 border-[3px] border-ada-magicPurple4 ">
-                  <Typography
-                    variant="h2"
-                    className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
-                  >
-                    KLIENTÓW
-                  </Typography>
-                  <ul className="px-8">
-                    <li className="mb-3">
-                      ✅ dla osób, które
-                      <span className="font-bold">
-                        {" "}
-                        jeszcze nie prowadziły reklam
-                      </span>{" "}
-                      i potrzebują pewnego startu w świecie płatnej promocji
-                    </li>
-                    <li className="mb-3">
-                      ✅ dla tych, którzy{" "}
-                      <span className="font-bold">
-                        boją się, że źle klikną i stracą budżet reklamowy
-                      </span>{" "}
-                      na nieefektywnych kampaniach
-                    </li>
-                    <li className="mb-3">
-                      ✅ które mają{" "}
-                      <span className="font-bold">
-                        pierwsze reklamy za sobą (lub klikały w &quot;promuj
-                        post&quot;)
-                      </span>{" "}
-                      ale nie są zadowolone z wyników
-                    </li>
-                    <li className="mb-3">
-                      ✅ które do tej pory
-                      <span className="font-bold">
-                        {" "}
-                        polegały głównie na działaniach organicznych
-                      </span>{" "}
-                      i chcą bezpiecznie wejść w reklamy
-                    </li>
-                    <li>
-                      ✅{" "}
-                      <span className="font-bold">
-                        {" "}
-                        dla osób, które zlecały reklamy na zewnątrz,
-                      </span>{" "}
-                      ale chcą przejąć kontrolę nad swoim budżetem reklamowym
-                    </li>
-                  </ul>
-                </div>
-                <Button
-                  type="button"
-                  text={
-                    <span className=" !font-extrabold"> WCHODZĘ W TO!</span>
-                  }
-                  sectionId="magic-package"
-                  textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
-                  btnStyle="bg-ada-magicPurple4
-                                      tracking-wide
-                                      p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
-                />
-              </div>
-              <div
-                className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromRight" : ""}`}
-              >
-                <div className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] border-ada-magicPink4">
+                <div className="max-w-md bg-ada-white3 pt-8 py-12 border-[3px] border-ada-magicPurple4">
                   <Typography
                     variant="h2"
                     className="mb-8 text-center animate-bounce uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
@@ -373,6 +309,70 @@ const MagicWhy = ({ part }: { part: number }) => {
                   type="button"
                   text={
                     <span className=" !font-extrabold"> Tak, Dołączam!</span>
+                  }
+                  sectionId="magic-package"
+                  textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
+                  btnStyle="bg-ada-magicPurple4
+                                      tracking-wide
+                                      p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
+                />
+              </div>
+              <div
+                className={`flex flex-col gap-2 items-center ${hasAnimated ? "lg:animate-slideInFromRight" : ""}`}
+              >
+                <div className="max-w-md bg-ada-white3 py-8 border-[3px] border-ada-magicPink4 ">
+                  <Typography
+                    variant="h2"
+                    className="mb-8 text-center uppercase  border-b-[3px]  border-ada-magicGrey2 pb-4"
+                  >
+                    🧑‍🎓 KLIENTÓW
+                  </Typography>
+                  <ul className="px-8">
+                    <li className="mb-3">
+                      ✅ dla osób, które
+                      <span className="font-bold">
+                        {" "}
+                        jeszcze nie prowadziły reklam
+                      </span>{" "}
+                      i potrzebują pewnego startu w świecie płatnej promocji
+                    </li>
+                    <li className="mb-3">
+                      ✅ dla tych, którzy{" "}
+                      <span className="font-bold">
+                        boją się, że źle klikną i stracą budżet reklamowy
+                      </span>{" "}
+                      na nieefektywnych kampaniach
+                    </li>
+                    <li className="mb-3">
+                      ✅ które mają{" "}
+                      <span className="font-bold">
+                        pierwsze reklamy za sobą (lub klikały w &quot;promuj
+                        post&quot;)
+                      </span>{" "}
+                      ale nie są zadowolone z wyników
+                    </li>
+                    <li className="mb-3">
+                      ✅ które do tej pory
+                      <span className="font-bold">
+                        {" "}
+                        polegały głównie na działaniach organicznych
+                      </span>{" "}
+                      i chcą bezpiecznie wejść w reklamy
+                    </li>
+                    <li>
+                      ✅{" "}
+                      <span className="font-bold">
+                        {" "}
+                        dla osób, które zlecały reklamy na zewnątrz,
+                      </span>{" "}
+                      ale chcą przejąć kontrolę nad swoim budżetem reklamowym
+                    </li>
+                  </ul>
+                </div>
+                <Button
+                  type="button"
+                  text={
+                    <span className=" !font-extrabold"> WCHODZĘ W TO!</span>
                   }
                   sectionId="magic-package"
                   textSize="text-xs md:text-adaSubtitleSecondary uppercase text-black"
