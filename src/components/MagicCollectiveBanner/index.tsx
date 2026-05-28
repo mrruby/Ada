@@ -31,9 +31,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               variant="h3"
               className="mt-11 font-anton font-bold text-center"
             >
-              Zwiększ przychody o{" "}
-              <span className="text-ada-orange">40-80%</span> dzięki
-              profesjonalnemu zespołowi marketingowemu
+              Zwiększ swoje zarobki, rozwijaj markę i pozyskuj klientów dzięki reklamom Meta Ads!
             </Typography>
             <Typography
               variant="body"
@@ -47,15 +45,13 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 variant="body"
                 className="font-courier leading-[32px] md:leading-[36px]"
               >
-                ✅ Gotowe kampanie sprzedażowe w{" "}
-                <span className="font-bold">14 dni</span>
+                ✅ Ekspercka wiedza reklamowa i partnerskie podejście do Twojego biznesu
               </Typography>
               <Typography
                 variant="body"
                 className="font-courier leading-[32px] md:leading-[36px]"
               >
-                ✅ Oszczędność <span className="font-bold">20-30h</span>{" "}
-                tygodniowo Twojego czasu
+                ✅ Nie musisz być specjalistką od reklam, by kampanie pracowały dla Ciebie!
               </Typography>
             </div>
             <div className="flex justify-center mt-8">
@@ -63,13 +59,13 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 type="button"
                 text={
                   <span className="font-normal text-ada-orange font-anton text-xs md:text-sm">
-                    SPRAWDŹ, JAK TO DZIAŁA - BEZPŁATNA KONSULTACJA
+                    Chcę poznać szczegóły!
                   </span>
                 }
-                url="https://forms.gle/rLgDQQ6QeSLih7jZ9"
+                sectionId="umawiam-spotkanie"
                 textSize="text-xs md:text-sm"
                 btnStyle="bg-ada-white2
-                      tracking-wide h-[44px] md:h-[52px] 
+                      tracking-wide h-[44px] md:h-[52px]
                       px-4 md:px-6 hover:opacity-90 rounded-full min-w-[130px] border-ada-orange border"
               />
             </div>
@@ -121,14 +117,14 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               </div>
               <div className="space-y-4">
                 <Typography variant="body" className="font-montserrat">
-                  ✅ Profesjonalne kampanie <b>generujące stałe wyniki,</b>
+                  ✅ <b>Strategiczne wsparcie</b> na każdym etapie sprzedaży
                 </Typography>
                 <Typography variant="body" className="font-montserrat">
                   ✅ <b>Czas na rozwój produktów</b> zamiast "kręcenia się" w
                   marketingu
                 </Typography>
                 <Typography variant="body" className="font-montserrat">
-                  ✅ <b>Przewidywalne wyniki i jasny ROI</b> z każdej złotówki
+                  ✅ <b>Przewidywalne wyniki</b> i stabilny przyrost klientów
                 </Typography>
                 <Typography variant="body" className="font-montserrat">
                   ✅<b> Ekspertki,</b> którzy myślą o Twoim biznesie jak o swoim
@@ -244,7 +240,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                     />
                   </div>
                   <p className="mt-2">
-                    Zatrudniają minimum <b>1-2 osoby</b> w swoim zespole
+                    Chcą <b>wspólnie działać</b> nad rozwojem swojej marki
                   </p>
                 </div>
                 <div className="flex gap-2 mt-2">
@@ -311,20 +307,19 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
             {/* Content */}
             <div className="text-center mb-8">
               <Typography variant="body" className="font-bold mb-6">
-                Umów bezpłatną rozmowę wstepną, podczas której:
+                Umów się na niezobowiązującą rozmowę, podczas której:
               </Typography>
               <ul className="max-w-[600px] mx-auto text-left space-y-3">
                 <li className="flex items-start">
                   <span className="mr-2">✅</span>
                   <span>
-                    Dowiesz się dokładnie, ile możesz zyskać i jak to osiągnąć
+                    porozmawiamy o Twoich planach, celach i wyzwaniach w związku z prowadzeniem kampanii
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">✅</span>
                   <span>
-                    Nawet jeśli nie zdecydujesz się na współpracę - wyjdziesz z
-                    planem działania
+                    odpowiemy na pytanie: czy i jak jesteśmy w stanie Ci z tym pomóc! 😉
                   </span>
                 </li>
               </ul>
