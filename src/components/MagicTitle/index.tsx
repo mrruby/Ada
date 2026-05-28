@@ -221,7 +221,7 @@ const MagicTitle = ({ version }: { version: number }) => {
                 Marketing Ads Girls Inside Collective
               </Typography>
               <Typography variant="body" className="mb-6 font-courier">
-                <span className="font-bold">Zwiększ przychody o 40-80%</span>{" "}
+                <span className="font-bold">Zyskaj stabilny przypływ klientów</span>{" "}
                 dzięki
                 <br /> profesjonalnemu zespołowi marketingowemu - bez
                 zatrudniania in-house

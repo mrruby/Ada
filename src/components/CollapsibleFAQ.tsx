@@ -14,9 +14,9 @@ const faqItems = [
       "Nie dajemy gwarancji wyników, bo wolimy realne spojrzenie na sytuację niż puste obietnice. Dlatego przed rozpoczęciem współpracy spotykamy się na wirtualnej kawce, na której rozmawiamy o perspektywach, możliwościach, oczekiwaniach. Tak, zdarza nam się odradzać współprac.",
   },
   {
-    question: "Ile czasu zajmuje uruchomienie pierwszej kampanii?",
+    question: "Czy muszę znać się na reklamach, żeby umówić się na rozmowę?",
     answer:
-      "Pierwszą kampanię ustawiamy w ciągu 2-3 dni roboczych od podpisania umowy. Kolejną - do 5 dni.",
+      'Nie! Zupełnie rozumiemy, że chcesz rozwijać swój biznes dzięki adsom, nawet jeśli do tej pory nie miałaś doświadczenia z reklamami lub klikałaś tylko "Promuj post". Jesteśmy tu po to, by pomóc Ci w tym temacie - bez oceniania, za to z głową pełną pomysłów!',
   },
 ]
 
