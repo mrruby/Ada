@@ -62,6 +62,21 @@ const peopleContent = [
     img: "anna",
   },
   {
+    name: "Paulina Oraczek",
+    title: "Menedżerka projektów i kampanii reklamowych",
+    description: (
+      <>
+        Odpowiadam za to, aby kampanie reklamowe naszych klientów stabilnie{" "}
+        <b>realizowały ich cele biznesowe</b>. Dbając o ciągłość projektów, na
+        bieżąco analizuję wyniki, co pozwala na{" "}
+        <b>stałe ulepszanie procesów sprzedażowych</b>. Specjalizuję się{" "}
+        <b>we wdrażaniu ustalonego planu</b>, gwarantując klientom pełne
+        wsparcie w rozwoju.
+      </>
+    ),
+    img: "paulina",
+  },
+  {
     name: "Papajka",
     title: "Asystentka Nicoli",
     description: <></>,
@@ -105,12 +120,18 @@ const MagicBioBanner2 = ({ version }: { version: number }) => {
             ))}
           </div>
           {version === 1 && (
-            <div className="flex flex-col md:flex-row gap-4 pt-2 mb-8 justify-center relative">
+            <div className="flex flex-col md:flex-row gap-4 pt-8 mb-8 justify-center">
               <PersonBox
                 name={peopleContent[4].name}
                 title={peopleContent[4].title}
                 description={peopleContent[4].description}
                 img={peopleContent[4].img}
+              />
+              <PersonBox
+                name={peopleContent[5].name}
+                title={peopleContent[5].title}
+                description={peopleContent[5].description}
+                img={peopleContent[5].img}
               />
             </div>
           )}

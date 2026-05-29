@@ -127,7 +127,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                   ✅ <b>Przewidywalne wyniki</b> i stabilny przyrost klientów
                 </Typography>
                 <Typography variant="body" className="font-montserrat">
-                  ✅<b> Ekspertki,</b> którzy myślą o Twoim biznesie jak o swoim
+                  ✅<b> Ekspertki,</b> które myślą o Twoim biznesie jak o swoim
                 </Typography>
               </div>
             </div>
@@ -162,7 +162,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 👩‍💻{" "}
                 <span className="font-bold">
                   Łączymy strategię z wykonaniem
-                </span>
+                </span>{" "}
                 - nie tylko doradzamy, ale przede wszystkim wdrażamy i
                 zarządzamy
               </div>
