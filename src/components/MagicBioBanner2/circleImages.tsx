@@ -79,7 +79,7 @@ export const CircleImage = ({ circleKey }: { circleKey: string }) => {
     case "paulina":
       return (
         <StaticImage
-          src="../../images/m4.webp"
+          src="../../images/paulina-kolektyw.webp"
           alt=""
           layout="fixed"
           width={170}
