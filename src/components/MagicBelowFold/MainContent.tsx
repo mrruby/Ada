@@ -5,6 +5,7 @@ import MagicVideo from "components/MagicVideo"
 import MagicBanner from "components/MagicBanner"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicBioBanner from "components/MagicBioBanner"
+import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicWhy from "components/MagicWhy"
 
 const MainContent = () => {
@@ -13,7 +14,7 @@ const MainContent = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicCaseStudies />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+      <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
         <MagicWhy part={9} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
@@ -28,14 +29,17 @@ const MainContent = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicDateBanner version={4} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
-        <MagicBioBanner version={3} />
-      </MaxWithBgColorContainer>
       <div className="bg-magic">
         <MaxWithBgColorContainer bgColor="bg-transparent">
           <MagicWhy part={12} />
         </MaxWithBgColorContainer>
       </div>
+      <MaxWithBgColorContainer bgColor="bg-ada-white3">
+        <MagicBioBanner version={3} />
+      </MaxWithBgColorContainer>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
+        <MagicCommunityOpinions />
+      </MaxWithBgColorContainer>
     </>
   )
 }

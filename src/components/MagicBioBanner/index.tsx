@@ -49,10 +49,22 @@ const PEOPLE_CONTENT = [
 ]
 
 // Responsive people display: flex row on desktop, carousel on mobile
-const PeopleResponsive = ({ showStamp = false }: { showStamp?: boolean }) => (
+const PeopleResponsive = ({
+  showStamp = false,
+  threeTwo = false,
+}: {
+  showStamp?: boolean
+  threeTwo?: boolean
+}) => (
   <>
     {/* Desktop: grid layout */}
-    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 pt-8 justify-items-center items-start">
+    <div
+      className={
+        threeTwo
+          ? "hidden md:flex md:flex-wrap justify-center gap-8 pt-8 items-start max-w-[760px] mx-auto"
+          : "hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-8 pt-8 justify-items-center items-start"
+      }
+    >
       {PEOPLE_CONTENT.map((item) => (
         <PersonBox
           key={item.name}
@@ -191,7 +203,7 @@ const MagicBioBanner = ({ version }: { version: number }) => {
               Meta Ads | Copywriting | Grafika | Koordynacja kampanii | AI i
               automatyzacje
             </Typography>
-            <PeopleResponsive />
+            <PeopleResponsive threeTwo />
             <Typography
               variant="h3"
               className="text-ada-black max-w-[800px] m-auto mt-12"
