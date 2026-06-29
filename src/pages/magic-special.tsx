@@ -34,11 +34,8 @@ const MagicSpecialPage = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-pink8">
         <MagicWhy part={9} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-white3">
-        <MagicDateBanner version={3} layout="magic-special" />
-      </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicDateBanner version={4} layout="magic-special" />
+      <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
+        <MagicDateBanner version={5} layout="magic-special" />
       </MaxWithBgColorContainer>
       <div id="magic-package"></div>
       <MaxWithBgColorContainer bgColor="bg-white">

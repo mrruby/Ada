@@ -334,6 +334,20 @@ const MagicDateBanner = ({
           </div>
         </div>
       )}
+      {version == 5 && (
+        <div className="flex justify-center">
+          <StaticImage
+            loading="eager"
+            src="../../images/magic-unique-2026.webp"
+            alt="Co sprawia, że MAGIC jest wyjątkowy?"
+            placeholder="blurred"
+            width={342}
+            height={555}
+            quality={100}
+            className="w-full max-w-[342px]"
+          />
+        </div>
+      )}
     </Section>
   )
 }
