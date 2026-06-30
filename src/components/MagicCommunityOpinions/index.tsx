@@ -126,38 +126,6 @@ const MagicCommunityOpinions = ({
             />
           </div>
         </div>
-
-        {variant === "default" && (
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
-            <StaticImage
-              src="../../images/magic-landing-2026-opinions-a.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={90}
-              width={733}
-              className="w-full"
-            />
-            <StaticImage
-              src="../../images/magic-landing-2026-opinions-b.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={90}
-              width={1214}
-              className="w-full lg:col-span-2"
-            />
-            <StaticImage
-              src="../../images/magic-landing-2026-opinions-c.webp"
-              alt="Opinia o społeczności MAGIC"
-              placeholder="blurred"
-              formats={["auto", "webp", "avif"]}
-              quality={90}
-              width={1180}
-              className="w-full lg:col-span-3"
-            />
-          </div>
-        )}
       </div>
     </Section>
   )
