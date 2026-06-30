@@ -719,40 +719,40 @@ const MagicUnique2026Section = () => (
 
         {/* arrow: near "co" -> "4 poziomy nauki" */}
         <MagicPinkArrow
-          className="left-[150px] top-[470px] w-[150px]"
-          style={{ transform: "rotate(195deg)" }}
+          className="left-[192px] top-[487px] w-[84px]"
+          style={{ transform: "rotate(-144deg)" }}
         />
         {/* arrow: above "sprawia" -> "na żywo miesięcznie" */}
         <MagicPinkArrow
-          className="left-[395px] top-[470px] w-[130px]"
-          style={{ transform: "rotate(-25deg)" }}
+          className="left-[363px] top-[458px] w-[232px]"
+          style={{ transform: "rotate(-16deg)" }}
         />
         {/* arrow: by "jest" -> between Circle and "wsparcie techniczne" */}
         <MagicPinkArrow
-          className="left-[470px] top-[590px] w-[130px]"
-          style={{ transform: "rotate(15deg)" }}
+          className="left-[541px] top-[590px] w-[80px]"
+          style={{ transform: "rotate(9deg)" }}
         />
         {/* arrow: above "ekspertów" -> down to it */}
         <MagicPinkArrow
-          className="left-[300px] top-[885px] w-[120px]"
-          style={{ transform: "rotate(75deg)" }}
+          className="left-[307px] top-[891px] w-[90px]"
+          style={{ transform: "rotate(104deg)" }}
         />
         {/* arrow: from "W" of wyjątkowy -> "asystentka ai" */}
         <MagicPinkArrow
-          className="left-[180px] top-[695px] w-[150px]"
-          style={{ transform: "rotate(140deg)" }}
+          className="left-[134px] top-[688px] w-[157px]"
+          style={{ transform: "rotate(115deg)" }}
         />
         {/* black arrow: from "pasek progresu" note -> "0%" on levels screenshot */}
         <MagicBlackArrow
-          className="left-[170px] top-[290px] w-[150px]"
-          style={{ transform: "rotate(190deg)" }}
+          className="left-[181px] top-[339px] w-[177px]"
+          style={{ transform: "rotate(-167deg)" }}
         />
         {/* black arrow + label: under "wyjątkowy" -> kapibara "Hej! Mam małą rozkminę" screenshot */}
         <MagicBlackArrow
-          className="left-[195px] top-[675px] w-[140px]"
-          style={{ transform: "rotate(120deg)" }}
+          className="left-[391px] top-[689px] w-[143px]"
+          style={{ transform: "rotate(14deg)" }}
         />
-        <p className="pointer-events-none absolute left-[235px] top-[665px] z-20 hidden w-[120px] text-center text-[7px] font-caveat leading-tight lg:block">
+        <p className="pointer-events-none absolute left-[372px] top-[660px] z-20 hidden w-[120px] text-center text-[7px] font-caveat leading-tight lg:block">
           przykładowe pytania i odpowiedzi
         </p>
       </div>
@@ -772,10 +772,11 @@ const MagicDateBanner = ({
   layout = "default",
 }: MagicDateBannerProps) => {
   const isMagicSpecialLayout = layout === "magic-special"
-  const sectionClassName = version === 3 || version === 4 ? "" : "mb-12"
+  const sectionClassName =
+    version === 3 || version === 4 || version === 5 ? "" : "mb-12"
   const sectionPadding =
     version === 5
-      ? "py-8 md:py-12 px-0"
+      ? "pt-8 md:pt-12 pb-0 px-0"
       : isMagicSpecialLayout && version === 3
         ? "pt-8 md:pt-12 pb-2 md:pb-4 px-6"
         : isMagicSpecialLayout && version === 4

@@ -426,13 +426,13 @@ body {
 @media (min-width: 1024px) {
   .magic-unique-poster {
     width: 1024px;
-    height: 1830px;
+    height: 1769px;
     max-width: none;
   }
 
   .magic-unique-poster-inner {
     width: 800px;
-    height: 1430px;
+    height: 1382px;
     scale: 1.28;
   }
 }
@@ -440,7 +440,7 @@ body {
 @media (min-width: 1280px) {
   .magic-unique-poster {
     width: 1280px;
-    height: 2288px;
+    height: 2211px;
   }
 
   .magic-unique-poster-inner {
@@ -458,7 +458,7 @@ body {
 @media (min-width: 1536px) {
   .magic-unique-poster {
     width: 1440px;
-    height: 2574px;
+    height: 2488px;
   }
 
   .magic-unique-poster-inner {

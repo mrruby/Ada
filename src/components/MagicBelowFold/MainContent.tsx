@@ -23,7 +23,7 @@ const MainContent = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
         <MagicDateBanner version={5} />
       </MaxWithBgColorContainer>
-      <div className="bg-magic -mt-12">
+      <div className="bg-magic">
         <MaxWithBgColorContainer bgColor="bg-transparent">
           <MagicWhy part={12} />
         </MaxWithBgColorContainer>
