@@ -127,6 +127,448 @@ const magicTilesContent5 = [
   },
 ]
 
+const magicUniqueLearningLevels = [
+  {
+    level: "0",
+    title: "ADS Starter",
+    color: "bg-ada-magicPink4",
+  },
+  {
+    level: "1",
+    title: "ADS Beginner",
+    color: "bg-ada-magicPurple4",
+  },
+  {
+    level: "2",
+    title: "ADS Analyst",
+    color: "bg-ada-magicGrey",
+  },
+  {
+    level: "3",
+    title: "ADS Strategist",
+    color: "bg-ada-magicOrange2",
+  },
+  {
+    level: "4",
+    title: "ADS Specialist",
+    color: "bg-ada-magicPink4",
+  },
+  {
+    level: "5",
+    title: "AI i automatyzacje",
+    color: "bg-ada-magicPurple4",
+  },
+]
+
+const magicUniqueExperts = [
+  {
+    image: "dawid",
+    label: "automatyzacje i AI",
+    className:
+      "left-[10px] bottom-[8px] w-[90px] rotate-[-5deg] lg:left-[95px] lg:bottom-[10px]",
+    imageClassName: "h-[72px] w-[72px]",
+  },
+  {
+    image: "ada",
+    label: "CEO Meta Ads queen",
+    className:
+      "left-[105px] bottom-[16px] w-[88px] rotate-[-3deg] lg:left-[250px] lg:bottom-[18px]",
+    imageClassName: "h-[90px] w-[90px]",
+  },
+  {
+    image: "nicola",
+    label: "strategie i planowanie",
+    className:
+      "left-[198px] bottom-[12px] w-[104px] rotate-[3deg] lg:left-[396px] lg:bottom-[14px] lg:w-[124px]",
+    imageClassName: "h-[74px] w-[74px]",
+  },
+  {
+    image: "justyna",
+    label: "copywriting",
+    className:
+      "left-[302px] bottom-[18px] w-[70px] rotate-[6deg] lg:left-[550px] lg:bottom-[20px]",
+    imageClassName: "h-[66px] w-[66px]",
+  },
+  {
+    image: "dorota",
+    label: "grafika",
+    className:
+      "left-[360px] bottom-[10px] w-[64px] rotate-[-4deg] lg:left-[660px] lg:bottom-[12px]",
+    imageClassName: "h-[68px] w-[68px]",
+  },
+]
+
+const HandwrittenNote = ({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode
+  className?: string
+}) => (
+  <p
+    className={`font-anie font-semibold leading-none text-black ${className}`}
+    style={{
+      textShadow:
+        "0.35px 0 0 rgba(0,0,0,0.24), -0.2px 0 0 rgba(0,0,0,0.18), 0 0.35px 0 rgba(0,0,0,0.2)",
+    }}
+  >
+    {children}
+  </p>
+)
+
+const MagicUniqueCard = ({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode
+  className?: string
+}) => (
+  <div
+    className={`rounded-xl border border-black/10 bg-white p-3 shadow-[0_12px_0_rgba(0,0,0,0.08)] ${className}`}
+  >
+    {children}
+  </div>
+)
+
+const MagicUniqueLearningCard = ({
+  className = "",
+}: {
+  className?: string
+}) => (
+  <MagicUniqueCard
+    className={`w-[118px] rotate-[-5deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] ${className}`}
+  >
+    <div className="mb-1 flex items-center justify-between border-b border-black/10 pb-1 text-[5px] font-semibold uppercase">
+      <span>Poziomy nauki</span>
+      <span>MAGIC</span>
+    </div>
+    <div className="space-y-[3px]">
+      {magicUniqueLearningLevels.map((item) => (
+        <div key={item.title} className="flex items-center gap-2">
+          <span
+            className={`flex h-[11px] w-[11px] flex-shrink-0 items-center justify-center rounded-[2px] ${item.color} text-[6px] font-bold leading-none`}
+          >
+            {item.level}
+          </span>
+          <span className="text-[5px] font-semibold uppercase leading-tight">
+            Poziom {item.level}: {item.title}
+          </span>
+        </div>
+      ))}
+    </div>
+  </MagicUniqueCard>
+)
+
+const MagicUniqueLevelPreview = ({
+  title,
+  color,
+  className = "",
+}: {
+  title: string
+  color: string
+  className?: string
+}) => (
+  <MagicUniqueCard
+    className={`w-[86px] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] ${className}`}
+  >
+    <div className="mb-1 h-[4px] w-10 rounded-full bg-black/10" />
+    <div
+      className={`flex h-[40px] items-center justify-center rounded-[5px] ${color} p-2 text-center`}
+    >
+      <p className="text-[7px] font-extrabold uppercase leading-tight">
+        {title}
+      </p>
+    </div>
+    <div className="mt-2 space-y-[3px]">
+      <div className="h-[3px] w-full rounded-full bg-black/10" />
+      <div className="h-[3px] w-2/3 rounded-full bg-black/10" />
+    </div>
+  </MagicUniqueCard>
+)
+
+const MagicUniqueCalendarCard = ({
+  day,
+  title,
+  time,
+  className = "",
+}: {
+  day: string
+  title: string
+  time: string
+  className?: string
+}) => (
+  <MagicUniqueCard
+    className={`flex items-start gap-2 rounded-[7px] p-2 outline outline-[2px] outline-white/80 shadow-[0_5px_0_rgba(0,0,0,0.08)] ${className}`}
+  >
+    <div className="flex h-[23px] w-[23px] flex-shrink-0 flex-col items-center justify-center rounded-[4px] bg-ada-white3 text-center">
+      <span className="text-[8px] font-bold leading-none">{day}</span>
+      <span className="text-[5px] uppercase leading-none">Jun</span>
+    </div>
+    <div>
+      <p className="text-[7px] font-bold leading-tight">{title}</p>
+      <p className="mt-1 text-[6px] text-black/60">{time}</p>
+    </div>
+  </MagicUniqueCard>
+)
+
+const MagicUniquePosterImage = ({
+  image,
+}: {
+  image: string
+}): JSX.Element | null => {
+  switch (image) {
+    case "dawid":
+      return (
+        <StaticImage
+          src="../../images/dawid_portrait.webp"
+          alt=""
+          layout="fixed"
+          width={76}
+          height={76}
+          placeholder="blurred"
+          quality={90}
+          className="!h-full !w-full"
+          imgClassName="!h-full !w-full !object-cover"
+        />
+      )
+    case "ada":
+      return (
+        <StaticImage
+          src="../../images/ada_magic.webp"
+          alt=""
+          layout="fixed"
+          width={92}
+          height={92}
+          placeholder="blurred"
+          quality={90}
+          className="!h-full !w-full"
+          imgClassName="!h-full !w-full !object-cover"
+        />
+      )
+    case "nicola":
+      return (
+        <StaticImage
+          src="../../images/nicola_portrait.webp"
+          alt=""
+          layout="fixed"
+          width={76}
+          height={76}
+          placeholder="blurred"
+          quality={90}
+          className="!h-full !w-full"
+          imgClassName="!h-full !w-full !object-cover"
+        />
+      )
+    case "justyna":
+      return (
+        <StaticImage
+          src="../../images/justyna.png"
+          alt=""
+          layout="fixed"
+          width={68}
+          height={68}
+          placeholder="blurred"
+          quality={90}
+          className="!h-full !w-full"
+          imgClassName="!h-full !w-full !object-cover"
+        />
+      )
+    case "dorota":
+      return (
+        <StaticImage
+          src="../../images/dorota.png"
+          alt=""
+          layout="fixed"
+          width={70}
+          height={70}
+          placeholder="blurred"
+          quality={90}
+          className="!h-full !w-full"
+          imgClassName="!h-full !w-full !object-cover"
+        />
+      )
+    default:
+      return null
+  }
+}
+
+const MagicUniqueExpert = ({
+  image,
+  label,
+  className = "",
+  imageClassName = "",
+}: {
+  image: string
+  label: string
+  className?: string
+  imageClassName?: string
+}) => (
+  <div className={`absolute flex flex-col items-center ${className}`}>
+    <div
+      className={`overflow-hidden rounded-full border-[3px] border-white bg-ada-pink8 shadow-md ${imageClassName}`}
+    >
+      <MagicUniquePosterImage image={image} />
+    </div>
+    <span className="relative z-10 -mt-3 inline-block max-w-[118px] rounded-full bg-ada-pink8 px-2 py-[3px] text-center text-[8px] font-extrabold uppercase leading-tight shadow-md lg:max-w-none lg:whitespace-nowrap">
+      {label}
+    </span>
+  </div>
+)
+
+const MagicUnique2026Section = () => (
+  <div className="flex justify-center">
+    <div
+      data-testid="magic-unique-poster"
+      className="relative h-[441px] w-[342px] max-w-full overflow-visible sm:h-[655px] sm:w-[507px] md:h-[805px] md:w-[624px] lg:h-[755px] lg:w-full"
+    >
+      <div className="absolute left-0 top-0 h-[555px] w-[430px] origin-top-left overflow-hidden bg-ada-magicYellow text-ada-black scale-[0.795] sm:scale-[1.18] md:scale-[1.45] lg:h-[590px] lg:w-[800px] lg:scale-[1.28]">
+        <MagicUniqueLearningCard className="absolute left-[39px] top-[73px] lg:left-[120px]" />
+        <MagicUniqueLevelPreview
+          title="Poziom 3: Ads Strategist"
+          color="bg-ada-magicPink4"
+          className="absolute left-[150px] top-[35px] rotate-[-2deg] lg:left-[300px]"
+        />
+        <MagicUniqueLevelPreview
+          title="Poziom 0: Ads Starter"
+          color="bg-ada-magicPurple4"
+          className="absolute left-[198px] top-[86px] rotate-[5deg] lg:left-[360px]"
+        />
+
+        <MagicUniqueCalendarCard
+          day="2"
+          title="Tworzenie asystenta do generowania raportów reklamowych z pomocą Excela i Canvy"
+          time="11:00 - 12:00"
+          className="absolute left-[261px] top-[42px] w-[125px] rotate-[-6deg] lg:left-[505px]"
+        />
+        <MagicUniqueCard className="absolute left-[265px] top-[90px] w-[120px] rotate-[5deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:left-[520px]">
+          <p className="text-[5px] font-semibold text-black/60">
+            Asystentka - POMOC Magic w Ogłoszeniach
+          </p>
+          <p className="mt-1 truncate text-[6px] font-semibold">
+            Hej dziewczyny! Czerwiec będzie...
+          </p>
+          <div className="mt-1 rounded-[5px] bg-ada-pink8 p-2 text-center font-anton text-[16px] uppercase leading-none text-ada-pink7">
+            Rozkład jazdy
+            <br />
+            na czerwiec
+          </div>
+        </MagicUniqueCard>
+        <MagicUniqueCalendarCard
+          day="21"
+          title="Dopsuj tekst AI do głosu marki"
+          time="17:00 - 18:00"
+          className="absolute left-[309px] top-[169px] z-20 w-[91px] rotate-[1deg] lg:left-[620px]"
+        />
+        <MagicUniqueCalendarCard
+          day="29"
+          title="Konsultacje grupowe z Nicolą"
+          time="11:00 - 12:30"
+          className="absolute left-[338px] top-[199px] z-30 w-[82px] rotate-[-7deg] lg:left-[685px]"
+        />
+
+        <span className="absolute left-[55px] top-[154px] text-[16px] lg:left-[125px]">
+          📝
+        </span>
+        <HandwrittenNote className="absolute left-[72px] top-[188px] text-[23px] uppercase lg:left-[115px] lg:top-[188px]">
+          4 poziomy
+          <br />
+          nauki
+        </HandwrittenNote>
+        <HandwrittenNote className="absolute left-[178px] top-[164px] max-w-[82px] rotate-[-8deg] text-[13px] leading-[0.9] lg:left-[260px] lg:top-[160px] lg:max-w-[110px]">
+          parę prostych kliknięć i działasz
+        </HandwrittenNote>
+        <span className="absolute left-[252px] top-[190px] text-[18px] lg:left-[382px] lg:top-[181px]">
+          🧙
+        </span>
+        <HandwrittenNote className="absolute left-[270px] top-[204px] text-[21px] uppercase lg:left-[475px] lg:top-[206px]">
+          5 spotkań
+          <br />
+          <span className="text-[12px] normal-case">na żywo miesięcznie</span>
+        </HandwrittenNote>
+
+        <MagicUniqueCard className="absolute left-[39px] top-[263px] w-[83px] rotate-[-4deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:left-[135px]">
+          <p className="text-[5px] font-semibold text-black/60">New message</p>
+          <p className="mt-1 text-[7px] font-bold">To: Kapibara Barbara</p>
+          <div className="mt-3 h-[14px] w-full rounded-full bg-black/10" />
+        </MagicUniqueCard>
+
+        <div className="absolute left-[139px] top-[225px] z-10 w-[132px] text-center lg:left-[334px] lg:top-[205px]">
+          <h2 className="font-anton text-[30px] uppercase leading-[0.95] text-black">
+            Co sprawia, że
+            <br />
+            <span className="my-[2px] inline-block bg-white px-1 text-ada-pink7">
+              MAGIC
+            </span>{" "}
+            jest
+            <br />
+            wyjątkowy?
+          </h2>
+        </div>
+
+        <div className="absolute left-[48px] top-[350px] w-[83px] lg:left-[145px] lg:top-[350px]">
+          <p className="text-[18px] leading-none">🤖</p>
+          <HandwrittenNote className="mt-1 text-[22px] uppercase">
+            Asystentka AI
+          </HandwrittenNote>
+          <p className="mt-1 text-[8px] font-semibold leading-tight">
+            wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
+            bolączką
+          </p>
+        </div>
+
+        <div className="absolute left-[310px] top-[226px] w-[78px] text-center lg:left-[595px] lg:top-[272px] lg:w-[125px]">
+          <span className="absolute left-[-12px] top-[-18px] text-[22px]">
+            ✍️
+          </span>
+          <HandwrittenNote className="text-[20px] uppercase leading-none">
+            Konsultacje
+            <br />
+            pisemne na
+            <br />
+            Circle
+          </HandwrittenNote>
+          <p className="mt-2 text-[8px] font-semibold leading-tight lg:mx-auto lg:w-[118px]">
+            wsparcie techniczne przy wdrażaniu konkretnych rozwiązań reklamowych
+          </p>
+        </div>
+
+        <MagicUniqueCard className="absolute left-[258px] top-[312px] w-[120px] rotate-[3deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:left-[505px] lg:top-[390px]">
+          <p className="text-[5px] font-semibold text-black/60">
+            Promocje z AI - 8 Dec 2025
+          </p>
+          <p className="mt-1 text-[7px] font-semibold leading-tight">
+            Roksana! Paczek koniecznie zwiększ grupę ciepłą...
+          </p>
+          <div className="mt-2 space-y-[3px]">
+            <div className="h-[3px] w-full rounded-full bg-black/10" />
+            <div className="h-[3px] w-4/5 rounded-full bg-black/10" />
+          </div>
+        </MagicUniqueCard>
+
+        <div className="absolute left-[160px] top-[382px] w-[112px] text-center lg:left-[350px] lg:top-[404px] lg:w-[122px]">
+          <HandwrittenNote className="text-[22px] uppercase">
+            5 ekspertów
+          </HandwrittenNote>
+          <p className="mt-1 text-[8px] font-semibold leading-tight">
+            pomogą Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
+            automatyzacjach
+          </p>
+        </div>
+
+        {magicUniqueExperts.map((expert) => (
+          <MagicUniqueExpert
+            key={expert.label}
+            image={expert.image}
+            label={expert.label}
+            className={expert.className}
+            imageClassName={expert.imageClassName}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+)
+
 type MagicDateBannerLayout = "default" | "magic-special"
 
 interface MagicDateBannerProps {
@@ -141,11 +583,13 @@ const MagicDateBanner = ({
   const isMagicSpecialLayout = layout === "magic-special"
   const sectionClassName = version === 3 || version === 4 ? "" : "mb-12"
   const sectionPadding =
-    isMagicSpecialLayout && version === 3
-      ? "pt-8 md:pt-12 pb-2 md:pb-4 px-6"
-      : isMagicSpecialLayout && version === 4
-        ? "pt-8 md:pt-12 px-6"
-        : "py-8 md:py-12 px-6"
+    version === 5
+      ? "py-8 md:py-12 px-0"
+      : isMagicSpecialLayout && version === 3
+        ? "pt-8 md:pt-12 pb-2 md:pb-4 px-6"
+        : isMagicSpecialLayout && version === 4
+          ? "pt-8 md:pt-12 px-6"
+          : "py-8 md:py-12 px-6"
   const version3WrapperClassName = isMagicSpecialLayout
     ? "text-center text-black"
     : "text-center text-black -mb-10"
@@ -334,20 +778,7 @@ const MagicDateBanner = ({
           </div>
         </div>
       )}
-      {version == 5 && (
-        <div className="flex justify-center">
-          <StaticImage
-            loading="eager"
-            src="../../images/magic-unique-2026.webp"
-            alt="Co sprawia, że MAGIC jest wyjątkowy?"
-            placeholder="blurred"
-            width={342}
-            height={555}
-            quality={100}
-            className="w-full max-w-[342px]"
-          />
-        </div>
-      )}
+      {version == 5 && <MagicUnique2026Section />}
     </Section>
   )
 }
