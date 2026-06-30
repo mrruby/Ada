@@ -426,19 +426,19 @@ const MagicPinkArrow = ({
   style?: React.CSSProperties
 }) => (
   <svg
-    viewBox="0 0 120 56"
+    viewBox="0 0 120 90"
     fill="none"
     className={`pointer-events-none absolute z-20 hidden lg:block ${className}`}
     style={style}
   >
     <path
-      d="M6 30 C 22 10 36 46 52 28 S 84 8 104 26"
+      d="M10 12 C 78 2 104 34 80 72"
       stroke="#FF00A6"
       strokeWidth="3.5"
       strokeLinecap="round"
     />
     <path
-      d="M104 26 L 92 21 M104 26 L 95 36"
+      d="M80 72 L 72 56 M80 72 L 96 64"
       stroke="#FF00A6"
       strokeWidth="3.5"
       strokeLinecap="round"
@@ -574,7 +574,7 @@ const MagicUnique2026Section = () => (
           5 spotkań
           <br />
           <span
-            className="text-[12px] normal-case"
+            className="text-[16px] normal-case"
             style={{ fontFamily: '"Caveat", cursive', fontWeight: 400 }}
           >
             na żywo miesięcznie
@@ -620,7 +620,7 @@ const MagicUnique2026Section = () => (
           >
             Asystentka AI
           </HandwrittenNote>
-          <p className="mt-1 text-[8px] font-caveat leading-tight">
+          <p className="mt-1 text-[12px] font-caveat leading-tight">
             wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
             bolączką
           </p>
@@ -640,7 +640,7 @@ const MagicUnique2026Section = () => (
             <br />
             Circle
           </HandwrittenNote>
-          <p className="mt-2 text-[8px] font-caveat leading-tight lg:mx-auto lg:w-[118px]">
+          <p className="mt-2 text-[12px] font-caveat leading-tight lg:mx-auto lg:w-[150px]">
             wsparcie techniczne przy wdrażaniu konkretnych rozwiązań reklamowych
           </p>
         </div>
@@ -689,7 +689,7 @@ const MagicUnique2026Section = () => (
           >
             5 ekspertów
           </HandwrittenNote>
-          <p className="mt-1 text-[8px] font-caveat leading-tight">
+          <p className="mt-1 text-[12px] font-caveat leading-tight">
             pomogą Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
             automatyzacjach
           </p>
@@ -717,42 +717,42 @@ const MagicUnique2026Section = () => (
           />
         </div>
 
-        {/* arrow: near "co" -> "4 poziomy nauki" */}
+        {/* PINK 1: from heading (top-left) -> "4 poziomy nauki" note (up-left / NW) */}
         <MagicPinkArrow
-          className="left-[150px] top-[470px] w-[150px]"
-          style={{ transform: "rotate(195deg)" }}
+          className="left-[150px] top-[455px] w-[120px]"
+          style={{ transform: "rotate(175deg)" }}
         />
-        {/* arrow: above "sprawia" -> "na żywo miesięcznie" */}
+        {/* PINK 2: from heading (top-right) -> "na żywo miesięcznie" note (up-right / NE) */}
         <MagicPinkArrow
-          className="left-[395px] top-[470px] w-[130px]"
-          style={{ transform: "rotate(-25deg)" }}
+          className="left-[470px] top-[455px] w-[120px]"
+          style={{ transform: "rotate(265deg)" }}
         />
-        {/* arrow: by "jest" -> between Circle and "wsparcie techniczne" */}
+        {/* PINK 3: from heading (right) -> "Konsultacje pisemne na Circle / wsparcie techniczne" (right / E) */}
         <MagicPinkArrow
-          className="left-[470px] top-[590px] w-[130px]"
-          style={{ transform: "rotate(15deg)" }}
+          className="left-[480px] top-[595px] w-[120px]"
+          style={{ transform: "rotate(315deg)" }}
         />
-        {/* arrow: above "ekspertów" -> down to it */}
+        {/* PINK 4: from below heading -> "5 ekspertów" note (down / S) */}
         <MagicPinkArrow
-          className="left-[300px] top-[885px] w-[120px]"
-          style={{ transform: "rotate(75deg)" }}
+          className="left-[330px] top-[770px] w-[120px]"
+          style={{ transform: "rotate(45deg)" }}
         />
-        {/* arrow: from "W" of wyjątkowy -> "asystentka ai" */}
+        {/* PINK 5: from heading (lower-left) -> "Asystentka AI" note (down-left / SW) */}
         <MagicPinkArrow
-          className="left-[180px] top-[695px] w-[150px]"
-          style={{ transform: "rotate(140deg)" }}
+          className="left-[170px] top-[670px] w-[120px]"
+          style={{ transform: "rotate(90deg)" }}
         />
-        {/* black arrow: from "pasek progresu" note -> "0%" on levels screenshot */}
+        {/* BLACK 1: from "pasek progresu" note -> "0%" on levels screenshot (up-left / NW) */}
         <MagicBlackArrow
-          className="left-[170px] top-[290px] w-[150px]"
-          style={{ transform: "rotate(190deg)" }}
+          className="left-[140px] top-[200px] w-[170px]"
+          style={{ transform: "rotate(175deg)" }}
         />
-        {/* black arrow + label: under "wyjątkowy" -> kapibara "Hej! Mam małą rozkminę" screenshot */}
+        {/* BLACK 2: from "przykładowe pytania" label -> kapibara screenshot (down-left / SW) */}
         <MagicBlackArrow
-          className="left-[195px] top-[675px] w-[140px]"
-          style={{ transform: "rotate(120deg)" }}
+          className="left-[150px] top-[610px] w-[110px]"
+          style={{ transform: "rotate(110deg)" }}
         />
-        <p className="pointer-events-none absolute left-[235px] top-[665px] z-20 hidden w-[120px] text-center text-[7px] font-caveat leading-tight lg:block">
+        <p className="pointer-events-none absolute left-[205px] top-[600px] z-20 hidden w-[120px] text-center text-[11px] font-caveat leading-tight lg:block">
           przykładowe pytania i odpowiedzi
         </p>
       </div>
