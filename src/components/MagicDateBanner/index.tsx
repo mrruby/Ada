@@ -201,15 +201,18 @@ const magicUniqueExperts = [
 const HandwrittenNote = ({
   children,
   className = "",
+  style,
 }: {
   children: React.ReactNode
   className?: string
+  style?: React.CSSProperties
 }) => (
   <p
     className={`font-anie font-semibold leading-none text-black ${className}`}
     style={{
       textShadow:
         "0.35px 0 0 rgba(0,0,0,0.24), -0.2px 0 0 rgba(0,0,0,0.18), 0 0.35px 0 rgba(0,0,0,0.2)",
+      ...style,
     }}
   >
     {children}
@@ -415,6 +418,64 @@ const MagicUniqueExpert = ({
   </div>
 )
 
+const MagicPinkArrow = ({
+  className = "",
+  style,
+}: {
+  className?: string
+  style?: React.CSSProperties
+}) => (
+  <svg
+    viewBox="0 0 120 56"
+    fill="none"
+    className={`pointer-events-none absolute z-20 hidden lg:block ${className}`}
+    style={style}
+  >
+    <path
+      d="M6 30 C 22 10 36 46 52 28 S 84 8 104 26"
+      stroke="#FF00A6"
+      strokeWidth="3.5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M104 26 L 92 21 M104 26 L 95 36"
+      stroke="#FF00A6"
+      strokeWidth="3.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
+
+const MagicBlackArrow = ({
+  className = "",
+  style,
+}: {
+  className?: string
+  style?: React.CSSProperties
+}) => (
+  <svg
+    viewBox="0 0 120 90"
+    fill="none"
+    className={`pointer-events-none absolute z-20 hidden lg:block ${className}`}
+    style={style}
+  >
+    <path
+      d="M10 12 C 78 2 104 34 80 72"
+      stroke="#000000"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+    <path
+      d="M80 72 L 72 56 M80 72 L 96 64"
+      stroke="#000000"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
+
 const MagicUnique2026Section = () => (
   <div className="flex justify-center">
     <div
@@ -492,21 +553,32 @@ const MagicUnique2026Section = () => (
         <span className="absolute left-[55px] top-[154px] text-[16px] lg:left-[70px] lg:top-[430px] lg:text-[18px]">
           📝
         </span>
-        <HandwrittenNote className="absolute left-[72px] top-[188px] text-[23px] uppercase lg:left-[112px] lg:top-[430px] lg:text-[27px]">
+        <HandwrittenNote
+          className="absolute left-[72px] top-[188px] text-[23px] uppercase lg:left-[112px] lg:top-[430px] lg:text-[27px]"
+          style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+        >
           4 poziomy
           <br />
           nauki
         </HandwrittenNote>
         <HandwrittenNote className="absolute left-[170px] top-[170px] max-w-[96px] rotate-[-8deg] text-[15px] leading-[0.92] md:max-w-[112px] md:text-[16px] lg:left-[300px] lg:top-[430px] lg:max-w-[155px] lg:text-[17px]">
-          parę prostych kliknięć i działasz
+          pasek progresu ułatwiający naukę
         </HandwrittenNote>
         <span className="absolute left-[252px] top-[190px] text-[18px] lg:left-[460px] lg:top-[442px] lg:text-[19px]">
-          🧙
+          👩‍💻
         </span>
-        <HandwrittenNote className="absolute left-[270px] top-[204px] text-[21px] uppercase lg:left-[488px] lg:top-[430px] lg:text-[27px]">
+        <HandwrittenNote
+          className="absolute left-[270px] top-[204px] text-[21px] uppercase lg:left-[488px] lg:top-[430px] lg:text-[27px]"
+          style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+        >
           5 spotkań
           <br />
-          <span className="text-[12px] normal-case">na żywo miesięcznie</span>
+          <span
+            className="text-[12px] normal-case"
+            style={{ fontFamily: '"Caveat", cursive', fontWeight: 400 }}
+          >
+            na żywo miesięcznie
+          </span>
         </HandwrittenNote>
 
         <div className="absolute left-[35px] top-[610px] hidden w-[165px] lg:block">
@@ -541,28 +613,34 @@ const MagicUnique2026Section = () => (
         </div>
 
         <div className="absolute left-[48px] top-[350px] w-[83px] lg:left-[92px] lg:top-[760px] lg:w-[190px]">
-          <p className="text-[18px] leading-none">🤖</p>
-          <HandwrittenNote className="mt-1 text-[22px] uppercase">
+          <p className="text-center text-[18px] leading-none">🤖</p>
+          <HandwrittenNote
+            className="mt-1 text-[22px] uppercase"
+            style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+          >
             Asystentka AI
           </HandwrittenNote>
-          <p className="mt-1 text-[8px] font-semibold leading-tight">
+          <p className="mt-1 text-[8px] font-caveat leading-tight">
             wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
             bolączką
           </p>
         </div>
 
         <div className="absolute left-[310px] top-[226px] w-[78px] text-center lg:left-[585px] lg:top-[570px] lg:w-[175px]">
-          <span className="absolute left-[-12px] top-[-18px] text-[22px]">
-            ✍️
+          <span className="absolute left-1/2 top-[-26px] -translate-x-1/2 text-[22px]">
+            ✍🏻
           </span>
-          <HandwrittenNote className="text-[20px] uppercase leading-none">
+          <HandwrittenNote
+            className="text-[20px] uppercase leading-none"
+            style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+          >
             Konsultacje
             <br />
             pisemne na
             <br />
             Circle
           </HandwrittenNote>
-          <p className="mt-2 text-[8px] font-semibold leading-tight lg:mx-auto lg:w-[118px]">
+          <p className="mt-2 text-[8px] font-caveat leading-tight lg:mx-auto lg:w-[118px]">
             wsparcie techniczne przy wdrażaniu konkretnych rozwiązań reklamowych
           </p>
         </div>
@@ -605,10 +683,13 @@ const MagicUnique2026Section = () => (
         </div>
 
         <div className="absolute left-[160px] top-[382px] w-[112px] text-center lg:left-[210px] lg:top-[950px] lg:w-[245px]">
-          <HandwrittenNote className="text-[22px] uppercase lg:text-[24px]">
+          <HandwrittenNote
+            className="text-[22px] uppercase lg:text-[24px]"
+            style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+          >
             5 ekspertów
           </HandwrittenNote>
-          <p className="mt-1 text-[8px] font-semibold leading-tight">
+          <p className="mt-1 text-[8px] font-caveat leading-tight">
             pomogą Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
             automatyzacjach
           </p>
@@ -635,6 +716,45 @@ const MagicUnique2026Section = () => (
             imgClassName="!object-contain"
           />
         </div>
+
+        {/* arrow: near "co" -> "4 poziomy nauki" */}
+        <MagicPinkArrow
+          className="left-[150px] top-[470px] w-[150px]"
+          style={{ transform: "rotate(195deg)" }}
+        />
+        {/* arrow: above "sprawia" -> "na żywo miesięcznie" */}
+        <MagicPinkArrow
+          className="left-[395px] top-[470px] w-[130px]"
+          style={{ transform: "rotate(-25deg)" }}
+        />
+        {/* arrow: by "jest" -> between Circle and "wsparcie techniczne" */}
+        <MagicPinkArrow
+          className="left-[470px] top-[590px] w-[130px]"
+          style={{ transform: "rotate(15deg)" }}
+        />
+        {/* arrow: above "ekspertów" -> down to it */}
+        <MagicPinkArrow
+          className="left-[300px] top-[885px] w-[120px]"
+          style={{ transform: "rotate(75deg)" }}
+        />
+        {/* arrow: from "W" of wyjątkowy -> "asystentka ai" */}
+        <MagicPinkArrow
+          className="left-[180px] top-[695px] w-[150px]"
+          style={{ transform: "rotate(140deg)" }}
+        />
+        {/* black arrow: from "pasek progresu" note -> "0%" on levels screenshot */}
+        <MagicBlackArrow
+          className="left-[170px] top-[290px] w-[150px]"
+          style={{ transform: "rotate(190deg)" }}
+        />
+        {/* black arrow + label: under "wyjątkowy" -> kapibara "Hej! Mam małą rozkminę" screenshot */}
+        <MagicBlackArrow
+          className="left-[195px] top-[675px] w-[140px]"
+          style={{ transform: "rotate(120deg)" }}
+        />
+        <p className="pointer-events-none absolute left-[235px] top-[665px] z-20 hidden w-[120px] text-center text-[7px] font-caveat leading-tight lg:block">
+          przykładowe pytania i odpowiedzi
+        </p>
       </div>
     </div>
   </div>
