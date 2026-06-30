@@ -17,12 +17,6 @@ const MainContent = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
         <MagicWhy part={9} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-        <MagicVideo />
-      </MaxWithBgColorContainer>
-      <div className="bg-ada-white3">
-        <MagicBanner version={4} />
-      </div>
       <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
         <MagicDateBanner version={5} />
       </MaxWithBgColorContainer>
@@ -34,7 +28,13 @@ const MainContent = () => {
       <MaxWithBgColorContainer bgColor="bg-ada-white3">
         <MagicBioBanner version={3} />
       </MaxWithBgColorContainer>
-      <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
+      <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+        <MagicVideo />
+      </MaxWithBgColorContainer>
+      <div className="bg-ada-white3">
+        <MagicBanner version={4} />
+      </div>
+      <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
         <MagicCommunityOpinions />
       </MaxWithBgColorContainer>
     </>

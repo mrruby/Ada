@@ -79,19 +79,19 @@ const MagicSaleBanner = ({
             </div>
 
             {/* Right column - Image */}
-            <div className="lg:block order-1 lg:order-2 lg:-mb-10 w-full max-w-[380px] mx-auto lg:mx-0">
+            <div className="lg:block order-1 lg:order-2 lg:-mb-10 w-full max-w-[560px] mx-auto lg:mx-0">
               <StaticImage
-                src="../../images/magic-hero-2026.webp"
+                src="../../images/magic-landing-2026-hero.webp"
                 alt="Marketing Ads Girls Inside Club"
                 placeholder="blurred"
                 quality={100}
-                width={380}
-                height={416}
-                sizes="(min-width: 1024px) 380px, 92vw"
+                width={560}
+                height={560}
+                sizes="(min-width: 1024px) 560px, 92vw"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-auto max-w-[380px]"
+                className="w-full h-auto max-w-[560px]"
               />
             </div>
           </div>

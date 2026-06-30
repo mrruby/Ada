@@ -419,28 +419,51 @@ const MagicUnique2026Section = () => (
   <div className="flex justify-center">
     <div
       data-testid="magic-unique-poster"
-      className="relative h-[441px] w-[342px] max-w-full overflow-visible sm:h-[655px] sm:w-[507px] md:h-[805px] md:w-[624px] lg:h-[755px] lg:w-full"
+      className="magic-unique-poster relative h-[441px] w-[342px] max-w-full shrink-0 overflow-visible sm:h-[655px] sm:w-[507px] md:h-[805px] md:w-[624px]"
     >
-      <div className="absolute left-0 top-0 h-[555px] w-[430px] origin-top-left overflow-hidden bg-ada-magicYellow text-ada-black scale-[0.795] sm:scale-[1.18] md:scale-[1.45] lg:h-[590px] lg:w-[800px] lg:scale-[1.28]">
-        <MagicUniqueLearningCard className="absolute left-[39px] top-[73px] lg:left-[120px]" />
+      <div className="magic-unique-poster-inner absolute left-0 top-0 h-[555px] w-[430px] origin-top-left overflow-hidden bg-ada-magicYellow text-ada-black scale-[0.795] sm:scale-[1.18] md:scale-[1.45]">
+        <div className="absolute left-[26px] top-[64px] hidden w-[335px] lg:block">
+          <StaticImage
+            src="../../images/magic-landing-2026-levels.webp"
+            alt="Poziomy nauki MAGIC"
+            placeholder="blurred"
+            quality={95}
+            width={551}
+            className="w-full"
+            imgClassName="!object-contain"
+          />
+        </div>
+        <div className="absolute left-[418px] top-[70px] hidden w-[330px] lg:block">
+          <StaticImage
+            src="../../images/magic-landing-2026-calendar-cards.webp"
+            alt="Spotkania i konsultacje MAGIC"
+            placeholder="blurred"
+            quality={95}
+            width={569}
+            className="w-full"
+            imgClassName="!object-contain"
+          />
+        </div>
+
+        <MagicUniqueLearningCard className="absolute left-[39px] top-[73px] lg:hidden" />
         <MagicUniqueLevelPreview
           title="Poziom 3: Ads Strategist"
           color="bg-ada-magicPink4"
-          className="absolute left-[150px] top-[35px] rotate-[-2deg] lg:left-[300px]"
+          className="absolute left-[150px] top-[35px] rotate-[-2deg] lg:hidden"
         />
         <MagicUniqueLevelPreview
           title="Poziom 0: Ads Starter"
           color="bg-ada-magicPurple4"
-          className="absolute left-[198px] top-[86px] rotate-[5deg] lg:left-[360px]"
+          className="absolute left-[198px] top-[86px] rotate-[5deg] lg:hidden"
         />
 
         <MagicUniqueCalendarCard
           day="2"
           title="Tworzenie asystenta do generowania raportów reklamowych z pomocą Excela i Canvy"
           time="11:00 - 12:00"
-          className="absolute left-[261px] top-[42px] w-[125px] rotate-[-6deg] lg:left-[505px]"
+          className="absolute left-[261px] top-[42px] w-[125px] rotate-[-6deg] lg:hidden"
         />
-        <MagicUniqueCard className="absolute left-[265px] top-[90px] w-[120px] rotate-[5deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:left-[520px]">
+        <MagicUniqueCard className="absolute left-[265px] top-[90px] w-[120px] rotate-[5deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
           <p className="text-[5px] font-semibold text-black/60">
             Asystentka - POMOC Magic w Ogłoszeniach
           </p>
@@ -457,43 +480,55 @@ const MagicUnique2026Section = () => (
           day="21"
           title="Dopsuj tekst AI do głosu marki"
           time="17:00 - 18:00"
-          className="absolute left-[309px] top-[169px] z-20 w-[91px] rotate-[1deg] lg:left-[620px]"
+          className="absolute left-[309px] top-[169px] z-20 w-[91px] rotate-[1deg] lg:hidden"
         />
         <MagicUniqueCalendarCard
           day="29"
           title="Konsultacje grupowe z Nicolą"
           time="11:00 - 12:30"
-          className="absolute left-[338px] top-[199px] z-30 w-[82px] rotate-[-7deg] lg:left-[685px]"
+          className="absolute left-[338px] top-[199px] z-30 w-[82px] rotate-[-7deg] lg:hidden"
         />
 
-        <span className="absolute left-[55px] top-[154px] text-[16px] lg:left-[125px]">
+        <span className="absolute left-[55px] top-[154px] text-[16px] lg:left-[70px] lg:top-[430px] lg:text-[18px]">
           📝
         </span>
-        <HandwrittenNote className="absolute left-[72px] top-[188px] text-[23px] uppercase lg:left-[115px] lg:top-[188px]">
+        <HandwrittenNote className="absolute left-[72px] top-[188px] text-[23px] uppercase lg:left-[112px] lg:top-[430px] lg:text-[27px]">
           4 poziomy
           <br />
           nauki
         </HandwrittenNote>
-        <HandwrittenNote className="absolute left-[178px] top-[164px] max-w-[82px] rotate-[-8deg] text-[13px] leading-[0.9] lg:left-[260px] lg:top-[160px] lg:max-w-[110px]">
+        <HandwrittenNote className="absolute left-[170px] top-[170px] max-w-[96px] rotate-[-8deg] text-[15px] leading-[0.92] md:max-w-[112px] md:text-[16px] lg:left-[300px] lg:top-[430px] lg:max-w-[155px] lg:text-[17px]">
           parę prostych kliknięć i działasz
         </HandwrittenNote>
-        <span className="absolute left-[252px] top-[190px] text-[18px] lg:left-[382px] lg:top-[181px]">
+        <span className="absolute left-[252px] top-[190px] text-[18px] lg:left-[460px] lg:top-[442px] lg:text-[19px]">
           🧙
         </span>
-        <HandwrittenNote className="absolute left-[270px] top-[204px] text-[21px] uppercase lg:left-[475px] lg:top-[206px]">
+        <HandwrittenNote className="absolute left-[270px] top-[204px] text-[21px] uppercase lg:left-[488px] lg:top-[430px] lg:text-[27px]">
           5 spotkań
           <br />
           <span className="text-[12px] normal-case">na żywo miesięcznie</span>
         </HandwrittenNote>
 
-        <MagicUniqueCard className="absolute left-[39px] top-[263px] w-[83px] rotate-[-4deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:left-[135px]">
+        <div className="absolute left-[35px] top-[610px] hidden w-[165px] lg:block">
+          <StaticImage
+            src="../../images/magic-landing-2026-kapibara-message.webp"
+            alt="Wiadomość do Kapibary Barbary"
+            placeholder="blurred"
+            quality={95}
+            width={280}
+            className="w-full"
+            imgClassName="!object-contain"
+          />
+        </div>
+
+        <MagicUniqueCard className="absolute left-[39px] top-[263px] w-[83px] rotate-[-4deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
           <p className="text-[5px] font-semibold text-black/60">New message</p>
           <p className="mt-1 text-[7px] font-bold">To: Kapibara Barbara</p>
           <div className="mt-3 h-[14px] w-full rounded-full bg-black/10" />
         </MagicUniqueCard>
 
-        <div className="absolute left-[139px] top-[225px] z-10 w-[132px] text-center lg:left-[334px] lg:top-[205px]">
-          <h2 className="font-anton text-[30px] uppercase leading-[0.95] text-black">
+        <div className="absolute left-[139px] top-[225px] z-10 w-[132px] text-center lg:left-[210px] lg:top-[535px] lg:w-[360px]">
+          <h2 className="font-anton text-[27px] uppercase leading-[0.95] text-black lg:text-[42px] lg:leading-[1.04]">
             Co sprawia, że
             <br />
             <span className="my-[2px] inline-block bg-white px-1 text-ada-pink7">
@@ -505,7 +540,7 @@ const MagicUnique2026Section = () => (
           </h2>
         </div>
 
-        <div className="absolute left-[48px] top-[350px] w-[83px] lg:left-[145px] lg:top-[350px]">
+        <div className="absolute left-[48px] top-[350px] w-[83px] lg:left-[92px] lg:top-[760px] lg:w-[190px]">
           <p className="text-[18px] leading-none">🤖</p>
           <HandwrittenNote className="mt-1 text-[22px] uppercase">
             Asystentka AI
@@ -516,7 +551,7 @@ const MagicUnique2026Section = () => (
           </p>
         </div>
 
-        <div className="absolute left-[310px] top-[226px] w-[78px] text-center lg:left-[595px] lg:top-[272px] lg:w-[125px]">
+        <div className="absolute left-[310px] top-[226px] w-[78px] text-center lg:left-[585px] lg:top-[570px] lg:w-[175px]">
           <span className="absolute left-[-12px] top-[-18px] text-[22px]">
             ✍️
           </span>
@@ -532,7 +567,7 @@ const MagicUnique2026Section = () => (
           </p>
         </div>
 
-        <MagicUniqueCard className="absolute left-[258px] top-[312px] w-[120px] rotate-[3deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:left-[505px] lg:top-[390px]">
+        <MagicUniqueCard className="absolute left-[258px] top-[312px] w-[120px] rotate-[3deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
           <p className="text-[5px] font-semibold text-black/60">
             Promocje z AI - 8 Dec 2025
           </p>
@@ -545,8 +580,32 @@ const MagicUnique2026Section = () => (
           </div>
         </MagicUniqueCard>
 
-        <div className="absolute left-[160px] top-[382px] w-[112px] text-center lg:left-[350px] lg:top-[404px] lg:w-[122px]">
-          <HandwrittenNote className="text-[22px] uppercase">
+        <div className="absolute left-[455px] top-[700px] z-10 hidden w-[335px] lg:block">
+          <StaticImage
+            src="../../images/magic-landing-2026-opinions-c.webp"
+            alt="Opinia o wsparciu MAGIC"
+            placeholder="blurred"
+            quality={90}
+            width={1180}
+            className="w-full"
+            imgClassName="!object-contain"
+          />
+        </div>
+
+        <div className="absolute left-[456px] top-[870px] z-10 hidden w-[340px] lg:block">
+          <StaticImage
+            src="../../images/magic-landing-2026-opinions-b.webp"
+            alt="Opinia o konsultacjach MAGIC"
+            placeholder="blurred"
+            quality={90}
+            width={1214}
+            className="w-full"
+            imgClassName="!object-contain"
+          />
+        </div>
+
+        <div className="absolute left-[160px] top-[382px] w-[112px] text-center lg:left-[210px] lg:top-[950px] lg:w-[245px]">
+          <HandwrittenNote className="text-[22px] uppercase lg:text-[24px]">
             5 ekspertów
           </HandwrittenNote>
           <p className="mt-1 text-[8px] font-semibold leading-tight">
@@ -560,10 +619,22 @@ const MagicUnique2026Section = () => (
             key={expert.label}
             image={expert.image}
             label={expert.label}
-            className={expert.className}
+            className={`lg:hidden ${expert.className}`}
             imageClassName={expert.imageClassName}
           />
         ))}
+
+        <div className="absolute left-[-12px] top-[1075px] z-20 hidden w-[824px] lg:block">
+          <StaticImage
+            src="../../images/magic-landing-2026-experts-transparent.webp"
+            alt="Eksperci MAGIC"
+            placeholder="blurred"
+            quality={95}
+            width={851}
+            className="w-full"
+            imgClassName="!object-contain"
+          />
+        </div>
       </div>
     </div>
   </div>

@@ -419,12 +419,46 @@ body {
   display: none;
 }
 
+@media (min-width: 1024px) {
+  .magic-unique-poster {
+    width: 1024px;
+    height: 1672px;
+    max-width: none;
+  }
+
+  .magic-unique-poster-inner {
+    width: 800px;
+    height: 1306px;
+    scale: 1.28;
+  }
+}
+
 @media (min-width: 1280px) {
+  .magic-unique-poster {
+    width: 1280px;
+    height: 2090px;
+  }
+
+  .magic-unique-poster-inner {
+    scale: 1.6;
+  }
+
   .sowa-hero-mobile {
     display: none;
   }
   .sowa-hero-xl {
     display: block;
+  }
+}
+
+@media (min-width: 1536px) {
+  .magic-unique-poster {
+    width: 1440px;
+    height: 2350px;
+  }
+
+  .magic-unique-poster-inner {
+    scale: 1.8;
   }
 }
 
