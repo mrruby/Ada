@@ -458,7 +458,7 @@ body {
 @media (min-width: 1536px) {
   .magic-unique-poster {
     width: 1440px;
-    height: 2574px;
+    height: max(2574px, calc(100vw / 2.7 + 1980px));
   }
 
   .magic-unique-poster-inner {

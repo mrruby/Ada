@@ -1,3 +1,4 @@
+import CountdownTimer from "helpers/CountdownTimer"
 import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner1 from "components/MagicBanner"
@@ -14,13 +15,62 @@ import MagicStickyBar from "components/MagicStickyBar"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import SEO from "components/seo"
-import React from "react"
+import React, { useEffect } from "react"
 
-const MagicSpecialPage = () => {
+const MAGIC_WYZWANIE_DEADLINE = new Date("2026-07-10T23:59:00+02:00")
+const MAGIC_CLASSIC_PATH = "/magic/"
+
+const MagicWyzwanieCountdown = () => {
+  useEffect(() => {
+    const redirectToClassicMagic = () => {
+      window.location.assign(MAGIC_CLASSIC_PATH)
+    }
+
+    const millisecondsToDeadline = +MAGIC_WYZWANIE_DEADLINE - Date.now()
+
+    if (millisecondsToDeadline <= 0) {
+      redirectToClassicMagic()
+      return
+    }
+
+    const redirectTimeout = window.setTimeout(
+      redirectToClassicMagic,
+      millisecondsToDeadline
+    )
+
+    return () => window.clearTimeout(redirectTimeout)
+  }, [])
+
+  return (
+    <div className="fixed left-0 right-0 top-12 z-40 bg-black px-4 py-3 text-white shadow-xl">
+      <div className="container mx-auto flex flex-col items-center justify-center gap-2 lg:flex-row lg:gap-5">
+        <p className="text-center text-sm font-bold uppercase leading-tight md:text-lg">
+          Okienko zapisów zamyka się 10 lipca o 23:59
+        </p>
+        <div className="w-full max-w-[520px]">
+          <CountdownTimer
+            targetDate={MAGIC_WYZWANIE_DEADLINE}
+            color="bg-black"
+            textColor="text-white"
+          />
+        </div>
+        <a
+          href="#magic-package"
+          className="rounded-full bg-ada-magicPink4 px-5 py-2 text-sm font-bold uppercase text-black transition hover:opacity-90 md:text-base"
+        >
+          Dołączam
+        </a>
+      </div>
+    </div>
+  )
+}
+
+const MagicWyzwaniePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MagicStickyBar />
-      <div className="pt-12">
+      <MagicWyzwanieCountdown />
+      <div className="pt-36 md:pt-40">
         <MagicLogoHeader variant="pink" />
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner version={1} />
@@ -40,7 +90,7 @@ const MagicSpecialPage = () => {
         <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
           <MagicDateBanner version={5} layout="magic-special" />
         </MaxWithBgColorContainer>
-        <div id="magic-package" className="scroll-mt-14"></div>
+        <div id="magic-package" className="scroll-mt-36"></div>
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSpecialJoin />
         </MaxWithBgColorContainer>
@@ -73,4 +123,4 @@ export const Head = () => (
   />
 )
 
-export default MagicSpecialPage
+export default MagicWyzwaniePage

@@ -219,6 +219,61 @@ const HandwrittenNote = ({
   </p>
 )
 
+const MagicAssetLabel = ({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode
+  className?: string
+}) => (
+  <p
+    className={`pointer-events-none absolute z-30 hidden rounded-full border-2 border-black bg-ada-pink8 px-3 py-1 text-center font-anton text-[10px] uppercase leading-none text-black shadow-[3px_3px_0_rgba(0,0,0,0.22)] lg:block ${className}`}
+  >
+    {children}
+  </p>
+)
+
+const MagicMobileAssetLabel = ({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode
+  className?: string
+}) => (
+  <p
+    className={`pointer-events-none rounded-full border-2 border-black bg-ada-pink8 px-3 py-1 text-center font-anton text-[9px] uppercase leading-none text-black shadow-[3px_3px_0_rgba(0,0,0,0.22)] md:text-[11px] ${className}`}
+  >
+    {children}
+  </p>
+)
+
+const MagicMobileHandwrittenBlock = ({
+  icon,
+  title,
+  children,
+  className = "",
+}: {
+  icon?: React.ReactNode
+  title: React.ReactNode
+  children?: React.ReactNode
+  className?: string
+}) => (
+  <div className={`text-center text-black ${className}`}>
+    {icon && <p className="text-[20px] leading-none">{icon}</p>}
+    <HandwrittenNote
+      className="mt-1 text-[24px] uppercase leading-none"
+      style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+    >
+      {title}
+    </HandwrittenNote>
+    {children && (
+      <p className="mx-auto mt-2 w-[280px] max-w-full break-words font-caveat text-[14px] leading-[1.1] text-black md:w-[310px]">
+        {children}
+      </p>
+    )}
+  </div>
+)
+
 const MagicUniqueCard = ({
   children,
   className = "",
@@ -418,72 +473,14 @@ const MagicUniqueExpert = ({
   </div>
 )
 
-const MagicPinkArrow = ({
-  className = "",
-  style,
-}: {
-  className?: string
-  style?: React.CSSProperties
-}) => (
-  <svg
-    viewBox="0 0 120 56"
-    fill="none"
-    className={`pointer-events-none absolute z-20 hidden lg:block ${className}`}
-    style={style}
+const MagicUnique2026MobileSection = () => (
+  <div
+    data-testid="magic-unique-poster-mobile"
+    className="w-full overflow-hidden bg-ada-magicYellow px-4 pt-8 text-ada-black lg:hidden"
   >
-    <path
-      d="M6 30 C 22 10 36 46 52 28 S 84 8 104 26"
-      stroke="#FF00A6"
-      strokeWidth="3.5"
-      strokeLinecap="round"
-    />
-    <path
-      d="M104 26 L 92 21 M104 26 L 95 36"
-      stroke="#FF00A6"
-      strokeWidth="3.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-)
-
-const MagicBlackArrow = ({
-  className = "",
-  style,
-}: {
-  className?: string
-  style?: React.CSSProperties
-}) => (
-  <svg
-    viewBox="0 0 120 90"
-    fill="none"
-    className={`pointer-events-none absolute z-20 hidden lg:block ${className}`}
-    style={style}
-  >
-    <path
-      d="M10 12 C 78 2 104 34 80 72"
-      stroke="#000000"
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <path
-      d="M80 72 L 72 56 M80 72 L 96 64"
-      stroke="#000000"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-)
-
-const MagicUnique2026Section = () => (
-  <div className="flex justify-center">
-    <div
-      data-testid="magic-unique-poster"
-      className="magic-unique-poster relative h-[441px] w-[342px] max-w-full shrink-0 overflow-visible sm:h-[655px] sm:w-[507px] md:h-[805px] md:w-[624px]"
-    >
-      <div className="magic-unique-poster-inner absolute left-0 top-0 h-[555px] w-[430px] origin-top-left overflow-hidden bg-ada-magicYellow text-ada-black scale-[0.795] sm:scale-[1.18] md:scale-[1.45]">
-        <div className="absolute left-[26px] top-[64px] hidden w-[335px] lg:block">
+    <div className="mx-auto flex max-w-[430px] flex-col gap-7 md:max-w-[720px] md:gap-8">
+      <div className="relative md:flex md:items-start md:justify-center md:gap-4">
+        <div className="relative z-20 w-[315px] max-w-full rotate-[-3deg] md:w-[350px]">
           <StaticImage
             src="../../images/magic-landing-2026-levels.webp"
             alt="Poziomy nauki MAGIC"
@@ -494,7 +491,7 @@ const MagicUnique2026Section = () => (
             imgClassName="!object-contain"
           />
         </div>
-        <div className="absolute left-[418px] top-[70px] hidden w-[330px] lg:block">
+        <div className="relative z-10 -mt-10 ml-auto w-[315px] max-w-full rotate-[3deg] md:mt-8 md:w-[350px]">
           <StaticImage
             src="../../images/magic-landing-2026-calendar-cards.webp"
             alt="Spotkania i konsultacje MAGIC"
@@ -505,83 +502,55 @@ const MagicUnique2026Section = () => (
             imgClassName="!object-contain"
           />
         </div>
+      </div>
 
-        <MagicUniqueLearningCard className="absolute left-[39px] top-[73px] lg:hidden" />
-        <MagicUniqueLevelPreview
-          title="Poziom 3: Ads Strategist"
-          color="bg-ada-magicPink4"
-          className="absolute left-[150px] top-[35px] rotate-[-2deg] lg:hidden"
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:items-start md:gap-6">
+        <MagicMobileHandwrittenBlock
+          icon="📝"
+          title={
+            <>
+              4 poziomy
+              <br />
+              nauki
+            </>
+          }
         />
-        <MagicUniqueLevelPreview
-          title="Poziom 0: Ads Starter"
-          color="bg-ada-magicPurple4"
-          className="absolute left-[198px] top-[86px] rotate-[5deg] lg:hidden"
+        <MagicMobileHandwrittenBlock
+          icon="👩‍💻"
+          title={
+            <>
+              5 spotkań
+              <br />
+              <span
+                className="text-[15px] normal-case"
+                style={{ fontFamily: '"Caveat", cursive', fontWeight: 400 }}
+              >
+                na żywo miesięcznie
+              </span>
+            </>
+          }
         />
+        <MagicMobileHandwrittenBlock
+          className="col-span-2 mx-auto max-w-[260px] rotate-[-5deg] md:col-span-1"
+          title="pasek progresu ułatwiający naukę"
+        />
+      </div>
 
-        <MagicUniqueCalendarCard
-          day="2"
-          title="Tworzenie asystenta do generowania raportów reklamowych z pomocą Excela i Canvy"
-          time="11:00 - 12:00"
-          className="absolute left-[261px] top-[42px] w-[125px] rotate-[-6deg] lg:hidden"
-        />
-        <MagicUniqueCard className="absolute left-[265px] top-[90px] w-[120px] rotate-[5deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
-          <p className="text-[5px] font-semibold text-black/60">
-            Asystentka - POMOC Magic w Ogłoszeniach
-          </p>
-          <p className="mt-1 truncate text-[6px] font-semibold">
-            Hej dziewczyny! Czerwiec będzie...
-          </p>
-          <div className="mt-1 rounded-[5px] bg-ada-pink8 p-2 text-center font-anton text-[16px] uppercase leading-none text-ada-pink7">
-            Rozkład jazdy
-            <br />
-            na czerwiec
-          </div>
-        </MagicUniqueCard>
-        <MagicUniqueCalendarCard
-          day="21"
-          title="Dopsuj tekst AI do głosu marki"
-          time="17:00 - 18:00"
-          className="absolute left-[309px] top-[169px] z-20 w-[91px] rotate-[1deg] lg:hidden"
-        />
-        <MagicUniqueCalendarCard
-          day="29"
-          title="Konsultacje grupowe z Nicolą"
-          time="11:00 - 12:30"
-          className="absolute left-[338px] top-[199px] z-30 w-[82px] rotate-[-7deg] lg:hidden"
-        />
-
-        <span className="absolute left-[55px] top-[154px] text-[16px] lg:left-[70px] lg:top-[430px] lg:text-[18px]">
-          📝
-        </span>
-        <HandwrittenNote
-          className="absolute left-[72px] top-[188px] text-[23px] uppercase lg:left-[112px] lg:top-[430px] lg:text-[27px]"
-          style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
-        >
-          4 poziomy
+      <div className="mx-auto w-full max-w-[390px] text-center">
+        <h2 className="font-anton text-[34px] uppercase leading-[0.95] text-black">
+          Co sprawia, że
           <br />
-          nauki
-        </HandwrittenNote>
-        <HandwrittenNote className="absolute left-[170px] top-[170px] max-w-[96px] rotate-[-8deg] text-[15px] leading-[0.92] md:max-w-[112px] md:text-[16px] lg:left-[300px] lg:top-[430px] lg:max-w-[155px] lg:text-[17px]">
-          pasek progresu ułatwiający naukę
-        </HandwrittenNote>
-        <span className="absolute left-[252px] top-[190px] text-[18px] lg:left-[460px] lg:top-[442px] lg:text-[19px]">
-          👩‍💻
-        </span>
-        <HandwrittenNote
-          className="absolute left-[270px] top-[204px] text-[21px] uppercase lg:left-[488px] lg:top-[430px] lg:text-[27px]"
-          style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
-        >
-          5 spotkań
+          <span className="my-1 inline-block bg-white px-2 text-ada-pink7">
+            MAGIC
+          </span>{" "}
+          jest
           <br />
-          <span
-            className="text-[12px] normal-case"
-            style={{ fontFamily: '"Caveat", cursive', fontWeight: 400 }}
-          >
-            na żywo miesięcznie
-          </span>
-        </HandwrittenNote>
+          wyjątkowy?
+        </h2>
+      </div>
 
-        <div className="absolute left-[35px] top-[610px] hidden w-[165px] lg:block">
+      <div className="grid gap-5 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-6">
+        <div className="mx-auto w-[250px] max-w-full rotate-[-3deg] md:w-[280px]">
           <StaticImage
             src="../../images/magic-landing-2026-kapibara-message.webp"
             alt="Wiadomość do Kapibary Barbary"
@@ -592,172 +561,328 @@ const MagicUnique2026Section = () => (
             imgClassName="!object-contain"
           />
         </div>
+        <MagicMobileHandwrittenBlock icon="🤖" title="Asystentka AI">
+          wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
+          bolączką
+        </MagicMobileHandwrittenBlock>
+      </div>
 
-        <MagicUniqueCard className="absolute left-[39px] top-[263px] w-[83px] rotate-[-4deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
-          <p className="text-[5px] font-semibold text-black/60">New message</p>
-          <p className="mt-1 text-[7px] font-bold">To: Kapibara Barbara</p>
-          <div className="mt-3 h-[14px] w-full rounded-full bg-black/10" />
-        </MagicUniqueCard>
+      <div className="grid gap-5 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-6">
+        <MagicMobileHandwrittenBlock
+          icon="✍🏻"
+          title={
+            <>
+              Konsultacje
+              <br />
+              pisemne na
+              <br />
+              Circle
+            </>
+          }
+        >
+          wsparcie techniczne przy wdrażaniu konkretnych rozwiązań reklamowych
+        </MagicMobileHandwrittenBlock>
 
-        <div className="absolute left-[139px] top-[225px] z-10 w-[132px] text-center lg:left-[210px] lg:top-[535px] lg:w-[360px]">
-          <h2 className="font-anton text-[27px] uppercase leading-[0.95] text-black lg:text-[42px] lg:leading-[1.04]">
-            Co sprawia, że
-            <br />
-            <span className="my-[2px] inline-block bg-white px-1 text-ada-pink7">
-              MAGIC
-            </span>{" "}
-            jest
-            <br />
-            wyjątkowy?
-          </h2>
+        <div className="space-y-3">
+          <MagicMobileAssetLabel className="mx-auto w-[250px] max-w-full rotate-[2deg] md:w-[320px]">
+            przykładowe pytania i odpowiedzi
+          </MagicMobileAssetLabel>
+          <div className="mx-auto w-[300px] max-w-full -translate-x-4 rotate-[1deg] md:ml-auto md:w-full md:translate-x-0">
+            <StaticImage
+              src="../../images/magic-landing-2026-opinions-c.webp"
+              alt="Opinia o wsparciu MAGIC"
+              placeholder="blurred"
+              quality={90}
+              width={1180}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+          <div className="mx-auto w-[300px] max-w-full -translate-x-4 rotate-[-1deg] md:w-full md:translate-x-0">
+            <StaticImage
+              src="../../images/magic-landing-2026-opinions-b.webp"
+              alt="Opinia o konsultacjach MAGIC"
+              placeholder="blurred"
+              quality={90}
+              width={1214}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
         </div>
+      </div>
 
-        <div className="absolute left-[48px] top-[350px] w-[83px] lg:left-[92px] lg:top-[760px] lg:w-[190px]">
-          <p className="text-center text-[18px] leading-none">🤖</p>
-          <HandwrittenNote
-            className="mt-1 text-[22px] uppercase"
-            style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
-          >
-            Asystentka AI
-          </HandwrittenNote>
-          <p className="mt-1 text-[8px] font-caveat leading-tight">
-            wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
-            bolączką
-          </p>
-        </div>
+      <MagicMobileHandwrittenBlock title="5 ekspertów">
+        pomogą Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
+        automatyzacjach
+      </MagicMobileHandwrittenBlock>
+    </div>
 
-        <div className="absolute left-[310px] top-[226px] w-[78px] text-center lg:left-[585px] lg:top-[570px] lg:w-[175px]">
-          <span className="absolute left-1/2 top-[-26px] -translate-x-1/2 text-[22px]">
-            ✍🏻
+    <div className="-mx-4 mt-4">
+      <StaticImage
+        src="../../images/magic-landing-2026-experts-transparent.webp"
+        alt="Eksperci MAGIC"
+        placeholder="blurred"
+        quality={95}
+        width={1800}
+        className="w-full"
+        imgClassName="!object-contain"
+      />
+    </div>
+  </div>
+)
+
+const MagicUnique2026Section = () => (
+  <>
+    <MagicUnique2026MobileSection />
+    <div className="relative left-1/2 hidden w-screen -translate-x-1/2 justify-center overflow-hidden lg:flex">
+      <div
+        data-testid="magic-unique-poster"
+        className="magic-unique-poster relative h-[441px] w-[342px] max-w-full shrink-0 overflow-visible sm:h-[655px] sm:w-[507px] md:h-[805px] md:w-[624px]"
+      >
+        <div className="magic-unique-poster-inner absolute left-0 top-0 h-[555px] w-[430px] origin-top-left overflow-hidden bg-ada-magicYellow text-ada-black scale-[0.795] sm:scale-[1.18] md:scale-[1.45]">
+          <div className="absolute left-[26px] top-[64px] hidden w-[335px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-levels.webp"
+              alt="Poziomy nauki MAGIC"
+              placeholder="blurred"
+              quality={95}
+              width={551}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+          <div className="absolute left-[418px] top-[70px] hidden w-[330px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-calendar-cards.webp"
+              alt="Spotkania i konsultacje MAGIC"
+              placeholder="blurred"
+              quality={95}
+              width={569}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+
+          <MagicUniqueLearningCard className="absolute left-[39px] top-[73px] lg:hidden" />
+          <MagicUniqueLevelPreview
+            title="Poziom 3: Ads Strategist"
+            color="bg-ada-magicPink4"
+            className="absolute left-[150px] top-[35px] rotate-[-2deg] lg:hidden"
+          />
+          <MagicUniqueLevelPreview
+            title="Poziom 0: Ads Starter"
+            color="bg-ada-magicPurple4"
+            className="absolute left-[198px] top-[86px] rotate-[5deg] lg:hidden"
+          />
+
+          <MagicUniqueCalendarCard
+            day="2"
+            title="Tworzenie asystenta do generowania raportów reklamowych z pomocą Excela i Canvy"
+            time="11:00 - 12:00"
+            className="absolute left-[261px] top-[42px] w-[125px] rotate-[-6deg] lg:hidden"
+          />
+          <MagicUniqueCard className="absolute left-[265px] top-[90px] w-[120px] rotate-[5deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
+            <p className="text-[5px] font-semibold text-black/60">
+              Asystentka - POMOC Magic w Ogłoszeniach
+            </p>
+            <p className="mt-1 truncate text-[6px] font-semibold">
+              Hej dziewczyny! Czerwiec będzie...
+            </p>
+            <div className="mt-1 rounded-[5px] bg-ada-pink8 p-2 text-center font-anton text-[16px] uppercase leading-none text-ada-pink7">
+              Rozkład jazdy
+              <br />
+              na czerwiec
+            </div>
+          </MagicUniqueCard>
+          <MagicUniqueCalendarCard
+            day="21"
+            title="Dopsuj tekst AI do głosu marki"
+            time="17:00 - 18:00"
+            className="absolute left-[309px] top-[169px] z-20 w-[91px] rotate-[1deg] lg:hidden"
+          />
+          <MagicUniqueCalendarCard
+            day="29"
+            title="Konsultacje grupowe z Nicolą"
+            time="11:00 - 12:30"
+            className="absolute left-[338px] top-[199px] z-30 w-[82px] rotate-[-7deg] lg:hidden"
+          />
+
+          <span className="absolute left-[55px] top-[154px] text-[16px] lg:left-[70px] lg:top-[430px] lg:text-[18px]">
+            📝
           </span>
           <HandwrittenNote
-            className="text-[20px] uppercase leading-none"
+            className="absolute left-[72px] top-[188px] text-[23px] uppercase lg:left-[112px] lg:top-[430px] lg:text-[27px]"
             style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
           >
-            Konsultacje
+            4 poziomy
             <br />
-            pisemne na
-            <br />
-            Circle
+            nauki
           </HandwrittenNote>
-          <p className="mt-2 text-[8px] font-caveat leading-tight lg:mx-auto lg:w-[118px]">
-            wsparcie techniczne przy wdrażaniu konkretnych rozwiązań reklamowych
-          </p>
-        </div>
-
-        <MagicUniqueCard className="absolute left-[258px] top-[312px] w-[120px] rotate-[3deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
-          <p className="text-[5px] font-semibold text-black/60">
-            Promocje z AI - 8 Dec 2025
-          </p>
-          <p className="mt-1 text-[7px] font-semibold leading-tight">
-            Roksana! Paczek koniecznie zwiększ grupę ciepłą...
-          </p>
-          <div className="mt-2 space-y-[3px]">
-            <div className="h-[3px] w-full rounded-full bg-black/10" />
-            <div className="h-[3px] w-4/5 rounded-full bg-black/10" />
-          </div>
-        </MagicUniqueCard>
-
-        <div className="absolute left-[455px] top-[700px] z-10 hidden w-[335px] lg:block">
-          <StaticImage
-            src="../../images/magic-landing-2026-opinions-c.webp"
-            alt="Opinia o wsparciu MAGIC"
-            placeholder="blurred"
-            quality={90}
-            width={1180}
-            className="w-full"
-            imgClassName="!object-contain"
-          />
-        </div>
-
-        <div className="absolute left-[456px] top-[870px] z-10 hidden w-[340px] lg:block">
-          <StaticImage
-            src="../../images/magic-landing-2026-opinions-b.webp"
-            alt="Opinia o konsultacjach MAGIC"
-            placeholder="blurred"
-            quality={90}
-            width={1214}
-            className="w-full"
-            imgClassName="!object-contain"
-          />
-        </div>
-
-        <div className="absolute left-[160px] top-[382px] w-[112px] text-center lg:left-[210px] lg:top-[950px] lg:w-[245px]">
+          <HandwrittenNote className="absolute left-[170px] top-[160px] max-w-[96px] rotate-[-8deg] text-[15px] leading-[0.92] md:max-w-[112px] md:text-[16px] lg:left-[300px] lg:top-[400px] lg:max-w-[155px] lg:text-[17px]">
+            pasek progresu ułatwiający naukę
+          </HandwrittenNote>
+          <span className="absolute left-[252px] top-[190px] text-[18px] lg:left-[460px] lg:top-[442px] lg:text-[19px]">
+            👩‍💻
+          </span>
           <HandwrittenNote
-            className="text-[22px] uppercase lg:text-[24px]"
+            className="absolute left-[270px] top-[204px] text-[21px] uppercase lg:left-[488px] lg:top-[430px] lg:text-[27px]"
             style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
           >
-            5 ekspertów
+            5 spotkań
+            <br />
+            <span
+              className="text-[12px] normal-case"
+              style={{ fontFamily: '"Caveat", cursive', fontWeight: 400 }}
+            >
+              na żywo miesięcznie
+            </span>
           </HandwrittenNote>
-          <p className="mt-1 text-[8px] font-caveat leading-tight">
-            pomogą Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
-            automatyzacjach
-          </p>
+
+          <div className="absolute left-[35px] top-[610px] hidden w-[165px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-kapibara-message.webp"
+              alt="Wiadomość do Kapibary Barbary"
+              placeholder="blurred"
+              quality={95}
+              width={280}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+
+          <MagicUniqueCard className="absolute left-[39px] top-[263px] w-[83px] rotate-[-4deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
+            <p className="text-[5px] font-semibold text-black/60">
+              New message
+            </p>
+            <p className="mt-1 text-[7px] font-bold">To: Kapibara Barbara</p>
+            <div className="mt-3 h-[14px] w-full rounded-full bg-black/10" />
+          </MagicUniqueCard>
+
+          <div className="absolute left-[139px] top-[225px] z-10 w-[132px] text-center lg:left-[210px] lg:top-[535px] lg:w-[360px]">
+            <h2 className="font-anton text-[27px] uppercase leading-[0.95] text-black lg:text-[42px] lg:leading-[1.04]">
+              Co sprawia, że
+              <br />
+              <span className="my-[2px] inline-block bg-white px-1 text-ada-pink7">
+                MAGIC
+              </span>{" "}
+              jest
+              <br />
+              wyjątkowy?
+            </h2>
+          </div>
+
+          <div className="absolute left-[48px] top-[350px] w-[83px] lg:left-[92px] lg:top-[760px] lg:w-[190px]">
+            <p className="text-center text-[18px] leading-none">🤖</p>
+            <HandwrittenNote
+              className="mt-1 text-[22px] uppercase"
+              style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+            >
+              Asystentka AI
+            </HandwrittenNote>
+            <p className="mt-1 text-[8px] font-caveat leading-tight lg:text-[11px] lg:leading-[1.05]">
+              wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
+              bolączką
+            </p>
+          </div>
+
+          <div className="absolute left-[310px] top-[226px] w-[78px] text-center lg:left-[585px] lg:top-[570px] lg:w-[175px]">
+            <span className="absolute left-1/2 top-[-26px] -translate-x-1/2 text-[22px]">
+              ✍🏻
+            </span>
+            <HandwrittenNote
+              className="text-[20px] uppercase leading-none"
+              style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+            >
+              Konsultacje
+              <br />
+              pisemne na
+              <br />
+              Circle
+            </HandwrittenNote>
+            <p className="mt-2 text-[8px] font-caveat leading-tight lg:mx-auto lg:w-[160px] lg:text-[11px] lg:leading-[1.05]">
+              wsparcie techniczne przy wdrażaniu konkretnych rozwiązań
+              reklamowych
+            </p>
+          </div>
+
+          <MagicUniqueCard className="absolute left-[258px] top-[312px] w-[120px] rotate-[3deg] rounded-[7px] p-2 shadow-[0_5px_0_rgba(0,0,0,0.08)] lg:hidden">
+            <p className="text-[5px] font-semibold text-black/60">
+              Promocje z AI - 8 Dec 2025
+            </p>
+            <p className="mt-1 text-[7px] font-semibold leading-tight">
+              Roksana! Paczek koniecznie zwiększ grupę ciepłą...
+            </p>
+            <div className="mt-2 space-y-[3px]">
+              <div className="h-[3px] w-full rounded-full bg-black/10" />
+              <div className="h-[3px] w-4/5 rounded-full bg-black/10" />
+            </div>
+          </MagicUniqueCard>
+
+          <div className="absolute left-[455px] top-[700px] z-10 hidden w-[335px] lg:block">
+            <MagicAssetLabel className="left-[40px] top-[-30px] w-[250px] rotate-[2deg]">
+              przykładowe pytania i odpowiedzi
+            </MagicAssetLabel>
+            <StaticImage
+              src="../../images/magic-landing-2026-opinions-c.webp"
+              alt="Opinia o wsparciu MAGIC"
+              placeholder="blurred"
+              quality={90}
+              width={1180}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+
+          <div className="absolute left-[456px] top-[870px] z-10 hidden w-[340px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-opinions-b.webp"
+              alt="Opinia o konsultacjach MAGIC"
+              placeholder="blurred"
+              quality={90}
+              width={1214}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+
+          <div className="absolute left-[160px] top-[398px] w-[112px] text-center lg:left-[210px] lg:top-[1055px] lg:w-[285px]">
+            <HandwrittenNote
+              className="text-[22px] uppercase lg:text-[24px]"
+              style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
+            >
+              5 ekspertów
+            </HandwrittenNote>
+            <p className="mt-1 text-[8px] font-caveat leading-tight lg:text-[11px] lg:leading-[1.05]">
+              pomogą Ci w: reklamach Meta Ads, tekstach, grafikach,
+              newsletterze, automatyzacjach
+            </p>
+          </div>
+
+          {magicUniqueExperts.map((expert) => (
+            <MagicUniqueExpert
+              key={expert.label}
+              image={expert.image}
+              label={expert.label}
+              className={`lg:hidden ${expert.className}`}
+              imageClassName={expert.imageClassName}
+            />
+          ))}
         </div>
-
-        {magicUniqueExperts.map((expert) => (
-          <MagicUniqueExpert
-            key={expert.label}
-            image={expert.image}
-            label={expert.label}
-            className={`lg:hidden ${expert.className}`}
-            imageClassName={expert.imageClassName}
-          />
-        ))}
-
-        <div className="absolute left-[-12px] top-[1075px] z-20 hidden w-[824px] lg:block">
+        <div className="pointer-events-none absolute bottom-0 left-1/2 z-20 hidden w-screen -translate-x-1/2 lg:block">
           <StaticImage
             src="../../images/magic-landing-2026-experts-transparent.webp"
             alt="Eksperci MAGIC"
             placeholder="blurred"
             quality={95}
-            width={851}
+            width={3200}
             className="w-full"
             imgClassName="!object-contain"
           />
         </div>
-
-        {/* arrow: near "co" -> "4 poziomy nauki" */}
-        <MagicPinkArrow
-          className="left-[150px] top-[470px] w-[150px]"
-          style={{ transform: "rotate(195deg)" }}
-        />
-        {/* arrow: above "sprawia" -> "na żywo miesięcznie" */}
-        <MagicPinkArrow
-          className="left-[395px] top-[470px] w-[130px]"
-          style={{ transform: "rotate(-25deg)" }}
-        />
-        {/* arrow: by "jest" -> between Circle and "wsparcie techniczne" */}
-        <MagicPinkArrow
-          className="left-[470px] top-[590px] w-[130px]"
-          style={{ transform: "rotate(15deg)" }}
-        />
-        {/* arrow: above "ekspertów" -> down to it */}
-        <MagicPinkArrow
-          className="left-[300px] top-[885px] w-[120px]"
-          style={{ transform: "rotate(75deg)" }}
-        />
-        {/* arrow: from "W" of wyjątkowy -> "asystentka ai" */}
-        <MagicPinkArrow
-          className="left-[180px] top-[695px] w-[150px]"
-          style={{ transform: "rotate(140deg)" }}
-        />
-        {/* black arrow: from "pasek progresu" note -> "0%" on levels screenshot */}
-        <MagicBlackArrow
-          className="left-[170px] top-[290px] w-[150px]"
-          style={{ transform: "rotate(190deg)" }}
-        />
-        {/* black arrow + label: under "wyjątkowy" -> kapibara "Hej! Mam małą rozkminę" screenshot */}
-        <MagicBlackArrow
-          className="left-[195px] top-[675px] w-[140px]"
-          style={{ transform: "rotate(120deg)" }}
-        />
-        <p className="pointer-events-none absolute left-[235px] top-[665px] z-20 hidden w-[120px] text-center text-[7px] font-caveat leading-tight lg:block">
-          przykładowe pytania i odpowiedzi
-        </p>
       </div>
     </div>
-  </div>
+  </>
 )
 
 type MagicDateBannerLayout = "default" | "magic-special"
@@ -775,7 +900,7 @@ const MagicDateBanner = ({
   const sectionClassName = version === 3 || version === 4 ? "" : "mb-12"
   const sectionPadding =
     version === 5
-      ? "py-8 md:py-12 px-0"
+      ? "pt-8 pb-0 md:pt-12 px-0"
       : isMagicSpecialLayout && version === 3
         ? "pt-8 md:pt-12 pb-2 md:pb-4 px-6"
         : isMagicSpecialLayout && version === 4
