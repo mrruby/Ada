@@ -9,10 +9,10 @@ import MagicCaseStudies from "components/MagicCaseStudies"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
 import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
-import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
+import MasterclassFAQ from "components/MasterclassFAQ"
 import SEO from "components/seo"
 import React, { useEffect } from "react"
 import { navigate } from "gatsby"
@@ -72,18 +72,14 @@ const MagicWyzwaniePage = () => {
     <Layout showHeaderAndFooter={false}>
       <MagicWyzwanieCountdown />
       <div className="pt-24 md:pt-28">
-        <MagicLogoHeader variant="pink" />
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner version={1} />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-pink8">
           <MagicCaseStudies />
         </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-magicPurple4">
-          <MagicBanner5 version={1} />
-        </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-magicPink4">
-          <MagicBanner5 version={2} />
+        <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
+          <MagicWhy part={9} />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-pink8">
           <MagicVideo />
@@ -91,9 +87,6 @@ const MagicWyzwaniePage = () => {
         <div className="bg-ada-white3">
           <MagicBanner1 version={4} />
         </div>
-        <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
-          <MagicWhy part={9} />
-        </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
           <MagicDateBanner version={5} layout="magic-special" />
         </MaxWithBgColorContainer>
@@ -119,6 +112,15 @@ const MagicWyzwaniePage = () => {
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
           <MagicCommunityOpinions />
+        </MaxWithBgColorContainer>
+        <MaxWithBgColorContainer bgColor="bg-ada-magicPurple4">
+          <MagicBanner5 version={1} />
+        </MaxWithBgColorContainer>
+        <MaxWithBgColorContainer bgColor="bg-ada-magicPink4">
+          <MagicBanner5 version={2} />
+        </MaxWithBgColorContainer>
+        <MaxWithBgColorContainer bgColor="bg-ada-light-pink">
+          <MasterclassFAQ version={5} />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicFinalCTA />
