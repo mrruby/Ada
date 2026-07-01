@@ -476,45 +476,23 @@ const MagicUniqueExpert = ({
 const MagicUnique2026MobileSection = () => (
   <div
     data-testid="magic-unique-poster-mobile"
-    className="w-full overflow-hidden bg-ada-magicYellow px-4 pt-8 text-ada-black lg:hidden"
+    className="w-full overflow-hidden bg-ada-magicYellow px-4 pb-0 pt-8 text-ada-black lg:hidden"
   >
-    <div className="mx-auto flex max-w-[430px] flex-col gap-7 md:max-w-[720px] md:gap-8">
-      <div className="relative md:flex md:items-start md:justify-center md:gap-4">
-        <div className="relative z-20 w-[315px] max-w-full rotate-[-3deg] md:w-[350px]">
-          <StaticImage
-            src="../../images/magic-landing-2026-levels.webp"
-            alt="Poziomy nauki MAGIC"
-            placeholder="blurred"
-            quality={95}
-            width={551}
-            className="w-full"
-            imgClassName="!object-contain"
-          />
-        </div>
-        <div className="relative z-10 -mt-10 ml-auto w-[315px] max-w-full rotate-[3deg] md:mt-8 md:w-[350px]">
-          <StaticImage
-            src="../../images/magic-landing-2026-calendar-cards.webp"
-            alt="Spotkania i konsultacje MAGIC"
-            placeholder="blurred"
-            quality={95}
-            width={569}
-            className="w-full"
-            imgClassName="!object-contain"
-          />
-        </div>
+    <div className="mx-auto flex max-w-[430px] flex-col gap-10 md:max-w-[560px] md:gap-12">
+      <div className="mx-auto w-full max-w-[390px] text-center md:max-w-[520px]">
+        <h2 className="font-anton text-[34px] uppercase leading-[0.95] text-black md:text-[44px]">
+          Co sprawia, że
+          <br />
+          <span className="my-1 inline-block bg-white px-2 text-ada-pink7">
+            MAGIC
+          </span>{" "}
+          jest
+          <br />
+          wyjątkowy?
+        </h2>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:items-start md:gap-6">
-        <MagicMobileHandwrittenBlock
-          icon="📝"
-          title={
-            <>
-              4 poziomy
-              <br />
-              nauki
-            </>
-          }
-        />
+      <div className="flex flex-col items-center gap-4">
         <MagicMobileHandwrittenBlock
           icon="👩‍💻"
           title={
@@ -530,26 +508,54 @@ const MagicUnique2026MobileSection = () => (
             </>
           }
         />
-        <MagicMobileHandwrittenBlock
-          className="col-span-2 mx-auto max-w-[260px] rotate-[-5deg] md:col-span-1"
-          title="pasek progresu ułatwiający naukę"
-        />
+        <div className="mx-auto w-[315px] max-w-full rotate-[3deg] md:w-[380px]">
+          <StaticImage
+            src="../../images/magic-landing-2026-calendar-cards.webp"
+            alt="Spotkania i konsultacje MAGIC"
+            placeholder="blurred"
+            quality={95}
+            width={569}
+            className="w-full"
+            imgClassName="!object-contain"
+          />
+        </div>
       </div>
 
-      <div className="mx-auto w-full max-w-[390px] text-center">
-        <h2 className="font-anton text-[34px] uppercase leading-[0.95] text-black">
-          Co sprawia, że
-          <br />
-          <span className="my-1 inline-block bg-white px-2 text-ada-pink7">
-            MAGIC
-          </span>{" "}
-          jest
-          <br />
-          wyjątkowy?
-        </h2>
+      <div className="flex flex-col items-center gap-4">
+        <div className="grid w-full grid-cols-2 items-start gap-4">
+          <MagicMobileHandwrittenBlock
+            icon="📝"
+            title={
+              <>
+                4 poziomy
+                <br />
+                nauki
+              </>
+            }
+          />
+          <MagicMobileHandwrittenBlock
+            className="mx-auto max-w-[260px] rotate-[-5deg]"
+            title="pasek progresu ułatwiający naukę"
+          />
+        </div>
+        <div className="mx-auto w-[315px] max-w-full rotate-[-3deg] md:w-[390px]">
+          <StaticImage
+            src="../../images/magic-landing-2026-levels.webp"
+            alt="Poziomy nauki MAGIC"
+            placeholder="blurred"
+            quality={95}
+            width={551}
+            className="w-full"
+            imgClassName="!object-contain"
+          />
+        </div>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-6">
+      <div className="flex flex-col items-center gap-4">
+        <MagicMobileHandwrittenBlock icon="🤖" title="Asystentka AI">
+          wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
+          bolączką
+        </MagicMobileHandwrittenBlock>
         <div className="mx-auto w-[250px] max-w-full rotate-[-3deg] md:w-[280px]">
           <StaticImage
             src="../../images/magic-landing-2026-kapibara-message.webp"
@@ -561,13 +567,9 @@ const MagicUnique2026MobileSection = () => (
             imgClassName="!object-contain"
           />
         </div>
-        <MagicMobileHandwrittenBlock icon="🤖" title="Asystentka AI">
-          wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
-          bolączką
-        </MagicMobileHandwrittenBlock>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-6">
+      <div className="flex flex-col items-center gap-4">
         <MagicMobileHandwrittenBlock
           icon="✍🏻"
           title={
@@ -582,12 +584,11 @@ const MagicUnique2026MobileSection = () => (
         >
           wsparcie techniczne przy wdrażaniu konkretnych rozwiązań reklamowych
         </MagicMobileHandwrittenBlock>
-
-        <div className="space-y-3">
+        <div className="w-full space-y-3">
           <MagicMobileAssetLabel className="mx-auto w-[250px] max-w-full rotate-[2deg] md:w-[320px]">
             przykładowe pytania i odpowiedzi
           </MagicMobileAssetLabel>
-          <div className="mx-auto w-[300px] max-w-full -translate-x-4 rotate-[1deg] md:ml-auto md:w-full md:translate-x-0">
+          <div className="mx-auto w-[300px] max-w-full rotate-[1deg] md:w-[420px]">
             <StaticImage
               src="../../images/magic-landing-2026-opinions-c.webp"
               alt="Opinia o wsparciu MAGIC"
@@ -598,7 +599,7 @@ const MagicUnique2026MobileSection = () => (
               imgClassName="!object-contain"
             />
           </div>
-          <div className="mx-auto w-[300px] max-w-full -translate-x-4 rotate-[-1deg] md:w-full md:translate-x-0">
+          <div className="mx-auto w-[300px] max-w-full rotate-[-1deg] md:w-[420px]">
             <StaticImage
               src="../../images/magic-landing-2026-opinions-b.webp"
               alt="Opinia o konsultacjach MAGIC"
@@ -612,22 +613,23 @@ const MagicUnique2026MobileSection = () => (
         </div>
       </div>
 
-      <MagicMobileHandwrittenBlock title="5 ekspertów">
-        pomogą Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
-        automatyzacjach
-      </MagicMobileHandwrittenBlock>
-    </div>
-
-    <div className="-mx-4 mt-4">
-      <StaticImage
-        src="../../images/magic-landing-2026-experts-transparent.webp"
-        alt="Eksperci MAGIC"
-        placeholder="blurred"
-        quality={95}
-        width={1800}
-        className="w-full"
-        imgClassName="!object-contain"
-      />
+      <div className="flex flex-col items-center gap-4">
+        <MagicMobileHandwrittenBlock title="5 ekspertów">
+          pomogą Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
+          automatyzacjach
+        </MagicMobileHandwrittenBlock>
+        <div className="w-screen max-w-none">
+          <StaticImage
+            src="../../images/magic-landing-2026-experts-transparent.webp"
+            alt="Eksperci MAGIC"
+            placeholder="blurred"
+            quality={95}
+            width={1800}
+            className="block w-full"
+            imgClassName="!block !w-full !object-contain"
+          />
+        </div>
+      </div>
     </div>
   </div>
 )
