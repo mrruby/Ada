@@ -81,15 +81,20 @@ const MagicWyzwaniePage = () => {
         <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
           <MagicWhy part={9} />
         </MaxWithBgColorContainer>
-        <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-          <MagicVideo />
-        </MaxWithBgColorContainer>
         <div className="bg-ada-white3">
           <MagicBanner1 version={4} />
         </div>
+        <MaxWithBgColorContainer bgColor="bg-ada-pink8">
+          <MagicVideo />
+        </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
           <MagicDateBanner version={5} layout="magic-special" />
         </MaxWithBgColorContainer>
+        <div className="bg-magic">
+          <MaxWithBgColorContainer bgColor="bg-transparent">
+            <MagicWhy part={12} />
+          </MaxWithBgColorContainer>
+        </div>
         <div id="magic-package" className="scroll-mt-36"></div>
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner
@@ -99,11 +104,6 @@ const MagicWyzwaniePage = () => {
             column3BgColor="bg-[#E8F6CD]"
           />
         </MaxWithBgColorContainer>
-        <div className="bg-magic">
-          <MaxWithBgColorContainer bgColor="bg-transparent">
-            <MagicWhy part={12} />
-          </MaxWithBgColorContainer>
-        </div>
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicBioBanner version={3} />
         </MaxWithBgColorContainer>
