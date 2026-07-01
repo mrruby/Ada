@@ -9,7 +9,6 @@ import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
-import MagicSpecialJoin from "components/MagicSpecialJoin"
 import MagicStickyBar from "components/MagicStickyBar"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
@@ -42,7 +41,12 @@ const MagicSpecialPage = () => {
         </MaxWithBgColorContainer>
         <div id="magic-package" className="scroll-mt-14"></div>
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
-          <MagicSpecialJoin />
+          <MagicSaleBanner
+            version={2}
+            url="https://cart.easy.tools/checkout/81632369/magic-subskrypcja"
+            column2BgColor="bg-[#F5CEE2]"
+            column3BgColor="bg-[#E8F6CD]"
+          />
         </MaxWithBgColorContainer>
         <div className="bg-magic">
           <MaxWithBgColorContainer bgColor="bg-transparent">
