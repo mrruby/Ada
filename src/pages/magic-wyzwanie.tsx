@@ -3,6 +3,7 @@ import Layout from "components/Layout"
 import MaxWithBgColorContainer from "components/Layout/MaxWithBgColorContainer"
 import MagicBanner1 from "components/MagicBanner"
 import MagicBanner2 from "components/MagicBanner2"
+import MagicBanner5 from "components/MagicBanner5"
 import MagicBioBanner from "components/MagicBioBanner"
 import MagicCaseStudies from "components/MagicCaseStudies"
 import MagicCommunityOpinions from "components/MagicCommunityOpinions"
@@ -10,8 +11,6 @@ import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
-import MagicSpecialJoin from "components/MagicSpecialJoin"
-import MagicStickyBar from "components/MagicStickyBar"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import SEO from "components/seo"
@@ -45,10 +44,10 @@ const MagicWyzwanieCountdown = () => {
   }, [])
 
   return (
-    <div className="fixed left-0 right-0 top-12 z-40 bg-black px-4 py-3 text-white shadow-xl">
+    <div className="fixed left-0 right-0 top-0 z-40 bg-black px-4 py-3 text-white shadow-xl">
       <div className="container mx-auto flex flex-col items-center justify-center gap-2 lg:flex-row lg:gap-5">
         <p className="text-center text-sm font-bold uppercase leading-tight md:text-lg">
-          Okienko zapisów zamyka się 10 lipca o 23:59
+          Specjalna oferta kończy się za:
         </p>
         <div className="w-full max-w-[520px]">
           <CountdownTimer
@@ -71,15 +70,20 @@ const MagicWyzwanieCountdown = () => {
 const MagicWyzwaniePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <MagicStickyBar />
       <MagicWyzwanieCountdown />
-      <div className="pt-36 md:pt-40">
+      <div className="pt-24 md:pt-28">
         <MagicLogoHeader variant="pink" />
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner version={1} />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-pink8">
           <MagicCaseStudies />
+        </MaxWithBgColorContainer>
+        <MaxWithBgColorContainer bgColor="bg-ada-magicPurple4">
+          <MagicBanner5 version={1} />
+        </MaxWithBgColorContainer>
+        <MaxWithBgColorContainer bgColor="bg-ada-magicPink4">
+          <MagicBanner5 version={2} />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-pink8">
           <MagicVideo />
@@ -95,7 +99,12 @@ const MagicWyzwaniePage = () => {
         </MaxWithBgColorContainer>
         <div id="magic-package" className="scroll-mt-36"></div>
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
-          <MagicSpecialJoin />
+          <MagicSaleBanner
+            version={2}
+            url="https://cart.easy.tools/checkout/81632369/magic-subskrypcja"
+            column2BgColor="bg-[#F5CEE2]"
+            column3BgColor="bg-[#E8F6CD]"
+          />
         </MaxWithBgColorContainer>
         <div className="bg-magic">
           <MaxWithBgColorContainer bgColor="bg-transparent">
