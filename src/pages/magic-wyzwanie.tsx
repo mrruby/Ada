@@ -71,7 +71,7 @@ const MagicWyzwaniePage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
       <MagicWyzwanieCountdown />
-      <div className="pt-24 md:pt-28">
+      <div className="pt-44 md:pt-48 lg:pt-28">
         <MagicLogoHeader variant="pink" />
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner version={1} />
