@@ -16,6 +16,7 @@ import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import SEO from "components/seo"
 import React, { useEffect } from "react"
+import { navigate } from "gatsby"
 
 const MAGIC_WYZWANIE_DEADLINE = new Date("2026-07-10T23:59:00+02:00")
 const MAGIC_CLASSIC_PATH = "/magic/"
@@ -23,22 +24,24 @@ const MAGIC_CLASSIC_PATH = "/magic/"
 const MagicWyzwanieCountdown = () => {
   useEffect(() => {
     const redirectToClassicMagic = () => {
-      window.location.assign(MAGIC_CLASSIC_PATH)
+      navigate(MAGIC_CLASSIC_PATH)
     }
 
-    const millisecondsToDeadline = +MAGIC_WYZWANIE_DEADLINE - Date.now()
-
-    if (millisecondsToDeadline <= 0) {
+    // The delay for window.setTimeout is stored as a 32-bit int and overflows
+    // past ~24.8 days, which would fire the redirect immediately. Poll the
+    // deadline once a second instead so it stays correct for any deadline.
+    if (Date.now() >= +MAGIC_WYZWANIE_DEADLINE) {
       redirectToClassicMagic()
       return
     }
 
-    const redirectTimeout = window.setTimeout(
-      redirectToClassicMagic,
-      millisecondsToDeadline
-    )
+    const deadlineCheck = window.setInterval(() => {
+      if (Date.now() >= +MAGIC_WYZWANIE_DEADLINE) {
+        redirectToClassicMagic()
+      }
+    }, 1000)
 
-    return () => window.clearTimeout(redirectTimeout)
+    return () => window.clearInterval(deadlineCheck)
   }, [])
 
   return (
