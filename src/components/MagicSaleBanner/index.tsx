@@ -22,13 +22,13 @@ const MagicSaleBanner = ({
   return (
     <>
       {version == 1 && (
-        <Section padding="pt-[56px] md:pt-[72px] pb-8 px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <Section padding="pt-8 sm:pt-10 md:pt-[72px] pb-8 px-4 sm:px-6 md:px-12">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8 items-center">
             {/* Left column - Content */}
-            <div className="text-center lg:text-left order-2 lg:order-1">
+            <div className="text-center lg:text-left order-1 lg:order-1">
               {/* Big heading */}
               <div className="flex items-start gap-3 justify-center lg:justify-start">
-                <h1 className="font-montserrat font-extrabold text-[40px] md:text-[56px] lg:text-[64px] leading-[100%] text-ada-magicOrange2 mb-6">
+                <h1 className="font-montserrat font-extrabold text-[32px] sm:text-[40px] md:text-[56px] lg:text-[64px] leading-[104%] lg:leading-[100%] text-ada-magicOrange2 mb-5 md:mb-6 max-w-[320px] sm:max-w-[460px] md:max-w-none">
                   Meta{" "}
                   <TypingWordSwitch
                     words={["Ads", "AI"]}
@@ -44,12 +44,12 @@ const MagicSaleBanner = ({
                   width={48}
                   height={48}
                   placeholder="blurred"
-                  className="flex-shrink-0 mt-2"
+                  className="hidden sm:block flex-shrink-0 mt-2"
                 />
               </div>
 
               {/* Subtext */}
-              <p className="text-[18px] md:text-[20px] leading-[28px] md:leading-[32px] text-black mb-8 max-w-[500px] mx-auto lg:mx-0">
+              <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-black mb-6 md:mb-8 max-w-[330px] sm:max-w-[500px] mx-auto lg:mx-0">
                 Społeczność kobiet, które skalują swoje biznesy z pomocą reklam
                 i sztucznej inteligencji pod czujnym okiem specjalistów.
               </p>
@@ -60,13 +60,13 @@ const MagicSaleBanner = ({
                   type="button"
                   text={<span>DOŁĄCZAM</span>}
                   sectionId="magic-package"
-                  textSize="font-montserrat !font-extrabold text-[24px] leading-[100%] uppercase text-black"
-                  btnStyle="bg-ada-pink8 hover:opacity-90 hover:shadow-xl rounded-full py-6 px-12"
+                  textSize="font-montserrat !font-extrabold text-[18px] md:text-[24px] leading-[100%] uppercase text-black"
+                  btnStyle="bg-ada-pink8 hover:opacity-90 hover:shadow-xl rounded-full py-4 px-8 md:py-6 md:px-12"
                 />
               </div>
 
               {/* Bottom text */}
-              <div className="font-montserrat font-bold text-[20px] md:text-[24px] leading-[100%] text-ada-magicOrange2 flex items-center justify-center lg:justify-start gap-2">
+              <div className="font-montserrat font-bold text-[16px] md:text-[24px] leading-[100%] text-ada-magicOrange2 flex items-center justify-center lg:justify-start gap-2">
                 <StaticImage
                   src="../../images/star-pink.webp"
                   alt=""
@@ -79,7 +79,7 @@ const MagicSaleBanner = ({
             </div>
 
             {/* Right column - Image */}
-            <div className="lg:block order-1 lg:order-2 lg:-mb-10 w-full max-w-[560px] mx-auto lg:mx-0">
+            <div className="order-2 lg:order-2 lg:-mb-10 w-full max-w-[320px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[560px] mx-auto lg:mx-0">
               <StaticImage
                 src="../../images/magic-landing-2026-hero.webp"
                 alt="Marketing Ads Girls Inside Club"
@@ -87,11 +87,11 @@ const MagicSaleBanner = ({
                 quality={100}
                 width={560}
                 height={560}
-                sizes="(min-width: 1024px) 560px, 92vw"
+                sizes="(min-width: 1024px) 560px, (min-width: 640px) 380px, 82vw"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-auto max-w-[560px]"
+                className="w-full h-auto"
               />
             </div>
           </div>
