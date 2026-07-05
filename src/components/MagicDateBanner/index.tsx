@@ -219,34 +219,6 @@ const HandwrittenNote = ({
   </p>
 )
 
-const MagicAssetLabel = ({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode
-  className?: string
-}) => (
-  <p
-    className={`pointer-events-none absolute z-30 hidden rounded-full border-2 border-black bg-ada-pink8 px-3 py-1 text-center font-anton text-[10px] uppercase leading-none text-black shadow-[3px_3px_0_rgba(0,0,0,0.22)] lg:block ${className}`}
-  >
-    {children}
-  </p>
-)
-
-const MagicMobileAssetLabel = ({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode
-  className?: string
-}) => (
-  <p
-    className={`pointer-events-none rounded-full border-2 border-black bg-ada-pink8 px-3 py-1 text-center font-anton text-[9px] uppercase leading-none text-black shadow-[3px_3px_0_rgba(0,0,0,0.22)] md:text-[11px] ${className}`}
-  >
-    {children}
-  </p>
-)
-
 const MagicMobileHandwrittenBlock = ({
   icon,
   title,
@@ -267,7 +239,7 @@ const MagicMobileHandwrittenBlock = ({
       {title}
     </HandwrittenNote>
     {children && (
-      <p className="mx-auto mt-2 w-[280px] max-w-full break-words font-caveat text-[14px] leading-[1.1] text-black md:w-[310px]">
+      <p className="mx-auto mt-2 w-[280px] max-w-full break-words font-caveat text-[16px] font-semibold leading-[1.1] text-black md:w-[310px]">
         {children}
       </p>
     )}
@@ -500,8 +472,8 @@ const MagicUnique2026MobileSection = () => (
               5 spotkań
               <br />
               <span
-                className="text-[15px] normal-case"
-                style={{ fontFamily: '"Caveat", cursive', fontWeight: 400 }}
+                className="text-[17px] normal-case"
+                style={{ fontFamily: '"Caveat", cursive', fontWeight: 500 }}
               >
                 na żywo miesięcznie
               </span>
@@ -585,9 +557,12 @@ const MagicUnique2026MobileSection = () => (
           wsparcie techniczne przy wdrażaniu konkretnych rozwiązań reklamowych
         </MagicMobileHandwrittenBlock>
         <div className="w-full space-y-3">
-          <MagicMobileAssetLabel className="mx-auto w-[250px] max-w-full rotate-[2deg] md:w-[320px]">
+          <HandwrittenNote
+            className="mx-auto w-[250px] max-w-full rotate-[2deg] text-center text-[18px] leading-[0.95] md:w-[320px] md:text-[20px]"
+            style={{ fontFamily: '"Caveat", cursive', fontWeight: 600 }}
+          >
             przykładowe pytania i odpowiedzi
-          </MagicMobileAssetLabel>
+          </HandwrittenNote>
           <div className="mx-auto w-[300px] max-w-full rotate-[1deg] md:w-[420px]">
             <StaticImage
               src="../../images/magic-landing-2026-opinions-c.webp"
@@ -615,7 +590,7 @@ const MagicUnique2026MobileSection = () => (
 
       <div className="flex flex-col items-center gap-4">
         <MagicMobileHandwrittenBlock title="5 ekspertów">
-          pomogą Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
+          pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze,
           automatyzacjach
         </MagicMobileHandwrittenBlock>
         <div className="w-screen max-w-none">
@@ -721,7 +696,10 @@ const MagicUnique2026Section = () => (
             <br />
             nauki
           </HandwrittenNote>
-          <HandwrittenNote className="absolute left-[170px] top-[160px] max-w-[96px] rotate-[-8deg] text-[15px] leading-[0.92] md:max-w-[112px] md:text-[16px] lg:left-[300px] lg:top-[400px] lg:max-w-[155px] lg:text-[17px]">
+          <HandwrittenNote
+            className="absolute left-[170px] top-[160px] max-w-[96px] rotate-[-8deg] text-[15px] leading-[0.92] md:max-w-[112px] md:text-[16px] lg:left-[300px] lg:top-[400px] lg:max-w-[155px] lg:text-[18px]"
+            style={{ fontFamily: '"Caveat", cursive', fontWeight: 600 }}
+          >
             pasek progresu ułatwiający naukę
           </HandwrittenNote>
           <span className="absolute left-[252px] top-[190px] text-[18px] lg:left-[460px] lg:top-[442px] lg:text-[19px]">
@@ -734,8 +712,8 @@ const MagicUnique2026Section = () => (
             5 spotkań
             <br />
             <span
-              className="text-[12px] normal-case"
-              style={{ fontFamily: '"Caveat", cursive', fontWeight: 400 }}
+              className="text-[15px] normal-case"
+              style={{ fontFamily: '"Caveat", cursive', fontWeight: 500 }}
             >
               na żywo miesięcznie
             </span>
@@ -782,7 +760,7 @@ const MagicUnique2026Section = () => (
             >
               Asystentka AI
             </HandwrittenNote>
-            <p className="mt-1 text-[8px] font-caveat leading-tight lg:text-[11px] lg:leading-[1.05]">
+            <p className="mt-1 text-[8px] font-caveat font-semibold leading-tight lg:text-[14px] lg:leading-[1.1]">
               wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
               bolączką
             </p>
@@ -802,7 +780,7 @@ const MagicUnique2026Section = () => (
               <br />
               Circle
             </HandwrittenNote>
-            <p className="mt-2 text-[8px] font-caveat leading-tight lg:mx-auto lg:w-[160px] lg:text-[11px] lg:leading-[1.05]">
+            <p className="mt-2 text-[8px] font-caveat font-semibold leading-tight lg:mx-auto lg:w-[175px] lg:text-[14px] lg:leading-[1.1]">
               wsparcie techniczne przy wdrażaniu konkretnych rozwiązań
               reklamowych
             </p>
@@ -822,9 +800,6 @@ const MagicUnique2026Section = () => (
           </MagicUniqueCard>
 
           <div className="absolute left-[455px] top-[700px] z-10 hidden w-[335px] lg:block">
-            <MagicAssetLabel className="left-[40px] top-[-30px] w-[250px] rotate-[2deg]">
-              przykładowe pytania i odpowiedzi
-            </MagicAssetLabel>
             <StaticImage
               src="../../images/magic-landing-2026-opinions-c.webp"
               alt="Opinia o wsparciu MAGIC"
@@ -848,17 +823,103 @@ const MagicUnique2026Section = () => (
             />
           </div>
 
-          <div className="absolute left-[160px] top-[398px] w-[112px] text-center lg:left-[210px] lg:top-[1055px] lg:w-[285px]">
+          <div className="absolute left-[160px] top-[398px] w-[112px] text-center lg:left-[210px] lg:top-[1000px] lg:w-[285px]">
             <HandwrittenNote
               className="text-[22px] uppercase lg:text-[24px]"
               style={{ fontFamily: '"Caveat", cursive', fontWeight: 700 }}
             >
               5 ekspertów
             </HandwrittenNote>
-            <p className="mt-1 text-[8px] font-caveat leading-tight lg:text-[11px] lg:leading-[1.05]">
-              pomogą Ci w: reklamach Meta Ads, tekstach, grafikach,
+            <p className="mt-1 text-[8px] font-caveat font-semibold leading-tight lg:text-[14px] lg:leading-[1.1]">
+              pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach,
               newsletterze, automatyzacjach
             </p>
+          </div>
+
+          <HandwrittenNote
+            className="absolute left-[322px] top-[776px] z-20 hidden w-[126px] rotate-[-8deg] text-center text-[16px] leading-[0.95] lg:block"
+            style={{ fontFamily: '"Caveat", cursive', fontWeight: 600 }}
+          >
+            przykładowe pytania
+            <br />i odpowiedzi
+          </HandwrittenNote>
+
+          <div className="pointer-events-none absolute left-[108px] top-[486px] z-20 hidden w-[44px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-arrow-levels.webp"
+              alt=""
+              placeholder="none"
+              quality={90}
+              width={335}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+          <div className="pointer-events-none absolute left-[480px] top-[482px] z-20 hidden w-[63px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-arrow-calendar.webp"
+              alt=""
+              placeholder="none"
+              quality={90}
+              width={483}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+          <div className="pointer-events-none absolute left-[520px] top-[652px] z-20 hidden w-[62px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-arrow-circle.webp"
+              alt=""
+              placeholder="none"
+              quality={90}
+              width={468}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+          <div className="pointer-events-none absolute left-[195px] top-[700px] z-20 hidden w-[63px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-arrow-ai.webp"
+              alt=""
+              placeholder="none"
+              quality={90}
+              width={480}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+          <div className="pointer-events-none absolute left-[339px] top-[922px] z-20 hidden w-[31px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-arrow-experts.webp"
+              alt=""
+              placeholder="none"
+              quality={90}
+              width={234}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+          <div className="pointer-events-none absolute left-[270px] top-[352px] z-20 hidden w-[50px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-swirl-progress.webp"
+              alt=""
+              placeholder="none"
+              quality={90}
+              width={410}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
+          </div>
+          <div className="pointer-events-none absolute left-[375px] top-[727px] z-20 hidden w-[55px] lg:block">
+            <StaticImage
+              src="../../images/magic-landing-2026-swirl-questions.webp"
+              alt=""
+              placeholder="none"
+              quality={90}
+              width={421}
+              className="w-full"
+              imgClassName="!object-contain"
+            />
           </div>
 
           {magicUniqueExperts.map((expert) => (
