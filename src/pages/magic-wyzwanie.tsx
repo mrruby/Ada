@@ -17,7 +17,7 @@ import SEO from "components/seo"
 import React, { useEffect } from "react"
 import { navigate } from "gatsby"
 
-const MAGIC_WYZWANIE_DEADLINE = new Date("2026-07-10T23:59:00+02:00")
+const MAGIC_WYZWANIE_DEADLINE = new Date("2026-07-12T23:59:00+02:00")
 const MAGIC_CLASSIC_PATH = "/magic/"
 
 const MagicWyzwanieCountdown = () => {
