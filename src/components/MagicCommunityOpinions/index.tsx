@@ -74,9 +74,9 @@ const MagicCommunityOpinions = ({
             >
               <Button
                 type="button"
-                text="Dołączam"
-                variant="pink"
-                btnStyle="px-8 py-4"
+                text={<span className="!font-extrabold">Dołączam</span>}
+                textSize="text-xs md:text-adaBase uppercase text-black"
+                btnStyle="bg-ada-pink8 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
               />
             </a>
           </div>
