@@ -1,4 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image"
+import { Button } from "helpers/Button"
 import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
@@ -54,12 +55,31 @@ const MagicCommunityOpinions = ({
         ) : (
           <Typography
             variant="h1"
-            className={`mb-12 text-center ${config.textColor}`}
+            className={`mb-6 text-center ${config.textColor}`}
           >
-            Zobacz, co członkinie{" "}
-            <span className={config.magicColor}>MAGIC</span> mówią o
-            społeczności:
+            Wyniki i opinie członkiń
           </Typography>
+        )}
+
+        {variant !== "sowa" && (
+          <div className="mb-10 text-center">
+            <p className={`mb-6 ${config.textColor}`}>
+              Chcesz takich liczb u siebie? Twój MAGIC Plan pokaże pierwszy krok
+            </p>
+            <a
+              href="https://cart.easy.tools/checkout/81632369/magic-subskrypcja"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button
+                type="button"
+                text="Dołączam"
+                variant="pink"
+                btnStyle="px-8 py-4"
+              />
+            </a>
+          </div>
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">

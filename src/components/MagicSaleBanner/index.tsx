@@ -50,8 +50,8 @@ const MagicSaleBanner = ({
 
               {/* Subtext */}
               <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[32px] text-black mb-6 md:mb-8 max-w-[330px] sm:max-w-[500px] mx-auto lg:mx-0">
-                Społeczność kobiet, które skalują swoje biznesy z pomocą reklam
-                i sztucznej inteligencji pod czujnym okiem specjalistów.
+                Skaluj swój biznes dzięki reklamom, AI i automatyzacjom: z
+                konkretnym planem wdrożeniowym.
               </p>
 
               {/* Button */}
@@ -169,8 +169,7 @@ const MagicSaleBanner = ({
           />
           <p className="text-adaSubtitle mt-4 text-[#000000]">
             <span className="bg-[#FFD1F0] px-4 py-2 rounded-lg inline-block">
-              <b>3 opcje czasowe subskrypcji</b> - wybierz model najlepszy dla
-              Ciebie!
+              <b>Do 12 lipca każdy pakiet zaczyna się od Twojego MAGIC Planu.</b>
             </span>
           </p>
 
@@ -205,6 +204,10 @@ const MagicSaleBanner = ({
                 </div>
                 <hr className="border-t border-black mb-4 w-[calc(100%+4rem)] -ml-8" />
                 <p className="pb-4 text-sm">
+                  🎯 <b>MAGIC Plan na start</b>: spotkanie 1:1 z Nicolą +
+                  indywidualny plan reklam (dla dołączających do 12.07)
+                </p>
+                <p className="pb-4 text-sm">
                   👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
                 </p>
                 <p className="pb-4 text-sm">
@@ -223,8 +226,15 @@ const MagicSaleBanner = ({
                   💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
                   miesiącu
                 </p>
-                <p className="text-sm">
+                <p className="pb-4 text-sm">
                   👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+                <p className="text-sm">
+                  🗓️ <b>5 spotkań na żywo miesięcznie</b> (konsultacje grupowe,
+                  warsztaty, LIVE - wszystkie nagrywane)
+                </p>
+                <p className="mt-3 text-sm text-center text-ada-black/70">
+                  Sprawdzasz, jak to działa, bez długiego zobowiązania.
                 </p>
               </div>
             </div>
@@ -267,6 +277,10 @@ const MagicSaleBanner = ({
                 </div>
                 <hr className="border-t border-black mb-4 w-[calc(100%+4rem)] -ml-8" />
                 <p className="pb-4 text-sm">
+                  🎯 <b>MAGIC Plan na start</b>: spotkanie 1:1 z Nicolą +
+                  indywidualny plan reklam (dla dołączających do 12.07)
+                </p>
+                <p className="pb-4 text-sm">
                   👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
                 </p>
                 <p className="pb-4 text-sm">
@@ -285,8 +299,16 @@ const MagicSaleBanner = ({
                   💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
                   miesiącu
                 </p>
-                <p className="text-sm">
+                <p className="pb-4 text-sm">
                   👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+                <p className="text-sm">
+                  🗓️ <b>5 spotkań na żywo miesięcznie</b> (konsultacje grupowe,
+                  warsztaty, LIVE - wszystkie nagrywane)
+                </p>
+                <p className="mt-3 text-sm text-center text-ada-black/70">
+                  Tyle trwa zbudowanie pierwszego lejka, przetestowanie kampanii
+                  i zobaczenie realnych wyników.
                 </p>
               </div>
             </div>
@@ -329,6 +351,10 @@ const MagicSaleBanner = ({
                 </div>
                 <hr className="border-t border-black mb-4 w-[calc(100%+4rem)] -ml-8" />
                 <p className="pb-4 text-sm">
+                  🎯 <b>MAGIC Plan na start</b>: spotkanie 1:1 z Nicolą +
+                  indywidualny plan reklam (dla dołączających do 12.07)
+                </p>
+                <p className="pb-4 text-sm">
                   👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
                 </p>
                 <p className="pb-4 text-sm">
@@ -347,11 +373,40 @@ const MagicSaleBanner = ({
                   💡 udział w dwóch <b>autorskich warsztatach tematycznych</b> w
                   miesiącu
                 </p>
-                <p className="text-sm">
+                <p className="pb-4 text-sm">
                   👀 <b>nielimitowany dostęp do nagrań</b> ze wszystkich spotkań
+                </p>
+                <p className="text-sm">
+                  🗓️ <b>5 spotkań na żywo miesięcznie</b> (konsultacje grupowe,
+                  warsztaty, LIVE - wszystkie nagrywane)
+                </p>
+                <p className="mt-3 text-sm text-center text-ada-black/70">
+                  Dla tych, które wiedzą, że reklamy to nie sprint, tylko
+                  maraton.
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* CTA: bezpłatna rozmowa z Nicolą */}
+          <div className="mt-12 flex flex-col items-center text-center">
+            <p className="text-adaSubtitle text-black max-w-[720px]">
+              Nie wiesz, czy MAGIC jest dla Ciebie? Umów{" "}
+              <b>bezpłatną 30-minutową rozmowę z Nicolą</b>
+            </p>
+            <a
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2R36p86iZGPSsdhYrFdXIzDLsNY1t1QDgYSXS4aHyeqhQTgNOzE_gqZTnzjq0eaNVYtOMgNwpS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6"
+            >
+              <Button
+                type="button"
+                text={<span>umawiam się na rozmowę</span>}
+                textSize="text-base md:text-adaSubtitleSecondary uppercase !font-extrabold text-black"
+                btnStyle="bg-ada-magicPink4 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[180px] h-[56px] shadow-xl"
+              />
+            </a>
           </div>
         </Section>
       )}

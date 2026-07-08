@@ -143,12 +143,11 @@ const magicBannerContent2 = [
         <p>
           <span className="text-adaSubtitleSecondary">🤨</span> <br />{" "}
           <span className="font-bold uppercase">
-            Wyniki reklam nie są takie, jakich oczekiwałaś?
+            Ustawiasz reklamy „na czuja" i trzymasz kciuki?
           </span>
           <br />
-          Przyjdź na grupowe konsultacje w MAGIC, aby skonsultować plan
-          działania ze specjalistkami, które spędzają w Managerze Reklam 5+
-          godzin dziennie.
+          Skonsultujesz swój plan z dziewczynami, które spędzają w Managerze
+          Reklam 5+ godzin dziennie. Zawodowo, nie z nudów. 🤭
         </p>
       </>
     ),
@@ -166,10 +165,10 @@ const magicBannerContent3 = [
         <p>
           <span className="text-adaSubtitleSecondary">😮‍💨</span> <br />{" "}
           <span className="font-bold uppercase">
-            Czujesz, że tracisz budżet reklamowy?
+            Czujesz, że przepalasz budżet reklamowy?
           </span>
-          <br /> Skonsultuj optymalizację budżetu w zależności od etapu lejka i
-          branży.
+          <br /> Zobaczysz, którędy pieniądze uciekają (spoiler: często przez
+          „promuj post") i jak ustawić budżet do Twojego etapu.
         </p>
       </>
     ),
@@ -225,8 +224,9 @@ const magicBannerContent4 = [
           <span className="font-bold uppercase">
             Twoje wyniki rozczarowują, zamiast zachwycać?
           </span>
-          <br />W MAGIC nauczysz się, jak w miesiąc dotrzeć do tylu osób, do ilu
-          docierałaś przez rok.
+          <br />Dostaniesz plan, co poprawić w pierwszej kolejności - i
+          sprawdzisz każdą zmianę ze specjalistką, zanim wydasz kolejną
+          złotówkę.
         </p>
       </>
     ),
@@ -243,8 +243,8 @@ const magicBannerContent4 = [
           <span className="font-bold uppercase">
             Tworzysz samodzielnie teksty, maile, landingi?
           </span>
-          <br /> Skonsultuj swoje treści z copywriterką i zapytaj graficzki, co
-          zrobić, aby projekt przyciągał wzrok
+          <br /> W Magic otrzymasz audyt swoich treści oraz grafik -
+          przygotowany przez specjalistki
         </p>
       </>
     ),
@@ -306,8 +306,8 @@ const magicBannerContent5 = [
             Twoje konto reklamowe zostało zablokowane?
           </span>
           <br />
-          Dowiedz się, co zrobić w takiej sytuacji, nawet gdy support Mety
-          rozkłada ręce.
+          Dostaniesz instrukcję krok po kroku, co robić - nawet gdy support
+          Mety rozkłada ręce.
         </p>
       </>
     ),
@@ -321,11 +321,10 @@ const magicBannerContent5 = [
         <p>
           <span className="text-adaSubtitleSecondary">🤷‍♀️</span> <br />{" "}
           <span className="font-bold uppercase">
-            Spędzasz godziny na tworzeniu contentu, a efekty wciąż nie są
-            zadowalające?
+            Godziny na rolkach, a sprzedaży brak?
           </span>
-          <br /> Zamiast tworzyć nieskończone ilości treści na IG, dowiedz się
-          jak wykorzystać algorytm Mety na korzyść swojego biznesu.
+          <br /> Dobrze ustawiona reklama sprzedaje też wtedy, kiedy Ty nie
+          siedzisz w telefonie.
         </p>
       </>
     ),
@@ -586,11 +585,13 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                 variant="body"
                 className="text-black pt-8 text-center max-w-[600px] mx-auto pb-6"
               >
-                Dlatego stworzyłyśmy MAGIC - wyjątkową społeczność kobiet, które
-                chcą skutecznie reklamować się w Meta, ale bez stresu, że coś
-                nie działa. Zamiast eksperymentów i niepewności, zyskujesz
-                dostęp do merytorycznego wsparcia, sprawdzonych strategii i
-                inspiracji, które realnie przekładają się na wyniki.
+                Dlatego stworzyłyśmy MAGIC - miejsce, w którym nie zostajesz z
+                reklamami sama. Zaczynasz od <b>spotkania 1:1</b>, a do 5 dni po
+                spotkaniu masz w ręku swój <b>MAGIC Plan</b>: co ustawić, w
+                jakiej kolejności i z jakim budżetem. Potem wdrażasz go krok po
+                kroku - a o każdy ruch możesz dopytać specjalistki na pisemnych
+                konsultacjach. Bez zgadywania i poczucia, że jesteś ze wszystkim
+                sama.
               </Typography>
 
               <div className="w-full flex justify-center">
