@@ -3,6 +3,7 @@ import { Button } from "helpers/Button"
 import TypingAnimation from "helpers/TypingAnimation"
 import TypingWordSwitch from "helpers/TypingWordSwitch"
 import React from "react"
+import { NicolaCallPopup } from "../NicolaCallPopup"
 import Section from "../shared/Section"
 import StarBadge from "../shared/StarBadge"
 
@@ -388,26 +389,7 @@ const MagicSaleBanner = ({
             </div>
           </div>
 
-          {/* CTA: bezpłatna rozmowa z Nicolą */}
-          <div className="mt-12 flex flex-col items-center text-center">
-            <p className="text-adaSubtitle text-black max-w-[720px]">
-              Nie wiesz, czy MAGIC jest dla Ciebie? Umów{" "}
-              <b>bezpłatną 30-minutową rozmowę z Nicolą</b>
-            </p>
-            <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2R36p86iZGPSsdhYrFdXIzDLsNY1t1QDgYSXS4aHyeqhQTgNOzE_gqZTnzjq0eaNVYtOMgNwpS"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6"
-            >
-              <Button
-                type="button"
-                text={<span>umawiam się na rozmowę</span>}
-                textSize="text-base md:text-adaSubtitleSecondary uppercase !font-extrabold text-black"
-                btnStyle="bg-ada-magicPink4 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[180px] h-[56px] shadow-xl"
-              />
-            </a>
-          </div>
+          <NicolaCallPopup />
         </Section>
       )}
       {version == 6 && (

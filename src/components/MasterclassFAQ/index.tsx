@@ -521,7 +521,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
       ),
     },
     {
-      question: "🎯 Jak wygląda MAGIC Plan na start?",
+      question: "🚀 Jak wygląda MAGIC Plan na start?",
       answer: (
         <>
           Po dołączeniu wypełniasz krótki formularz (10 minut) i umawiasz
