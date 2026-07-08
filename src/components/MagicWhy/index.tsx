@@ -445,10 +445,13 @@ const MagicWhy = ({ part }: { part: number }) => {
             formats={["auto", "webp", "avif"]}
             quality={75}
           />
-          <p className="mt-6 max-w-2xl text-center text-ada-black">
+          <Typography
+            variant="h2"
+            className="mt-6 max-w-3xl text-center text-ada-black font-bold"
+          >
             Twój MAGIC Plan podpowie, które z tych spotkań są dla Ciebie
             najważniejsze w pierwszym miesiącu.
-          </p>
+          </Typography>
         </div>
       )}
       {part == 13 && (
