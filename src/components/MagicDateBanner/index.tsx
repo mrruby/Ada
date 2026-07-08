@@ -525,8 +525,8 @@ const MagicUnique2026MobileSection = () => (
 
       <div className="flex flex-col items-center gap-4">
         <MagicMobileHandwrittenBlock icon="🤖" title="Asystentka AI">
-          wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
-          bolączką
+          napisz wiadomość (albo nagraj głosówkę), a Kapibara Barbara pomoże Ci
+          z każdą reklamową zagwozdką - o każdej porze
         </MagicMobileHandwrittenBlock>
         <div className="mx-auto w-[250px] max-w-full rotate-[-3deg] md:w-[280px]">
           <StaticImage
@@ -554,7 +554,8 @@ const MagicUnique2026MobileSection = () => (
             </>
           }
         >
-          wsparcie techniczne przy wdrażaniu konkretnych rozwiązań reklamowych
+          zadajesz pytanie o SWOJĄ reklamę, kiedy Ci wygodnie - odpowiedź
+          specjalistki czeka na Ciebie na Circle
         </MagicMobileHandwrittenBlock>
         <div className="w-full space-y-3">
           <HandwrittenNote
@@ -761,8 +762,8 @@ const MagicUnique2026Section = () => (
               Asystentka AI
             </HandwrittenNote>
             <p className="mt-1 text-[8px] font-caveat font-semibold leading-tight lg:text-[14px] lg:leading-[1.1]">
-              wyślij wiadomość, a Kapibara Barbara pomoże Ci z każdą reklamową
-              bolączką
+              napisz wiadomość (albo nagraj głosówkę), a Kapibara Barbara pomoże
+              Ci z każdą reklamową zagwozdką - o każdej porze
             </p>
           </div>
 
@@ -781,8 +782,8 @@ const MagicUnique2026Section = () => (
               Circle
             </HandwrittenNote>
             <p className="mt-2 text-[8px] font-caveat font-semibold leading-tight lg:mx-auto lg:w-[175px] lg:text-[14px] lg:leading-[1.1]">
-              wsparcie techniczne przy wdrażaniu konkretnych rozwiązań
-              reklamowych
+              zadajesz pytanie o SWOJĄ reklamę, kiedy Ci wygodnie - odpowiedź
+              specjalistki czeka na Ciebie na Circle
             </p>
           </div>
 

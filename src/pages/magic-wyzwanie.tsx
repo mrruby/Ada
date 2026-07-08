@@ -85,7 +85,7 @@ const MagicWyzwaniePage = () => {
           <MagicBanner1 version={4} />
         </div>
         <MaxWithBgColorContainer bgColor="bg-ada-pink8">
-          <MagicVideo />
+          <MagicVideo heading="Zobacz, jak działa MAGIC" />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
           <MagicDateBanner version={5} layout="magic-special" />

@@ -19,31 +19,31 @@ const PEOPLE_CONTENT = [
   {
     name: "Adrianna Promis-Urbas",
     description:
-      "Kreatywna dusza i mózg MAGIC. Specjalizuje się w kampaniach Meta Ads i marketingu zbudowanym na relacjach.",
+      "Kreatywna dusza i mózg MAGIC. Specjalizuje się w kampaniach Meta Ads i marketingu zbudowanym na relacjach. Z Adą skonsultujesz strukturę i wyniki swoich kampanii.",
     img: "ada",
   },
   {
     name: "Justyna Król",
     description:
-      "Socjolożka i zaklinaczka słów. Tworzy teksty reklamowe budujące autentyczne relacje między marką a klientami.",
+      "Socjolożka i zaklinaczka słów. Tworzy teksty reklamowe budujące autentyczne relacje między marką a klientami. Justynie wyślesz tekst reklamy do sprawdzenia, zanim odpalisz reklamę.",
     img: "justyna",
   },
   {
     name: "Dorota Woźniak",
     description:
-      "Architektka z pasją do projektowania. Zamienia nudne reklamy w przyciągające wzrok kreacje graficzne.",
+      "Architektka z pasją do projektowania. Zamienia nudne reklamy w przyciągające wzrok kreacje graficzne. Dorota powie, co poprawić w grafikach i pokaże, jakie materiały ustawić w reklamie.",
     img: "dorota",
   },
   {
     name: "Nicola Kut",
     description:
-      "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisy pracy.",
+      "Analityczka biznesu-to-be, dla której żadne liczby i raporty nie są straszne. Przeprowadza researche, tworzy kampanie i ogarnia kulisy pracy. Z Nicolą zaczniesz i skonsultujesz reklamy. To ona poprowadzi Twoje spotkanie startowe i przygotuje Twój MAGIC Plan.",
     img: "nicola",
   },
   {
     name: "Dawid Urbas",
     description:
-      "Pasjonat AI i automatyzacji. Pokazuje, jak nowe technologie mogą być Twoją tajną bronią, oszczędzając czas i otwierając nowe możliwości dla Twojego biznesu.",
+      "Pasjonat AI i automatyzacji. Pokazuje, jak nowe technologie mogą być Twoją tajną bronią, oszczędzając czas i otwierając nowe możliwości dla Twojego biznesu. Z Dawidem ustawisz automatyzacje i stworzysz swojego asystenta AI, który pracuje dla Ciebie",
     img: "dawid",
   },
 ]

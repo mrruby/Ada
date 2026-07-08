@@ -55,10 +55,8 @@ const bannerContent2 = [
     bgColor: "bg-ada-magicPurple4",
     description: (
       <p>
-        <span className="font-bold">
-          Wspólnie opracować Twój lejek reklamowy
-        </span>{" "}
-        na konsultacjach
+        Zaczniesz od spotkania 1:1 i planu reklam pod swój biznes - zamiast
+        zgadywać, od czego zacząć
       </p>
     ),
     styles: "text-black",
@@ -67,11 +65,7 @@ const bannerContent2 = [
     bgColor: "bg-ada-magicOrange2",
     description: (
       <p>
-        Dowiedzieć się, co zrobić,
-        <span className="font-bold">
-          {" "}
-          gdy Twoje konto reklamowe zostaje zablokowane
-        </span>
+        Rozrysujemy z Tobą ścieżkę od reklamy do zakupu, zanim wydasz budżet
       </p>
     ),
     styles: "text-black",
@@ -79,10 +73,7 @@ const bannerContent2 = [
   {
     bgColor: "bg-ada-magicPink4",
     description: (
-      <p>
-        <span className="font-bold">Skonsultować teksty</span> i projekt{" "}
-        <span className="font-bold">landing page</span>
-      </p>
+      <p>Skonsultujesz teksty i stronę PRZED startem kampanii, nie po fakcie</p>
     ),
     styles: "text-black",
   },
@@ -90,9 +81,8 @@ const bannerContent2 = [
     bgColor: "bg-ada-magicPurple4",
     description: (
       <p>
-        <span className="font-bold">
-          Ustawić pierwszą automatyzację w reklamach
-        </span>
+        A gdy Meta zablokuje Ci konto o 23:00 - dostaniesz plan działania krok
+        po kroku
       </p>
     ),
     styles: "text-black",
@@ -192,13 +182,13 @@ const MagicBanner2 = ({ version }: { version: number }) => {
             >
               <Typography variant="h2" className="animate-bounce uppercase">
                 <span className="text-ada-magicPurple4">MAGIC</span> to Twój
-                podręczny abonament na marketing
+                zespół od reklam
               </Typography>
               <Typography
                 variant="h3"
                 className="text-ada-black font-medium pt-4"
               >
-                Jako członkini możesz na przykład:
+                bez etatu i bez faktur od agencji
               </Typography>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 md:-mx-32 lg:-mx-48">

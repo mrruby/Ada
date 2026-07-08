@@ -510,13 +510,24 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
       question: "💎 Co sprawia, że MAGIC jest wyjątkowy?",
       answer: (
         <>
-          To tętniąca życiem, interaktywna społeczność! Uczestniczysz w
-          spotkaniach na żywo, masz dostęp do nagrań, a program elastycznie
-          dopasowujemy do Twoich potrzeb. W zależności od wybranego pakietu
-          korzystasz z konsultacji grupowych i indywidualnych. To nie jest
-          kolejny statyczny kurs - to przestrzeń ciągłego rozwoju!
+          To żywa społeczność, nie kolejny kurs z nagraniami. Masz 5 spotkań na
+          żywo miesięcznie (wszystkie nagrywane), pytania zadajesz pisemnie,
+          kiedy Ci wygodnie - a każda nowa członkini zaczyna od spotkania 1:1 z
+          Nicolą i własnego MAGIC Planu. Każdy pakiet zawiera dokładnie to samo;
+          różni się tylko długością i ceną za miesiąc.
           <br />
           <br />
+        </>
+      ),
+    },
+    {
+      question: "🎯 Jak wygląda MAGIC Plan na start?",
+      answer: (
+        <>
+          Po dołączeniu wypełniasz krótki formularz (10 minut) i umawiasz
+          spotkanie 1:1 z Nicolą - rozmowa o Twoim biznesie i reklamach. Do 5 dni
+          po spotkaniu w MAGIC czeka na Ciebie gotowy plan: co ustawić, w jakiej
+          kolejności i z jakim budżetem.
         </>
       ),
     },
@@ -525,9 +536,10 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
       answer: (
         <>
           <ul>
+            <li>- Na start: spotkanie 1:1 z Nicolą i Twój MAGIC Plan</li>
             <li>
-              - 4 intensywne sesje (konsultacje grupowe, warsztaty, ustawianie
-              reklamy na żywo, 60-90 min) miesięcznie
+              - 5 spotkań na żywo (konsultacje grupowe, warsztaty, ustawianie
+              reklam na żywo: 60–90 min) miesięcznie
             </li>
             <li>- Nielimitowane konsultacje pisemne</li>
             <li>- Regularne inspiracje i praktyczne wskazówki</li>
@@ -547,8 +559,8 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
           kampanie w Meta Ads. Dodatkowo poznasz skuteczne techniki copywritingu
           i zasady tworzenia przyciągających grafik. Dowiesz się, jak stworzyć
           własny newsletter oraz jakie narzędzia AI warto wykorzystać w swojej
-          pracy, aby działać szybciej i skuteczniej! Wszystko, czego
-          potrzebujesz do skutecznego marketingu online!
+          pracy, aby działać szybciej i skuteczniej! Jak sprawić, żeby reklamy
+          sprzedawały - a AI i automatyzacje robiły część roboty za Ciebie.
         </>
       ),
     },

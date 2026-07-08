@@ -2,7 +2,13 @@ import React from "react"
 import Section from "../shared/Section"
 import VimeoFacade from "../VimeoFacade"
 
-const MagicVideo = ({ version }: { version?: number }) => {
+const MagicVideo = ({
+  version,
+  heading,
+}: {
+  version?: number
+  heading?: string
+}) => {
   // Default video (original)
   const defaultVideoId = "1117395484"
   const defaultTitle = "Twoje zaproszenie do MAGIC"
@@ -27,6 +33,11 @@ const MagicVideo = ({ version }: { version?: number }) => {
   return (
     <Section bgColor="bg-transparent" padding="py-8 md:py-12 px-6">
       <div className="max-w-4xl mx-auto">
+        {heading && (
+          <h2 className="text-center font-bold text-adaSubtitle mb-6">
+            {heading}
+          </h2>
+        )}
         <VimeoFacade videoId={videoId} title={videoTitle} />
       </div>
     </Section>

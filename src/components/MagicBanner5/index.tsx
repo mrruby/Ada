@@ -96,8 +96,8 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               variant="h3"
               className="text-ada-black font-medium pt-2"
             >
-              Jak <b>Magda</b> uporządkowała chaos reklamowy i zyskała pewność w
-              prowadzeniu kampanii?
+              Jak <b>Magda</b> uporządkowała chaos reklamowy{" "}
+              <b>w swoim biznesie</b> (i przestała bać się Managera Reklam)?
             </Typography>
             <div className="relative -mt-1 mb-1 md:-mt-2">
               <Carousel
@@ -140,8 +140,8 @@ const MagicBanner5 = ({ version }: { version: number }) => {
               variant="h3"
               className="text-ada-black font-medium pt-2"
             >
-              Jak <b>Magda</b> uporządkowała chaos reklamowy i zyskała pewność w
-              prowadzeniu kampanii?
+              Jak <b>Magda</b> - <b>marketerka</b> - prowadzi kampanie klientów
+              ze wsparciem MAGIC?
             </Typography>
             <div className="relative my-1 md:-mt-1">
               <Carousel
