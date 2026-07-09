@@ -111,7 +111,7 @@ const MagicWyzwaniePage = () => {
           <MagicBanner2 version={2} />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
-          <MagicCommunityOpinions />
+          <MagicCommunityOpinions showResults />
         </MaxWithBgColorContainer>
         <MaxWithBgColorContainer bgColor="bg-ada-magicPurple4">
           <MagicBanner5 version={1} />
