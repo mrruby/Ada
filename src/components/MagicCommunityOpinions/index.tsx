@@ -62,6 +62,29 @@ const MagicCommunityOpinions = ({
         )}
 
         {variant !== "sowa" && (
+          <div className="mx-auto mb-10 grid max-w-[900px] grid-cols-1 items-center gap-6 sm:grid-cols-3">
+            <StaticImage
+              src="../../images/wyzwanie-sales-result-1.webp"
+              alt="Wyniki reklam członkini MAGIC"
+              placeholder="blurred"
+              className="w-full"
+            />
+            <StaticImage
+              src="../../images/wyzwanie-sales-result-2.webp"
+              alt="Wyniki reklam członkini MAGIC"
+              placeholder="blurred"
+              className="w-full"
+            />
+            <StaticImage
+              src="../../images/wyzwanie-sales-result-3.webp"
+              alt="Wyniki reklam członkini MAGIC"
+              placeholder="blurred"
+              className="w-full"
+            />
+          </div>
+        )}
+
+        {variant !== "sowa" && (
           <div className="mb-10 text-center">
             <p className={`mb-6 ${config.textColor}`}>
               Chcesz takich liczb u siebie? Twój MAGIC Plan pokaże pierwszy krok
