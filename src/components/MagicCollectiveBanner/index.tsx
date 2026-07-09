@@ -6,9 +6,6 @@ import MagicCollectiveForm from "../MagicCollectiveForm"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-const COLLECTIVE_CONSULTATION_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScWWFTLKbI4z7gIHU7-6gDcBcKLmlDP1QgB3EfODdomkHmpYw/viewform?usp=sharing&ouid=112663730817679195316"
-
 const MagicCollectiveBanner = ({ version }: { version: number }) => {
   const [hasAnimated, setHasAnimated] = useState(false)
 
@@ -31,7 +28,8 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               variant="h3"
               className="mt-11 font-anton font-bold text-center"
             >
-              Zwiększ swoje zarobki, rozwijaj markę i pozyskuj klientów dzięki reklamom Meta Ads!
+              Zwiększ swoje zarobki, rozwijaj markę i pozyskuj klientów dzięki
+              reklamom Meta Ads!
             </Typography>
             <Typography
               variant="body"
@@ -45,13 +43,15 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 variant="body"
                 className="font-courier leading-[32px] md:leading-[36px]"
               >
-                ✅ Ekspercka wiedza reklamowa i partnerskie podejście do Twojego biznesu
+                ✅ Ekspercka wiedza reklamowa i partnerskie podejście do Twojego
+                biznesu
               </Typography>
               <Typography
                 variant="body"
                 className="font-courier leading-[32px] md:leading-[36px]"
               >
-                ✅ Nie musisz być specjalistką od reklam, by kampanie pracowały dla Ciebie!
+                ✅ Nie musisz być specjalistką od reklam, by kampanie pracowały
+                dla Ciebie!
               </Typography>
             </div>
             <div className="flex justify-center mt-8">
@@ -313,13 +313,15 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
                 <li className="flex items-start">
                   <span className="mr-2">✅</span>
                   <span>
-                    porozmawiamy o Twoich planach, celach i wyzwaniach w związku z prowadzeniem kampanii
+                    porozmawiamy o Twoich planach, celach i wyzwaniach w związku
+                    z prowadzeniem kampanii
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">✅</span>
                   <span>
-                    odpowiemy na pytanie: czy i jak jesteśmy w stanie Ci z tym pomóc! 😉
+                    odpowiemy na pytanie: czy i jak jesteśmy w stanie Ci z tym
+                    pomóc! 😉
                   </span>
                 </li>
               </ul>

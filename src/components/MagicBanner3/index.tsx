@@ -14,15 +14,28 @@ const bannerContent = [
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
         <ul className="space-y-2 mb-6">
-          <li>🔥 Skuteczne kampanie, która zwiększa sprzedaż i zainteresowanie ofertą</li>
+          <li>
+            🔥 Skuteczne kampanie, która zwiększa sprzedaż i zainteresowanie
+            ofertą
+          </li>
           <li>🎯 Strategię dopasowaną do Twojego produktu i grupy docelowej</li>
-          <li>💡 Jasne wnioski, plany zmian i konkretne rekomendacje na przyszłość</li>
-          <li>💼 Spokojną głowę podczas kampanii - wiesz, że reklamy są pod kontrolą i pracują na wynik!</li>
+          <li>
+            💡 Jasne wnioski, plany zmian i konkretne rekomendacje na przyszłość
+          </li>
+          <li>
+            💼 Spokojną głowę podczas kampanii - wiesz, że reklamy są pod
+            kontrolą i pracują na wynik!
+          </li>
         </ul>
         <p className="font-bold mb-4">Dla kogo:</p>
         <ul className="space-y-2">
-          <li>🚀 Dla osób planujących premierę produktu, kursu lub mentoringu</li>
-          <li>🧪 Dla marek, które chcą sprawdzić współpracę przed wejściem w długoterminowe działania</li>
+          <li>
+            🚀 Dla osób planujących premierę produktu, kursu lub mentoringu
+          </li>
+          <li>
+            🧪 Dla marek, które chcą sprawdzić współpracę przed wejściem w
+            długoterminowe działania
+          </li>
         </ul>
       </div>
     ),
@@ -36,17 +49,41 @@ const bannerContent = [
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
         <ul className="space-y-2 mb-6">
-          <li>🚀 Wzrost sprzedaży i rozwój marki dzięki profesjonalnym kampaniom reklamowym</li>
-          <li>📈 Strategię nastawioną na skalowanie biznesu i lepszy zwrot z budżetu reklamowego</li>
-          <li>💡 Skuteczniejsze reklamy i optymalizacja kosztów, dzięki regularnym optymalizacjom</li>
-          <li>👩‍💻 Dostęp do eksperckiej wiedzy i bieżących rozwiązań zgodnych z aktualnymi trendami oraz algorytmami Meta</li>
-          <li>😌 Pewność, że marketing jest prowadzony profesjonalnie i pod stałą kontrolą</li>
+          <li>
+            🚀 Wzrost sprzedaży i rozwój marki dzięki profesjonalnym kampaniom
+            reklamowym
+          </li>
+          <li>
+            📈 Strategię nastawioną na skalowanie biznesu i lepszy zwrot z
+            budżetu reklamowego
+          </li>
+          <li>
+            💡 Skuteczniejsze reklamy i optymalizacja kosztów, dzięki regularnym
+            optymalizacjom
+          </li>
+          <li>
+            👩‍💻 Dostęp do eksperckiej wiedzy i bieżących rozwiązań zgodnych z
+            aktualnymi trendami oraz algorytmami Meta
+          </li>
+          <li>
+            😌 Pewność, że marketing jest prowadzony profesjonalnie i pod stałą
+            kontrolą
+          </li>
         </ul>
         <p className="font-bold mb-4">Dla kogo:</p>
         <ul className="space-y-2">
-          <li>💼 Dla firm, które chcą rozwijać sprzedaż w sposób przewidywalny i długoterminowy</li>
-          <li>📊 Dla przedsiębiorczyń gotowych skalować biznes z pomocą strategicznego marketingu</li>
-          <li>🎯 Dla właścicielek marek, które potrzebują stałego wsparcia i partnera do rozwoju biznesu</li>
+          <li>
+            💼 Dla firm, które chcą rozwijać sprzedaż w sposób przewidywalny i
+            długoterminowy
+          </li>
+          <li>
+            📊 Dla przedsiębiorczyń gotowych skalować biznes z pomocą
+            strategicznego marketingu
+          </li>
+          <li>
+            🎯 Dla właścicielek marek, które potrzebują stałego wsparcia i
+            partnera do rozwoju biznesu
+          </li>
         </ul>
       </div>
     ),
@@ -54,23 +91,44 @@ const bannerContent = [
   {
     bgColor: "bg-ada-purple3",
     title: "💎 GROWTH INTENSIVE",
-    subtitle:
-      "Obsługa reklam Meta + konsultacje strategiczne 1:1 (premium)",
+    subtitle: "Obsługa reklam Meta + konsultacje strategiczne 1:1 (premium)",
     description: (
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
         <ul className="space-y-2 mb-6">
-          <li>🚀 Skalowanie sprzedaży i rozwój marki dzięki kampaniom reklamowym</li>
-          <li>🤝 Regularne konsultacje strategiczne, dzięki którym podejmujesz lepsze decyzje biznesowe i marketingowe</li>
-          <li>📈 Jasny plan działań dopasowany do Twoich celów oraz etapu rozwoju firmy</li>
-          <li>🎯 Magnetyczną strategię kontentu, która przyciągnie nowych klientów</li>
-          <li>💡 Szybszy i bardziej świadomy rozwój biznesu, dzięki wsparciu ekspertek</li>
+          <li>
+            🚀 Skalowanie sprzedaży i rozwój marki dzięki kampaniom reklamowym
+          </li>
+          <li>
+            🤝 Regularne konsultacje strategiczne, dzięki którym podejmujesz
+            lepsze decyzje biznesowe i marketingowe
+          </li>
+          <li>
+            📈 Jasny plan działań dopasowany do Twoich celów oraz etapu rozwoju
+            firmy
+          </li>
+          <li>
+            🎯 Magnetyczną strategię kontentu, która przyciągnie nowych klientów
+          </li>
+          <li>
+            💡 Szybszy i bardziej świadomy rozwój biznesu, dzięki wsparciu
+            ekspertek
+          </li>
         </ul>
         <p className="font-bold mb-4">Dla kogo:</p>
         <ul className="space-y-2">
-          <li>💎 Dla ambitnych przedsiębiorczyń, które chcą wejść na wyższy poziom biznesowy</li>
-          <li>🚀 Dla marek gotowych inwestować w profesjonalny marketing i realny wzrost</li>
-          <li>📈 Dla biznesów nastawionych na intensywne skalowanie i mocniejsze wyniki sprzedażowe</li>
+          <li>
+            💎 Dla ambitnych przedsiębiorczyń, które chcą wejść na wyższy poziom
+            biznesowy
+          </li>
+          <li>
+            🚀 Dla marek gotowych inwestować w profesjonalny marketing i realny
+            wzrost
+          </li>
+          <li>
+            📈 Dla biznesów nastawionych na intensywne skalowanie i mocniejsze
+            wyniki sprzedażowe
+          </li>
         </ul>
       </div>
     ),
@@ -84,17 +142,40 @@ const bannerContent = [
       <div>
         <p className="font-bold mb-4">Co otrzymujesz:</p>
         <ul className="space-y-2 mb-6">
-          <li>📈 System komunikacji, który pomaga regularnie docierać do klientów i zwiększać sprzedaż</li>
-          <li>💌 Silniejsze relacje z odbiorcami dzięki wartościowej i spójnej obecności marki</li>
-          <li>🚀 Stały dopływ nowych potencjalnych klientów oraz rozwój własnej bazy kontaktów</li>
-          <li>🤝 Większą niezależność od algorytmów i kanał komunikacji, który naprawdę należy do Ciebie</li>
-          <li>📊 Działania stale optymalizowane pod lepsze wyniki, zaangażowanie i konwersję</li>
+          <li>
+            📈 System komunikacji, który pomaga regularnie docierać do klientów
+            i zwiększać sprzedaż
+          </li>
+          <li>
+            💌 Silniejsze relacje z odbiorcami dzięki wartościowej i spójnej
+            obecności marki
+          </li>
+          <li>
+            🚀 Stały dopływ nowych potencjalnych klientów oraz rozwój własnej
+            bazy kontaktów
+          </li>
+          <li>
+            🤝 Większą niezależność od algorytmów i kanał komunikacji, który
+            naprawdę należy do Ciebie
+          </li>
+          <li>
+            📊 Działania stale optymalizowane pod lepsze wyniki, zaangażowanie i
+            konwersję
+          </li>
         </ul>
         <p className="font-bold mb-4">Dla kogo:</p>
         <ul className="space-y-2">
-          <li>💌 Dla marek, które chcą budować lojalną i zaangażowaną społeczność</li>
-          <li>🎯 Dla biznesów szukających bardziej przewidywalnego i zautomatyzowanego marketingu</li>
-          <li>📈 Dla przedsiębiorczyń, które myślą długoterminowo i chcą zwiększać sprzedaż bez ciągłego polegania wyłącznie na social mediach</li>
+          <li>
+            💌 Dla marek, które chcą budować lojalną i zaangażowaną społeczność
+          </li>
+          <li>
+            🎯 Dla biznesów szukających bardziej przewidywalnego i
+            zautomatyzowanego marketingu
+          </li>
+          <li>
+            📈 Dla przedsiębiorczyń, które myślą długoterminowo i chcą zwiększać
+            sprzedaż bez ciągłego polegania wyłącznie na social mediach
+          </li>
         </ul>
       </div>
     ),

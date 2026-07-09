@@ -216,19 +216,21 @@ const TrainingLandingPage = ({
           </h2>
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.slice(0, benefits.length - orphanCount).map((b, idx) => (
-                <div
-                  key={`${b.title}-${idx}`}
-                  className={`${b.bgClass} rounded-lg p-6 border border-black text-center`}
-                >
-                  <h3 className="text-[16px] font-bold text-black mb-2 uppercase whitespace-pre-line">
-                    {b.title}
-                  </h3>
-                  <p className="text-[16px] font-normal text-black whitespace-pre-line">
-                    {b.description}
-                  </p>
-                </div>
-              ))}
+              {benefits
+                .slice(0, benefits.length - orphanCount)
+                .map((b, idx) => (
+                  <div
+                    key={`${b.title}-${idx}`}
+                    className={`${b.bgClass} rounded-lg p-6 border border-black text-center`}
+                  >
+                    <h3 className="text-[16px] font-bold text-black mb-2 uppercase whitespace-pre-line">
+                      {b.title}
+                    </h3>
+                    <p className="text-[16px] font-normal text-black whitespace-pre-line">
+                      {b.description}
+                    </p>
+                  </div>
+                ))}
             </div>
             {orphanCount > 0 && (
               <div className="flex justify-center gap-6 mt-6 flex-wrap">

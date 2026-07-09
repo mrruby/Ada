@@ -525,9 +525,9 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
       answer: (
         <>
           Po dołączeniu wypełniasz krótki formularz (10 minut) i umawiasz
-          spotkanie 1:1 z Nicolą - rozmowa o Twoim biznesie i reklamach. Do 5 dni
-          po spotkaniu w MAGIC czeka na Ciebie gotowy plan: co ustawić, w jakiej
-          kolejności i z jakim budżetem.
+          spotkanie 1:1 z Nicolą - rozmowa o Twoim biznesie i reklamach. Do 5
+          dni po spotkaniu w MAGIC czeka na Ciebie gotowy plan: co ustawić, w
+          jakiej kolejności i z jakim budżetem.
         </>
       ),
     },

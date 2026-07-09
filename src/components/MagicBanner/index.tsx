@@ -224,9 +224,9 @@ const magicBannerContent4 = [
           <span className="font-bold uppercase">
             Twoje wyniki rozczarowują, zamiast zachwycać?
           </span>
-          <br />Dostaniesz plan, co poprawić w pierwszej kolejności - i
-          sprawdzisz każdą zmianę ze specjalistką, zanim wydasz kolejną
-          złotówkę.
+          <br />
+          Dostaniesz plan, co poprawić w pierwszej kolejności - i sprawdzisz
+          każdą zmianę ze specjalistką, zanim wydasz kolejną złotówkę.
         </p>
       </>
     ),
@@ -306,8 +306,8 @@ const magicBannerContent5 = [
             Twoje konto reklamowe zostało zablokowane?
           </span>
           <br />
-          Dostaniesz instrukcję krok po kroku, co robić - nawet gdy support
-          Mety rozkłada ręce.
+          Dostaniesz instrukcję krok po kroku, co robić - nawet gdy support Mety
+          rozkłada ręce.
         </p>
       </>
     ),

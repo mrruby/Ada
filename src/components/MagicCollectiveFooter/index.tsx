@@ -5,7 +5,11 @@ const MagicCollectiveFooter = ({ version }: { version: number }) => {
   return (
     <div className="flex justify-center py-8">
       {version === 1 && (
-        <a href="https://www.instagram.com/adapromis/" target="_blank">
+        <a
+          href="https://www.instagram.com/adapromis/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <StaticImage
             src={"../../images/instagramBtn.svg"}
             alt=""

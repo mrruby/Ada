@@ -170,7 +170,9 @@ const MagicSaleBanner = ({
           />
           <p className="text-adaSubtitle mt-4 text-[#000000]">
             <span className="bg-[#FFD1F0] px-4 py-2 rounded-lg inline-block">
-              <b>Do 12 lipca każdy pakiet zaczyna się od Twojego MAGIC Planu.</b>
+              <b>
+                Do 12 lipca każdy pakiet zaczyna się od Twojego MAGIC Planu.
+              </b>
             </span>
           </p>
 
