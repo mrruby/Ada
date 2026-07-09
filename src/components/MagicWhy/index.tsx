@@ -445,14 +445,16 @@ const MagicWhy = ({ part }: { part: number }) => {
             formats={["auto", "webp", "avif"]}
             quality={75}
           />
-          <Typography
-            variant="h2"
-            className="mt-6 max-w-3xl text-center font-bold text-ada-black"
-          >
-            Twój <span className="text-ada-pink7">MAGIC Plan</span> podpowie,
-            które z tych spotkań są dla Ciebie najważniejsze w pierwszym
-            miesiącu.
-          </Typography>
+          <div className="mt-6 max-w-3xl mx-auto rounded-xl border-2 border-ada-magicPurple4 bg-ada-white3 px-6 py-4 shadow-md">
+            <Typography
+              variant="h2"
+              className="text-center font-bold text-ada-black"
+            >
+              Twój <span className="text-ada-pink7">MAGIC Plan</span> podpowie,
+              które z tych spotkań są dla Ciebie najważniejsze w pierwszym
+              miesiącu.
+            </Typography>
+          </div>
         </div>
       )}
       {part == 13 && (
