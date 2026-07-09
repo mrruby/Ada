@@ -35,7 +35,7 @@ const MainContent = () => {
         <MagicVideo />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicYellow">
-        <MagicCommunityOpinions />
+        <MagicCommunityOpinions showResults />
       </MaxWithBgColorContainer>
     </>
   )
