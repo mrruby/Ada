@@ -38,6 +38,9 @@
   },
   "devDependencies": {
     "@eslint/js": "9.39.4",
+    "@fontsource/anton": "^5.2.7",
+    "@fontsource/montserrat": "^5.2.8",
+    "@remotion/cli": "^4.0.487",
     "@types/loadable__component": "^5.13.9",
     "@types/minimatch": "^6.0.0",
     "@types/react": "19.2.17",
@@ -52,6 +55,7 @@
     "gatsby-plugin-root-import": "^2.0.9",
     "html-loader": "^5.0.0",
     "prettier": "3.9.4",
+    "remotion": "^4.0.487",
     "typescript": "6.0.3",
     "typescript-eslint": "8.63.0"
   },
@@ -63,6 +67,10 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\"",
+    "prereel:magic": "node reels/magic/generate-audio.mjs",
+    "prereel:magic:render": "node reels/magic/generate-audio.mjs",
+    "reel:magic": "remotion studio reels/magic/index.jsx",
+    "reel:magic:render": "remotion render reels/magic/index.jsx MagicReel reels/magic/output/magic-reel.mp4 --codec=h264 --crf=18 --audio-codec=aac",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",

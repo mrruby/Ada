@@ -1,4 +1,3 @@
-import { Button } from "helpers/Button"
 import React from "react"
 import ReCAPTCHA from "react-google-recaptcha"
 
@@ -8,12 +7,14 @@ type ContactFormProps = {
 
 const ContactForm = ({ source = "default" }: ContactFormProps) => {
   const inputStyles =
-    "border-1 border-ada-blue mb-4 p-4 text-ada-blue w-full text-center hover:shadow-xl"
+    "min-h-[58px] w-full rounded-[14px] border border-ada-magicOrange bg-ada-white2 px-4 py-3 text-black outline-none transition-shadow focus:ring-2 focus:ring-ada-magicOrange md:min-h-[76px]"
+  const labelStyles =
+    "mb-2 block text-xs font-bold uppercase tracking-wide text-black"
 
   return (
-    <div className="flex flex-col items-center bg-mails">
+    <section className="flex flex-col items-center px-4 py-12">
       <form
-        className="flex flex-col items-center px-10 pb-[40px] lg:pb-[120px]"
+        className="flex w-full flex-col items-center"
         method="POST"
         data-netlify="true"
         data-netlify-recaptcha="true"
@@ -34,85 +35,87 @@ const ContactForm = ({ source = "default" }: ContactFormProps) => {
           value={source}
           aria-hidden="true"
         />
-        <div className="flex flex-col md:flex-row w-full md:gap-[40px]">
-          <label htmlFor="name" className="sr-only">
-            Imię
+        <div className="w-full max-w-[650px] rounded-[30px] border border-ada-magicOrange bg-ada-magicPink2 px-6 py-8 shadow-[8px_10px_14px_rgba(0,0,0,0.18)] sm:px-10 md:px-[88px] md:py-16">
+          <label htmlFor="name" className={labelStyles}>
+            Imię:
           </label>
           <input
             required
             type="text"
             name="name"
             id="name"
-            placeholder="Imię"
+            autoComplete="given-name"
             className={inputStyles}
           />
-          <label htmlFor="surname" className="sr-only">
-            Nazwisko
+          <label htmlFor="surname" className={`${labelStyles} mt-5`}>
+            Nazwisko:
           </label>
           <input
             required
             type="text"
             name="surname"
             id="surname"
-            placeholder="Nazwisko"
+            autoComplete="family-name"
             className={inputStyles}
           />
-        </div>
-        <label htmlFor="email" className="sr-only">
-          E-mail
-        </label>
-        <input
-          required
-          type="email"
-          name="email"
-          id="email"
-          placeholder="E-mail"
-          className={inputStyles}
-        />
-        <label htmlFor="message" className="sr-only">
-          Twoja wiadomość
-        </label>
-        <textarea
-          required
-          name="message"
-          id="message"
-          rows={8}
-          placeholder="Twoja wiadomość"
-          className={inputStyles}
-        />
-        <div className="flex items-start">
+          <label htmlFor="email" className={`${labelStyles} mt-5`}>
+            Email:
+          </label>
           <input
             required
-            type="checkbox"
-            id="consent"
-            name="consent"
-            className="transition duration-500 ease-out flex-none mt-2"
+            type="email"
+            name="email"
+            id="email"
+            autoComplete="email"
+            className={inputStyles}
           />
-          <label htmlFor="consent" className="ml-2 w-full max-w-[600px]">
-            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
-            ustawą o ochronie danych osobowych w celu (np. wysyłania informacji
-            handlowych). Podanie danych osobowych jest dobrowolne. Zostałem
-            poinformowany, że przysługuje mi prawo dostępu do swoich danych,
-            możliwości ich poprawiania, zadania zaprzestania ich przetwarzania.
-            Administratorem danych jest Slow Marketing Adrianna Promis-Urbas z
-            siedzibą w 47-400 Racibórz, Ul. Mała 2.
+          <label htmlFor="message" className={`${labelStyles} mt-5`}>
+            Twoja wiadomość:
           </label>
+          <textarea
+            required
+            name="message"
+            id="message"
+            rows={8}
+            className={`${inputStyles} min-h-[220px] resize-y md:min-h-[320px]`}
+          />
+          <div className="mt-6 flex items-start">
+            <input
+              required
+              type="checkbox"
+              id="consent"
+              name="consent"
+              className="mt-1 flex-none rounded border-black text-black focus:ring-ada-magicOrange"
+            />
+            <label
+              htmlFor="consent"
+              className="ml-3 text-xs leading-relaxed text-black"
+            >
+              Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
+              ustawą o ochronie danych osobowych w celu (np. wysyłania
+              informacji handlowych). Podanie danych osobowych jest dobrowolne.
+              Zostałem poinformowany, że przysługuje mi prawo dostępu do swoich
+              danych, możliwości ich poprawiania, zadania zaprzestania ich
+              przetwarzania. Administratorem danych jest Slow Marketing Adrianna
+              Promis-Urbas z siedzibą w 47-400 Racibórz, Ul. Mała 2.
+            </label>
+          </div>
+          <div className="mt-6 flex h-[66px] w-full justify-center overflow-hidden sm:h-[78px]">
+            <ReCAPTCHA
+              sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY || ""}
+              className="origin-top scale-[0.84] sm:scale-100"
+              aria-label="ReCAPTCHA"
+            />
+          </div>
         </div>
-        <ReCAPTCHA
-          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY || ""}
-          className="my-4"
-          aria-label="ReCAPTCHA"
-        />
-        <Button
+        <button
           type="submit"
-          url=""
-          textSize="lg:text-[18px]"
-          btnStyle="md:w-[372px] mt-[20px] h-[50px]"
-          text="Wyślij wiadomość!"
-          border
-        />
+          className="mt-10 w-full max-w-[430px] rounded-lg bg-black px-7 py-3 font-anton text-xl font-normal uppercase tracking-wide text-white transition-transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-4 focus:ring-offset-ada-magicGreen md:px-10 md:text-[28px]"
+        >
+          Wyślij wiadomość!
+        </button>
       </form>
-    </div>
+    </section>
   )
 }
 

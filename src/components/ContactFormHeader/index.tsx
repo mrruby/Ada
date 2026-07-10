@@ -2,21 +2,21 @@ import React from "react"
 
 const ContactFormHeader = () => {
   return (
-    <div className="flex flex-col items-center">
-      <div className=" text-ada-blue flex flex-col md:items-center px-4 pt-[60px] lg:pt-[92px] lg:pb-[40px] md:text-center">
-        <p className="text-adaSubtitle lg:text-adaBig text-ada-grey font-bold lg:h-[58px]">
-          Porozmawiajmy!
-        </p>
-        <h1 className="text-adaTitle font-bold animate-bounce">
+    <section className="relative z-10 flex min-h-[500px] flex-col items-center justify-center px-4 py-20 text-center text-black md:min-h-[560px] md:translate-y-4 md:py-24">
+      <h1 className="font-anton text-[48px] font-normal leading-none text-ada-magicOrange md:text-[64px]">
+        Porozmawiajmy!
+      </h1>
+      <div className="mt-8 w-full max-w-[460px] rounded-[32px] border border-ada-magicOrange bg-ada-magicGreen px-6 py-8 md:mt-16 md:px-10">
+        <h2 className="font-anton text-[36px] font-normal leading-none md:text-[48px]">
           Napisz do mnie!
-        </h1>
-        <p className="text-adaBase px-2 py-4 md:py-8 max-w-[840px]">
+        </h2>
+        <p className="mt-5 text-[13px] font-medium leading-snug">
           Kampanie? Strategia? Szkolenia? Konsultacje? A może po prostu
           wirtualna kawka? Chętnie spotkam się, aby obgadać wspólne plany,
           porozmawiać o marketingu i biznesach. Kto wie, co z tego wyniknie… ;)
         </p>
       </div>
-    </div>
+    </section>
   )
 }
 
