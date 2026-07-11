@@ -5,10 +5,13 @@ import type { ConsultationSection } from "./schema"
 const { section } = Astro.props as { section: ConsultationSection }
 ---
 
-<div data-provider={section.provider} data-provider-url={section.externalUrl}>
-  <h2>{section.heading}</h2>
-  <RichText value={section.body} />
+<div class="surface-strong mx-auto max-w-4xl rounded-3xl p-6 sm:p-10" data-provider={section.provider} data-provider-url={section.externalUrl}>
+  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
+  <div class="mt-5 max-w-2xl">
+    <RichText value={section.body} />
+  </div>
   <a
+    class="mt-8 rounded-full font-bold"
     data-action="primary"
     data-analytics-key={section.cta.analyticsKey}
     href={section.cta.href}
@@ -17,4 +20,8 @@ const { section } = Astro.props as { section: ConsultationSection }
   >
     {section.cta.label}
   </a>
+  <p class="mt-5 text-sm">
+    Rezerwacja odbywa się przez
+    <a class="ml-1 underline decoration-2 underline-offset-4" href={section.externalUrl} rel="noreferrer" target="_blank">Kalendarz Google</a>.
+  </p>
 </div>

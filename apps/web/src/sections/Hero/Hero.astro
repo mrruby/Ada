@@ -1,22 +1,42 @@
 ---
 import RichText from "../../page-builder/RichText.astro"
+import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { HeroSection } from "./schema"
 
 const { section } = Astro.props as { section: HeroSection }
+const eyebrow = section.presentation === "membership" ? "MAGIC Club" : "MAGIC Collective"
 ---
 
-<header>
-  <p>{section.presentation}</p>
-  <h1>{section.heading}</h1>
-  <RichText value={section.body} />
-  <a
-    data-action="primary"
-    data-analytics-key={section.primaryCta.analyticsKey}
-    href={section.primaryCta.href}
-    rel={section.primaryCta.external ? "noreferrer" : undefined}
-    target={section.primaryCta.external ? "_blank" : undefined}
-  >
-    {section.primaryCta.label}
-  </a>
-  <img alt={section.media.alt} height={section.media.height} loading="eager" src={section.media.src} width={section.media.width} />
+<header class="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-12 lg:gap-12">
+  <div class="lg:col-span-6">
+    <p class="text-sm font-bold uppercase tracking-widest">{eyebrow}</p>
+    <h1 class="mt-4 font-display text-4xl leading-none sm:text-5xl lg:text-6xl">
+      {section.heading}
+    </h1>
+    <div class="mt-6 max-w-xl text-lg">
+      <RichText value={section.body} />
+    </div>
+    <a
+      class="mt-8 rounded-full font-bold"
+      data-action="primary"
+      data-analytics-key={section.primaryCta.analyticsKey}
+      href={section.primaryCta.href}
+      rel={section.primaryCta.external ? "noreferrer" : undefined}
+      target={section.primaryCta.external ? "_blank" : undefined}
+    >
+      {section.primaryCta.label}
+    </a>
+  </div>
+  <figure class="surface-highlight mx-auto max-w-md overflow-hidden rounded-3xl lg:col-span-6 lg:max-w-none">
+    <img
+      alt={section.media.alt}
+      class="aspect-square h-full w-full object-cover"
+      decoding="async"
+      fetchpriority="high"
+      height={section.media.height}
+      loading="eager"
+      src={legacyAssetPath(section.media.src)}
+      width={section.media.width}
+    />
+  </figure>
 </header>

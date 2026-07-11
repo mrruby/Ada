@@ -5,10 +5,13 @@ import type { FinalCtaSection } from "./schema"
 const { section } = Astro.props as { section: FinalCtaSection }
 ---
 
-<footer>
-  <h2>{section.heading}</h2>
-  <RichText value={section.body} />
+<footer class="surface-strong mx-auto max-w-6xl rounded-3xl px-6 py-10 text-center sm:px-12">
+  <h2 class="font-display text-4xl leading-tight sm:text-5xl">{section.heading}</h2>
+  <div class="mx-auto mt-5 max-w-2xl text-lg">
+    <RichText value={section.body} />
+  </div>
   <a
+    class="mt-8 rounded-full font-bold"
     data-action="primary"
     data-analytics-key={section.primaryCta.analyticsKey}
     href={section.primaryCta.href}
@@ -18,8 +21,8 @@ const { section } = Astro.props as { section: FinalCtaSection }
     {section.primaryCta.label}
   </a>
   {section.socialLinks && (
-    <nav aria-label="Media społecznościowe">
-      <ul>{section.socialLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}</ul>
+    <nav class="mt-8" aria-label="Media społecznościowe">
+      <ul class="flex flex-wrap justify-center gap-x-6 gap-y-3">{section.socialLinks.map((link) => <li><a class="underline decoration-2 underline-offset-4" href={link.href} rel="noreferrer" target="_blank">{link.label}</a></li>)}</ul>
     </nav>
   )}
 </footer>

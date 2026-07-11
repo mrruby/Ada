@@ -8,7 +8,7 @@ const { value } = Astro.props as { value: RichText }
   value.map((block) => {
     if (block.kind === "paragraph") {
       return (
-        <p>
+        <p class="mt-4 leading-7 first:mt-0">
           {block.content.map((inline) => {
             const isStrong = inline.marks.includes("strong")
             const isEmphasis = inline.marks.includes("emphasis")
@@ -33,15 +33,44 @@ const { value } = Astro.props as { value: RichText }
 
     if (block.style === "steps") {
       return (
-        <ol>
-          {block.items.map((item) => <li>{item.map((inline) => inline.text)}</li>)}
+        <ol class="mt-4 list-decimal space-y-2 pl-6 first:mt-0">
+          {block.items.map((item) => (
+            <li>
+              {item.map((inline) => {
+                const isStrong = inline.marks.includes("strong")
+                const isEmphasis = inline.marks.includes("emphasis")
+
+                if (isStrong && isEmphasis) return <strong><em>{inline.text}</em></strong>
+                if (isStrong) return <strong>{inline.text}</strong>
+                if (isEmphasis) return <em>{inline.text}</em>
+
+                return inline.text
+              })}
+            </li>
+          ))}
         </ol>
       )
     }
 
     return (
-      <ul>
-        {block.items.map((item) => <li>{item.map((inline) => inline.text)}</li>)}
+      <ul class:list={["mt-4 space-y-2 first:mt-0", block.style === "bullets" ? "list-disc pl-6" : "list-none"]}>
+        {block.items.map((item) => (
+          <li class:list={block.style === "checks" && "flex gap-2"}>
+            {block.style === "checks" && <span aria-hidden="true">✓</span>}
+            <span>
+              {item.map((inline) => {
+                const isStrong = inline.marks.includes("strong")
+                const isEmphasis = inline.marks.includes("emphasis")
+
+                if (isStrong && isEmphasis) return <strong><em>{inline.text}</em></strong>
+                if (isStrong) return <strong>{inline.text}</strong>
+                if (isEmphasis) return <em>{inline.text}</em>
+
+                return inline.text
+              })}
+            </span>
+          </li>
+        ))}
       </ul>
     )
   })

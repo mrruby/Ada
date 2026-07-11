@@ -18,8 +18,11 @@
   --surface-page: var(--color-magic-cream);
   --surface-subtle: white;
   --surface-accent: var(--color-magic-lilac);
+  --surface-strong: var(--color-magic-ink);
+  --surface-positive: var(--color-magic-green);
   --text-primary: var(--color-magic-ink);
-  --text-on-accent: white;
+  --text-on-strong: white;
+  --text-on-accent: var(--text-on-strong);
   --action-primary: var(--color-magic-orange);
   --action-primary-hover: var(--color-magic-ink);
   --border-emphasis: var(--color-magic-purple);
@@ -47,6 +50,17 @@
   padding-inline: 1.5rem;
 }
 
+.section-shell--sticky {
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.section-shell[id] {
+  scroll-margin-top: 5rem;
+}
+
 .tone-default {
   background: var(--surface-page);
   color: var(--text-primary);
@@ -63,8 +77,33 @@
 }
 
 .tone-contrast {
-  background: var(--color-magic-ink);
-  color: var(--text-on-accent);
+  background: var(--surface-strong);
+  color: var(--text-on-strong);
+}
+
+.surface-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-emphasis);
+  color: var(--text-primary);
+}
+
+.surface-highlight {
+  background: var(--surface-accent);
+  color: var(--text-primary);
+}
+
+.surface-positive {
+  background: var(--surface-positive);
+  color: var(--text-primary);
+}
+
+.surface-strong {
+  background: var(--surface-strong);
+  color: var(--text-on-strong);
+}
+
+.magic-rule {
+  border-color: var(--border-emphasis);
 }
 
 .section-shell :where(a) {
@@ -81,4 +120,13 @@
 
 .section-shell :where([data-action="primary"]):hover {
   background: var(--action-primary-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(*, *::before, *::after) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

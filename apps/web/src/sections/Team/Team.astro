@@ -1,20 +1,32 @@
 ---
 import RichText from "../../page-builder/RichText.astro"
+import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { TeamSection } from "./schema"
 
 const { section } = Astro.props as { section: TeamSection }
+const layout = section.presentation === "membership-experts" ? "md:grid-cols-2" : "md:grid-cols-2 xl:grid-cols-3"
 ---
 
-<div>
-  <h2>{section.heading}</h2>
-  <ul>
+<div class="mx-auto max-w-6xl">
+  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
+  <ul class:list={["mt-8 grid grid-cols-1 gap-6", layout]}>
     {section.people.map((person) => (
       <li>
-        <article>
-          <img alt={person.media.alt} height={person.media.height} loading="lazy" src={person.media.src} width={person.media.width} />
-          <h3>{person.name}</h3>
-          <p>{person.role}</p>
-          <RichText value={person.bio} />
+        <article class="surface-card h-full overflow-hidden rounded-3xl">
+          <img
+            alt={person.media.alt}
+            class="aspect-square w-full object-cover"
+            decoding="async"
+            height={person.media.height}
+            loading="lazy"
+            src={legacyAssetPath(person.media.src)}
+            width={person.media.width}
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold">{person.name}</h3>
+            <p class="mt-1 font-semibold">{person.role}</p>
+            {person.bio.length > 0 && <div class="mt-4 text-sm leading-6"><RichText value={person.bio} /></div>}
+          </div>
         </article>
       </li>
     ))}

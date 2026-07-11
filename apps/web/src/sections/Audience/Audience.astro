@@ -2,14 +2,19 @@
 import type { AudienceSection } from "./schema"
 
 const { section } = Astro.props as { section: AudienceSection }
+const groupClass = section.presentation === "membership-dual" ? "md:grid-cols-2" : "max-w-3xl"
 ---
 
-<div>
-  <h2>{section.heading}</h2>
-  {section.groups.map((group) => (
-    <article>
-      <h3>{group.title}</h3>
-      <ul>{group.criteria.map((criterion) => <li>{criterion}</li>)}</ul>
-    </article>
-  ))}
+<div class="mx-auto max-w-6xl">
+  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
+  <div class:list={["mt-8 grid grid-cols-1 gap-6", groupClass]}>
+    {section.groups.map((group) => (
+      <article class="surface-card rounded-3xl p-6 sm:p-8">
+        <h3 class="text-xl font-bold leading-snug">{group.title}</h3>
+        <ul class="mt-5 space-y-4">
+          {group.criteria.map((criterion) => <li class="flex gap-3"><span aria-hidden="true">✦</span><span>{criterion}</span></li>)}
+        </ul>
+      </article>
+    ))}
+  </div>
 </div>

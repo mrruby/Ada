@@ -3,18 +3,28 @@ import type { PageSpec } from "../page-spec/page.schema"
 import { sectionRegistry } from "./registry"
 
 const { spec } = Astro.props as { spec: PageSpec }
+
+const fallbackSectionIds = {
+  "membership-packages": "magic-package",
+  appointment: "umawiam-spotkanie",
+} as const
 ---
 
 <main data-brand={spec.brand}>
   {spec.sections.map((section) => {
     const Section = sectionRegistry[section.type]
+    const id = section.id ?? fallbackSectionIds[section.presentation as keyof typeof fallbackSectionIds]
 
     return (
       <section
-        class:list={["section-shell", `tone-${section.tone}`]}
+        class:list={[
+          "section-shell",
+          `tone-${section.tone}`,
+          { "section-shell--sticky": section.type === "sticky-cta" },
+        ]}
         data-presentation={section.presentation}
         data-section-type={section.type}
-        id={section.id}
+        id={id}
       >
         <Section section={section} />
       </section>

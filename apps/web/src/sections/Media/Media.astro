@@ -1,10 +1,41 @@
 ---
+import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { MediaSection } from "./schema"
 
 const { section } = Astro.props as { section: MediaSection }
+const videoUrl = `https://vimeo.com/${section.providerAssetId}`
 ---
 
-<figure data-consent-category={section.consentCategory} data-provider={section.provider} data-provider-asset-id={section.providerAssetId}>
-  <img alt={section.poster.alt} height={section.poster.height} loading="lazy" src={section.poster.src} width={section.poster.width} />
-  <figcaption>{section.heading}</figcaption>
-</figure>
+<div class="mx-auto max-w-4xl">
+  <figure
+    class="surface-card overflow-hidden rounded-3xl"
+    data-consent-category={section.consentCategory}
+    data-provider={section.provider}
+    data-provider-asset-id={section.providerAssetId}
+  >
+    <a
+      aria-label={`${section.heading} — otwórz film w serwisie Vimeo`}
+      class="group relative block"
+      href={videoUrl}
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt={section.poster.alt}
+        class="aspect-video w-full object-cover"
+        decoding="async"
+        height={section.poster.height}
+        loading="lazy"
+        src={legacyAssetPath(section.poster.src)}
+        width={section.poster.width}
+      />
+      <span class="surface-strong absolute inset-0 grid place-items-center opacity-90 transition group-hover:opacity-100 motion-reduce:transition-none">
+        <span class="rounded-full border border-current px-5 py-3 font-bold">Otwórz film w Vimeo</span>
+      </span>
+    </a>
+    <figcaption class="p-5">
+      <h2 class="text-2xl font-bold">{section.heading}</h2>
+      <p class="mt-2 text-sm">Film otworzy się w nowej karcie. Materiał zewnętrzny nie jest osadzany bez zgody na pliki {section.consentCategory}.</p>
+    </figcaption>
+  </figure>
+</div>

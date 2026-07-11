@@ -7,8 +7,9 @@
     "node": "22.x"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "copy:legacy-assets": "node scripts/copy-legacy-assets.mjs",
+    "dev": "yarn copy:legacy-assets && astro dev",
+    "build": "yarn copy:legacy-assets && astro build",
     "preview": "astro preview",
     "lint": "eslint . && astro check",
     "test:schema": "vitest run tests/schema"

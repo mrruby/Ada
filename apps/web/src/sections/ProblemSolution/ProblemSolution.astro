@@ -2,18 +2,25 @@
 import type { ProblemSolutionSection } from "./schema"
 
 const { section } = Astro.props as { section: ProblemSolutionSection }
+const labels = section.presentation === "comparison"
+  ? { problems: "Wyzwania", outcomes: "Co możesz zyskać" }
+  : { problems: "Te sytuacje", outcomes: "Jak pomoże MAGIC" }
 ---
 
-<div>
-  <h2>{section.heading}</h2>
-  <div>
-    <article>
-      <h3>Wyzwania</h3>
-      <ul>{section.problems.map((problem) => <li>{problem}</li>)}</ul>
+<div class="mx-auto max-w-6xl">
+  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
+  <div class="mt-8 grid gap-6 lg:grid-cols-2">
+    <article class="surface-card rounded-3xl p-6 sm:p-8">
+      <h3 class="text-2xl font-bold">{labels.problems}</h3>
+      <ul class="mt-5 space-y-4 leading-7">
+        {section.problems.map((problem) => <li class="flex gap-3"><span aria-hidden="true">—</span><span>{problem}</span></li>)}
+      </ul>
     </article>
-    <article>
-      <h3>Efekty</h3>
-      <ul>{section.outcomes.map((outcome) => <li>{outcome}</li>)}</ul>
+    <article class="surface-positive rounded-3xl p-6 sm:p-8">
+      <h3 class="text-2xl font-bold">{labels.outcomes}</h3>
+      <ul class="mt-5 space-y-4 leading-7">
+        {section.outcomes.map((outcome) => <li class="flex gap-3"><span aria-hidden="true">✦</span><span>{outcome}</span></li>)}
+      </ul>
     </article>
   </div>
 </div>

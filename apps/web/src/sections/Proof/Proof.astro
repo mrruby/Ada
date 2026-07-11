@@ -1,56 +1,112 @@
 ---
 import RichText from "../../page-builder/RichText.astro"
+import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { ProofSection } from "./schema"
 
 const { section } = Astro.props as { section: ProofSection }
+const layout = section.presentation === "testimonials" ? "md:grid-cols-2 xl:grid-cols-3" : "md:grid-cols-2"
 ---
 
-<div>
-  <h2>{section.heading}</h2>
-  <div>
+<div class="mx-auto max-w-6xl">
+  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
+  <div class:list={["mt-8 grid grid-cols-1 gap-6", layout]}>
     {section.entries.map((entry) => {
       if (entry.type === "case-study") {
         return (
-          <article>
-            <h3>{entry.title}</h3>
-            <p>{entry.summary}</p>
-            <ul>{entry.figures.map((figure) => <li>{figure}</li>)}</ul>
+          <article class="surface-card overflow-hidden rounded-3xl">
+            {entry.media && (
+              <img
+                alt={entry.media.alt}
+                class="w-full object-cover"
+                decoding="async"
+                height={entry.media.height}
+                loading="lazy"
+                src={legacyAssetPath(entry.media.src)}
+                width={entry.media.width}
+              />
+            )}
+            <div class="p-6">
+              <h3 class="text-xl font-bold leading-snug">{entry.title}</h3>
+              <p class="mt-3 leading-7">{entry.summary}</p>
+              <ul class="mt-5 space-y-2 text-sm leading-6">
+                {entry.figures.map((figure) => <li class="flex gap-3"><span aria-hidden="true">✦</span><span>{figure}</span></li>)}
+              </ul>
+            </div>
           </article>
         )
       }
 
       if (entry.type === "result") {
         return (
-          <article>
-            <h3>{entry.label}</h3>
-            <p>{entry.value}</p>
-            {entry.context && <p>{entry.context}</p>}
+          <article class="surface-card overflow-hidden rounded-3xl">
+            {entry.media && (
+              <img
+                alt={entry.media.alt}
+                class="w-full object-cover"
+                decoding="async"
+                height={entry.media.height}
+                loading="lazy"
+                src={legacyAssetPath(entry.media.src)}
+                width={entry.media.width}
+              />
+            )}
+            <div class="p-6">
+              <h3 class="font-semibold">{entry.label}</h3>
+              <p class="font-display mt-3 text-4xl">{entry.value}</p>
+              {entry.context && <p class="mt-3 leading-7">{entry.context}</p>}
+            </div>
           </article>
         )
       }
 
       if (entry.type === "testimonial") {
         return (
-          <blockquote>
-            <p>{entry.quote}</p>
-            <footer>{entry.person}{entry.role ? `, ${entry.role}` : ""}</footer>
+          <blockquote class="surface-card overflow-hidden rounded-3xl">
+            {entry.media && (
+              <img
+                alt={entry.media.alt}
+                class="aspect-square w-full object-cover"
+                decoding="async"
+                height={entry.media.height}
+                loading="lazy"
+                src={legacyAssetPath(entry.media.src)}
+                width={entry.media.width}
+              />
+            )}
+            <div class="p-6">
+              <p class="text-lg leading-7">“{entry.quote}”</p>
+              <footer class="mt-4 font-bold">{entry.person}{entry.role ? `, ${entry.role}` : ""}</footer>
+            </div>
           </blockquote>
         )
       }
 
       if (entry.type === "qa") {
         return (
-          <article>
-            <h3>{entry.question}</h3>
-            <RichText value={entry.answer} />
+          <article class="surface-highlight rounded-3xl p-6 sm:p-8">
+            <h3 class="text-xl font-bold">{entry.question}</h3>
+            <div class="mt-4"><RichText value={entry.answer} /></div>
           </article>
         )
       }
 
       return (
-        <article>
-          <h3>{entry.title}</h3>
-          <RichText value={entry.body} />
+        <article class="surface-card overflow-hidden rounded-3xl">
+          {entry.media && (
+            <img
+              alt={entry.media.alt}
+              class="w-full object-cover"
+              decoding="async"
+              height={entry.media.height}
+              loading="lazy"
+              src={legacyAssetPath(entry.media.src)}
+              width={entry.media.width}
+            />
+          )}
+          <div class="p-6 sm:p-8">
+            <h3 class="text-xl font-bold leading-snug">{entry.title}</h3>
+            <div class="mt-4"><RichText value={entry.body} /></div>
+          </div>
         </article>
       )
     })}
