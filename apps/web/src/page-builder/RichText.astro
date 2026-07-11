@@ -55,7 +55,7 @@ const { value } = Astro.props as { value: RichText }
     return (
       <ul class:list={["mt-4 space-y-2 first:mt-0", block.style === "bullets" ? "list-disc pl-6" : "list-none"]}>
         {block.items.map((item) => (
-          <li class:list={block.style === "checks" && "flex gap-2"}>
+          <li class:list={[block.style === "checks" ? "flex gap-2" : undefined]}>
             {block.style === "checks" && <span aria-hidden="true">✓</span>}
             <span>
               {item.map((inline) => {
