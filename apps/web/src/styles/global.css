@@ -22,7 +22,7 @@
   --surface-positive: var(--color-magic-green);
   --text-primary: var(--color-magic-ink);
   --text-on-strong: white;
-  --text-on-accent: var(--text-on-strong);
+  --text-on-accent: #000;
   --action-primary: var(--color-magic-orange);
   --action-primary-hover: var(--color-magic-ink);
   --border-emphasis: var(--color-magic-purple);
@@ -120,6 +120,7 @@
 
 .section-shell :where([data-action="primary"]):hover {
   background: var(--action-primary-hover);
+  color: var(--text-on-strong);
 }
 
 @media (prefers-reduced-motion: reduce) {

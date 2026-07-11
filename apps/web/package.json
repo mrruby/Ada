@@ -12,7 +12,8 @@
     "build": "yarn copy:legacy-assets && astro build",
     "preview": "astro preview",
     "lint": "eslint . && astro check",
-    "test:schema": "vitest run tests/schema"
+    "test:schema": "vitest run tests/schema",
+    "test:a11y": "playwright test --config playwright.config.ts"
   },
   "dependencies": {
     "@astrojs/netlify": "8.1.1",
@@ -26,7 +27,9 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
+    "@axe-core/playwright": "^4.10.2",
     "@eslint/js": "9.39.4",
+    "@playwright/test": "^1.61.1",
     "eslint": "9.39.4",
     "typescript": "^5.9.3",
     "typescript-eslint": "8.63.0",
