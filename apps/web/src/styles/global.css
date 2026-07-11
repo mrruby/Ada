@@ -82,6 +82,16 @@
   color: var(--text-on-strong);
 }
 
+.section-shell.surface-magic-cream { background: var(--color-magic-cream); }
+.section-shell.surface-magic-gold { background: var(--color-magic-gold); }
+.section-shell.surface-magic-green { background: var(--color-magic-green); }
+.section-shell.surface-magic-ink { background: var(--color-magic-ink); color: var(--text-on-strong); }
+.section-shell.surface-magic-lilac { background: var(--color-magic-lilac); }
+.section-shell.surface-magic-pink { background: var(--color-magic-pink); }
+.section-shell.surface-magic-yellow { background: var(--color-magic-yellow); }
+.section-shell.surface-neutral { background: var(--surface-subtle); }
+.section-shell.surface-violet { background: var(--color-violet-200); }
+
 .surface-card {
   background: var(--surface-subtle);
   border: 1px solid var(--border-emphasis);

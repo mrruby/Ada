@@ -8,10 +8,48 @@ const fallbackSectionIds = {
   "membership-packages": "magic-package",
   appointment: "umawiam-spotkanie",
 } as const
+
+const pilotSurfaces: Record<string, string[]> = {
+  "/magic/": [
+    "surface-magic-lilac",
+    "surface-magic-cream",
+    "surface-magic-pink",
+    "surface-magic-yellow",
+    "surface-neutral",
+    "surface-magic-yellow",
+    "surface-neutral",
+    "surface-neutral",
+    "surface-magic-pink",
+    "surface-magic-yellow",
+    "surface-magic-gold",
+    "surface-magic-pink",
+    "surface-magic-lilac",
+    "surface-violet",
+    "surface-neutral",
+  ],
+  "/magic-kolektyw/": [
+    "surface-magic-cream",
+    "surface-magic-lilac",
+    "surface-magic-cream",
+    "surface-magic-green",
+    "surface-magic-lilac",
+    "surface-magic-green",
+    "surface-magic-cream",
+    "surface-magic-green",
+    "surface-magic-cream",
+    "surface-magic-cream",
+    "surface-magic-green",
+    "surface-magic-cream",
+    "surface-magic-pink",
+    "surface-magic-ink",
+  ],
+}
+
+const surfaces = pilotSurfaces[spec.path] ?? []
 ---
 
-<main data-brand={spec.brand}>
-  {spec.sections.map((section) => {
+<main data-brand={spec.brand} data-page-path={spec.path}>
+  {spec.sections.map((section, index) => {
     const Section = sectionRegistry[section.type]
     const id = section.id ?? fallbackSectionIds[section.presentation as keyof typeof fallbackSectionIds]
 
@@ -20,9 +58,11 @@ const fallbackSectionIds = {
         class:list={[
           "section-shell",
           `tone-${section.tone}`,
+          surfaces[index],
           { "section-shell--sticky": section.type === "sticky-cta" },
         ]}
         data-presentation={section.presentation}
+        data-section-index={index}
         data-section-type={section.type}
         id={id}
       >

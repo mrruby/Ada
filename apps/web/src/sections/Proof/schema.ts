@@ -9,6 +9,7 @@ const CaseStudyProofSchema = z
     summary: z.string().min(1),
     figures: z.array(z.string().min(1)).min(1),
     media: AssetSchema.optional(),
+    supportingMedia: AssetSchema.optional(),
   })
   .strict()
 
@@ -37,6 +38,7 @@ const QaProofSchema = z
     type: z.literal("qa"),
     question: z.string().min(1),
     answer: RichTextSchema,
+    media: AssetSchema.optional(),
   })
   .strict()
 
@@ -46,6 +48,7 @@ const CustomerStoryProofSchema = z
     title: z.string().min(1),
     body: RichTextSchema,
     media: AssetSchema.optional(),
+    artwork: z.array(AssetSchema).min(1).optional(),
   })
   .strict()
 
@@ -59,6 +62,8 @@ export const ProofSectionSchema = SectionBaseSchema.extend({
     "customer-story",
   ]),
   heading: z.string().min(1),
+  decoration: AssetSchema.optional(),
+  gallery: z.array(AssetSchema).min(1).optional(),
   entries: z
     .array(
       z.discriminatedUnion("type", [

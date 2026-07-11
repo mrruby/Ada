@@ -2,25 +2,44 @@
 import type { ProblemSolutionSection } from "./schema"
 
 const { section } = Astro.props as { section: ProblemSolutionSection }
-const labels = section.presentation === "comparison"
-  ? { problems: "Wyzwania", outcomes: "Co możesz zyskać" }
-  : { problems: "Te sytuacje", outcomes: "Jak pomoże MAGIC" }
+const isComparison = section.presentation === "comparison"
+const situationColors = ["bg-magic-gold", "bg-magic-lilac", "bg-magic-pink"]
 ---
 
-<div class="mx-auto max-w-6xl">
-  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
-  <div class="mt-8 grid gap-6 lg:grid-cols-2">
-    <article class="surface-card rounded-3xl p-6 sm:p-8">
-      <h3 class="text-2xl font-bold">{labels.problems}</h3>
-      <ul class="mt-5 space-y-4 leading-7">
-        {section.problems.map((problem) => <li class="flex gap-3"><span aria-hidden="true">—</span><span>{problem}</span></li>)}
-      </ul>
-    </article>
-    <article class="surface-positive rounded-3xl p-6 sm:p-8">
-      <h3 class="text-2xl font-bold">{labels.outcomes}</h3>
-      <ul class="mt-5 space-y-4 leading-7">
-        {section.outcomes.map((outcome) => <li class="flex gap-3"><span aria-hidden="true">✦</span><span>{outcome}</span></li>)}
-      </ul>
-    </article>
+{isComparison ? (
+  <div class="mx-auto max-w-5xl">
+    <div class="grid gap-10 md:grid-cols-2">
+      <article>
+        <p class="mb-6 text-center text-2xl">🧐</p>
+        <h2 class="mx-auto max-w-sm rounded-full border border-magic-orange bg-magic-cream px-5 py-2 text-center font-display text-2xl text-magic-ink">{section.heading}</h2>
+        <ul class="mt-8 space-y-4 text-sm leading-6 sm:text-base">
+          {section.problems.map((problem) => <li>{problem}</li>)}
+        </ul>
+      </article>
+      <article>
+        <p class="mb-6 text-center text-2xl">👀</p>
+        <h2 class="mx-auto max-w-sm rounded-full border border-magic-orange bg-magic-cream px-5 py-2 text-center font-display text-2xl text-magic-ink">Co jeśli powiem Ci, że możesz mieć:</h2>
+        <ul class="mt-8 space-y-4 text-sm leading-6 sm:text-base">
+          {section.outcomes.map((outcome) => <li>{outcome}</li>)}
+        </ul>
+      </article>
+    </div>
   </div>
-</div>
+) : (
+  <div class="mx-auto max-w-5xl text-center">
+    <h2 class="text-2xl font-extrabold sm:text-3xl">{section.heading}</h2>
+    <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      {section.problems.map((problem, index) => (
+        <article class:list={["rounded-xl p-5 shadow-sm", situationColors[index % situationColors.length]]}>
+          <h3 class="font-display text-xl uppercase leading-none">{problem}</h3>
+          <p class="mt-4 text-sm leading-6">{section.outcomes[index]}</p>
+        </article>
+      ))}
+    </div>
+    <div class="mx-auto mt-12 max-w-2xl">
+      <h3 class="text-xl font-extrabold">Rozumiemy to.</h3>
+      <p class="mt-4 text-sm leading-6 sm:text-base">Dlatego stworzyłyśmy MAGIC — miejsce, w którym nie zostajesz z reklamami sama. Zaczynasz od spotkania 1:1, a do 5 dni po spotkaniu masz własny MAGIC Plan: co ustawić, w jakiej kolejności i z jakim budżetem.</p>
+      <a class="mt-6 inline-block rounded-full bg-magic-pink px-8 py-3 font-extrabold shadow-md transition-transform hover:-translate-y-0.5" data-action="primary" data-analytics-key="magic-situations" data-brand-action="true" href="#magic-package">Tak! Zwiększam sprzedaż dzięki reklamom!</a>
+    </div>
+  </div>
+)}

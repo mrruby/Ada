@@ -1,11 +1,12 @@
 import { z } from "zod"
 
-import { SectionBaseSchema } from "../../page-spec/common.schema"
+import { AssetSchema, SectionBaseSchema } from "../../page-spec/common.schema"
 
 const LearningStageSchema = z
   .object({
     title: z.string().min(1),
     body: z.string().min(1),
+    artwork: AssetSchema.optional(),
   })
   .strict()
 

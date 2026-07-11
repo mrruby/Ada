@@ -5,23 +5,11 @@ import type { ConsultationSection } from "./schema"
 const { section } = Astro.props as { section: ConsultationSection }
 ---
 
-<div class="surface-strong mx-auto max-w-4xl rounded-3xl p-6 sm:p-10" data-provider={section.provider} data-provider-url={section.externalUrl}>
-  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
-  <div class="mt-5 max-w-2xl">
+<div class="mx-auto max-w-5xl text-center" data-provider={section.provider} data-provider-url={section.externalUrl}>
+  <h2 class="mx-auto max-w-xl rounded-full border-2 border-magic-orange bg-magic-cream px-5 py-2 font-display text-2xl text-magic-ink sm:text-3xl">{section.heading}</h2>
+  <div class="mx-auto mt-8 max-w-2xl text-left text-sm leading-6 sm:text-base">
     <RichText value={section.body} />
   </div>
-  <a
-    class="mt-8 rounded-full font-bold"
-    data-action="primary"
-    data-analytics-key={section.cta.analyticsKey}
-    href={section.cta.href}
-    rel={section.cta.external ? "noreferrer" : undefined}
-    target={section.cta.external ? "_blank" : undefined}
-  >
-    {section.cta.label}
-  </a>
-  <p class="mt-5 text-sm">
-    Rezerwacja odbywa się przez
-    <a class="ml-1 underline decoration-2 underline-offset-4" href={section.externalUrl} rel="noreferrer" target="_blank">Kalendarz Google</a>.
-  </p>
+  <a class="mt-6 inline-block rounded-full bg-magic-orange px-6 py-3 text-sm font-extrabold uppercase text-black shadow-md transition-transform hover:-translate-y-0.5" data-action="primary" data-analytics-key={section.cta.analyticsKey} data-brand-action="true" href={section.cta.href} rel={section.cta.external ? "noreferrer" : undefined} target={section.cta.external ? "_blank" : undefined}>{section.cta.label}</a>
+  <section class="mx-auto mt-8 min-h-80 max-w-3xl bg-white" aria-label="Rezerwacja spotkania przez Kalendarz Google"></section>
 </div>

@@ -2,38 +2,39 @@
 import type { OfferSection } from "./schema"
 
 const { section } = Astro.props as { section: OfferSection }
+const isMembership = section.presentation === "membership-packages"
+const serviceColors = ["bg-magic-green", "bg-magic-pink", "bg-magic-lilac", "bg-pink-200"]
 ---
 
-<div class="mx-auto max-w-6xl">
-  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
-  <ul class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+{isMembership ? (
+  <div class="mx-auto max-w-4xl text-center">
+    <h2 class="font-display text-4xl leading-none sm:text-5xl">{section.heading}</h2>
     {section.offers.map((offer) => (
-      <li>
-        <article class="surface-card flex h-full flex-col rounded-3xl p-6 sm:p-8">
-          <h3 class="text-2xl font-bold leading-snug">{offer.name}</h3>
-          {offer.price && (
-            <dl class="surface-highlight mt-5 flex items-baseline justify-between gap-4 rounded-2xl p-4">
-              <dt class="font-semibold">{offer.price.label}</dt>
-              <dd class="font-display text-3xl">{offer.price.value}</dd>
-            </dl>
-          )}
-          <ul class="mt-6 space-y-3 leading-7">
-            {offer.features.map((feature) => <li class="flex gap-3"><span aria-hidden="true">✦</span><span>{feature}</span></li>)}
-          </ul>
-          {offer.cta && (
-            <a
-              class="mt-8 w-fit rounded-full font-bold"
-              data-action="primary"
-              data-analytics-key={offer.cta.analyticsKey}
-              href={offer.cta.href}
-              rel={offer.cta.external ? "noreferrer" : undefined}
-              target={offer.cta.external ? "_blank" : undefined}
-            >
-              {offer.cta.label}
-            </a>
-          )}
-        </article>
-      </li>
+      <article class="mx-auto mt-8 max-w-3xl rounded-xl bg-magic-cream p-6 shadow-lg sm:p-8">
+        <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <h3 class="bg-magic-lilac px-6 py-3 text-2xl font-extrabold uppercase text-black sm:text-3xl">{offer.name}</h3>
+          {offer.price && <p class="flex size-24 items-center justify-center rounded-full bg-magic-yellow font-display text-2xl">{offer.price.value}</p>}
+        </div>
+        <ul class="mt-8 grid gap-4 text-left text-sm leading-6 md:grid-cols-2 sm:text-base">
+          {offer.features.map((feature) => <li>{feature}</li>)}
+        </ul>
+        {offer.cta && <a class="mt-8 inline-block rounded-full bg-magic-pink px-7 py-3 font-extrabold uppercase shadow-md transition-transform hover:-translate-y-0.5" data-action="primary" data-analytics-key={offer.cta.analyticsKey} data-brand-action="true" href={offer.cta.href} rel={offer.cta.external ? "noreferrer" : undefined} target={offer.cta.external ? "_blank" : undefined}>{offer.cta.label}</a>}
+      </article>
     ))}
-  </ul>
-</div>
+  </div>
+) : (
+  <div class="mx-auto max-w-4xl">
+    <h2 class="mx-auto max-w-xl rounded-full border-2 border-magic-orange bg-magic-cream px-5 py-2 text-center font-display text-2xl text-magic-ink sm:text-3xl">{section.heading}</h2>
+    <div class="mt-10 space-y-8">
+      {section.offers.map((offer, index) => (
+        <article class:list={["rounded-xl border-2 border-magic-orange p-6 shadow-sm sm:p-8", serviceColors[index % serviceColors.length]]}>
+          <h3 class="text-xl font-extrabold sm:text-2xl">{offer.name}</h3>
+          <ul class="mt-5 space-y-2 text-sm leading-6 sm:text-base">
+            {offer.features.map((feature) => <li class:list={[feature === "Co otrzymujesz:" || feature === "Dla kogo:" ? "mt-4 font-extrabold" : ""]}>{feature}</li>)}
+          </ul>
+          <a class="mx-auto mt-6 block w-fit rounded-full border-2 border-magic-orange bg-magic-cream px-6 py-3 text-center font-display text-lg text-magic-ink transition-colors hover:bg-magic-orange hover:text-black" data-action="primary" data-analytics-key={`kolektyw-offer-${index + 1}`} data-brand-action="true" href="#umawiam-spotkanie">Sprawdź, czy to pakiet dla Ciebie</a>
+        </article>
+      ))}
+    </div>
+  </div>
+)}

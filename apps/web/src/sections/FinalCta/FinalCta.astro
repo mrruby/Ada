@@ -3,26 +3,16 @@ import RichText from "../../page-builder/RichText.astro"
 import type { FinalCtaSection } from "./schema"
 
 const { section } = Astro.props as { section: FinalCtaSection }
+const isMembership = section.presentation === "membership"
 ---
 
-<footer class="surface-strong mx-auto max-w-6xl rounded-3xl px-6 py-10 text-center sm:px-12">
-  <h2 class="font-display text-4xl leading-tight sm:text-5xl">{section.heading}</h2>
-  <div class="mx-auto mt-5 max-w-2xl text-lg">
-    <RichText value={section.body} />
-  </div>
-  <a
-    class="mt-8 rounded-full font-bold"
-    data-action="primary"
-    data-analytics-key={section.primaryCta.analyticsKey}
-    href={section.primaryCta.href}
-    rel={section.primaryCta.external ? "noreferrer" : undefined}
-    target={section.primaryCta.external ? "_blank" : undefined}
-  >
-    {section.primaryCta.label}
-  </a>
+<footer class:list={["mx-auto text-center", isMembership ? "max-w-3xl" : "max-w-4xl rounded-2xl bg-magic-green px-6 py-8 sm:px-10"]}>
+  <h2 class:list={["leading-none", isMembership ? "text-xl font-extrabold" : "font-display text-3xl text-magic-ink sm:text-4xl"]}>{section.heading}</h2>
+  {!isMembership && <div class="mx-auto mt-4 max-w-2xl text-sm leading-6"><RichText value={section.body} /></div>}
+  <a class:list={["mt-6 inline-block rounded-full px-6 py-3 text-sm font-extrabold uppercase shadow-md transition-transform hover:-translate-y-0.5", isMembership ? "bg-magic-pink" : "bg-magic-orange text-black"]} data-action="primary" data-analytics-key={section.primaryCta.analyticsKey} data-brand-action="true" href={section.primaryCta.href} rel={section.primaryCta.external ? "noreferrer" : undefined} target={section.primaryCta.external ? "_blank" : undefined}>{section.primaryCta.label}</a>
   {section.socialLinks && (
     <nav class="mt-8" aria-label="Media społecznościowe">
-      <ul class="flex flex-wrap justify-center gap-x-6 gap-y-3">{section.socialLinks.map((link) => <li><a class="underline decoration-2 underline-offset-4" href={link.href} rel="noreferrer" target="_blank">{link.label}</a></li>)}</ul>
+      <ul class="flex flex-wrap justify-center gap-6 text-sm text-neutral-600">{section.socialLinks.map((link) => <li><a class="font-semibold underline decoration-2 underline-offset-4" href={link.href} rel="noreferrer" target="_blank">◎ {link.label}</a></li>)}</ul>
     </nav>
   )}
 </footer>

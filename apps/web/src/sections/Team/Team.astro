@@ -4,31 +4,40 @@ import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { TeamSection } from "./schema"
 
 const { section } = Astro.props as { section: TeamSection }
-const layout = section.presentation === "membership-experts" ? "md:grid-cols-2" : "md:grid-cols-2 xl:grid-cols-3"
+const isMembership = section.presentation === "membership-experts"
 ---
 
-<div class="mx-auto max-w-6xl">
-  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
-  <ul class:list={["mt-8 grid grid-cols-1 gap-6", layout]}>
+<div class="mx-auto max-w-5xl text-center">
+  <h2 class:list={["font-extrabold", isMembership ? "text-2xl sm:text-3xl" : "mx-auto max-w-md rounded-full border-2 border-magic-orange bg-magic-cream px-5 py-2 font-display text-2xl text-magic-ink sm:text-3xl"]}>{section.heading}</h2>
+  {isMembership && <p class="mt-3 font-semibold text-magic-purple">5 specjalistów pod jednym dachem</p>}
+  {isMembership && <p class="mt-2 text-sm font-bold">Meta Ads | Copywriting | Grafika | Koordynacja kampanii | AI i automatyzacje</p>}
+  <ul class:list={[
+    "mt-10 grid gap-8",
+    isMembership ? "grid-cols-2 md:grid-cols-3" : "md:grid-cols-2",
+  ]}>
     {section.people.map((person) => (
       <li>
-        <article class="surface-card h-full overflow-hidden rounded-3xl">
+        <article class:list={["mx-auto", isMembership ? "max-w-48" : "flex max-w-xl gap-4 text-left"]}>
           <img
             alt={person.media.alt}
-            class="aspect-square w-full object-cover"
+            class:list={[
+              "shrink-0 rounded-full border-2 border-magic-lilac object-cover",
+              isMembership ? "mx-auto size-24 sm:size-32" : "size-24 sm:size-32",
+            ]}
             decoding="async"
             height={person.media.height}
             loading="lazy"
             src={legacyAssetPath(person.media.src)}
             width={person.media.width}
           />
-          <div class="p-6">
-            <h3 class="text-xl font-bold">{person.name}</h3>
-            <p class="mt-1 font-semibold">{person.role}</p>
-            {person.bio.length > 0 && <div class="mt-4 text-sm leading-6"><RichText value={person.bio} /></div>}
+          <div class:list={[isMembership && "mt-3"]}>
+            <h3 class="text-sm font-extrabold sm:text-base">{person.name}</h3>
+            {!isMembership && <p class="mt-1 text-xs font-semibold leading-5">{person.role}</p>}
+            {person.bio.length > 0 && <div class="mt-2 text-xs leading-5"><RichText value={person.bio} /></div>}
           </div>
         </article>
       </li>
     ))}
   </ul>
+  {isMembership && <p class="mx-auto mt-10 max-w-2xl text-sm leading-6"><span class="font-bold text-magic-purple">Dołącz do społeczności kobiet,</span><br />które wspólnie rozwijają swoje biznesy i wspierają się w drodze do sukcesu w reklamach Meta.</p>}
 </div>

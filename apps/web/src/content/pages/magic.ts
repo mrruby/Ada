@@ -132,22 +132,52 @@ export const magicPageInput = {
         {
           title: "5 spotkań na żywo miesięcznie",
           body: "5 spotkań na żywo miesięcznie",
+          artwork: {
+            src: "src/images/magic-landing-2026-calendar-cards.webp",
+            alt: "Kalendarz spotkań i konsultacji MAGIC",
+            width: 569,
+            height: 569,
+          },
         },
         {
           title: "4 poziomy nauki",
           body: "pasek progresu ułatwiający naukę",
+          artwork: {
+            src: "src/images/magic-landing-2026-levels.webp",
+            alt: "Poziomy nauki w MAGIC",
+            width: 551,
+            height: 551,
+          },
         },
         {
           title: "Asystentka AI",
           body: "napisz wiadomość (albo nagraj głosówkę), a Kapibara Barbara pomoże Ci z każdą reklamową zagwozdką - o każdej porze",
+          artwork: {
+            src: "src/images/magic-landing-2026-kapibara-message.webp",
+            alt: "Wiadomość do asystentki AI Kapibary Barbary",
+            width: 360,
+            height: 260,
+          },
         },
         {
           title: "Konsultacje pisemne na Circle",
           body: "zadajesz pytanie o SWOJĄ reklamę, kiedy Ci wygodnie - odpowiedź specjalistki czeka na Ciebie na Circle",
+          artwork: {
+            src: "src/images/magic-landing-2026-opinions-a.webp",
+            alt: "Przykład pisemnej konsultacji w MAGIC",
+            width: 720,
+            height: 620,
+          },
         },
         {
           title: "5 ekspertów",
           body: "pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach",
+          artwork: {
+            src: "src/images/magic-landing-2026-experts-transparent.webp",
+            alt: "Eksperci MAGIC",
+            width: 1800,
+            height: 720,
+          },
         },
       ],
     },
@@ -159,6 +189,12 @@ export const magicPageInput = {
         {
           title: "Twój MAGIC Plan",
           body: "Twój MAGIC Plan podpowie, które z tych spotkań są dla Ciebie najważniejsze w pierwszym miesiącu.",
+          artwork: {
+            src: "src/images/section.webp",
+            alt: "Przykładowy plan spotkań MAGIC w kalendarzu",
+            width: 992,
+            height: 536,
+          },
         },
         {
           title: "5 spotkań na żywo miesięcznie",
@@ -296,6 +332,44 @@ export const magicPageInput = {
       type: "proof",
       presentation: "results",
       heading: "Wyniki i opinie członkiń",
+      gallery: [
+        {
+          src: "src/images/magic_reference_sell_1.webp",
+          alt: "Opinia członkini społeczności MAGIC",
+          width: 400,
+          height: 400,
+        },
+        {
+          src: "src/images/magic_reference_sell_2.webp",
+          alt: "Opinia członkini społeczności MAGIC",
+          width: 400,
+          height: 400,
+        },
+        {
+          src: "src/images/magic_reference_sell_3.webp",
+          alt: "Opinia członkini społeczności MAGIC",
+          width: 400,
+          height: 400,
+        },
+        {
+          src: "src/images/magic_reference_sell_4.webp",
+          alt: "Opinia członkini społeczności MAGIC",
+          width: 400,
+          height: 400,
+        },
+        {
+          src: "src/images/magic_reference_sell_5.webp",
+          alt: "Opinia członkini społeczności MAGIC",
+          width: 400,
+          height: 400,
+        },
+        {
+          src: "src/images/magic_reference_sell_6.webp",
+          alt: "Opinia członkini społeczności MAGIC",
+          width: 400,
+          height: 400,
+        },
+      ],
       entries: [
         {
           type: "result",
@@ -368,6 +442,12 @@ export const magicPageInput = {
         {
           type: "qa",
           question: "Zobacz przykładowe pytania i odpowiedzi!",
+          media: {
+            src: "src/images/pyt-odp.webp",
+            alt: "Przykładowe pytania i odpowiedzi z MAGIC",
+            width: 500,
+            height: 500,
+          },
           answer: [
             {
               kind: "paragraph",
@@ -407,6 +487,14 @@ export const magicPageInput = {
             width: 1304,
             height: 836,
           },
+          artwork: [
+            {
+              src: "src/images/magda1a.webp",
+              alt: "Przykład kampanii Magdy w MAGIC",
+              width: 800,
+              height: 500,
+            },
+          ],
         },
         {
           type: "customer-story",
@@ -420,6 +508,14 @@ export const magicPageInput = {
                   marks: [],
                 },
               ],
+            },
+          ],
+          artwork: [
+            {
+              src: "src/images/magda2a.webp",
+              alt: "Przykład pracy marketerki w MAGIC",
+              width: 800,
+              height: 500,
             },
           ],
         },

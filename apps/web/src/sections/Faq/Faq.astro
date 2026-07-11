@@ -3,17 +3,18 @@ import RichText from "../../page-builder/RichText.astro"
 import type { FaqSection } from "./schema"
 
 const { section } = Astro.props as { section: FaqSection }
+const isMembership = section.presentation === "membership"
 ---
 
-<div class="mx-auto max-w-4xl">
-  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
+<div class="mx-auto max-w-3xl">
+  <h2 class:list={["text-center", isMembership ? "text-3xl font-extrabold" : "mx-auto max-w-48 rounded-full border-2 border-magic-orange bg-magic-ink px-5 py-2 font-display text-2xl text-magic-orange"]}>{section.heading}</h2>
   <div class="mt-8 space-y-3">
     {section.items.map((item) => (
-      <details class="surface-card rounded-2xl p-5 open:shadow-sm">
-        <summary class="cursor-pointer pr-8 text-lg font-bold leading-snug">{item.question}</summary>
-        <div class="magic-rule mt-4 border-t pt-4">
-          <RichText value={item.answer} />
-        </div>
+      <details class:list={["rounded-lg p-4 shadow-sm", isMembership ? "bg-white" : "bg-white text-black"]}>
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold leading-6 sm:text-base">
+          <span>{item.question}</span><span aria-hidden="true" class="text-xl text-magic-purple">+</span>
+        </summary>
+        <div class="mt-4 border-t border-magic-lilac pt-4 text-sm leading-6"><RichText value={item.answer} /></div>
       </details>
     ))}
   </div>

@@ -1,23 +1,15 @@
 ---
 import VimeoFacade from "../../integrations/video/VimeoFacade.astro"
-import { consentCopy } from "../../integrations/consent/consent-copy"
 import type { MediaSection } from "./schema"
 
 const { section } = Astro.props as { section: MediaSection }
-const consentLabel = consentCopy.categories[section.consentCategory].label.toLowerCase()
 ---
 
-<div class="mx-auto max-w-4xl">
-  <figure
-    class="surface-card overflow-hidden rounded-3xl"
-    data-consent-category={section.consentCategory}
-    data-provider={section.provider}
-    data-provider-asset-id={section.providerAssetId}
-  >
-    <VimeoFacade assetId={section.providerAssetId} heading={section.heading} poster={section.poster} />
-    <figcaption class="p-5">
-      <h2 class="text-2xl font-bold">{section.heading}</h2>
-      <p class="mt-2 text-sm">Materiał zewnętrzny nie jest osadzany bez zgody na {consentLabel} pliki cookie.</p>
-    </figcaption>
-  </figure>
-</div>
+<figure
+  class="mx-auto max-w-md overflow-hidden rounded-none bg-black shadow-lg"
+  data-consent-category={section.consentCategory}
+  data-provider={section.provider}
+  data-provider-asset-id={section.providerAssetId}
+>
+  <VimeoFacade assetId={section.providerAssetId} heading={section.heading} poster={section.poster} />
+</figure>

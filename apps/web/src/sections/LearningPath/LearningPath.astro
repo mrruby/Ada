@@ -1,25 +1,63 @@
 ---
+import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { LearningPathSection } from "./schema"
 
 const { section } = Astro.props as { section: LearningPathSection }
-const layout = section.presentation === "curriculum" ? "md:grid-cols-2 xl:grid-cols-3" : "md:grid-cols-2"
+const isCurriculum = section.presentation === "curriculum"
 ---
 
-<div class="mx-auto max-w-6xl">
-  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
-  <ol class:list={["mt-8 grid grid-cols-1 gap-5", layout]}>
-    {section.stages.map((stage) => (
-      <li class="surface-card rounded-3xl p-6">
-        <article class="sm:flex sm:gap-4">
-          <span class="surface-highlight flex size-10 shrink-0 items-center justify-center rounded-full font-display text-xl" aria-hidden="true">
-            {section.stages.indexOf(stage) + 1}
-          </span>
-          <div>
-            <h3 class="text-xl font-bold leading-snug">{stage.title}</h3>
-            <p class="mt-2 leading-7">{stage.body}</p>
-          </div>
-        </article>
-      </li>
+{isCurriculum ? (
+  <div class="mx-auto max-w-6xl text-center">
+    <h2 class="mx-auto max-w-xl font-display text-4xl uppercase leading-none sm:text-6xl">{section.heading}</h2>
+    <ol class="mt-10 grid gap-10 md:grid-cols-2">
+      {section.stages.map((stage, index) => (
+        <li class:list={["flex flex-col items-center", index === section.stages.length - 1 && "md:col-span-2"]}>
+          {stage.artwork && (
+            <img
+              alt={stage.artwork.alt}
+              class:list={[
+                "h-auto max-w-full object-contain",
+                index === section.stages.length - 1 ? "w-full" : "max-h-80",
+              ]}
+              decoding="async"
+              height={stage.artwork.height}
+              loading="lazy"
+              src={legacyAssetPath(stage.artwork.src)}
+              width={stage.artwork.width}
+            />
+          )}
+          <article class="mt-4 max-w-md">
+            <h3 class="font-display text-2xl uppercase leading-none sm:text-3xl">{stage.title}</h3>
+            <p class="mt-3 text-sm leading-6 sm:text-base">{stage.body}</p>
+          </article>
+        </li>
+      ))}
+    </ol>
+  </div>
+) : (
+  <div class="mx-auto max-w-6xl text-center">
+    <h2 class="text-2xl font-extrabold sm:text-3xl">{section.heading}</h2>
+    {section.stages.map((stage, index) => (
+      <article class="mx-auto mt-8 max-w-5xl">
+        {stage.artwork && (
+          <img
+            alt={stage.artwork.alt}
+            class="w-full rounded-xl object-cover shadow-lg"
+            decoding="async"
+            height={stage.artwork.height}
+            loading="lazy"
+            src={legacyAssetPath(stage.artwork.src)}
+            width={stage.artwork.width}
+          />
+        )}
+        <div class:list={[
+          "mx-auto max-w-xl rounded-xl bg-white p-5 shadow-lg",
+          index === 0 && "-mt-8 relative",
+        ]}>
+          <h3 class="text-lg font-extrabold sm:text-xl">{stage.title}</h3>
+          <p class="mt-2 text-sm leading-6 sm:text-base">{stage.body}</p>
+        </div>
+      </article>
     ))}
-  </ol>
-</div>
+  </div>
+)}

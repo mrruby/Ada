@@ -4,111 +4,104 @@ import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { ProofSection } from "./schema"
 
 const { section } = Astro.props as { section: ProofSection }
-const layout = section.presentation === "testimonials" ? "md:grid-cols-2 xl:grid-cols-3" : "md:grid-cols-2"
+const isMembershipCaseStudies = section.presentation === "case-studies" && section.heading === "Case study MAGIC"
+const isMembershipResults = section.presentation === "results" && section.heading === "Wyniki i opinie członkiń"
+const caseStudyBackgrounds = ["bg-magic-green", "bg-magic-pink", "bg-magic-green"]
 ---
 
-<div class="mx-auto max-w-6xl">
-  <h2 class="font-display text-3xl leading-tight sm:text-4xl">{section.heading}</h2>
-  <div class:list={["mt-8 grid grid-cols-1 gap-6", layout]}>
-    {section.entries.map((entry) => {
-      if (entry.type === "case-study") {
-        return (
-          <article class="surface-card overflow-hidden rounded-3xl">
-            {entry.media && (
-              <img
-                alt={entry.media.alt}
-                class="w-full object-cover"
-                decoding="async"
-                height={entry.media.height}
-                loading="lazy"
-                src={legacyAssetPath(entry.media.src)}
-                width={entry.media.width}
-              />
-            )}
-            <div class="p-6">
-              <h3 class="text-xl font-bold leading-snug">{entry.title}</h3>
-              <p class="mt-3 leading-7">{entry.summary}</p>
-              <ul class="mt-5 space-y-2 text-sm leading-6">
-                {entry.figures.map((figure) => <li class="flex gap-3"><span aria-hidden="true">✦</span><span>{figure}</span></li>)}
-              </ul>
-            </div>
-          </article>
-        )
-      }
-
-      if (entry.type === "result") {
-        return (
-          <article class="surface-card overflow-hidden rounded-3xl">
-            {entry.media && (
-              <img
-                alt={entry.media.alt}
-                class="w-full object-cover"
-                decoding="async"
-                height={entry.media.height}
-                loading="lazy"
-                src={legacyAssetPath(entry.media.src)}
-                width={entry.media.width}
-              />
-            )}
-            <div class="p-6">
-              <h3 class="font-semibold">{entry.label}</h3>
-              <p class="font-display mt-3 text-4xl">{entry.value}</p>
-              {entry.context && <p class="mt-3 leading-7">{entry.context}</p>}
-            </div>
-          </article>
-        )
-      }
-
-      if (entry.type === "testimonial") {
-        return (
-          <blockquote class="surface-card overflow-hidden rounded-3xl">
-            {entry.media && (
-              <img
-                alt={entry.media.alt}
-                class="aspect-square w-full object-cover"
-                decoding="async"
-                height={entry.media.height}
-                loading="lazy"
-                src={legacyAssetPath(entry.media.src)}
-                width={entry.media.width}
-              />
-            )}
-            <div class="p-6">
-              <p class="text-lg leading-7">“{entry.quote}”</p>
-              <footer class="mt-4 font-bold">{entry.person}{entry.role ? `, ${entry.role}` : ""}</footer>
-            </div>
-          </blockquote>
-        )
-      }
-
-      if (entry.type === "qa") {
-        return (
-          <article class="surface-highlight rounded-3xl p-6 sm:p-8">
-            <h3 class="text-xl font-bold">{entry.question}</h3>
-            <div class="mt-4"><RichText value={entry.answer} /></div>
-          </article>
-        )
-      }
-
-      return (
-        <article class="surface-card overflow-hidden rounded-3xl">
-          {entry.media && (
-            <img
-              alt={entry.media.alt}
-              class="w-full object-cover"
-              decoding="async"
-              height={entry.media.height}
-              loading="lazy"
-              src={legacyAssetPath(entry.media.src)}
-              width={entry.media.width}
-            />
-          )}
-          <div class="p-6 sm:p-8">
-            <h3 class="text-xl font-bold leading-snug">{entry.title}</h3>
-            <div class="mt-4"><RichText value={entry.body} /></div>
-          </div>
+{isMembershipCaseStudies ? (
+  <div class="mx-auto max-w-6xl">
+    <div class="grid gap-6 md:grid-cols-3">
+      {[...section.entries, ...section.entries, ...section.entries].map((entry) => entry.type === "case-study" && (
+        <article class="flex min-h-96 items-center justify-center rounded-lg bg-black p-5 shadow-lg" aria-label={entry.title}>
+          <span class="flex size-12 items-center justify-center rounded-full border-2 border-white text-2xl text-white" aria-hidden="true">▷</span>
         </article>
-      )
-    })}
+      ))}
+    </div>
   </div>
-</div>
+) : section.presentation === "results" ? (
+  <div class="mx-auto max-w-6xl text-center">
+    <h2 class="text-2xl font-extrabold sm:text-3xl">{section.heading}</h2>
+    <div class:list={["mt-8 grid gap-5", isMembershipResults ? "md:grid-cols-3" : "max-w-3xl mx-auto"]}>
+      {section.entries.map((entry) => entry.type === "result" && (
+        <article class:list={["overflow-hidden rounded-lg bg-white p-3 shadow-md", !isMembershipResults && "mb-5"]}>
+          {entry.media && <img alt={entry.media.alt} class="w-full object-contain" decoding="async" height={entry.media.height} loading="lazy" src={legacyAssetPath(entry.media.src)} width={entry.media.width} />}
+          {isMembershipResults && (
+            <div class="pt-4 text-left">
+              <h3 class="font-semibold">{entry.label}</h3>
+              <p class="mt-2 font-display text-3xl">{entry.value}</p>
+              {entry.context && <p class="mt-2 text-sm leading-6">{entry.context}</p>}
+            </div>
+          )}
+        </article>
+      ))}
+    </div>
+    {isMembershipResults && (
+      <>
+        <p class="mx-auto mt-8 max-w-2xl text-lg font-extrabold leading-tight sm:text-2xl">Chcesz takich liczb u siebie? Twój <span class="text-magic-ink">MAGIC Plan</span> pokaże pierwszy krok</p>
+        <a class="mt-6 inline-block rounded-full bg-magic-pink px-6 py-3 text-sm font-extrabold shadow-md transition-transform hover:-translate-y-0.5" data-action="primary" data-analytics-key="magic-results" data-brand-action="true" href="#magic-package">Dołączam</a>
+      </>
+    )}
+    {section.gallery && (
+      <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {section.gallery.map((asset) => <img alt={asset.alt} class="mx-auto w-full max-w-xs rounded-lg shadow-md" decoding="async" height={asset.height} loading="lazy" src={legacyAssetPath(asset.src)} width={asset.width} />)}
+      </div>
+    )}
+  </div>
+) : section.presentation === "case-studies" ? (
+  <div class="-mx-6">
+    {section.entries.map((entry, index) => entry.type === "case-study" && (
+      <article class:list={["px-6 py-10 sm:px-10", caseStudyBackgrounds[index % caseStudyBackgrounds.length]]}>
+        <div class="mx-auto max-w-4xl">
+          <div class="flex items-center justify-center gap-4">
+            {section.decoration && <img alt="" aria-hidden="true" class="hidden size-10 md:block" decoding="async" height={section.decoration.height} loading="lazy" src={legacyAssetPath(section.decoration.src)} width={section.decoration.width} />}
+            <h2 class="max-w-2xl rounded-full border-2 border-magic-orange bg-magic-cream px-5 py-2 text-center font-display text-2xl text-magic-ink sm:text-3xl">{entry.title}</h2>
+            {section.decoration && <img alt="" aria-hidden="true" class="hidden size-10 md:block" decoding="async" height={section.decoration.height} loading="lazy" src={legacyAssetPath(section.decoration.src)} width={section.decoration.width} />}
+          </div>
+          {entry.media && <img alt={entry.media.alt} class="mt-8 w-full rounded-lg bg-white shadow-lg" decoding="async" height={entry.media.height} loading="lazy" src={legacyAssetPath(entry.media.src)} width={entry.media.width} />}
+          <div class="mt-8 grid gap-6 md:grid-cols-3">
+            <p class="md:col-span-2 text-sm leading-6 sm:text-base">{entry.summary}</p>
+            <ul class="space-y-3 text-sm leading-6">{entry.figures.map((figure) => <li><span class="bg-magic-lilac font-semibold">{figure}</span></li>)}</ul>
+          </div>
+          {entry.supportingMedia && <img alt={entry.supportingMedia.alt} class="mx-auto mt-8 w-full max-w-2xl rounded-lg shadow-lg" decoding="async" height={entry.supportingMedia.height} loading="lazy" src={legacyAssetPath(entry.supportingMedia.src)} width={entry.supportingMedia.width} />}
+        </div>
+      </article>
+    ))}
+  </div>
+) : section.presentation === "testimonials" ? (
+  <div class="mx-auto max-w-6xl text-center">
+    <h2 class="mx-auto max-w-3xl font-display text-3xl uppercase leading-none text-magic-ink sm:text-4xl">{section.heading}</h2>
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {section.entries.map((entry) => entry.type === "testimonial" && (
+        <blockquote class="mx-auto max-w-md overflow-hidden rounded-2xl bg-white p-3 shadow-md">
+          {entry.media && <img alt={entry.media.alt} class="w-full" decoding="async" height={entry.media.height} loading="lazy" src={legacyAssetPath(entry.media.src)} width={entry.media.width} />}
+        </blockquote>
+      ))}
+    </div>
+  </div>
+) : section.presentation === "qa-sample" ? (
+  <div class="mx-auto max-w-4xl text-center">
+    <h2 class="text-3xl font-extrabold uppercase leading-none sm:text-4xl">{section.heading}</h2>
+    {section.entries.map((entry) => entry.type === "qa" && (
+      <>
+        {entry.media && <img alt={entry.media.alt} class="mx-auto mt-6 w-full max-w-xl object-contain" decoding="async" height={entry.media.height} loading="lazy" src={legacyAssetPath(entry.media.src)} width={entry.media.width} />}
+        <a class="mt-6 inline-block rounded-full bg-magic-lilac px-6 py-3 text-sm font-extrabold shadow-md transition-transform hover:-translate-y-0.5" data-action="primary" data-analytics-key="magic-qa" data-brand-action="true" href="#magic-package">Wchodzę w to!</a>
+      </>
+    ))}
+  </div>
+) : (
+  <div class="-mx-6">
+    {section.entries.map((entry, index) => entry.type === "customer-story" && (
+      <article class:list={["px-6 py-10 text-center sm:px-10", index === 0 ? "bg-magic-lilac" : "bg-magic-pink"]}>
+        <div class="mx-auto max-w-3xl">
+          <h2 class="font-extrabold">{index === 0 ? "💼 Case study przedsiębiorczyni:" : "👩‍💻 Case study marketerki:"}</h2>
+          <h3 class="mt-3 text-lg font-semibold leading-6 sm:text-xl">{entry.title}</h3>
+          {entry.artwork?.[0] && <img alt={entry.artwork[0].alt} class="mx-auto mt-6 w-full max-w-xl rounded-lg" decoding="async" height={entry.artwork[0].height} loading="lazy" src={legacyAssetPath(entry.artwork[0].src)} width={entry.artwork[0].width} />}
+          <div class="mt-6 text-sm font-semibold"><RichText value={entry.body} /></div>
+          {entry.media ? <img alt={entry.media.alt} class="mx-auto mt-5 w-full max-w-xl rounded-lg" decoding="async" height={entry.media.height} loading="lazy" src={legacyAssetPath(entry.media.src)} width={entry.media.width} /> : <div class="mx-auto mt-6 flex min-h-48 max-w-xl items-center justify-center rounded-lg bg-black"><span class="flex size-12 items-center justify-center rounded-full border-2 border-white text-2xl text-white" aria-hidden="true">▷</span></div>}
+          <a class="mt-6 inline-block rounded-full bg-magic-pink px-5 py-3 text-sm font-extrabold shadow-md transition-transform hover:-translate-y-0.5" data-action="primary" data-analytics-key={`magic-story-${index + 1}`} data-brand-action="true" href="#magic-package">Dołączam!</a>
+        </div>
+      </article>
+    ))}
+  </div>
+)}

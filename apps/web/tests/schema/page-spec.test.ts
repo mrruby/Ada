@@ -83,6 +83,22 @@ describe("PageSpec v1", () => {
     expect(PageSectionSchema.safeParse(invalidCta).success).toBe(false)
   })
 
+  it("parses optional visual artwork and rejects incomplete artwork", () => {
+    expect(PageSectionSchema.safeParse(audienceFixtures[1]).success).toBe(true)
+    expect(PageSectionSchema.safeParse(learningPathFixtures[0]).success).toBe(true)
+    expect(PageSectionSchema.safeParse(proofFixtures[0]).success).toBe(true)
+
+    const invalidArtwork = {
+      ...audienceFixtures[1],
+      artwork: {
+        ...audienceFixtures[1].artwork,
+        height: 0,
+      },
+    }
+
+    expect(PageSectionSchema.safeParse(invalidArtwork).success).toBe(false)
+  })
+
   it("rejects invalid hero identity assets", () => {
     const invalidLogo = {
       ...heroFixtures[1],

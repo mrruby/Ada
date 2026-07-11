@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-import { SectionBaseSchema } from "../../page-spec/common.schema"
+import { AssetSchema, SectionBaseSchema } from "../../page-spec/common.schema"
 
 const AudienceGroupSchema = z
   .object({
@@ -14,6 +14,8 @@ export const AudienceSectionSchema = SectionBaseSchema.extend({
   presentation: z.enum(["membership-dual", "collective"]),
   heading: z.string().min(1),
   groups: z.array(AudienceGroupSchema).min(1),
+  artwork: AssetSchema.optional(),
+  decoration: AssetSchema.optional(),
 }).strict()
 
 export type AudienceSection = z.output<typeof AudienceSectionSchema>

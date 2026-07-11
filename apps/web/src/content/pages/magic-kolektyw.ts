@@ -117,6 +117,18 @@ export const magicKolektywPageInput = {
       type: "audience",
       presentation: "collective",
       heading: "Dla kogo jest MAGIC?",
+      artwork: {
+        src: "src/images/magic-hero2.webp",
+        alt: "Adrianna Promis-Urbas",
+        width: 410,
+        height: 592,
+      },
+      decoration: {
+        src: "src/images/magicFlower.svg",
+        alt: "",
+        width: 40,
+        height: 40,
+      },
       groups: [
         {
           title: "Nasze usługi są idealnym rozwiązaniem dla przedsiębiorczyń, które:",
@@ -515,6 +527,12 @@ export const magicKolektywPageInput = {
       type: "proof",
       presentation: "case-studies",
       heading: "Historie kampanii",
+      decoration: {
+        src: "src/images/magicSign.svg",
+        alt: "",
+        width: 50,
+        height: 50,
+      },
       entries: [
         {
           type: "case-study",
@@ -532,6 +550,12 @@ export const magicKolektywPageInput = {
             alt: "Case study z kampanii kierującej na Instagrama",
             width: 4292,
             height: 405,
+          },
+          supportingMedia: {
+            src: "src/images/kolektywInfo1a.webp",
+            alt: "Opinia klientki po kampanii kierującej na Instagrama",
+            width: 1200,
+            height: 860,
           },
         },
         {
@@ -553,6 +577,12 @@ export const magicKolektywPageInput = {
             width: 4304,
             height: 804,
           },
+          supportingMedia: {
+            src: "src/images/kolektywInfo2a.webp",
+            alt: "Opinia klientki po kampanii sprzedażowej",
+            width: 1200,
+            height: 860,
+          },
         },
         {
           type: "case-study",
@@ -570,6 +600,12 @@ export const magicKolektywPageInput = {
             alt: "Case study z kampanii sprzedażowej",
             width: 4452,
             height: 721,
+          },
+          supportingMedia: {
+            src: "src/images/kolektywInfo3a.webp",
+            alt: "Opinia klientki po kampanii sprzedażowej",
+            width: 1200,
+            height: 860,
           },
         },
       ],
