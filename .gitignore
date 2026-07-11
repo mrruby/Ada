@@ -67,6 +67,9 @@ typings/
 .cache/
 public
 
+# Local visual-regression capture output
+baselines/
+
 # Mac files
 .DS_Store
 

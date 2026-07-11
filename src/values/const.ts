@@ -1,5 +1,3 @@
-export const SHOPIFY_API_VERSION = "2024-07"
-
 export const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1440 },

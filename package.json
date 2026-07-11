@@ -6,8 +6,6 @@
   "author": "Adrianna Promis <adrianna@getbold.agency>",
   "dependencies": {
     "@netlify/blobs": "10.7.9",
-    "@shopify/admin-api-client": "^1.0.8",
-    "@shopify/storefront-api-client": "^1.0.7",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/postcss": "4.3.2",
     "animate.css": "^4.1.1",
@@ -40,6 +38,7 @@
     "@eslint/js": "9.39.4",
     "@fontsource/anton": "^5.2.7",
     "@fontsource/montserrat": "^5.2.8",
+    "@playwright/test": "^1.61.1",
     "@remotion/cli": "^4.0.487",
     "@types/loadable__component": "^5.13.9",
     "@types/minimatch": "^6.0.0",
@@ -57,7 +56,8 @@
     "prettier": "3.9.4",
     "remotion": "^4.0.487",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.63.0"
+    "typescript-eslint": "8.63.0",
+    "vitest": "^4.0.18"
   },
   "keywords": [
     "gatsby"
@@ -65,6 +65,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "baseline:capture": "node scripts/screenshot-baseline/capture.js",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\"",
     "prereel:magic": "node reels/magic/generate-audio.mjs",
@@ -74,7 +75,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "vitest run",
     "lint": "eslint ."
   },
   "repository": {
