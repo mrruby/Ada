@@ -4,13 +4,14 @@ import type { StickyCtaSection } from "./schema"
 const { section } = Astro.props as { section: StickyCtaSection }
 ---
 
-<nav aria-label={section.label} class="surface-strong magic-rule border-b px-4 py-3">
+<nav aria-label={section.label} class="border-b border-magic-purple bg-magic-lilac px-4 py-2 text-black">
   <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-3 sm:gap-6">
-    <p class="font-semibold">{section.label}</p>
+    <p class="font-body text-sm font-semibold md:text-lg">{section.label}</p>
     <a
-      class="rounded-full font-bold"
+      class="rounded-full bg-magic-pink px-5 py-2 font-body text-sm font-bold text-black no-underline transition-colors hover:bg-magic-ink hover:text-white focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-magic-ink md:text-base"
       data-action="primary"
       data-analytics-key={section.targetCta.analyticsKey}
+      data-brand-action="true"
       href={section.targetCta.href}
       rel={section.targetCta.external ? "noreferrer" : undefined}
       target={section.targetCta.external ? "_blank" : undefined}

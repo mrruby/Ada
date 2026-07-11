@@ -83,12 +83,26 @@ describe("PageSpec v1", () => {
     expect(PageSectionSchema.safeParse(invalidCta).success).toBe(false)
   })
 
-  it("keeps the collective form reference closed", () => {
-    const invalidLeadForm = {
+  it("rejects invalid hero identity assets", () => {
+    const invalidLogo = {
       ...heroFixtures[1],
-      leadFormId: "unreviewed-provider-form",
+      logo: {
+        src: "/images/magic-kolektyw-logo.png",
+        alt: "MAGIC Kolektyw",
+        width: 0,
+        height: 312,
+      },
     }
 
-    expect(PageSectionSchema.safeParse(invalidLeadForm).success).toBe(false)
+    expect(PageSectionSchema.safeParse(invalidLogo).success).toBe(false)
+  })
+
+  it("rejects provider form references in hero content", () => {
+    const heroWithLeadForm = {
+      ...heroFixtures[1],
+      leadFormId: "magic-kolektyw-webinar",
+    }
+
+    expect(PageSectionSchema.safeParse(heroWithLeadForm).success).toBe(false)
   })
 })

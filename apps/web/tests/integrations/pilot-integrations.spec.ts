@@ -60,7 +60,6 @@ test("both pilot pages make no provider request before consent", async ({ page }
   expect(requests).toHaveLength(0)
 
   await page.goto("/magic-kolektyw/", { waitUntil: "domcontentloaded" })
-  await page.locator("[data-legacy-form-id]").waitFor()
   await page.waitForTimeout(100)
   expect(requests).toHaveLength(0)
 })
@@ -85,15 +84,20 @@ test("marketing consent loads Meta only", async ({ page }) => {
   expectNoProviderRequests(requests, "meta")
 })
 
-test("functional consent loads the MailerLite snapshot only on the collective route", async ({ page }) => {
+test("functional consent does not load MailerLite on either pilot route", async ({ page }) => {
   const requests = await recordThirdPartyRequests(page)
 
-  await page.goto("/magic-kolektyw/", { waitUntil: "domcontentloaded" })
+  await page.goto("/magic/", { waitUntil: "domcontentloaded" })
   await saveCategory(page, "functional")
+  await page.waitForTimeout(100)
+  expect(requestsFor(requests, "mailerlite")).toHaveLength(0)
+  await expect(page.locator("iframe[data-pilot-integration='mailerliteForm']")).toHaveCount(0)
 
-  await expect.poll(() => requestsFor(requests, "mailerlite").length).toBeGreaterThan(0)
+  await page.goto("/magic-kolektyw/", { waitUntil: "domcontentloaded" })
+  await page.waitForTimeout(100)
+  expect(requestsFor(requests, "mailerlite")).toHaveLength(0)
   expectNoProviderRequests(requests, "mailerlite")
-  await expect(page.locator("iframe[data-pilot-integration='mailerliteForm']")).toHaveCount(1)
+  await expect(page.locator("iframe[data-pilot-integration='mailerliteForm']")).toHaveCount(0)
 })
 
 test("functional consent permits Vimeo only after the visitor activates playback", async ({ page }) => {

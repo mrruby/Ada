@@ -33,7 +33,20 @@ export const magicKolektywPageInput = {
         href: "#umawiam-spotkanie",
         analyticsKey: "kolektyw-hero",
       },
-      leadFormId: "magic-kolektyw-webinar",
+      logo: {
+        src: "src/images/magic-kolektyw.png",
+        alt: "MAGIC Kolektyw",
+        width: 600,
+        height: 312,
+      },
+      decorations: {
+        afterCta: {
+          src: "src/images/magicArrow.svg",
+          alt: "",
+          width: 22,
+          height: 34,
+        },
+      },
       media: {
         src: "src/images/magic-hero1.webp",
         alt: "Ada Promis",

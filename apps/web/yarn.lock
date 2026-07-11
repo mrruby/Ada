@@ -14,6 +14,8 @@ __metadata:
     "@astrojs/react": "npm:6.0.1"
     "@axe-core/playwright": "npm:^4.10.2"
     "@eslint/js": "npm:9.39.4"
+    "@fontsource/anton": "npm:^5.2.7"
+    "@fontsource/montserrat": "npm:^5.2.8"
     "@playwright/test": "npm:^1.61.1"
     "@tailwindcss/vite": "npm:4.3.2"
     astro: "npm:7.0.7"
@@ -1225,6 +1227,20 @@ __metadata:
   version: 3.2.0
   resolution: "@fastify/busboy@npm:3.2.0"
   checksum: 10c0/3e4fb00a27e3149d1c68de8ff14007d2bbcbbc171a9d050d0a8772e836727329d4d3f130995ebaa19cf537d5d2f5ce2a88000366e6192e751457bfcc2125f351
+  languageName: node
+  linkType: hard
+
+"@fontsource/anton@npm:^5.2.7":
+  version: 5.2.7
+  resolution: "@fontsource/anton@npm:5.2.7"
+  checksum: 10c0/691cabc40ccffcccf991b036821c2cbd5c034c4744d70a338973c5d597979bd58e908f745e6a74b2721e5e917c5e34cd256182a81a07e3eb100ace65d9e989e4
+  languageName: node
+  linkType: hard
+
+"@fontsource/montserrat@npm:^5.2.8":
+  version: 5.2.8
+  resolution: "@fontsource/montserrat@npm:5.2.8"
+  checksum: 10c0/a38ebdebbc4c14f9b48deb15609323b7125da76214e765c83fac879ffcc577abf4ce06a47d5a712d42b3116658a395e18beb6d360e7d73417ec197e21194870e
   languageName: node
   linkType: hard
 

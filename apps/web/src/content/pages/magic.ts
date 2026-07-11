@@ -42,6 +42,20 @@ export const magicPageInput = {
         href: "#magic-package",
         analyticsKey: "magic-hero",
       },
+      decorations: {
+        heading: {
+          src: "src/images/star-pink.webp",
+          alt: "",
+          width: 160,
+          height: 152,
+        },
+        afterCta: {
+          src: "src/images/star-pink.webp",
+          alt: "",
+          width: 160,
+          height: 152,
+        },
+      },
       media: {
         src: "src/images/magic-landing-2026-hero.webp",
         alt: "Marketing Ads Girls Inside Club",

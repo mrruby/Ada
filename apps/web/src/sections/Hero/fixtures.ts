@@ -16,6 +16,20 @@ export const heroFixtures = [
       href: "#oferta",
       analyticsKey: "magic.hero.membership",
     },
+    decorations: {
+      heading: {
+        src: "/images/magic-star.png",
+        alt: "",
+        width: 160,
+        height: 152,
+      },
+      afterCta: {
+        src: "/images/magic-star.png",
+        alt: "",
+        width: 160,
+        height: 152,
+      },
+    },
     media: {
       src: "/images/magic-membership-hero.jpg",
       alt: "Członkinie społeczności MAGIC",
@@ -38,7 +52,20 @@ export const heroFixtures = [
       href: "#konsultacja",
       analyticsKey: "magic.hero.collective",
     },
-    leadFormId: "magic-kolektyw-webinar",
+    logo: {
+      src: "/images/magic-kolektyw-logo.png",
+      alt: "MAGIC Kolektyw",
+      width: 600,
+      height: 312,
+    },
+    decorations: {
+      afterCta: {
+        src: "/images/magic-arrow.svg",
+        alt: "",
+        width: 22,
+        height: 34,
+      },
+    },
     media: {
       src: "/images/magic-collective-hero.jpg",
       alt: "Zespół MAGIC przy wspólnej pracy",

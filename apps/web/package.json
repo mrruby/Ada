@@ -20,6 +20,8 @@
   "dependencies": {
     "@astrojs/netlify": "8.1.1",
     "@astrojs/react": "6.0.1",
+    "@fontsource/anton": "^5.2.7",
+    "@fontsource/montserrat": "^5.2.8",
     "@tailwindcss/vite": "4.3.2",
     "astro": "7.0.7",
     "react": "19.2.7",

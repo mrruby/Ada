@@ -1,42 +1,98 @@
 ---
 import RichText from "../../page-builder/RichText.astro"
-import FormSlot from "../../integrations/forms/FormSlot.astro"
 import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { HeroSection } from "./schema"
 
 const { section } = Astro.props as { section: HeroSection }
-const eyebrow = section.presentation === "membership" ? "MAGIC Club" : "MAGIC Collective"
+const isMembership = section.presentation === "membership"
+const headingDecoration = section.decorations?.heading
+const afterCtaDecoration = section.decorations?.afterCta
 ---
 
 <header class="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-12 lg:gap-12">
   <div class="lg:col-span-6">
-    <p class="text-sm font-bold uppercase tracking-widest">{eyebrow}</p>
-    <h1 class="mt-4 font-display text-4xl leading-none sm:text-5xl lg:text-6xl">
-      {section.heading}
-    </h1>
-    <div class="mt-6 max-w-xl text-lg">
+    {section.logo && (
+      <a class="inline-block" href="/">
+        <img
+          alt={section.logo.alt}
+          class="w-64 max-w-full"
+          decoding="async"
+          height={section.logo.height}
+          src={legacyAssetPath(section.logo.src)}
+          width={section.logo.width}
+        />
+      </a>
+    )}
+    <div class:list={[
+      "flex items-start gap-3",
+      section.logo ? "mt-6" : undefined,
+    ]}>
+      <h1 class:list={[
+        "text-4xl leading-none sm:text-5xl lg:text-6xl",
+        isMembership
+          ? "font-body font-extrabold text-orange-800"
+          : "font-body font-normal",
+      ]}>
+        {section.heading}
+      </h1>
+      {isMembership && headingDecoration && (
+        <img
+          alt=""
+          aria-hidden="true"
+          class="mt-2 hidden w-12 shrink-0 sm:block"
+          decoding="async"
+          height={headingDecoration.height}
+          src={legacyAssetPath(headingDecoration.src)}
+          width={headingDecoration.width}
+        />
+      )}
+    </div>
+    <div class:list={[
+      "mt-6 max-w-xl text-lg",
+      !isMembership ? "font-mono" : undefined,
+    ]}>
       <RichText value={section.body} />
     </div>
     <a
-      class="mt-8 rounded-full font-bold"
+      class:list={[
+        "mt-8 inline-block rounded-full no-underline transition-colors focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-magic-ink",
+        isMembership
+          ? "bg-magic-pink px-8 py-4 font-body text-lg leading-none font-extrabold uppercase text-black hover:bg-magic-ink hover:text-white md:px-12 md:py-6 md:text-2xl"
+          : "border border-magic-orange bg-magic-green px-6 py-4 font-display text-xl leading-none text-magic-ink hover:border-magic-ink hover:bg-magic-ink hover:text-white md:px-8 md:py-5 md:text-2xl",
+      ]}
       data-action="primary"
       data-analytics-key={section.primaryCta.analyticsKey}
+      data-brand-action="true"
       href={section.primaryCta.href}
       rel={section.primaryCta.external ? "noreferrer" : undefined}
       target={section.primaryCta.external ? "_blank" : undefined}
     >
       {section.primaryCta.label}
     </a>
-    {section.presentation === "collective" && section.leadFormId && (
-      <div class="mt-8">
-        <FormSlot leadFormId={section.leadFormId} />
+    {afterCtaDecoration && (
+      <div class:list={["mt-8", isMembership && "flex items-center gap-2 font-body text-base font-bold text-orange-800"]}>
+        <img
+          alt=""
+          aria-hidden="true"
+          class:list={["h-auto", isMembership ? "w-6" : "ml-2 w-6"]}
+          decoding="async"
+          height={afterCtaDecoration.height}
+          src={legacyAssetPath(afterCtaDecoration.src)}
+          width={afterCtaDecoration.width}
+        />
+        {isMembership && <span>MAGIC</span>}
       </div>
     )}
   </div>
-  <figure class="surface-highlight mx-auto max-w-md overflow-hidden rounded-3xl lg:col-span-6 lg:max-w-none">
+  <figure class:list={[
+    "mx-auto overflow-hidden lg:col-span-6",
+    isMembership
+      ? "max-w-md lg:max-w-none"
+      : "max-w-md rounded-2xl border border-magic-orange lg:max-w-none",
+  ]}>
     <img
       alt={section.media.alt}
-      class="aspect-square h-full w-full object-cover"
+      class="h-auto w-full"
       decoding="async"
       fetchpriority="high"
       height={section.media.height}
