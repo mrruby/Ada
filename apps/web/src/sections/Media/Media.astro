@@ -1,0 +1,10 @@
+---
+import type { MediaSection } from "./schema"
+
+const { section } = Astro.props as { section: MediaSection }
+---
+
+<figure data-consent-category={section.consentCategory} data-provider={section.provider} data-provider-asset-id={section.providerAssetId}>
+  <img alt={section.poster.alt} height={section.poster.height} loading="lazy" src={section.poster.src} width={section.poster.width} />
+  <figcaption>{section.heading}</figcaption>
+</figure>

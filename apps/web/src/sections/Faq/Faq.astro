@@ -1,0 +1,16 @@
+---
+import RichText from "../../page-builder/RichText.astro"
+import type { FaqSection } from "./schema"
+
+const { section } = Astro.props as { section: FaqSection }
+---
+
+<div>
+  <h2>{section.heading}</h2>
+  {section.items.map((item) => (
+    <details>
+      <summary>{item.question}</summary>
+      <RichText value={item.answer} />
+    </details>
+  ))}
+</div>

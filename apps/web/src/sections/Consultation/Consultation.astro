@@ -1,0 +1,20 @@
+---
+import RichText from "../../page-builder/RichText.astro"
+import type { ConsultationSection } from "./schema"
+
+const { section } = Astro.props as { section: ConsultationSection }
+---
+
+<div data-provider={section.provider} data-provider-url={section.externalUrl}>
+  <h2>{section.heading}</h2>
+  <RichText value={section.body} />
+  <a
+    data-action="primary"
+    data-analytics-key={section.cta.analyticsKey}
+    href={section.cta.href}
+    rel={section.cta.external ? "noreferrer" : undefined}
+    target={section.cta.external ? "_blank" : undefined}
+  >
+    {section.cta.label}
+  </a>
+</div>

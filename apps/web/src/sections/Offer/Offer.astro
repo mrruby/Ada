@@ -1,0 +1,31 @@
+---
+import type { OfferSection } from "./schema"
+
+const { section } = Astro.props as { section: OfferSection }
+---
+
+<div>
+  <h2>{section.heading}</h2>
+  <ul>
+    {section.offers.map((offer) => (
+      <li>
+        <article>
+          <h3>{offer.name}</h3>
+          {offer.price && <p>{offer.price.label}: {offer.price.value}</p>}
+          <ul>{offer.features.map((feature) => <li>{feature}</li>)}</ul>
+          {offer.cta && (
+            <a
+              data-action="primary"
+              data-analytics-key={offer.cta.analyticsKey}
+              href={offer.cta.href}
+              rel={offer.cta.external ? "noreferrer" : undefined}
+              target={offer.cta.external ? "_blank" : undefined}
+            >
+              {offer.cta.label}
+            </a>
+          )}
+        </article>
+      </li>
+    ))}
+  </ul>
+</div>

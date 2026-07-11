@@ -1,0 +1,29 @@
+---
+import { routeManifest } from "../content/route-manifest"
+import PageRenderer from "../page-builder/PageRenderer.astro"
+import type { PageSpec } from "../page-spec/page.schema"
+import "../styles/global.css"
+
+export function getStaticPaths() {
+  return routeManifest.map((spec) => ({
+    params: { slug: spec.path.slice(1, -1) },
+    props: { spec },
+  }))
+}
+
+const { spec } = Astro.props as { spec: PageSpec }
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width" name="viewport" />
+    <meta content={spec.seo.description} name="description" />
+    {spec.seo.noindex && <meta content="noindex" name="robots" />}
+    <title>{spec.seo.title}</title>
+  </head>
+  <body data-brand={spec.brand}>
+    <PageRenderer spec={spec} />
+  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+import RichText from "../../page-builder/RichText.astro"
+import type { TeamSection } from "./schema"
+
+const { section } = Astro.props as { section: TeamSection }
+---
+
+<div>
+  <h2>{section.heading}</h2>
+  <ul>
+    {section.people.map((person) => (
+      <li>
+        <article>
+          <img alt={person.media.alt} height={person.media.height} loading="lazy" src={person.media.src} width={person.media.width} />
+          <h3>{person.name}</h3>
+          <p>{person.role}</p>
+          <RichText value={person.bio} />
+        </article>
+      </li>
+    ))}
+  </ul>
+</div>

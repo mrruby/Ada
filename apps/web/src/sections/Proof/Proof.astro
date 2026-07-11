@@ -1,0 +1,58 @@
+---
+import RichText from "../../page-builder/RichText.astro"
+import type { ProofSection } from "./schema"
+
+const { section } = Astro.props as { section: ProofSection }
+---
+
+<div>
+  <h2>{section.heading}</h2>
+  <div>
+    {section.entries.map((entry) => {
+      if (entry.type === "case-study") {
+        return (
+          <article>
+            <h3>{entry.title}</h3>
+            <p>{entry.summary}</p>
+            <ul>{entry.figures.map((figure) => <li>{figure}</li>)}</ul>
+          </article>
+        )
+      }
+
+      if (entry.type === "result") {
+        return (
+          <article>
+            <h3>{entry.label}</h3>
+            <p>{entry.value}</p>
+            {entry.context && <p>{entry.context}</p>}
+          </article>
+        )
+      }
+
+      if (entry.type === "testimonial") {
+        return (
+          <blockquote>
+            <p>{entry.quote}</p>
+            <footer>{entry.person}{entry.role ? `, ${entry.role}` : ""}</footer>
+          </blockquote>
+        )
+      }
+
+      if (entry.type === "qa") {
+        return (
+          <article>
+            <h3>{entry.question}</h3>
+            <RichText value={entry.answer} />
+          </article>
+        )
+      }
+
+      return (
+        <article>
+          <h3>{entry.title}</h3>
+          <RichText value={entry.body} />
+        </article>
+      )
+    })}
+  </div>
+</div>

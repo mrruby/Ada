@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-magic-ink: #3d03a1;
+  --color-magic-purple: #5d4e9d;
+  --color-magic-lilac: #b2a1fa;
+  --color-magic-orange: #ee701e;
+  --color-magic-gold: #ffad00;
+  --color-magic-green: #e8f6cb;
+  --color-magic-pink: #ffb0db;
+  --color-magic-yellow: #f4e105;
+  --color-magic-cream: #f2f0e9;
+  --font-body: "Montserrat", sans-serif;
+  --font-display: "Anton", sans-serif;
+}
+
+[data-brand="magic"] {
+  --surface-page: var(--color-magic-cream);
+  --surface-subtle: white;
+  --surface-accent: var(--color-magic-lilac);
+  --text-primary: var(--color-magic-ink);
+  --text-on-accent: white;
+  --action-primary: var(--color-magic-orange);
+  --action-primary-hover: var(--color-magic-ink);
+  --border-emphasis: var(--color-magic-purple);
+  --focus-ring: var(--color-magic-gold);
+}
+
+:where(html) {
+  background: var(--surface-page);
+}
+
+:where(body) {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+:where(a):focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.section-shell {
+  padding-block: 3rem;
+  padding-inline: 1.5rem;
+}
+
+.tone-default {
+  background: var(--surface-page);
+  color: var(--text-primary);
+}
+
+.tone-subtle {
+  background: var(--surface-subtle);
+  color: var(--text-primary);
+}
+
+.tone-accent {
+  background: var(--surface-accent);
+  color: var(--text-primary);
+}
+
+.tone-contrast {
+  background: var(--color-magic-ink);
+  color: var(--text-on-accent);
+}
+
+.section-shell :where(a) {
+  color: inherit;
+}
+
+.section-shell :where([data-action="primary"]) {
+  display: inline-block;
+  background: var(--action-primary);
+  color: var(--text-on-accent);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+}
+
+.section-shell :where([data-action="primary"]):hover {
+  background: var(--action-primary-hover);
+}

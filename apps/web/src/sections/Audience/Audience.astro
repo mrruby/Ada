@@ -1,0 +1,15 @@
+---
+import type { AudienceSection } from "./schema"
+
+const { section } = Astro.props as { section: AudienceSection }
+---
+
+<div>
+  <h2>{section.heading}</h2>
+  {section.groups.map((group) => (
+    <article>
+      <h3>{group.title}</h3>
+      <ul>{group.criteria.map((criterion) => <li>{criterion}</li>)}</ul>
+    </article>
+  ))}
+</div>

@@ -1,0 +1,19 @@
+---
+import type { BenefitGridSection } from "./schema"
+
+const { section } = Astro.props as { section: BenefitGridSection }
+---
+
+<div>
+  <h2>{section.heading}</h2>
+  <ul>
+    {section.items.map((item) => (
+      <li>
+        <article>
+          <h3>{item.title}</h3>
+          <p>{item.body}</p>
+        </article>
+      </li>
+    ))}
+  </ul>
+</div>

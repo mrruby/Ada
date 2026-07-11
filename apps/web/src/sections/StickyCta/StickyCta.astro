@@ -1,0 +1,17 @@
+---
+import type { StickyCtaSection } from "./schema"
+
+const { section } = Astro.props as { section: StickyCtaSection }
+---
+
+<nav aria-label={section.label}>
+  <a
+    data-action="primary"
+    data-analytics-key={section.targetCta.analyticsKey}
+    href={section.targetCta.href}
+    rel={section.targetCta.external ? "noreferrer" : undefined}
+    target={section.targetCta.external ? "_blank" : undefined}
+  >
+    {section.targetCta.label}
+  </a>
+</nav>

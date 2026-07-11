@@ -1,0 +1,22 @@
+---
+import RichText from "../../page-builder/RichText.astro"
+import type { HeroSection } from "./schema"
+
+const { section } = Astro.props as { section: HeroSection }
+---
+
+<header>
+  <p>{section.presentation}</p>
+  <h1>{section.heading}</h1>
+  <RichText value={section.body} />
+  <a
+    data-action="primary"
+    data-analytics-key={section.primaryCta.analyticsKey}
+    href={section.primaryCta.href}
+    rel={section.primaryCta.external ? "noreferrer" : undefined}
+    target={section.primaryCta.external ? "_blank" : undefined}
+  >
+    {section.primaryCta.label}
+  </a>
+  <img alt={section.media.alt} height={section.media.height} loading="eager" src={section.media.src} width={section.media.width} />
+</header>

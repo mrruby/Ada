@@ -1,0 +1,19 @@
+---
+import type { LearningPathSection } from "./schema"
+
+const { section } = Astro.props as { section: LearningPathSection }
+---
+
+<div>
+  <h2>{section.heading}</h2>
+  <ol>
+    {section.stages.map((stage) => (
+      <li>
+        <article>
+          <h3>{stage.title}</h3>
+          <p>{stage.body}</p>
+        </article>
+      </li>
+    ))}
+  </ol>
+</div>

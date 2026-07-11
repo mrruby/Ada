@@ -1,0 +1,19 @@
+---
+import type { ProblemSolutionSection } from "./schema"
+
+const { section } = Astro.props as { section: ProblemSolutionSection }
+---
+
+<div>
+  <h2>{section.heading}</h2>
+  <div>
+    <article>
+      <h3>Wyzwania</h3>
+      <ul>{section.problems.map((problem) => <li>{problem}</li>)}</ul>
+    </article>
+    <article>
+      <h3>Efekty</h3>
+      <ul>{section.outcomes.map((outcome) => <li>{outcome}</li>)}</ul>
+    </article>
+  </div>
+</div>

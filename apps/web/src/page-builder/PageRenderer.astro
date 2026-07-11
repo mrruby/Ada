@@ -1,0 +1,23 @@
+---
+import type { PageSpec } from "../page-spec/page.schema"
+import { sectionRegistry } from "./registry"
+
+const { spec } = Astro.props as { spec: PageSpec }
+---
+
+<main data-brand={spec.brand}>
+  {spec.sections.map((section) => {
+    const Section = sectionRegistry[section.type]
+
+    return (
+      <section
+        class:list={["section-shell", `tone-${section.tone}`]}
+        data-presentation={section.presentation}
+        data-section-type={section.type}
+        id={section.id}
+      >
+        <Section section={section} />
+      </section>
+    )
+  })}
+</main>
