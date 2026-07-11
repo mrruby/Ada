@@ -3,3 +3,9 @@ dist/
 node_modules/
 .yarn/install-state.gz
 public/legacy-assets/
+
+# Phase 2 pilot static integration assets. Keep generated legacy assets ignored.
+!public/
+!public/_headers
+!public/legacy-forms/
+!public/legacy-forms/magic-kolektyw-webinar.html

@@ -276,7 +276,7 @@ export const magicPageInput = {
         width: 458,
         height: 458,
       },
-      consentCategory: "marketing",
+      consentCategory: "functional",
     },
     {
       type: "proof",

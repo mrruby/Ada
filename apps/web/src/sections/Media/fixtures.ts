@@ -13,6 +13,6 @@ export const mediaFixtures = [
       width: 1600,
       height: 900,
     },
-    consentCategory: "marketing",
+    consentCategory: "functional",
   },
 ] satisfies MediaSectionInput[]

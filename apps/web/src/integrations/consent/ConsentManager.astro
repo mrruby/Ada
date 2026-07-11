@@ -1,0 +1,100 @@
+---
+import { consentCopy } from "./consent-copy"
+---
+
+<aside
+  aria-describedby="consent-banner-description"
+  aria-labelledby="consent-banner-title"
+  class="fixed inset-x-0 bottom-0 z-50 border-t border-magic-purple bg-white p-4 shadow-lg"
+  data-consent-banner
+  role="dialog"
+>
+  <div class="mx-auto grid max-w-6xl gap-4 lg:grid-cols-[1fr_auto] lg:items-end">
+    <div>
+      <h2 class="text-xl font-bold" id="consent-banner-title">{consentCopy.bannerTitle}</h2>
+      <p class="mt-2 max-w-3xl text-sm" id="consent-banner-description">{consentCopy.bannerDescription}</p>
+      <p class="mt-2 text-sm">
+        {consentCopy.policyPrefix}
+        <a class="ml-1 underline decoration-2 underline-offset-4" href="/policy/">{consentCopy.policyLink}</a>.
+      </p>
+    </div>
+    <div class="flex flex-col gap-2 sm:flex-row lg:flex-col">
+      <button class="rounded-full bg-magic-orange px-4 py-3 font-bold text-black" data-consent-action="accept-all" type="button">
+        {consentCopy.acceptAll}
+      </button>
+      <button class="rounded-full border border-current px-4 py-3 font-bold" data-consent-action="reject-optional" type="button">
+        {consentCopy.rejectOptional}
+      </button>
+      <button class="rounded-full border border-current px-4 py-3 font-bold" data-open-consent type="button">
+        {consentCopy.settings}
+      </button>
+    </div>
+  </div>
+</aside>
+
+<div class="fixed inset-0 z-50 grid place-items-center bg-black/50 p-4" data-consent-settings hidden>
+  <section
+    aria-describedby="consent-settings-description"
+    aria-labelledby="consent-settings-title"
+    aria-modal="true"
+    class="max-h-full w-full max-w-2xl overflow-y-auto rounded-3xl bg-white p-6 shadow-xl sm:p-8"
+    role="dialog"
+  >
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <h2 class="text-2xl font-bold" id="consent-settings-title" data-consent-settings-title tabindex="-1">
+          {consentCopy.settingsTitle}
+        </h2>
+        <p class="mt-2 text-sm" id="consent-settings-description">{consentCopy.settingsDescription}</p>
+      </div>
+      <button aria-label={consentCopy.close} class="rounded-full border border-current px-3 py-2 font-bold" data-consent-action="close-settings" type="button">
+        ×
+      </button>
+    </div>
+
+    <fieldset class="mt-6 grid gap-4">
+      <legend class="sr-only">Kategorie plików cookie</legend>
+      <label class="flex gap-3 rounded-xl border border-magic-purple p-4">
+        <input checked disabled type="checkbox" />
+        <span>
+          <strong>{consentCopy.categories.necessary.label}</strong>
+          <span class="mt-1 block text-sm">{consentCopy.categories.necessary.description}</span>
+        </span>
+      </label>
+      {(["functional", "analytics", "marketing"] as const).map((category) => (
+        <label class="flex gap-3 rounded-xl border border-magic-purple p-4">
+          <input data-consent-control={category} type="checkbox" />
+          <span>
+            <strong>{consentCopy.categories[category].label}</strong>
+            <span class="mt-1 block text-sm">{consentCopy.categories[category].description}</span>
+          </span>
+        </label>
+      ))}
+    </fieldset>
+
+    <div class="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-end">
+      <button class="rounded-full border border-current px-4 py-3 font-bold" data-consent-action="reject-optional" type="button">
+        {consentCopy.rejectOptional}
+      </button>
+      <button class="rounded-full bg-magic-orange px-4 py-3 font-bold text-black" data-consent-action="save-selection" type="button">
+        {consentCopy.saveSelection}
+      </button>
+    </div>
+  </section>
+</div>
+
+<button
+  class="fixed bottom-4 right-4 z-50 rounded-full border border-current bg-white px-4 py-2 text-sm font-bold shadow"
+  data-consent-floating-trigger
+  data-open-consent
+  hidden
+  type="button"
+>
+  {consentCopy.settings}
+</button>
+
+<script>
+  import { startConsentManager } from "./consent-manager"
+
+  startConsentManager()
+</script>

@@ -7,6 +7,10 @@ export default defineConfig({
   integrations: [react()],
   adapter: netlify(),
   vite: {
+    build: {
+      // Keep Astro client modules external so the pilot CSP can remain nonce-free.
+      assetsInlineLimit: 0,
+    },
     plugins: [tailwindcss()],
   },
 })

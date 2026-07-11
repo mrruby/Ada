@@ -38,6 +38,7 @@ export const heroFixtures = [
       href: "#konsultacja",
       analyticsKey: "magic.hero.collective",
     },
+    leadFormId: "magic-kolektyw-webinar",
     media: {
       src: "/images/magic-collective-hero.jpg",
       alt: "Zespół MAGIC przy wspólnej pracy",

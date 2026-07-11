@@ -1,21 +1,14 @@
 ---
 import { routeManifest } from "../content/route-manifest"
-import "../styles/global.css"
+import SiteLayout from "../layouts/SiteLayout.astro"
 ---
 
-<!doctype html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width" name="viewport" />
-    <title>PageSpec preview</title>
-  </head>
-  <body data-brand="magic">
-    <main class="section-shell tone-default">
-      <h1>Dostępne PageSpecy</h1>
-      <ul>
-        {routeManifest.map((spec) => <li><a href={spec.path}>{spec.seo.title}</a></li>)}
-      </ul>
-    </main>
-  </body>
-</html>
+<SiteLayout brand="magic">
+  <title slot="head">PageSpec preview</title>
+  <main class="section-shell tone-default">
+    <h1>Dostępne PageSpecy</h1>
+    <ul>
+      {routeManifest.map((spec) => <li><a href={spec.path}>{spec.seo.title}</a></li>)}
+    </ul>
+  </main>
+</SiteLayout>

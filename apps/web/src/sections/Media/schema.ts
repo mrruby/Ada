@@ -1,5 +1,6 @@
 import { z } from "zod"
 
+import { ConsentCategorySchema } from "../../integrations/consent/consent-types"
 import { AssetSchema, SectionBaseSchema } from "../../page-spec/common.schema"
 
 export const MediaSectionSchema = SectionBaseSchema.extend({
@@ -9,7 +10,7 @@ export const MediaSectionSchema = SectionBaseSchema.extend({
   provider: z.literal("vimeo"),
   providerAssetId: z.string().min(1),
   poster: AssetSchema,
-  consentCategory: z.enum(["necessary", "statistics", "marketing"]),
+  consentCategory: ConsentCategorySchema,
 }).strict()
 
 export type MediaSection = z.output<typeof MediaSectionSchema>

@@ -1,8 +1,8 @@
 ---
 import { routeManifest } from "../content/route-manifest"
+import SiteLayout from "../layouts/SiteLayout.astro"
 import PageRenderer from "../page-builder/PageRenderer.astro"
 import type { PageSpec } from "../page-spec/page.schema"
-import "../styles/global.css"
 
 export function getStaticPaths() {
   return routeManifest.map((spec) => ({
@@ -14,16 +14,11 @@ export function getStaticPaths() {
 const { spec } = Astro.props as { spec: PageSpec }
 ---
 
-<!doctype html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width" name="viewport" />
+<SiteLayout brand={spec.brand}>
+  <Fragment slot="head">
     <meta content={spec.seo.description} name="description" />
     {spec.seo.noindex && <meta content="noindex" name="robots" />}
     <title>{spec.seo.title}</title>
-  </head>
-  <body data-brand={spec.brand}>
-    <PageRenderer spec={spec} />
-  </body>
-</html>
+  </Fragment>
+  <PageRenderer spec={spec} />
+</SiteLayout>

@@ -1,9 +1,10 @@
 ---
-import { legacyAssetPath } from "../../lib/legacy-assets"
+import VimeoFacade from "../../integrations/video/VimeoFacade.astro"
+import { consentCopy } from "../../integrations/consent/consent-copy"
 import type { MediaSection } from "./schema"
 
 const { section } = Astro.props as { section: MediaSection }
-const videoUrl = `https://vimeo.com/${section.providerAssetId}`
+const consentLabel = consentCopy.categories[section.consentCategory].label.toLowerCase()
 ---
 
 <div class="mx-auto max-w-4xl">
@@ -13,29 +14,10 @@ const videoUrl = `https://vimeo.com/${section.providerAssetId}`
     data-provider={section.provider}
     data-provider-asset-id={section.providerAssetId}
   >
-    <a
-      aria-label={`${section.heading} — otwórz film w serwisie Vimeo`}
-      class="group relative block"
-      href={videoUrl}
-      rel="noreferrer"
-      target="_blank"
-    >
-      <img
-        alt={section.poster.alt}
-        class="aspect-video w-full object-cover"
-        decoding="async"
-        height={section.poster.height}
-        loading="lazy"
-        src={legacyAssetPath(section.poster.src)}
-        width={section.poster.width}
-      />
-      <span class="surface-strong absolute inset-0 grid place-items-center opacity-90 transition group-hover:opacity-100 motion-reduce:transition-none">
-        <span class="rounded-full border border-current px-5 py-3 font-bold">Otwórz film w Vimeo</span>
-      </span>
-    </a>
+    <VimeoFacade assetId={section.providerAssetId} heading={section.heading} poster={section.poster} />
     <figcaption class="p-5">
       <h2 class="text-2xl font-bold">{section.heading}</h2>
-      <p class="mt-2 text-sm">Film otworzy się w nowej karcie. Materiał zewnętrzny nie jest osadzany bez zgody na pliki {section.consentCategory}.</p>
+      <p class="mt-2 text-sm">Materiał zewnętrzny nie jest osadzany bez zgody na {consentLabel} pliki cookie.</p>
     </figcaption>
   </figure>
 </div>

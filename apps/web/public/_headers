@@ -1,0 +1,8 @@
+/magic/
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self' https://www.googletagmanager.com https://connect.facebook.net; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://assets.mailerlite.com; frame-src 'self' https://player.vimeo.com; form-action 'self'
+
+/magic-kolektyw/
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self' https://www.googletagmanager.com https://connect.facebook.net; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://assets.mailerlite.com; frame-src 'self' https://player.vimeo.com; form-action 'self'
+
+/legacy-forms/magic-kolektyw-webinar.html
+  Content-Security-Policy: default-src 'none'; base-uri 'none'; frame-ancestors 'self'; form-action https://assets.mailerlite.com; connect-src https://assets.mailerlite.com; img-src data:; script-src 'unsafe-inline' https://groot.mailerlite.com; style-src 'unsafe-inline'

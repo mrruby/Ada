@@ -1,0 +1,25 @@
+---
+import ConsentBootstrap from "../integrations/consent/ConsentBootstrap.astro"
+import ConsentManager from "../integrations/consent/ConsentManager.astro"
+import "../styles/global.css"
+
+interface Props {
+  brand: "magic"
+}
+
+const { brand } = Astro.props
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width" name="viewport" />
+    <slot name="head" />
+    <ConsentBootstrap />
+  </head>
+  <body data-brand={brand}>
+    <slot />
+    <ConsentManager />
+  </body>
+</html>

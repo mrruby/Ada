@@ -33,6 +33,7 @@ export const magicKolektywPageInput = {
         href: "#umawiam-spotkanie",
         analyticsKey: "kolektyw-hero",
       },
+      leadFormId: "magic-kolektyw-webinar",
       media: {
         src: "src/images/magic-hero1.webp",
         alt: "Ada Promis",

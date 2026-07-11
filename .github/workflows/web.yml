@@ -28,3 +28,4 @@ jobs:
       - run: yarn lint
       - run: yarn test:schema
       - run: yarn build
+      # ADR-001 phase 2: keep test:a11y out of CI until the pilot-route Axe baseline is agreed.

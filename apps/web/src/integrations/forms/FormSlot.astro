@@ -1,0 +1,12 @@
+---
+import LegacyFormEmbed from "./LegacyFormEmbed.astro"
+import type { LegacyFormId } from "./legacy-form-registry"
+
+interface Props {
+  leadFormId: LegacyFormId
+}
+
+const { leadFormId } = Astro.props
+---
+
+<LegacyFormEmbed leadFormId={leadFormId} />

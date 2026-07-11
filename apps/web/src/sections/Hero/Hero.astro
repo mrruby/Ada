@@ -1,5 +1,6 @@
 ---
 import RichText from "../../page-builder/RichText.astro"
+import FormSlot from "../../integrations/forms/FormSlot.astro"
 import { legacyAssetPath } from "../../lib/legacy-assets"
 import type { HeroSection } from "./schema"
 
@@ -26,6 +27,11 @@ const eyebrow = section.presentation === "membership" ? "MAGIC Club" : "MAGIC Co
     >
       {section.primaryCta.label}
     </a>
+    {section.presentation === "collective" && section.leadFormId && (
+      <div class="mt-8">
+        <FormSlot leadFormId={section.leadFormId} />
+      </div>
+    )}
   </div>
   <figure class="surface-highlight mx-auto max-w-md overflow-hidden rounded-3xl lg:col-span-6 lg:max-w-none">
     <img

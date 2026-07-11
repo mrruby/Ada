@@ -1,0 +1,32 @@
+---
+import { legacyFormRegistry, type LegacyFormId } from "./legacy-form-registry"
+import { consentCopy } from "../consent/consent-copy"
+
+interface Props {
+  leadFormId: LegacyFormId
+}
+
+const { leadFormId } = Astro.props
+const form = legacyFormRegistry[leadFormId]
+---
+
+<div class="surface-card rounded-2xl p-5" data-legacy-form-id={leadFormId}>
+  <div data-legacy-form-mount>
+    <p class="font-bold">{consentCopy.formTitle}</p>
+    <p class="mt-2 text-sm">{consentCopy.formDescription}</p>
+    <button class="mt-4 rounded-full border border-current px-4 py-2 font-bold" data-open-consent type="button">
+      {consentCopy.settings}
+    </button>
+  </div>
+  <template data-legacy-form-template>
+    <iframe
+      class="legacy-form-frame"
+      data-pilot-integration="mailerliteForm"
+      sandbox="allow-forms allow-scripts allow-popups"
+      src={form.snapshot.path}
+      title="Formularz zapisu na webinar MAGIC Collective"
+    ></iframe>
+  </template>
+</div>
+
+<script src="./legacy-form-embed.ts"></script>

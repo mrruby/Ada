@@ -4,7 +4,7 @@ import { defineConfig } from "vitest/config"
 export default defineConfig(
   getViteConfig({
     test: {
-      include: ["tests/schema/**/*.test.ts"],
+      include: ["tests/**/*.test.ts"],
     },
   }),
 )

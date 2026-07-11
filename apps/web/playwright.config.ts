@@ -3,7 +3,8 @@ import { defineConfig } from "@playwright/test"
 const baseURL = process.env.BASE_URL ?? "http://localhost:4321"
 
 export default defineConfig({
-  testDir: "./tests/a11y",
+  testDir: "./tests",
+  testMatch: "**/*.spec.ts",
   fullyParallel: true,
   use: {
     baseURL,

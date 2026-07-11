@@ -14,6 +14,8 @@ export const HeroSectionSchema = SectionBaseSchema.extend({
   body: RichTextSchema,
   primaryCta: CtaSchema,
   media: AssetSchema,
+  /** Stable integration reference for the collective pilot; never provider markup or a URL. */
+  leadFormId: z.literal("magic-kolektyw-webinar").optional(),
 }).strict()
 
 export type HeroSection = z.output<typeof HeroSectionSchema>

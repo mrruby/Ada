@@ -82,4 +82,13 @@ describe("PageSpec v1", () => {
     expect(PageSectionSchema.safeParse(invalidAsset).success).toBe(false)
     expect(PageSectionSchema.safeParse(invalidCta).success).toBe(false)
   })
+
+  it("keeps the collective form reference closed", () => {
+    const invalidLeadForm = {
+      ...heroFixtures[1],
+      leadFormId: "unreviewed-provider-form",
+    }
+
+    expect(PageSectionSchema.safeParse(invalidLeadForm).success).toBe(false)
+  })
 })
