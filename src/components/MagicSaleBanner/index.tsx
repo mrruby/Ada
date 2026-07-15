@@ -168,14 +168,6 @@ const MagicSaleBanner = ({
             textStyle="text-adaTitle text-black font-bold"
             as="h2"
           />
-          <p className="text-adaSubtitle mt-4 text-[#000000]">
-            <span className="bg-[#FFD1F0] px-4 py-2 rounded-lg inline-block">
-              <b>
-                Do 12 lipca każdy pakiet zaczyna się od Twojego MAGIC Planu.
-              </b>
-            </span>
-          </p>
-
           {/* 3-column pricing grid */}
           <div className="grid w-full max-w-[1200px] grid-cols-1 gap-x-6 gap-y-14 mt-10 md:gap-y-16 lg:grid-cols-3 lg:gap-y-6">
             {/* Column 1: Pakiet miesięczny */}
@@ -208,7 +200,7 @@ const MagicSaleBanner = ({
                 <hr className="border-t border-black mb-4 w-[calc(100%+4rem)] -ml-8" />
                 <p className="pb-4 text-sm">
                   🎯 <b>MAGIC Plan na start</b>: spotkanie 1:1 z Nicolą +
-                  indywidualny plan reklam (dla dołączających do 12.07)
+                  indywidualny plan reklam
                 </p>
                 <p className="pb-4 text-sm">
                   👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
@@ -281,7 +273,7 @@ const MagicSaleBanner = ({
                 <hr className="border-t border-black mb-4 w-[calc(100%+4rem)] -ml-8" />
                 <p className="pb-4 text-sm">
                   🎯 <b>MAGIC Plan na start</b>: spotkanie 1:1 z Nicolą +
-                  indywidualny plan reklam (dla dołączających do 12.07)
+                  indywidualny plan reklam
                 </p>
                 <p className="pb-4 text-sm">
                   👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
@@ -355,7 +347,7 @@ const MagicSaleBanner = ({
                 <hr className="border-t border-black mb-4 w-[calc(100%+4rem)] -ml-8" />
                 <p className="pb-4 text-sm">
                   🎯 <b>MAGIC Plan na start</b>: spotkanie 1:1 z Nicolą +
-                  indywidualny plan reklam (dla dołączających do 12.07)
+                  indywidualny plan reklam
                 </p>
                 <p className="pb-4 text-sm">
                   👩‍💻 <b>konsultacje pisemne</b> z ekspertkami
