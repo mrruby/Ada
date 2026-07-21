@@ -298,10 +298,6 @@ body {
   font-family: "Caveat", cursive;
 }
 
-.font-playfair {
-  font-family: "Eagle Lake", cursive;
-}
-
 .bg-magic-banner1a {
   position: relative;
   z-index: 0;
@@ -415,14 +411,6 @@ body {
   background-position: center;
 }
 
-/* Sowa page responsive hero - explicit media queries to avoid purging */
-.sowa-hero-mobile {
-  display: block;
-}
-.sowa-hero-xl {
-  display: none;
-}
-
 @media (min-width: 1024px) {
   .magic-unique-poster {
     width: 1024px;
@@ -445,13 +433,6 @@ body {
 
   .magic-unique-poster-inner {
     scale: 1.6;
-  }
-
-  .sowa-hero-mobile {
-    display: none;
-  }
-  .sowa-hero-xl {
-    display: block;
   }
 }
 

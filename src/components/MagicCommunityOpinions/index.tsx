@@ -4,90 +4,45 @@ import React from "react"
 import Section from "../shared/Section"
 import Typography from "../shared/Typography"
 
-type Variant = "default" | "sowa"
-
-const variantConfig: Record<
-  Variant,
-  {
-    bgColor: string
-    headingClass: string
-    textColor: string
-    magicColor: string
-  }
-> = {
-  default: {
-    bgColor: "bg-ada-magicYellow",
-    headingClass: "",
-    textColor: "text-ada-black",
-    magicColor: "text-ada-pink7",
-  },
-  sowa: {
-    bgColor: "bg-ada-sowaBurgundy",
-    headingClass:
-      "font-playfair font-normal text-[48px] leading-[100%] uppercase",
-    textColor: "text-white",
-    magicColor: "text-ada-sowaGold",
-  },
-}
-
 const MagicCommunityOpinions = ({
-  variant = "default",
   showResults = false,
 }: {
-  variant?: Variant
   showResults?: boolean
 }) => {
-  const config = variantConfig[variant]
-
   return (
     <Section
-      bgColor={config.bgColor}
+      bgColor="bg-ada-magicYellow"
       className="pt-24 md:pt-32"
       id="opinie"
       padding="py-8 md:py-12 px-6"
     >
       <div className="w-full">
-        {variant === "sowa" ? (
-          <h2
-            className={`mb-12 text-center ${config.headingClass} ${config.textColor}`}
-          >
-            Zobacz, co mówią o naszych{" "}
-            <span className={config.magicColor}>magicznych eliksirach:</span>
-          </h2>
-        ) : (
-          <Typography
-            variant="h1"
-            className={`mb-6 text-center ${config.textColor}`}
-          >
-            Wyniki i opinie członkiń
-          </Typography>
-        )}
+        <Typography variant="h1" className="mb-6 text-center text-ada-black">
+          Wyniki i opinie członkiń
+        </Typography>
 
-        {showResults && variant === "default" && <MagicResultsPreview />}
+        {showResults && <MagicResultsPreview />}
 
-        {variant !== "sowa" && (
-          <div className="mb-10 text-center">
-            {!showResults && (
-              <p className={`mb-6 ${config.textColor}`}>
-                Chcesz takich liczb u siebie? Twój MAGIC Plan pokaże pierwszy
-                krok
-              </p>
-            )}
-            <a
-              href="https://cart.easy.tools/checkout/81632369/magic-subskrypcja"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-              <Button
-                type="button"
-                text={<span className="!font-extrabold">Dołączam</span>}
-                textSize="text-xs md:text-adaBase uppercase text-black"
-                btnStyle="bg-ada-pink8 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
-              />
-            </a>
-          </div>
-        )}
+        <div className="mb-10 text-center">
+          {!showResults && (
+            <p className="mb-6 text-ada-black">
+              Chcesz takich liczb u siebie? Twój MAGIC Plan pokaże pierwszy krok
+            </p>
+          )}
+          <a
+            href="https://cart.easy.tools/checkout/81632369/magic-subskrypcja"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <Button
+              type="button"
+              text={<span className="!font-extrabold">Dołączam</span>}
+              textSize="text-xs md:text-adaBase uppercase text-black"
+              btnStyle="bg-ada-pink8 tracking-wide p-3 hover:opacity-90 rounded-full min-w-[130px] h-[58px] shadow-xl"
+            />
+          </a>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
           <div className="flex flex-col gap-0">

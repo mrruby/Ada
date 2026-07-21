@@ -385,46 +385,6 @@ const MagicWhy = ({ part }: { part: number }) => {
           </div>
         </div>
       )}
-      {part == 10 && (
-        <div className="flex flex-col items-center gap-8">
-          <div className="w-full text-ada-black -mb-8">
-            <Typography
-              variant="h1"
-              className="mb-8 text-center animate-bounce"
-            >
-              Jak wygląda przykładowy miesiąc w
-              <span className="text-ada-pink7"> MAGIC </span>?
-            </Typography>
-          </div>
-          <StaticImage
-            loading="eager"
-            src="../../images/calendar.webp"
-            alt=""
-            placeholder="blurred"
-            width={1363}
-            height={795}
-            formats={["auto", "webp", "avif"]}
-            quality={100}
-          />
-        </div>
-      )}
-      {part == 11 && (
-        <div className="flex flex-col items-center gap-8 text-ada-black">
-          <Typography variant="h1" className="mb-8 text-center animate-bounce ">
-            Zobacz przykładowe pytania i odpowiedzi!
-          </Typography>
-          <StaticImage
-            loading="eager"
-            src="../../images/pyt-odp.webp"
-            alt=""
-            placeholder="blurred"
-            width={500}
-            formats={["auto", "webp", "avif"]}
-            quality={75}
-            className="max-w-4xl"
-          />
-        </div>
-      )}
       {part == 12 && (
         <div className="flex flex-col items-center gap-8 -px-8">
           <div className="w-full text-ada-black -mb-8">

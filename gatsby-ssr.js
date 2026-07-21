@@ -12,7 +12,6 @@ const fontStylesheets = [
   "https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap",
   "https://fonts.googleapis.com/css2?family=Anton&display=swap",
   "https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap",
-  "https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap",
   "https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap",
 ]
 

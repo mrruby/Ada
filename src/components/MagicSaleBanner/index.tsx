@@ -386,13 +386,6 @@ const MagicSaleBanner = ({
           <NicolaCallPopup />
         </Section>
       )}
-      {version == 6 && (
-        <Section padding="py-8 px-6 md:px-12 text-ada flex flex-col items-center text-center">
-          <h1 className="text-adaTitle2 font-bold text-ada-magicOrange2">
-            Nagranie nie jest już dostępne, ale wciąż możesz dołączyć do MAGIC!
-          </h1>
-        </Section>
-      )}
     </>
   )
 }

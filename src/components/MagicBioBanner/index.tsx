@@ -49,13 +49,7 @@ const PEOPLE_CONTENT = [
 ]
 
 // Responsive people display: flex row on desktop, carousel on mobile
-const PeopleResponsive = ({
-  showStamp = false,
-  threeTwo = false,
-}: {
-  showStamp?: boolean
-  threeTwo?: boolean
-}) => (
+const PeopleResponsive = ({ threeTwo = false }: { threeTwo?: boolean }) => (
   <>
     {/* Desktop: grid layout */}
     <div
@@ -71,7 +65,6 @@ const PeopleResponsive = ({
           name={item.name}
           description={item.description}
           img={item.img}
-          showStamp={showStamp}
         />
       ))}
     </div>
@@ -91,7 +84,6 @@ const PeopleResponsive = ({
               name={item.name}
               description={item.description}
               img={item.img}
-              showStamp={showStamp}
             />
           </div>
         ))}
@@ -234,57 +226,6 @@ const MagicBioBanner = ({ version }: { version: number }) => {
           </div>
         )}
       </Section>
-      {version === 4 && (
-        <div className="bg-ada-sowaNavy py-16 px-6">
-          <div className="container mx-auto">
-            <h2 className="font-playfair font-normal text-[48px] md:text-[64px] leading-[130%] text-center text-white uppercase">
-              Kto prowadzi <span className="text-ada-sowaGold">warsztaty?</span>
-            </h2>
-            <p className="text-center mt-6 text-white font-montserrat font-bold text-[24px] leading-[100%] max-w-2xl mx-auto">
-              Nie jedna, nie dwie, nie trzy…{" "}
-              <span className="text-ada-sowaGold">aż cztery specjalistki</span>{" "}
-              przygotowały dla Ciebie magiczną formułę na reklamy sprzedażowe!
-            </p>
-
-            {/* Desktop: grid layout */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 justify-items-center">
-              {PEOPLE_CONTENT.map((item) => (
-                <PersonBox
-                  key={item.name}
-                  name={item.name}
-                  description={item.description}
-                  img={item.img}
-                  showStamp={true}
-                  textColor="text-white"
-                />
-              ))}
-            </div>
-
-            {/* Mobile: carousel */}
-            <div className="md:hidden pt-8">
-              <Carousel
-                responsive={bioResponsive}
-                infinite={true}
-                customLeftArrow={<CustomLeftArrow />}
-                customRightArrow={<CustomRightArrow />}
-                ssr={true}
-              >
-                {PEOPLE_CONTENT.map((item) => (
-                  <div key={item.name} className="px-2">
-                    <PersonBox
-                      name={item.name}
-                      description={item.description}
-                      img={item.img}
-                      showStamp={true}
-                      textColor="text-white"
-                    />
-                  </div>
-                ))}
-              </Carousel>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   )
 }
