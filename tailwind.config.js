@@ -63,6 +63,7 @@ module.exports = {
       },
       backgroundPosition: { bgPosition: "0px 310px" },
       fontFamily: {
+        anton: ["Anton", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         lemon: ["Lemon", "serif"],
       },
