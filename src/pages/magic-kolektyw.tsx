@@ -34,7 +34,7 @@ const MagicCollectivePage = () => {
         <MagicBioBanner2 version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-magic-grid relative">
-        <MagicBanner3 />
+        <MagicBanner3 version={1} />
       </MaxWithBgColorContainer>
       <MaxWithBgColorContainer bgColor="bg-ada-magicGreen">
         <MagicCollectiveBanner version={20} />
