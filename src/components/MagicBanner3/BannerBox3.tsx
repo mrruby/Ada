@@ -44,7 +44,7 @@ const BannerBox3 = ({
               </span>
             </span>
           }
-          url="https://calendar.app.google/UwK6B7FAiut4VnZB7"
+          url="https://calendar.app.google/svhytZTJ93aiMJ6BA"
           textSize="text-base md:text-lg"
           btnStyle="bg-ada-white2
                 tracking-wide h-auto py-4
