@@ -349,7 +349,7 @@ const MagicCollectiveBanner = ({ version }: { version: number }) => {
               className="max-w-[800px] mx-auto bg-white p-2 md:p-3"
             >
               <iframe
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0zcRiXUr4-wUE8kWad3VOUdAuWCYFT8Sx9MdThd_nrVecbrxdhp52S2M_iVeoZHU40tpiiuoEn?gv=true"
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2R36p86iZGPSsdhYrFdXIzDLsNY1t1QDgYSXS4aHyeqhQTgNOzE_gqZTnzjq0eaNVYtOMgNwpS?gv=true"
                 style={{ border: 0 }}
                 width="100%"
                 height="600"
