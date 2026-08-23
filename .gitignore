@@ -90,3 +90,6 @@ dist/
 
 # Generated visual baseline screenshots
 /baselines/
+
+# Remotion / reels working files
+reels-make/

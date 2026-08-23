@@ -49,6 +49,15 @@ module.exports = {
           magicGrey2: "#A5A5A5",
           magicYellow: "#F4E105",
           darkGrey: "#3D3D3D",
+          jesienInk: "#241A3A",
+          jesienInkSoft: "#57496E",
+          jesienPurple: "#6F2DBD",
+          jesienPurpleSoft: "#C9B2F2",
+          jesienPink: "#FF2B9D",
+          jesienPinkSoft: "#FFC7E4",
+          jesienOrange: "#F7A11A",
+          jesienLavender: "#F4EEFC",
+          jesienBlush: "#FFF0F8",
         },
       },
       backgroundImage: {
@@ -93,6 +102,10 @@ module.exports = {
         slideInFromLeft: "slideInFromLeft 1.5s ease-out",
         slideInFromRight: "slideInFromRight 1.5s ease-out",
         magicPulse: "magicPulse 4s ease-in-out forwards",
+        floaty: "floaty 6s ease-in-out infinite",
+        wiggle: "wiggle 5s ease-in-out infinite",
+        wiggleNeg: "wiggleNeg 5s ease-in-out infinite",
+        shimmer: "shimmer 6s linear infinite",
       },
       keyframes: {
         fadeIn: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
@@ -128,6 +141,24 @@ module.exports = {
         magicPulse: {
           "0%": { transform: "scale(6)" },
           "100%": { transform: "scale(1)" },
+        },
+        floaty: {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-14px) rotate(12deg)" },
+        },
+        wiggle: {
+          "0%, 86%, 100%": { transform: "rotate(7deg)" },
+          "90%": { transform: "rotate(11deg)" },
+          "95%": { transform: "rotate(4deg)" },
+        },
+        wiggleNeg: {
+          "0%, 86%, 100%": { transform: "rotate(-6deg)" },
+          "90%": { transform: "rotate(-10deg)" },
+          "95%": { transform: "rotate(-3deg)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "0% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
     },
