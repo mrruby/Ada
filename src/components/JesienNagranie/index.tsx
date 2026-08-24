@@ -11,7 +11,7 @@ import {
 import { CountdownTiles, useCountdown } from "components/JesienShared/countdown"
 import Reveal from "components/JesienShared/Reveal"
 import Layout from "components/Layout"
-import VimeoFacade from "components/VimeoFacade"
+import MagicCaseStudies from "components/MagicCaseStudies"
 import React from "react"
 import {
   JESIEN_DEADLINE,
@@ -22,7 +22,6 @@ import {
   JESIEN_DOORS_OPEN,
   JESIEN_NAGRANIE_VIDEO_URL,
   JESIEN_PLAYER_ID,
-  jesienNagranieOpinions,
   jesienNagranieSteps,
   jesienNagranieTips,
 } from "values/jesienLanding"
@@ -228,29 +227,12 @@ const Reviews = () => (
           <span className="text-ada-jesienPink">MAGIC</span> 💜
         </h2>
       </Reveal>
-
-      <div className="mt-10 grid grid-cols-[repeat(2,minmax(0,300px))] justify-center gap-[26px] max-[920px]:grid-cols-[minmax(0,320px)]">
-        {jesienNagranieOpinions.map(({ videoId, title }, index) => (
-          <Reveal key={videoId}>
-            <div
-              className={`relative rounded-[22px] border-[3px] bg-white p-3.5 shadow-[0_14px_34px_rgba(255,43,157,0.13)] ${
-                index % 2 === 1
-                  ? "rotate-[0.7deg] border-ada-jesienPurple"
-                  : "-rotate-[0.6deg] border-ada-jesienPink"
-              }`}
-            >
-              <div className="overflow-hidden rounded-[14px] bg-ada-jesienInk">
-                <VimeoFacade
-                  videoId={videoId}
-                  title={title}
-                  aspectRatio="9:16"
-                />
-              </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
     </div>
+
+    {/* Ten sam karuzelowy segment wideo-opinii co na /magic. */}
+    <Reveal>
+      <MagicCaseStudies />
+    </Reveal>
   </section>
 )
 

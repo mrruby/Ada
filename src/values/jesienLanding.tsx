@@ -105,13 +105,6 @@ export const jesienNagranieSteps = [
   },
 ]
 
-// Wideo-opinie klubowiczek — te same nagrania Vimeo co na /magic
-// (MagicCaseStudies).
-export const jesienNagranieOpinions = [
-  { videoId: "1155918940", title: "Wideo-opinia klubowiczki MAGIC #1" },
-  { videoId: "1155051959", title: "Wideo-opinia klubowiczki MAGIC #2" },
-]
-
 export const jesienGets = [
   {
     emoji: "🎬",
