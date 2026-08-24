@@ -32,6 +32,16 @@ const JesienSignupForm: React.FC<JesienSignupFormProps> = ({
 
     form.removeAttribute("target")
 
+    // Skrypt walidacji MailerLite nie wykonuje się (dangerouslySetInnerHTML),
+    // więc wymagane pola — w tym checkbox zgody — egzekwujemy natywnie.
+    form
+      .querySelectorAll<HTMLInputElement>(
+        "input[aria-required=true], .ml-validate-required input[type=checkbox]"
+      )
+      .forEach((input) => {
+        input.required = true
+      })
+
     const handleSubmit = (e: Event) => {
       e.preventDefault()
 
