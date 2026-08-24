@@ -56,6 +56,7 @@ module.exports = {
           jesienPink: "#FF2B9D",
           jesienPinkSoft: "#FFC7E4",
           jesienOrange: "#F7A11A",
+          jesienOrangeSoft: "#FFE0B3",
           jesienLavender: "#F4EEFC",
           jesienBlush: "#FFF0F8",
         },

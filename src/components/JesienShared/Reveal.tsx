@@ -3,12 +3,17 @@ import React, { useEffect, useRef, useState } from "react"
 type RevealProps = {
   children: React.ReactNode
   className?: string
+  as?: "div" | "li"
 }
 
 // Delikatne pojawianie sekcji po przewinięciu. Elementy widoczne od razu
 // (i użytkownicy z prefers-reduced-motion) nie są animowane.
-const Reveal: React.FC<RevealProps> = ({ children, className = "" }) => {
-  const ref = useRef<HTMLDivElement>(null)
+const Reveal: React.FC<RevealProps> = ({
+  children,
+  className = "",
+  as = "div",
+}) => {
+  const ref = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
@@ -33,15 +38,17 @@ const Reveal: React.FC<RevealProps> = ({ children, className = "" }) => {
     return () => observer.disconnect()
   }, [])
 
+  const Tag = as as React.ElementType
+
   return (
-    <div
+    <Tag
       ref={ref}
       className={`transition-[opacity,transform] duration-[600ms] ease-out ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-[22px] opacity-0"
       } ${className}`}
     >
       {children}
-    </div>
+    </Tag>
   )
 }
 

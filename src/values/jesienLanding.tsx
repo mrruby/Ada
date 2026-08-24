@@ -16,9 +16,100 @@ export const JESIEN_PAID_FROM_DAY = "1 września"
 export const JESIEN_HERO_FORM_ID = "zapis"
 export const JESIEN_FINALE_ID = "odbieram"
 
+// ── Strona z nagraniem (/jesien-nagranie) ───────────────────────────────
+
+export const JESIEN_NAGRANIE_TITLE =
+  "Twoje szkolenie: Przygotuj swój lejek na jesień 🎬"
+
+export const JESIEN_NAGRANIE_DESCRIPTION =
+  "Nagranie szkolenia dostępne za 0 zł do 31 sierpnia. Potem trafia do płatnej sprzedaży."
+
+// Embed nagrania szkolenia (YouTube niepubliczny) — link od Ady.
+export const JESIEN_NAGRANIE_VIDEO_URL =
+  "https://www.youtube.com/embed/rL5folXvisQ?si=hVS6ukYdDBuB8Zay"
+
+// Otwarcie drzwi do MAGIC: 17.09.2026 o 10:00 czasu polskiego (CEST, UTC+2).
+// Godzina 10:00 przyjęta z projektu — zmień, jeśli otwieracie o innej porze.
+export const JESIEN_DOORS_OPEN = new Date("2026-09-17T10:00:00+02:00")
+export const JESIEN_DOORS_DAY = "17 września"
+export const JESIEN_DOORS_DATE_LABEL = "17 września 2026"
+
+export const JESIEN_PLAYER_ID = "player"
+
 export const jesienInstagramLinks = [
   { label: "@klub.magic", url: "https://www.instagram.com/klub.magic" },
   { label: "@adapromis", url: "https://www.instagram.com/adapromis" },
+]
+
+export const jesienNagranieTips = [
+  {
+    emoji: "1️⃣",
+    content: (
+      <>
+        <strong>Zarezerwuj sobie 45 minut bez rozpraszaczy</strong> - rób
+        przerwy, notuj, spisuj plan dla siebie.
+      </>
+    ),
+  },
+  {
+    emoji: "2️⃣",
+    content: (
+      <>
+        <strong>Nie odkładaj na później.</strong> Nagranie jest dostępne tylko
+        do {JESIEN_DEADLINE_DAY} — a jesień nie poczeka, aż będziesz gotowa. 😉
+      </>
+    ),
+  },
+  {
+    emoji: "3️⃣",
+    content: (
+      <>
+        To szkolenie jest{" "}
+        <strong>
+          częścią nagrań, które są dostępne w ramach społeczności Magic
+        </strong>
+        .
+      </>
+    ),
+  },
+]
+
+export const jesienNagranieSteps = [
+  {
+    emoji: "☑️",
+    content: (
+      <>
+        <strong>Rozpisz swój lejek na jesień:</strong> co promujesz we wrześniu,
+        w listopadzie (Black Friday!) i w grudniu.
+      </>
+    ),
+  },
+  {
+    emoji: "☑️",
+    content: (
+      <>
+        <strong>Zastanów się, czego brakuje Ci,</strong> aby wystartować z
+        kampaniami, które omawiam na nagraniu?
+      </>
+    ),
+  },
+  {
+    emoji: "☑️",
+    content: (
+      <>
+        <strong>Przygotuj teksty i grafiki z wyprzedzeniem,</strong> żeby sezon
+        nie zaskoczył Cię jak zima drogowców. Pamiętaj, że gdy dołączysz do
+        naszego Klubu, otrzymasz pełen feedback wraz z listą poprawek! ❄️
+      </>
+    ),
+  },
+]
+
+// Wideo-opinie klubowiczek — te same nagrania Vimeo co na /magic
+// (MagicCaseStudies).
+export const jesienNagranieOpinions = [
+  { videoId: "1155918940", title: "Wideo-opinia klubowiczki MAGIC #1" },
+  { videoId: "1155051959", title: "Wideo-opinia klubowiczki MAGIC #2" },
 ]
 
 export const jesienGets = [

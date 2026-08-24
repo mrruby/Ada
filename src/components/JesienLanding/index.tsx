@@ -1,5 +1,16 @@
 import JesienCountdownBar from "components/JesienCountdownBar"
 import JesienSignupForm from "components/JesienSignupForm"
+import {
+  FloatStar,
+  heading,
+  JesienFooter,
+  kicker,
+  scrollToSection,
+  shadowCard,
+  wrap,
+  wrapNarrow,
+} from "components/JesienShared"
+import Reveal from "components/JesienShared/Reveal"
 import Layout from "components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
@@ -11,49 +22,13 @@ import {
   JESIEN_HERO_FORM_ID,
   JESIEN_PAID_FROM_DAY,
   jesienGets,
-  jesienInstagramLinks,
   jesienMagicCards,
 } from "values/jesienLanding"
-import Reveal from "./Reveal"
-
-type FloatStarProps = {
-  className?: string
-  style?: React.CSSProperties
-}
-
-const wrap = "mx-auto w-full max-w-[1080px] px-[22px]"
-
-const wrapNarrow = "mx-auto w-full max-w-[760px] px-[22px]"
-
-const shadowCard = "shadow-[0_18px_44px_rgba(111,45,189,0.14)]"
-
-const kicker =
-  "mb-3 font-anton text-[0.92rem] font-normal tracking-[0.22em] uppercase text-ada-jesienPink"
-
-const heading =
-  "font-anton text-[clamp(1.9rem,3.6vw,2.7rem)] leading-[1.12] font-normal tracking-[0.015em] uppercase"
 
 const bioParagraph =
   "mb-[15px] text-ada-jesienInkSoft [&_strong]:text-ada-jesienInk"
 
-// Gatsby przywraca pozycję scrolla przy zmianie hasha, dlatego przewijamy
-// ręcznie — tak jak helper Button z sectionId.
-const scrollToFinale = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  const section = document.getElementById(JESIEN_FINALE_ID)
-  if (!section) return
-  e.preventDefault()
-  section.scrollIntoView({ behavior: "smooth" })
-}
-
-const FloatStar: React.FC<FloatStarProps> = ({ className = "", style }) => (
-  <span
-    className={`pointer-events-none absolute animate-floaty text-[1.4rem] text-ada-jesienPink opacity-50 select-none motion-reduce:animate-none ${className}`}
-    style={style}
-    aria-hidden="true"
-  >
-    ✦
-  </span>
-)
+const scrollToFinale = scrollToSection(JESIEN_FINALE_ID)
 
 const Hero = () => (
   <header className="relative overflow-hidden bg-white pt-[52px] pb-[74px] [background-image:radial-gradient(620px_340px_at_8%_-10%,rgba(247,161,26,0.10),transparent_65%),radial-gradient(680px_380px_at_100%_8%,rgba(255,43,157,0.10),transparent_60%)] max-[920px]:pt-10 max-[920px]:pb-[60px]">
@@ -425,31 +400,6 @@ const Finale = () => (
       </Reveal>
     </div>
   </section>
-)
-
-const JesienFooter = () => (
-  <footer className="bg-ada-jesienInk py-[30px] text-[0.85rem] text-ada-jesienPurpleSoft">
-    <div
-      className={`${wrap} flex flex-wrap items-center justify-between gap-3.5`}
-    >
-      <span className="font-caveat text-[1.7rem] text-white">
-        <b className="text-ada-jesienPink">Magic</b> ✦
-      </span>
-      <span className="flex gap-[18px]">
-        {jesienInstagramLinks.map(({ label, url }) => (
-          <a
-            key={url}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-white no-underline transition-colors hover:text-ada-jesienPinkSoft"
-          >
-            {label}
-          </a>
-        ))}
-      </span>
-    </div>
-  </footer>
 )
 
 const JesienLanding = () => {
