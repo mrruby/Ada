@@ -59,7 +59,7 @@ const Hero = () => (
             </span>
           </h1>
           <p className="max-w-[52ch] text-[1.05rem] text-ada-jesienInkSoft [&_strong]:text-ada-jesienInk">
-            Nagranie szkolenia, po którym wiesz dokładnie,{" "}
+            Nagranie szkolenia, w którym zdradzam,{" "}
             <strong>co ustawić w reklamach już teraz</strong>, żeby wrzesień,
             Black Friday i święta pracowały na Twoją sprzedaż&nbsp;-{" "}
             <strong>nawet z budżetem 20-30 złotych dziennie</strong>.
@@ -148,7 +148,7 @@ const AboutAda = () => (
             nawet w niepewnych warunkach rynkowych.
           </p>
           <p className={bioParagraph}>
-            Prowadzę <strong>MAGIC</strong> — klub, w którym przedsiębiorczynie
+            Prowadzę <strong>MAGIC</strong> - klub, w którym przedsiębiorczynie
             tworzą skuteczne reklamy. Reklamy moich Klubowiczek potrafią{" "}
             <strong>z 236,99 zł zrobić ponad 9 461 zł sprzedaży</strong> z
             jednej kampanii lub pozyskać{" "}
@@ -173,18 +173,19 @@ const AboutAda = () => (
 const MagicSection = () => (
   <section className="py-[78px] max-[920px]:py-[62px]">
     <div className={wrap}>
-      <Reveal>
+      <Reveal className="text-center">
         <p className={kicker}>Czym jest MAGIC?</p>
-        <h2 className={`${heading} mb-3.5 max-w-[22ch]`}>
+        <h2 className={`${heading} mx-auto mb-3.5 max-w-[22ch]`}>
           <span className="text-ada-jesienPink">MAGIC</span> to Twój zespół od
           reklam ✨
         </h2>
         <p className="mb-[18px] text-[1.05rem] font-bold text-ada-jesienInkSoft">
-          bez etatu i bez faktur od agencji
+          bez zatrudniania agencji, freelancerów lub osób trzecich do współpracy
         </p>
-        <p className="mb-[34px] max-w-[62ch] text-ada-jesienInkSoft">
+        <p className="mx-auto mb-[34px] max-w-[62ch] text-ada-jesienInkSoft">
           Społeczność kobiet, które skalują swoje biznesy z pomocą reklam, AI i
-          automatyzacji — pod czujnym okiem specjalistek. W środku:
+          automatyzacji - z możliwością pokazania ekranu, oceną grafik i tekstów
+          przez specjalistki i spotkań na żywo. W środku:
         </p>
       </Reveal>
 
