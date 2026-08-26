@@ -4,7 +4,7 @@ export const JESIEN_PAGE_TITLE =
   "Przygotuj swoje reklamy na jesień – szkolenie za 0 zł"
 
 export const JESIEN_PAGE_DESCRIPTION =
-  "Nagranie szkolenia, po którym wiesz dokładnie, co ustawić w reklamach już teraz, żeby wrzesień, Black Friday i święta pracowały na Twoją sprzedaż. Dostępne za 0 zł do 31 sierpnia."
+  "Nagranie szkolenia, w którym zdradzam, co ustawić w reklamach już teraz, żeby wrzesień, Black Friday i święta pracowały na Twoją sprzedaż. Dostępne za 0 zł do 31 sierpnia."
 
 // Koniec dostępu za 0 zł: 31.08.2026, 23:59:59 czasu polskiego (CEST, UTC+2).
 // Przy zmianie terminu zaktualizuj też poniższe frazy używane w copy strony.
@@ -118,10 +118,7 @@ export const jesienGets = [
   {
     emoji: "💜",
     content: (
-      <>
-        <strong>miejsce na liście oczekujących MAGIC</strong> - wraz z
-        indywidualnym feedbackiem w ramach MAGIC Planu
-      </>
+      <>indywidualny feedback w ramach MAGIC Planu (przy dołączeniu do MAGIC)</>
     ),
   },
 ]
@@ -162,7 +159,7 @@ export const jesienMagicCards = [
     emoji: "🎯",
     content: (
       <>
-        <strong>MAGIC Plan na start</strong> — spotkanie 1:1 i indywidualny plan
+        <strong>MAGIC Plan na start</strong> - spotkanie 1:1 i indywidualny plan
         reklam pod Twój biznes
       </>
     ),

@@ -46,11 +46,8 @@ export const FloatStar: React.FC<FloatStarProps> = ({
 export const JesienFooter = () => (
   <footer className="bg-ada-jesienInk py-[30px] text-[0.85rem] text-ada-jesienPurpleSoft">
     <div
-      className={`${wrap} flex flex-wrap items-center justify-between gap-3.5`}
+      className={`${wrap} flex flex-wrap items-center justify-end gap-3.5`}
     >
-      <span className="font-caveat text-[1.7rem] text-white">
-        <b className="text-ada-jesienPink">Magic</b> ✦
-      </span>
       <span className="flex gap-[18px]">
         {jesienInstagramLinks.map(({ label, url }) => (
           <a
