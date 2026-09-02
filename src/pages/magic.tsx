@@ -61,7 +61,7 @@ const MagicSalePage = () => {
 
         <div id="magic-package" className="scroll-mt-14"></div>
         <MaxWithBgColorContainer bgColor="bg-ada-magicOrange2">
-          <MagicSaleBanner version={2} />
+          <MagicSaleBanner version={2} url="https://cart.easy.tools/checkout/81632369/klub-magic?lang=pl" />
         </MaxWithBgColorContainer>
 
         <DeferUntilVisible
