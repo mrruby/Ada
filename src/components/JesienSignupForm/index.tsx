@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react"
-import formHTML from "../../values/forms/form-jesien.html"
+import jesienFormHTML from "../../values/forms/form-jesien.html"
 
 type JesienSignupFormProps = {
   sticker: React.ReactNode
@@ -7,11 +7,13 @@ type JesienSignupFormProps = {
   variant?: "hero" | "finale"
   id?: string
   className?: string
+  title?: React.ReactNode
+  // Kod embed MailerLite (plik z values/forms). Domyślnie formularz /jesien.
+  formHTML?: string
 }
 
-const hasEmbeddedForm = formHTML
-  .replace(/<!--[\s\S]*?-->/g, "")
-  .includes("ml-form-embedContainer")
+const hasEmbeddedForm = (html: string) =>
+  html.replace(/<!--[\s\S]*?-->/g, "").includes("ml-form-embedContainer")
 
 const JesienSignupForm: React.FC<JesienSignupFormProps> = ({
   sticker,
@@ -19,12 +21,15 @@ const JesienSignupForm: React.FC<JesienSignupFormProps> = ({
   variant = "hero",
   id,
   className = "",
+  title = "Wpisz dane i odbierz nagranie 👇",
+  formHTML = jesienFormHTML,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null)
   const isFinale = variant === "finale"
+  const hasEmbed = hasEmbeddedForm(formHTML)
 
   useEffect(() => {
-    if (!hasEmbeddedForm) return
+    if (!hasEmbed) return
     const form = cardRef.current?.querySelector(
       ".ml-block-form"
     ) as HTMLFormElement | null
@@ -61,7 +66,7 @@ const JesienSignupForm: React.FC<JesienSignupFormProps> = ({
 
     form.addEventListener("submit", handleSubmit)
     return () => form.removeEventListener("submit", handleSubmit)
-  }, [])
+  }, [hasEmbed])
 
   return (
     <div
@@ -84,10 +89,10 @@ const JesienSignupForm: React.FC<JesienSignupFormProps> = ({
       </span>
 
       <h2 className="mb-4 text-[1.22rem] leading-[1.35] font-extrabold text-ada-jesienInk">
-        Wpisz dane i odbierz nagranie 👇
+        {title}
       </h2>
 
-      {hasEmbeddedForm ? (
+      {hasEmbed ? (
         <div dangerouslySetInnerHTML={{ __html: formHTML }} />
       ) : (
         <div className="rounded-[14px] border-[2.5px] border-dashed border-ada-jesienPurpleSoft bg-ada-jesienLavender/50 px-5 py-10 text-center text-ada-jesienInkSoft">

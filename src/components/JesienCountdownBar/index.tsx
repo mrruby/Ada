@@ -5,7 +5,13 @@ import { JESIEN_DEADLINE_DAY } from "values/jesienLanding"
 type JesienCountdownBarProps = {
   targetDate: Date
   label?: React.ReactNode
+  expiredLabel?: React.ReactNode
   subline?: React.ReactNode
+  // Np. przycisk zapisu wyświetlany obok licznika.
+  cta?: React.ReactNode
+  ariaLabel?: string
+  // Wysokość "spacera" pod paskiem przed pomiarem w przeglądarce (SSR).
+  spacerClassName?: string
 }
 
 const defaultLabel = (
@@ -17,10 +23,21 @@ const defaultLabel = (
   </>
 )
 
+const defaultExpiredLabel = (
+  <>
+    ⏳ Czas minął — szkolenie jest już w{" "}
+    <strong className="text-ada-jesienPink">płatnej sprzedaży</strong>
+  </>
+)
+
 const JesienCountdownBar: React.FC<JesienCountdownBarProps> = ({
   targetDate,
   label = defaultLabel,
+  expiredLabel = defaultExpiredLabel,
   subline,
+  cta,
+  ariaLabel = "Odliczanie do końca dostępu",
+  spacerClassName,
 }) => {
   const timeLeft = useCountdown(targetDate)
   const [barHeight, setBarHeight] = useState<number | null>(null)
@@ -47,22 +64,14 @@ const JesienCountdownBar: React.FC<JesienCountdownBarProps> = ({
         ref={barRef}
         className="fixed inset-x-0 top-0 z-50 bg-white shadow-[0_6px_20px_rgba(36,26,58,0.08)]"
         role="region"
-        aria-label="Odliczanie do końca dostępu"
+        aria-label={ariaLabel}
       >
         <div className="mx-auto flex max-w-[1080px] flex-wrap items-center justify-center gap-x-[18px] gap-y-2.5 px-[22px] py-[9px] text-center max-[560px]:gap-x-3 max-[560px]:gap-y-[5px] max-[560px]:px-3 max-[560px]:py-2">
           <span className="text-[0.86rem] font-semibold max-[560px]:text-[0.74rem]">
-            {isExpired ? (
-              <>
-                ⏳ Czas minął — szkolenie jest już w{" "}
-                <strong className="text-ada-jesienPink">
-                  płatnej sprzedaży
-                </strong>
-              </>
-            ) : (
-              label
-            )}
+            {isExpired ? expiredLabel : label}
           </span>
           <CountdownTiles timeLeft={timeLeft} />
+          {cta}
         </div>
         {subline && (
           <p className="px-[22px] pb-[7px] text-center text-[0.72rem] leading-[1.4] text-ada-jesienInkSoft [&_strong]:text-ada-jesienInk max-[560px]:text-[0.66rem]">
@@ -76,9 +85,10 @@ const JesienCountdownBar: React.FC<JesienCountdownBarProps> = ({
       </div>
       <div
         className={
-          subline
+          spacerClassName ??
+          (subline
             ? "h-[80px] max-[714px]:h-[113px]"
-            : "h-[57px] max-[714px]:h-[90px]"
+            : "h-[57px] max-[714px]:h-[90px]")
         }
         style={barHeight ? { height: barHeight } : undefined}
         aria-hidden="true"
