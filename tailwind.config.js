@@ -107,6 +107,7 @@ module.exports = {
         wiggle: "wiggle 5s ease-in-out infinite",
         wiggleNeg: "wiggleNeg 5s ease-in-out infinite",
         shimmer: "shimmer 6s linear infinite",
+        attentionPulse: "attentionPulse 2.2s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
@@ -160,6 +161,10 @@ module.exports = {
         shimmer: {
           "0%": { backgroundPosition: "0% 0" },
           "100%": { backgroundPosition: "200% 0" },
+        },
+        attentionPulse: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" },
         },
       },
     },

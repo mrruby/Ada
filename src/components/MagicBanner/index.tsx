@@ -602,7 +602,6 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                       <span className="!font-extrabold text-black uppercase text-adaSubtitleSecondary">
                         TAK!
                       </span>
-                      <br />
                       <span className="">
                         Zwiększam sprzedaż <br /> dzięki reklamom!
                       </span>
@@ -610,7 +609,7 @@ const MagicBanner1 = ({ version }: { version: number }) => {
                   }
                   sectionId="magic-package"
                   textSize="text-sm md:text-base"
-                  btnStyle="bg-ada-magicPink4 font-semibold tracking-wide h-[100px] px-6 shadow-xl hover:opacity-90 rounded-full min-w-[330px] mt-4 m-auto"
+                  btnStyle="bg-ada-magicPink4 font-semibold tracking-wide h-[100px] px-8 shadow-xl hover:opacity-90 rounded-full min-w-[330px] mt-4 m-auto flex flex-col items-center justify-center text-center"
                 />
               </div>
             </div>

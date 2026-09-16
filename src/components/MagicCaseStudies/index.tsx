@@ -35,9 +35,14 @@ const VideoItem = ({ videoId }: { videoId: string }) => (
   </div>
 )
 
-const MagicCaseStudies = () => {
+const MagicCaseStudies = ({ heading }: { heading?: string }) => {
   return (
     <div className="py-12 px-6">
+      {heading && (
+        <h2 className="text-center font-bold text-adaSubtitle mb-8 px-4">
+          {heading}
+        </h2>
+      )}
       {/* Swipeable carousel for all screen sizes */}
       <div className="px-12 relative max-w-7xl mx-auto">
         <Carousel
