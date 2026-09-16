@@ -25,8 +25,12 @@ const MagicCommunityOpinions = ({
 
         <div className="mb-10 text-center">
           {!showResults && (
-            <p className="mb-6 text-ada-black">
-              Chcesz takich liczb u siebie? Twój MAGIC Plan pokaże pierwszy krok
+            <p className="mx-auto mb-6 max-w-3xl origin-center animate-attentionPulse text-xl font-extrabold leading-tight text-ada-black md:text-3xl">
+              Chcesz takich liczb u siebie? Twój{" "}
+              <span className="rounded-md bg-ada-magicYellow px-2 py-0.5 text-ada-pink7">
+                MAGIC Plan
+              </span>{" "}
+              pokaże pierwszy krok
             </p>
           )}
           <a
@@ -159,9 +163,12 @@ const MagicResultsPreview = () => (
       </div>
     </div>
 
-    <p className="mx-auto mt-10 max-w-3xl text-center text-xl font-bold leading-tight text-ada-black md:text-3xl">
+    <p className="mx-auto mt-10 max-w-3xl origin-center animate-attentionPulse text-center text-2xl font-extrabold leading-tight text-ada-black md:text-4xl">
       Chcesz takich liczb u siebie? Twój{" "}
-      <span className="text-ada-pink7">MAGIC Plan</span> pokaże pierwszy krok
+      <span className="rounded-md bg-ada-magicYellow px-2 py-0.5 text-ada-pink7">
+        MAGIC Plan
+      </span>{" "}
+      pokaże pierwszy krok
     </p>
   </div>
 )

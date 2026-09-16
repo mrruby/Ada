@@ -175,9 +175,8 @@ const MagicSaleBanner = ({
               <div className="xl:text-adaDesc flex flex-col bg-ada-white3 rounded-[24px] text-black text-left p-8 shadow-xl flex-1 w-full border border-black">
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja miesięczna</p>
-                  <p className="text-adaSubtitleThird font-bold uppercase">
-                    TESTUJ
-                    <br />Z MAGIC
+                  <p className="text-adaSubtitleThird font-bold">
+                    Subskrypcja elastyczna
                   </p>
                   <p className="text-adaDesc">cena</p>
                   <p>
@@ -248,9 +247,8 @@ const MagicSaleBanner = ({
               >
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 3-miesięczna</p>
-                  <p className="text-adaSubtitleThird font-bold uppercase">
-                    BUDUJ
-                    <br />Z MAGIC
+                  <p className="text-adaSubtitleThird font-bold">
+                    3 miesiące w Magic
                   </p>
                   <p className="text-adaDesc">cena</p>
                   <p>
@@ -322,9 +320,8 @@ const MagicSaleBanner = ({
               >
                 <div className="mb-4 text-left">
                   <p className="text-adaDesc">subskrypcja 6-miesięczna</p>
-                  <p className="text-adaSubtitleThird font-bold uppercase">
-                    SKALUJ
-                    <br />Z MAGIC
+                  <p className="text-adaSubtitleThird font-bold">
+                    6 miesięcy w Magic
                   </p>
                   <p className="text-adaDesc">cena</p>
                   <p>
