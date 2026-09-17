@@ -49,7 +49,7 @@ export default function VideoOpinions() {
               <div className="testimonial-player" key={videoId}>
                 <VimeoFacade
                   videoId={videoId}
-                  title={`Opinia klubowiczki MAGIC — nagranie ${index + 1}`}
+                  title={`Opinia klubowiczki MAGIC, nagranie ${index + 1}`}
                   aspectRatio="9:16"
                   thumbnailSrc={thumbnails[videoId]}
                   sizes="(max-width: 600px) 280px, 260px"

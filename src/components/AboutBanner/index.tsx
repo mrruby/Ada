@@ -39,7 +39,7 @@ const AboutBanner = () => {
             etatach.
           </li>
           <li className={listItemClass}>
-            <span className="font-bold">Jestem osobą wysokowrażliwą</span> —
+            <span className="font-bold">Jestem osobą wysokowrażliwą</span>,
             codzienne chodzenie do biura przyprawiało mnie o ból głowy.
           </li>
           <li className={listItemClass}>

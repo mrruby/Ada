@@ -30,12 +30,11 @@ const MastermindWhy1 = () => {
               <span className="font-bold">
                 bardziej zaawansowane kampanie reklamowe
               </span>
-              i dowiesz się, jak je optymalizować, aby — a jakże! — zarabiać
-              więcej,
+              i dowiesz się, jak je optymalizować, aby zarabiać więcej,
             </li>
             <li className={listItemClass}>
               &#10003; wybierzesz{" "}
-              <span className="font-bold">najlepsze materiały do reklam</span> —
+              <span className="font-bold">najlepsze materiały do reklam</span>,
               stworzysz chwytliwe grafiki i błyskotliwe teksty reklamowe,
             </li>
             <li className={listItemClass}>
@@ -49,7 +48,7 @@ const MastermindWhy1 = () => {
             <li className={listItemClass}>
               &#10003; zderzysz swoje wątpliwości z osobami, które mają podobne
               problemy w zdobywaniu nowych klientów i przekonasz się, że
-              rozwiązanie jest bliżej niż myślisz —
+              rozwiązanie jest bliżej niż myślisz,
               <span className="font-bold">
                 {" "}
                 wystarczy wiedzieć, gdzie go szukać!

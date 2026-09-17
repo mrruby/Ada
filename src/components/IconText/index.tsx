@@ -12,7 +12,7 @@ const IconText = ({ version }: { version: number }) => {
   const leftList = [
     {
       icon: "🔥",
-      text: "słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
+      text: "słyszałaś, że teraz jest boom na reklamy i faktycznie dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
     },
     {
       icon: "👶",
@@ -58,7 +58,7 @@ const IconText = ({ version }: { version: number }) => {
   const leftList2 = [
     {
       icon: "😱",
-      text: "Pół roku temu zaplanowałaś 2025 rok, ale wyszło jak zawsze — rzeczywistość?",
+      text: "Pół roku temu zaplanowałaś 2025 rok, ale wyszło jak zawsze. Brzmi znajomo?",
     },
     {
       icon: "🤔",

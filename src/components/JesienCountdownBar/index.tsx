@@ -25,7 +25,7 @@ const defaultLabel = (
 
 const defaultExpiredLabel = (
   <>
-    ⏳ Czas minął — szkolenie jest już w{" "}
+    ⏳ Czas minął. Szkolenie jest już w{" "}
     <strong className="text-ada-jesienPink">płatnej sprzedaży</strong>
   </>
 )

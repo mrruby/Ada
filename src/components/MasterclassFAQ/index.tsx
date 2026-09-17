@@ -17,7 +17,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
     {
       question: "Czy te warsztaty są dla mnie?",
       answer:
-        "Warsztaty są dla każdej osoby, która chce w 2024 podnieść wyniki sprzedażowe — czy to swoje, czy swoich klientów. Nie rozdzielam warsztatów na osobne grupy dla przedsiębiorczyń, freelancerek i etatowców, bo podstawowe zasady planowania lejka sprzedażowego są takie same. Ważne, aby mieć wybrane konto w mediach społecznościowych, które chcesz rozwijać!",
+        "Warsztaty są dla każdej osoby, która chce w 2024 podnieść wyniki sprzedażowe, czy to swoje, czy swoich klientów. Nie rozdzielam warsztatów na osobne grupy dla przedsiębiorczyń, freelancerek i etatowców, bo podstawowe zasady planowania lejka sprzedażowego są takie same. Ważne, aby mieć wybrane konto w mediach społecznościowych, które chcesz rozwijać!",
     },
     {
       question: "Kiedy dostanę dostęp?",
@@ -31,7 +31,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
     {
       question: "Czy muszę mieć doświadczenie z reklamami?",
       answer:
-        "Tak, ale może być niewielkie. Jeśli promowałaś posty na Instagramie — to wystarczy! Jeśli zlecasz reklamy, możesz wziąć udział w warsztatach, a potem przekazać gotowy plan działania do realizacji.",
+        "Tak, ale może być niewielkie. Jeśli promowałaś posty na Instagramie, to wystarczy! Jeśli zlecasz reklamy, możesz wziąć udział w warsztatach, a potem przekazać gotowy plan działania do realizacji.",
     },
   ]
 
@@ -249,7 +249,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
       question: "Dlaczego tak tanio?",
       answer: (
         <>
-          Masz rację — kursy prowadzenia reklam potrafią kosztować od 1000 zł
+          Masz rację, kursy prowadzenia reklam potrafią kosztować od 1000 zł
           wzwyż. Masterclass dostajesz w niższej cenie, bo wiem, że wiele
           przedsiębiorczyń waha się nad rozpoczęciem działań reklamowych, ale
           powstrzymuje je wysoka cena, jaką musiałyby wydać na start.
@@ -425,7 +425,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
           Spotkania, na których ustawiamy kampanie reklamowe, będą nagrywane i
           udostępnione tylko dla osób uczestniczących w programie. Jeśli nie
           dotrzesz na któreś spotkanie, będziesz mogła nadrobić materiał. Z
-          zadaniem pytań nie musisz czekać do kolejnego spotkania — będziesz
+          zadaniem pytań nie musisz czekać do kolejnego spotkania, będziesz
           mogła zadać je na dedykowanej grupie na Facebooku, gdzie będziemy w
           stałym kontakcie!
         </>
@@ -490,7 +490,7 @@ const MasterclassFAQ = ({ version }: MasterclassFAQProps) => {
         "Dlaczego warto uczyć się prowadzić kampanie reklamowe samodzielnie?",
       answer: (
         <>
-          Nie oszukujmy się — zlecenie kampanii specjalistom jest super, ale nie
+          Nie oszukujmy się. Zlecenie kampanii specjalistom jest super, ale nie
           każdy ma taki budżet. Zlecenie reklam kosztuje od 1500 zł netto wzwyż,
           a do tego jeszcze budżet reklamowy. Na szczęście z odpowiednim
           wsparciem na start możesz prowadzić kampanie reklamowe samodzielnie! A

@@ -30,7 +30,7 @@ const MentoringAbout = () => {
           <div className="max-w-[400px] lg:max-w-[810px] pt-6">
             <p className="pb-16 md:text-adaBase">
               Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z
-              zamiłowania — kreatywną duszą. Mam za sobą epizod pracy w audycie
+              zamiłowania kreatywną duszą. Mam za sobą epizod pracy w audycie
               finansowym, ale moim powołaniem chyba od zawsze był marketing!
             </p>
             <p className="pb-8 md:text-adaBase">

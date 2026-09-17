@@ -39,7 +39,7 @@ const MentoringInfo = () => {
       możesz
       <span className="font-bold">
         {" "}
-        regularnie przeznaczyć czas na kampanie —{" "}
+        regularnie przeznaczyć czas na kampanie,{" "}
       </span>
       zdajesz sobie sprawę, że tutaj nie wystarczy zerknięcie z doskoku
     </span>,
@@ -47,8 +47,8 @@ const MentoringInfo = () => {
       <span className="font-bold">
         {" "}
         znasz podstawową obsługę menadżera reklam
-      </span>{" "}
-      — nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza, gdzie
+      </span>
+      , nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza, gdzie
       kliknąć, aby ustawić kampanię i stworzyć zestaw reklam to must have{" "}
     </span>,
     <span key={2}>
@@ -81,7 +81,7 @@ const MentoringInfo = () => {
       na przeklikaniu się przez system i dołączyła do drugiej edycji.
     </span>,
     <span key={1}>
-      jesteś super wymiataczką —
+      jesteś super wymiataczką,{" "}
       <span className="font-bold">
         tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz.{" "}
       </span>

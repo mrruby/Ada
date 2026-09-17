@@ -25,7 +25,7 @@ const AboutBanner2 = () => {
           <div className="max-w-[610px] text-adaDesc">
             <p className="pb-8">
               Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z
-              zamiłowania — kreatywną duszą. Mam za sobą epizod pracy w audycie
+              zamiłowania kreatywną duszą. Mam za sobą epizod pracy w audycie
               finansowym, ale moim powołaniem chyba od zawsze był marketing!
             </p>
             <p className="pb-8">

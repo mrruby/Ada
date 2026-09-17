@@ -12,8 +12,8 @@ const listItems = [
     decydując się teraz,{" "}
     <span className="font-bold">weźmiesz udział w Q&A na żywo.</span> Oglądając
     nagranie, oczywiście dostajesz dostęp również do nagrania sesji Q&A, ale nie
-    odpowiem na Twoje pytania — to bonus zarezerwowany tylko dla osób obecnych
-    na żywo
+    odpowiem na Twoje pytania. To bonus zarezerwowany tylko dla osób obecnych na
+    żywo
   </span>,
   <span key="recording">
     rezerwując miejsce teraz, otrzymasz{" "}

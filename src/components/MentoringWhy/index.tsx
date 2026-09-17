@@ -95,8 +95,8 @@ const MentoringWhy = () => {
             Wiem, jak się teraz czujesz.
           </h3>
           <p className="md:text-adaSubtitle px-3">
-            Rozczarowanie. Frustracja. Chęć zmiany, ale również niepewność —
-            skąd masz wiedzieć, czy to, co robisz, ma sens?
+            Rozczarowanie. Frustracja. Chęć zmiany, ale również niepewność. Skąd
+            masz wiedzieć, czy to, co robisz, ma sens?
           </p>
         </div>
       </div>

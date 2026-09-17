@@ -56,7 +56,7 @@ export const jesienNagranieTips = [
     content: (
       <>
         <strong>Nie odkładaj na później.</strong> Nagranie jest dostępne tylko
-        do {JESIEN_DEADLINE_DAY} — a jesień nie poczeka, aż będziesz gotowa. 😉
+        do {JESIEN_DEADLINE_DAY}, a jesień nie poczeka, aż będziesz gotowa. 😉
       </>
     ),
   },

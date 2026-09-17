@@ -87,7 +87,7 @@ const Hero = () => (
                 za 0 zł <em>tylko do {JESIEN_DEADLINE_SHORT}!</em>
               </>
             }
-            microcopy={`Link do nagrania od razu ląduje na Twojej skrzynce. Oglądasz do ${JESIEN_DEADLINE_SHORT} — potem szkolenie staje się płatne.`}
+            microcopy={`Link do nagrania od razu ląduje na Twojej skrzynce. Oglądasz do ${JESIEN_DEADLINE_SHORT}, potem szkolenie staje się płatne.`}
           />
         </div>
 

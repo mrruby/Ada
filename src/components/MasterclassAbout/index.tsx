@@ -84,7 +84,7 @@ const MasterclassAbout = () => {
           <p className="pb-4 md:text-adaDesc">
             Dzięki temu wiem, czego możesz potrzebować{" "}
             <span className="font-bold">
-              Ty — marketerko, pracowniczko, freelancerko, przedsiębiorczynio!
+              Ty, marketerko, pracowniczko, freelancerko, przedsiębiorczynio!
             </span>
           </p>
           <p className="pb-4 md:text-adaDesc">

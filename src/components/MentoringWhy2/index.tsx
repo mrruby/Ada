@@ -38,7 +38,7 @@ const MentoringWhy2 = () => {
       text: (
         <>
           <span className="font-bold">zrozumiesz ścieżkę użytkownika </span>i
-          dowiesz się, co zrobić, jeśli kampanie nie działają — wszystko po to,
+          dowiesz się, co zrobić, jeśli kampanie nie działają, wszystko po to,
           aby Twoi klienci wiedzieli, że mają w Tobie oparcie nawet w czasach
           kryzysu
         </>
@@ -50,7 +50,7 @@ const MentoringWhy2 = () => {
           zderzysz swoje wątpliwości z osobami, które mają podobne problemy w
           zdobywaniu nowych klientów i przekonasz się, że{" "}
           <span className="font-bold">
-            rozwiązanie jest bliżej niż myślisz —
+            rozwiązanie jest bliżej niż myślisz,
           </span>
           wystarczy wiedzieć, gdzie go szukać!
         </>

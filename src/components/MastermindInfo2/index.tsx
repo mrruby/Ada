@@ -26,12 +26,12 @@ const MastermindInfo2 = () => {
       działać w ten sposób,
     </span>,
     <span key={4}>
-      możesz regularnie przeznaczyć czas na kampanie — zdajesz sobie sprawę, że
+      możesz regularnie przeznaczyć czas na kampanie, zdajesz sobie sprawę, że
       tutaj nie wystarczy zerknięcie z doskoku,
     </span>,
     <span key={5}>
       <span className="font-bold">znasz podstawową obsługę </span>Managera
-      reklam — nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza,
+      reklam, nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza,
       gdzie kliknąć, aby ustawić kampanię i stworzyć zestaw reklam to must have,
     </span>,
     <span key={6}>
@@ -58,7 +58,7 @@ const MastermindInfo2 = () => {
       <span className="font-bold">
         że 100 zł wrzucone do Managera Reklam wystarczy.
       </span>{" "}
-      Niestety, to za mało — minimalny budżet, przy którym zbudujesz lejek i
+      Niestety, to za mało. Minimalny budżet, przy którym zbudujesz lejek i
       Twoje możliwości finansowe omówimy na wirtualnej kawce,
     </span>,
     <span key={3}>
@@ -75,7 +75,7 @@ const MastermindInfo2 = () => {
       do drugiej edycji.
     </span>,
     <span key={5}>
-      <span className="font-bold">jesteś super wymiataczką</span>— tworzysz
+      <span className="font-bold">jesteś super wymiataczką</span>, tworzysz
       kampanie z ROAS-em 20 i wiesz, że już nie może być lepiej. Brawo!
     </span>,
   ]

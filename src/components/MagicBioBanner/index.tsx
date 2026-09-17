@@ -140,7 +140,7 @@ const MagicBioBanner = ({ version }: { version: number }) => {
               </Typography>
               <Typography variant="body" className="text-black">
                 Z zawodu jestem tłumaczką j. francuskiego &amp; angielskiego, a
-                z zamiłowania — kreatywną duszą. Ułatwiam i upraszczam ADSy na
+                z zamiłowania kreatywną duszą. Ułatwiam i upraszczam ADSy na
                 Facebooku i Instagramie. Ze mną zrobisz zdecydowanie więcej niż
                 "promuj post"!
               </Typography>

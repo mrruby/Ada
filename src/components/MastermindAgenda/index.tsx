@@ -153,7 +153,7 @@ const MastermindAgenda = ({ version }: { version: number }) => {
                   konsultacja indywidualna na start - 60 minut
                 </h3>
                 <p className={listItemDesClass}>
-                  Gdy dołączysz do programu, umówimy się na konsultację 1:1 —
+                  Gdy dołączysz do programu, umówimy się na konsultację 1:1,
                   zajrzę do Twojego konta reklamowego i pokażę Ci, jak ogarnąć
                   ustawienia. Dzięki temu gdy na 3 spotkaniu mentoringowym
                   zaczniemy ustawiać reklamy, będziesz 100% gotowa do działania!
@@ -172,7 +172,7 @@ const MastermindAgenda = ({ version }: { version: number }) => {
               >
                 <h3 className={listItemTitleClass}>grupa na Facebooku</h3>
                 <p className={listItemDesClass}>
-                  Jesteśmy w bieżącym kontakcie — nie musisz czekać z pytaniami
+                  Jesteśmy w bieżącym kontakcie. Nie musisz czekać z pytaniami
                   do konsultacji, możesz odezwać się na wspólnej grupie na
                   Facebooku. To miejsce na rozmowy marketingowe i biznesowe oraz
                   networking!
@@ -397,7 +397,7 @@ const MastermindAgenda = ({ version }: { version: number }) => {
                   grupa na Facebooku i dedykowany komunikator
                 </h3>
                 <p className={listItemDesClass}>
-                  Jesteśmy w bieżącym kontakcie — nie musisz czekać z pytaniami
+                  Jesteśmy w bieżącym kontakcie. Nie musisz czekać z pytaniami
                   do office hours, odpowiadamy w każdy dzień roboczy. To miejsca
                   na rozmowy marketingowe i biznesowe oraz networking!
                 </p>
@@ -585,7 +585,7 @@ const MastermindAgenda = ({ version }: { version: number }) => {
                   grupa na Facebooku <br />i dedykowany komunikator
                 </h3>
                 <p className={listItemDesClass}>
-                  Jesteśmy w bieżącym kontakcie — nie musisz czekać z pytaniami
+                  Jesteśmy w bieżącym kontakcie. Nie musisz czekać z pytaniami
                   do office hours, odpowiadamy w każdy dzień roboczy. To miejsca
                   na rozmowy marketingowe i biznesowe oraz networking!
                 </p>

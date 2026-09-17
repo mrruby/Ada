@@ -42,8 +42,8 @@ const MastermindInfo1 = () => {
             wdrożyć te wszystkie „genialne metody na sukces” w życie?
           </li>
           <li className={listItemClass}>
-            &#10003; Nie chcesz powierzać swojego marketingu agencji reklamowej
-            — chcesz samodzielnie dotrzeć do swoich klientów?
+            &#10003; Nie chcesz powierzać swojego marketingu agencji reklamowej,
+            chcesz samodzielnie dotrzeć do swoich klientów?
           </li>
           <li className={listItemClass}>
             &#10003; Masz dość walki z algorytmem Instagrama i Facebooka?
@@ -61,7 +61,7 @@ const MastermindInfo1 = () => {
       <h3 className="md:text-adaSubtitle max-w-[1024px] mx-auto font-medium pt-[90px] pb-[30px]">
         Wiem, jak się teraz czujesz.
         <span className="font-bold"> Rozczarowanie. Frustracja. </span>Chęć
-        zmiany, ale również niepewność — skąd masz wiedzieć, czy to, co robisz,
+        zmiany, ale również niepewność. Skąd masz wiedzieć, czy to, co robisz,
         ma sens?
       </h3>
       <div className="max-w-[1124px] mx-auto mt-14">

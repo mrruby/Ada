@@ -9,7 +9,7 @@ const AdaBanner = () => {
           Kim jestem?
         </h2>
         <p className="lg:text-adaBase lg:w-[530px] pt-[24px] font-medium leading-tight">
-          Z zawodu tłumaczka j. francuskiego & angielskiego, a z zamiłowania —
+          Z zawodu tłumaczka j. francuskiego & angielskiego, a z zamiłowania
           kreatywna dusza. Mam za sobą epizod pracy w audycie finansowym, ale
           moim powołaniem chyba od zawsze był marketing!
         </p>

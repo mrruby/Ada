@@ -133,7 +133,7 @@ const Steps = () => (
       <Reveal>
         <p className="text-center text-[1.05rem] font-bold">
           A jeśli przy którymkolwiek kroku pojawi się „ale jak to właściwie
-          kliknąć?&rdquo; — czytaj dalej. 👇
+          kliknąć?&rdquo;, czytaj dalej. 👇
         </p>
       </Reveal>
     </div>
@@ -166,7 +166,7 @@ const Bridge = () => {
               o 23:00, a Ty już dawno chcesz mieć aktywne reklamy i efekty.
             </p>
             <p className={bridgeParagraph}>
-              Dokładnie od tego jest <strong>MAGIC</strong> — społeczność, w
+              Dokładnie od tego jest <strong>MAGIC</strong>, społeczność, w
               której przedsiębiorczynie wdrażają reklamy pod okiem{" "}
               <strong>5 specjalistek</strong> (Meta Ads, copywriting, grafika,
               koordynacja kampanii, AI i automatyzacje). Konsultujesz{" "}
@@ -206,7 +206,7 @@ const Bridge = () => {
               )}
               <p className="text-[0.82rem] text-ada-jesienInkSoft">
                 {doorsOpen
-                  ? "Sprawdź skrzynkę — czeka tam na Ciebie wiadomość 💌"
+                  ? "Sprawdź skrzynkę. Czeka tam na Ciebie wiadomość 💌"
                   : JESIEN_DOORS_DATE_LABEL}
               </p>
             </div>
@@ -260,8 +260,8 @@ const Finale = () => (
       <Reveal>
         <p className="mx-auto mb-[34px] max-w-[56ch] text-[1.05rem] text-white/90 [&_strong]:text-white">
           Nagranie w wersji za 0 zł jest dostępne tylko do{" "}
-          <strong>{JESIEN_DEADLINE_DAY}, 23:59</strong> — potem trafia do
-          płatnej sprzedaży. Zrób sobie kawę, weź notes i kliknij play. ☕
+          <strong>{JESIEN_DEADLINE_DAY}, 23:59</strong>, potem trafia do płatnej
+          sprzedaży. Zrób sobie kawę, weź notes i kliknij play. ☕
         </p>
       </Reveal>
       <Reveal>
@@ -276,7 +276,7 @@ const Finale = () => (
       <Reveal>
         <p className="mt-[26px] text-[0.92rem] text-white/85 [&_strong]:text-white">
           PS Drzwi do <strong>MAGIC</strong> otwieramy{" "}
-          <strong>{JESIEN_DOORS_DAY}</strong> — jesteś na liście oczekujących,
+          <strong>{JESIEN_DOORS_DAY}</strong>, jesteś na liście oczekujących,
           więc dowiesz się pierwsza. 👀
         </p>
       </Reveal>

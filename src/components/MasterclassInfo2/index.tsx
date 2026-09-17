@@ -3,7 +3,7 @@ import { MasterclassInfoSection } from "helpers/MasterclassInfoSection"
 import React from "react"
 
 const listItems = [
-  "Słyszałaś, że teraz jest boom na reklamy i faktycznie — dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
+  "Słyszałaś, że teraz jest boom na reklamy i faktycznie dostajesz zapytania, ale zamiast podpisywać nowe umowy, odsyłasz do konkurencji?",
   "Chcesz zarabiać więcej, ale prześladuje Cię uczucie, że „umiesz za mało”?",
   "Słyszysz narzekanie, że zasięgi powinny być większe, ale w głębi duszy czujesz, że sam zasięg nie wystarczy i chcesz wiedzieć, jak sprawić, aby oprócz dotarcia do klienta wywołać akcję?",
   "Chciałabyś oferować swoim klientom szerszy zakres usług, aby móc podnosić stawki i dyktować warunki?",

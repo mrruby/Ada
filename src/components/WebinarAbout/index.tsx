@@ -152,7 +152,7 @@ const WebinarAbout = ({ version }: { version: number }) => {
           <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
             Dzięki temu wiem, czego możesz potrzebować{" "}
             <span className="font-bold">
-              Ty — marketerko, pracowniczko, freelancerko, przedsiębiorczynio!
+              Ty, marketerko, pracowniczko, freelancerko, przedsiębiorczynio!
             </span>{" "}
             Moja droga <span className="font-bold">nie była</span> usłana
             różami, ale wiedziałam, że muszę postawić na jedno:{" "}
@@ -172,7 +172,7 @@ const WebinarAbout = ({ version }: { version: number }) => {
           </h3>
           <p className="pt-2 pb-2 text-adaMin md:text-adaBase tracking-wider leading-none">
             Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z
-            zamiłowania — kreatywną duszą. Mam za sobą epizod pracy w audycie
+            zamiłowania kreatywną duszą. Mam za sobą epizod pracy w audycie
             finansowym, ale<> </>
             <span className="font-bold">
               moim powołaniem chyba od zawsze był marketing!

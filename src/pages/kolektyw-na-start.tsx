@@ -103,7 +103,7 @@ const KolektywNaStartPage = () => {
             <a
               className="col-start-2 block w-[220px] transition-opacity duration-200 hover:opacity-[0.78] max-[900px]:col-start-1 max-[900px]:w-[185px] max-[700px]:w-[170px]"
               href="#poczatek"
-              aria-label="Kolektyw MAGIC — początek strony"
+              aria-label="Kolektyw MAGIC, początek strony"
             >
               <StaticImage
                 src="../images/kolektyw-logo.webp"
@@ -167,7 +167,7 @@ const KolektywNaStartPage = () => {
                   <h3>💪 👩‍💻 Twój zespół marzeń</h3>
                   <p>
                     Podczas naszej współpracy będziesz pracować głównie z{" "}
-                    <strong>Nicolą i Pauliną</strong> — to nasze kreatywne serca
+                    <strong>Nicolą i Pauliną</strong>. To nasze kreatywne serca
                     kolektywu MAGIC! Jedna z dziewczyn zostanie Twoją dedykowaną
                     menadżerką projektu (będzie znała Twój biznes jak własną
                     kieszeń), a druga będzie zawsze gotowa do pomocy, gdy
@@ -180,7 +180,7 @@ const KolektywNaStartPage = () => {
                   <h3>👩‍💻 Jak się komunikujemy</h3>
                   <p>
                     Nasza ulubiona platforma komunikacyjna to{" "}
-                    <strong>Trello</strong> — to tam dzieje się cała magia!
+                    <strong>Trello</strong>. To tam dzieje się cała magia!
                     Dlaczego akurat Trello? Bo każda z nas jest wtedy na bieżąco
                     z Twoim projektem, możemy szybko zareagować w razie nagłych
                     sytuacji, a Ty masz wszystko w jednym miejscu. Oczywiście,
@@ -194,11 +194,11 @@ const KolektywNaStartPage = () => {
                   <p>
                     <strong>
                       Raz w miesiącu organizujemy spotkanie online
-                    </strong>{" "}
-                    — to czas, kiedy razem przeglądamy, co udało nam się
+                    </strong>
+                    . To czas, kiedy razem przeglądamy, co udało nam się
                     osiągnąć, analizujemy wyniki i układamy plany na kolejne
                     tygodnie. To także moment, gdy możesz podzielić się swoimi
-                    pomysłami i marzeniami dotyczącymi rozwoju biznesu — a my
+                    pomysłami i marzeniami dotyczącymi rozwoju biznesu, a my
                     podpowiemy Ci, jak wykorzystać do tego kampanie reklamowe.
                   </p>
                 </div>
@@ -224,12 +224,13 @@ const KolektywNaStartPage = () => {
                 <InfoCard>
                   <h3>
                     🎨 Twoja identyfikacja wizualna
-                    <br />— fundament dobrych kreacji
+                    <br />
+                    To fundament dobrych kreacji
                   </h3>
                   <p>
                     Zanim zaczniemy tworzyć, bardzo ważne jest dla nas poznanie
                     Twojej marki! Dlatego na samym początku{" "}
-                    <strong>zapytamy Cię o identyfikację wizualną</strong> —
+                    <strong>zapytamy Cię o identyfikację wizualną</strong>,
                     nawet najprostszą. Czy masz już ustalone kolory, fonty, styl
                     graficzny? A może korzystasz z konkretnych elementów
                     wizualnych?
@@ -239,7 +240,7 @@ const KolektywNaStartPage = () => {
                       Jeśli jeszcze nie masz spójnej identyfikacji wizualnej,
                     </strong>{" "}
                     możemy dla Ciebie przygotować prostą identyfikację wizualną
-                    (za dodatkową opłatą) — dobierzemy zestaw fontów, kolorów,
+                    za dodatkową opłatą. Dobierzemy zestaw fontów, kolorów,
                     charakterystyczne elementy jak ikonki czy kształty, a także
                     szablony na Instagram i Facebook. To inwestycja, która
                     sprawi, że Twoja marka będzie spójna i bardziej
@@ -263,8 +264,8 @@ const KolektywNaStartPage = () => {
                       >
                         ✅
                       </span>
-                      <strong>Logotyp</strong> (w różnych wersjach — kolorowej,
-                      czarno-białej, poziomej, pionowej)
+                      <strong>Logotyp</strong> w wersji kolorowej,
+                      czarno-białej, poziomej i pionowej
                     </li>
                     <li className="relative pl-[21px]">
                       <span
@@ -347,9 +348,9 @@ const KolektywNaStartPage = () => {
                       udostępniamy je w Canvie,
                     </strong>{" "}
                     gdzie możesz zostawić swoje uwagi i komentarze. To nasze
-                    wspólne studio kreatywne! Jeśli potrzebujesz czegoś więcej —
+                    wspólne studio kreatywne! Jeśli potrzebujesz czegoś więcej,
                     materiałów brandingowych, grafik na stronę czy innych
-                    projektów — chętnie wycenimy to osobno. Lubimy graficzne
+                    projektów, chętnie wycenimy to osobno. Lubimy graficzne
                     wyzwania!
                   </p>
                   <h3 className="!mt-7">
@@ -357,7 +358,7 @@ const KolektywNaStartPage = () => {
                   </h3>
                   <p>
                     Wszystkie komentarze do projektów graficznych najlepiej
-                    zostawiać bezpośrednio w <strong>Canvie</strong> — dzięki
+                    zostawiać bezpośrednio w <strong>Canvie</strong>. Dzięki
                     temu nic się nie zgubi, a my widzimy dokładnie, o co Ci
                     chodzi.
                   </p>
@@ -404,8 +405,8 @@ const KolektywNaStartPage = () => {
                     ale zazwyczaj jesteśmy znacznie szybsze! Czasem może się
                     zdarzyć, że powiadomienie zginie gdzieś po drodze, więc
                     jeśli cisza trwa dłużej niż zwykle,{" "}
-                    <strong>śmiało oznaczaj nas ponownie na Trello</strong> —
-                    nie obrażamy się, wręcz przeciwnie!
+                    <strong>śmiało oznaczaj nas ponownie na Trello</strong>, nie
+                    obrażamy się, wręcz przeciwnie!
                   </p>
                 </div>
 
@@ -418,7 +419,7 @@ const KolektywNaStartPage = () => {
                     Wiele zależy od tego, jak szybko akceptujesz teksty i
                     grafiki oraz liczby poprawek. Pamiętaj, że jeśli coś
                     dostarczysz później (na przykład stronę z ofertą), to
-                    automatycznie przesuwa nam termin — ale zawsze Cię o tym
+                    automatycznie przesuwa nam termin, ale zawsze Cię o tym
                     poinformujemy!
                   </p>
                 </div>
@@ -487,8 +488,8 @@ const KolektywNaStartPage = () => {
                     się{" "}
                     <strong>
                       3 razy w ciągu dnia, czasem raz na dwa tygodnie
-                    </strong>{" "}
-                    — wszystko zależy od tego, co się dzieje z kampaniami. Gdy
+                    </strong>
+                    . Wszystko zależy od tego, co się dzieje z kampaniami. Gdy
                     przychodzą nam do głowy nowe pomysły lub chcemy z Tobą
                     przedyskutować jakąś strategię, organizujemy burzę mózgów na{" "}
                     <strong>Trello oraz na comiesięcznych spotkaniach.</strong>{" "}
@@ -541,7 +542,7 @@ const KolektywNaStartPage = () => {
                 <article>
                   <h3>✅ Co robimy z pasją</h3>
                   <p>
-                    Skupiamy się na tym, co robimy najlepiej —{" "}
+                    Skupiamy się na tym, co robimy najlepiej, czyli{" "}
                     <strong>
                       kampaniach reklamowych i kreacjach, które sprzedają.
                     </strong>
@@ -561,7 +562,7 @@ const KolektywNaStartPage = () => {
                       tworzenia newsletterów czy optymalizacji stron.
                     </strong>{" "}
                     Część z tych usług świadczymy w ramach innych pakietów,
-                    część zlecamy świetnym specjalistom — jeśli będziesz
+                    część zlecamy świetnym specjalistom. Jeśli będziesz
                     potrzebować czegoś wychodzącego poza zakres naszej
                     współpracy, chętnie przygotujemy dla Ciebie wycenę lub kogoś
                     polecimy!
@@ -575,7 +576,7 @@ const KolektywNaStartPage = () => {
                     <strong>kampanie są w 100% pod naszą opieką.</strong>{" "}
                     Oczywiście możesz zaglądać na konto (zachęcamy!), ale{" "}
                     <strong>
-                      wszelkie zmiany wprowadzamy tylko my — osoby z kolektywu
+                      wszelkie zmiany wprowadzamy tylko my, osoby z kolektywu
                       MAGIC.
                     </strong>{" "}
                     Jeśli wprowadzisz zmiany samodzielnie, nie będziemy mogły
@@ -597,8 +598,8 @@ const KolektywNaStartPage = () => {
                 <div>
                   <h3>👀 Okres poznawania się</h3>
                   <p>
-                    Pierwsze <strong>3 miesiące</strong> to nasz okres testowy —
-                    czas, kiedy poznajemy się nawzajem, sprawdzamy, co możemy
+                    Pierwsze <strong>3 miesiące</strong> to nasz okres testowy.
+                    To czas, kiedy poznajemy się nawzajem, sprawdzamy, co możemy
                     wspólnie zdziałać i czy dobrze nam się razem pracuje. W tym
                     czasie{" "}
                     <strong>
@@ -614,12 +615,12 @@ const KolektywNaStartPage = () => {
                   <h3>🚀 Nasza filozofia tworzenia</h3>
                   <p>
                     Kreacje reklamowe mają być piękne i spójne z Twoją marką,
-                    ale przede wszystkim — mają sprzedawać!{" "}
+                    ale przede wszystkim mają sprzedawać!{" "}
                     <strong>
                       Wierzymy, że najlepsza grafika to ta, która przynosi Ci
                       klientów i zyski.
                     </strong>{" "}
-                    Nie martw się — nie poświęcimy estetyki, ale skuteczność
+                    Nie martw się. Nie poświęcimy estetyki, ale skuteczność
                     zawsze będzie na pierwszym miejscu.
                   </p>
                 </div>
@@ -631,7 +632,7 @@ const KolektywNaStartPage = () => {
             <p className="m-0 text-sm leading-[1.35] italic">
               Przygotowane przez zespół kolektywu MAGIC ✨
               <br />
-              Masz pytania? Napisz do nas na Trello — zawsze się cieszymy, gdy
+              Masz pytania? Napisz do nas na Trello. Zawsze się cieszymy, gdy
               możemy pomóc!
             </p>
           </footer>
@@ -643,7 +644,7 @@ const KolektywNaStartPage = () => {
 
 export const Head = () => (
   <SEO
-    title="Kolektyw MAGIC — zasady współpracy"
+    title="Kolektyw MAGIC. Zasady współpracy"
     description="Przewodnik po współpracy z kolektywem MAGIC: komunikacja, przygotowanie kampanii, materiały, raportowanie i pierwsze wspólne kroki."
   />
 )

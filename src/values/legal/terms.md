@@ -24,7 +24,7 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 5. **Konsument** – osoba fizyczna, zawierająca ze Sprzedawcą Umowę niezwiązaną bezpośrednio z jej działalnością gospodarczą lub zawodową;
 6. **Produkty** – Towary, Treści Cyfrowe lub Usługi Podstawowe;
 7. **Przedsiębiorca na prawach konsumenta (PNPK)** – osoba fizyczna zawierająca ze Sprzedawcą Umowę bezpośrednio związaną z jej działalnością gospodarczą, gdy z treści Umowy wynika, że nie posiada ona dla tej osoby charakteru zawodowego, wynikającego w szczególności z przedmiotu wykonywanej przez nią działalności gospodarczej, udostępnionego na podstawie przepisów o Centralnej Ewidencji i Informacji o Działalności Gospodarczej;
-8. **Przedsprzedaż** — proces zbierania przez Sprzedawcę zamówień na Produkty, które będą dostępne w sprzedaży od określonego terminu, i zawierania Umów przed planowanym terminem wprowadzenia Produktów do sprzedaży;
+8. **Przedsprzedaż** oznacza proces zbierania przez Sprzedawcę zamówień na Produkty, które będą dostępne w sprzedaży od określonego terminu, i zawierania Umów przed planowanym terminem wprowadzenia Produktów do sprzedaży;
 9. **Regulamin** – regulamin Serwisu internetowego, dostępny pod adresem https://adrianna.com.pl/terms/;
 10. **Serwis** – strona internetowa działająca pod adresem https://adrianna.com.pl i jej rozszerzeniami;
 11. **Sprzedawca** – Slow Marketing Adrianna Promis-Urbas z siedzibą w Raciborzu przy ul. Mała 2, 47-400, NIP 6391970911;
@@ -42,7 +42,7 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 - inne formy interakcji za pomocą danych w postaci cyfrowej;
 
 20. **Usługi Podstawowe** – wszelkie usługi świadczone przez Sprzedawcę w ramach jego podstawowej działalności związanej ze sprzedażą produktów cyfrowych;
-21. **Usługi Elektroniczne** — wszelkie usługi elektroniczne świadczone przez Sprzedawcę na rzecz Kupującego za pośrednictwem Serwisu;
+21. **Usługi Elektroniczne** oznaczają wszelkie usługi elektroniczne świadczone przez Sprzedawcę na rzecz Kupującego za pośrednictwem Serwisu;
 22. **Zawartość** – treści zamieszczone przez Kupującego w Serwisie.
 
 **§ 2. Postanowienia wstępne**
@@ -93,8 +93,8 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 5. Kupujący oświadcza, że wszelkie dane podane przez niego w formularzu zamówienia są prawdziwe.
 6. Proces składania zamówienia kończy kliknięcie w przycisk finalizujący zamówienie. Kliknięcie w przycisk finalizujący zamówienie stanowi złożenie przez Kupującego oferty nabycia wybranych Produktów od Sprzedawcy.
 7. Po otrzymaniu zamówienia Sprzedawca, najpóźniej w terminie 7 dni od dnia otrzymania zamówienia, może:
-   a) przyjąć ofertę złożoną przez Kupującego poprzez przyjęcie zamówienia do realizacji — w takim przypadku Umowa zostaje zawarta z chwilą doręczenia Kupującemu wiadomości potwierdzającej przyjęcie zamówienia do realizacji,
-   b) może nie przyjąć oferty Kupującego i anulować złożone zamówienie — w takim przypadku Umowa nie zostaje zawarta, a Kupującemu są zwracane wszystkie płatności, o ile Kupujący ich dokonał na etapie składania zamówienia.
+   a) przyjąć ofertę złożoną przez Kupującego poprzez przyjęcie zamówienia do realizacji, w takim przypadku Umowa zostaje zawarta z chwilą doręczenia Kupującemu wiadomości potwierdzającej przyjęcie zamówienia do realizacji,
+   b) może nie przyjąć oferty Kupującego i anulować złożone zamówienie, w takim przypadku Umowa nie zostaje zawarta, a Kupującemu są zwracane wszystkie płatności, o ile Kupujący ich dokonał na etapie składania zamówienia.
 
 **§ 5. Przedsprzedaż**
 
@@ -134,7 +134,7 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 5. Jeżeli dana Treść Cyfrowa może być pobrana przez Użytkownika, Sprzedawca może wprowadzić limit pobrań danej Treści Cyfrowej. W przypadku wprowadzenia limitu pobrań Sprzedawca wyraźnie wskazuje Kupującemu, ile razy Kupujący może pobrać daną Treść Cyfrową.
 6. Sprzedawca może wprowadzić ograniczenia czasowe w zakresie dostępu do danej Treści Cyfrowej. W przypadku wprowadzenia ograniczeń czasowych Sprzedawca wyraźnie wskazuje Kupującemu, przez jaki czas Kupujący będzie posiadał dostęp do danej Treści Cyfrowej.
 7. Treść Cyfrową uważa się za dostarczoną w chwili, gdy Treść Cyfrowa lub środek pozwalający na uzyskanie dostępu do Treści Cyfrowej zostały udostępnione Kupującemu lub gdy Kupujący uzyskał dostęp do Treści Cyfrowej.
-8. Sprzedawca dostarcza Treści Cyfrowe w wersji obowiązującej na dzień dostarczenia Treści Cyfrowej i nie zapewnia Aktualizacji po dniu dostarczenia Treści Cyfrowej — chyba że w opisie Treści Cyfrowych zostanie wyraźnie wskazane inaczej.
+8. Sprzedawca dostarcza Treści Cyfrowe w wersji obowiązującej na dzień dostarczenia Treści Cyfrowej i nie zapewnia Aktualizacji po dniu dostarczenia Treści Cyfrowej, chyba że w opisie Treści Cyfrowych zostanie wyraźnie wskazane inaczej.
 9. Z zastrzeżeniem przepisów o dozwolonym użytku, Kupujący może wykorzystywać Treści Cyfrowe wyłącznie na potrzeby własne.
 10. Jeżeli Kupujący będzie chciał wykorzystać Treści Cyfrowe w swojej działalności gospodarczej lub zawodowej, jest zobowiązany zwrócić się do Sprzedawcy o udzielenie licencji na daną Treść Cyfrową.
 11. Sprzedawca jest uprawniony do dokonywania zmian w zakresie Treści Cyfrowych w trakcie trwania Umowy, z wyjątkiem Treści Cyfrowych dostarczanych w sposób jednorazowy.
@@ -161,7 +161,7 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 
 1. Konsument lub PNPK ma prawo odstąpić od Umowy zawartej za pośrednictwem Serwisu bez podawania przyczyny w terminie:
    a) 14 dni od dnia objęcia Towaru w posiadanie przez Konsumenta lub PNPK, lub wskazaną przez Konsumenta lub PNPK osobę trzecią, inną niż przewoźnik;
-   b) 14 dni od dnia zawarcia Umowy — w przypadku innych Umów niż umowa sprzedaży Towarów.
+   b) 14 dni od dnia zawarcia Umowy, w przypadku innych Umów niż umowa sprzedaży Towarów.
 2. Prawo do odstąpienia od Umowy nie przysługuje w stosunku do Umowy:
    a) o świadczenie Usług, za które Kupujący jest zobowiązany do zapłaty Ceny, jeżeli Sprzedawca wykonał w pełni Usługę za wyraźną i uprzednią zgodą Kupującego;
    b) w której przedmiotem świadczenia jest Towar nieprefabrykowany, wyprodukowany według specyfikacji Konsumenta albo PNPK lub służący zaspokojeniu jego zindywidualizowanych potrzeb;
@@ -214,8 +214,8 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 2. Do Umów zawieranych przez Konsumenta lub PNPK stosuje się przepisy o odpowiedzialności za zgodność Treści Cyfrowych z Umową zawarte w ustawie o prawach konsumenta.
 3. Sprzedawca jest odpowiedzialny względem Konsumenta oraz PNPK za zgodność Treści Cyfrowych z Umową.
 4. W przypadku Treści Cyfrowych:
-   a) dostarczanych jednorazowo lub w częściach — Sprzedawca ponosi odpowiedzialność za brak zgodności Treści Cyfrowych z Umową, który istniał w chwili ich dostarczenia i ujawnił się w ciągu dwóch lat od tej chwili;
-   b) dostarczanych w sposób ciągły — Sprzedawca ponosi odpowiedzialność za brak zgodności Treści Cyfrowych z Umową, który wystąpił lub ujawnił się w czasie, w którym zgodnie z Umową miały być dostarczane.
+   a) dostarczanych jednorazowo lub w częściach, Sprzedawca ponosi odpowiedzialność za brak zgodności Treści Cyfrowych z Umową, który istniał w chwili ich dostarczenia i ujawnił się w ciągu dwóch lat od tej chwili;
+   b) dostarczanych w sposób ciągły, Sprzedawca ponosi odpowiedzialność za brak zgodności Treści Cyfrowych z Umową, który wystąpił lub ujawnił się w czasie, w którym zgodnie z Umową miały być dostarczane.
 
 **§ 16. Doprowadzenie Treści Cyfrowych do zgodności z Umową**
 
@@ -270,7 +270,7 @@ Na potrzeby Regulaminu przyjmuje się następujące znaczenie poniższych poję�
 
 **§ 22. Opinie**
 
-1. Sprzedawca może udostępnić Kupującym możliwość zamieszczania opinii o Serwisie, Sprzedawcy lub Towarach — w ramach Serwisu lub serwisów zewnętrznych.
+1. Sprzedawca może udostępnić Kupującym możliwość zamieszczania opinii o Serwisie, Sprzedawcy lub Towarach, w ramach Serwisu lub serwisów zewnętrznych.
 2. Zamieszczenie opinii jest możliwe po skorzystaniu ze Serwisu, w szczególności po zawarciu Umowy.
 3. Kupujący powinien formułować opinie w sposób rzetelny, uczciwy i merytoryczny, bez używania wulgaryzmów i innych słów powszechnie uznawanych za obraźliwe.
 4. Zakazane jest zamieszczanie opinii:

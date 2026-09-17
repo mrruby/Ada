@@ -30,7 +30,7 @@ const questionsList: IQuestionsList[] = [
   {
     question: "Co jeśli nie będę mogła pojawić się na którymś spotkaniu?",
     answer:
-      "Nasze spotkania będą nagrywane i udostępnione tylko dla osób uczestniczących w programie. Jeśli nie dotrzesz na któreś spotkanie, będziesz mogła nadrobić materiał. Z zadaniem pytań nie musisz czekać do kolejnego spotkania — będziesz mogła zadać je na dedykowanej grupie na Facebooku, gdzie będziemy w stałym kontakcie!",
+      "Nasze spotkania będą nagrywane i udostępnione tylko dla osób uczestniczących w programie. Jeśli nie dotrzesz na któreś spotkanie, będziesz mogła nadrobić materiał. Z zadaniem pytań nie musisz czekać do kolejnego spotkania, będziesz mogła zadać je na dedykowanej grupie na Facebooku, gdzie będziemy w stałym kontakcie!",
   },
 ]
 

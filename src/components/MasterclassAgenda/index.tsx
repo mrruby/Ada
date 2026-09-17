@@ -56,7 +56,7 @@ const listItems5 = [
   "chcesz nauczyć się, jak krok po kroku ustawiać i optymalizować kampanie reklamowe na Facebooku i Instagramie i dzięki nim skutecznie pozyskiwać klientów,",
   "lubisz optymalizować swoją pracę, pracować mniej i mądrzej i w ten sposób chcesz prowadzić reklamy,",
   "chcesz uczyć się online, w dowolnym miejscu i czasie,",
-  "masz dość teoretycznych kursów — chcesz poznać praktykę i szybko zacząć dzięki niej zarabiać,",
+  "masz dość teoretycznych kursów, chcesz poznać praktykę i szybko zacząć dzięki niej zarabiać,",
   "traktujesz udział w masterclassach jako inwestycję w rozwój i pieniądze.",
 ]
 
@@ -64,7 +64,7 @@ const listItems6 = [
   "Zdobędziesz konkretną wiedzę o reklamach z instrukcją krok po kroku i wskazaniem palcem co i jak.",
   "Dostajesz możliwość odtworzenia nagrania w dowolnym czasie.",
   "Korzystasz z masterclassów przez 12 miesięcy tyle razy, ile potrzebujesz.",
-  "Nauczysz się ustawiać kampanie reklamowe od podstaw — nawet jeśli jeszcze nigdy tego nie robiłaś.",
+  "Nauczysz się ustawiać kampanie reklamowe od podstaw, nawet jeśli jeszcze nigdy tego nie robiłaś.",
 ]
 
 const listItems7 = [
@@ -107,12 +107,12 @@ const plusListItems2 = [
   <p key="time">
     <span className="font-bold">
       możesz regularnie przeznaczyć czas na kampanie
-    </span>{" "}
-    — zdajesz sobie sprawę, że tutaj nie wystarczy zerknięcie z doskoku
+    </span>
+    , zdajesz sobie sprawę, że tutaj nie wystarczy zerknięcie z doskoku
   </p>,
   <p key="knowledge">
-    <span className="font-bold">znasz podstawową obsługę Managera reklam</span>{" "}
-    — nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza, gdzie
+    <span className="font-bold">znasz podstawową obsługę Managera reklam</span>,
+    nie musisz wyklikiwać kampanii z zamkniętymi oczami, ale wiedza, gdzie
     kliknąć, aby ustawić kampanię i stworzyć zestaw reklam to must have
   </p>,
   <p key="ready">
@@ -141,7 +141,7 @@ const minusListItems1 = [
     <span className="font-bold">
       myślisz, że 100 zł wrzucone do Managera Reklam wystarczy
     </span>{" "}
-    Niestety, to za mało — minimalny budżet, przy którym zbudujesz lejek i Twoje
+    Niestety, to za mało. Minimalny budżet, przy którym zbudujesz lejek i Twoje
     możliwości finansowe omówimy na wirtualnej kawce
   </p>,
 ]
@@ -160,9 +160,9 @@ const minusListItems2 = [
     kolejnej edycji
   </p>,
   <p key="expert">
-    jesteś super wymiataczką{" "}
+    jesteś super wymiataczką,{" "}
     <span className="font-bold">
-      — tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz. Brawo!
+      tworzysz kampanie z ROAS-em 20 i wiesz, że ogarniasz. Brawo!
     </span>
   </p>,
 ]
