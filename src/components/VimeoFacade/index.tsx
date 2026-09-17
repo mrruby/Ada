@@ -4,6 +4,7 @@ interface VimeoFacadeProps {
   videoId: string
   title: string
   aspectRatio?: "16:9" | "9:16"
+  thumbnailSrc?: string
   eager?: boolean
   sizes?: string
   maxThumbnailWidth?: 640 | 1280 | 1920
@@ -13,6 +14,7 @@ const VimeoFacade = ({
   videoId,
   title,
   aspectRatio = "16:9",
+  thumbnailSrc,
   eager = false,
   sizes = "(max-width: 640px) 100vw, 640px",
   maxThumbnailWidth = 640,
@@ -100,8 +102,8 @@ const VimeoFacade = ({
           }}
         >
           <img
-            src={fallbackThumbnail}
-            srcSet={thumbnailSrcSet}
+            src={thumbnailSrc || fallbackThumbnail}
+            srcSet={thumbnailSrc ? undefined : thumbnailSrcSet}
             sizes={sizes}
             alt={title}
             loading="lazy"
