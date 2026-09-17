@@ -285,6 +285,9 @@
   background: var(--yellow);
   color: #1b1530;
   font-size: 0.9rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .magic-jesien .topbar .wrap {
   display: flex;

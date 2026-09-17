@@ -71,7 +71,10 @@ export default function FAQ({ promotionActive }: { promotionActive: boolean }) {
           <div className="faq">
             <details>
               <summary>🔍 Na jakiej platformie funkcjonuje MAGIC?</summary>
-              <p>MAGIC działa na platformie Circle.</p>
+              <p>
+                MAGIC działa na platformie Circle i ma wygodną aplikację! Możesz
+                więc korzystać z platformy nawet w podróży.
+              </p>
             </details>
             <details>
               <summary>💎 Co sprawia, że MAGIC jest wyjątkowy?</summary>
