@@ -4,13 +4,7 @@ import "react-multi-carousel/lib/styles.css"
 import { CustomLeftArrow, CustomRightArrow } from "components/Layout/arrows"
 import VimeoFacade from "components/VimeoFacade"
 
-const CASE_STUDY_VIDEOS = [
-  "1155918940",
-  "1155051959",
-  "1155053529",
-  "1156039661",
-  "1158468977",
-]
+import { CASE_STUDY_VIDEOS } from "./videos"
 
 const videoResponsive = {
   desktop: { breakpoint: { max: 4000, min: 1024 }, items: 3 },
