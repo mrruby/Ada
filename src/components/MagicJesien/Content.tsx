@@ -70,15 +70,16 @@ export const Audience = () => (
           </p>
         </article>
         <article className="card prof hover-lift">
-          <div className="em">🧑‍💻</div>
-          <b>Freelancerka / social media managerka</b>
+          <div className="em">🔑</div>
+          <b>Przedsiębiorczyni, która zlecała reklamy agencji</b>
           <p className="pain">
-            „Wydaję pieniądze klientki, więc boję się cokolwiek testować.”
+            „Raporty, które otrzymywałam, były niejasne i nic z nich nie
+            rozumiałam.”
           </p>
           <p>
-            Reklamy dopisujesz do oferty ze wsparciem przy pierwszej kampanii
-            dla klientki: zaczynasz od własnego budżetu, konsultujesz konto
-            klientki tak samo jak swoje.
+            Spróbuj samodzielnie. Jasne, to zajmie nieco więcej czasu, ale
+            zdejmie z głowy duże zobowiązanie finansowe i pomoże działać w Twoim
+            tempie.
           </p>
         </article>
         <article className="card prof hover-lift">
@@ -104,16 +105,15 @@ export const Audience = () => (
           </p>
         </article>
         <article className="card prof hover-lift">
-          <div className="em">🔑</div>
-          <b>Przedsiębiorczyni, która zlecała reklamy agencji</b>
+          <div className="em">🧑‍💻</div>
+          <b>Freelancerka / social media managerka</b>
           <p className="pain">
-            „Raporty, które otrzymywałam, były niejasne i nic z nich nie
-            rozumiałam.”
+            „Wydaję pieniądze klientki, więc boję się cokolwiek testować.”
           </p>
           <p>
-            Spróbuj samodzielnie. Jasne, to zajmie nieco więcej czasu, ale
-            zdejmie z głowy duże zobowiązanie finansowe i pomoże działać w Twoim
-            tempie.
+            Reklamy dopisujesz do oferty ze wsparciem przy pierwszej kampanii
+            dla klientki: zaczynasz od własnego budżetu, konsultujesz konto
+            klientki tak samo jak swoje.
           </p>
         </article>
       </div>
@@ -618,7 +618,7 @@ export const Calendar = () => (
         aria-label="Przykładowy miesiąc w MAGIC: spotkania i tematy do ogarnięcia"
       >
         <div className="mhead">
-          <b>Październik 2026</b>
+          <b>Przykładowy miesiąc w MAGIC</b>
           <span>
             🗓️ spotkania na żywo   🟨 🟧 🟪 🟩 to, co ogarniasz w tym miesiącu
           </span>
