@@ -281,12 +281,28 @@
     transition: none !important;
   }
 }
+.magic-jesien {
+  --topbar-height: 60px;
+}
+@media (max-width: 600px) {
+  .magic-jesien {
+    --topbar-height: 120px;
+  }
+}
+.magic-jesien .topbar-spacer {
+  height: var(--topbar-height);
+}
+.magic-jesien main [id] {
+  scroll-margin-top: calc(var(--topbar-height) + 1rem);
+}
 .magic-jesien .topbar {
   background: var(--yellow);
   color: #1b1530;
   font-size: 0.9rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
 }
 .magic-jesien .topbar .wrap {

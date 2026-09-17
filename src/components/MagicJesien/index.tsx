@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "components/Layout"
@@ -23,10 +23,38 @@ import "./styles.css"
 
 export default function MagicJesien() {
   const promotionActive = usePromotion()
+  const topbarRef = useRef<HTMLDivElement>(null)
+  const [topbarHeight, setTopbarHeight] = useState<number>()
+
+  useEffect(() => {
+    const topbar = topbarRef.current
+    if (!topbar) return
+
+    const updateHeight = () =>
+      setTopbarHeight(topbar.getBoundingClientRect().height)
+    updateHeight()
+    const observer = new ResizeObserver(updateHeight)
+    observer.observe(topbar)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <Layout showHeaderAndFooter={false}>
-      <div className="magic-jesien">
-        <div className="topbar" role="region" aria-label="Promocja">
+      <div
+        className="magic-jesien"
+        style={
+          {
+            "--topbar-height": topbarHeight ? `${topbarHeight}px` : undefined,
+          } as React.CSSProperties
+        }
+      >
+        <div className="topbar-spacer" aria-hidden="true" />
+        <div
+          className="topbar"
+          role="region"
+          aria-label="Promocja"
+          ref={topbarRef}
+        >
           <div className="wrap">
             <span>
               {promotionActive ? (
