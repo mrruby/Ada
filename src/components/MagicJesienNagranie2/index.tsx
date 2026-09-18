@@ -20,6 +20,7 @@ import FAQ from "../MagicJesien/FAQ"
 import VideoOpinions from "../MagicJesien/VideoOpinions"
 import { Countdown, usePromotion } from "../MagicJesien/promotion"
 import "../MagicJesien/styles.css"
+import "./styles.css"
 
 const JESIEN_NAGRANIE2_VIDEO_URL =
   "https://www.youtube.com/embed/zD1wvQRif-Q?si=Woo3MSE1Y_RJe18q"
@@ -88,7 +89,7 @@ export default function MagicJesienNagranie2() {
         <main>
           <header className="hero" id="top">
             <div className="mx-auto w-full max-w-[880px] px-5 pb-[clamp(2rem,5vw,4rem)] text-center">
-              <p className="brand-h1 mx-auto mb-8 max-w-none text-[clamp(1.4rem,3vw,2rem)]">
+              <p className="recording-intro">
                 Nagranie masterclassu „Mały budżet, wysoki sezon” o reklamach na
                 jesień i zimę tego roku – zabierz zeszyt i rób notatki:
               </p>
@@ -102,7 +103,7 @@ export default function MagicJesienNagranie2() {
                   className="aspect-video w-full rounded-[14px] border-0 bg-ada-jesienInk"
                 />
               </div>
-              <h1 className="brand-h1 mx-auto mt-8 max-w-none">
+              <h1 className="recording-title">
                 Czas na działanie! Dołącz do Magic i odbierz swój Magic Plan
               </h1>
             </div>

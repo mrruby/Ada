@@ -1,0 +1,20 @@
+.magic-jesien .recording-intro,
+.magic-jesien .recording-title {
+  color: var(--orange);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  max-width: 100%;
+  text-wrap: balance;
+}
+
+.magic-jesien .recording-intro {
+  margin: 0 auto 2rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.35;
+}
+
+.magic-jesien .recording-title {
+  margin: 2rem auto 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
