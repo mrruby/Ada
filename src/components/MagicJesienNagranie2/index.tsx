@@ -21,8 +21,8 @@ import VideoOpinions from "../MagicJesien/VideoOpinions"
 import { Countdown, usePromotion } from "../MagicJesien/promotion"
 import "../MagicJesien/styles.css"
 
-// TODO: replace VIDEO_ID with the actual YouTube training recording
-const JESIEN_NAGRANIE2_VIDEO_URL = "https://www.youtube.com/embed/VIDEO_ID"
+const JESIEN_NAGRANIE2_VIDEO_URL =
+  "https://www.youtube.com/embed/zD1wvQRif-Q?si=Woo3MSE1Y_RJe18q"
 
 export default function MagicJesienNagranie2() {
   const promotionActive = usePromotion()
@@ -60,14 +60,9 @@ export default function MagicJesienNagranie2() {
         >
           <div className="wrap">
             <span>
-              {promotionActive ? (
-                <>
-                  ⏳ Ceny promocyjne do <strong>28.09, do końca dnia</strong>.
-                  Zostało:
-                </>
-              ) : (
-                "Dołącz do MAGIC i rozwijaj swój biznes z naszym zespołem."
-              )}
+              {promotionActive
+                ? "Cena specjalna + MAGIC Plan do wyczerpania liczby miejsc lub"
+                : "Dołącz do MAGIC i rozwijaj swój biznes z naszym zespołem."}
             </span>
             {promotionActive && <Countdown />}
             <a className="btn btn-primary btn-sm" href="#pakiety">
@@ -93,6 +88,10 @@ export default function MagicJesienNagranie2() {
         <main>
           <header className="hero" id="top">
             <div className="mx-auto w-full max-w-[880px] px-5 pb-[clamp(2rem,5vw,4rem)] text-center">
+              <p className="brand-h1 mx-auto mb-8 max-w-none text-[clamp(1.4rem,3vw,2rem)]">
+                Nagranie masterclassu „Mały budżet, wysoki sezon” o reklamach na
+                jesień i zimę tego roku – zabierz zeszyt i rób notatki:
+              </p>
               <div className="relative w-full">
                 <iframe
                   src={JESIEN_NAGRANIE2_VIDEO_URL}
