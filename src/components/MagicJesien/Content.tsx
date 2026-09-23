@@ -901,7 +901,7 @@ export const Results = () => (
           </div>
           <div className="r2">
             <span>cel</span>
-            <b>formularz kontaktowy</b>
+            <b>pozyskanie kontaktów sprzedażowych</b>
           </div>
         </article>
         <article className="card res">
@@ -919,6 +919,57 @@ export const Results = () => (
           <div className="r2">
             <span>wydana kwota</span>
             <b>236,99 zł</b>
+          </div>
+        </article>
+        <article className="card res">
+          <div className="rh2">
+            <span>Kampania sprzedażowa</span>
+            <i>Menedżer Reklam</i>
+          </div>
+          <b>
+            <span>40</span> zakupów
+          </b>
+          <div className="r2">
+            <span>wartość konwersji</span>
+            <b>36 224 zł</b>
+          </div>
+          <div className="r2">
+            <span>wydana kwota</span>
+            <b>2185,20 zł</b>
+          </div>
+        </article>
+        <article className="card res">
+          <div className="rh2">
+            <span>Kampania sprzedażowa</span>
+            <i>Menedżer Reklam</i>
+          </div>
+          <b>
+            <span>103</span> zakupy
+          </b>
+          <div className="r2">
+            <span>koszt wyniku</span>
+            <b>4,33 zł</b>
+          </div>
+          <div className="r2">
+            <span>wydana kwota</span>
+            <b>446,46 zł</b>
+          </div>
+        </article>
+        <article className="card res">
+          <div className="rh2">
+            <span>Kampania sprzedażowa</span>
+            <i>Menedżer Reklam</i>
+          </div>
+          <b>
+            <span>7</span> zakupów
+          </b>
+          <div className="r2">
+            <span>wartość konwersji</span>
+            <b>5940 zł</b>
+          </div>
+          <div className="r2">
+            <span>wydana kwota</span>
+            <b>96,04 zł</b>
           </div>
         </article>
       </div>
