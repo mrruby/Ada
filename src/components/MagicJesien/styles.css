@@ -339,6 +339,11 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+.magic-jesien .magic-status {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: 600;
+}
 .magic-jesien .logobar .wrap {
   display: flex;
   align-items: center;
