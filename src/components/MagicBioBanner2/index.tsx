@@ -112,6 +112,7 @@ const MagicBioBanner2 = ({ version }: { version: number }) => {
                 title={peopleContent[4].title}
                 description={peopleContent[4].description}
                 img={peopleContent[4].img}
+                centered
               />
             </div>
           )}
