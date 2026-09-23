@@ -66,6 +66,7 @@ export default function MagicJesien() {
                 "Dołącz do MAGIC i rozwijaj swój biznes z naszym zespołem."
               )}
             </span>
+            <span>Status Magic Planów: pozostało 13</span>
             {promotionActive && <Countdown />}
             <a className="btn btn-primary btn-sm" href="#pakiety">
               Wchodzę
