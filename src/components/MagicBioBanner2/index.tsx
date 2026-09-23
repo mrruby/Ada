@@ -32,36 +32,6 @@ const peopleContent = [
     img: "nicola",
   },
   {
-    name: "Dorota Woźniak",
-    title: "Projektantka graficzna i architektka z ilustratorską pasją",
-    description: (
-      <>
-        Zaprojektowałam <b>setki</b> kreacji reklamowych. Specjalizuję się w
-        tworzeniu profesjonalnych materiałów wizualnych{" "}
-        <b>dla social media i kampanii adsowych,</b> przekształcając
-        abstrakcyjne idee w przyciągające wzrok projekty, które realizują cele
-        biznesowe.
-      </>
-    ),
-    img: "dorota",
-  },
-  {
-    name: "Anna Ertekin",
-    title: "Menedżerka projektów i kampanii reklamowych",
-    description: (
-      <>
-        Wspieram marki <b>w codziennych działaniach marketingowych,</b> dbając o
-        to, by pomysły, kampanie i strategie były nie tylko dobrze zaplanowane,
-        ale także skutecznie wdrażane.{" "}
-        <b>
-          Specjalizuję się w łączeniu działań marketingowych w spójną całość:
-        </b>{" "}
-        od pomysłu aż po analizę wyników.
-      </>
-    ),
-    img: "anna",
-  },
-  {
     name: "Paulina Oraczek",
     title: "Menedżerka projektów i kampanii reklamowych",
     description: (
@@ -75,6 +45,22 @@ const peopleContent = [
       </>
     ),
     img: "paulina",
+  },
+  {
+    name: "Karolina Mijalska",
+    title: "Projektantka komunikacji z mocnym backgroundem graficznym",
+    description: (
+      <>
+        Od lat poruszam się pomiędzy <b>brandingiem, marketingiem i designem</b>
+        , dlatego <b>na kreacje reklamowe patrzę szerzej</b> niż tylko przez
+        pryzmat tego, czy są ładne. Bardziej interesuje mnie, czy{" "}
+        <b>
+          działają, komunikują to, co powinny oraz czy faktycznie pomagają marce
+          osiągnąć cel.
+        </b>
+      </>
+    ),
+    img: "karolina",
   },
   {
     name: "Papajka",
@@ -126,12 +112,7 @@ const MagicBioBanner2 = ({ version }: { version: number }) => {
                 title={peopleContent[4].title}
                 description={peopleContent[4].description}
                 img={peopleContent[4].img}
-              />
-              <PersonBox
-                name={peopleContent[5].name}
-                title={peopleContent[5].title}
-                description={peopleContent[5].description}
-                img={peopleContent[5].img}
+                centered
               />
             </div>
           )}
