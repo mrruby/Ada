@@ -60,7 +60,7 @@ const peopleContent = [
         </b>
       </>
     ),
-    img: "anna",
+    img: "karolina",
   },
   {
     name: "Papajka",
