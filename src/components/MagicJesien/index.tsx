@@ -70,7 +70,7 @@ export default function MagicJesien() {
             <a className="btn btn-primary btn-sm" href="#pakiety">
               Wchodzę
             </a>
-            <span className="magic-status">Status Magic Planów: pozostało 13</span>
+            <span className="magic-status">Status Magic Planów: pozostało 12</span>
           </div>
         </div>
         <div className="logobar">
