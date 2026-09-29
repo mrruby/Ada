@@ -1,5 +1,4 @@
 import React from "react"
-import { MAGIC_CHECKOUT_URL } from "./config"
 
 const formatPrice = (value: number) =>
   new Intl.NumberFormat("pl-PL").format(value)
@@ -48,14 +47,13 @@ export default function Offer({
             <p className="renew">
               🔁 Odnawia się co miesiąc. Możesz anulować w każdym momencie.
             </p>
-            <a
-              className="btn btn-primary"
-              href={MAGIC_CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              className="btn btn-primary is-disabled"
+              type="button"
+              disabled
             >
-              Dołączam na 1 miesiąc!
-            </a>
+              Zapisy wstrzymane
+            </button>
           </article>
           <article className="card plan featured hover-lift">
             <span className="best">⚡ Top wybór!</span>
@@ -82,14 +80,13 @@ export default function Offer({
               Tyle trwa zbudowanie pierwszego lejka, przetestowanie kampanii i
               zobaczenie realnych wyników.
             </p>
-            <a
-              className="btn btn-primary"
-              href={MAGIC_CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              className="btn btn-primary is-disabled"
+              type="button"
+              disabled
             >
-              Dołączam na 3 miesiące!
-            </a>
+              Zapisy wstrzymane
+            </button>
           </article>
           <article className="card plan hover-lift">
             <span className="best alt">💜 Najtaniej!</span>
@@ -115,14 +112,13 @@ export default function Offer({
             <p className="when">
               Dla tych, które wiedzą, że reklamy to nie sprint, tylko maraton.
             </p>
-            <a
-              className="btn btn-primary"
-              href={MAGIC_CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              className="btn btn-primary is-disabled"
+              type="button"
+              disabled
             >
-              Dołączam na 6 miesięcy!
-            </a>
+              Zapisy wstrzymane
+            </button>
           </article>
         </div>
 

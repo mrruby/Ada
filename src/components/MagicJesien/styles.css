@@ -282,36 +282,10 @@
   }
 }
 .magic-jesien {
-  --topbar-height: 60px;
-}
-@media (max-width: 600px) {
-  .magic-jesien {
-    --topbar-height: 120px;
-  }
-}
-.magic-jesien .topbar-spacer {
-  height: var(--topbar-height);
+  --topbar-height: 0px;
 }
 .magic-jesien main [id] {
   scroll-margin-top: calc(var(--topbar-height) + 1rem);
-}
-.magic-jesien .topbar {
-  background: var(--yellow);
-  color: #1b1530;
-  font-size: 0.9rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-}
-.magic-jesien .topbar .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.4rem 1.2rem;
-  padding: 0.55rem 0;
 }
 .magic-jesien .cd {
   display: inline-flex;
@@ -332,17 +306,6 @@
   text-transform: uppercase;
   opacity: 0.7;
   margin: 0 0.4rem 0 0.15rem;
-}
-.magic-jesien .topbar .btn {
-  padding: 0.45rem 1.1rem;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-.magic-jesien .magic-status {
-  flex-basis: 100%;
-  text-align: center;
-  font-weight: 600;
 }
 .magic-jesien .logobar .wrap {
   display: flex;
@@ -1176,6 +1139,17 @@
   width: 100%;
   font-size: 0.9rem;
   padding: 0.9rem 1rem;
+}
+.magic-jesien .btn.is-disabled,
+.magic-jesien .btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+}
+.magic-jesien .btn.is-disabled:hover,
+.magic-jesien .btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
 }
 @media (max-width: 900px) {
   .magic-jesien .plans {
