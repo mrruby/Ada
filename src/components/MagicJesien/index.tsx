@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "components/Layout"
@@ -23,56 +23,10 @@ import "./styles.css"
 
 export default function MagicJesien() {
   const promotionActive = usePromotion()
-  const topbarRef = useRef<HTMLDivElement>(null)
-  const [topbarHeight, setTopbarHeight] = useState<number>()
-
-  useEffect(() => {
-    const topbar = topbarRef.current
-    if (!topbar) return
-
-    const updateHeight = () =>
-      setTopbarHeight(topbar.getBoundingClientRect().height)
-    updateHeight()
-    const observer = new ResizeObserver(updateHeight)
-    observer.observe(topbar)
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <Layout showHeaderAndFooter={false}>
-      <div
-        className="magic-jesien"
-        style={
-          {
-            "--topbar-height": topbarHeight ? `${topbarHeight}px` : undefined,
-          } as React.CSSProperties
-        }
-      >
-        <div className="topbar-spacer" aria-hidden="true" />
-        <div
-          className="topbar"
-          role="region"
-          aria-label="Promocja"
-          ref={topbarRef}
-        >
-          <div className="wrap">
-            <span>
-              {promotionActive ? (
-                <>
-                  ⏳ Ceny promocyjne do <strong>28.09, do końca dnia</strong>.
-                  Zostało:
-                </>
-              ) : (
-                "Dołącz do MAGIC i rozwijaj swój biznes z naszym zespołem."
-              )}
-            </span>
-            {promotionActive && <Countdown />}
-            <a className="btn btn-primary btn-sm" href="#pakiety">
-              Wchodzę
-            </a>
-            <span className="magic-status">Status Magic Planów: pozostało 9</span>
-          </div>
-        </div>
+      <div className="magic-jesien">
         <div className="logobar">
           <div className="wrap">
             <StaticImage
