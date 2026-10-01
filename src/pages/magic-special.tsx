@@ -10,7 +10,6 @@ import MagicDateBanner from "components/MagicDateBanner"
 import MagicFinalCTA from "components/MagicFinalCTA"
 import MagicLogoHeader from "components/MagicLogoHeader"
 import MagicSaleBanner from "components/MagicSaleBanner"
-import MagicStickyBar from "components/MagicStickyBar"
 import MagicVideo from "components/MagicVideo"
 import MagicWhy from "components/MagicWhy"
 import MasterclassFAQ from "components/MasterclassFAQ"
@@ -20,8 +19,7 @@ import React from "react"
 const MagicSpecialPage = () => {
   return (
     <Layout showHeaderAndFooter={false}>
-      <MagicStickyBar />
-      <div className="pt-12">
+      <div>
         <MagicLogoHeader variant="pink" />
         <MaxWithBgColorContainer bgColor="bg-ada-white3">
           <MagicSaleBanner version={1} />
