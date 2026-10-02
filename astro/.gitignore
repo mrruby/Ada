@@ -20,3 +20,7 @@ node_modules/
 # test output
 test-results/
 playwright-report/
+
+# The repo root ignores Gatsby's `public` build folder by name; this app's
+# public/ holds source files (favicons, artwork, OG images) and is tracked.
+!/public/
