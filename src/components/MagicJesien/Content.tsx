@@ -186,7 +186,7 @@ export const Features = () => (
                     <i>3</i>
                     <div>
                       <b>Landing i tekst do konsultacji</b>
-                      <span>Justyna i Dorota sprawdzają przed startem</span>
+                      <span>Justyna i Karolina sprawdzają przed startem</span>
                     </div>
                     <em>tydzień 3</em>
                   </li>
@@ -217,7 +217,7 @@ export const Features = () => (
               <strong>„Zadaj pytanie”</strong>, gdzie wrzucasz screen wyników i
               dostajesz analizę swojego konta, oraz{" "}
               <strong>„Skonsultuj materiały”</strong>, gdzie Justyna sprawdza
-              copy, a Dorota grafiki i identyfikację wizualną, zanim wydasz
+              copy, a Karolina grafiki i identyfikację wizualną, zanim wydasz
               budżet. Do tego dwie 1,5-godzinne sesje konsultacji grupowych
               miesięcznie, na których możesz pokazać swój ekran i zadać pytanie!
             </p>
