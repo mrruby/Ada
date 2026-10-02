@@ -1,0 +1,69 @@
+---
+/**
+ * Any third-party iframe (e.g. a Google Calendar booking page) that may set
+ * cookies: shows a placeholder until the visitor grants `media` consent, with
+ * a direct link as the no-consent alternative. Same flow as VideoEmbed.
+ *
+ * <ConsentFrame src={url} title="Kalendarz rezerwacji" provider="Google" class="h-150" />
+ */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  src: string
+  title: string
+  /** Shown in the notice: "… z serwisu {provider} …". */
+  provider: string
+  /** Button label on the placeholder. */
+  label?: string
+  /** Load without a click once media consent exists (default true). */
+  eager?: boolean
+  /** Size the frame here, e.g. "h-150". */
+  class?: string
+}
+
+const { src, title, provider, label = "Pokaż", eager = true, class: className } = Astro.props
+---
+
+<div
+  class={cn("relative w-full overflow-hidden bg-white", className)}
+  data-consent-embed
+  data-src={src}
+  data-eager-src={eager ? src : undefined}
+  data-title={title}
+>
+  <button
+    type="button"
+    data-embed-play
+    class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-100 p-6 text-center text-black"
+  >
+    <span class="text-lg font-bold">{title}</span>
+    <span class="rounded-full bg-black px-5 py-2 text-sm font-bold text-white">{label}</span>
+  </button>
+  <div
+    data-embed-prompt
+    hidden
+    class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-100 p-6 text-center text-black"
+    role="group"
+    aria-label={`Zgoda na wyświetlenie: ${title}`}
+  >
+    <p class="max-w-sm text-sm">
+      Ta treść wyświetla się z serwisu {provider}, który może zapisywać pliki cookie.
+    </p>
+    <button
+      type="button"
+      data-embed-accept
+      class="rounded-full bg-black px-5 py-2 text-sm font-bold text-white hover:bg-neutral-700"
+    >
+      Zgadzam się, pokaż
+    </button>
+    <a href={src} target="_blank" rel="noopener noreferrer" class="text-sm underline">
+      Otwórz w nowej karcie
+    </a>
+  </div>
+</div>
+
+<script>
+  import { initConsentEmbeds } from "@/lib/embeds"
+
+  initConsentEmbeds()
+</script>

@@ -18,9 +18,11 @@ import "@/styles/global.css"
 export interface Props extends SeoProps {
   /** Classes for <body>, e.g. a page-wide text color or background. */
   bodyClass?: string
+  /** Load Hotjar on this page (after statistics consent). */
+  hotjarId?: number
 }
 
-const { bodyClass, ...seo } = Astro.props
+const { bodyClass, hotjarId, ...seo } = Astro.props
 ---
 
 <!doctype html>
@@ -47,6 +49,7 @@ const { bodyClass, ...seo } = Astro.props
     <Font cssVariable="--ff-caveat" />
 
     <Seo {...seo} />
+    {hotjarId && <meta name="ada:hotjar" content={String(hotjarId)} />}
     <slot name="head" />
   </head>
   <body class={cn("min-h-screen", bodyClass)}>

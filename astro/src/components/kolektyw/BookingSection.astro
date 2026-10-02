@@ -1,7 +1,7 @@
 ---
 /** "Rozpocznij współpracę z MAGIC" — what the call covers + Google Calendar booking embed. */
 import type { IconItem } from "@/data/kolektyw/types"
-import { IconList, Section } from "@/components/ui"
+import { ConsentFrame, IconList, Section } from "@/components/ui"
 import KolektywButton from "./KolektywButton.astro"
 import KolektywTitle from "./KolektywTitle.astro"
 
@@ -29,14 +29,13 @@ const { id, title, lead, points, cta, calendar, bg = "bg-cream" } = Astro.props
       </KolektywButton>
     </div>
     <div id={calendar.id} class="mx-auto max-w-3xl bg-white p-2 md:p-3">
-      <iframe
+      <ConsentFrame
         src={calendar.src}
         title={calendar.title}
-        width="100%"
-        height="600"
-        loading="lazy"
-        class="block w-full border-0"
-      ></iframe>
+        provider="Google"
+        label="Pokaż kalendarz"
+        class="h-150"
+      />
     </div>
   </div>
 </Section>

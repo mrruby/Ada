@@ -130,7 +130,7 @@ const band = "px-4 md:px-8"
           data-max-points={Number.isFinite(result.maxPoints) ? result.maxPoints : undefined}
           hidden
         >
-          <MailerLiteForm html={result.formHtml} submit="fetch" />
+          <MailerLiteForm html={result.formHtml} />
         </div>
       ))}
     </div>

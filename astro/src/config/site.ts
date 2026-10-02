@@ -47,22 +47,13 @@ export const social = {
 } as const
 
 /**
- * Tracking IDs. Scripts load only after the visitor consents (see
- * components/site/CookieConsent.astro). Cookie names are kept from the
- * previous site so existing consent choices remain valid.
+ * Third parties and the consent category each one needs (see lib/consent.ts).
+ * Nothing here loads before the visitor opts into that category.
  */
 export const analytics = {
-  googleAnalytics: {
-    id: "G-8LX78J4XMN",
-    consentCookie: "gatsby-gdpr-google-analytics",
-  },
-  googleTagManager: {
-    id: "GTM-TC7CLB2",
-    consentCookie: "gatsby-gdpr-google-tagmanager",
-    dataLayerName: "dataLayer",
-  },
-  facebookPixel: {
-    id: "187660469934129",
-    consentCookie: "gatsby-gdpr-facebook-pixel",
-  },
+  googleAnalytics: { id: "G-8LX78J4XMN" },
+  googleTagManager: { id: "GTM-TC7CLB2", dataLayerName: "dataLayer" },
+  facebookPixel: { id: "187660469934129" },
+  /** Hotjar loads only on pages that pass `hotjarId` to BaseLayout. */
+  hotjar: { snippetVersion: 6 },
 } as const

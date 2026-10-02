@@ -6,12 +6,13 @@
  *   <MailerLiteForm html={formHtml} id="zapisy" />
  *
  * `submit`:
- *  - "embed" (default): the export as-is — MailerLite's own scripts handle
- *    validation, submission and the success redirect.
- *  - "fetch": MailerLite scripts are stripped (no script loads or "view"
- *    pings — use it when several forms share a page or a form is shown
- *    conditionally). Required fields are enforced natively, the form posts
- *    with fetch and redirects to `redirect` on success.
+ *  - "fetch" (default): MailerLite's scripts are stripped (no third-party
+ *    script, no inline JS — CSP-friendly, works with several forms per page).
+ *    Required fields are enforced natively, the form posts with fetch and
+ *    redirects to `redirect` on success.
+ *  - "embed": the export as-is — MailerLite's own scripts handle validation,
+ *    submission and the success redirect (only for forms that need features
+ *    such as reCAPTCHA; requires loosening the CSP).
  */
 import { cn } from "@/lib/cn"
 
@@ -24,7 +25,7 @@ type Props = {
   redirect?: string
 }
 
-const { html, id, class: className, submit = "embed", redirect = "/thank/" } = Astro.props
+const { html, id, class: className, submit = "fetch", redirect = "/thank/" } = Astro.props
 
 const markup = submit === "fetch" ? html.replace(/<script\b[\s\S]*?<\/script>/gi, "") : html
 ---
@@ -37,7 +38,7 @@ const markup = submit === "fetch" ? html.replace(/<script\b[\s\S]*?<\/script>/gi
 />
 
 <script>
-  // Only acts on forms rendered with submit="fetch".
+  // Only acts on forms rendered in fetch mode.
   document.querySelectorAll<HTMLElement>("[data-mailerlite-fetch]").forEach((root) => {
     const form = root.querySelector<HTMLFormElement>("form.ml-block-form, form")
     if (!form) return

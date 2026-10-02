@@ -19,10 +19,21 @@ export default defineConfig({
   // between inline elements (<strong>…</strong> text).
   compressHTML: true,
   build: { format: "directory" },
+  // Retired campaign pages: send old links and ads to the current offer.
+  redirects: {
+    "/adseliksir": "/magic",
+    "/eliksir": "/magic",
+    "/magic-masterclass": "/magic",
+    "/magic-nagranie": "/magic",
+    "/magic-wyzwanie": "/magic",
+  },
   image: {
     responsiveStyles: true,
   },
   vite: {
+    // Never inline scripts/assets: every script is an external file, so the
+    // Content-Security-Policy can work without 'unsafe-inline' for scripts.
+    build: { assetsInlineLimit: 0 },
     plugins: [tailwindcss()],
   },
   fonts: [

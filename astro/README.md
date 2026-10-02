@@ -8,7 +8,7 @@ default, a few on-demand API routes (OTO checkout), deployed to Netlify.
 yarn install     # Node >= 22.12, yarn only
 yarn dev         # http://localhost:4321 (daemon: `yarn astro dev stop|logs`)
 yarn build       # static build into dist/ (+ Netlify function for /api)
-yarn check       # astro check (TypeScript + .astro diagnostics)
+yarn run check   # astro check (plain `yarn check` is Yarn 1's own command)
 ```
 
 Every UI primitive and shared section is rendered on **`/styleguide`**
@@ -107,7 +107,8 @@ import { faq } from "@/data/magic"
 | `Carousel`       | scroll-snap slider; each child = slide; `perView`, `autoplay`, arrows            |
 | `Countdown`      | fixed `target` or per-visitor `evergreen`; drives `[data-countdown-scope]`       |
 | `TileCountdown`  | Countdown preset: "DNI : GODZ : MIN : SEK" tiles; `tone` = tile classes          |
-| `VideoEmbed`     | Vimeo/YouTube facade (poster → iframe on click)                                  |
+| `VideoEmbed`     | Vimeo/YouTube behind a poster; loads only with `media` consent (asks on click)   |
+| `ConsentFrame`   | any third-party iframe (e.g. Google Calendar) behind the same consent prompt     |
 | `TypingText`     | typewriter text: loop / once / words                                             |
 | `Reveal`         | fade/slide-in on scroll; `from` bottom/left/right                                |
 | `Marquee`        | endless ticker                                                                   |
@@ -178,15 +179,64 @@ copying it.
   and mark alternatives with `data-when="active" | "expired"` — CSS swaps
   them, no extra script.
 - **Copy:** Polish, unchanged from the previous site unless asked otherwise.
-- **Analytics/GDPR:** trackers load only via `lib/consent.ts` after consent
-  (cookie names kept from the Gatsby site so existing choices stay valid).
-  Never add tracking tags directly to pages (Hotjar on /adsy-chill is the one
-  historical exception, in its `head` slot).
-- **Forms:** MailerLite exports run their own scripts (redirect to /thank on
-  success); use `submit="fetch"` when a page has several forms or shows one
-  conditionally (no duplicate MailerLite scripts/pings). The contact page uses Netlify Forms; set `PUBLIC_SITE_RECAPTCHA_KEY`
-  (or Netlify's `SITE_RECAPTCHA_KEY`) for a custom reCAPTCHA, otherwise
-  Netlify's built-in one is used.
+- **Analytics/GDPR:** see "Consent" below. Never add tracking tags or
+  third-party iframes directly to pages.
+- **Forms:** MailerLite exports render with `submit="fetch"` (default): their
+  scripts are stripped, the form posts with fetch and redirects to /thank.
+  The contact page uses Netlify Forms; set `PUBLIC_SITE_RECAPTCHA_KEY` (or
+  Netlify's `SITE_RECAPTCHA_KEY`) for a custom reCAPTCHA, otherwise Netlify's
+  built-in one is used.
+
+## Testing
+
+```bash
+yarn test            # unit tests (Vitest, tests/unit: lib/, consent, OTO with mocked Blobs/Stripe)
+yarn test:e2e        # astro build + Playwright (tests/e2e) at 375 & 1440 px, incl. axe scan
+yarn test:e2e:dist   # Playwright against the existing dist/ (what CI runs after `yarn build`)
+yarn test:a11y       # build + axe only → test-results/a11y-report.json (fails on critical)
+yarn run check       # astro check
+```
+
+E2E serves `dist/` with `scripts/serve-dist.mjs`. Every third-party request
+is stubbed and recorded, and `/api/*` is mocked (`tests/e2e/fixtures.ts`), so
+tests never reach MailerLite, Vimeo, YouTube or Google. Consent cookies
+default to "declined"; `test.use({ consent: null })` starts with the banner.
+One-time setup: `yarn playwright install chromium`. CI:
+`.github/workflows/astro.yml` (check, unit, build, e2e on every PR).
+
+## Consent
+
+`lib/consent-state.ts` (pure, unit-tested) + `lib/consent.ts` (browser) +
+`components/site/CookieConsent.astro` (banner, settings `<dialog>`, floating
+🍪 button; any `[data-consent-open]` element opens the settings).
+
+| Category      | Cookie                          | Loads                                  |
+| ------------- | ------------------------------- | -------------------------------------- |
+| `statistics`  | `gatsby-gdpr-google-analytics`  | Google Analytics, Hotjar (`hotjarId` page prop) |
+| `preferences` | `gatsby-gdpr-google-tagmanager` | Google Tag Manager                     |
+| `marketing`   | `gatsby-gdpr-facebook-pixel`    | Meta Pixel                             |
+| `media`       | `ada-consent-media`             | YouTube / Vimeo / Google Calendar embeds |
+
+Everything optional is off until the visitor opts in; legacy cookie names
+mean decisions made on the Gatsby site still apply. Google Consent Mode v2
+starts denied and follows the choices; Meta gets `consent grant/revoke`.
+Withdrawing a category reloads the page. To add a tracker: register it in
+`trackers` in `lib/consent.ts` with its category — never in a page.
+
+## Security
+
+`netlify.toml` sets `nosniff`, `Referrer-Policy`, `Permissions-Policy`, HSTS
+and a minimal enforced CSP (`frame-ancestors`, `base-uri`, `object-src`). The
+full allowlist runs as `Content-Security-Policy-Report-Only`; violations are
+logged by `src/pages/api/csp-report.ts` (Netlify function log, `[csp]` lines).
+Astro never inlines scripts (`vite.build.assetsInlineLimit: 0`), so the CSP
+needs no `'unsafe-inline'` for scripts. When the log is clean, rename the
+header to `Content-Security-Policy`. A new third party = update the CSP.
+
+## Redirects
+
+Retired pages are 301-redirected in `astro.config.mjs` (`redirects`); the
+Netlify adapter writes them to `_redirects`.
 
 ## Deployment
 
@@ -194,3 +244,10 @@ copying it.
 Netlify site's base directory at `astro/`. Environment variables for
 `/api/oto/*` (Stripe, Netlify Blobs, HMAC secrets) are listed in
 `.env.example`; they are read at request time, never inlined.
+
+Manual deploy of a local build (e.g. the preview site at new.adrianna.com.pl):
+
+```bash
+yarn build
+netlify deploy --prod --dir dist --site <site-id>   # functions come from .netlify/v1
+```

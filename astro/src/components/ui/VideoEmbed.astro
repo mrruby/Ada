@@ -1,7 +1,9 @@
 ---
 /**
- * Lightweight Vimeo/YouTube embed. Shows a poster with a play button and only
- * loads the third-party player after a click (or immediately with `eager`).
+ * Vimeo/YouTube embed behind a poster. The player (and its cookies) loads only
+ * with the visitor's `media` consent: clicking play without it shows a short
+ * notice with "allow and play" and a link to watch on the provider's site.
+ * `eager` loads the player right away once consent exists (e.g. course videos).
  *
  * <VideoEmbed provider="vimeo" id="1150047798" title="Opinia Ani" aspect="9:16" />
  */
@@ -26,9 +28,9 @@ type Props = {
   poster?: ImageMetadata | string
   /** Extra player query params, e.g. "loop=1&muted=1". */
   params?: string
-  /** Render the player right away (e.g. hero videos that autoplay). */
+  /** Load the player without a click once media consent exists. */
   eager?: boolean
-  /** Autoplay when `eager` (muted autoplay is the only reliable kind). */
+  /** Autoplay when loaded eagerly (muted autoplay is the only reliable kind). */
   autoplay?: boolean
   class?: string
   /** Image `sizes` hint for the poster. */
@@ -49,6 +51,7 @@ const {
 } = Astro.props
 
 const id = rawId.split("?")[0]
+const providerName = provider === "vimeo" ? "Vimeo" : "YouTube"
 
 const playerUrl = (play: boolean) => {
   const query = new URLSearchParams(params)
@@ -57,6 +60,8 @@ const playerUrl = (play: boolean) => {
     query.set("autopause", "0")
     query.set("player_id", "0")
     query.set("app_id", "58479")
+    // Vimeo's do-not-track mode: no session tracking or analytics cookies.
+    query.set("dnt", "1")
   } else {
     query.set("rel", "0")
   }
@@ -68,6 +73,8 @@ const playerUrl = (play: boolean) => {
   return `${base}?${query.toString()}`
 }
 
+const watchUrl =
+  provider === "vimeo" ? `https://vimeo.com/${id}` : `https://www.youtube.com/watch?v=${id}`
 const remotePoster =
   provider === "vimeo"
     ? `https://vumbnail.com/${id}_large.jpg`
@@ -76,89 +83,72 @@ const remoteSrcset =
   provider === "vimeo"
     ? `https://vumbnail.com/${id}_small.jpg 320w, https://vumbnail.com/${id}_medium.jpg 640w, https://vumbnail.com/${id}_large.jpg 1280w`
     : undefined
-
-const iframeAttrs = {
-  title,
-  allow: "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share",
-  allowfullscreen: true,
-  referrerpolicy: "strict-origin-when-cross-origin",
-  class: "absolute inset-0 h-full w-full",
-} as const
 ---
 
-<div class={cn("relative w-full overflow-hidden bg-black", aspects[aspect], className)}>
-  {eager ? (
-    <iframe src={playerUrl(autoplay)} {...iframeAttrs} />
-  ) : (
+<div
+  class={cn("relative w-full overflow-hidden bg-black", aspects[aspect], className)}
+  data-consent-embed
+  data-src={playerUrl(true)}
+  data-eager-src={eager ? playerUrl(autoplay) : undefined}
+  data-title={title}
+  data-allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+>
+  <button
+    type="button"
+    class="group absolute inset-0 h-full w-full"
+    aria-label={`Odtwórz wideo: ${title}`}
+    data-embed-play
+  >
+    {poster && typeof poster !== "string" ? (
+      <Image
+        src={poster}
+        alt=""
+        class="h-full w-full object-cover"
+        widths={[320, 640, 960]}
+        sizes={sizes}
+      />
+    ) : (
+      <img
+        src={typeof poster === "string" ? poster : remotePoster}
+        srcset={typeof poster === "string" ? undefined : remoteSrcset}
+        sizes={sizes}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        class="h-full w-full object-cover"
+      />
+    )}
+    <span class="absolute top-1/2 left-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 transition-colors group-hover:bg-black/85">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="white" class="ml-1" aria-hidden="true">
+        <path d="M8 5v14l11-7z"></path>
+      </svg>
+    </span>
+  </button>
+  <div
+    data-embed-prompt
+    hidden
+    class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/85 p-4 text-center text-white"
+    role="group"
+    aria-label={`Zgoda na odtworzenie: ${title}`}
+  >
+    <p class="max-w-xs text-xs leading-snug sm:text-sm">
+      Film odtwarza się z serwisu {providerName}, który może zapisywać pliki cookie.
+    </p>
     <button
       type="button"
-      class="group absolute inset-0 h-full w-full"
-      aria-label={`Odtwórz wideo: ${title}`}
-      data-video-facade
-      data-src={playerUrl(true)}
-      data-title={title}
+      data-embed-accept
+      class="rounded-full bg-white px-4 py-2 text-xs font-bold text-black hover:bg-lavender sm:text-sm"
     >
-      {poster && typeof poster !== "string" ? (
-        <Image
-          src={poster}
-          alt=""
-          class="h-full w-full object-cover"
-          widths={[320, 640, 960]}
-          sizes={sizes}
-        />
-      ) : (
-        <img
-          src={typeof poster === "string" ? poster : remotePoster}
-          srcset={typeof poster === "string" ? undefined : remoteSrcset}
-          sizes={sizes}
-          alt=""
-          loading="lazy"
-          decoding="async"
-          class="h-full w-full object-cover"
-        />
-      )}
-      <span class="absolute top-1/2 left-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 transition-colors group-hover:bg-black/85">
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="white"
-          class="ml-1"
-          aria-hidden="true"
-        >
-          <path d="M8 5v14l11-7z" />
-        </svg>
-      </span>
+      Zgadzam się, odtwórz
     </button>
-  )}
+    <a href={watchUrl} target="_blank" rel="noopener noreferrer" class="text-xs underline">
+      Obejrzyj na {providerName}
+    </a>
+  </div>
 </div>
 
 <script>
-  const warmed = new Set<string>()
-  const preconnect = (url: string) => {
-    const origin = new URL(url).origin
-    if (warmed.has(origin)) return
-    warmed.add(origin)
-    const link = document.createElement("link")
-    link.rel = "preconnect"
-    link.href = origin
-    document.head.appendChild(link)
-  }
+  import { initConsentEmbeds } from "@/lib/embeds"
 
-  document.querySelectorAll<HTMLButtonElement>("[data-video-facade]").forEach((button) => {
-    const src = button.dataset.src!
-    button.addEventListener("pointerenter", () => preconnect(src), { once: true })
-    button.addEventListener("focus", () => preconnect(src), { once: true })
-    button.addEventListener("click", () => {
-      const iframe = document.createElement("iframe")
-      iframe.src = src
-      iframe.title = button.dataset.title ?? ""
-      iframe.allow =
-        "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-      iframe.allowFullscreen = true
-      iframe.referrerPolicy = "strict-origin-when-cross-origin"
-      iframe.className = "absolute inset-0 h-full w-full"
-      button.replaceWith(iframe)
-    })
-  })
+  initConsentEmbeds()
 </script>

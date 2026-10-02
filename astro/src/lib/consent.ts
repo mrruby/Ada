@@ -1,57 +1,49 @@
 /**
- * Cookie consent + consent-gated analytics (browser only).
+ * Cookie consent runtime (browser only): stores the visitor's choices,
+ * forwards them to Google Consent Mode v2 / Meta, and loads each third party
+ * only after its category is granted. The consent model itself lives in
+ * consent-state.ts (pure, unit-tested).
  *
- * Each tracker has its own consent cookie holding "true" or "false". Trackers
- * are injected only when their cookie is "true". The cookie names match the
- * previous Gatsby site, so visitors keep the choice they already made.
+ * Embeds (YouTube, Vimeo, Google Calendar) ask for the `media` category via
+ * `hasConsent("media")` / `grantConsent("media")` / `onConsentChange`.
  */
 import { analytics } from "@/config/site"
+import {
+  allGranted,
+  type ConsentCategory,
+  type ConsentChoices,
+  consentCookieStrings,
+  deniedChoices,
+  googleConsentMode,
+  isWithdrawal,
+  readConsentState,
+} from "./consent-state"
 
-export type ConsentCategory = "statistics" | "preferences" | "marketing"
+export { allGranted, consentCategories, deniedChoices } from "./consent-state"
+export type { ConsentCategory, ConsentChoices } from "./consent-state"
 
-export const consentCategories: Record<ConsentCategory, string> = {
-  statistics: analytics.googleAnalytics.consentCookie,
-  preferences: analytics.googleTagManager.consentCookie,
-  marketing: analytics.facebookPixel.consentCookie,
-}
+const CHANGE_EVENT = "consent:change"
 
-const CONSENT_MAX_AGE_DAYS = 365
-
-export const readCookie = (name: string): string | null => {
-  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`))
-  return match ? decodeURIComponent(match[1]) : null
-}
-
-const writeCookie = (name: string, value: string, days: number) => {
-  const maxAge = days * 24 * 60 * 60
-  document.cookie = `${name}=${value}; max-age=${maxAge}; path=/; SameSite=Lax`
-}
-
-/** True once the visitor answered the banner (any category stored). */
-export const hasConsentDecision = (): boolean =>
-  Object.values(consentCategories).some((cookie) => readCookie(cookie) !== null)
-
-const isGranted = (cookie: string) => readCookie(cookie) === "true"
-
-export const saveConsent = (choices: Record<ConsentCategory, boolean>) => {
-  for (const [category, cookie] of Object.entries(consentCategories)) {
-    writeCookie(
-      cookie,
-      choices[category as ConsentCategory] ? "true" : "false",
-      CONSENT_MAX_AGE_DAYS
-    )
-  }
-}
-
+type Queue = ((...args: unknown[]) => void) & Record<string, unknown>
 type AnalyticsWindow = Window & {
   dataLayer?: unknown[]
   gtag?: (...args: unknown[]) => void
-  fbq?: ((...args: unknown[]) => void) & Record<string, unknown>
+  fbq?: Queue
   _fbq?: unknown
+  hj?: Queue
+  _hjSettings?: { hjid: number; hjsv: number }
 }
 
 const w = window as AnalyticsWindow
 const loaded = new Set<string>()
+
+export const getConsent = () => readConsentState(document.cookie)
+export const hasConsent = (category: ConsentCategory) => getConsent().choices[category]
+
+export const onConsentChange = (callback: (choices: ConsentChoices) => void) =>
+  document.addEventListener(CHANGE_EVENT, (event) =>
+    callback((event as CustomEvent<ConsentChoices>).detail)
+  )
 
 const injectScript = (src: string) => {
   const script = document.createElement("script")
@@ -60,17 +52,32 @@ const injectScript = (src: string) => {
   document.head.appendChild(script)
 }
 
+/** gtag() must push the `arguments` object itself, not an array. */
+const gtag = (...args: unknown[]) => {
+  w.dataLayer = w.dataLayer || []
+  if (!w.gtag) {
+    w.gtag = function () {
+      // eslint-disable-next-line prefer-rest-params
+      w.dataLayer!.push(arguments)
+    }
+  }
+  w.gtag(...args)
+}
+
+let consentModeReady = false
+const applyGoogleConsentMode = (choices: ConsentChoices) => {
+  if (!consentModeReady) {
+    gtag("consent", "default", googleConsentMode(deniedChoices))
+    consentModeReady = true
+  }
+  gtag("consent", "update", googleConsentMode(choices))
+}
+
 const loadGoogleAnalytics = () => {
   const { id } = analytics.googleAnalytics
   injectScript(`https://www.googletagmanager.com/gtag/js?id=${id}`)
-  w.dataLayer = w.dataLayer || []
-  w.gtag = function gtag() {
-    // gtag.js expects the `arguments` object, not an array.
-    // eslint-disable-next-line prefer-rest-params
-    w.dataLayer!.push(arguments)
-  }
-  w.gtag("js", new Date())
-  w.gtag("config", id, { anonymize_ip: true })
+  gtag("js", new Date())
+  gtag("config", id, { anonymize_ip: true })
 }
 
 const loadTagManager = () => {
@@ -83,41 +90,85 @@ const loadTagManager = () => {
   layer.push({ event: "gatsby-route-change" })
 }
 
-const loadFacebookPixel = () => {
-  const { id } = analytics.facebookPixel
+/** Meta's official stub: calls queue as `arguments` until fbevents.js loads. */
+const metaPixel = (): Queue => {
   if (!w.fbq) {
-    // Mirrors Meta's official stub: calls are queued as `arguments` objects
-    // until fbevents.js loads and installs `callMethod`.
-    type Stub = ((...args: unknown[]) => void) & {
-      callMethod?: (...args: unknown[]) => void
-      queue: unknown[]
-    } & Record<string, unknown>
-    const fbq = function (this: unknown) {
+    const fbq = function () {
       // eslint-disable-next-line prefer-rest-params
       const args = arguments
-      if (fbq.callMethod) fbq.callMethod.apply(fbq, args as never)
-      else fbq.queue.push(args)
-    } as unknown as Stub
+      if (typeof fbq.callMethod === "function") {
+        ;(fbq.callMethod as (...a: unknown[]) => void).apply(fbq, args as never)
+      } else {
+        ;(fbq.queue as unknown[]).push(args)
+      }
+    } as unknown as Queue
     Object.assign(fbq, { push: fbq, loaded: true, version: "2.0", queue: [] })
     w.fbq = fbq
     w._fbq = fbq
-    injectScript("https://connect.facebook.net/en_US/fbevents.js")
   }
-  w.fbq!("init", id)
-  w.fbq!("track", "PageView")
+  return w.fbq
 }
 
-/** Load every tracker the visitor consented to (safe to call repeatedly). */
-export const initConsentedTracking = () => {
-  const trackers: [string, () => void][] = [
-    [analytics.googleAnalytics.consentCookie, loadGoogleAnalytics],
-    [analytics.googleTagManager.consentCookie, loadTagManager],
-    [analytics.facebookPixel.consentCookie, loadFacebookPixel],
-  ]
-  for (const [cookie, load] of trackers) {
-    if (isGranted(cookie) && !loaded.has(cookie)) {
-      loaded.add(cookie)
-      load()
+const loadFacebookPixel = () => {
+  const fbq = metaPixel()
+  injectScript("https://connect.facebook.net/en_US/fbevents.js")
+  fbq("consent", "grant")
+  fbq("init", analytics.facebookPixel.id)
+  fbq("track", "PageView")
+}
+
+/** Pages opt into Hotjar with BaseLayout's `hotjarId` prop. */
+const loadHotjar = () => {
+  const id = Number(document.querySelector<HTMLMetaElement>('meta[name="ada:hotjar"]')?.content)
+  if (!id) return
+  const { snippetVersion } = analytics.hotjar
+  w.hj =
+    w.hj ||
+    (function () {
+      // eslint-disable-next-line prefer-rest-params
+      ;((w.hj!.q as unknown[]) ||= []).push(arguments)
+    } as unknown as Queue)
+  w._hjSettings = { hjid: id, hjsv: snippetVersion }
+  injectScript(`https://static.hotjar.com/c/hotjar-${id}.js?sv=${snippetVersion}`)
+}
+
+const trackers: { key: string; category: ConsentCategory; load: () => void }[] = [
+  { key: "ga", category: "statistics", load: loadGoogleAnalytics },
+  { key: "hotjar", category: "statistics", load: loadHotjar },
+  { key: "gtm", category: "preferences", load: loadTagManager },
+  { key: "pixel", category: "marketing", load: loadFacebookPixel },
+]
+
+/** Sync Consent Mode and load every tracker the choices allow (idempotent). */
+export const applyConsent = (choices: ConsentChoices) => {
+  applyGoogleConsentMode(choices)
+  if (!choices.marketing && w.fbq) w.fbq("consent", "revoke")
+  for (const tracker of trackers) {
+    if (choices[tracker.category] && !loaded.has(tracker.key)) {
+      loaded.add(tracker.key)
+      tracker.load()
     }
   }
 }
+
+/**
+ * Store new choices. Withdrawing a granted category reloads the page, because
+ * scripts that already ran can't be unloaded.
+ */
+export const saveConsent = (choices: ConsentChoices) => {
+  const previous = getConsent().choices
+  const secure = window.location.protocol === "https:"
+  for (const cookie of consentCookieStrings(choices, secure)) document.cookie = cookie
+  document.dispatchEvent(new CustomEvent(CHANGE_EVENT, { detail: choices }))
+  if (isWithdrawal(previous, choices)) {
+    window.location.reload()
+    return
+  }
+  applyConsent(choices)
+}
+
+export const grantConsent = (category: ConsentCategory) =>
+  saveConsent({ ...getConsent().choices, [category]: true })
+
+export const acceptAll = () => saveConsent(allGranted)
+export const rejectOptional = () => saveConsent(deniedChoices)
