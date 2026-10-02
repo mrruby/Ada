@@ -1,0 +1,28 @@
+---
+/**
+ * Columns of highlighted labels with a short description
+ * ("🎥 6 szkoleń:" + "video dotyczących lejka reklamowego…").
+ */
+import { cn } from "@/lib/cn"
+import type { PerkItem } from "@/data/mentoring"
+
+type Props = {
+  columns: PerkItem[][]
+  class?: string
+}
+
+const { columns, class: className } = Astro.props
+---
+
+<div class={cn("flex flex-col justify-between md:flex-row lg:gap-8", className)}>
+  {columns.map((items) => (
+    <ul class="flex flex-col pt-6 lg:max-w-lg">
+      {items.map((item) => (
+        <li class="py-2 text-sm leading-tight font-medium lg:text-lg">
+          <p class="inline-block bg-lilac px-2 py-1 font-bold lg:text-3xl">{item.label}</p>
+          <p class="mt-2">{item.text}</p>
+        </li>
+      ))}
+    </ul>
+  ))}
+</div>

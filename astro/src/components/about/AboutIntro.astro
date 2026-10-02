@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets"
+import portrait from "@/assets/images/contact-ada.png"
+import threeFlowers from "@/assets/images/three-flowers.svg"
+import { MarkerHeading, Section } from "@/components/ui"
+---
+
+<Section bg="bg-linear-to-l from-lavender to-white">
+  <div class="relative flex flex-col px-2 lg:flex-row lg:pl-28">
+    <div class="py-16 lg:w-3xl lg:pt-20">
+      <MarkerHeading>Kim jestem?</MarkerHeading>
+      <p class="pt-6 leading-tight font-medium lg:max-w-lg lg:text-xl">
+        Z zawodu tłumaczka j. francuskiego & angielskiego, a z zamiłowania kreatywna dusza. Mam za
+        sobą epizod pracy w audycie finansowym, ale moim powołaniem chyba od zawsze był marketing!
+      </p>
+      <p class="py-4 leading-tight font-medium lg:max-w-lg lg:text-xl">
+        I tak od stażu w agencji marketingowej do swojej działalności: dziś pod szyldem GetBold!
+        obsługuję klientów z Europy, w tym z Polski i na moim liczniku wybiło już ponad 1 mln
+        budżetów reklamowych wydanych w ramach Meta Ads.
+      </p>
+    </div>
+    <div class="relative lg:pt-28">
+      <Image src={portrait} alt="Ada Promis przy laptopie" width={465} height={360} />
+      <Image
+        src={threeFlowers}
+        alt=""
+        width={100}
+        height={300}
+        class="absolute -top-6 -right-12 lg:top-32"
+      />
+    </div>
+  </div>
+</Section>

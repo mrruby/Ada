@@ -1,0 +1,24 @@
+---
+/** "Zobacz przykładowe pytania i odpowiedzi!" — Circle Q&A screenshot + CTA. */
+import { Image } from "astro:assets"
+import qaImage from "@/assets/images/pyt-odp.webp"
+import { Heading } from "@/components/ui"
+import MagicCta from "./MagicCta.astro"
+---
+
+<section class="flex flex-col items-center bg-blush px-6 pt-8 pb-10 text-black">
+  <Heading align="center" class="max-w-lg text-3xl leading-none uppercase md:max-w-3xl md:text-5xl">
+    Zobacz przykładowe pytania i odpowiedzi!
+  </Heading>
+  <Image
+    src={qaImage}
+    alt="Przykładowe pytania i odpowiedzi z MAGIC"
+    width={500}
+    widths={[375, 500, 1000]}
+    sizes="500px"
+    class="-my-8 h-auto"
+  />
+  <MagicCta size="md" class="bg-periwinkle">
+    WCHODZĘ W TO!
+  </MagicCta>
+</section>

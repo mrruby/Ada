@@ -1,0 +1,63 @@
+---
+/** "Zanim wybierzesz… sprawdź" checklist + Ada's quote about agencies. */
+import { Image } from "astro:assets"
+import adaZen from "@/assets/images/magic-jesien/ada_zen.webp"
+import { magicChecklist } from "@/data/jesien"
+import MjCard from "./MjCard.astro"
+import MjHeading from "./MjHeading.astro"
+import MjPanel from "./MjPanel.astro"
+import MjSection from "./MjSection.astro"
+---
+
+<MjSection id="sprawdz" tone="lavender">
+  <MjHeading
+    eyebrow="Zanim wybierzesz"
+    title="Wybierając miejsce, w którym będziesz pracować z reklamami,"
+    accent="sprawdź…"
+  />
+  <MjPanel class="mt-8">
+    <MjCard class="mx-auto max-w-3xl">
+      <b class="block border-b border-lavender px-6 py-5">Co otrzymasz w ramach subskrypcji?</b>
+      <ul class="grid gap-2 p-2.5">
+        {magicChecklist.map((row) => (
+          <li class="flex flex-col gap-3 rounded-xl border border-lavender px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between">
+            <b class="font-semibold">{row.need}</b>
+            <span class="self-start rounded-full bg-periwinkle/30 px-3 py-1 text-sm font-semibold text-jesien-purple sm:self-auto sm:whitespace-nowrap">
+              {row.inMagic}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </MjCard>
+  </MjPanel>
+
+  <figure class="relative mx-auto mt-12 max-w-3xl pt-4 text-center">
+    <span
+      class="mj-serif absolute top-0 left-0 text-7xl leading-none text-blush"
+      aria-hidden="true"
+    >
+      “
+    </span>
+    <Image
+      src={adaZen}
+      alt="Ada z laptopem na kolanach"
+      width={360}
+      height={360}
+      class="mx-auto mb-6 size-44 rounded-3xl border-3 border-blush object-cover"
+    />
+    <blockquote class="grid gap-4 text-jesien-ink-soft">
+      <p class="text-xl font-semibold text-jesien-ink">
+        „Zatrudnienie agencji na start może zrobić krzywdę Twojemu biznesowi. Serio, serio.”
+      </p>
+      <p>
+        Zarzucenie swojej firmy zbyt dużym zobowiązaniem finansowym to częsty problem małych
+        biznesów. MAGIC stworzyłam właśnie dla małych marek: konsultacja Twojego konta, pomysłów na
+        reklamy i pisemne „omówienie” tematów to najlepsza i najbardziej elastyczna opcja.
+      </p>
+    </blockquote>
+    <figcaption class="mt-6 inline-block min-w-64 border-t border-lavender pt-4 text-left">
+      <b class="block">Ada Promis-Urbas</b>
+      <span class="text-sm text-jesien-pink">ekspertka Meta Ads, założycielka MAGIC</span>
+    </figcaption>
+  </figure>
+</MjSection>

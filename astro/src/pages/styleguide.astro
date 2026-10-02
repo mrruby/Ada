@@ -1,0 +1,317 @@
+---
+/**
+ * Living styleguide: every UI primitive and shared section with sample
+ * content. Not linked anywhere and excluded from search engines.
+ */
+import op1 from "@/assets/images/OpiniaKolektyw1.webp"
+import op2 from "@/assets/images/OpiniaKolektyw2.webp"
+import op3 from "@/assets/images/OpiniaKolektyw3.webp"
+import op4 from "@/assets/images/OpiniaKolektyw4.webp"
+import {
+  CaseStudyVideos,
+  FaqSection,
+  FlowerFeature,
+  ImageCarousel,
+  PromoCard,
+  VideoGrid,
+} from "@/components/sections"
+import {
+  Accordion,
+  Button,
+  Card,
+  Carousel,
+  CircleArrow,
+  Container,
+  Countdown,
+  Decor,
+  GhostHeading,
+  Heading,
+  IconList,
+  Marquee,
+  MarkerHeading,
+  Reveal,
+  Section,
+  StarBadge,
+  TileCountdown,
+  TypingText,
+  VideoEmbed,
+} from "@/components/ui"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+const swatches = [
+  "bg-navy",
+  "bg-lavender",
+  "bg-cream",
+  "bg-mint",
+  "bg-tangerine",
+  "bg-lemon",
+  "bg-rose",
+  "bg-blush",
+  "bg-petal",
+  "bg-petal-light",
+  "bg-bubblegum",
+  "bg-orchid",
+  "bg-magenta",
+  "bg-plum",
+  "bg-amethyst",
+  "bg-iris",
+  "bg-lilac",
+  "bg-periwinkle",
+  "bg-ultraviolet",
+  "bg-sunflower",
+  "bg-butter",
+  "bg-marigold",
+  "bg-apricot",
+  "bg-peach",
+  "bg-jesien-ink",
+  "bg-jesien-purple",
+  "bg-jesien-pink",
+  "bg-jesien-orange",
+  "bg-jesien-lavender",
+  "bg-jesien-blush",
+]
+const buttons = ["soft", "outline", "dark", "black", "pill", "offer", "pink"] as const
+const cards = ["paper", "green", "pink", "white", "lavender"] as const
+const in3Days = new Date(Date.now() + 3 * 86_400_000)
+const faq = [
+  {
+    question: "Czy to jest dla mnie?",
+    answer: "<p>Tak, jeśli prowadzisz <strong>własny biznes</strong>.</p>",
+  },
+  { question: "Ile mam czasu?", answer: "<p>Dostęp masz na zawsze.</p>" },
+  { question: "Czy będą nagrania?", answer: "<p>Tak, każde spotkanie jest nagrywane.</p>" },
+  { question: "Gdzie się spotykamy?", answer: "<p>Online, na Zoomie.</p>" },
+]
+const opinions = [op1, op2, op3, op4].map((src, index) => ({
+  src,
+  alt: `Opinia klientki ${index + 1}`,
+}))
+const sectionTitle = "mb-4 border-b border-black/10 pb-2 font-anton text-3xl uppercase"
+---
+
+<BaseLayout title="Styleguide" noindex bodyClass="bg-white text-black">
+  <Container width="page" class="py-12">
+    <Heading as="h1" variant="anton" size="xl">
+      Styleguide
+    </Heading>
+    <p class="mt-2 text-lg">Prymitywy UI i sekcje współdzielone — src/components.</p>
+  </Container>
+
+  <Container width="page" class="space-y-16 pb-24">
+    <section>
+      <h2 class={sectionTitle}>Kolory</h2>
+      <div class="grid grid-cols-4 gap-3 md:grid-cols-8">
+        {swatches.map((swatch) => (
+          <div>
+            <div class:list={["h-14 rounded-lg border border-black/10", swatch]} />
+            <code class="text-xs">{swatch.replace("bg-", "")}</code>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class={sectionTitle}>Typografia — Heading</h2>
+      <Heading variant="anton" size="display">
+        Anton display
+      </Heading>
+      <Heading variant="anton" size="lg">
+        Anton lg — Zażółć gęślą jaźń
+      </Heading>
+      <Heading variant="sans" size="lg">
+        Sans lg — Zażółć gęślą jaźń
+      </Heading>
+      <Heading variant="black" size="md">
+        Black md
+      </Heading>
+      <MarkerHeading bounce={false}>MarkerHeading — Kim jestem?</MarkerHeading>
+      <GhostHeading ghost="Czujesz, że nadajemy na tych" bounce={false}>
+        samych falach?
+      </GhostHeading>
+      <p class="font-caveat text-3xl">Caveat — odręczny dopisek</p>
+      <p class="font-courier text-xl">Courier — kolektyw</p>
+      <p class="font-lemon text-xl">Lemon</p>
+      <p class="font-annie text-2xl">Annie Use Your Telescope</p>
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>Button</h2>
+      <div class="flex flex-wrap items-center gap-4">
+        {buttons.map((variant) => (
+          <Button variant={variant} href="#">
+            {variant}
+          </Button>
+        ))}
+        <Button variant="dark" size="xl" class="font-anton uppercase">
+          Sprawdzam
+        </Button>
+        <Button variant="pill" size="lg">
+          Dołączam
+        </Button>
+      </div>
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>Card</h2>
+      <div class="grid gap-4 md:grid-cols-5">
+        {cards.map((tone) => (
+          <Card tone={tone} class="shadow-lg">
+            tone="{tone}"
+          </Card>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>IconList</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <IconList
+          items={["Konkretny plan reklam", "Konsultacje z ekspertkami", "Nagrania bez limitu"]}
+          icon="✅"
+        />
+        <IconList
+          items={[
+            { icon: "🔥", text: "<strong>Emoji</strong> per item" },
+            { icon: "🎯", text: "własne ikony" },
+          ]}
+          iconClass="text-2xl"
+        />
+        <IconList
+          items={["Tekst płynie razem z ikoną jak pierwsza litera.", "Druga linia."]}
+          icon="👉"
+          inline
+        />
+      </div>
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>Accordion</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <Accordion question="Classic" group="demo">
+          Odpowiedź w stylu klasycznym.
+        </Accordion>
+        <Accordion question="Outlined" variant="outlined" group="demo">
+          Odpowiedź w ramce.
+        </Accordion>
+        <Accordion question="Minimal" variant="minimal" group="demo">
+          Odpowiedź minimalna.
+        </Accordion>
+      </div>
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>Countdown</h2>
+      <div class="flex flex-wrap gap-8">
+        <Countdown
+          target={in3Days}
+          class="gap-4 bg-lavender px-6 py-2 font-bold"
+          labelClass="text-sm font-medium"
+          valueClass="text-2xl"
+        />
+        <Countdown
+          evergreen={{ storageKey: "styleguide-demo", durationMs: 30 * 60_000 }}
+          units={["minutes", "seconds"]}
+          labels={{ minutes: "MIN", seconds: "SEK" }}
+          labelPosition="bottom"
+          separator=":"
+          class="gap-1"
+          tileClass="min-w-12 rounded-lg bg-jesien-ink px-1.5 py-1 text-white"
+          valueClass="font-anton text-xl"
+          labelClass="text-xs font-semibold tracking-widest opacity-70"
+          separatorClass="font-extrabold text-jesien-pink"
+        />
+        <TileCountdown target={in3Days} />
+        <TileCountdown target={in3Days} tone="bg-bubblegum text-black" />
+      </div>
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>Carousel / ImageCarousel</h2>
+      <Carousel label="Demo" perView="thirds" arrows="ink" class="mb-8">
+        {[1, 2, 3, 4, 5].map((n) => (
+          <div class="px-2">
+            <Card tone="green" class="flex h-40 items-center justify-center font-anton text-4xl">
+              {n}
+            </Card>
+          </div>
+        ))}
+      </Carousel>
+      <ImageCarousel images={opinions} height="sm" arrows="dark" />
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>VideoEmbed / VideoGrid</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <VideoEmbed id="1150047798" title="Wideo demo (Vimeo)" />
+        <VideoGrid
+          columns={2}
+          videos={[
+            { provider: "youtube", id: "zMf5FHKuy8g", title: "Opinia Dominiki" },
+            { provider: "youtube", id: "J4kR8n9RFL0", title: "Opinia Izy" },
+          ]}
+        />
+      </div>
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>CaseStudyVideos / FlowerFeature</h2>
+      <CaseStudyVideos class="mb-8" />
+      <div class="flex flex-wrap justify-center gap-6 bg-lavender py-6">
+        <FlowerFeature title="STRATEG" text="tworzę kreatywne koncepty reklamowe dla marek" />
+        <FlowerFeature title="Krok pierwszy" number="01" flower="yellow" />
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class={sectionTitle}>TypingText / Marquee / Reveal</h2>
+      <TypingText as="p" text="Pisane na żywo…" class="text-2xl font-bold" />
+      <TypingText
+        as="p"
+        mode="words"
+        words={["reklamy", "AI", "automatyzacje"]}
+        class="text-2xl font-bold text-tangerine"
+      />
+      <Marquee duration={20} class="bg-black py-2 text-white" trackClass="gap-8 pr-8">
+        <span>MAGIC</span>
+        <span>✦</span>
+        <span>ADSY</span>
+        <span>✦</span>
+        <span>KOLEKTYW</span>
+        <span>✦</span>
+      </Marquee>
+      <Reveal>
+        <Card tone="pink">Ten blok pojawia się po przewinięciu.</Card>
+      </Reveal>
+    </section>
+
+    <section>
+      <h2 class={sectionTitle}>Decor / CircleArrow / StarBadge</h2>
+      <div class="relative flex h-48 items-center justify-center gap-8 overflow-hidden rounded-xl bg-lavender">
+        <Decor art="flower-left-blue" class="top-0 left-0 w-24" />
+        <Decor art="magic-sun-yellow" class="right-4 bottom-2 w-20 animate-spin-slow" />
+        <CircleArrow href="#faq" />
+        <CircleArrow shape="chevron" circleClass="fill-plum" arrowClass="stroke-white" />
+        <div class="relative h-24 w-24">
+          <StarBadge label="NOWOŚĆ!" class="inset-0" />
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <Section bg="bg-mint" pad="md">
+    <PromoCard cta={{ label: "WYBIERAM!", href: "#" }}>
+      <h3 class="mb-4 font-anton text-4xl">PromoCard</h3>
+      <p>Karta oferty z treścią, przyciskiem i opcjonalnym zdjęciem.</p>
+    </PromoCard>
+  </Section>
+  <FaqSection items={faq} bg="bg-linear-to-b from-lavender to-white" />
+  <FaqSection
+    items={faq}
+    variant="outlined"
+    columns={1}
+    title="FAQ (outlined)"
+    bg="bg-petal"
+    id="faq-outlined"
+    titleClass="font-anton font-normal uppercase"
+  />
+</BaseLayout>

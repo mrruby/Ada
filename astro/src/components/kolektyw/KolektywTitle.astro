@@ -1,0 +1,76 @@
+---
+/**
+ * Orange-outlined pill heading of the Magic collective pages ("Kim jesteśmy?",
+ * "Krok 1"…). Set the pill width with `class` (e.g. `max-w-xs`); `stars`
+ * flanks it with spinning purple asterisks, `href` turns it into a CTA link.
+ *
+ * <KolektywTitle class="max-w-md">Nasze wyniki w liczbach</KolektywTitle>
+ */
+import { Image } from "astro:assets"
+import star from "@/assets/images/magicSign.svg"
+import { cn } from "@/lib/cn"
+
+const tones = {
+  paper: "bg-cream text-tangerine",
+  grey: "bg-neutral-300 text-tangerine",
+  clear: "text-tangerine",
+  /** Solid orange CTA pill. */
+  orange: "bg-tangerine text-cream transition-opacity hover:opacity-90",
+} as const
+
+const sizes = {
+  sm: "px-6 py-3 text-lg md:text-xl",
+  md: "px-6 py-3 text-xl md:text-2xl",
+  lg: "p-2 text-2xl md:text-3xl",
+  xl: "p-2 text-2xl leading-tight md:text-4xl",
+} as const
+
+type Props = {
+  as?: "h1" | "h2" | "h3" | "p"
+  tone?: keyof typeof tones
+  size?: keyof typeof sizes
+  href?: string
+  stars?: boolean
+  id?: string
+  /** Classes for the pill (width, margins, case). */
+  class?: string
+}
+
+const {
+  as: Tag = "h2",
+  tone = "paper",
+  size = "lg",
+  href,
+  stars = false,
+  id,
+  class: className,
+} = Astro.props
+
+const Box = href ? "a" : "div"
+const pillClass = cn(
+  "mx-auto block rounded-3xl border border-tangerine text-center",
+  stars ? "mx-0" : "max-w-md",
+  tones[tone],
+  sizes[size],
+  className
+)
+const starClass = "hidden size-12 shrink-0 animate-spin-slow md:block"
+---
+
+{stars ? (
+  <div class="flex items-center justify-center gap-5">
+    <Image src={star} alt="" width={48} height={48} class={starClass} />
+    <Box href={href} class={pillClass}>
+      <Tag id={id} class="font-anton font-normal">
+        <slot />
+      </Tag>
+    </Box>
+    <Image src={star} alt="" width={48} height={48} class={starClass} />
+  </div>
+) : (
+  <Box href={href} class={pillClass}>
+    <Tag id={id} class="font-anton font-normal">
+      <slot />
+    </Tag>
+  </Box>
+)}

@@ -1,0 +1,47 @@
+---
+/** Illustrative monthly schedule: announcement + scattered event cards. */
+import { magicScheduleEvents } from "@/data/jesien"
+import { mockCard } from "./mockCard"
+
+// Slightly scattered, like cards dropped on a desk.
+const tilts = [
+  "-rotate-2",
+  "rotate-1 translate-x-1.5",
+  "-rotate-1 -translate-x-1",
+  "rotate-1 translate-x-2",
+]
+---
+
+<div
+  class="grid w-full max-w-sm gap-2.5"
+  aria-label="Przykładowy rozkład jazdy na miesiąc"
+  role="group"
+>
+  <div class:list={[mockCard, "px-4 py-3 text-sm"]}>
+    <div class="mb-1.5 flex items-center gap-2 text-xs text-jesien-ink-soft">
+      <i class="grid size-6 place-items-center rounded-full bg-jesien-purple font-semibold text-white not-italic">
+        M
+      </i>
+      Asystentka MAGIC w Ogłoszenia · 1d
+    </div>
+    Hej dziewczyny! 💜 Październik będzie miesiącem pełnym konkretnych tematów, pr…
+    <div class="mt-2 rounded-lg bg-jesien-blush px-3 py-2.5 text-lg leading-tight font-bold">
+      <span class="text-marigold">Rozkład jazdy</span>
+      <em class="text-jesien-pink/70 not-italic">na październik</em>
+    </div>
+  </div>
+  {magicScheduleEvents.map((event, index) => (
+    <div
+      class:list={[mockCard, "flex items-center gap-3 px-3.5 py-3", tilts[index % tilts.length]]}
+    >
+      <div class="w-12 shrink-0 rounded-lg bg-lavender py-1 text-center leading-tight">
+        <b class="block text-lg">{event.day}</b>
+        <span class="text-xs text-jesien-ink-soft">paź</span>
+      </div>
+      <div>
+        <b class="block text-sm leading-snug">{event.title}</b>
+        <span class="text-xs text-jesien-ink-soft">{event.hours}</span>
+      </div>
+    </div>
+  ))}
+</div>

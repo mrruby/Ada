@@ -1,0 +1,50 @@
+---
+/**
+ * Cream "offer" card: copy + CTA on one side, optional media on the other.
+ * Used for the home page product list and similar teasers.
+ *
+ * Slots: default = copy, "media" = image/illustration (optional).
+ */
+import { Button, Card } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  cta: { label: string; href: string }
+  class?: string
+  /** Extra classes for the media column (e.g. absolute positioning on lg). */
+  mediaClass?: string
+}
+
+const { cta, class: className, mediaClass } = Astro.props
+const hasMedia = Astro.slots.has("media")
+---
+
+<Card
+  as="article"
+  tone="paper"
+  pad="none"
+  class={cn(
+    "relative mx-auto my-5 flex max-w-4xl flex-col items-center rounded-4xl p-10 text-black md:flex-row lg:my-20 lg:min-h-120",
+    !hasMedia && "justify-center text-center",
+    className
+  )}
+>
+  <div class={cn(!hasMedia && "flex flex-col items-center")}>
+    <div class="max-w-md md:text-xl">
+      <slot />
+    </div>
+    <Button
+      href={cta.href}
+      variant="black"
+      size="none"
+      class="my-5 rounded-xl px-5 py-1.5 font-semibold lg:text-2xl"
+    >
+      {cta.label}
+    </Button>
+  </div>
+  {hasMedia && (
+    <div class={mediaClass}>
+      <slot name="media" />
+    </div>
+  )}
+</Card>

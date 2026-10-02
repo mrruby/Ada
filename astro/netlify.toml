@@ -1,0 +1,44 @@
+[build]
+  command = "yarn build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Hashed build assets (CSS/JS/optimized images/fonts) never change.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Netlify-CDN-Cache-Control = "public, max-age=31536000, immutable"
+    CDN-Cache-Control = "public, max-age=31536000, immutable"
+
+# Unhashed artwork: browsers revalidate, the CDN caches for a day.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Netlify-CDN-Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+    CDN-Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# /magic is the main sales page (heavy traffic from ads): CDN-cache it.
+[[headers]]
+  for = "/magic"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Netlify-CDN-Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+    CDN-Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/magic/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Netlify-CDN-Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+    CDN-Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/magic/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Netlify-CDN-Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+    CDN-Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"

@@ -1,0 +1,38 @@
+---
+/**
+ * CTA of the Jesień landings: pink→orange gradient pill (`primary`, `small`)
+ * or a white pill with an ink outline (`ghost`).
+ */
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+const variants = {
+  primary:
+    "bg-linear-to-r from-jesien-pink from-10% to-jesien-orange px-8 py-4 text-base text-white shadow-lg shadow-jesien-pink/35 hover:shadow-xl hover:shadow-jesien-pink/40",
+  small:
+    "bg-linear-to-r from-jesien-pink from-10% to-jesien-orange px-3.5 py-2 text-xs text-white shadow-md shadow-jesien-pink/30 sm:px-4 hover:shadow-lg hover:shadow-jesien-pink/40",
+  ghost:
+    "border-2 border-jesien-ink bg-white px-8 py-4 text-base text-jesien-ink shadow-lg shadow-jesien-ink/15 hover:shadow-xl hover:shadow-jesien-ink/20",
+} as const
+
+type Props = {
+  href: string
+  variant?: keyof typeof variants
+  class?: string
+}
+
+const { href, variant = "primary", class: className } = Astro.props
+---
+
+<Button
+  href={href}
+  variant="bare"
+  size="none"
+  class={cn(
+    "rounded-full font-extrabold tracking-wide hover:-translate-y-0.5 hover:scale-102 focus-visible:outline-3 focus-visible:outline-jesien-purple motion-reduce:hover:translate-none motion-reduce:hover:scale-100",
+    variants[variant],
+    className
+  )}
+>
+  <slot />
+</Button>

@@ -1,0 +1,37 @@
+---
+/** Quiz header: Kolektyw MAGIC logo, title and "12 pytań · 3 minuty" pills. */
+import { Image } from "astro:assets"
+import logo from "@/assets/images/kolektyw-logo.webp"
+import { Section } from "@/components/ui"
+
+type Props = { questionCount: number }
+
+const { questionCount } = Astro.props
+const pill = "rounded-full px-6 py-2 font-bold text-plum"
+---
+
+<Section
+  bg="bg-cream"
+  width="full"
+  class="overflow-hidden px-4 pt-8 pb-16 text-black md:px-8 md:pt-16 md:pb-24"
+  innerClass="flex max-w-5xl flex-col items-center gap-6"
+>
+  <a href="/">
+    <Image
+      src={logo}
+      alt="Kolektyw MAGIC"
+      width={200}
+      height={100}
+      densities={[1, 2]}
+      loading="eager"
+    />
+  </a>
+  <h1 class="max-w-2xl text-center font-anton text-4xl leading-tight font-normal md:text-5xl lg:text-6xl lg:leading-snug">
+    <span class="text-petal">QUIZ:</span>
+    <span class="text-tangerine">JAKA JEST TWOJA ADSOWA OSOBOWOŚĆ?</span>
+  </h1>
+  <ul class="flex justify-center gap-2">
+    <li class={`${pill} bg-mint`}>{questionCount} pytań</li>
+    <li class={`${pill} bg-orchid`}>3 minuty</li>
+  </ul>
+</Section>

@@ -1,0 +1,164 @@
+---
+/**
+ * Lightweight Vimeo/YouTube embed. Shows a poster with a play button and only
+ * loads the third-party player after a click (or immediately with `eager`).
+ *
+ * <VideoEmbed provider="vimeo" id="1150047798" title="Opinia Ani" aspect="9:16" />
+ */
+import type { ImageMetadata } from "astro"
+import { Image } from "astro:assets"
+import { cn } from "@/lib/cn"
+
+const aspects = {
+  "16:9": "aspect-video",
+  "9:16": "aspect-9/16",
+  "4:5": "aspect-4/5",
+  "1:1": "aspect-square",
+} as const
+
+type Props = {
+  provider?: "vimeo" | "youtube"
+  /** Video id (any `?query` suffix is ignored). */
+  id: string
+  title: string
+  aspect?: keyof typeof aspects
+  /** Custom poster; defaults to the provider thumbnail. */
+  poster?: ImageMetadata | string
+  /** Extra player query params, e.g. "loop=1&muted=1". */
+  params?: string
+  /** Render the player right away (e.g. hero videos that autoplay). */
+  eager?: boolean
+  /** Autoplay when `eager` (muted autoplay is the only reliable kind). */
+  autoplay?: boolean
+  class?: string
+  /** Image `sizes` hint for the poster. */
+  sizes?: string
+}
+
+const {
+  provider = "vimeo",
+  id: rawId,
+  title,
+  aspect = "16:9",
+  poster,
+  params = "",
+  eager = false,
+  autoplay = false,
+  class: className,
+  sizes = "(max-width: 640px) 100vw, 640px",
+} = Astro.props
+
+const id = rawId.split("?")[0]
+
+const playerUrl = (play: boolean) => {
+  const query = new URLSearchParams(params)
+  if (provider === "vimeo") {
+    query.set("badge", "0")
+    query.set("autopause", "0")
+    query.set("player_id", "0")
+    query.set("app_id", "58479")
+  } else {
+    query.set("rel", "0")
+  }
+  if (play) query.set("autoplay", "1")
+  const base =
+    provider === "vimeo"
+      ? `https://player.vimeo.com/video/${id}`
+      : `https://www.youtube-nocookie.com/embed/${id}`
+  return `${base}?${query.toString()}`
+}
+
+const remotePoster =
+  provider === "vimeo"
+    ? `https://vumbnail.com/${id}_large.jpg`
+    : `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
+const remoteSrcset =
+  provider === "vimeo"
+    ? `https://vumbnail.com/${id}_small.jpg 320w, https://vumbnail.com/${id}_medium.jpg 640w, https://vumbnail.com/${id}_large.jpg 1280w`
+    : undefined
+
+const iframeAttrs = {
+  title,
+  allow: "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share",
+  allowfullscreen: true,
+  referrerpolicy: "strict-origin-when-cross-origin",
+  class: "absolute inset-0 h-full w-full",
+} as const
+---
+
+<div class={cn("relative w-full overflow-hidden bg-black", aspects[aspect], className)}>
+  {eager ? (
+    <iframe src={playerUrl(autoplay)} {...iframeAttrs} />
+  ) : (
+    <button
+      type="button"
+      class="group absolute inset-0 h-full w-full"
+      aria-label={`Odtwórz wideo: ${title}`}
+      data-video-facade
+      data-src={playerUrl(true)}
+      data-title={title}
+    >
+      {poster && typeof poster !== "string" ? (
+        <Image
+          src={poster}
+          alt=""
+          class="h-full w-full object-cover"
+          widths={[320, 640, 960]}
+          sizes={sizes}
+        />
+      ) : (
+        <img
+          src={typeof poster === "string" ? poster : remotePoster}
+          srcset={typeof poster === "string" ? undefined : remoteSrcset}
+          sizes={sizes}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-cover"
+        />
+      )}
+      <span class="absolute top-1/2 left-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 transition-colors group-hover:bg-black/85">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="white"
+          class="ml-1"
+          aria-hidden="true"
+        >
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </span>
+    </button>
+  )}
+</div>
+
+<script>
+  const warmed = new Set<string>()
+  const preconnect = (url: string) => {
+    const origin = new URL(url).origin
+    if (warmed.has(origin)) return
+    warmed.add(origin)
+    const link = document.createElement("link")
+    link.rel = "preconnect"
+    link.href = origin
+    document.head.appendChild(link)
+  }
+
+  document.querySelectorAll<HTMLButtonElement>("[data-video-facade]").forEach((button) => {
+    const src = button.dataset.src!
+    button.addEventListener("pointerenter", () => preconnect(src), { once: true })
+    button.addEventListener("focus", () => preconnect(src), { once: true })
+    button.addEventListener("click", () => {
+      const iframe = document.createElement("iframe")
+      iframe.src = src
+      iframe.title = button.dataset.title ?? ""
+      iframe.allow =
+        "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+      iframe.allowFullscreen = true
+      iframe.referrerPolicy = "strict-origin-when-cross-origin"
+      iframe.className = "absolute inset-0 h-full w-full"
+      button.replaceWith(iframe)
+    })
+  })
+</script>

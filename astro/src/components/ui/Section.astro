@@ -1,0 +1,59 @@
+---
+/**
+ * Full-bleed page band: a background that spans the viewport with a centered,
+ * width-limited content column. The basic building block of every page.
+ *
+ * <Section bg="bg-mint" width="content" pad="md">…</Section>
+ *
+ * The band is a `flow-root`, so children's margins never leak outside its
+ * background.
+ */
+import type { HTMLAttributes } from "astro/types"
+import { cn } from "@/lib/cn"
+
+const widths = {
+  /** Tailwind `container` (breakpoint-based max width) — the classic layout. */
+  container: "container",
+  narrow: "max-w-3xl",
+  content: "max-w-5xl",
+  wide: "max-w-6xl",
+  page: "max-w-7xl",
+  full: "max-w-none",
+} as const
+
+const paddings = {
+  none: "",
+  sm: "py-8 px-4",
+  md: "py-12 px-4 md:py-16",
+  lg: "py-16 px-4 md:py-24",
+} as const
+
+export type SectionWidth = keyof typeof widths
+export type SectionPadding = keyof typeof paddings
+
+type Props = HTMLAttributes<"section"> & {
+  as?: "section" | "div" | "header" | "footer" | "aside"
+  /** Background classes for the full-bleed band (color, gradient, artwork). */
+  bg?: string
+  width?: SectionWidth
+  pad?: SectionPadding
+  /** Classes for the inner content column. */
+  innerClass?: string
+}
+
+const {
+  as: Tag = "section",
+  bg,
+  width = "container",
+  pad = "none",
+  class: className,
+  innerClass,
+  ...attrs
+} = Astro.props
+---
+
+<Tag class={cn("flow-root w-full", bg, className)} {...attrs}>
+  <div class={cn("mx-auto", widths[width], paddings[pad], innerClass)}>
+    <slot />
+  </div>
+</Tag>

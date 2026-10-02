@@ -1,0 +1,28 @@
+---
+/**
+ * V-shaped edge between guide sections: a triangle in the color of the
+ * section above, pinned to the top of a section or hanging below its bottom.
+ * The parent needs `relative`; to overlap the next section it also needs a
+ * z-index (e.g. `z-10`).
+ */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  placement: "top" | "below"
+  /** Background class of the triangle (the color it continues). */
+  color?: string
+  class?: string
+}
+
+const { placement, color = "bg-cream", class: className } = Astro.props
+---
+
+<span
+  aria-hidden="true"
+  class={cn(
+    "pointer-events-none absolute inset-x-0 z-10 h-24 [clip-path:polygon(0_0,100%_0,50%_100%)]",
+    placement === "top" ? "top-0" : "top-full -mt-px",
+    color,
+    className
+  )}
+></span>

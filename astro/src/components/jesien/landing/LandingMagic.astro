@@ -1,0 +1,56 @@
+---
+/** /jesien: what MAGIC is and why the sign-up puts you on its waiting list. */
+import { Container, Reveal } from "@/components/ui"
+import { JESIEN_FINALE_ID, jesienMagicCards } from "@/data/jesien"
+import Callout from "../Callout.astro"
+import EmojiItem from "../EmojiItem.astro"
+import JesienButton from "../JesienButton.astro"
+import JesienHeading from "../JesienHeading.astro"
+---
+
+<section class="py-16 lg:py-20">
+  <Container width="content" class="px-5">
+    <Reveal class="text-center">
+      <JesienHeading kicker="Czym jest MAGIC?" class="mx-auto mb-3.5 max-w-xl">
+        <span class="text-jesien-pink">MAGIC</span> to Twój zespół od reklam ✨
+      </JesienHeading>
+      <p class="mb-4 font-bold text-jesien-ink-soft">
+        bez zatrudniania agencji, freelancerów lub osób trzecich do współpracy
+      </p>
+      <p class="mx-auto mb-8 max-w-2xl text-jesien-ink-soft">
+        Społeczność kobiet, które skalują swoje biznesy z pomocą reklam, AI i automatyzacji - z
+        możliwością pokazania ekranu, oceną grafik i tekstów przez specjalistki i spotkań na żywo. W
+        środku:
+      </p>
+    </Reveal>
+
+    <div class="mb-10 grid gap-5 md:grid-cols-2">
+      {jesienMagicCards.map((item, index) => (
+        <EmojiItem
+          {...item}
+          as="div"
+          variant="card"
+          reveal
+          muted={false}
+          tone={index % 2 ? "pink" : "purple"}
+        />
+      ))}
+    </div>
+
+    <Reveal>
+      <Callout class="mx-auto mb-8 max-w-4xl">
+        Zapisując się na tej stronie, trafiasz na
+        <strong class="text-jesien-ink">listę oczekujących MAGIC</strong>: dowiesz się pierwsza,
+        kiedy otwieramy drzwi do Klubu oraz otrzymujesz dodatkowe bonusy na start, takie jak{" "}
+        <strong class="text-jesien-pink">MAGIC Plan</strong> - personalizowany plan na Twoje
+        reklamy, wraz ze spotkaniem 1:1&nbsp;👀
+      </Callout>
+    </Reveal>
+
+    <Reveal class="text-center">
+      <JesienButton href={`#${JESIEN_FINALE_ID}`} variant="ghost">
+        TAK, CHCĘ TO WSZYSTKO! 🚀
+      </JesienButton>
+    </Reveal>
+  </Container>
+</section>

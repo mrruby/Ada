@@ -1,0 +1,61 @@
+---
+/** /jesien-nagranie hero: welcome, three tips and the recording player. */
+import { Container, VideoEmbed } from "@/components/ui"
+import {
+  JESIEN_DEADLINE_SHORT,
+  JESIEN_NAGRANIE_VIDEO_ID,
+  JESIEN_PLAYER_ID,
+  jesienNagranieTips,
+} from "@/data/jesien"
+import EmojiItem, { type EmojiTone } from "../EmojiItem.astro"
+import FloatStar from "../FloatStar.astro"
+import HeroBand from "../HeroBand.astro"
+import ShimmerText from "../ShimmerText.astro"
+import Sticker from "../Sticker.astro"
+
+const tones: EmojiTone[] = ["purple", "pink", "orange"]
+---
+
+<HeroBand>
+  <Fragment slot="decor">
+    <FloatStar class="top-1/10 left-1/24" />
+    <FloatStar class="top-1/6 right-1/20 text-3xl text-jesien-purple-soft animation-delay-200" />
+    <FloatStar class="top-1/2 left-1/12 text-jesien-orange animation-delay-400" />
+  </Fragment>
+
+  <Container width="content" class="px-5">
+    <div class="mx-auto mb-8 max-w-4xl text-center">
+      <h1 class="mb-4 font-anton text-4xl leading-tight font-normal tracking-wide uppercase md:text-5xl xl:text-6xl">
+        <span class="mb-2.5 block text-lg tracking-widest text-jesien-pink md:text-2xl">
+          Twoje szkolenie:
+        </span>
+        Przygotuj swój lejek <ShimmerText>na&nbsp;jesień</ShimmerText> 🎬
+      </h1>
+      <p class="mx-auto max-w-xl text-jesien-ink-soft [&_strong]:text-jesien-ink">
+        <strong>Brawo, jesteś w środku!</strong> Zanim klikniesz play, trzy szybkie wskazówki:
+      </p>
+    </div>
+
+    <ul class="mx-auto mb-10 grid max-w-3xl gap-3">
+      {jesienNagranieTips.map((item, index) => (
+        <EmojiItem {...item} tone={tones[index % tones.length]} />
+      ))}
+    </ul>
+
+    <div
+      id={JESIEN_PLAYER_ID}
+      class="relative mx-auto max-w-4xl scroll-mt-28 rounded-3xl border-3 border-jesien-purple bg-white p-3.5 shadow-xl shadow-jesien-purple/15 sm:p-5"
+    >
+      <Sticker>
+        oglądaj <em>do {JESIEN_DEADLINE_SHORT}! ⏳</em>
+      </Sticker>
+      <VideoEmbed
+        provider="youtube"
+        id={JESIEN_NAGRANIE_VIDEO_ID}
+        title="Szkolenie: Przygotuj swój lejek na jesień"
+        eager
+        class="rounded-xl bg-jesien-ink"
+      />
+    </div>
+  </Container>
+</HeroBand>

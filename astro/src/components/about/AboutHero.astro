@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets"
+import heroImage from "@/assets/images/bg-adapromis.png"
+---
+
+<section class="grid h-120 overflow-hidden md:h-176 xl:h-212">
+  <Image
+    src={heroImage}
+    alt=""
+    widths={[768, 1280, 1920, 2560]}
+    sizes="100vw"
+    loading="eager"
+    fetchpriority="high"
+    class="col-start-1 row-start-1 h-full w-full object-cover"
+  />
+  <div class="z-10 col-start-1 row-start-1 grid items-center justify-center px-4 pt-40">
+    <div class="flex flex-col items-center">
+      <h1 class="animate-settle text-center text-4xl font-bold lg:text-8xl">
+        Cześć, tu Ada Promis!
+      </h1>
+      <p class="mx-auto max-w-3xl text-center text-sm font-medium md:text-xl">
+        Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny: praktykuję slow
+        marketing, przemyślany, wartościowy, zbudowany na relacjach
+      </p>
+    </div>
+  </div>
+</section>

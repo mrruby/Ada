@@ -1,0 +1,222 @@
+---
+/**
+ * /warsztat-lejek — "Kevin sam w menedżerze reklam" funnel workshop landing
+ * (January 2024). Sales are over: countdowns show zeros, links stay as they were.
+ */
+import { Image } from "astro:assets"
+import { FaqSection } from "@/components/sections"
+import { Carousel, Decor, MarkerHeading, Section } from "@/components/ui"
+import AboutAda from "@/components/masterclass/AboutAda.astro"
+import AudienceSection from "@/components/masterclass/AudienceSection.astro"
+import CountdownBand from "@/components/masterclass/CountdownBand.astro"
+import MasterclassHero from "@/components/masterclass/MasterclassHero.astro"
+import PreparingSteps from "@/components/masterclass/PreparingSteps.astro"
+import WorkshopButton from "@/components/masterclass/WorkshopButton.astro"
+import WorkshopDate from "@/components/masterclass/WorkshopDate.astro"
+import WorkshopOutcomes from "@/components/masterclass/WorkshopOutcomes.astro"
+import WorkshopPitch from "@/components/masterclass/WorkshopPitch.astro"
+import {
+  businessOwnerCases,
+  businessOwnerQuestions,
+  clientReferences,
+  joinNowReasons,
+  marketerQuestions,
+  mentoringDoubts,
+  preparingSteps,
+  workshopCheckoutUrl as checkout,
+  workshopDeadline,
+  workshopFaq,
+  workshopOutcomes,
+} from "@/data/masterclass"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+const countdownTitle = "Na dołączenie do warsztatów zostało: "
+const flower = "z-20 hidden md:block"
+const pitchButton = "tracking-widest md:w-4xl md:text-2xl"
+---
+
+<BaseLayout title="Masterclass - Kevin sam w menedżerze reklam">
+  <main>
+    <CountdownBand
+      layout="bar"
+      title={countdownTitle}
+      target={workshopDeadline}
+      cta={{ label: "DOŁĄCZ DO WARSZTATÓW", href: checkout }}
+    >
+      <p class="animate-settle text-center text-xl font-bold md:text-4xl">
+        Bądź jak Kevin, postaw na siebie w przemyślany sposób!
+      </p>
+    </CountdownBand>
+
+    <MasterclassHero />
+
+    <AudienceSection
+      id="prowadze-wlasny-biznes"
+      title="Prowadzę własny biznes"
+      items={businessOwnerQuestions}
+    >
+      <Decor slot="decor" art="waves-1" class="top-96 right-0 hidden lg:block" />
+      <Decor
+        slot="decor"
+        art="flower-bottom"
+        width={150}
+        height={150}
+        class="-right-18 bottom-24 z-20 hidden lg:block"
+      />
+      <h3 class="max-w-3xl py-24 text-center font-bold md:text-3xl">
+        Jeśli odpowiedziałaś <span class="text-amethyst">'tak!'</span> na co najmniej raz, to
+        warsztaty{" "}
+        <span class="text-amethyst">
+          „KEVIN SAM W MENEDŻERZE REKLAM: STWÓRZ LEJEK REKLAMOWY NA 2024 ROK!”
+        </span>{" "}
+        są dla Ciebie!
+      </h3>
+      <h3 class="pb-10 font-extrabold uppercase md:text-4xl">Bez względu na to, czy:</h3>
+      <ul class="flex max-w-4xl flex-col gap-5 pb-16 md:text-2xl">
+        {businessOwnerCases.map((item) => (
+          <li class="flex gap-4">
+            <span class="mt-1 size-6 shrink-0 rounded-xl bg-blush" />
+            {item}
+          </li>
+        ))}
+      </ul>
+      <WorkshopButton href={checkout} icon="sm" class={pitchButton}>
+        CHCĘ SKUTECZNIE ROZWINĄĆ MÓJ BIZNES <br /> W 2024 ROKU!
+      </WorkshopButton>
+    </AudienceSection>
+
+    <AudienceSection
+      id="pracuje-w-marketingu"
+      title="Pracuję w marketingu / jako freelancerka"
+      items={marketerQuestions}
+    >
+      <Decor slot="decor" art="waves-1" class="top-0 left-0 hidden xl:block" />
+      <Decor slot="decor" art="waves-1" class="top-96 right-0 hidden xl:block" />
+      <h3 class="max-w-5xl pt-24 text-center font-extrabold uppercase md:text-3xl">
+        Jeśli w Twojej głowie pojawiła się myśl: <br />
+        <span class="text-amethyst">„kurcze, no tak!” </span>
+      </h3>
+      <p class="max-w-5xl pt-8 pb-20 text-center leading-8 md:text-2xl">
+        to znak, że na <b>warsztatach</b> przybliżysz się do życia, w którym pracujesz tak, jak
+        lubisz i zarabiasz dzięki temu naprawdę fajne pieniądze 💸
+      </p>
+      <WorkshopButton href={checkout} icon="sm" class={pitchButton}>
+        CHCĘ ZDOBYĆ UMIEJĘTNOŚCI, DZIĘKI KTÓRYM ZDOBĘDĘ PRACĘ NA MOICH WARUNKACH!{" "}
+      </WorkshopButton>
+    </AudienceSection>
+
+    <WorkshopPitch href={checkout}>
+      <Decor slot="decor" art="waves-1" class="top-96 left-0 hidden xl:block" />
+      <Decor
+        slot="decor"
+        art="flower-bottom"
+        width={150}
+        height={150}
+        class="top-1/3 -right-18 z-20 lg:hidden"
+      />
+    </WorkshopPitch>
+
+    <AboutAda />
+
+    <Section class="relative overflow-hidden bg-white">
+      <Decor art="flower-blue" width={150} height={150} class={`top-72 -left-18 ${flower}`} />
+      <MarkerHeading class="relative z-10 pt-10 text-center text-xl uppercase lg:text-3xl">
+        TAK mówią osoby, z którymi współpracowałam
+        <br />
+        przy kampaniach reklamowych:
+      </MarkerHeading>
+      <Carousel
+        label="Opinie osób, z którymi współpracowałam"
+        arrows="dark"
+        class="-mt-10 pb-4 md:-mt-24"
+      >
+        {clientReferences.map((image) => (
+          <div class="px-4">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              widths={[480, 960]}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              class="h-auto w-full"
+            />
+          </div>
+        ))}
+      </Carousel>
+    </Section>
+
+    <WorkshopOutcomes doubts={mentoringDoubts} outcomes={workshopOutcomes}>
+      <Decor
+        slot="decor"
+        art="flower-blue"
+        width={150}
+        height={150}
+        class={`top-0 -right-18 ${flower}`}
+      />
+    </WorkshopOutcomes>
+
+    <Section bg="bg-blush">
+      <div class="mx-auto flex max-w-3xl flex-col gap-6 px-3 py-10 text-center md:text-2xl">
+        <p>
+          Aby przyjść na warsztaty <b>nie trzeba</b> mieć za sobą całego roku prowadzenia kampanii!
+        </p>
+        <p>
+          Nawet jeśli <b>nigdy nie robiłaś reklam,</b> wyniesiesz ze spotkania całą maaasę wiedzy.
+        </p>
+      </div>
+    </Section>
+
+    <WorkshopDate href={checkout} reasons={joinNowReasons}>
+      <Decor
+        slot="decor"
+        art="flower-blue"
+        width={150}
+        height={150}
+        class={`top-1/2 -left-18 ${flower}`}
+      />
+      <Decor
+        slot="decor"
+        art="flower-blue"
+        width={150}
+        height={150}
+        class={`bottom-56 -right-18 ${flower}`}
+      />
+    </WorkshopDate>
+
+    <Section bg="bg-blush" class="relative overflow-hidden">
+      <Decor art="flower-blue" width={150} height={150} class={`top-0 -left-18 ${flower}`} />
+      <div class="mx-auto flex max-w-3xl animate-fadeIn flex-col gap-6 px-3 py-10 text-center">
+        <h2 class="font-bold md:text-4xl">Jak przygotować się do warsztatów?</h2>
+        <p class="md:text-lg">Przed Tobą 3 zdania, każde z nich zajmie Ci średnio 1 minutę ;)</p>
+      </div>
+    </Section>
+
+    <PreparingSteps steps={preparingSteps}>
+      <Decor
+        slot="decor"
+        art="flower-blue"
+        width={150}
+        height={150}
+        class={`top-4 -right-18 ${flower}`}
+      />
+    </PreparingSteps>
+
+    <CountdownBand title={countdownTitle} target={workshopDeadline}>
+      <Decor
+        slot="decor"
+        art="flower-blue"
+        width={150}
+        height={150}
+        class={`bottom-0 -left-18 ${flower}`}
+      />
+    </CountdownBand>
+
+    <FaqSection items={workshopFaq} titleClass="animate-settle" class="relative overflow-hidden">
+      <Decor art="flower-blue" width={150} height={150} class={`-bottom-20 -right-18 ${flower}`} />
+      <div class="flex justify-center pt-20 pb-10 md:pb-28">
+        <WorkshopButton href={checkout} icon="sm" class="font-extrabold md:w-5xl md:text-2xl">
+          Chcę wziąć udział w warsztatach <br /> i w 2024 roku zdobyć nowych klientów!{" "}
+        </WorkshopButton>
+      </div>
+    </FaqSection>
+  </main>
+</BaseLayout>

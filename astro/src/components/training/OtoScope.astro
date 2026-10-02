@@ -1,0 +1,48 @@
+---
+/**
+ * Wraps content that depends on the visitor's one-time offer (OTO).
+ *
+ * Children marked `data-oto-when="active" | "inactive" | "loading"` are shown
+ * only in that state; `[data-oto-minutes]` / `[data-oto-seconds]` show the
+ * live countdown. The HTML renders the "inactive" state (regular price), so
+ * the page works without JavaScript; the script switches to "loading", asks
+ * /api/oto/start and settles on "active" or "inactive".
+ */
+type Props = {
+  campaign: string
+  class?: string
+}
+
+const { campaign, class: className } = Astro.props
+---
+
+<div data-oto-scope data-oto-campaign={campaign} data-oto-state="inactive" class={className}>
+  <slot />
+</div>
+
+<style is:global>
+  [data-oto-scope]:not([data-oto-state="active"]) [data-oto-when="active"],
+  [data-oto-scope]:not([data-oto-state="inactive"]) [data-oto-when="inactive"],
+  [data-oto-scope]:not([data-oto-state="loading"]) [data-oto-when="loading"] {
+    display: none !important;
+  }
+</style>
+
+<script>
+  import { watchOto } from "@/lib/oto/client"
+
+  const pad2 = (value: number) => value.toString().padStart(2, "0")
+
+  document.querySelectorAll<HTMLElement>("[data-oto-scope]").forEach((scope) => {
+    const minutes = scope.querySelectorAll("[data-oto-minutes]")
+    const seconds = scope.querySelectorAll("[data-oto-seconds]")
+    scope.dataset.otoState = "loading"
+
+    watchOto(scope.dataset.otoCampaign ?? "", (state) => {
+      scope.dataset.otoState = state.active ? "active" : "inactive"
+      if (!state.active) return
+      minutes.forEach((node) => (node.textContent = pad2(state.timeLeft.minutes)))
+      seconds.forEach((node) => (node.textContent = pad2(state.timeLeft.seconds)))
+    })
+  })
+</script>

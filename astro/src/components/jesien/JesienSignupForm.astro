@@ -1,0 +1,53 @@
+---
+/**
+ * Sign-up card of the Jesień landings: tilted sticker, title, MailerLite
+ * form and microcopy. Slot "sticker" = sticker text (`<em>` is pink).
+ *
+ * The form is submitted with fetch (MailerLite's own scripts dropped, as on
+ * the previous site), so the same form can be rendered twice on a page.
+ */
+import { MailerLiteForm } from "@/components/ui"
+import formJesien from "@/forms/form-jesien.html?raw"
+import { cn } from "@/lib/cn"
+import Sticker from "./Sticker.astro"
+
+type Props = {
+  microcopy: string
+  variant?: "hero" | "finale"
+  id?: string
+  class?: string
+  title?: string
+  /** MailerLite export (src/forms/*.html?raw). Defaults to the /jesien form. */
+  formHtml?: string
+}
+
+const {
+  microcopy,
+  variant = "hero",
+  id,
+  class: className,
+  title = "Wpisz dane i odbierz nagranie 👇",
+  formHtml = formJesien,
+} = Astro.props
+
+const isFinale = variant === "finale"
+---
+
+<div
+  id={id}
+  class={cn(
+    "relative rounded-3xl border-3 bg-white px-5 pt-6 pb-5 text-jesien-ink shadow-xl shadow-jesien-purple/15 sm:px-7 sm:pt-8 sm:pb-6",
+    isFinale ? "border-jesien-ink" : "border-jesien-purple",
+    className
+  )}
+>
+  <Sticker side={isFinale ? "left" : "right"}>
+    <slot name="sticker" />
+  </Sticker>
+
+  <h2 class="mb-4 text-xl leading-snug font-extrabold text-jesien-ink">{title}</h2>
+
+  <MailerLiteForm html={formHtml} submit="fetch" />
+
+  <p class="mt-3 text-center text-xs leading-normal text-jesien-ink-soft">{microcopy}</p>
+</div>

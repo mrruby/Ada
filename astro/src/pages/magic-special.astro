@@ -1,0 +1,40 @@
+---
+import MagicAudience from "@/components/magic/MagicAudience.astro"
+import MagicCaseStudies from "@/components/magic/MagicCaseStudies.astro"
+import MagicCaseStudy from "@/components/magic/MagicCaseStudy.astro"
+import MagicFaq from "@/components/magic/MagicFaq.astro"
+import MagicFinalCta from "@/components/magic/MagicFinalCta.astro"
+import MagicHero from "@/components/magic/MagicHero.astro"
+import MagicLogoHeader from "@/components/magic/MagicLogoHeader.astro"
+import MagicPlans from "@/components/magic/MagicPlans.astro"
+import MagicResults from "@/components/magic/MagicResults.astro"
+import MagicSampleMonth from "@/components/magic/MagicSampleMonth.astro"
+import MagicSituations from "@/components/magic/MagicSituations.astro"
+import MagicTeam from "@/components/magic/MagicTeam.astro"
+import MagicTeamBenefits from "@/components/magic/MagicTeamBenefits.astro"
+import MagicUnique from "@/components/magic/MagicUnique.astro"
+import MagicVideo from "@/components/magic/MagicVideo.astro"
+import { OG_ADA_PURPLE } from "@/config/site"
+import { caseStudies, magicLinks, magicPlans } from "@/data/magic"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+---
+
+<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+  <main>
+    <MagicLogoHeader variant="pink" />
+    <MagicHero />
+    <MagicVideo heading="O co chodzi w Magic? Sprawdź w skrócie:" />
+    <MagicSituations />
+    <MagicAudience />
+    <MagicUnique />
+    <MagicPlans plans={magicPlans} url={magicLinks.subscriptionCheckout} />
+    <MagicSampleMonth />
+    <MagicTeam />
+    <MagicTeamBenefits />
+    <MagicCaseStudies heading="Sprawdź, co nasze Klubowiczki mówią o Magic:" />
+    <MagicCaseStudy study={caseStudies.entrepreneur} bg="bg-periwinkle" />
+    <MagicResults showResults />
+    <MagicFaq />
+    <MagicFinalCta />
+  </main>
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+/**
+ * "Is this for you?" block for one audience: shadowed title box, flower list
+ * of recognisable situations, then the audience-specific pitch (default slot).
+ * Slot "decor" takes positioned artwork for the band.
+ */
+import flower from "@/assets/images/flower-blue.svg"
+import { IconList, Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  id: string
+  title: string
+  items: string[]
+  bg?: string
+  class?: string
+}
+
+const {
+  id,
+  title,
+  items,
+  bg = "bg-linear-to-b from-lavender to-white",
+  class: className,
+} = Astro.props
+---
+
+<Section id={id} bg={bg} class={cn("relative overflow-hidden", className)}>
+  <slot name="decor" />
+  <div class="flex flex-col items-center px-3 pt-16 pb-20">
+    <h2 class="mx-auto flex min-h-31 items-center justify-center bg-lavender px-8 text-center text-2xl font-bold shadow-xl lg:min-w-3xl lg:text-4xl">
+      {title}
+    </h2>
+    <IconList
+      items={items}
+      icon={flower}
+      stacked
+      class="mx-auto max-w-7xl flex-row flex-wrap justify-center gap-12 pt-10 md:pt-16"
+      itemClass="max-w-xl gap-0 px-2 md:text-xl"
+      iconClass="size-25 animate-spin-slow"
+    />
+    <slot />
+  </div>
+</Section>

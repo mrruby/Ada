@@ -1,0 +1,78 @@
+---
+/** "Cześć!" — Ada's story in three image + text rows (classic workshop style). */
+import { Image } from "astro:assets"
+import portrait from "@/assets/images/ada.webp"
+import diagram from "@/assets/images/diagram.webp"
+import hello from "@/assets/images/hello.webp"
+import { MarkerHeading, Section } from "@/components/ui"
+---
+
+<Section bg="bg-linear-to-t from-lavender to-white">
+  <div class="flex flex-col items-center gap-10 px-3 pb-16 md:text-lg">
+    <div class="flex max-w-3xl flex-col items-center gap-4">
+      <Image src={hello} alt="Ada Promis z laptopem na kanapie" width={522} height={383} />
+      <MarkerHeading class="text-2xl font-extrabold uppercase md:text-7xl lg:text-7xl">
+        Cześć!
+      </MarkerHeading>
+      <MarkerHeading
+        as="h3"
+        bounce={false}
+        class="pt-4 text-center text-base font-extrabold lg:text-3xl"
+      >
+        Nazywam się Adrianna Promis-Urbas
+      </MarkerHeading>
+      <div class="flex flex-col gap-4 pt-4">
+        <p>
+          Mam za sobą epizod pracy w audycie finansowym, ale moim powołaniem chyba od zawsze był{" "}
+          <b>marketing! </b>
+        </p>
+        <p>
+          I tak <b>od stażu w agencji marketingowej do swojej działalności:</b> dziś pod szyldem
+          GetBold! obsługuję klientów z Europy, w tym z Polski i na moim liczniku wybiło już ponad{" "}
+          <b>1 mln budżetów reklamowych</b> wydanych w ramach Meta Ads.
+        </p>
+        <p>
+          W czasie mojej kariery marketingowej przeszłam od osoby, która pracuje na etacie i szuka
+          możliwości rozwoju do <b>przedsiębiorczyni,</b> która szuka sposobów na skuteczną promocję
+          swojego biznesu.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center gap-6 md:flex-row">
+      <Image src={portrait} alt="Ada Promis przy laptopie" width={383} height={376} />
+      <div class="flex max-w-2xl flex-col gap-4">
+        <p>
+          Gdy zaczynałam przygodę z marketingiem, szukałam <b>sprawdzonych</b> źródeł wiedzy o
+          reklamach.
+        </p>
+        <p>
+          Byłam w miejscu, w którym <b>praca na swoim</b> wciąż oznaczała pracę dla klientów i walkę
+          o każde nowe zlecenie.
+        </p>
+        <p>
+          Teraz <b>pewnie</b> rozmawiam z każdym potencjalnym klientem, bo wiem, jaką
+          <b> wartość</b> oferuję i co można zyskać, pracując ze mną.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center gap-6 md:flex-row md:gap-24">
+      <Image src={diagram} alt="" width={266} height={196} />
+      <div class="flex max-w-2xl flex-col gap-4">
+        <p>
+          Dzięki temu wiem, czego możesz potrzebować
+          <b>Ty, marketerko, pracowniczko, freelancerko, przedsiębiorczynio!</b>
+        </p>
+        <p>
+          Ta droga <b>nie była</b> usłana różami, ale wiedziałam, że muszę postawić na jedno:{" "}
+          <b>twarde kompetencje.</b>
+        </p>
+        <p>
+          Zrobiłam to i teraz <b>śmiało polecam swoje usługi mentoringowe </b>dotyczące
+          projektowania i prowadzenia kampanii reklamowych Meta Ads
+        </p>
+      </div>
+    </div>
+  </div>
+</Section>

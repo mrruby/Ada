@@ -1,0 +1,77 @@
+---
+/**
+ * Set of embedded videos (testimonials, case studies) as a grid or carousel.
+ */
+import { Carousel, VideoEmbed } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { VideoItem } from "@/lib/content"
+
+const grids = {
+  2: "grid-cols-1 md:grid-cols-2",
+  3: "grid-cols-1 md:grid-cols-3",
+  4: "grid-cols-2 md:grid-cols-4",
+  6: "grid-cols-2 md:grid-cols-3 lg:grid-cols-6",
+} as const
+
+type Props = {
+  videos: VideoItem[]
+  layout?: "grid" | "carousel"
+  columns?: keyof typeof grids
+  aspect?: "16:9" | "9:16" | "4:5" | "1:1"
+  /** Slides per view when `layout="carousel"`. */
+  perView?: "single" | "references" | "thirds" | "peek"
+  arrows?: "light" | "dark" | "ink"
+  /** Carousel wraps around at the ends. */
+  loop?: boolean
+  label?: string
+  class?: string
+  itemClass?: string
+  /** Classes for each video frame (size, radius, background). */
+  videoClass?: string
+  /** `sizes` hint for posters. */
+  sizes?: string
+}
+
+const {
+  videos,
+  layout = "grid",
+  columns = 3,
+  aspect = "9:16",
+  perView = "peek",
+  arrows = "dark",
+  loop = true,
+  label = "Wideo opinie",
+  class: className,
+  itemClass,
+  videoClass,
+  sizes,
+} = Astro.props
+---
+
+{layout === "carousel" ? (
+  <Carousel label={label} perView={perView} arrows={arrows} loop={loop} class={className}>
+    {videos.map((video) => (
+      <div class={cn("px-2", itemClass)}>
+        <VideoEmbed
+          {...video}
+          aspect={aspect}
+          sizes={sizes}
+          class={cn("rounded-2xl", videoClass)}
+        />
+      </div>
+    ))}
+  </Carousel>
+) : (
+  <ul class={cn("grid gap-4", grids[columns], className)}>
+    {videos.map((video) => (
+      <li class={itemClass}>
+        <VideoEmbed
+          {...video}
+          aspect={aspect}
+          sizes={sizes}
+          class={cn("rounded-2xl", videoClass)}
+        />
+      </li>
+    ))}
+  </ul>
+)}

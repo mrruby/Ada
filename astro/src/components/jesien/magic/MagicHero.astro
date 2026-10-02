@@ -1,0 +1,63 @@
+---
+/** /magic-jesien hero: "Marketing Ads/AI Girls Inside Club" + collage. */
+import { Image } from "astro:assets"
+import hero from "@/assets/images/magic-jesien/hero.webp"
+import MjButton from "./MjButton.astro"
+
+/** Alternating word in the title (an instant swap, as on the previous site). */
+const words = ["Ads", "AI"]
+---
+
+<header id="top" class="pt-8 md:pt-16">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 md:grid-cols-2">
+    <div class="pb-8 md:pb-16">
+      <h1 class="text-4xl leading-none font-extrabold tracking-tight text-marigold md:max-w-lg md:text-5xl lg:text-6xl">
+        Marketing
+        <span class="inline-block min-w-12 md:min-w-16 lg:min-w-20">
+          <span aria-hidden="true" data-hero-words={words.join(" ")}>
+            {words[0]}
+          </span>
+          <span class="sr-only">{words.join(" i ")}</span>
+        </span>
+        <br />
+        Girls Inside Club <span class="ml-1 align-top text-3xl text-bubblegum">★</span>
+      </h1>
+      <p class="mt-6 mb-7 max-w-md text-lg leading-snug lg:text-2xl">
+        Skaluj swój biznes dzięki reklamom, AI i automatyzacjom: z konkretnym planem wdrożeniowym.
+      </p>
+      <MjButton href="#pakiety" size="lg">
+        Dołączam
+      </MjButton>
+    </div>
+    <Image
+      src={hero}
+      alt="Ada z laptopem, wokół niej wiadomości z Circle: Kapibara Barbara, konsultacje materiałów, warsztat z AI, poziomy nauki w aplikacji"
+      widths={[600, 1000, 1400]}
+      sizes="(min-width: 1152px) 540px, (min-width: 768px) 50vw, 100vw"
+      loading="eager"
+      fetchpriority="high"
+      class="h-auto w-full self-end"
+    />
+  </div>
+</header>
+
+<script>
+  // Cycle the words every 2.8 s; static first word with reduced motion.
+  const motion = window.matchMedia("(prefers-reduced-motion: reduce)")
+  document.querySelectorAll<HTMLElement>("[data-hero-words]").forEach((element) => {
+    const words = element.dataset.heroWords!.split(" ")
+    let index = 0
+    let timer: number | undefined
+    const sync = () => {
+      window.clearInterval(timer)
+      element.textContent = words[(index = 0)]
+      if (motion.matches) return
+      timer = window.setInterval(() => {
+        index = (index + 1) % words.length
+        element.textContent = words[index]
+      }, 2800)
+    }
+    sync()
+    motion.addEventListener("change", sync)
+  })
+</script>

@@ -1,0 +1,56 @@
+---
+/**
+ * Member case study: title, carousel of story screenshots, then what she says
+ * about Magic (a screenshot or a video) and a CTA.
+ */
+import { Image } from "astro:assets"
+import { Carousel, Heading, VideoEmbed } from "@/components/ui"
+import type { CaseStudy } from "@/data/magic"
+import { cn } from "@/lib/cn"
+import MagicCta from "./MagicCta.astro"
+import MagicSection from "./MagicSection.astro"
+
+type Props = {
+  study: CaseStudy
+  bg: string
+}
+
+const { study, bg } = Astro.props
+---
+
+<MagicSection bg={bg} class="text-black" innerClass="max-w-4xl py-6 text-center md:px-12 md:py-8">
+  <Heading>
+    <span aria-hidden="true">{study.emoji}</span>
+    <br />
+    {study.title}
+  </Heading>
+  <Heading as="p" size="sm" class="pt-2 font-medium" set:html={study.lead} />
+
+  <Carousel label={study.title} perView="single" arrows="dark">
+    {study.slides.map((slide) => (
+      <div class="flex items-center justify-center">
+        <Image
+          src={slide.src}
+          alt={slide.alt}
+          widths={[480, 960, 1600]}
+          sizes="(min-width: 896px) 800px, 100vw"
+          class="h-auto w-full"
+        />
+      </div>
+    ))}
+  </Carousel>
+
+  <Heading as="p" size="sm" class="py-2 font-medium" set:html={study.proofTitle} />
+  {"image" in study.proof ? (
+    <Image
+      src={study.proof.image.src}
+      alt={study.proof.image.alt}
+      widths={[480, 800, 1304]}
+      sizes="(min-width: 896px) 800px, 100vw"
+      class="mx-auto h-auto w-full max-w-3xl"
+    />
+  ) : (
+    <VideoEmbed {...study.proof.video} sizes="(max-width: 640px) 92vw, 800px" class="rounded-lg" />
+  )}
+  <MagicCta class={cn("mt-3", study.ctaBg)}>Dołączam!</MagicCta>
+</MagicSection>

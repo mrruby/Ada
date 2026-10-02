@@ -1,0 +1,78 @@
+---
+/**
+ * Classic Ada feature tile: slowly spinning flower (optionally with a step
+ * number on top), bold title and an optional description.
+ *
+ * <FlowerFeature title="STRATEG" text="tworzę kreatywne koncepty…" />
+ * <FlowerFeature flower="yellow" number="01" title="…" />
+ */
+import { Image } from "astro:assets"
+import flowerWhitePink from "@/assets/images/flower-white-pink.svg"
+import flowerWhite from "@/assets/images/flower-white.svg"
+import flowerYellow from "@/assets/images/floweryellow.svg"
+import { cn } from "@/lib/cn"
+
+const flowers = {
+  blue: {
+    src: flowerWhitePink,
+    width: 150,
+    height: 150,
+    class: "-mb-2.5",
+    number: "top-16 text-lg font-semibold",
+  },
+  yellow: {
+    src: flowerYellow,
+    width: 134,
+    height: 151,
+    class: "",
+    number: "top-16 text-lg font-semibold",
+  },
+  white: {
+    src: flowerWhite,
+    width: 96,
+    height: 108,
+    class: "mb-5",
+    number: "top-6 text-4xl font-bold",
+  },
+} as const
+
+type Props = {
+  title: string
+  /** Description under the title (trusted HTML allowed). */
+  text?: string
+  number?: string
+  flower?: keyof typeof flowers
+  class?: string
+  titleClass?: string
+  textClass?: string
+}
+
+const {
+  title,
+  text,
+  number,
+  flower = "blue",
+  class: className,
+  titleClass,
+  textClass,
+} = Astro.props
+const art = flowers[flower]
+---
+
+<div class={cn("relative flex flex-col items-center lg:min-w-60", className)}>
+  {number && <p class={cn("absolute z-10", art.number)}>{number}</p>}
+  <Image
+    src={art.src}
+    alt=""
+    width={art.width}
+    height={art.height}
+    class={cn("animate-spin-slow", art.class)}
+  />
+  <p class={cn("max-w-60 text-center leading-snug font-bold lg:text-lg", titleClass)}>{title}</p>
+  {text && (
+    <p
+      class={cn("w-full px-2 text-center leading-snug md:max-w-56 lg:text-lg", textClass)}
+      set:html={text}
+    />
+  )}
+</div>

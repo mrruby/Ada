@@ -1,0 +1,66 @@
+---
+/** /jesien hero: claim, sign-up form, photo of Ada and what you receive. */
+import { Image } from "astro:assets"
+import heroPhoto from "@/assets/images/jesien-hero-ada.webp"
+import { Container } from "@/components/ui"
+import { JESIEN_DEADLINE_SHORT, JESIEN_HERO_FORM_ID, jesienGets } from "@/data/jesien"
+import EmojiItem from "../EmojiItem.astro"
+import FloatStar from "../FloatStar.astro"
+import HeroBand from "../HeroBand.astro"
+import JesienSignupForm from "../JesienSignupForm.astro"
+import ShimmerText from "../ShimmerText.astro"
+---
+
+<HeroBand>
+  <Fragment slot="decor">
+    <FloatStar class="top-1/12 left-1/24" />
+    <FloatStar class="top-1/6 right-1/20 text-3xl text-jesien-purple-soft animation-delay-200" />
+    <FloatStar class="top-7/10 left-1/2 text-jesien-orange animation-delay-400" />
+  </Fragment>
+
+  <Container width="content" class="grid gap-7 px-5 lg:grid-cols-2 lg:gap-x-14">
+    <div class="lg:col-start-1 lg:row-start-1">
+      <span class="mb-5 inline-block rounded-full border-2 border-jesien-pink-soft bg-jesien-blush px-4 py-1.5 text-xs font-bold tracking-wider">
+        🔥 SZKOLENIE ZA 0 ZŁ • po {JESIEN_DEADLINE_SHORT} trafia do płatnej sprzedaży
+      </span>
+      <h1 class="mb-4 font-anton text-4xl leading-none font-normal tracking-wide uppercase md:text-5xl xl:text-6xl">
+        Przygotuj swoje reklamy <ShimmerText>na&nbsp;jesień</ShimmerText>
+        <span class="align-top text-2xl text-jesien-pink xl:text-3xl">✦</span>
+      </h1>
+      <p class="max-w-lg text-jesien-ink-soft [&_strong]:text-jesien-ink">
+        Nagranie szkolenia, w którym zdradzam, <strong>co ustawić w reklamach już teraz</strong>,
+        żeby wrzesień, Black Friday i święta pracowały na Twoją sprzedaż&nbsp;-
+        <strong>nawet z budżetem 20-30 złotych dziennie</strong>.
+      </p>
+    </div>
+
+    <Image
+      src={heroPhoto}
+      alt="Adrianna Promis-Urbas z laptopem wskazuje w górę"
+      widths={[400, 800, 1000]}
+      sizes="(min-width: 1024px) 470px, 384px"
+      loading="eager"
+      fetchpriority="high"
+      class="mx-auto h-auto w-full max-w-sm rotate-1 self-start rounded-3xl shadow-xl shadow-jesien-purple/15 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none"
+    />
+
+    <JesienSignupForm
+      id={JESIEN_HERO_FORM_ID}
+      class="scroll-mt-24 lg:col-start-1 lg:row-start-2"
+      microcopy={`Link do nagrania od razu ląduje na Twojej skrzynce. Oglądasz do ${JESIEN_DEADLINE_SHORT}, potem szkolenie staje się płatne.`}
+    >
+      <Fragment slot="sticker">
+        za 0 zł <em>tylko do {JESIEN_DEADLINE_SHORT}!</em>
+      </Fragment>
+    </JesienSignupForm>
+
+    <div class="mx-auto mt-7 w-full max-w-3xl lg:col-span-2">
+      <p class="mb-3 text-center font-extrabold">Zapisując się, odbierasz:</p>
+      <ul class="grid gap-3">
+        {jesienGets.map((item, index) => (
+          <EmojiItem {...item} tone={index % 2 ? "pink" : "purple"} muted={false} />
+        ))}
+      </ul>
+    </div>
+  </Container>
+</HeroBand>

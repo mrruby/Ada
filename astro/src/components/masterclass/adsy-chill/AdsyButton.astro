@@ -1,0 +1,37 @@
+---
+/**
+ * Adsy&Chill pill CTA: black outline, uppercase bold label. Other attributes
+ * (id, aria-*, data-*, newTab) are passed to Button.
+ *
+ * <AdsyButton href="#pakiety" variant="green">Przekonałaś mnie!</AdsyButton>
+ */
+import type { ComponentProps } from "astro/types"
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+const variants = {
+  green: "bg-mint text-black hover:bg-tangerine",
+  pink: "bg-petal text-black",
+  orange: "bg-tangerine text-white hover:bg-petal",
+} as const
+
+type Props = Omit<ComponentProps<typeof Button>, "variant" | "size"> & {
+  href: string
+  variant?: keyof typeof variants
+}
+
+const { variant = "pink", class: className, ...attrs } = Astro.props
+---
+
+<Button
+  variant="bare"
+  size="none"
+  class={cn(
+    "w-48 rounded-full border border-black px-4 py-1.5 text-xs font-bold uppercase md:h-18 md:w-md md:text-2xl md:tracking-widest",
+    variants[variant],
+    className
+  )}
+  {...attrs}
+>
+  <slot />
+</Button>

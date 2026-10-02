@@ -1,0 +1,67 @@
+---
+/**
+ * "Co zmieni się…" — before/after boxes that slide in from the sides the
+ * first time the pointer enters (lg), then the CTA and a scroll marker.
+ */
+import { CircleArrow, Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { RichText } from "@/lib/content"
+import AdsyButton from "./AdsyButton.astro"
+
+type Props = {
+  before: RichText[]
+  after: RichText[]
+}
+
+const { before, after } = Astro.props
+const boxes = [
+  {
+    title: "Przed",
+    items: before,
+    class: "border-periwinkle lg:group-data-hovered:animate-slideInFromLeft",
+  },
+  {
+    title: "Po",
+    items: after,
+    class: "border-bubblegum lg:group-data-hovered:animate-slideInFromRight",
+  },
+]
+---
+
+<Section bg="bg-mint" width="content" class="relative">
+  <div class="flex flex-col items-center px-6 pt-8 pb-16 md:pt-12">
+    <h2 class="mb-20 pt-10 text-center font-anton text-2xl text-tangerine lg:text-3xl">
+      Co zmieni się, jeśli zainwestujesz w <span class="text-bubblegum">Adsy&Chill</span>?
+    </h2>
+    <div class="group mb-6 flex flex-col gap-8 text-black md:flex-row" data-hover-once>
+      {boxes.map((box) => (
+        <div class={cn("max-w-md border-3 bg-neutral-100 py-2", box.class)}>
+          <h3 class="pb-2 text-center font-anton text-2xl text-tangerine lg:text-3xl">
+            {box.title}
+          </h3>
+          <ul class="flex flex-col gap-3 px-8 pb-3">
+            {box.items.map((item) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <AdsyButton href="#pakiety" variant="pink" class="font-extrabold">
+      Wybieram ADSY&CHILL!
+    </AdsyButton>
+  </div>
+  <CircleArrow
+    href="#pakiety"
+    size="lg"
+    circleClass="fill-plum"
+    arrowClass="stroke-petal"
+    shape="chevron"
+    label="Przejdź do sekcji pakiety"
+    class="absolute bottom-0 left-1/2 z-10 -translate-x-1/2 translate-y-1/2"
+  />
+</Section>
+
+<script>
+  import "./hover-once"
+</script>

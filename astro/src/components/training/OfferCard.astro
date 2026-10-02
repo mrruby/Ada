@@ -1,0 +1,91 @@
+---
+/**
+ * Price card of the challenge. Shows the OTO price while the visitor's
+ * one-time offer is active, otherwise the regular price (must be placed
+ * inside an `OtoScope`). Both CTAs go to the OTO checkout endpoint, which
+ * redirects to the right checkout.
+ */
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import { OTO_CHECKOUT_URL, OTO_OLD_PRICE, OTO_PRICE, REGULAR_PRICE } from "@/lib/oto/offer"
+
+type Props = {
+  id?: string
+  eyebrow: string
+  title: string
+  priceLabel: string
+  limitedNote: string
+  benefits: { icon: string; title: string; description?: string }[]
+  class?: string
+}
+
+const { id, eyebrow, title, priceLabel, limitedNote, benefits, class: className } = Astro.props
+
+const cta = "mx-auto w-5/6 px-3 py-5 font-montserrat text-xl font-extrabold uppercase lg:text-2xl"
+const regularPrice = "text-4xl lg:text-5xl"
+---
+
+<div
+  id={id}
+  class={cn(
+    "mx-auto flex w-full max-w-xs flex-col gap-8 rounded-3xl bg-cream px-6 py-8 text-black shadow-2xl lg:max-w-sm lg:px-7",
+    className
+  )}
+>
+  <div class="flex flex-col gap-4">
+    <p class="leading-none">{eyebrow}</p>
+    <h2 class="font-anton text-4xl leading-tight whitespace-pre-line uppercase lg:text-5xl">
+      {title}
+    </h2>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <p class="leading-none">{priceLabel}</p>
+    <div class="flex items-center gap-3 font-anton leading-none uppercase">
+      <p class={regularPrice} data-oto-when="loading">
+        ...
+      </p>
+      <p class={regularPrice} data-oto-when="inactive">
+        {REGULAR_PRICE}
+      </p>
+      <p class="text-5xl lg:text-6xl" data-oto-when="active">
+        {OTO_PRICE}
+      </p>
+      <p class="text-2xl text-gray-400 line-through lg:text-3xl" data-oto-when="active">
+        {OTO_OLD_PRICE}
+      </p>
+    </div>
+    <p class="text-sm font-semibold text-magenta" data-oto-when="active">
+      {limitedNote}
+    </p>
+  </div>
+
+  <Button
+    variant="offer"
+    size="none"
+    class={cn(cta, "cursor-wait opacity-80")}
+    data-oto-when="loading"
+  >
+    SPRAWDZAM OFERTĘ
+  </Button>
+  <Button href={OTO_CHECKOUT_URL} variant="offer" size="none" class={cta} data-oto-when="inactive">
+    KUPUJĘ DOSTĘP
+  </Button>
+  <Button href={OTO_CHECKOUT_URL} variant="offer" size="none" class={cta} data-oto-when="active">
+    KUPUJĘ ZA {OTO_PRICE.toUpperCase()}
+  </Button>
+
+  <ul class="flex flex-col text-sm leading-tight">
+    {benefits.map((benefit) => (
+      <li class="flex gap-3">
+        <span class="mt-0.5 text-lg leading-none" aria-hidden="true">
+          {benefit.icon}
+        </span>
+        <p>
+          <span class="block font-bold">{benefit.title}</span>
+          {benefit.description && <span class="block">{benefit.description}</span>}
+        </p>
+      </li>
+    ))}
+  </ul>
+</div>

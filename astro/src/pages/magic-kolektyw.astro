@@ -1,0 +1,94 @@
+---
+/** /magic-kolektyw — offer page of the Magic collective (done-for-you Meta ads team). */
+import { FaqSection, ImageCarousel } from "@/components/sections"
+import { IconList, Section } from "@/components/ui"
+import {
+  AudienceSection,
+  BookingSection,
+  CaseStudy,
+  CheckeredPanel,
+  ClosingCta,
+  CollectiveHero,
+  BeforeAfterColumns,
+  KolektywTitle,
+  NotebookPitch,
+  PackagesSection,
+  ResultsGallery,
+  TeamSection,
+  WhyMagicWindow,
+} from "@/components/kolektyw"
+import { OG_ADA_PURPLE } from "@/config/site"
+import {
+  audience,
+  benefits,
+  booking,
+  caseStudies,
+  closing,
+  faq,
+  hero,
+  packageCta,
+  packages,
+  packagesTitle,
+  painGain,
+  pitch,
+  results,
+  resultsTitle,
+  team,
+  teamMascot,
+  testimonials,
+  testimonialsTitle,
+  whyMagic,
+} from "@/data/kolektyw"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+---
+
+<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+  <main>
+    <CollectiveHero {...hero} />
+    <NotebookPitch {...pitch} />
+    <BeforeAfterColumns columns={painGain} />
+    <WhyMagicWindow {...whyMagic} />
+    <AudienceSection {...audience} />
+    <TeamSection members={team} mascot={teamMascot} />
+    <PackagesSection title={packagesTitle} packages={packages} cta={packageCta} />
+    <ResultsGallery title={resultsTitle} images={results} />
+
+    <CheckeredPanel>
+      <KolektywTitle class="my-12 max-w-md">{benefits.title}</KolektywTitle>
+      <IconList
+        items={benefits.items}
+        class="mx-auto mb-6 grid max-w-4xl gap-x-16 gap-y-0 px-8 md:grid-flow-col md:grid-cols-2 md:grid-rows-2 md:gap-y-2 md:px-0 md:pt-6"
+        itemClass="gap-2"
+      />
+    </CheckeredPanel>
+
+    <BookingSection {...booking} />
+    {caseStudies.map((study) => (
+      <CaseStudy study={study} />
+    ))}
+
+    <Section bg="bg-cream" innerClass="pt-10">
+      <ImageCarousel images={testimonials} label="Opinie klientek kolektywu MAGIC">
+        <h2
+          slot="title"
+          class="p-2 text-center font-anton text-2xl text-tangerine uppercase md:text-3xl"
+          set:html={testimonialsTitle}
+        />
+      </ImageCarousel>
+    </Section>
+
+    <ClosingCta {...closing} />
+
+    <FaqSection
+      items={faq}
+      columns={1}
+      variant="outlined"
+      bg="bg-ultraviolet"
+      itemClass="rounded-lg border-0"
+    >
+      <KolektywTitle slot="title" tone="clear" class="mb-6 max-w-48">
+        FAQ
+      </KolektywTitle>
+    </FaqSection>
+  </main>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+/**
+ * "Tak mówią osoby…" — a collage of testimonial screenshots (separate desktop
+ * and mobile artwork). Default slot renders below, e.g. a CTA.
+ */
+import type { ImageMetadata } from "astro"
+import { Image } from "astro:assets"
+import { Section } from "@/components/ui"
+
+type Props = {
+  desktop: ImageMetadata
+  mobile: ImageMetadata
+  bg?: string
+  id?: string
+}
+
+const { desktop, mobile, bg, id } = Astro.props
+const alt = "Opinie klientek o wsparciu Ady Promis w reklamach"
+---
+
+<Section bg={bg} id={id}>
+  <div class="flex flex-col items-center gap-6 px-3 pt-12 pb-7 md:pt-22">
+    <h2 class="p-2 text-center font-anton text-2xl text-tangerine uppercase md:text-3xl">
+      Tak mówią osoby, które korzystały <br /> z mojego wsparcia w reklamach:
+    </h2>
+    <Image src={desktop} alt={alt} width={1200} class="hidden lg:block" />
+    <Image src={mobile} alt={alt} class="h-auto w-full max-w-md lg:hidden" />
+    <slot />
+  </div>
+</Section>

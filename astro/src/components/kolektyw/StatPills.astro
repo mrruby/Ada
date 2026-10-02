@@ -1,0 +1,33 @@
+---
+/** Intro sentence + purple pills with a big mint figure and its explanation. */
+import type { StatPill } from "@/data/kolektyw/types"
+import { Section } from "@/components/ui"
+import type { RichText } from "@/lib/content"
+
+type Props = {
+  intro: RichText
+  stats: StatPill[]
+  bg?: string
+}
+
+const { intro, stats, bg = "bg-cream" } = Astro.props
+const figure = "p-2 text-center font-anton text-2xl text-mint md:text-3xl"
+---
+
+<Section bg={bg} class="text-black">
+  <div class="mx-auto max-w-5xl px-4 pt-12 pb-8">
+    <p class="mx-auto mb-4 max-w-xl text-center text-lg" set:html={intro} />
+    <ul class="flex flex-col gap-8">
+      {stats.map((stat) => (
+        <li class="mx-auto w-full max-w-xl items-center justify-center gap-2 rounded-3xl border border-tangerine bg-plum px-8 py-2 text-white md:flex">
+          <div class="shrink-0">
+            <p class={figure}>{stat.value}</p>
+            {stat.note && <p>{stat.note}</p>}
+          </div>
+          {stat.equals && <p class={figure}>=</p>}
+          <p set:html={stat.text} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</Section>

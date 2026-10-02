@@ -1,0 +1,30 @@
+---
+/** "Jak możesz z nami współpracować?" — stack of offer packages on the Magic grid. */
+import type { CollectivePackage } from "@/data/kolektyw/types"
+import { Reveal, Section } from "@/components/ui"
+import KolektywTitle from "./KolektywTitle.astro"
+import PackageCard from "./PackageCard.astro"
+
+type Props = {
+  title: string
+  packages: CollectivePackage[]
+  cta: { label: string; note: string; href: string }
+}
+
+const { title, packages, cta } = Astro.props
+---
+
+<Section bg="bg-art-grid" class="text-black">
+  <div class="mx-auto max-w-5xl px-4 pt-8 pb-16 md:pt-12 md:pb-32">
+    <KolektywTitle stars class="max-w-2xl">
+      {title}
+    </KolektywTitle>
+    <div class="mx-auto mt-12 flex max-w-3xl flex-col gap-16 md:gap-12">
+      {packages.map((item) => (
+        <Reveal>
+          <PackageCard item={item} cta={cta} />
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</Section>

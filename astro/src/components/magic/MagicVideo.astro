@@ -1,0 +1,17 @@
+---
+/** "Twoje zaproszenie do MAGIC" video with an optional heading. */
+import { VideoEmbed } from "@/components/ui"
+import MagicSection from "./MagicSection.astro"
+
+type Props = {
+  heading?: string
+  bg?: string
+}
+
+const { heading, bg = "bg-blush" } = Astro.props
+---
+
+<MagicSection bg={bg} innerClass="max-w-4xl">
+  {heading && <h2 class="mb-6 text-center text-2xl font-bold">{heading}</h2>}
+  <VideoEmbed id="1117395484" title="Twoje zaproszenie do MAGIC" />
+</MagicSection>

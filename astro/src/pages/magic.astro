@@ -1,0 +1,41 @@
+---
+import MagicAudience from "@/components/magic/MagicAudience.astro"
+import MagicCaseStudies from "@/components/magic/MagicCaseStudies.astro"
+import MagicCaseStudy from "@/components/magic/MagicCaseStudy.astro"
+import MagicFaq from "@/components/magic/MagicFaq.astro"
+import MagicFinalCta from "@/components/magic/MagicFinalCta.astro"
+import MagicHero from "@/components/magic/MagicHero.astro"
+import MagicMonthlyPackage from "@/components/magic/MagicMonthlyPackage.astro"
+import MagicQuestions from "@/components/magic/MagicQuestions.astro"
+import MagicResults from "@/components/magic/MagicResults.astro"
+import MagicSampleMonth from "@/components/magic/MagicSampleMonth.astro"
+import MagicSituations from "@/components/magic/MagicSituations.astro"
+import MagicStickyBar from "@/components/magic/MagicStickyBar.astro"
+import MagicTeam from "@/components/magic/MagicTeam.astro"
+import MagicUnique from "@/components/magic/MagicUnique.astro"
+import MagicVideo from "@/components/magic/MagicVideo.astro"
+import { OG_ADA_PURPLE } from "@/config/site"
+import { caseStudies, magicLinks } from "@/data/magic"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+---
+
+<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+  <main>
+    <MagicStickyBar />
+    <MagicHero />
+    <MagicCaseStudies />
+    <MagicAudience />
+    <MagicSituations />
+    <MagicUnique />
+    <MagicSampleMonth />
+    <MagicTeam />
+    <MagicVideo />
+    <MagicResults showResults />
+    <MagicMonthlyPackage url={magicLinks.clubCheckout} />
+    <MagicQuestions />
+    <MagicCaseStudy study={caseStudies.entrepreneur} bg="bg-periwinkle" />
+    <MagicCaseStudy study={caseStudies.marketer} bg="bg-bubblegum" />
+    <MagicFaq />
+    <MagicFinalCta />
+  </main>
+</BaseLayout>

@@ -1,0 +1,63 @@
+---
+/**
+ * Renders a MailerLite embedded form from an export in src/forms/:
+ *
+ *   import formHtml from "@/forms/form-jesien.html?raw"
+ *   <MailerLiteForm html={formHtml} id="zapisy" />
+ *
+ * `submit`:
+ *  - "embed" (default): the export as-is — MailerLite's own scripts handle
+ *    validation, submission and the success redirect.
+ *  - "fetch": MailerLite scripts are stripped (no script loads or "view"
+ *    pings — use it when several forms share a page or a form is shown
+ *    conditionally). Required fields are enforced natively, the form posts
+ *    with fetch and redirects to `redirect` on success.
+ */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  html: string
+  id?: string
+  class?: string
+  submit?: "embed" | "fetch"
+  /** Where "fetch" mode sends the visitor after a successful signup. */
+  redirect?: string
+}
+
+const { html, id, class: className, submit = "embed", redirect = "/thank/" } = Astro.props
+
+const markup = submit === "fetch" ? html.replace(/<script\b[\s\S]*?<\/script>/gi, "") : html
+---
+
+<div
+  id={id}
+  class={cn("mailerlite-form", className)}
+  data-mailerlite-fetch={submit === "fetch" ? redirect : undefined}
+  set:html={markup}
+/>
+
+<script>
+  // Only acts on forms rendered with submit="fetch".
+  document.querySelectorAll<HTMLElement>("[data-mailerlite-fetch]").forEach((root) => {
+    const form = root.querySelector<HTMLFormElement>("form.ml-block-form, form")
+    if (!form) return
+    const redirect = root.dataset.mailerliteFetch || "/thank/"
+
+    form.removeAttribute("target")
+    form
+      .querySelectorAll<HTMLInputElement>(
+        "input[aria-required=true], .ml-validate-required input[type=checkbox]"
+      )
+      .forEach((input) => (input.required = true))
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault()
+      fetch(form.action, { method: "POST", body: new FormData(form), mode: "cors" })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) window.location.href = redirect
+        })
+        .catch(() => {})
+    })
+  })
+</script>

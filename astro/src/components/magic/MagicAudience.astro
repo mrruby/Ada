@@ -1,0 +1,38 @@
+---
+/** "Jeśli prowadzisz marketing…" — two lists of who Magic is for, each with a CTA. */
+import { Heading, Reveal } from "@/components/ui"
+import { audience } from "@/data/magic"
+import { cn } from "@/lib/cn"
+import MagicCta from "./MagicCta.astro"
+import MagicSection from "./MagicSection.astro"
+
+type Props = { bg?: string }
+
+const { bg = "bg-lemon" } = Astro.props
+---
+
+<MagicSection bg={bg} class="text-black">
+  <Heading align="center" class="mb-10 uppercase md:mb-14 md:text-4xl">
+    JEŚLI PROWADZISZ MARKETING...
+  </Heading>
+
+  <div class="flex flex-col items-center justify-center gap-8 md:flex-row md:items-start">
+    {audience.map((column) => (
+      <Reveal class="flex flex-col items-center gap-2">
+        <div class={cn("max-w-md border-3 bg-neutral-100 pt-8 pb-10", column.border)}>
+          <Heading as="h3" align="center" class="mb-8 border-b-3 border-neutral-400 pb-4 uppercase">
+            {column.title}
+          </Heading>
+          <ul class="flex flex-col gap-3 px-8">
+            {column.items.map((item) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+        </div>
+        <MagicCta size="md" class={column.cta.bg}>
+          {column.cta.label}
+        </MagicCta>
+      </Reveal>
+    ))}
+  </div>
+</MagicSection>

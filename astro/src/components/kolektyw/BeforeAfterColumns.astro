@@ -1,0 +1,38 @@
+---
+/**
+ * Side-by-side emoji lists, each under an emoji and a pill title
+ * ("Rozpoznajesz się w tym?" vs "Co jeśli powiemy Ci, że możesz mieć:").
+ */
+import type { IconListColumn } from "@/data/kolektyw/types"
+import { IconList, Section } from "@/components/ui"
+import KolektywTitle from "./KolektywTitle.astro"
+
+type Props = {
+  columns: IconListColumn[]
+  bg?: string
+}
+
+const { columns, bg = "bg-cream" } = Astro.props
+---
+
+<Section bg={bg} class="text-black">
+  <div class="mx-auto flex max-w-5xl flex-col gap-10 px-10 pt-8 pb-16 md:px-14 lg:flex-row">
+    {columns.map((column) => (
+      <div>
+        {column.emoji && (
+          <p class="mb-8 text-center text-4xl" aria-hidden="true">
+            {column.emoji}
+          </p>
+        )}
+        <KolektywTitle as="h3" size="sm" class="mb-8 max-w-sm">
+          {column.title}
+        </KolektywTitle>
+        <IconList
+          items={column.items}
+          inline
+          class="mb-12 gap-0 text-sm leading-relaxed md:text-base"
+        />
+      </div>
+    ))}
+  </div>
+</Section>

@@ -1,0 +1,28 @@
+---
+/** White card of the MAGIC jesień pages (hairline border, soft shadow). */
+import type { HTMLAttributes } from "astro/types"
+import { Card } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+type Props = HTMLAttributes<"div"> & {
+  as?: "div" | "article" | "li"
+  /** Lift on hover. */
+  lift?: boolean
+}
+
+const { as = "div", lift = false, class: className, ...attrs } = Astro.props
+---
+
+<Card
+  as={as}
+  tone="white"
+  pad="none"
+  class={cn(
+    "rounded-3xl border border-lavender shadow-lg shadow-jesien-ink/10",
+    lift && "transition duration-200 hover:-translate-y-1 hover:shadow-xl",
+    className
+  )}
+  {...attrs}
+>
+  <slot />
+</Card>

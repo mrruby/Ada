@@ -1,0 +1,43 @@
+---
+/** /jesien finale: deadline reminder + second sign-up form. */
+import { Container, Reveal } from "@/components/ui"
+import { JESIEN_DEADLINE_DAY, JESIEN_FINALE_ID, JESIEN_PAID_FROM_DAY } from "@/data/jesien"
+import FloatStar from "../FloatStar.astro"
+import GradientBand from "../GradientBand.astro"
+import JesienHeading from "../JesienHeading.astro"
+import JesienSignupForm from "../JesienSignupForm.astro"
+---
+
+<GradientBand id={JESIEN_FINALE_ID} class="scroll-mt-16">
+  <Fragment slot="decor">
+    <FloatStar class="top-1/8 left-1/12 text-jesien-pink-soft opacity-60" />
+    <FloatStar class="top-2/3 right-1/12 text-jesien-orange-soft opacity-55 animation-delay-400" />
+  </Fragment>
+
+  <Container width="narrow" class="px-5">
+    <Reveal>
+      <JesienHeading class="mb-2.5 text-center text-white">
+        ⏳ Do {JESIEN_DEADLINE_DAY}: 0 zł.
+        <br />
+        Od {JESIEN_PAID_FROM_DAY}: płatne.
+      </JesienHeading>
+    </Reveal>
+    <Reveal>
+      <p class="mx-auto mb-10 max-w-xl text-center text-white/90 [&_strong]:text-white">
+        Nagranie w wersji za 0 zł znika <strong>{JESIEN_DEADLINE_DAY} o 23:59</strong>. Odbierz je
+        teraz i wejdź w jesień z gotowym planem.
+      </p>
+    </Reveal>
+    <Reveal>
+      <JesienSignupForm
+        variant="finale"
+        class="mx-auto max-w-xl"
+        microcopy="Mail z linkiem przyjdzie w ciągu kilku minut! 😉"
+      >
+        <Fragment slot="sticker">
+          zostało niewiele <em>czasu ⏳</em>
+        </Fragment>
+      </JesienSignupForm>
+    </Reveal>
+  </Container>
+</GradientBand>

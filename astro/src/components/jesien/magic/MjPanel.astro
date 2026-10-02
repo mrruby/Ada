@@ -1,0 +1,21 @@
+---
+/** Large rounded backdrop panel (white, pale yellow or pale pink). */
+import { cn } from "@/lib/cn"
+
+const tones = {
+  white: "border-lavender bg-white",
+  yellow: "border-lemon/40 bg-lemon/20",
+  pink: "border-blush bg-blush/50",
+} as const
+
+type Props = {
+  tone?: keyof typeof tones
+  class?: string
+}
+
+const { tone = "white", class: className } = Astro.props
+---
+
+<div class={cn("rounded-3xl border p-4 sm:p-6 lg:p-10", tones[tone], className)}>
+  <slot />
+</div>

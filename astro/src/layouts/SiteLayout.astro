@@ -1,0 +1,22 @@
+---
+/** Standard page chrome: fixed header, content, footer. */
+import Footer from "@/components/site/Footer.astro"
+import Header from "@/components/site/Header.astro"
+import BaseLayout, { type Props as BaseProps } from "./BaseLayout.astro"
+
+export interface Props extends BaseProps {
+  /** Hide the header (e.g. the home page uses its own hero). */
+  hideHeader?: boolean
+}
+
+const { hideHeader = false, ...base } = Astro.props
+---
+
+<BaseLayout {...base}>
+  <slot name="head" slot="head" />
+  {!hideHeader && <Header />}
+  <main class="relative">
+    <slot />
+  </main>
+  <Footer />
+</BaseLayout>

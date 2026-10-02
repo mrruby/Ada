@@ -1,0 +1,48 @@
+---
+/**
+ * Heading block of the MAGIC jesień pages: pink eyebrow, title with an
+ * orange serif-italic `accent`, optional lead paragraph (rich text).
+ */
+import { cn } from "@/lib/cn"
+import type { RichText } from "@/lib/content"
+
+type Props = {
+  title: string
+  accent?: string
+  eyebrow?: string
+  lead?: RichText
+  align?: "left" | "center"
+  class?: string
+  titleClass?: string
+  leadClass?: string
+}
+
+const {
+  title,
+  accent,
+  eyebrow,
+  lead,
+  align = "center",
+  class: className,
+  titleClass,
+  leadClass,
+} = Astro.props
+const center = align === "center"
+---
+
+<div class={cn(center && "text-center", className)}>
+  {eyebrow && (
+    <p class="mb-3.5 text-xs font-semibold tracking-widest text-jesien-pink uppercase">{eyebrow}</p>
+  )}
+  <h2 class={cn("mb-4 text-3xl font-semibold tracking-tight lg:text-4xl", titleClass)}>
+    {title}
+    {accent && " "}
+    {accent && <em>{accent}</em>}
+  </h2>
+  {lead && (
+    <p
+      class={cn("max-w-xl text-lg text-jesien-ink-soft", center && "mx-auto", leadClass)}
+      set:html={lead}
+    />
+  )}
+</div>

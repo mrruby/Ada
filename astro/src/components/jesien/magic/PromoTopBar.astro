@@ -1,0 +1,18 @@
+---
+/** Promotion strip above the logo (/jesien-nagranie2). */
+import MjButton from "./MjButton.astro"
+import PromoCountdown from "./PromoCountdown.astro"
+---
+
+<div role="region" aria-label="Promocja">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-2 gap-y-1 px-5 py-1">
+    <span data-when="active">Cena specjalna + MAGIC Plan do wyczerpania liczby miejsc lub</span>
+    <span data-when="expired">Dołącz do MAGIC i rozwijaj swój biznes z naszym zespołem.</span>
+    <div data-when="active">
+      <PromoCountdown />
+    </div>
+    <MjButton href="#pakiety" size="sm">
+      Wchodzę
+    </MjButton>
+  </div>
+</div>

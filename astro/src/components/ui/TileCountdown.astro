@@ -1,0 +1,44 @@
+---
+/**
+ * Countdown as "DNI : GODZ : MIN : SEK" tiles (campaign top bars).
+ * A preset over Countdown — pass `tone` (tile colors) and the deadline.
+ *
+ * <TileCountdown target={deadline} tone="bg-jesien-ink text-white" />
+ */
+import { cn } from "@/lib/cn"
+import Countdown from "./Countdown.astro"
+
+type Props = {
+  target?: Date | string
+  evergreen?: { storageKey: string; durationMs: number }
+  /** Tile background + text classes. */
+  tone?: string
+  /** Color class of the ":" separators (hidden on small screens). */
+  separatorClass?: string
+  label?: string
+  class?: string
+}
+
+const {
+  target,
+  evergreen,
+  tone = "bg-jesien-ink text-white",
+  separatorClass = "text-jesien-pink",
+  label,
+  class: className,
+} = Astro.props
+---
+
+<Countdown
+  target={target}
+  evergreen={evergreen}
+  label={label}
+  labels={{ hours: "GODZ", minutes: "MIN", seconds: "SEK" }}
+  labelPosition="bottom"
+  separator=":"
+  class={cn("gap-1", className)}
+  tileClass={cn("min-w-11 rounded-lg px-1.5 py-1", tone)}
+  valueClass="font-anton text-lg tracking-wider sm:text-xl"
+  labelClass="mt-0.5 text-xs font-semibold opacity-70"
+  separatorClass={cn("hidden -translate-y-1 font-extrabold sm:inline", separatorClass)}
+/>

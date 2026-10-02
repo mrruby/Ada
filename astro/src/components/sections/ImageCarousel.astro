@@ -1,0 +1,70 @@
+---
+/**
+ * Carousel of images — typically screenshots of client testimonials.
+ * Slot "title" renders above the carousel.
+ */
+import { Image } from "astro:assets"
+import { Carousel } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { ImageItem } from "@/lib/content"
+
+const heights = {
+  sm: "w-auto max-h-80",
+  md: "w-auto max-h-96",
+  lg: "w-auto max-h-150",
+  /** Natural height, image fills the slide width. */
+  none: "w-full",
+} as const
+
+const defaultSizes = {
+  single: "100vw",
+  references: "(min-width: 1536px) 33vw, (min-width: 1024px) 50vw, 100vw",
+  thirds: "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw",
+  peek: "(min-width: 1024px) 25vw, (min-width: 640px) 40vw, 80vw",
+} as const
+
+type PerView = keyof typeof defaultSizes
+
+type Props = {
+  images: ImageItem[]
+  label?: string
+  perView?: PerView
+  autoplay?: number
+  /** Max image height; `none` makes images fill the slide width. */
+  height?: keyof typeof heights
+  /** `sizes` hint for responsive images (defaults per `perView`). */
+  sizes?: string
+  arrows?: "light" | "dark" | "ink"
+  class?: string
+  slideClass?: string
+}
+
+const {
+  images,
+  label = "Opinie klientek",
+  perView = "references",
+  autoplay = 2000,
+  height = "lg",
+  sizes = defaultSizes[perView],
+  arrows = "light",
+  class: className,
+  slideClass,
+} = Astro.props
+---
+
+<div class={cn("mx-auto pt-5 pb-4", className)}>
+  <slot name="title" />
+  <Carousel label={label} perView={perView} autoplay={autoplay} arrows={arrows}>
+    {images.map((image) => (
+      <div class={cn("flex items-center justify-center px-4", slideClass)}>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          class={cn("h-auto object-contain", heights[height])}
+          widths={[400, 800, 1200]}
+          sizes={sizes}
+        />
+      </div>
+    ))}
+  </Carousel>
+</div>

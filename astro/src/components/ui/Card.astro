@@ -1,0 +1,44 @@
+---
+/**
+ * Rounded content panel. `tone` sets background + border in one of the
+ * recurring palettes; tweak radius/shadow/size with plain Tailwind in `class`
+ * (`rounded-4xl shadow-lg`) — conflicting classes override the defaults.
+ */
+import type { HTMLAttributes } from "astro/types"
+import { cn } from "@/lib/cn"
+
+const tones = {
+  /** Cream panel with tangerine hairline (Magic). */
+  paper: "border border-tangerine bg-cream",
+  /** Mint panel with tangerine hairline (Magic). */
+  green: "border border-tangerine bg-mint",
+  /** Pink panel with tangerine hairline (Magic). */
+  pink: "border border-tangerine bg-petal",
+  white: "bg-white",
+  lavender: "bg-lavender",
+  plain: "",
+} as const
+
+/** Same keys as Section `pad`. */
+const pads = {
+  none: "",
+  sm: "p-4",
+  md: "p-6 md:p-8",
+  lg: "px-6 py-8 md:px-14 md:py-12",
+} as const
+
+export type CardTone = keyof typeof tones
+
+type Props = HTMLAttributes<"div"> & {
+  as?: "div" | "article" | "section" | "li" | "a"
+  href?: string
+  tone?: CardTone
+  pad?: keyof typeof pads
+}
+
+const { as: Tag = "div", tone = "paper", pad = "md", class: className, ...attrs } = Astro.props
+---
+
+<Tag class={cn("rounded-3xl", tones[tone], pads[pad], className)} {...attrs}>
+  <slot />
+</Tag>

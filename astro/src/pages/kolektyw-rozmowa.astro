@@ -1,0 +1,56 @@
+---
+/** /kolektyw-rozmowa — consultation landing of the Magic collective. */
+import {
+  CheckeredPanel,
+  CollectiveForm,
+  KolektywTitle,
+  OpinionsGrid,
+  ResultHighlight,
+  StatPills,
+  TalkHero,
+  TeamSection,
+} from "@/components/kolektyw"
+import { OG_ADA_PURPLE } from "@/config/site"
+import {
+  campaignResults,
+  consultationCta,
+  CONSULTATION_ID,
+  formIntro,
+  opinionColumns,
+  opinionsTitle,
+  stats,
+  statsIntro,
+  talkHero,
+  team,
+} from "@/data/kolektyw"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+/** Result bands alternate cream / mint / cream. */
+const resultBackgrounds = ["bg-cream", "bg-mint", "bg-cream"]
+---
+
+<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+  <main>
+    <TalkHero {...talkHero} />
+
+    <CheckeredPanel tone="green" panelClass="pt-20 pb-16">
+      <KolektywTitle tone="orange" href={consultationCta.href} class="max-w-2xl uppercase">
+        {consultationCta.label}
+      </KolektywTitle>
+      <p class="mx-auto mt-10 mb-4 max-w-xl text-center text-lg" set:html={consultationCta.text} />
+    </CheckeredPanel>
+
+    {campaignResults.map((result, index) => (
+      <ResultHighlight result={result} next={`#${CONSULTATION_ID}`} bg={resultBackgrounds[index]} />
+    ))}
+
+    <StatPills intro={statsIntro} stats={stats} />
+    <TeamSection members={team} />
+    <OpinionsGrid title={opinionsTitle} columns={opinionColumns} />
+
+    <CheckeredPanel id={CONSULTATION_ID} tone="green" panelClass="py-16">
+      <p class="mx-auto mt-10 mb-4 max-w-sm text-center text-lg" set:html={formIntro} />
+      <CollectiveForm />
+    </CheckeredPanel>
+  </main>
+</BaseLayout>

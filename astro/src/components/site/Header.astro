@@ -1,0 +1,99 @@
+---
+/**
+ * Site header — no JavaScript:
+ *  - desktop: fixed bar; link groups are <details> dropdowns
+ *  - mobile: floating burger opening a native popover menu (Esc / outside
+ *    click close it, focus is handled by the browser)
+ */
+import { Image } from "astro:assets"
+import logo from "@/assets/images/logo.webp"
+import { mainNav } from "@/config/site"
+import { cn } from "@/lib/cn"
+
+const link = "font-bold uppercase transition-colors hover:text-white"
+const groupLabel =
+  "cursor-pointer list-none border-b-4 border-rose font-extrabold uppercase transition-colors hover:border-navy hover:text-white [&::-webkit-details-marker]:hidden"
+---
+
+<header class="text-navy">
+  <nav
+    class="fixed inset-x-0 top-0 z-50 hidden h-12 items-center justify-center gap-5 bg-lavender text-sm md:flex lg:gap-14"
+    aria-label="Główna nawigacja"
+  >
+    <a href="/" aria-label="Strona główna">
+      <Image src={logo} alt="" width={25} height={25} loading="eager" />
+    </a>
+    {mainNav.map((item) =>
+      item.children ? (
+        <details class="group relative" name="site-nav">
+          <summary class={groupLabel}>{item.label}</summary>
+          <ul class="absolute top-full left-1/2 mt-3 w-48 -translate-x-1/2 bg-lavender px-6 pb-2">
+            {item.children.map((child) => (
+              <li>
+                <a href={child.href} class={cn(link, "block pt-4 pb-2")}>
+                  {child.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ) : (
+        <a href={item.href} class={cn(link, "hover:border-b-4 hover:border-navy")}>
+          {item.label}
+        </a>
+      )
+    )}
+  </nav>
+
+  <button
+    type="button"
+    popovertarget="mobile-nav"
+    class="fixed top-8 right-8 z-50 flex size-8 flex-col justify-between md:hidden"
+    aria-label="Otwórz menu"
+  >
+    <span class="h-1 w-8 bg-navy"></span>
+    <span class="h-1 w-8 bg-navy"></span>
+    <span class="h-1 w-8 bg-navy"></span>
+  </button>
+
+  <nav
+    id="mobile-nav"
+    popover
+    class="inset-0 m-0 size-full max-h-none max-w-none flex-col items-center justify-center gap-1 border-0 bg-lavender p-0 text-2xl text-navy open:flex md:hidden"
+    aria-label="Menu mobilne"
+  >
+    <button
+      type="button"
+      popovertarget="mobile-nav"
+      popovertargetaction="hide"
+      class="absolute top-8 right-8 size-8"
+      aria-label="Zamknij menu"
+    >
+      <span class="absolute top-1/2 left-0 h-1 w-8 rotate-45 bg-rose"></span>
+      <span class="absolute top-1/2 left-0 h-1 w-8 -rotate-45 bg-rose"></span>
+    </button>
+    <a href="/" aria-label="Strona główna" class="mb-2">
+      <Image src={logo} alt="" width={35} height={35} />
+    </a>
+    {mainNav.map((item) =>
+      item.children ? (
+        <details class="flex flex-col items-center text-center">
+          <summary class={cn(groupLabel, "py-1")}>{item.label}</summary>
+          <ul class="flex flex-col px-6 text-xl">
+            {item.children.map((child) => (
+              <li>
+                <a href={child.href} class={cn(link, "block py-4")}>
+                  {child.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ) : (
+        <a href={item.href} class={cn(link, "py-3")}>
+          {item.label}
+        </a>
+      )
+    )}
+  </nav>
+</header>

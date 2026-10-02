@@ -1,0 +1,23 @@
+---
+/** White card with a blue flower on top, highlighted title, text and CTA. */
+import { Image } from "astro:assets"
+import flowerBlue from "@/assets/images/flower-blue.svg"
+import { Button, MarkerHeading } from "@/components/ui"
+import type { LinkItem } from "@/lib/content"
+
+type Props = { title: string; description: string; cta: LinkItem }
+const { title, description, cta } = Astro.props
+---
+
+<article class="relative mx-6 mt-24 flex animate-fadeIn flex-col items-center justify-between bg-white pt-14 pb-6 transition-shadow hover:shadow-xl lg:w-72 lg:pb-10">
+  <Image src={flowerBlue} alt="" width={150} height={150} class="absolute -top-24" />
+  <div class="text-center">
+    <MarkerHeading as="h3" bounce={false} class="text-2xl font-semibold lg:text-2xl">
+      {title}
+    </MarkerHeading>
+    <p class="m-auto max-w-60 pt-9 pb-8 text-lg leading-tight font-medium">{description}</p>
+  </div>
+  <Button href={cta.href} variant="outline" class="lg:text-xl">
+    {cta.label}
+  </Button>
+</article>

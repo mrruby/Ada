@@ -1,0 +1,22 @@
+---
+/** Rounded mint/cream card holding one or more guide topics. */
+import { Card } from "@/components/ui"
+import type { GuideCard } from "@/data/kolektyw/guide"
+import GuideTopic from "./GuideTopic.astro"
+
+type Props = {
+  card: GuideCard
+}
+
+const { card } = Astro.props
+---
+
+<Card
+  tone={card.tone}
+  pad="none"
+  class="flex w-full flex-col gap-7 px-6 py-7 leading-tight md:px-16 md:py-12 shadow-lg"
+>
+  {card.topics.map((topic) => (
+    <GuideTopic topic={topic} />
+  ))}
+</Card>

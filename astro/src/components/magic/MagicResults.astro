@@ -1,0 +1,72 @@
+---
+/**
+ * "Wyniki i opinie członkiń" — optional campaign result screenshots, a CTA
+ * to the subscription checkout and a grid of member testimonials.
+ */
+import { Image } from "astro:assets"
+import { Heading, Section } from "@/components/ui"
+import { campaignResults, magicLinks, memberOpinions } from "@/data/magic"
+import { cn } from "@/lib/cn"
+import MagicCta from "./MagicCta.astro"
+
+type Props = {
+  /** Show the Ads Manager result screenshots above the CTA. */
+  showResults?: boolean
+  /** Render the yellow band as a box inside a light-grey page band. */
+  boxed?: boolean
+}
+
+const { showResults = false, boxed = false } = Astro.props
+
+const pitch = "mx-auto max-w-3xl animate-attentionPulse font-extrabold leading-tight"
+---
+
+<Section
+  id="opinie"
+  bg={boxed ? "bg-neutral-100" : "bg-lemon"}
+  innerClass="bg-lemon"
+  class="text-black"
+>
+  <div class="mx-auto flex max-w-5xl flex-col items-center gap-6 px-6 pt-24 pb-8 text-center md:pt-32 md:pb-12">
+    <Heading class="md:text-4xl">Wyniki i opinie członkiń</Heading>
+
+    {showResults && (
+      <ul class="grid w-full gap-5 xl:grid-cols-3">
+        {campaignResults.map((result) => (
+          <li class="overflow-hidden rounded-lg bg-white p-3 shadow-lg">
+            <Image
+              src={result.src}
+              alt={result.alt}
+              widths={[480, 960, 1397]}
+              sizes="(min-width: 1280px) 330px, 100vw"
+              class="h-auto w-full object-contain"
+            />
+          </li>
+        ))}
+      </ul>
+    )}
+    <p class={cn(pitch, showResults ? "mt-4 mb-10 text-2xl md:text-4xl" : "text-xl md:text-3xl")}>
+      Chcesz takich liczb u siebie? Twój{" "}
+      <span class="rounded-md bg-lemon px-2 py-0.5 text-magenta">MAGIC Plan</span> pokaże pierwszy
+      krok
+    </p>
+
+    <MagicCta href={magicLinks.subscriptionCheckout} newTab class="mb-4 bg-blush">
+      Dołączam
+    </MagicCta>
+
+    <ul class="grid w-full md:grid-cols-2 lg:grid-cols-3">
+      {memberOpinions.map((opinion) => (
+        <li>
+          <Image
+            src={opinion.src}
+            alt={opinion.alt}
+            widths={[400, 800]}
+            sizes="(min-width: 1024px) 330px, (min-width: 768px) 50vw, 100vw"
+            class="h-auto w-full"
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
+</Section>

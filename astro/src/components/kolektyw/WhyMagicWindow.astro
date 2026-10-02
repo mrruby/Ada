@@ -1,0 +1,32 @@
+---
+/** "Dlaczego MAGIC?" — reasons drawn inside a retro browser window illustration. */
+import type { IconItem } from "@/data/kolektyw/types"
+import { IconList, Section, TypingText } from "@/components/ui"
+
+type Props = {
+  title: string
+  items: IconItem[]
+  bg?: string
+}
+
+const { title, items, bg = "bg-art-green" } = Astro.props
+---
+
+<Section bg={bg} class="text-black">
+  <div class="px-4 py-8 sm:pt-16 md:px-8">
+    <div class="mx-auto aspect-[1126/1330] w-full bg-art-window pb-4 md:aspect-[1126/888] md:w-xl">
+      <div class="pt-8 pl-20 md:pt-10 md:pl-32">
+        <TypingText
+          as="h2"
+          text={title}
+          class="mt-1.5 inline-block min-w-48 font-anton text-sm font-normal text-tangerine md:m-5 md:text-xl"
+        />
+      </div>
+      <IconList
+        items={items}
+        inline
+        class="mx-auto mt-14 max-w-md gap-0 px-10 text-xs md:mt-4 md:px-0 md:text-base"
+      />
+    </div>
+  </div>
+</Section>

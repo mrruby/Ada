@@ -1,0 +1,126 @@
+---
+/**
+ * Evergreen course landing (/kurs-*): every visitor gets 24 h of access to
+ * the training video, counted from their first visit (stored in
+ * localStorage under `storageKey`). Afterwards the page switches to the
+ * "access expired" variant: a notice and the waiting-list form at the top.
+ *
+ * Both variants share one DOM: `data-when` swaps the countdown bar/video and
+ * the expiry notice, and the sign-up section moves to the top via `order`.
+ * The autoplaying video lives in a <template> and is only injected while the
+ * visitor's access is active, so expired visitors never load the player.
+ */
+import { Countdown, Heading, Section, VideoEmbed } from "@/components/ui"
+import { MAGIC_PACKAGE_ID } from "@/data/magic"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import MagicAudience from "./MagicAudience.astro"
+import MagicFinalCta from "./MagicFinalCta.astro"
+import MagicJoinClosed from "./MagicJoinClosed.astro"
+import MagicPerks from "./MagicPerks.astro"
+import MagicResults from "./MagicResults.astro"
+import MagicSampleMonth from "./MagicSampleMonth.astro"
+import MagicSituations from "./MagicSituations.astro"
+import MagicTeam from "./MagicTeam.astro"
+import MagicTeamBenefits from "./MagicTeamBenefits.astro"
+
+type Props = {
+  title: string
+  /** localStorage key holding this visitor's access deadline. */
+  storageKey: string
+  /** Vimeo id of the training; a placeholder is shown when missing. */
+  videoId?: string
+}
+
+const { title, storageKey, videoId } = Astro.props
+const ACCESS_MS = 24 * 60 * 60 * 1000
+---
+
+<BaseLayout title={title}>
+  <main>
+    <h1 class="sr-only">{title}</h1>
+    <div class="group/kurs flex flex-col" data-countdown-scope data-gate>
+      <div class="sticky top-0 z-50 bg-amethyst py-4 text-center text-white" data-when="active">
+        <p class="mb-2 text-lg font-bold">Dostęp do kursu znika za:</p>
+        <Countdown
+          evergreen={{ storageKey, durationMs: ACCESS_MS }}
+          class="mx-auto max-w-2xl justify-around gap-2 px-2 py-2 sm:gap-4 sm:px-4 md:gap-8"
+          tileClass="gap-1 font-bold"
+          labelClass="text-sm font-medium sm:text-base md:text-xl"
+          valueClass="text-xl sm:text-2xl"
+        />
+      </div>
+
+      <Section bg="bg-neutral-100" width="narrow" innerClass="px-4 py-8" data-when="active">
+        {videoId ? (
+          <div
+            class="aspect-video bg-black"
+            data-kurs-video
+            data-storage-key={storageKey}
+            data-duration-ms={ACCESS_MS}
+          >
+            {/* Injected only while this visitor's access lasts (see script). */}
+            <template>
+              <VideoEmbed
+                id={videoId}
+                title="Reklamy dla klientów w 2026 roku"
+                params="loop=1"
+                eager
+                autoplay
+              />
+            </template>
+          </div>
+        ) : (
+          <div class="flex aspect-video flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-400 bg-gray-200 text-center text-gray-500">
+            <p class="mb-2 text-2xl font-bold">Video Placeholder</p>
+            <p class="text-sm">Tutaj pojawi się nagranie szkolenia</p>
+          </div>
+        )}
+      </Section>
+
+      <Section
+        bg="bg-blush"
+        innerClass="px-4 py-12 text-center"
+        class="-order-2"
+        data-when="expired"
+      >
+        <Heading align="center" class="mb-4 text-3xl text-amethyst md:text-4xl">
+          Dostęp do kursu zniknął!
+        </Heading>
+        <p class="text-lg text-gray-700 md:text-xl">
+          Ale nadal możesz zapisać się na listę oczekujących Magic
+        </p>
+      </Section>
+
+      <MagicSituations />
+      <MagicAudience bg="bg-blush" />
+      <MagicPerks />
+      <MagicJoinClosed id={MAGIC_PACKAGE_ID} class="group-data-expired/kurs:-order-1" />
+      <MagicSampleMonth />
+      <MagicTeam />
+      <MagicTeamBenefits />
+      <MagicResults boxed />
+      <MagicFinalCta />
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+  import { getEvergreenDeadline, getTimeLeft } from "@/lib/countdown"
+
+  document.querySelectorAll<HTMLElement>("[data-kurs-video]").forEach((slot) => {
+    const template = slot.querySelector("template")
+    const { storageKey, durationMs } = slot.dataset
+    if (!template || !storageKey) return
+    // Same deadline the Countdown reads (whichever script runs first stores it).
+    if (!getTimeLeft(getEvergreenDeadline(storageKey, Number(durationMs)))) return
+
+    slot.append(template.content.cloneNode(true))
+    slot
+      .closest("[data-countdown-scope]")
+      ?.addEventListener(
+        "countdown:expired",
+        () => slot.querySelectorAll(":scope > :not(template)").forEach((node) => node.remove()),
+        { once: true }
+      )
+  })
+</script>

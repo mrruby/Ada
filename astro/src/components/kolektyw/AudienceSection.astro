@@ -1,0 +1,59 @@
+---
+/** "Dla kogo jest MAGIC?" — flower-bulleted audience list next to a portrait. */
+import type { ImageMetadata } from "astro"
+import { Image } from "astro:assets"
+import flower from "@/assets/images/magicFlower.svg"
+import { CircleArrow, IconList, Section } from "@/components/ui"
+import type { RichText } from "@/lib/content"
+import KolektywTitle from "./KolektywTitle.astro"
+
+type Props = {
+  title: string
+  lead: RichText
+  items: RichText[]
+  photo: { src: ImageMetadata; alt: string }
+  /** Anchor of the round arrow at the bottom edge. */
+  next: string
+  bg?: string
+}
+
+const { title, lead, items, photo, next, bg = "bg-lilac" } = Astro.props
+---
+
+<Section bg={bg} class="relative text-black">
+  <div class="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 px-4 py-8 sm:pt-16 md:flex-row md:items-start md:px-8">
+    <div class="mt-8 w-full animate-settle md:w-1/2">
+      <KolektywTitle tone="grey" class="max-w-sm">
+        {title}
+      </KolektywTitle>
+      <p class="mt-4 mb-6 text-center text-sm leading-relaxed md:text-base" set:html={lead} />
+      <IconList
+        items={items}
+        icon={flower}
+        class="mx-auto max-w-md gap-2 px-2 md:px-0"
+        itemClass="gap-2"
+        iconClass="mt-4 animate-spin-slow"
+        textClass="mt-2"
+      />
+    </div>
+    <div class="mb-4 flex w-full justify-center md:-mt-6 md:w-1/2 md:justify-end">
+      <Image
+        src={photo.src}
+        alt={photo.alt}
+        width={410}
+        height={592}
+        densities={[1, 2]}
+        class="h-auto w-full max-w-md"
+      />
+    </div>
+  </div>
+  <CircleArrow
+    href={next}
+    size="lg"
+    circleClass="fill-plum"
+    arrowClass="stroke-petal"
+    shape="chevron"
+    label="Przejdź do umawiania spotkania"
+    class="absolute bottom-0 left-1/2 z-20 -translate-x-1/2 translate-y-1/2"
+  />
+</Section>

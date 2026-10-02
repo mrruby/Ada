@@ -1,0 +1,95 @@
+---
+/** Masterclass finale: who it is for, the checklist and the second form. */
+import { Container, Reveal } from "@/components/ui"
+import {
+  JESIEN_MASTERCLASS_DATE_SHORT,
+  JESIEN_MASTERCLASS_DAY,
+  JESIEN_MASTERCLASS_FINALE_FORM_ID,
+  JESIEN_MASTERCLASS_FORM_TITLE,
+  JESIEN_MASTERCLASS_TIME,
+  JESIEN_MASTERCLASS_WEEKDAY,
+  jesienMasterclassChecks,
+  jesienMasterclassWhoCards,
+} from "@/data/jesien"
+import formHtml from "@/forms/form-jesien-masterclass.html?raw"
+import FloatStar from "../FloatStar.astro"
+import GradientBand from "../GradientBand.astro"
+import JesienButton from "../JesienButton.astro"
+import JesienHeading from "../JesienHeading.astro"
+import JesienSignupForm from "../JesienSignupForm.astro"
+---
+
+<GradientBand class="pt-16 pb-20">
+  <FloatStar slot="decor" class="top-1/16 right-1/16 text-jesien-pink-soft opacity-60" />
+
+  <Container width="content" class="px-5">
+    <Reveal>
+      <JesienHeading kicker="Dla kogo" kickerTone="soft" class="mb-3.5 text-white">
+        Dla kogo jest ten masterclass? 💜
+      </JesienHeading>
+      <p class="mb-6 text-lg text-white/90 [&_strong]:text-white">
+        Dla
+        <strong>
+          przedsiębiorczyń, które prowadzą mały biznes i same ogarniają jego marketing.
+        </strong>
+      </p>
+    </Reveal>
+
+    <div class="mb-6 grid gap-4 md:grid-cols-3">
+      {jesienMasterclassWhoCards.map(({ emoji, title, text }) => (
+        <Reveal class="rounded-3xl border-2 border-white/35 bg-white/10 px-6 py-6 backdrop-blur-sm">
+          <span class="mb-3 block text-3xl leading-none">{emoji}</span>
+          <p class="text-white/90">
+            <strong class="mb-1.5 block text-white">{title}</strong>
+            {text}
+          </p>
+        </Reveal>
+      ))}
+    </div>
+
+    <Reveal>
+      <p class="mb-3.5 font-extrabold text-white">Do tego:</p>
+    </Reveal>
+    <ul class="grid max-w-4xl gap-x-6 gap-y-3.5 md:grid-cols-2">
+      {jesienMasterclassChecks.map((html) => (
+        <Reveal
+          as="li"
+          class="flex items-start gap-2.5 rounded-2xl bg-jesien-ink/30 px-4 py-4 text-white/90 [&_strong]:text-white"
+        >
+          <span class="text-lg">✅</span>
+          <span set:html={html} />
+        </Reveal>
+      ))}
+    </ul>
+
+    <Reveal>
+      <p class="mx-auto mt-9 max-w-xl text-center text-lg font-bold text-white">
+        Jeśli w którymś punkcie zobaczyłaś siebie - {JESIEN_MASTERCLASS_DAY} o
+        {JESIEN_MASTERCLASS_TIME} czekamy na Ciebie na żywo. 🔮
+      </p>
+    </Reveal>
+    <Reveal class="mt-5 text-center">
+      <JesienButton href={`#${JESIEN_MASTERCLASS_FINALE_FORM_ID}`} variant="ghost">
+        TO O MNIE - ZAPISUJĘ SIĘ ZA 0 ZŁ
+      </JesienButton>
+    </Reveal>
+
+    <Reveal>
+      <JesienSignupForm
+        id={JESIEN_MASTERCLASS_FINALE_FORM_ID}
+        variant="finale"
+        class="mx-auto mt-11 max-w-xl scroll-mt-24"
+        title={JESIEN_MASTERCLASS_FORM_TITLE}
+        formHtml={formHtml}
+        microcopy={`Mail z linkiem przyjdzie w ciągu kilku minut. Do zoba ${JESIEN_MASTERCLASS_DATE_SHORT}! 👋`}
+      >
+        <Fragment slot="sticker">
+          {JESIEN_MASTERCLASS_WEEKDAY}{" "}
+          <em>
+            {JESIEN_MASTERCLASS_DATE_SHORT}, {JESIEN_MASTERCLASS_TIME}
+          </em>
+        </Fragment>
+      </JesienSignupForm>
+    </Reveal>
+  </Container>
+</GradientBand>

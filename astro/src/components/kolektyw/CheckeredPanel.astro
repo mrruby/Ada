@@ -1,0 +1,32 @@
+---
+/**
+ * Pink checkered band with a centered cream or mint panel — the framing used
+ * for key messages and forms on the Magic collective pages.
+ */
+import { Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  tone?: "paper" | "green"
+  /** "wide" = max-w-6xl panel, "narrow" = max-w-3xl panel with roomier sides. */
+  width?: "wide" | "narrow"
+  id?: string
+  class?: string
+  panelClass?: string
+}
+
+const { tone = "paper", width = "wide", id, class: className, panelClass } = Astro.props
+---
+
+<Section bg="bg-art-pink" id={id} class={cn("text-black", className)}>
+  <div
+    class={cn(
+      "mx-auto px-4 py-8 md:px-8",
+      width === "wide" ? "max-w-6xl" : "max-w-3xl md:px-20",
+      tone === "paper" ? "bg-cream" : "bg-mint",
+      panelClass
+    )}
+  >
+    <slot />
+  </div>
+</Section>

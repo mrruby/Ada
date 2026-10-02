@@ -1,0 +1,163 @@
+---
+/**
+ * "Co sprawia, że MAGIC jest wyjątkowy?" — hand-annotated collage of the club
+ * features on yellow, ending with the team photo strip.
+ *
+ * One DOM for every width: a single column on mobile (heading first, note
+ * above each screenshot); on lg a two-column collage with the heading in the
+ * middle, screenshots above their notes and hand-drawn arrows.
+ */
+import { Image } from "astro:assets"
+import arrowAi from "@/assets/images/magic-landing-2026-arrow-ai.webp"
+import arrowCalendar from "@/assets/images/magic-landing-2026-arrow-calendar.webp"
+import arrowCircle from "@/assets/images/magic-landing-2026-arrow-circle.webp"
+import arrowExperts from "@/assets/images/magic-landing-2026-arrow-experts.webp"
+import arrowLevels from "@/assets/images/magic-landing-2026-arrow-levels.webp"
+import calendarCards from "@/assets/images/magic-landing-2026-calendar-cards.webp"
+import experts from "@/assets/images/magic-landing-2026-experts-transparent.webp"
+import kapibaraMessage from "@/assets/images/magic-landing-2026-kapibara-message.webp"
+import levels from "@/assets/images/magic-landing-2026-levels.webp"
+import opinionsB from "@/assets/images/magic-landing-2026-opinions-b.webp"
+import opinionsC from "@/assets/images/magic-landing-2026-opinions-c.webp"
+import swirlProgress from "@/assets/images/magic-landing-2026-swirl-progress.webp"
+import swirlQuestions from "@/assets/images/magic-landing-2026-swirl-questions.webp"
+import { cn } from "@/lib/cn"
+
+const emoji = "text-xl leading-none"
+const noteTitle = "font-caveat text-2xl leading-none font-bold uppercase lg:text-4xl"
+const noteText =
+  "mx-auto mt-2 w-72 max-w-full font-caveat text-base leading-tight font-semibold md:w-80 lg:text-xl"
+const arrow = "hidden h-auto w-14 lg:block"
+const shot = "h-auto max-w-full lg:order-first lg:w-full lg:rotate-0"
+---
+
+<section class="overflow-hidden bg-lemon pt-8 text-black md:pt-12">
+  <div class="mx-auto grid max-w-md gap-10 px-4 md:max-w-xl md:gap-12 lg:max-w-6xl lg:grid-cols-2 lg:gap-x-16">
+    <h2 class="text-center font-anton text-4xl leading-none uppercase md:text-5xl lg:col-span-2 lg:row-start-2 lg:text-7xl">
+      Co sprawia, że
+      <br />
+      <span class="my-1 inline-block bg-white px-2 text-magenta">MAGIC</span> jest
+      <br />
+      wyjątkowy?
+    </h2>
+
+    <div class="flex flex-col items-center gap-4 text-center lg:col-start-2 lg:row-start-1">
+      <p class={emoji} aria-hidden="true">
+        👩‍💻
+      </p>
+      <p class={noteTitle}>
+        5 spotkań
+        <br />
+        <span class="text-lg font-medium normal-case lg:text-2xl">na żywo miesięcznie</span>
+      </p>
+      <Image
+        src={calendarCards}
+        alt="Spotkania i konsultacje MAGIC"
+        widths={[320, 569]}
+        sizes="(min-width: 1024px) 540px, 384px"
+        class={cn(shot, "w-80 rotate-3 md:w-96")}
+      />
+      <Image src={arrowCalendar} alt="" width={120} class={cn(arrow, "lg:order-first")} />
+    </div>
+
+    <div class="flex flex-col items-center gap-4 text-center lg:col-start-1 lg:row-start-1">
+      <div class="grid w-full grid-cols-2 items-start gap-4">
+        <div class="flex flex-col items-center gap-1">
+          <Image src={arrowLevels} alt="" width={120} class={arrow} />
+          <p class={emoji} aria-hidden="true">
+            📝
+          </p>
+          <p class={noteTitle}>
+            4 poziomy
+            <br />
+            nauki
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <Image src={swirlProgress} alt="" width={120} class={arrow} />
+          <p class={cn(noteTitle, "max-w-64 -rotate-6 lg:text-3xl")}>
+            pasek progresu ułatwiający naukę
+          </p>
+        </div>
+      </div>
+      <Image
+        src={levels}
+        alt="Poziomy nauki MAGIC"
+        widths={[320, 551]}
+        sizes="(min-width: 1024px) 540px, 384px"
+        class={cn(shot, "w-80 -rotate-3 md:w-96")}
+      />
+    </div>
+
+    <div class="flex flex-col items-center gap-4 text-center lg:col-start-1 lg:row-start-3">
+      <p class={emoji} aria-hidden="true">
+        🤖
+      </p>
+      <p class={noteTitle}>Asystentka AI</p>
+      <p class={noteText}>
+        napisz wiadomość (albo nagraj głosówkę), a Kapibara Barbara pomoże Ci z każdą reklamową
+        zagwozdką - o każdej porze
+      </p>
+      <Image
+        src={kapibaraMessage}
+        alt="Wiadomość do Kapibary Barbary"
+        class={cn(shot, "w-64 -rotate-3 md:w-72 lg:w-72")}
+      />
+      <Image src={arrowAi} alt="" width={120} class={cn(arrow, "lg:order-first")} />
+    </div>
+
+    <div class="flex flex-col items-center gap-4 text-center lg:col-start-2 lg:row-start-3">
+      <p class={emoji} aria-hidden="true">
+        ✍🏻
+      </p>
+      <p class={noteTitle}>
+        Konsultacje
+        <br />
+        pisemne na
+        <br />
+        Circle
+      </p>
+      <p class={noteText}>
+        zadajesz pytanie o SWOJĄ reklamę, kiedy Ci wygodnie - odpowiedź specjalistki czeka na Ciebie
+        na Circle
+      </p>
+      <Image src={arrowCircle} alt="" width={120} class={arrow} />
+      <div class="flex items-center gap-2">
+        <p class="w-64 rotate-2 font-caveat text-lg leading-none font-semibold md:w-80 md:text-xl lg:w-auto lg:text-2xl">
+          przykładowe pytania i odpowiedzi
+        </p>
+        <Image src={swirlQuestions} alt="" width={120} class={arrow} />
+      </div>
+      <Image
+        src={opinionsC}
+        alt="Opinia o wsparciu MAGIC"
+        widths={[480, 960]}
+        sizes="(min-width: 768px) 540px, 300px"
+        class="h-auto w-72 rotate-1 md:w-md lg:w-full"
+      />
+      <Image
+        src={opinionsB}
+        alt="Opinia o konsultacjach MAGIC"
+        widths={[480, 960]}
+        sizes="(min-width: 768px) 540px, 300px"
+        class="h-auto w-72 -rotate-1 md:w-md lg:w-full"
+      />
+    </div>
+
+    <div class="flex flex-col items-center text-center lg:col-span-2 lg:row-start-4">
+      <p class={noteTitle}>5 ekspertów</p>
+      <p class={noteText}>
+        pomożemy Ci w: reklamach Meta Ads, tekstach, grafikach, newsletterze, automatyzacjach
+      </p>
+      <Image src={arrowExperts} alt="" width={60} class={cn(arrow, "mt-4 w-8")} />
+    </div>
+  </div>
+
+  <Image
+    src={experts}
+    alt="Eksperci MAGIC"
+    widths={[640, 1280, 1920, 2880]}
+    sizes="100vw"
+    class="mt-4 block h-auto w-full"
+  />
+</section>

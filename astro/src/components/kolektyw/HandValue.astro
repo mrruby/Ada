@@ -1,0 +1,27 @@
+---
+/**
+ * Handwritten figure that types itself in (and again every 10 s). An invisible
+ * copy of the full value reserves its width, so surrounding text never jumps.
+ */
+import { TypingText } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  value: string
+  class?: string
+}
+
+const { value, class: className } = Astro.props
+---
+
+<span
+  class={cn(
+    "inline-grid font-annie text-4xl leading-none whitespace-nowrap md:text-6xl",
+    className
+  )}
+>
+  <span class="invisible col-start-1 row-start-1" aria-hidden="true">
+    {value}|
+  </span>
+  <TypingText text={value} class="col-start-1 row-start-1" />
+</span>

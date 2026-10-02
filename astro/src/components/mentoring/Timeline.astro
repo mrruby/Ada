@@ -1,0 +1,42 @@
+---
+/**
+ * "W programie" agenda: a vertical line with items alternating left/right on
+ * large screens and stacked beside the line on mobile. Item text is trusted
+ * HTML (in-page links like `<a href="#team">` work as plain anchors).
+ *
+ * <Timeline items={agenda} titleStyle="accent" />
+ */
+import { cn } from "@/lib/cn"
+import type { TimelineItem } from "@/data/mentoring"
+
+const titleStyles = {
+  /** Small bold title. */
+  plain: "text-sm lg:text-lg",
+  /** Large purple uppercase title. */
+  accent: "text-sm text-amethyst uppercase lg:text-2xl",
+} as const
+
+type Props = {
+  items: TimelineItem[]
+  titleStyle?: keyof typeof titleStyles
+  class?: string
+}
+
+const { items, titleStyle = "plain", class: className } = Astro.props
+---
+
+<ol
+  class={cn(
+    "relative mx-auto flex max-w-6xl flex-col gap-y-16 pl-15 before:absolute before:inset-y-0 before:left-4 before:w-1 before:bg-white lg:gap-y-24 lg:pl-0 lg:before:left-1/2 lg:before:-translate-x-1/2",
+    className
+  )}
+>
+  {items.map((item) => (
+    <li
+      class={cn("lg:w-5/12", item.side === "left" ? "lg:self-start lg:text-right" : "lg:self-end")}
+    >
+      <h3 class={cn("leading-tight font-bold", titleStyles[titleStyle])} set:html={item.title} />
+      <p class="mt-3 text-sm leading-relaxed font-medium md:text-base" set:html={item.text} />
+    </li>
+  ))}
+</ol>

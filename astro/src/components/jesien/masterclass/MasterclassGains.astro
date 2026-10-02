@@ -1,0 +1,60 @@
+---
+/** Masterclass: what you leave with after 90 minutes. */
+import { Image } from "astro:assets"
+import laptopPhoto from "@/assets/images/jesien-masterclass-ada-laptop.webp"
+import { Container, Reveal } from "@/components/ui"
+import { jesienMasterclassGains } from "@/data/jesien"
+import Callout from "../Callout.astro"
+import EmojiItem, { type EmojiTone } from "../EmojiItem.astro"
+import JesienHeading from "../JesienHeading.astro"
+
+const tones: EmojiTone[] = ["purple", "pink", "orange"]
+---
+
+<section class="py-16 lg:py-20">
+  <Container width="content" class="px-5">
+    <Reveal>
+      <JesienHeading kicker="Z czym wyjdziesz">
+        Po tych 90 minutach <span class="text-jesien-pink">wiesz:</span>
+      </JesienHeading>
+    </Reveal>
+
+    <div class="mt-8 grid items-center gap-9 lg:grid-cols-5 lg:gap-12">
+      <div class="lg:col-span-3">
+        <ul class="grid max-w-3xl gap-3.5">
+          {jesienMasterclassGains.map((html, index) => (
+            <EmojiItem
+              emoji="✨"
+              html={html}
+              reveal
+              lift={false}
+              tone={tones[index % tones.length]}
+              class="py-4"
+            />
+          ))}
+        </ul>
+        <Reveal>
+          <Callout class="mt-5 max-w-3xl [&_strong]:text-jesien-pink">
+            Na spokojnie, po ludzku i z konkretem. Wychodzisz z listą rzeczy, które
+            <strong>ustawiasz i wyłączasz jeszcze w tym tygodniu.</strong> 😎
+          </Callout>
+        </Reveal>
+      </div>
+
+      <Reveal class="w-full max-w-xs justify-self-center lg:col-span-2 lg:max-w-md lg:justify-self-end">
+        <div class="-rotate-1 overflow-hidden rounded-3xl shadow-xl shadow-jesien-purple/15">
+          <Image
+            src={laptopPhoto}
+            alt="Adrianna Promis-Urbas z laptopem na kolanach, w pozie medytacji"
+            widths={[400, 800]}
+            sizes="(min-width: 1024px) 400px, 320px"
+            class="h-auto w-full"
+          />
+          <p class="relative mr-4 -mt-8 ml-auto w-max rotate-2 rounded-lg bg-white px-4 py-2 font-caveat text-xl font-bold text-jesien-ink shadow-lg shadow-jesien-ink/20">
+            reklamy? <em class="text-jesien-pink not-italic">ogarnięte ✦</em>
+          </p>
+        </div>
+      </Reveal>
+    </div>
+  </Container>
+</section>

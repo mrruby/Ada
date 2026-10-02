@@ -1,0 +1,194 @@
+---
+/**
+ * Training / mini-course landing (advantage, andromeda-2026, meta-2026,
+ * wyzwanie): hero with an optional MailerLite form, pink intro, benefit cards
+ * and — when there is a form — a closing "Wypełnij formularz!" band.
+ *
+ * Slots (all optional):
+ *  - "hero":            replaces the eyebrow + headline column
+ *  - "figure":          replaces the default Ada photo with the "wypełnij" note
+ *  - "after-hero":      bands between the hero and the pink intro
+ *  - "intro":           replaces the pink intro content (badge, bullets, mockup)
+ *  - "mockup":          replaces the default intro image
+ *  - "before-benefits": bands between the intro and the benefits
+ *  - default:           bands at the end of the page
+ */
+import { Image } from "astro:assets"
+import adaShow from "@/assets/images/ada-show.webp"
+import springArrow from "@/assets/images/arrow-right-spirng.webp"
+import ads2026 from "@/assets/images/Reklamy w 2026.webp"
+import fillNote from "@/assets/images/wypelnij.webp"
+import { MailerLiteForm, Section } from "@/components/ui"
+import type { TrainingBenefit } from "@/data/training/types"
+import { cn } from "@/lib/cn"
+import type { RichText } from "@/lib/content"
+import BenefitGrid from "./BenefitGrid.astro"
+
+type Props = {
+  heroTone: "yellow" | "orange"
+  eyebrow?: string
+  /** Hero headline (trusted HTML). */
+  headline?: RichText
+  /** MailerLite export shown in the hero and in the closing band. */
+  formHtml?: string
+  /** Badge heading of the pink intro. */
+  sectionTitle?: string
+  bullets?: string[]
+  /** Benefits heading (trusted HTML). */
+  benefitsTitle?: RichText
+  benefits: TrainingBenefit[]
+  /** Center an incomplete last row of benefit cards. */
+  centerLastRow?: boolean
+  /** Show the hero figure under the copy on small screens (hidden by default). */
+  figureOnMobile?: boolean
+  /** Extra classes for the hero figure box (position/size on large screens). */
+  figureClass?: string
+}
+
+const {
+  heroTone,
+  eyebrow,
+  headline,
+  formHtml,
+  sectionTitle = "mini-kurs za 0zł",
+  bullets = [],
+  benefitsTitle = 'co zyskasz podczas <span class="text-periwinkle">mini-kursu</span>',
+  benefits,
+  centerLastRow = false,
+  figureOnMobile = false,
+  figureClass,
+} = Astro.props
+
+const heroBg = { yellow: "bg-lemon", orange: "bg-marigold" }[heroTone]
+const hasForm = Boolean(formHtml)
+const anton = "font-anton font-normal uppercase leading-none text-black"
+---
+
+<main>
+  <Section bg={heroBg}>
+    <div
+      class={cn(
+        "relative flex flex-col items-center px-4 py-16 lg:flex-row lg:items-start",
+        hasForm && "lg:justify-between"
+      )}
+    >
+      <div class={cn("w-full", hasForm ? "max-w-lg lg:mb-72 lg:w-1/2" : "lg:mb-56 lg:max-w-2xl")}>
+        {Astro.slots.has("hero") ? (
+          <slot name="hero" />
+        ) : (
+          <>
+            <p class="mb-4 text-xl font-bold text-black lg:text-2xl">{eyebrow}</p>
+            <h1
+              class="font-anton text-3xl leading-tight font-normal text-black lg:text-5xl"
+              set:html={headline}
+            />
+          </>
+        )}
+      </div>
+
+      <div
+        class={cn(
+          "z-10 w-full max-w-lg lg:absolute lg:bottom-0",
+          figureOnMobile ? "mt-8 lg:mt-0" : "hidden lg:block",
+          hasForm ? "lg:left-1/2 lg:-translate-x-1/2" : "lg:right-4",
+          figureClass
+        )}
+      >
+        {Astro.slots.has("figure") ? (
+          <slot name="figure" />
+        ) : (
+          <div class="relative">
+            <Image
+              src={adaShow}
+              alt="Adrianna Promis-Urbas z telefonem w dłoni"
+              widths={[512, 1024]}
+              sizes="512px"
+              loading="eager"
+              class="h-auto w-full"
+            />
+            <Image
+              src={fillNote}
+              alt="Wypełnij formularz tutaj!"
+              width={96}
+              densities={[1, 2]}
+              class="absolute top-6 -right-4 w-24"
+            />
+          </div>
+        )}
+      </div>
+
+      {formHtml && (
+        <MailerLiteForm html={formHtml} submit="fetch" class="mt-8 w-full lg:mt-0 lg:w-auto" />
+      )}
+    </div>
+  </Section>
+
+  <slot name="after-hero" />
+
+  <Section bg="bg-petal-light">
+    {Astro.slots.has("intro") ? (
+      <slot name="intro" />
+    ) : (
+      <div class="flex flex-col items-start justify-between gap-8 px-4 pt-16 pb-4 lg:flex-row">
+        <div class="flex w-full flex-col items-start gap-14 lg:w-1/2">
+          <h2 class={cn(anton, "bg-marigold text-5xl")}>{sectionTitle}</h2>
+          <ul class="list-disc pl-5 text-lg leading-relaxed text-black">
+            {bullets.map((bullet) => (
+              <li>{bullet}</li>
+            ))}
+          </ul>
+        </div>
+        <div class="w-full lg:w-1/2">
+          {Astro.slots.has("mockup") ? (
+            <slot name="mockup" />
+          ) : (
+            <Image
+              src={ads2026}
+              alt="Reklamy w 2026 - podgląd mini-kursu na laptopie"
+              widths={[640, 1280]}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              class="h-auto w-full"
+            />
+          )}
+        </div>
+      </div>
+    )}
+  </Section>
+
+  <slot name="before-benefits" />
+
+  <Section bg="bg-white">
+    <div class="flex flex-col gap-12 px-4 py-16">
+      <h2 class={cn(anton, "text-center text-5xl")} set:html={benefitsTitle} />
+      <BenefitGrid
+        items={benefits}
+        centerLastRow={centerLastRow}
+        class="mx-auto w-full max-w-6xl"
+      />
+    </div>
+  </Section>
+
+  {formHtml && (
+    <Section bg="bg-marigold">
+      <div class="flex flex-col items-center justify-center gap-12 px-4 py-16 lg:flex-row lg:gap-4">
+        <div class="flex flex-col items-center gap-4">
+          <h2 class={cn(anton, "text-center text-5xl text-neutral-700 lg:text-7xl")}>
+            WYPEŁNIJ
+            <br />
+            FORMULARZ!
+          </h2>
+          <Image
+            src={springArrow}
+            alt=""
+            width={144}
+            densities={[1, 2]}
+            class="w-36 rotate-90 lg:rotate-0"
+          />
+        </div>
+        <MailerLiteForm html={formHtml} submit="fetch" />
+      </div>
+    </Section>
+  )}
+
+  <slot />
+</main>

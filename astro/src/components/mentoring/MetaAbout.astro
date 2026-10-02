@@ -1,0 +1,43 @@
+---
+/** /meta-ads-mentoring: "Cześć! Nazywam się Adrianna Promis-Urbas" with a portrait. */
+import { Image } from "astro:assets"
+import mentoringPortrait from "@/assets/images/mentoring.webp"
+import { MarkerHeading, Section } from "@/components/ui"
+---
+
+<Section bg="bg-linear-to-b from-lavender to-white" innerClass="mb-20 px-6 md:py-20">
+  <MarkerHeading marker="pink" class="text-4xl uppercase lg:text-8xl">
+    Cześć!
+  </MarkerHeading>
+  <MarkerHeading as="h3" marker="pink" bounce={false} class="mt-6 text-base lg:text-4xl">
+    Nazywam się Adrianna Promis-Urbas
+  </MarkerHeading>
+
+  <div class="flex flex-col gap-12 pt-6 md:pt-10 lg:flex-row lg:items-center">
+    <Image
+      src={mentoringPortrait}
+      alt="Ada Promis siedząca na krześle"
+      width={766}
+      class="hidden h-auto w-full max-w-md xl:block"
+    />
+    <div class="flex max-w-md flex-col gap-8 pt-6 md:text-xl lg:max-w-3xl">
+      <p class="pb-8">
+        Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z zamiłowania kreatywną duszą.
+        Mam za sobą epizod pracy w audycie finansowym, ale moim powołaniem chyba od zawsze był
+        marketing!
+      </p>
+      <p>
+        I tak od stażu w agencji marketingowej do swojej działalności: dziś
+        <b>pod szyldem GetBold! </b>obsługuję klientów z Europy, w tym z Polski i na moim liczniku
+        wybiło już ponad 1 mln budżetów reklamowych wydanych w ramach Meta Ads. Pracuję z biznesami,
+        które dbają o<b> dobrostan psychiczny i fizyczny</b> : praktykuję
+        <b>slow marketing,</b> przemyślany, wartościowy, zbudowany na relacjach.
+      </p>
+      <p>
+        W programie <b>Meta Ads Masters Mentoring</b> skupimy się kontach reklamowych Twoich
+        klientów! Zdradzę Ci <b>moje tipy</b> i zaoszczędzę dobre kilka lat samodzielnego klikania w
+        menedżerze reklam.
+      </p>
+    </div>
+  </div>
+</Section>

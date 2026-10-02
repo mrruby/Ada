@@ -1,0 +1,37 @@
+---
+/** Workshop summary next to Ada's portrait, then the "wchodzisz do gry?" CTA. */
+import { Image } from "astro:assets"
+import portrait from "@/assets/images/warsztaty.webp"
+import { Section } from "@/components/ui"
+import WorkshopButton from "./WorkshopButton.astro"
+
+type Props = { href: string }
+
+const { href } = Astro.props
+---
+
+<Section bg="bg-linear-to-b from-lavender to-white" class="relative overflow-hidden">
+  <slot name="decor" />
+  <div class="flex flex-col px-3 py-2 pb-20">
+    <div class="flex flex-col items-center md:flex-row">
+      <Image src={portrait} alt="Uśmiechnięta Ada Promis" width={440} height={432} />
+      <div class="w-full lg:ml-12 xl:min-w-3xl">
+        <h3 class="bg-blush py-6 pl-4 font-semibold uppercase md:pl-20 md:text-2xl">
+          Warsztaty Kevin sam w menedżerze reklam: stwórz lejek reklamowy na 2024 rok!
+        </h3>
+        <p class="max-w-3xl pt-8 pl-4 md:text-2xl lg:pl-20">
+          to niezawodny sposób na rozpoczęcie pracy z reklamami.
+          <br />
+          Poznasz podstawy <b>strategicznego ustawiania reklam,</b> a potem dodasz do portfolio
+          nowe, opłacalne usługi.
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col items-center gap-8 pt-24">
+      <h3 class="text-center font-extrabold uppercase md:text-3xl">To jak, wchodzisz do gry?</h3>
+      <WorkshopButton href={href} icon="sm" class="tracking-widest md:w-sm md:text-2xl">
+        DOŁĄCZAM DO WARSZTATÓW
+      </WorkshopButton>
+    </div>
+  </div>
+</Section>

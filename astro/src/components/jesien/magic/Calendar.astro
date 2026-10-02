@@ -1,0 +1,75 @@
+---
+/**
+ * "Jak może wyglądać Twój miesiąc w MAGIC?" — October as a 7-column calendar
+ * (desktop) or a list of the days that have notes (mobile).
+ */
+import { type CalendarNoteTone, magicCalendarDays, magicCalendarNotes } from "@/data/jesien"
+import { cn } from "@/lib/cn"
+import MjCard from "./MjCard.astro"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+
+const weekdays = ["pn", "wt", "śr", "cz", "pt", "sb", "nd"]
+const noteTones: Record<CalendarNoteTone, string> = {
+  orange: "bg-marigold md:-rotate-1",
+  lilac: "bg-periwinkle md:-rotate-1",
+  yellow: "bg-lemon md:-rotate-1",
+  pink: "bg-bubblegum md:-rotate-1",
+  live: "bg-jesien-ink font-semibold text-white",
+}
+---
+
+<MjSection id="miesiac" tone="lavender">
+  <MjHeading
+    eyebrow="Miesiąc w MAGIC"
+    title="Jak może wyglądać Twój miesiąc w MAGIC?"
+    accent="Październik, przykładowo."
+  />
+  <MjCard
+    class="mt-8 px-5 pt-5 pb-4"
+    aria-label="Przykładowy miesiąc w MAGIC: spotkania i tematy do ogarnięcia"
+    role="group"
+  >
+    <div class="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+      <b class="text-lg">Przykładowy miesiąc w MAGIC</b>
+      <span class="text-sm text-jesien-ink-soft">
+        🗓️ spotkania na żywo &nbsp; 🟨 🟧 🟪 🟩 to, co ogarniasz w tym miesiącu
+      </span>
+    </div>
+    <div class="grid gap-1.5 md:grid-cols-7">
+      {weekdays.map((weekday) => (
+        <div class="hidden py-1 text-center text-xs font-bold text-jesien-ink-soft md:block">
+          {weekday}
+        </div>
+      ))}
+      {magicCalendarDays.map(({ day, outside }) => {
+        const note = outside ? undefined : magicCalendarNotes[day]
+        return (
+          <div
+            class={cn(
+              "items-center gap-2.5 rounded-xl border border-lavender bg-jesien-lavender p-1.5 text-xs text-jesien-ink-soft md:min-h-24 md:flex-col md:items-stretch md:gap-1",
+              note ? "flex" : "hidden md:flex",
+              outside && "opacity-35"
+            )}
+          >
+            {day}
+            {note && (
+              <i
+                class={cn(
+                  "block flex-1 rounded-lg px-2 py-1.5 leading-tight text-jesien-ink not-italic shadow-md shadow-black/20 md:flex-none [&_b]:font-bold",
+                  noteTones[note.tone]
+                )}
+                set:html={note.html}
+              />
+            )}
+          </div>
+        )
+      })}
+    </div>
+    <p class="mt-4 text-sm text-jesien-ink-soft">
+      Przez cały miesiąc: konsultacje pisemne na kanałach „Zadaj pytanie” i „Skonsultuj materiały”,
+      nagrania bez limitu i Kapibara Barbara. Twój MAGIC Plan podpowie, co jest dla Ciebie
+      najważniejsze w tym miesiącu.
+    </p>
+  </MjCard>
+</MjSection>

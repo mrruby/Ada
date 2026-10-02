@@ -1,0 +1,25 @@
+---
+/** Section band of the MAGIC jesień pages: white or lavender, wide column. */
+import { Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  id?: string
+  tone?: "white" | "lavender"
+  center?: boolean
+  class?: string
+  innerClass?: string
+}
+
+const { id, tone = "white", center = false, class: className, innerClass } = Astro.props
+---
+
+<Section
+  id={id}
+  width="wide"
+  bg={tone === "lavender" ? "bg-jesien-lavender" : undefined}
+  class={cn("py-14 md:py-20 lg:py-24", className)}
+  innerClass={cn("px-5", center && "text-center", innerClass)}
+>
+  <slot />
+</Section>

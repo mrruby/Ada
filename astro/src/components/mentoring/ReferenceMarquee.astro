@@ -1,0 +1,38 @@
+---
+/**
+ * Lavender band with a heading (slot "title") and an endless ticker of short
+ * testimonial screenshots. `wave` adds the swaying wave artwork behind the
+ * heading.
+ *
+ * <ReferenceMarquee images={referenceSnippets}>
+ *   <MarkerHeading slot="title" marker="pink">…</MarkerHeading>
+ * </ReferenceMarquee>
+ */
+import { Image } from "astro:assets"
+import { Marquee } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { ImageItem } from "@/lib/content"
+
+type Props = {
+  images: ImageItem[]
+  wave?: boolean
+  class?: string
+}
+
+const { images, wave = false, class: className } = Astro.props
+---
+
+<section class={cn("relative isolate overflow-hidden bg-lavender py-16 text-center", className)}>
+  {wave && <div class="absolute inset-x-0 top-0 -z-10 h-75 bg-art-wave" aria-hidden="true" />}
+  <slot name="title" />
+  <Marquee duration={120} class="mt-10 mb-20" trackClass="items-center">
+    {images.map((image) => (
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={image.src.width}
+        class="mx-4 h-auto max-w-none shrink-0"
+      />
+    ))}
+  </Marquee>
+</section>

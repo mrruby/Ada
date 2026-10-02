@@ -1,0 +1,48 @@
+---
+/**
+ * Numbered program topics on spinning flowers, 3 or 4 per row.
+ *
+ * <StepsGrid steps={steps} columns={4} flower="white" />
+ */
+import { FlowerFeature } from "@/components/sections"
+import { cn } from "@/lib/cn"
+import type { StepItem } from "@/data/mentoring"
+
+const grids = {
+  3: "grid-cols-1 md:grid-cols-3 max-w-5xl",
+  4: "grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 max-w-7xl",
+} as const
+
+type Props = {
+  steps: StepItem[]
+  columns?: keyof typeof grids
+  flower?: "blue" | "yellow" | "white"
+  class?: string
+  titleClass?: string
+  textClass?: string
+}
+
+const {
+  steps,
+  columns = 3,
+  flower = "white",
+  class: className,
+  titleClass,
+  textClass = "font-medium",
+} = Astro.props
+---
+
+<ul class={cn("mx-auto grid gap-x-8 gap-y-10", grids[columns], className)}>
+  {steps.map((step) => (
+    <li class="mx-auto w-full max-w-xs">
+      <FlowerFeature
+        number={step.number}
+        title={step.title}
+        text={step.text}
+        flower={flower}
+        titleClass={titleClass}
+        textClass={textClass}
+      />
+    </li>
+  ))}
+</ul>

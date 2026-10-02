@@ -1,0 +1,96 @@
+---
+/** /adsy-chill — Adsy&Chill: three self-paced Meta Ads masterclasses. */
+import testimonials from "@/assets/images/adsyOpinie1.webp"
+import testimonialsMobile from "@/assets/images/adsyOpinie1M.webp"
+import moreTestimonials from "@/assets/images/adsyOpinie2.webp"
+import moreTestimonialsMobile from "@/assets/images/adsyOpinie2M.webp"
+import AdsyButton from "@/components/masterclass/adsy-chill/AdsyButton.astro"
+import AdsyHero from "@/components/masterclass/adsy-chill/AdsyHero.astro"
+import BeforeAfter from "@/components/masterclass/adsy-chill/BeforeAfter.astro"
+import HelloAda from "@/components/masterclass/adsy-chill/HelloAda.astro"
+import MasterclassCase from "@/components/masterclass/adsy-chill/MasterclassCase.astro"
+import PainPoints from "@/components/masterclass/adsy-chill/PainPoints.astro"
+import PricingCard from "@/components/masterclass/adsy-chill/PricingCard.astro"
+import TestimonialsCollage from "@/components/masterclass/adsy-chill/TestimonialsCollage.astro"
+import WhatYouGet from "@/components/masterclass/adsy-chill/WhatYouGet.astro"
+import WhyAdsy from "@/components/masterclass/adsy-chill/WhyAdsy.astro"
+import { FaqSection } from "@/components/sections"
+import {
+  adsyFaq,
+  adsyReasons,
+  afterAdsy,
+  beforeAdsy,
+  fullPackage,
+  masterclassCases,
+  painPoints,
+} from "@/data/masterclass"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+const caseBackgrounds = ["bg-mint", "bg-cream", "bg-mint"]
+---
+
+<BaseLayout title="Adsy&chill 2025">
+  <Fragment slot="head">
+    {/* Hotjar — kept from the previous site (the only tracker outside lib/consent). */}
+    <script is:inline>
+      ;(function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            ;(h.hj.q = h.hj.q || []).push(arguments)
+          }
+        h._hjSettings = { hjid: 5046108, hjsv: 6 }
+        a = o.getElementsByTagName("head")[0]
+        r = o.createElement("script")
+        r.async = 1
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv
+        a.appendChild(r)
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=")
+    </script>
+  </Fragment>
+  <main>
+    <AdsyHero />
+    <PainPoints points={painPoints} />
+    <HelloAda />
+    <TestimonialsCollage
+      id="opinie"
+      bg="bg-cream"
+      desktop={testimonials}
+      mobile={testimonialsMobile}
+    />
+
+    {masterclassCases.map((item, index) => (
+      <MasterclassCase item={item} bg={caseBackgrounds[index]} />
+    ))}
+
+    <BeforeAfter before={beforeAdsy} after={afterAdsy} />
+    <WhatYouGet />
+    <PricingCard {...fullPackage} />
+
+    <TestimonialsCollage bg="bg-mint" desktop={moreTestimonials} mobile={moreTestimonialsMobile}>
+      <AdsyButton href="#pakiety" variant="orange" class="md:w-sm">
+        Ja też tak chcę!
+      </AdsyButton>
+    </TestimonialsCollage>
+
+    <WhyAdsy reasons={adsyReasons} />
+
+    <FaqSection
+      items={adsyFaq}
+      bg="bg-lilac"
+      class="pt-6 text-black"
+      itemClass="text-xs md:text-base"
+      titleClass="animate-settle"
+    >
+      <div class="flex justify-center pt-10 pb-10 lg:pb-30">
+        <AdsyButton
+          href="#pricing"
+          variant="orange"
+          class="w-full py-3 text-base font-extrabold md:h-25 md:w-md md:leading-9 md:tracking-normal"
+        >
+          Tworzę reklamy z Adsy&Chill!
+        </AdsyButton>
+      </div>
+    </FaqSection>
+  </main>
+</BaseLayout>

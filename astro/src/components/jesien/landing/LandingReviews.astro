@@ -1,0 +1,33 @@
+---
+/** /jesien: testimonial screenshots in three columns. */
+import { Image } from "astro:assets"
+import { Container, Reveal } from "@/components/ui"
+import { jesienReviewColumns } from "@/data/jesien"
+import JesienHeading from "../JesienHeading.astro"
+---
+
+<section class="bg-white pt-16 pb-16 lg:pb-20">
+  <Container width="content" class="px-5">
+    <Reveal class="mx-auto max-w-2xl text-center">
+      <JesienHeading kicker="Opinie klubowiczek">
+        One już działają z <span class="text-jesien-pink">MAGIC</span> 💜
+      </JesienHeading>
+    </Reveal>
+
+    <div class="mx-auto mt-9 grid max-w-xl items-start gap-x-3.5 lg:max-w-none lg:grid-cols-3">
+      {jesienReviewColumns.map((column) => (
+        <div class="flex flex-col">
+          {column.map((review) => (
+            <Image
+              src={review.src}
+              alt={review.alt}
+              widths={[400, 800]}
+              sizes="(min-width: 1024px) 330px, 540px"
+              class="h-auto w-full"
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

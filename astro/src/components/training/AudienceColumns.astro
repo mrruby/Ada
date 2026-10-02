@@ -1,0 +1,39 @@
+---
+/** "Dla kogo jest / nie jest" — side-by-side lists in yellow bordered boxes. */
+import { Section } from "@/components/ui"
+import type { AudienceColumn } from "@/data/training/wyzwanie"
+
+type Props = {
+  columns: AudienceColumn[]
+  bg?: string
+}
+
+const { columns, bg = "bg-lavender" } = Astro.props
+---
+
+<Section bg={bg}>
+  <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 py-12 lg:grid-cols-2 lg:gap-12 lg:py-16">
+    {columns.map((column) => (
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center justify-center gap-4">
+          <span class="-rotate-12 text-3xl lg:text-4xl" aria-hidden="true">
+            {column.icon}
+          </span>
+          <h3 class="font-anton text-2xl leading-tight whitespace-pre-line text-black uppercase lg:text-3xl">
+            {column.title}
+          </h3>
+        </div>
+        <ul class="flex grow flex-col rounded-lg border-2 border-black bg-lemon p-6 text-sm leading-snug text-black lg:text-base">
+          {column.items.map((item) => (
+            <li class="flex gap-3">
+              <span class="shrink-0" aria-hidden="true">
+                {item.icon}
+              </span>
+              <span>{item.text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</Section>

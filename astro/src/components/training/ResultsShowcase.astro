@@ -1,0 +1,35 @@
+---
+/**
+ * Screenshots of ad results, each with a yellow caption. The default slot
+ * renders below the list (e.g. a CTA).
+ */
+import { Image } from "astro:assets"
+import { Section } from "@/components/ui"
+import type { SalesResult } from "@/data/training/wyzwanie"
+
+type Props = {
+  title: string
+  items: SalesResult[]
+  bg?: string
+}
+
+const { title, items, bg = "bg-white" } = Astro.props
+---
+
+<Section bg={bg}>
+  <div class="flex flex-col items-center gap-8 px-3 py-10 lg:px-6">
+    <h2 class="text-center font-anton text-2xl text-black lg:text-3xl">{title}</h2>
+    <ul class="flex w-full max-w-md flex-col gap-8 py-6 lg:max-w-2xl">
+      {items.map((item) => (
+        <li class="flex flex-col items-center gap-3">
+          <Image src={item.src} alt={item.alt} densities={[1, 2]} class="h-auto max-w-full" />
+          <p class="w-full max-w-64 bg-lemon px-4 py-3 text-center leading-tight text-black">
+            <strong class="block font-black">{item.title}</strong>
+            <span class="mt-1 block text-xs font-semibold">{item.body}</span>
+          </p>
+        </li>
+      ))}
+    </ul>
+    <slot />
+  </div>
+</Section>

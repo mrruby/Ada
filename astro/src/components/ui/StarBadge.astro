@@ -1,0 +1,42 @@
+---
+/** Star-shaped sticker label (e.g. "NOWOŚĆ!") positioned by the caller. */
+import { cn } from "@/lib/cn"
+
+const fills = { yellow: "bg-marigold", pink: "bg-petal-light" } as const
+
+type Props = {
+  label: string
+  variant?: keyof typeof fills
+  class?: string
+  sizeClass?: string
+  labelClass?: string
+}
+
+const {
+  label,
+  variant = "yellow",
+  class: className,
+  sizeClass = "size-24",
+  labelClass = "max-w-16 text-sm md:text-base",
+} = Astro.props
+---
+
+<div class={cn("pointer-events-none absolute z-10", className)}>
+  <div class={cn("relative flex items-center justify-center", sizeClass)}>
+    <div
+      aria-hidden="true"
+      class={cn(
+        "absolute inset-0 mask-[url(/assets/magic-special-star.svg)] mask-contain mask-center mask-no-repeat",
+        fills[variant]
+      )}
+    ></div>
+    <span
+      class={cn(
+        "relative z-10 px-3 text-center font-montserrat leading-none font-extrabold tracking-tighter whitespace-pre-line text-black",
+        labelClass
+      )}
+    >
+      {label}
+    </span>
+  </div>
+</div>

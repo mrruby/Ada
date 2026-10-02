@@ -1,0 +1,53 @@
+---
+/** Closing call to join with the promotion countdown and Ada's photo. */
+import { Image } from "astro:assets"
+import adaStand from "@/assets/images/magic-jesien/ada_stand.webp"
+import { magicFinalChecks } from "@/data/jesien"
+import MjButton from "./MjButton.astro"
+import MjHeading from "./MjHeading.astro"
+import PromoCountdown from "./PromoCountdown.astro"
+---
+
+<hr class="border-lavender" />
+<section id="dolacz" class="bg-jesien-lavender py-14 md:py-24">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-5">
+    <div class="md:col-span-3">
+      <MjHeading
+        align="left"
+        title="Dołącz do społeczności kobiet, które wspólnie rozwijają swoje biznesy"
+        accent="i wspierają się w drodze do sukcesu w reklamach Meta"
+        lead="Wybierz 1, 3 lub 6 miesięcy, umów spotkanie 1:1 i zacznij od swojego MAGIC Planu."
+        titleClass="mb-0 max-w-2xl"
+        leadClass="mt-4 mb-5"
+      />
+      <ul class="mb-6 grid gap-2 font-semibold">
+        {magicFinalChecks.map((check) => (
+          <li class="flex items-center gap-2.5">
+            <span aria-hidden="true">💜</span>
+            {check}
+          </li>
+        ))}
+      </ul>
+      <div class="mb-6" data-when="active">
+        <PromoCountdown size="lg" />
+      </div>
+      <p class="mb-6 text-xl font-semibold" data-when="expired">
+        Promocja zakończona
+      </p>
+      <MjButton href="#pakiety">Chcę mieć swój zespół marketingowy 🤩</MjButton>
+      <div>
+        <span class="mt-7 inline-flex items-center gap-2 rounded-full border border-periwinkle bg-white px-4 py-2 text-xs font-semibold tracking-widest uppercase">
+          <span data-when="active">🔮 Promocja do 28.09, do końca dnia</span>
+          <span data-when="expired">Dołącz do MAGIC</span>
+        </span>
+      </div>
+    </div>
+    <Image
+      src={adaStand}
+      alt="Ada z laptopem w jednej ręce i kubkiem w drugiej"
+      widths={[400, 800, 900]}
+      sizes="(min-width: 768px) 420px, 384px"
+      class="mx-auto h-auto w-full max-w-sm rotate-1 rounded-3xl shadow-xl shadow-jesien-ink/20 md:col-span-2 md:max-w-md"
+    />
+  </div>
+</section>

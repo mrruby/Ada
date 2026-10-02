@@ -1,0 +1,40 @@
+---
+/** /jesien-nagranie finale: watch before it disappears. */
+import { Container, Reveal } from "@/components/ui"
+import { JESIEN_DEADLINE_DAY, JESIEN_DOORS_DAY, JESIEN_PLAYER_ID } from "@/data/jesien"
+import FloatStar from "../FloatStar.astro"
+import GradientBand from "../GradientBand.astro"
+import JesienButton from "../JesienButton.astro"
+import JesienHeading from "../JesienHeading.astro"
+---
+
+<GradientBand class="text-center">
+  <Fragment slot="decor">
+    <FloatStar class="top-1/8 left-1/12 text-jesien-pink-soft opacity-60" />
+    <FloatStar class="top-2/3 right-1/12 text-jesien-orange-soft opacity-55 animation-delay-400" />
+  </Fragment>
+
+  <Container width="narrow" class="px-5">
+    <Reveal>
+      <JesienHeading class="mb-3 text-white">⏳ Obejrzyj, zanim zniknie</JesienHeading>
+    </Reveal>
+    <Reveal>
+      <p class="mx-auto mb-8 max-w-xl text-white/90 [&_strong]:text-white">
+        Nagranie w wersji za 0 zł jest dostępne tylko do
+        <strong>{JESIEN_DEADLINE_DAY}, 23:59</strong>, potem trafia do płatnej sprzedaży. Zrób sobie
+        kawę, weź notes i kliknij play. ☕
+      </p>
+    </Reveal>
+    <Reveal>
+      <JesienButton href={`#${JESIEN_PLAYER_ID}`} class="focus-visible:outline-white">
+        OGLĄDAM NAGRANIE 🎬
+      </JesienButton>
+    </Reveal>
+    <Reveal>
+      <p class="mt-6 text-sm text-white/85 [&_strong]:text-white">
+        PS Drzwi do <strong>MAGIC</strong> otwieramy <strong>{JESIEN_DOORS_DAY}</strong>, jesteś na
+        liście oczekujących, więc dowiesz się pierwsza. 👀
+      </p>
+    </Reveal>
+  </Container>
+</GradientBand>

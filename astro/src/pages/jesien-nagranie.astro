@@ -1,0 +1,46 @@
+---
+// Strona dostępna tylko z linku w mailu — nie indeksujemy.
+import JesienCountdownBar from "@/components/jesien/JesienCountdownBar.astro"
+import JesienShell from "@/components/jesien/JesienShell.astro"
+import NagranieBridge from "@/components/jesien/nagranie/NagranieBridge.astro"
+import NagranieFinale from "@/components/jesien/nagranie/NagranieFinale.astro"
+import NagranieHero from "@/components/jesien/nagranie/NagranieHero.astro"
+import NagranieReviews from "@/components/jesien/nagranie/NagranieReviews.astro"
+import NagranieSteps from "@/components/jesien/nagranie/NagranieSteps.astro"
+import { OG_ADA_PURPLE } from "@/config/site"
+import {
+  JESIEN_DEADLINE,
+  JESIEN_DEADLINE_DAY,
+  JESIEN_NAGRANIE_DESCRIPTION,
+  JESIEN_NAGRANIE_TITLE,
+} from "@/data/jesien"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+---
+
+<BaseLayout
+  title={JESIEN_NAGRANIE_TITLE}
+  description={JESIEN_NAGRANIE_DESCRIPTION}
+  image={OG_ADA_PURPLE}
+  noindex
+>
+  <JesienShell>
+    <JesienCountdownBar target={JESIEN_DEADLINE}>
+      <Fragment slot="label">
+        ⏳ Nagranie <strong class="text-jesien-pink">zniknie za:</strong>
+      </Fragment>
+      <Fragment slot="expired">
+        ⏳ Czas minął. Szkolenie jest już w
+        <strong class="text-jesien-pink">płatnej sprzedaży</strong>
+      </Fragment>
+      <Fragment slot="subline">
+        <strong>{JESIEN_DEADLINE_DAY} o 23:59</strong> szkolenie trafia do płatnej sprzedaży. Teraz
+        oglądasz je za 0 zł.
+      </Fragment>
+    </JesienCountdownBar>
+    <NagranieHero />
+    <NagranieSteps />
+    <NagranieBridge />
+    <NagranieReviews />
+    <NagranieFinale />
+  </JesienShell>
+</BaseLayout>

@@ -1,0 +1,88 @@
+---
+/**
+ * Disclosure item built on <details>/<summary> — works without JavaScript.
+ * Items sharing the same `group` behave exclusively (only one open at a time).
+ *
+ * <Accordion question="Ile to kosztuje?">Odpowiedź…</Accordion>
+ */
+import { cn } from "@/lib/cn"
+
+const variants = {
+  /** Shadowed box with a plus/minus icon (classic Ada FAQ). */
+  classic: {
+    root: "",
+    summary: "p-4 font-bold shadow-lg lg:text-xl",
+    body: "mt-2 mb-8 px-2 lg:text-lg",
+    icon: "text-navy",
+  },
+  /** Bordered rounded row (Magic FAQ). */
+  outlined: {
+    root: "rounded-2xl border border-black bg-white",
+    summary: "px-5 py-4 font-bold md:px-8 md:text-lg",
+    body: "px-5 pb-5 md:px-8",
+    icon: "text-current",
+  },
+  /** Divider between rows only. */
+  minimal: {
+    root: "border-b border-current/20",
+    summary: "py-4 font-bold",
+    body: "pb-4",
+    icon: "text-current",
+  },
+} as const
+
+type Props = {
+  question: string
+  variant?: keyof typeof variants
+  /** Exclusive group name — opening one item closes the others. */
+  group?: string
+  open?: boolean
+  class?: string
+  summaryClass?: string
+  bodyClass?: string
+  /** Heading level used for the question text. */
+  headingLevel?: "h2" | "h3" | "h4" | "span"
+}
+
+const {
+  question,
+  variant = "classic",
+  group,
+  open = false,
+  class: className,
+  summaryClass,
+  bodyClass,
+  headingLevel: Question = "h3",
+} = Astro.props
+
+const styles = variants[variant]
+---
+
+<details name={group} open={open} class={cn("group", styles.root, className)}>
+  <summary
+    class={cn(
+      "flex cursor-pointer list-none items-center justify-between gap-6 text-left [&::-webkit-details-marker]:hidden",
+      styles.summary,
+      summaryClass
+    )}
+  >
+    <Question class="text-left">{question}</Question>
+    <svg
+      class={cn("size-4 shrink-0 fill-current", styles.icon)}
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+    >
+      <rect y="7" width="16" height="2" rx="1"></rect>
+      <rect
+        y="7"
+        width="16"
+        height="2"
+        rx="1"
+        class="origin-center rotate-90 transition-transform duration-200 group-open:rotate-0"
+      ></rect>
+    </svg>
+  </summary>
+  <div class={cn(styles.body, bodyClass)}>
+    <slot />
+  </div>
+</details>

@@ -1,0 +1,52 @@
+---
+/**
+ * "Co sprawia, że MAGIC jest wyjątkowy? ✅ Dostajesz:" — intro band and the
+ * perk tiles in three columns with Ada's photo under the middle one.
+ */
+import { Image } from "astro:assets"
+import adaPhoto from "@/assets/images/magic_adsy.webp"
+import { Heading, TypingText } from "@/components/ui"
+import { perkColumns } from "@/data/magic"
+import { cn } from "@/lib/cn"
+import MagicSection from "./MagicSection.astro"
+---
+
+<MagicSection bg="bg-neutral-100" class="text-black" innerClass="pb-0 text-center md:pb-2">
+  <TypingText
+    as="h2"
+    text="Co sprawia, że MAGIC jest wyjątkowy?"
+    class="text-3xl font-bold uppercase"
+  />
+  <p class="pt-4 text-sm leading-relaxed md:text-base">
+    Tutaj nie znajdziesz nagrań bez możliwości kontaktu.
+    <br />
+    <b>To Twój podręczny abonament na marketing! </b>
+  </p>
+  <Heading as="p" align="center" class="pt-4 uppercase">
+    ✅ Dostajesz:
+  </Heading>
+</MagicSection>
+
+<MagicSection bg="bg-blush" width="wide" class="text-black" innerClass="pb-0 md:pb-0">
+  <div class="grid gap-6 pt-8 xl:grid-cols-3 xl:gap-4">
+    {perkColumns.map((column, index) => (
+      <ul class={cn("flex flex-col gap-6", index !== 1 && "xl:row-span-2")}>
+        {column.map((perk) => (
+          <li class={cn("rounded-xl p-4 text-center shadow-lg md:p-6", perk.tone)}>
+            <Heading as="h3" size="sm" class="uppercase">
+              {perk.title}
+            </Heading>
+            <p class="pt-2 text-sm leading-relaxed md:text-base">{perk.text}</p>
+          </li>
+        ))}
+      </ul>
+    ))}
+    <Image
+      src={adaPhoto}
+      alt="Ada z telefonem"
+      widths={[384, 768]}
+      sizes="384px"
+      class="order-last mx-auto -mb-20 h-auto w-full max-w-sm xl:order-none xl:col-start-2 xl:row-start-2 xl:-mb-24"
+    />
+  </div>
+</MagicSection>

@@ -1,0 +1,231 @@
+/*
+ * Design tokens (Tailwind v4 theme).
+ *
+ * Everything else — spacing, sizes, font sizes, radii, shadows, breakpoints —
+ * is Tailwind's default scale. Add a token here only when a value is part of
+ * the brand and repeats; never for one-off tweaks.
+ */
+@theme {
+  /* Brand core */
+  --color-navy: #253274; /* primary text on classic pages */
+  --color-lavender: #eedcf6; /* header/footer, classic highlights */
+  --color-cream: #f2f0e9; /* Magic paper background */
+  --color-mint: #e8f6cb; /* Magic green background */
+  --color-tangerine: #ee701e; /* Magic accent + hairlines */
+  --color-lemon: #f4e105; /* Magic yellow */
+
+  /* Pinks */
+  --color-rose: #f2a7b2;
+  --color-blush: #ffd3eb;
+  --color-petal: #edbccf;
+  --color-petal-light: #f7dae8;
+  --color-bubblegum: #ffb0db;
+  --color-orchid: #e6baf4;
+  --color-magenta: #ff00a6;
+
+  /* Purples */
+  --color-plum: #5d4294;
+  --color-amethyst: #a361b4;
+  --color-iris: #9c70e9;
+  --color-lilac: #b2a8db;
+  --color-periwinkle: #b2a1fa;
+  --color-ultraviolet: #3d03a1;
+
+  /* Yellows & oranges */
+  --color-sunflower: #ffb800;
+  --color-butter: #fcd444;
+  --color-marigold: #ffad00;
+  --color-apricot: #feab42;
+  --color-peach: #fec884;
+
+  /* Jesień (autumn campaign) */
+  --color-jesien-ink: #241a3a;
+  --color-jesien-ink-soft: #57496e;
+  --color-jesien-purple: #6f2dbd;
+  --color-jesien-purple-soft: #c9b2f2;
+  --color-jesien-pink: #ff2b9d;
+  --color-jesien-pink-soft: #ffc7e4;
+  --color-jesien-orange: #f7a11a;
+  --color-jesien-orange-soft: #ffe0b3;
+  --color-jesien-lavender: #f4eefc;
+  --color-jesien-blush: #fff0f8;
+
+  /* Motion (used by components; extend sparingly) */
+  --animate-fadeIn: fadeIn 3s ease-in-out;
+  --animate-fadeInUp: fadeInUp 0.8s ease-out both;
+  --animate-blink: blink 1s both infinite;
+  --animate-spin-slow: spin 4s linear infinite;
+  --animate-settle: settle 1.5s ease-in-out;
+  --animate-marquee: marquee 120s linear infinite;
+  --animate-slideInFromLeft: slideInFromLeft 1.5s ease-out;
+  --animate-slideInFromRight: slideInFromRight 1.5s ease-out;
+  --animate-floaty: floaty 6s ease-in-out infinite;
+  --animate-wiggle: wiggle 5s ease-in-out infinite;
+  --animate-wiggleNeg: wiggleNeg 5s ease-in-out infinite;
+  --animate-shimmer: shimmer 6s linear infinite;
+  --animate-attentionPulse: attentionPulse 2.2s ease-in-out infinite;
+  --animate-sway: sway 6s infinite;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  /* One gentle bounce as a heading settles in (Tailwind's animate-bounce is untouched). */
+  @keyframes settle {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-4px);
+    }
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(4%);
+      opacity: 1;
+    }
+    70% {
+      transform: translateX(-2%);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(-4%);
+      opacity: 1;
+    }
+    70% {
+      transform: translateX(2%);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes floaty {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-14px) rotate(12deg);
+    }
+  }
+  @keyframes wiggle {
+    0%,
+    86%,
+    100% {
+      transform: rotate(7deg);
+    }
+    90% {
+      transform: rotate(11deg);
+    }
+    95% {
+      transform: rotate(4deg);
+    }
+  }
+  @keyframes wiggleNeg {
+    0%,
+    86%,
+    100% {
+      transform: rotate(-6deg);
+    }
+    90% {
+      transform: rotate(-10deg);
+    }
+    95% {
+      transform: rotate(-3deg);
+    }
+  }
+  @keyframes shimmer {
+    from {
+      background-position: 0% 0;
+    }
+    to {
+      background-position: 200% 0;
+    }
+  }
+  @keyframes attentionPulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  @keyframes sway {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(4deg);
+    }
+  }
+}
+
+/* Font families come from the Astro Fonts API (see astro.config.mjs). */
+@theme inline {
+  --font-sans: var(--ff-montserrat);
+  --font-montserrat: var(--ff-montserrat);
+  --font-anton: var(--ff-anton);
+  --font-lemon: var(--ff-lemon);
+  --font-courier: var(--ff-courier);
+  --font-annie: var(--ff-annie);
+  --font-caveat: var(--ff-caveat);
+}
+
+/* `animation-delay-200` → 200ms (any integer, in ms). */
+@utility animation-delay-* {
+  animation-delay: calc(--value(integer) * 1ms);
+}

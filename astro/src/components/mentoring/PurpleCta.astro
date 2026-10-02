@@ -1,0 +1,36 @@
+---
+/**
+ * Wide purple uppercase call-to-action of the mentoring landings. Other
+ * attributes (id, aria-*, data-*, newTab) are passed to Button.
+ *
+ * <PurpleCta href="#offert" size="lg">Chcę dołączyć!</PurpleCta>
+ */
+import type { ComponentProps } from "astro/types"
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+const sizes = {
+  md: "text-xs md:text-xl",
+  lg: "text-xs md:text-4xl",
+} as const
+
+type Props = Omit<ComponentProps<typeof Button>, "variant" | "size"> & {
+  href: string
+  size?: keyof typeof sizes
+}
+
+const { size = "md", class: className, ...attrs } = Astro.props
+---
+
+<Button
+  variant="bare"
+  size="none"
+  class={cn(
+    "w-48 bg-amethyst px-5 py-1.5 font-bold text-white uppercase shadow-xl hover:bg-rose md:h-24 md:w-lg md:tracking-widest",
+    sizes[size],
+    className
+  )}
+  {...attrs}
+>
+  <slot />
+</Button>

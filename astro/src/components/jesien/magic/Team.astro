@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets"
+import { magicTeam } from "@/data/jesien"
+import MjButton from "./MjButton.astro"
+import MjCard from "./MjCard.astro"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+---
+
+<MjSection id="zespol" tone="lavender" center>
+  <MjHeading
+    eyebrow="Kto prowadzi"
+    title="Kogo spotkasz w MAGIC?"
+    accent="Cały team marketingowy!"
+    lead="Meta Ads | Copywriting | Grafika | Koordynacja kampanii | AI i automatyzacje"
+  />
+  <div class="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+    {magicTeam.map((person) => (
+      <MjCard as="article" lift class="min-w-0 px-4 py-6">
+        <Image
+          src={person.photo}
+          alt={person.alt ?? person.name}
+          width={208}
+          height={208}
+          class="mx-auto mb-3.5 size-26 rounded-full border-3 border-blush object-cover"
+        />
+        <h3 class="mb-0.5 font-semibold">{person.name}</h3>
+        {person.role && (
+          <div class="mb-2 text-xs font-semibold text-jesien-pink">{person.role}</div>
+        )}
+        {person.bio && <p class="text-sm text-jesien-ink-soft" set:html={person.bio} />}
+      </MjCard>
+    ))}
+  </div>
+  <p class="mt-8 text-lg text-jesien-ink-soft">
+    <strong>
+      Dołącz do społeczności kobiet, które wspólnie rozwijają swoje biznesy i wspierają się w drodze
+      do sukcesu w reklamach Meta.
+    </strong>
+  </p>
+  <MjButton href="#pakiety" class="mt-4">
+    Wybieram pakiet
+  </MjButton>
+</MjSection>

@@ -1,0 +1,15 @@
+---
+import Quiz from "@/components/quiz/Quiz.astro"
+import QuizTitle from "@/components/quiz/QuizTitle.astro"
+import { OG_ADA_PURPLE } from "@/config/site"
+import { questions } from "@/data/quiz/questions"
+import { resultIntro, results } from "@/data/quiz/results"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+---
+
+<BaseLayout title="Quiz: Jaka jest Twoja Adsowa Osobowość?" image={OG_ADA_PURPLE}>
+  <main class="min-h-screen">
+    <QuizTitle questionCount={questions.length} />
+    <Quiz questions={questions} results={results} intro={resultIntro} />
+  </main>
+</BaseLayout>

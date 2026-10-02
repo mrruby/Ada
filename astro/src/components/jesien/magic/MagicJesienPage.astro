@@ -1,0 +1,87 @@
+---
+/**
+ * The MAGIC jesień sales page, shared by /magic-jesien and /jesien-nagranie2.
+ * Pages differ in the hero (slot "hero"), an optional promotion strip and SEO.
+ *
+ * The root is a `[data-countdown-scope]`: until the promotion ends
+ * `[data-when="active"]` content shows, afterwards `[data-when="expired"]`.
+ * Built after the end, the expired state is rendered right away.
+ */
+import { Font } from "astro:assets"
+import {
+  MAGIC_JESIEN_DESCRIPTION,
+  MAGIC_JESIEN_PROMOTION_END,
+  MAGIC_JESIEN_TITLE,
+} from "@/data/jesien"
+import { OG_ADA_PURPLE } from "@/config/site"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import Audience from "./Audience.astro"
+import Calendar from "./Calendar.astro"
+import Checklist from "./Checklist.astro"
+import Diagnosis from "./Diagnosis.astro"
+import Faq from "./Faq.astro"
+import Features from "./Features.astro"
+import Final from "./Final.astro"
+import Invitation from "./Invitation.astro"
+import LogoBar from "./LogoBar.astro"
+import MagicFooter from "./MagicFooter.astro"
+import Offer from "./Offer.astro"
+import Opinions from "./Opinions.astro"
+import Progress from "./Progress.astro"
+import PromoTopBar from "./PromoTopBar.astro"
+import Results from "./Results.astro"
+import Story from "./Story.astro"
+import Team from "./Team.astro"
+import VideoOpinions from "./VideoOpinions.astro"
+import "./magic-jesien.css"
+
+type Props = {
+  canonical: string
+  noindex?: boolean
+  /** Promotion strip above the logo. */
+  topBar?: boolean
+}
+
+const { canonical, noindex = false, topBar = false } = Astro.props
+const promotionEnded = MAGIC_JESIEN_PROMOTION_END.getTime() <= Date.now()
+---
+
+<BaseLayout
+  title={MAGIC_JESIEN_TITLE}
+  description={MAGIC_JESIEN_DESCRIPTION}
+  image={OG_ADA_PURPLE}
+  canonical={canonical}
+  noindex={noindex}
+>
+  <Fragment slot="head">
+    <Font cssVariable="--ff-outfit" preload={[{ weight: 400 }, { weight: 800 }]} />
+    <Font cssVariable="--ff-playfair" />
+  </Fragment>
+  <div
+    class="magic-jesien overflow-x-clip bg-white text-base leading-relaxed text-jesien-ink antialiased"
+    data-countdown-scope
+    data-expired={promotionEnded ? "" : undefined}
+  >
+    {topBar && <PromoTopBar />}
+    <LogoBar />
+    <main>
+      <slot name="hero" />
+      <Invitation />
+      <Diagnosis />
+      <Audience />
+      <Features />
+      <Checklist />
+      <Offer />
+      <Progress />
+      <Story />
+      <VideoOpinions />
+      <Calendar />
+      <Team />
+      <Results />
+      <Opinions />
+      <Faq />
+      <Final />
+    </main>
+    <MagicFooter />
+  </div>
+</BaseLayout>

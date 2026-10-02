@@ -1,0 +1,30 @@
+---
+/** Illustrative new message to Kapibara Barbara (the AI assistant). */
+import { Image } from "astro:assets"
+import barbara from "@/assets/images/kapibara_barbara_portrait.webp"
+import { mockCard } from "./mockCard"
+
+const divider = "border-b border-jesien-lavender pb-2"
+---
+
+<div
+  class:list={[mockCard, "max-w-xs px-4 pt-3.5 pb-4"]}
+  aria-label="Nowa wiadomość do Kapibary Barbary"
+  role="group"
+>
+  <div class:list={[divider, "mb-2.5 text-sm font-semibold"]}>New message</div>
+  <div class:list={[divider, "text-sm text-jesien-ink-soft"]}>
+    To:{" "}
+    <span class="text-jesien-ink">
+      Kapi<i class="ml-px inline-block h-4 w-px animate-blink bg-jesien-ink align-middle"></i>
+    </span>
+  </div>
+  <div class="mt-2 flex items-center gap-2.5 rounded-lg bg-jesien-lavender px-2.5 py-2 text-sm font-semibold">
+    <Image src={barbara} alt="" width={68} height={68} class="size-8 shrink-0 rounded-full" />
+    Kapibara Barbara
+  </div>
+  <div class="mt-2.5 rounded-xl bg-periwinkle/30 px-3 py-2 text-sm leading-snug">
+    Cześć Klubowiczko! 🌼 Nagranie o instalacji piksela jest w Poziomie 0, lekcja 3: podsyłam link.
+    Jak już podepniesz, wrzuć screen zdarzeń na „Zadaj pytanie”, dziewczyny sprawdzą.
+  </div>
+</div>

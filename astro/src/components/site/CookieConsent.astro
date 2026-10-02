@@ -1,0 +1,124 @@
+---
+/**
+ * GDPR cookie banner. Shown until the visitor makes a choice; loads the
+ * consented trackers on every page view afterwards (see lib/consent.ts).
+ */
+const categories = [
+  {
+    name: "statistics",
+    title: "Statystyki",
+    text: "Pomaga nam zrozumieć, jak odwiedzający wchodzą w interakcję z witryną.",
+  },
+  {
+    name: "preferences",
+    title: "Preferencje",
+    text: "Umożliwia stronie zapamiętanie informacji o Twoich preferencjach.",
+  },
+  {
+    name: "marketing",
+    title: "Marketing",
+    text: "Służy do wyświetlania odpowiednich reklam.",
+  },
+]
+
+const outlineButton =
+  "w-full rounded border-2 border-navy px-4 py-2 text-sm font-bold text-navy transition-colors hover:bg-lavender"
+---
+
+<div
+  data-cookie-consent
+  hidden
+  class="fixed inset-x-0 bottom-0 z-100 bg-white text-navy shadow-lg"
+  role="dialog"
+  aria-labelledby="cookie-title"
+>
+  <div class="mx-auto max-w-5xl p-4">
+    <div class="flex flex-col gap-4 md:flex-row md:justify-between">
+      <div>
+        <h2 id="cookie-title" class="mb-2 text-lg font-medium">
+          Ta strona używa plików cookie
+        </h2>
+        <p class="text-sm font-medium">
+          Używamy plików cookie do personalizacji treści i reklam, udostępniania funkcji mediów
+          społecznościowych i analizowania ruchu. Udostępniamy również informacje o korzystaniu z
+          naszej witryny naszym partnerom z mediów społecznościowych, reklamy i analityki.
+        </p>
+        <p class="mt-2 text-sm font-medium">
+          Szczegółową listę plików cookie dla każdego z naszych produktów znajdziesz w{" "}
+          <a href="/policy" class="font-bold hover:underline">
+            Warunkach i Zasadach
+          </a>
+          .
+        </p>
+
+        <div class="mt-4 flex flex-col gap-4 sm:flex-row">
+          {categories.map((category) => (
+            <label class="flex cursor-pointer items-start gap-2">
+              <input type="checkbox" name={category.name} checked class="peer sr-only" />
+              <span
+                aria-hidden="true"
+                class="relative mt-0.5 h-5 w-10 shrink-0 rounded-full bg-navy/20 transition-colors after:absolute after:top-0.5 after:left-0.5 after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-all peer-checked:bg-navy peer-checked:after:translate-x-5 peer-focus-visible:ring-2 peer-focus-visible:ring-navy peer-focus-visible:ring-offset-2"
+              />
+              <span>
+                <span class="block text-sm font-bold">{category.title}</span>
+                <span class="block max-w-44 text-xs font-medium">{category.text}</span>
+              </span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div class="flex min-w-44 flex-col gap-1">
+        <button
+          type="button"
+          data-consent="all"
+          class="w-full rounded bg-navy px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-navy/90"
+        >
+          Zaakceptuj wszystko
+        </button>
+        <button type="button" data-consent="selected" class={outlineButton}>
+          Zaakceptuj wybrane
+        </button>
+        <button type="button" data-consent="none" class={outlineButton}>
+          Nie zezwalaj
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import {
+    type ConsentCategory,
+    hasConsentDecision,
+    initConsentedTracking,
+    saveConsent,
+  } from "@/lib/consent"
+
+  const banner = document.querySelector<HTMLElement>("[data-cookie-consent]")
+
+  if (hasConsentDecision()) {
+    initConsentedTracking()
+  } else if (banner) {
+    banner.hidden = false
+
+    const choose = (mode: "all" | "selected" | "none") => {
+      const choices = {} as Record<ConsentCategory, boolean>
+      banner.querySelectorAll<HTMLInputElement>("input[type=checkbox]").forEach((input) => {
+        choices[input.name as ConsentCategory] =
+          mode === "all" ? true : mode === "none" ? false : input.checked
+      })
+      saveConsent(choices)
+      initConsentedTracking()
+      banner.hidden = true
+    }
+
+    banner
+      .querySelectorAll<HTMLButtonElement>("[data-consent]")
+      .forEach((button) =>
+        button.addEventListener("click", () =>
+          choose(button.dataset.consent as "all" | "selected" | "none")
+        )
+      )
+  }
+</script>

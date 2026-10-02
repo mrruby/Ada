@@ -1,0 +1,52 @@
+---
+/**
+ * Classic workshop CTA: pastel block with a pink underline and an optional
+ * calendar icon (`icon` = its size) at the end of the label. Other attributes
+ * (id, aria-*, data-*, newTab) are passed to Button.
+ *
+ * <WorkshopButton href={checkoutUrl} icon="sm">DOŁĄCZAM</WorkshopButton>
+ */
+import type { ComponentProps } from "astro/types"
+import { Image } from "astro:assets"
+import calendarIcon from "@/assets/images/calendar.svg"
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+const variants = {
+  pink: "bg-blush",
+  lavender: "bg-lavender",
+} as const
+
+const icons = {
+  sm: "ml-1 size-6 md:ml-4",
+  lg: "ml-4 size-6 md:size-12",
+} as const
+
+type Props = Omit<ComponentProps<typeof Button>, "variant" | "size"> & {
+  href: string
+  variant?: keyof typeof variants
+  icon?: keyof typeof icons
+}
+
+const { variant = "pink", icon, class: className, ...attrs } = Astro.props
+---
+
+<Button
+  variant="soft"
+  size="none"
+  class={cn("border-b-4 border-rose px-5 py-1.5 font-bold shadow-xl", variants[variant], className)}
+  {...attrs}
+>
+  <span>
+    <slot />
+    {icon && (
+      <Image
+        src={calendarIcon}
+        alt=""
+        width={48}
+        height={48}
+        class={cn("inline-block align-middle", icons[icon])}
+      />
+    )}
+  </span>
+</Button>

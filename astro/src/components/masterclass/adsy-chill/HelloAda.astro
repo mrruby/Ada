@@ -1,0 +1,43 @@
+---
+/** "Cześć!" — Ada's short bio on lavender with her portrait (Adsy&Chill). */
+import { Image } from "astro:assets"
+import portrait from "@/assets/images/magic-hero2.webp"
+import { CircleArrow, Section, TypingText } from "@/components/ui"
+---
+
+<Section bg="bg-lilac" class="relative" width="content">
+  <div class="flex flex-col-reverse items-center justify-center gap-8 overflow-hidden px-4 py-8 text-center text-black sm:pt-18 md:flex-row md:items-start md:px-8 lg:text-left">
+    <div class="w-full text-white md:w-1/2">
+      <TypingText
+        as="h2"
+        text="Cześć!"
+        class="inline-block min-w-48 animate-settle font-anton text-3xl text-mint uppercase md:text-7xl"
+      />
+      <h3 class="mt-4 pt-8 pb-6 text-xs font-bold tracking-widest md:text-3xl">
+        Nazywam się Adrianna Promis-Urbas
+      </h3>
+      <p class="py-2 text-xs tracking-widest md:text-sm">
+        <b>Jestem przedsiębiorczynią.</b> Tworzę kampanie reklamowe, które zarabiają pieniądze.{" "}
+        <b>W swojej karierze wydałam na kampanie reklamowe sporo ponad 2 000 000 złotych,</b> a
+        zarobiłam kilkanaście razy tyle!
+      </p>
+      <p class="py-2 text-xs tracking-widest md:text-sm">
+        <b>Moja specjalizacja to marki osobiste i małe kobiece biznesy</b> - dobrze znam i rozumiem
+        wyzwania przedsiębiorczyń i chcę, aby reklamy ułatwiały codzienność, zapewniając stabilny
+        przychód zamiast pochłaniać budżet.
+      </p>
+    </div>
+    <div class="mb-4 flex w-full justify-center md:-mt-6 md:w-1/2 md:justify-end">
+      <Image src={portrait} alt="Ada Promis w fioletowej marynarce" width={410} height={592} />
+    </div>
+  </div>
+  <CircleArrow
+    href="#pakiety"
+    size="lg"
+    circleClass="fill-plum"
+    arrowClass="stroke-petal"
+    shape="chevron"
+    label="Przejdź do sekcji pakiety"
+    class="absolute bottom-0 left-1/2 z-10 -translate-x-1/2 translate-y-1/2"
+  />
+</Section>

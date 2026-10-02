@@ -1,0 +1,263 @@
+---
+import heroBg from "@/assets/images/bg-mentoring.png"
+import BandTitle from "@/components/mentoring/BandTitle.astro"
+import BackdropHero from "@/components/mentoring/BackdropHero.astro"
+import BonusGrid from "@/components/mentoring/BonusGrid.astro"
+import FadeWords from "@/components/mentoring/FadeWords.astro"
+import InterestSignup from "@/components/mentoring/InterestSignup.astro"
+import MarkList from "@/components/mentoring/MarkList.astro"
+import MetaAbout from "@/components/mentoring/MetaAbout.astro"
+import MetaWhy from "@/components/mentoring/MetaWhy.astro"
+import PurpleCta from "@/components/mentoring/PurpleCta.astro"
+import ReferenceMarquee from "@/components/mentoring/ReferenceMarquee.astro"
+import StepsGrid from "@/components/mentoring/StepsGrid.astro"
+import TeamList from "@/components/mentoring/TeamList.astro"
+import Timeline from "@/components/mentoring/Timeline.astro"
+import WaveCta from "@/components/mentoring/WaveCta.astro"
+import { FaqSection, VideoGrid } from "@/components/sections"
+import { Button, Decor, GhostHeading, IconList, MarkerHeading, Section } from "@/components/ui"
+import {
+  metaAgenda,
+  metaBonuses,
+  metaFaq,
+  metaForYou,
+  metaGains,
+  metaNotForYou,
+  metaProgram,
+  metaProgramPillars,
+  metaQuestions,
+  metaSafeSpace,
+  metaSteps,
+  opinionVideos,
+  referenceSnippets,
+  teamGuests,
+} from "@/data/mentoring"
+import interestForm from "@/forms/meta-ads-zainteresowani.html?raw"
+import SiteLayout from "@/layouts/SiteLayout.astro"
+
+const listHeading = "text-center text-lg uppercase lg:text-5xl"
+const footnote = "py-2 text-sm leading-tight font-medium lg:text-lg"
+---
+
+<SiteLayout title="Meta Ads Masters Mentoring">
+  <BackdropHero image={heroBg} innerClass="max-w-4xl items-start tracking-wider md:pb-14">
+    <Decor art="flower-left-blue" class="top-75 left-0 hidden w-35 md:block" />
+    <h1 class="max-w-4xl animate-settle pb-6 text-xl leading-tight font-bold lg:text-5xl">
+      Chcesz zwiększyć swoje zarobki, pracując mądrzej, a nie ciężej?
+    </h1>
+    <p class="max-w-2xl text-sm leading-tight font-medium md:text-xl">
+      Meta Ads Masters Mentoring: Twoja droga do mistrzostwa w reklamach!
+    </p>
+    <p class="max-w-2xl py-8 text-sm leading-tight font-medium md:text-xl">
+      Dołącz do programu mentoringowego Meta Ads Masters Mentoring, prowadź samodzielnie kampanie
+      reklamowe na Facebooku oraz Instagramie i zarabiaj.
+    </p>
+    <PurpleCta href="#offert">Chcę dowiedzieć się więcej o programie!</PurpleCta>
+  </BackdropHero>
+
+  <section class="mx-auto mt-10 pb-10">
+    <h2 class="mx-auto flex items-center justify-center bg-white px-10 text-base leading-normal font-bold shadow-xl lg:max-w-7xl lg:text-4xl lg:leading-normal">
+      Zastanawiasz się czy Meta Ads Masters Mentoring jest dla Ciebie? A czy…
+    </h2>
+    <IconList
+      items={metaQuestions}
+      class="pt-8"
+      columnClass="gap-4"
+      itemClass="max-w-xl gap-4 px-3"
+      iconClass="text-2xl"
+      textClass="md:text-xl"
+    />
+  </section>
+
+  <Section bg="bg-lavender" innerClass="flex flex-col gap-4 px-3 py-10 text-center">
+    <h2 class="font-bold text-white uppercase md:text-5xl md:leading-normal">
+      Jeśli odpowiedziałaś „TAK" na którekolwiek z tych pytań, Meta Ads Masters Mentoring jest
+      właśnie dla Ciebie!
+    </h2>
+    <p class="mx-auto max-w-5xl font-medium md:text-xl">
+      Meta Ads Masters Mentoring to intensywny, 6-miesięczny program transformacyjny, stworzony z
+      myślą o marketerkach i wirtualnych asystentkach, które chcą wznieść swoje umiejętności
+      reklamowe na nowy poziom. To nie jest zwykły kurs online - to kompleksowe doświadczenie
+      edukacyjne, które łączy w sobie:
+    </p>
+    <FadeWords items={metaProgramPillars} />
+    <p class="mx-auto max-w-5xl font-medium md:text-xl">
+      Po ukończeniu programu będziesz gotowa, aby projektować i prowadzić skuteczne kampanie
+      reklamowe oparte na solidnych fundamentach i sprawdzonych technikach.
+    </p>
+  </Section>
+
+  <MetaWhy />
+
+  <BandTitle>TAK mówią osoby, które uczestniczyły w programie:</BandTitle>
+
+  <Section innerClass="mb-16">
+    <VideoGrid videos={opinionVideos} columns={6} label="Wideo opinie uczestniczek" />
+  </Section>
+
+  <ReferenceMarquee images={referenceSnippets} wave>
+    <MarkerHeading
+      slot="title"
+      marker="pink"
+      bounce={false}
+      class="mx-auto max-w-3xl text-xl lg:text-3xl"
+    >
+      A przecież Twoja nauka
+      <br />
+      reklam może wyglądać tak:
+    </MarkerHeading>
+  </ReferenceMarquee>
+
+  <Section
+    id="solution"
+    bg="bg-linear-to-b from-lavender to-white"
+    innerClass="flex flex-col items-center px-3 text-center"
+  >
+    <h2 class="px-2 text-lg font-bold lg:mt-20 lg:text-5xl lg:leading-normal">
+      Meta Ads Masters Mentoring to bezpieczna przestrzeń, w której:
+    </h2>
+    <MarkList
+      columns={metaSafeSpace}
+      class="pt-8 pb-10 text-start"
+      itemClass="font-normal md:text-xl"
+    />
+    <h2 class="flex flex-col items-center gap-2 text-xl font-bold uppercase lg:mt-10 lg:text-5xl">
+      <span class="highlight-sweep px-2 lg:leading-snug">Dołącz do programu „Meta Ads</span>
+      <span class="highlight-sweep px-2 lg:leading-snug">Masters Mentoring!”</span>
+    </h2>
+    <p class="mt-14 mb-20 max-w-5xl pb-8 md:text-2xl">
+      i zrób krok w stronę zdobywania nowych klientów, którzy chętnie wynagrodzą Cię za świetnie
+      wykonaną pracę!
+    </p>
+  </Section>
+
+  <Section class="relative overflow-hidden" innerClass="px-3 pt-8 pb-16">
+    <Decor art="flower-blue" width={150} height={150} class="top-1/4 -left-18 hidden md:block" />
+    <Decor art="flower-blue" width={150} height={150} class="top-2/3 -right-18 hidden md:block" />
+    <h2 class="pb-8 text-center text-2xl font-bold uppercase lg:text-6xl">W programie</h2>
+    <Timeline items={metaAgenda} titleStyle="accent" />
+  </Section>
+
+  <Section
+    id="steps"
+    class="relative overflow-hidden"
+    bg="bg-linear-to-b from-lavender to-white"
+    innerClass="flex flex-col gap-10 px-3 pt-10 pb-20 text-center"
+  >
+    <Decor art="flower-blue" width={150} height={150} class="top-36 -left-18 hidden md:block" />
+    <Decor art="flower-blue" width={150} height={150} class="top-1/3 -right-18 hidden md:block" />
+    <Decor art="flower-blue" width={150} height={150} class="top-1/2 -left-18 hidden md:block" />
+    <Decor art="flower-blue" width={150} height={150} class="top-3/5 -right-18 hidden md:block" />
+    <GhostHeading
+      ghost="Nad czym będziemy"
+      ghostClass="uppercase"
+      titleClass="-mt-3 uppercase md:-mt-3"
+    >
+      pracować?
+    </GhostHeading>
+    <StepsGrid steps={metaSteps} columns={4} />
+    <BonusGrid heading="BONUSY:" rows={metaBonuses} class="pt-10" />
+  </Section>
+
+  <Section
+    class="relative overflow-hidden"
+    bg="bg-linear-to-t from-lavender to-white"
+    innerClass="flex flex-col items-center gap-16 px-3 pt-16 pb-28 lg:pt-36"
+  >
+    <Decor art="flower-blue" width={150} height={150} class="top-40 -left-18 hidden md:block" />
+    <Decor art="flower-blue" width={150} height={150} class="-right-18 bottom-0 hidden md:block" />
+    <div>
+      <MarkerHeading class={listHeading}>Program jest dla Ciebie, jeśli…</MarkerHeading>
+      <MarkList columns={metaForYou} class="pt-6" />
+    </div>
+    <div>
+      <MarkerHeading class={listHeading}>NIE jest dla Ciebie, jeśli…</MarkerHeading>
+      <MarkList columns={metaNotForYou} mark="cross" class="pt-6" />
+    </div>
+  </Section>
+
+  <WaveCta href="#offert">
+    Przekonałaś mnie, chcę <br /> dołączyć do programu
+  </WaveCta>
+
+  <MetaAbout />
+
+  <BandTitle>
+    Na spotkaniach będziesz <br /> miała okazję poznać też:
+  </BandTitle>
+
+  <Section>
+    <TeamList members={teamGuests} class="text-black" />
+    <div class="flex flex-col items-center gap-2 px-3 pt-10 text-center">
+      <MarkerHeading
+        as="h3"
+        marker="pink"
+        class="text-xl leading-normal tracking-widest uppercase lg:text-3xl lg:leading-normal"
+      >
+        TAK mówią osoby, które uczyłam
+        <br />
+        prowadzenia reklam:
+      </MarkerHeading>
+    </div>
+  </Section>
+
+  <WaveCta href="#offert" class="pt-28 pb-10">
+    Też chcę osiągać świetne
+    <br /> wyniki w reklamach!
+  </WaveCta>
+
+  <Section innerClass="flex flex-col items-center gap-16 px-3 pt-16 pb-10">
+    <div>
+      <MarkerHeading class={listHeading}>W programie</MarkerHeading>
+      <MarkList columns={metaProgram} class="pt-4" />
+      <p class={footnote}>
+        ...abyś lepiej niż kiedykolwiek zadbała o swoje zarobki i biznesy swoich klientów!
+      </p>
+    </div>
+    <div>
+      <MarkerHeading class={listHeading}>
+        Co zyskasz, uczestnicząc
+        <br /> w Meta Ads Masters Mentoring?
+      </MarkerHeading>
+      <MarkList columns={metaGains} class="pt-4" />
+      <p class={footnote}>
+        …i zaczniesz zarabiać lepsze pieniądze, pracując mądrzej, a nie więcej!
+      </p>
+    </div>
+  </Section>
+
+  <InterestSignup
+    html={interestForm}
+    text="Zostaw swój email, aby otrzymać informację, gdy otworzymy zapisy do programu"
+  />
+
+  <FaqSection items={metaFaq} bg="bg-linear-to-t from-lavender to-white" itemClass="mb-4">
+    <div slot="title" class="flex flex-col items-center gap-2 pb-8 text-center">
+      <p class="text-2xl font-bold text-navy/20 uppercase lg:text-5xl">
+        Masz pytania? My mamy odpowiedzi!
+      </p>
+      <MarkerHeading>FAQ</MarkerHeading>
+    </div>
+    <div class="flex flex-col items-center gap-6 pt-16 pb-10 text-center font-medium md:text-2xl md:pb-28">
+      <p class="mx-auto max-w-4xl pb-24">
+        To jak? <b>Dołączasz i szlifujesz kampanie,</b> aby przez kolejne miesiące widzieć
+        systematyczny wzrost wyników, czy czekasz do kolejnej edycji?
+      </p>
+      <p class="mx-auto max-w-5xl">
+        Chcesz, aby pracodawca sfinansował Twój udział w programie? Tutaj pobierzesz gotowy wniosek,
+        który pomoże Ci zdobyć środki na rozwój.
+      </p>
+      <Button
+        href="https://drive.google.com/file/d/1mz4jmKlaDr_fI5Qrsn_XRWX8lZJnjRnI/view"
+        size="none"
+        class="bg-blush px-5 py-1.5 font-bold md:w-xs md:text-2xl"
+      >
+        POBIERAM ❤️
+      </Button>
+      <p class="mx-auto max-w-5xl pt-20">
+        PS Pamiętaj, że inwestycja w siebie to najlepsza inwestycja. Twoi przyszli klienci już na
+        Ciebie czekają!
+      </p>
+    </div>
+  </FaqSection>
+</SiteLayout>

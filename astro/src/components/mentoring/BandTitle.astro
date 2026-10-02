@@ -1,0 +1,20 @@
+---
+/**
+ * Lavender band holding a single purple heading
+ * ("Na spotkaniach będziesz miała okazję poznać też:").
+ */
+import { Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<Section bg="bg-lavender" innerClass="px-3 py-10">
+  <h2 class={cn("text-center text-2xl font-bold text-amethyst md:text-3xl", className)}>
+    <slot />
+  </h2>
+</Section>

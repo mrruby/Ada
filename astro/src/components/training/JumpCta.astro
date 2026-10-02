@@ -1,0 +1,31 @@
+---
+/**
+ * Black pill CTA with a yellow Anton label that jumps to an in-page section.
+ * Other attributes (id, aria-*, data-*) are passed to Button.
+ */
+import type { ComponentProps } from "astro/types"
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+const sizes = {
+  lg: "px-16 py-4 text-3xl lg:px-24 lg:text-4xl",
+  md: "px-20 py-4 text-2xl lg:px-28 lg:text-3xl",
+  sm: "px-16 py-3 text-2xl lg:px-24 lg:text-3xl",
+} as const
+
+type Props = Omit<ComponentProps<typeof Button>, "variant" | "size"> & {
+  href: string
+  size?: keyof typeof sizes
+}
+
+const { size = "md", class: className, ...attrs } = Astro.props
+---
+
+<Button
+  variant="dark"
+  size="none"
+  class={cn("font-anton leading-normal uppercase", sizes[size], className)}
+  {...attrs}
+>
+  <slot />
+</Button>

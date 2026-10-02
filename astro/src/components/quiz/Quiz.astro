@@ -1,0 +1,200 @@
+---
+/**
+ * Quiz state machine: one question at a time (all rendered, inactive ones
+ * `hidden`), a progress bar and — after the last answer — the result screen
+ * with the MailerLite form of the matching personality type. The three forms
+ * are server-rendered but submit via fetch, so none of them loads MailerLite
+ * scripts (or sends "view" pings) until the visitor signs up.
+ */
+import { MailerLiteForm, Section } from "@/components/ui"
+import type { QuizQuestion } from "@/data/quiz/questions"
+import type { QuizResult } from "@/data/quiz/results"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  questions: QuizQuestion[]
+  results: QuizResult[]
+  /** Text above the result form. */
+  intro: string
+}
+
+const { questions, results, intro } = Astro.props
+const total = questions.length
+const initialPercent = (1 / total) * 100
+const answerTones = ["bg-mint", "bg-petal", "bg-cream", "bg-lilac"]
+const band = "px-4 md:px-8"
+---
+
+<div data-quiz>
+  <Section
+    bg="bg-art-grid"
+    width="full"
+    class={cn(band, "py-12 md:py-16")}
+    innerClass="max-w-4xl"
+    data-quiz-steps
+  >
+    {questions.map((item, index) => (
+      <div
+        role="group"
+        aria-labelledby={`quiz-question-${index + 1}`}
+        tabindex="-1"
+        class="outline-none"
+        data-quiz-question
+        hidden={index > 0}
+      >
+        <div class="mb-8 rounded-3xl border border-tangerine bg-plum p-8 md:p-12">
+          <h2
+            id={`quiz-question-${index + 1}`}
+            class="text-center text-xl font-bold text-white md:text-2xl lg:text-3xl"
+          >
+            {item.question}
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {item.answers.map((answer, answerIndex) => (
+            <button
+              type="button"
+              class={cn(
+                "flex justify-center rounded-2xl border border-tangerine p-8 text-center text-xl text-black transition-all duration-200 hover:scale-105 hover:shadow-lg",
+                answerTones[answerIndex]
+              )}
+              data-points={answer.points}
+            >
+              {answer.text}
+            </button>
+          ))}
+        </div>
+      </div>
+    ))}
+  </Section>
+
+  <Section
+    bg="bg-cream"
+    width="full"
+    class={cn(band, "py-8 text-black")}
+    innerClass="max-w-4xl"
+    data-quiz-progress
+  >
+    <div class="flex items-center justify-between font-courier text-sm font-bold md:text-base">
+      <span class="text-plum">
+        Pytanie <span data-quiz-current>1</span> z {total}
+      </span>
+      <span class="text-tangerine">
+        <span data-quiz-percent>{Math.round(initialPercent)}</span>% ukończone
+      </span>
+    </div>
+    <div
+      class="mt-1 h-4 overflow-hidden rounded-full bg-neutral-300"
+      role="progressbar"
+      aria-label="Postęp quizu"
+      aria-valuemin="1"
+      aria-valuemax={total}
+      aria-valuenow="1"
+      data-quiz-meter
+    >
+      <div
+        class="h-full w-0 rounded-full bg-linear-to-r from-orchid to-tangerine transition-all duration-500 ease-out"
+        data-quiz-bar
+      ></div>
+    </div>
+    <div class="mt-6 flex justify-center gap-1" aria-hidden="true">
+      {questions.map((_, index) => (
+        <span
+          class="size-2 rounded-full bg-neutral-300 transition-all duration-300 data-done:w-3 data-done:bg-tangerine"
+          data-quiz-dot
+          data-done={index === 0 ? "" : undefined}
+        />
+      ))}
+    </div>
+  </Section>
+
+  <Section
+    bg="bg-mint"
+    width="full"
+    class={cn(band, "py-12 text-black md:py-20")}
+    innerClass="max-w-4xl animate-fadeIn text-center"
+    data-quiz-result
+    hidden
+  >
+    <p
+      class="mx-auto mb-8 max-w-3xl text-plum outline-none md:text-lg"
+      tabindex="-1"
+      data-quiz-result-intro
+    >
+      {intro}
+    </p>
+    <div id="quiz-form" class="pt-8 md:scale-125">
+      {results.map((result) => (
+        <div
+          data-quiz-form={result.id}
+          data-max-points={Number.isFinite(result.maxPoints) ? result.maxPoints : undefined}
+          hidden
+        >
+          <MailerLiteForm html={result.formHtml} submit="fetch" />
+        </div>
+      ))}
+    </div>
+  </Section>
+</div>
+
+<script>
+  const ANSWER_DELAY_MS = 100
+
+  document.querySelectorAll<HTMLElement>("[data-quiz]").forEach((root) => {
+    const steps = root.querySelector<HTMLElement>("[data-quiz-steps]")!
+    const progress = root.querySelector<HTMLElement>("[data-quiz-progress]")!
+    const result = root.querySelector<HTMLElement>("[data-quiz-result]")!
+    const resultIntro = root.querySelector<HTMLElement>("[data-quiz-result-intro]")!
+    const questions = [...root.querySelectorAll<HTMLElement>("[data-quiz-question]")]
+    const dots = [...root.querySelectorAll<HTMLElement>("[data-quiz-dot]")]
+    const forms = [...root.querySelectorAll<HTMLElement>("[data-quiz-form]")]
+    const meter = root.querySelector<HTMLElement>("[data-quiz-meter]")!
+    const bar = root.querySelector<HTMLElement>("[data-quiz-bar]")!
+    const currentLabel = root.querySelector<HTMLElement>("[data-quiz-current]")!
+    const percentLabel = root.querySelector<HTMLElement>("[data-quiz-percent]")!
+
+    let current = 0
+    let points = 0
+    let busy = false
+
+    const showQuestion = (index: number, focus = true) => {
+      questions.forEach((question, i) => (question.hidden = i !== index))
+      const percent = ((index + 1) / questions.length) * 100
+      currentLabel.textContent = String(index + 1)
+      percentLabel.textContent = String(Math.round(percent))
+      bar.style.width = `${percent}%`
+      meter.setAttribute("aria-valuenow", String(index + 1))
+      dots.forEach((dot, i) => dot.toggleAttribute("data-done", i <= index))
+      if (focus) questions[index]?.focus({ preventScroll: true })
+    }
+
+    const showResult = () => {
+      // Thresholds are checked in order; the last type has no upper limit.
+      const match =
+        forms.find((form) => !form.dataset.maxPoints || points <= Number(form.dataset.maxPoints)) ??
+        forms[0]
+      forms.forEach((form) => (form.hidden = form !== match))
+      steps.hidden = true
+      progress.hidden = true
+      result.hidden = false
+      root.dataset.quizResult = match?.dataset.quizForm
+      // The answered question disappears — keep focus in the quiz, not <body>.
+      resultIntro.focus()
+    }
+
+    showQuestion(0, false)
+
+    steps.addEventListener("click", (event) => {
+      const answer = (event.target as Element).closest<HTMLElement>("[data-points]")
+      if (!answer || busy) return
+      busy = true
+      points += Number(answer.dataset.points)
+
+      window.setTimeout(() => {
+        busy = false
+        if (current < questions.length - 1) showQuestion(++current)
+        else showResult()
+      }, ANSWER_DELAY_MS)
+    })
+  })
+</script>

@@ -1,0 +1,99 @@
+---
+/**
+ * /meta-ads-mentoring: "Pewnie wiesz, że..." → "Teraz możesz myśleć:" →
+ * "Wiem, jak się teraz czujesz." on a lavender-to-white gradient.
+ */
+import { Image } from "astro:assets"
+import adaFlower from "@/assets/images/ada_flower.webp"
+import calendarIcon from "@/assets/images/calendar.svg"
+import { Button, Decor, MarkerHeading, Section } from "@/components/ui"
+---
+
+<Section
+  class="relative overflow-hidden"
+  bg="bg-linear-to-t from-lavender to-white"
+  innerClass="flex flex-col items-center gap-20 pb-10 md:gap-24"
+>
+  <Decor
+    art="flower-bottom"
+    width={150}
+    height={150}
+    class="top-48 -right-18 z-20 hidden lg:block"
+  />
+
+  <div class="flex w-full flex-col items-center justify-center gap-4 px-3 tracking-wider md:flex-row xl:gap-24">
+    <Image
+      src={adaFlower}
+      alt="Ada Promis w różowej marynarce na tle kwiatu"
+      width={609}
+      class="w-full max-w-sm md:-ml-32 md:w-lg md:max-w-none md:shrink-0 lg:w-xl"
+    />
+    <div class="flex flex-col gap-6 font-medium lg:max-w-3xl lg:text-xl">
+      <MarkerHeading class="text-xl lg:text-5xl" bounce={false}>
+        Pewnie wiesz, że...
+      </MarkerHeading>
+      <p class="pt-2 leading-tight">
+        ...działania organiczne są <b> ograniczone.</b> Oczywiście możesz tworzyć posty, projektować
+        karuzele, nagrywać rolki i patrzeć, jak po kilku godzinach zostają przykryte przez inne
+        materiały.
+      </p>
+      <p class="leading-tight">
+        W ten sposób pozyskasz jednego klienta, drugiego, trzeciego, ale jeśli chcesz iść w
+        dziesiątki czy setki, ❌ zamiast przeznaczać wiele na tworzenie kolejnych postów ✅
+        <b>zbuduj przemyślany lejek marketingowy i wdrażaj płatne promocje przemyślanych treści.</b>
+      </p>
+      <p class="leading-tight">
+        Chyba nie muszę Ci mówić, która opcja jest przyszłościowa, można ją skalować i optymalizować
+        jej potencjał? 😉
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center gap-16 px-3 text-center lg:text-xl">
+    <p class="mx-auto max-w-4xl">
+      <b>Dlatego przygotowałam dla Ciebie program „Meta Ads Masters Mentoring” </b>
+      podczas którego w 6 miesięcy nauczysz się, jak prowadzić skuteczne kampanie reklamowe. 🚀
+    </p>
+    <Button
+      href="#offert"
+      size="none"
+      class="bg-blush px-5 py-1.5 font-bold uppercase md:h-12 md:w-xl md:text-2xl"
+    >
+      Yay! Chcę dołączyć!
+      <Image src={calendarIcon} alt="" width={24} height={24} class="ml-1 md:ml-4" />
+    </Button>
+  </div>
+
+  <div class="flex flex-col items-center gap-2 px-3 text-center md:gap-8">
+    <h2 class="highlight-sweep px-2 text-xl font-bold highlight-blush lg:text-5xl lg:leading-normal">
+      Teraz możesz myśleć:
+    </h2>
+    <p class="lg:text-2xl">
+      Przecież to takie trudne...
+      <br />
+      Czy reklamy na pewno pomogą mi zarabiać więcej?
+      <br />
+      Czy znajdę klientów zainteresowanych płatnymi reklamami?
+      <br />
+      Czy to w ogóle zadziała?
+    </p>
+    <Button
+      href="#solution"
+      size="none"
+      class="mt-2 bg-navy px-5 py-1.5 font-bold text-white uppercase md:w-xl md:text-2xl"
+    >
+      <span>
+        Chcę wiedzieć więcej. <br />
+        Czytam dalej!
+      </span>
+    </Button>
+  </div>
+
+  <div class="mx-auto max-w-4xl text-center font-bold">
+    <h3 class="text-lilac md:text-4xl md:leading-normal">Wiem, jak się teraz czujesz.</h3>
+    <p class="px-3 md:text-2xl md:leading-normal">
+      Rozczarowanie. Frustracja. Chęć zmiany, ale również niepewność. Skąd masz wiedzieć, czy to, co
+      robisz, ma sens?
+    </p>
+  </div>
+</Section>

@@ -1,0 +1,44 @@
+---
+/**
+ * Pill button of the MAGIC jesień pages. With `href` it is a link (usually
+ * `#pakiety`); without one it is a <button> (`disabled` for paused sales).
+ */
+import type { HTMLAttributes } from "astro/types"
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+const variants = {
+  primary: "bg-blush shadow-lg shadow-jesien-pink/30 hover:shadow-xl hover:shadow-jesien-pink/40",
+  outline: "border-2 border-periwinkle bg-white hover:border-jesien-ink",
+} as const
+
+const sizes = {
+  sm: "px-4 py-2.5 text-sm",
+  md: "px-6 py-4 text-base",
+  lg: "px-9 py-4 text-lg font-extrabold tracking-wider uppercase",
+} as const
+
+type Props = Omit<HTMLAttributes<"a"> & HTMLAttributes<"button">, "type"> & {
+  href?: string
+  variant?: keyof typeof variants
+  size?: keyof typeof sizes
+  disabled?: boolean
+}
+const { href, variant = "primary", size = "md", disabled, class: className, ...attrs } = Astro.props
+---
+
+<Button
+  href={href}
+  variant="bare"
+  size="none"
+  disabled={disabled}
+  class={cn(
+    "rounded-full font-semibold text-jesien-ink hover:-translate-y-0.5 focus-visible:outline-3 focus-visible:outline-marigold disabled:cursor-not-allowed disabled:opacity-55 disabled:shadow-none disabled:hover:translate-none",
+    variants[variant],
+    sizes[size],
+    className
+  )}
+  {...attrs}
+>
+  <slot />
+</Button>

@@ -1,0 +1,48 @@
+---
+/** One row of IconList (internal — use IconList). */
+import type { ImageMetadata } from "astro"
+import { Image } from "astro:assets"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  icon?: string | ImageMetadata
+  text: string
+  inline?: boolean
+  stacked?: boolean
+  itemClass?: string
+  iconClass?: string
+  textClass?: string
+}
+
+const { icon, text, inline, stacked, itemClass, iconClass, textClass } = Astro.props
+---
+
+{inline ? (
+  <li class={itemClass}>
+    {typeof icon === "string" ? (
+      <span aria-hidden="true" class={iconClass}>
+        {icon}
+      </span>
+    ) : icon ? (
+      <Image src={icon} alt="" class={cn("inline-block size-6 align-middle", iconClass)} />
+    ) : null}{" "}
+    <span class={textClass} set:html={text} />
+  </li>
+) : (
+  <li
+    class={cn(
+      "flex gap-3",
+      stacked ? "flex-col items-center md:flex-row" : "items-start",
+      itemClass
+    )}
+  >
+    {typeof icon === "string" ? (
+      <span aria-hidden="true" class={cn("shrink-0", iconClass)}>
+        {icon}
+      </span>
+    ) : icon ? (
+      <Image src={icon} alt="" class={cn("size-10 shrink-0", iconClass)} />
+    ) : null}
+    <span class={textClass} set:html={text} />
+  </li>
+)}

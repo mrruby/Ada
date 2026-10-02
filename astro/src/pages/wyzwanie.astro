@@ -1,0 +1,165 @@
+---
+import { Image } from "astro:assets"
+import heroImage from "@/assets/images/wyzwanie-hero-new.png"
+import { FaqSection } from "@/components/sections"
+import AudienceColumns from "@/components/training/AudienceColumns.astro"
+import ChallengeDay from "@/components/training/ChallengeDay.astro"
+import JumpCta from "@/components/training/JumpCta.astro"
+import OfferCard from "@/components/training/OfferCard.astro"
+import OtoScope from "@/components/training/OtoScope.astro"
+import OtoStickyBar from "@/components/training/OtoStickyBar.astro"
+import ResultsShowcase from "@/components/training/ResultsShowcase.astro"
+import TrainingLanding from "@/components/training/TrainingLanding.astro"
+import { Card, CircleArrow, Section } from "@/components/ui"
+import {
+  audience,
+  benefits,
+  benefitsTitle,
+  days,
+  faq,
+  OFFER_SECTION_ID,
+  offer,
+  salesResults,
+  testimonials,
+  WYZWANIE_PAGE_TITLE,
+} from "@/data/training/wyzwanie"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import { OTO_CAMPAIGN_ID } from "@/lib/oto/offer"
+
+const offerHref = `#${OFFER_SECTION_ID}`
+const whiteLabel = "bg-white px-4 py-2 text-lg leading-snug text-black lg:text-xl"
+---
+
+<BaseLayout title={WYZWANIE_PAGE_TITLE}>
+  <OtoScope campaign={OTO_CAMPAIGN_ID}>
+    <OtoStickyBar href={offerHref} />
+
+    <TrainingLanding
+      heroTone="yellow"
+      benefits={benefits}
+      benefitsTitle={benefitsTitle}
+      centerLastRow
+      figureOnMobile
+      figureClass="lg:right-6 lg:max-w-xl xl:right-16 xl:max-w-2xl"
+    >
+      <Fragment slot="hero">
+        <h1 class="mb-5 font-anton text-5xl leading-none font-normal lg:text-7xl">
+          <span class="text-periwinkle">Kampania</span>
+          <br />
+          <span class="text-periwinkle">sprzedażowa</span>
+          <br />
+          <span class="text-black">w pigułce</span>
+        </h1>
+        <p class="flex flex-col items-start gap-1">
+          <span class={`${whiteLabel} whitespace-nowrap`}>Twoja pierwsza (albo lepsza)</span>
+          <span class={whiteLabel}>kampania sprzedażowa.</span>
+        </p>
+      </Fragment>
+
+      <Image
+        slot="figure"
+        src={heroImage}
+        alt="Kampania sprzedażowa w pigułce - 14 dni, gotowa kampania i 4 ekspertki"
+        widths={[560, 672, 1080]}
+        sizes="(min-width: 1280px) 672px, (min-width: 1024px) 576px, 100vw"
+        loading="eager"
+        fetchpriority="high"
+        class="h-auto w-full"
+      />
+
+      <Section slot="after-hero" bg="bg-white" innerClass="flex justify-center px-4 py-16">
+        <JumpCta href={offerHref} size="lg">
+          Sprawdzam
+        </JumpCta>
+      </Section>
+
+      <div
+        slot="intro"
+        class="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-16 text-center lg:py-20"
+      >
+        <CircleArrow size="md" circleClass="fill-white" arrowClass="stroke-black" />
+        <h2 class="bg-lemon px-4 py-3 font-anton text-3xl leading-none font-normal text-black uppercase lg:text-6xl">
+          O CO CHODZI W TYM WYZWANIU?
+        </h2>
+        <p class="text-left leading-relaxed text-black lg:text-xl">
+          <strong>
+            W ciągu 14 dni przeprowadzimy Cię przez cały proces - od tekstu i grafiki, przez piksel
+            i zdarzenia, aż po ustawienie kampanii sprzedażowej w Menedżerze Reklam.
+          </strong>
+          Konkretne nagrania, wytyczne krok po kroku i wsparcie Kapibary Barbary, która jest naszą
+          asystentką AI - napędzaną całą wiedzą z materiałów MAGIC. Możesz jej wysłać screena,
+          nagrać notatkę głosową albo po prostu zapytać jak koleżankę, o to co możesz poprawić w
+          swoich kampaniach.
+        </p>
+      </div>
+
+      <Fragment slot="before-benefits">
+        {days.map((day) => (
+          <ChallengeDay {...day} />
+        ))}
+        <div class="flex justify-center bg-linear-to-b from-periwinkle from-50% to-lavender to-50% py-4">
+          <JumpCta href={offerHref} size="sm">
+            Sprawdzam
+          </JumpCta>
+        </div>
+        <AudienceColumns columns={audience} />
+        <ResultsShowcase title="Tak mogą wyglądać Twoje wyniki po wyzwaniu." items={salesResults}>
+          <div class="py-6">
+            <JumpCta href={offerHref}>DOŁĄCZ</JumpCta>
+          </div>
+        </ResultsShowcase>
+      </Fragment>
+
+      <Section bg="bg-lemon" innerClass="px-4 py-14 lg:py-20">
+        <OfferCard id={OFFER_SECTION_ID} {...offer} />
+      </Section>
+
+      <Section bg="bg-petal-light" innerClass="flex flex-col gap-10 px-4 py-12 lg:py-16">
+        <h2 class="text-center font-montserrat text-3xl leading-none font-extrabold text-black uppercase lg:text-5xl">
+          ZOBACZ CO CZŁONKINIE <span class="text-marigold">MAGIC</span>
+          <br />
+          MÓWIĄ O SPOŁECZNOŚCI:
+        </h2>
+        <ul class="mx-auto grid w-full max-w-5xl grid-cols-1 gap-4 md:grid-cols-3">
+          {testimonials.map((image) => (
+            <li>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                widths={[360, 720, 1080]}
+                sizes="(min-width: 768px) 33vw, 100vw"
+                class="h-auto w-full"
+              />
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section
+        bg="bg-petal-light"
+        innerClass="flex flex-col items-center gap-6 px-4 py-6 text-center lg:py-8"
+      >
+        <p class="max-w-2xl text-xl leading-snug font-bold text-black lg:text-2xl">
+          Kliknij i dołącz do wyzwania w społeczności, dla której Meta Ads przestają być problemem -
+          a stają się realnym wsparciem biznesu.
+        </p>
+        <JumpCta href={offerHref}>DOŁĄCZAM</JumpCta>
+      </Section>
+
+      <Section bg="bg-petal-light" innerClass="px-6 py-12 lg:py-16">
+        <Card tone="white" pad="none" class="mx-auto max-w-2xl text-xs text-black md:text-base">
+          <FaqSection
+            items={faq}
+            columns={1}
+            titleClass="mb-2 animate-settle text-black"
+            listClass="max-w-xl"
+          />
+        </Card>
+      </Section>
+
+      <Section bg="bg-white" innerClass="flex justify-center px-4 py-12 lg:py-16">
+        <JumpCta href={offerHref}>SPRAWDZAM</JumpCta>
+      </Section>
+    </TrainingLanding>
+  </OtoScope>
+</BaseLayout>

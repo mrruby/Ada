@@ -1,0 +1,36 @@
+---
+/** Adsy&Chill hero: title, promise, two CTAs and the course mockup photo. */
+import { Image } from "astro:assets"
+import heroImage from "@/assets/images/magic_adsy3.webp"
+import { Section } from "@/components/ui"
+import AdsyButton from "./AdsyButton.astro"
+---
+
+<Section bg="bg-cream">
+  <div class="flex flex-col justify-between gap-8 px-2 pt-20 text-center md:pt-30 lg:flex-row lg:text-left xl:px-6">
+    <div class="mb-3 flex max-w-3xl flex-col items-center justify-center gap-4 md:mt-8 lg:items-start xl:-mt-32">
+      <h1 class="font-anton text-4xl leading-none tracking-wider text-tangerine uppercase md:text-7xl">
+        Adsy&chill
+      </h1>
+      <p class="text-xs text-black md:mb-8 md:pt-2 md:text-xl">
+        Ustaw reklamy samodzielnie,
+        <br /> skorzystaj z gotowych, sprawdzonych instrukcji
+        <br /> i skaluj swój biznes bez dodatkowej pracy!
+      </p>
+      <AdsyButton href="#pakiety" variant="green">
+        Przekonałaś mnie!
+      </AdsyButton>
+      <AdsyButton href="#pakiety" variant="pink">
+        Chcę więcej informacji!
+      </AdsyButton>
+    </div>
+    <Image
+      src={heroImage}
+      alt="Ada Promis z telefonem obok laptopa z lekcją Adsy&Chill i listą materiałów"
+      width={700}
+      loading="eager"
+      fetchpriority="high"
+      class="mx-auto h-auto max-w-full lg:mr-0"
+    />
+  </div>
+</Section>

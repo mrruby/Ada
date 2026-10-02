@@ -1,0 +1,88 @@
+---
+/**
+ * Typewriter text. Modes:
+ *  - "loop":  types `text`, waits `pause` ms, starts over (blinking cursor)
+ *  - "once":  types `text` a single time
+ *  - "words": types each of `words`, deletes it, moves to the next
+ * The full text is always available to screen readers and search engines.
+ */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  mode?: "loop" | "once" | "words"
+  text?: string
+  words?: string[]
+  /** Milliseconds per character. */
+  speed?: number
+  /** Pause before restarting (loop) or deleting (words). */
+  pause?: number
+  cursor?: boolean
+  as?: "span" | "p" | "h1" | "h2" | "h3"
+  class?: string
+}
+
+const {
+  mode = "loop",
+  text = "",
+  words = [],
+  speed = mode === "loop" ? 200 : 150,
+  pause = mode === "words" ? 2000 : 10000,
+  cursor = mode !== "once",
+  as: Tag = "span",
+  class: className,
+} = Astro.props
+
+const items = mode === "words" ? words : [text]
+---
+
+<Tag class={cn(className)}>
+  <span class="sr-only">{items.join(", ")}</span>
+  <span
+    aria-hidden="true"
+    data-typing={mode}
+    data-items={JSON.stringify(items)}
+    data-speed={speed}
+    data-pause={pause}
+  >
+    <span data-typing-output>{items[0]}</span>
+    {cursor && <span class="animate-blink">|</span>}
+  </span>
+</Tag>
+
+<script>
+  const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+
+  document.querySelectorAll<HTMLElement>("[data-typing]").forEach(async (root) => {
+    const output = root.querySelector<HTMLElement>("[data-typing-output]")
+    if (!output || reduce) return
+    const mode = root.dataset.typing
+    const items: string[] = JSON.parse(root.dataset.items ?? "[]")
+    const speed = Number(root.dataset.speed)
+    const pause = Number(root.dataset.pause)
+
+    const type = async (value: string) => {
+      for (let i = 1; i <= value.length; i++) {
+        output.textContent = value.slice(0, i)
+        await wait(speed)
+      }
+    }
+    const erase = async (value: string) => {
+      for (let i = value.length - 1; i >= 0; i--) {
+        output.textContent = value.slice(0, i)
+        await wait(speed / 2)
+      }
+    }
+
+    output.textContent = ""
+    if (mode === "once") return type(items[0] ?? "")
+
+    for (let index = 0; ; index = (index + 1) % items.length) {
+      const value = items[index] ?? ""
+      await type(value)
+      await wait(pause)
+      if (mode === "words") await erase(value)
+      else output.textContent = ""
+    }
+  })
+</script>

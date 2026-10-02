@@ -1,0 +1,55 @@
+---
+/**
+ * Cross-fading word rotator (one phrase visible at a time).
+ * Without JavaScript the first phrase stays visible; screen readers get the
+ * full list.
+ *
+ * <FadeWords items={["praktyczną wiedzę", "ciągły rozwój"]} />
+ */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  items: string[]
+  /** Milliseconds per phrase. */
+  interval?: number
+  class?: string
+}
+
+const { items, interval = 2500, class: className } = Astro.props
+---
+
+<div
+  class={cn("relative mx-auto h-15 w-full max-w-3xl overflow-hidden md:h-20", className)}
+  data-fade-words
+  data-interval={interval}
+>
+  <p class="sr-only">{items.join(", ")}</p>
+  {items.map((item, index) => (
+    <span
+      aria-hidden="true"
+      data-fade-word
+      class={cn(
+        "absolute inset-0 flex items-center justify-center text-xl font-medium text-amethyst transition-opacity duration-500 md:text-2xl",
+        index === 0 ? "opacity-100" : "opacity-0"
+      )}
+    >
+      {item}
+    </span>
+  ))}
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-fade-words]").forEach((root) => {
+    const words = [...root.querySelectorAll<HTMLElement>("[data-fade-word]")]
+    if (words.length < 2) return
+    let current = 0
+    window.setInterval(
+      () => {
+        words[current].classList.replace("opacity-100", "opacity-0")
+        current = (current + 1) % words.length
+        words[current].classList.replace("opacity-0", "opacity-100")
+      },
+      Number(root.dataset.interval) || 2500
+    )
+  })
+</script>

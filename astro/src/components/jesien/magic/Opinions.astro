@@ -1,0 +1,56 @@
+---
+/**
+ * Masonry of testimonial screenshots with "Pokaż więcej / mniej".
+ * `id` = section anchor, also the prefix of the grid's id.
+ */
+import { Image } from "astro:assets"
+import { MAGIC_OPINIONS_VISIBLE, magicOpinions } from "@/data/jesien"
+import { cn } from "@/lib/cn"
+import MjButton from "./MjButton.astro"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+
+type Props = { id?: string }
+const { id = "opinie" } = Astro.props
+const gridId = `${id}-grid`
+---
+
+<MjSection id={id}>
+  <MjHeading
+    eyebrow="Opinie"
+    title="Sprawdź, co nasze Klubowiczki mówią o Magic"
+    accent="po kilku miesiącach w klubie"
+  />
+  <div class="group" data-opinions>
+    <div id={gridId} class="mt-6 columns-1 gap-4 sm:columns-2 lg:columns-3">
+      {magicOpinions.map((opinion, index) => (
+        <Image
+          src={opinion.src}
+          alt={opinion.alt}
+          widths={[400, 640]}
+          sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+          class={cn(
+            "mb-4 h-auto w-full break-inside-avoid rounded-2xl shadow-lg shadow-jesien-ink/10",
+            index < MAGIC_OPINIONS_VISIBLE ? "block" : "hidden group-data-open:block"
+          )}
+        />
+      ))}
+    </div>
+    <div class="mt-2 flex justify-center">
+      <MjButton variant="outline" aria-expanded="false" aria-controls={gridId} data-opinions-toggle>
+        <span class="group-data-open:hidden">Pokaż więcej opinii</span>
+        <span class="hidden group-data-open:inline">Pokaż mniej</span>
+      </MjButton>
+    </div>
+  </div>
+</MjSection>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-opinions]").forEach((root) => {
+    const toggle = root.querySelector<HTMLButtonElement>("[data-opinions-toggle]")
+    toggle?.addEventListener("click", () => {
+      const open = root.toggleAttribute("data-open")
+      toggle.setAttribute("aria-expanded", String(open))
+    })
+  })
+</script>

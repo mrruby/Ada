@@ -1,0 +1,71 @@
+---
+/** Masterclass hero: date badge, claim, sign-up form and Ada's photo. */
+import { Image } from "astro:assets"
+import heroPhoto from "@/assets/images/jesien-masterclass-hero-ada.webp"
+import { Container } from "@/components/ui"
+import {
+  JESIEN_MASTERCLASS_DATE_SHORT,
+  JESIEN_MASTERCLASS_FORM_TITLE,
+  JESIEN_MASTERCLASS_HERO_FORM_ID,
+  JESIEN_MASTERCLASS_TIME,
+  JESIEN_MASTERCLASS_WEEKDAY,
+} from "@/data/jesien"
+import formHtml from "@/forms/form-jesien-masterclass.html?raw"
+import FloatStar from "../FloatStar.astro"
+import HeroBand from "../HeroBand.astro"
+import JesienSignupForm from "../JesienSignupForm.astro"
+import ShimmerText from "../ShimmerText.astro"
+---
+
+<HeroBand>
+  <Fragment slot="decor">
+    <FloatStar class="top-1/12 left-1/24" />
+    <FloatStar class="top-1/6 right-1/20 text-3xl text-jesien-purple-soft animation-delay-200" />
+  </Fragment>
+
+  <Container width="content" class="grid gap-8 px-5 lg:grid-cols-2 lg:gap-x-14 lg:gap-y-7">
+    <div class="lg:col-start-1 lg:row-start-1">
+      <span class="mb-5 inline-block rounded-full border-2 border-jesien-pink-soft bg-jesien-blush px-4 py-1.5 text-xs font-bold tracking-wider">
+        🔮 MASTERCLASS NA ŻYWO · {JESIEN_MASTERCLASS_WEEKDAY}
+        {JESIEN_MASTERCLASS_DATE_SHORT} · {JESIEN_MASTERCLASS_TIME} · 1,5 h
+      </span>
+      <h1 class="mb-2.5 font-anton text-4xl leading-none font-normal tracking-wide uppercase md:text-5xl xl:text-6xl">
+        Mały budżet, <ShimmerText shimmer={false}>wysoki sezon</ShimmerText>
+        <span class="align-top text-2xl text-jesien-pink xl:text-3xl">✦</span>
+      </h1>
+      <p class="mb-5 text-lg leading-snug font-extrabold text-jesien-purple lg:text-2xl">
+        Ułóż reklamy na jesień i zimę 2026 - od 30 zł dziennie
+      </p>
+      <p class="max-w-lg text-jesien-ink-soft [&_strong]:text-jesien-ink">
+        W 90 minut pokażę Ci, <strong>które reklamy przestały działać</strong> (chociaż pół roku
+        temu jeszcze dowoziły), co włączyć zamiast nich i jak ułożyć kampanię na cały sezon przy
+        małym budżecie.
+      </p>
+    </div>
+
+    <JesienSignupForm
+      id={JESIEN_MASTERCLASS_HERO_FORM_ID}
+      class="scroll-mt-24 lg:col-start-1 lg:row-start-2"
+      title={JESIEN_MASTERCLASS_FORM_TITLE}
+      formHtml={formHtml}
+      microcopy="Link do spotkania wyląduje na Twojej skrzynce w kilka minut. Po masterclassie dostaniesz nagranie - dostępne przez ograniczony czas. 😉"
+    >
+      <Fragment slot="sticker">
+        na żywo{" "}
+        <em>
+          {JESIEN_MASTERCLASS_DATE_SHORT}, {JESIEN_MASTERCLASS_TIME}
+        </em>
+      </Fragment>
+    </JesienSignupForm>
+
+    <Image
+      src={heroPhoto}
+      alt="Adrianna Promis-Urbas przy biurku z laptopem"
+      widths={[400, 800, 1000]}
+      sizes="(min-width: 1024px) 470px, 384px"
+      loading="eager"
+      fetchpriority="high"
+      class="mx-auto h-auto w-full max-w-sm rotate-1 self-center rounded-3xl shadow-xl shadow-jesien-purple/15 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none"
+    />
+  </Container>
+</HeroBand>

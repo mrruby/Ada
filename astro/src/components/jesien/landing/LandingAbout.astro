@@ -1,0 +1,50 @@
+---
+/** /jesien: who is behind the training (Ada's bio). */
+import { Image } from "astro:assets"
+import bioPhoto from "@/assets/images/jesien-ada-bio.webp"
+import { Container, Reveal } from "@/components/ui"
+import JesienHeading from "../JesienHeading.astro"
+---
+
+<section class="bg-jesien-lavender py-16 lg:py-20">
+  <Container width="content" class="grid items-center gap-10 px-5 lg:grid-cols-5 lg:gap-14">
+    <Reveal class="mx-auto w-full max-w-sm lg:col-span-2 lg:max-w-none">
+      <Image
+        src={bioPhoto}
+        alt="Adrianna Promis-Urbas"
+        widths={[400, 800]}
+        sizes="(min-width: 1024px) 390px, 384px"
+        class="h-auto w-full -rotate-1 rounded-3xl shadow-xl shadow-jesien-purple/15"
+      />
+    </Reveal>
+    <Reveal class="lg:col-span-3">
+      <JesienHeading kicker="Kto za tym stoi?">Cześć, tu Ada! 👋</JesienHeading>
+      <p class="mt-5 text-2xl font-extrabold">Adrianna Promis-Urbas</p>
+      <p class="mb-4 font-bold text-jesien-purple">
+        Specjalistka od kampanii reklamowych z 10-letnim doświadczeniem
+      </p>
+      <div class="grid gap-4 text-jesien-ink-soft [&_strong]:text-jesien-ink">
+        <p>
+          Specjalizuję się w przekształcaniu chaotycznych działań marketingowych w precyzyjne
+          systemy generujące przewidywalne wyniki, nawet w niepewnych warunkach rynkowych.
+        </p>
+        <p>
+          Prowadzę <strong>MAGIC</strong> - klub, w którym przedsiębiorczynie tworzą skuteczne
+          reklamy. Reklamy moich Klubowiczek potrafią
+          <strong>z 236,99 zł zrobić ponad 9 461 zł sprzedaży</strong> z jednej kampanii lub
+          pozyskać <strong>ponad tysiąc wartościowych kontaktów</strong> z budżetem kilka stówek
+          miesięcznie!
+        </p>
+        <p>
+          To szkolenie nagrałam, bo co roku widzę to samo: zbyt często przypominamy sobie o
+          reklamach w ostatnim momencie, bez planu - kiedy stawki są najwyższe, a miejsca w
+          reklamach za mało.
+          <strong>
+            W tym roku chcę, żebyś to Ty była przygotowana, niczym jesieniary na Pumpkin Spice
+            Latte! 🍂
+          </strong>
+        </p>
+      </div>
+    </Reveal>
+  </Container>
+</section>

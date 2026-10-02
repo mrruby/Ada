@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets"
+import adaSofa from "@/assets/images/magic-jesien/ada_sofa.webp"
+import { Accordion } from "@/components/ui"
+import { magicFaqAds, magicFaqSubscription } from "@/data/jesien"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+
+const groups = [
+  { items: magicFaqAds, class: "mt-6" },
+  { items: magicFaqSubscription, title: "O subskrypcji" },
+]
+---
+
+<MjSection id="faq">
+  <div class="grid items-start gap-12 md:grid-cols-3">
+    <div class="md:col-span-2">
+      <MjHeading align="left" title="Najczęściej zadawane pytania" accent="o reklamy" />
+      {groups.map((group) => (
+        <>
+          {group.title && <p class="mt-10 mb-1.5 text-xl font-semibold">{group.title}</p>}
+          <div class={group.class}>
+            {group.items.map((item) => (
+              <Accordion
+                question={item.question}
+                variant="minimal"
+                headingLevel="span"
+                class="border-lavender px-1"
+                summaryClass="py-4 font-semibold"
+                bodyClass="max-w-prose text-jesien-ink-soft"
+              >
+                <p set:html={item.answer} />
+              </Accordion>
+            ))}
+          </div>
+        </>
+      ))}
+    </div>
+    <Image
+      src={adaSofa}
+      alt="Ada do góry nogami na sofie z laptopem"
+      widths={[400, 800]}
+      sizes="(min-width: 768px) 360px, 384px"
+      class="order-first mx-auto h-auto w-full max-w-sm -rotate-1 rounded-3xl shadow-xl shadow-jesien-ink/20 md:sticky md:top-8 md:order-none md:max-w-none"
+    />
+  </div>
+</MjSection>

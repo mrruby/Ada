@@ -1,0 +1,27 @@
+---
+/** Round portrait, two-line name (first name / surname) and short bio of a Magic specialist. */
+import { Image } from "astro:assets"
+import { Heading } from "@/components/ui"
+import type { TeamMember } from "@/lib/content"
+
+type Props = { member: TeamMember }
+
+const { member } = Astro.props
+const [firstName, ...surname] = member.name.split(" ")
+---
+
+<div class="flex w-56 max-w-full flex-col items-center pt-4">
+  <Image
+    src={member.photo}
+    alt={member.alt ?? member.name}
+    widths={[192, 384]}
+    sizes="192px"
+    class="size-48 rounded-full border-3 border-periwinkle object-cover"
+  />
+  <Heading as="h4" size="sm" class="mt-4 mb-2">
+    {firstName}
+    <br />
+    {surname.join(" ")}
+  </Heading>
+  {member.bio && <p class="text-sm leading-relaxed" set:html={member.bio} />}
+</div>

@@ -1,0 +1,24 @@
+---
+/** Numbered step ("Krok 1"): pill title, bold lead and paragraphs. Slot = what follows. */
+import type { StepContent } from "@/data/kolektyw/types"
+import { cn } from "@/lib/cn"
+import KolektywTitle from "./KolektywTitle.astro"
+
+type Props = {
+  step: StepContent
+  class?: string
+}
+
+const { step, class: className } = Astro.props
+---
+
+<div class={cn("text-black", className)}>
+  <KolektywTitle class="max-w-sm uppercase">{step.title}</KolektywTitle>
+  <div class="mt-10 flex flex-col gap-4 text-lg">
+    <p class="font-bold">{step.lead}</p>
+    {step.paragraphs.map((paragraph) => (
+      <p set:html={paragraph} />
+    ))}
+  </div>
+  <slot />
+</div>

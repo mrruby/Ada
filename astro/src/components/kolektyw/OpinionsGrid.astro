@@ -1,0 +1,35 @@
+---
+/** Heading + two columns of client opinion screenshots (masonry-like). */
+import { Image } from "astro:assets"
+import { Section } from "@/components/ui"
+import type { ImageItem, RichText } from "@/lib/content"
+
+type Props = {
+  title: RichText
+  columns: ImageItem[][]
+  bg?: string
+}
+
+const { title, columns, bg = "bg-cream" } = Astro.props
+---
+
+<Section bg={bg} class="text-black">
+  <div class="mx-auto max-w-5xl px-4 py-12">
+    <h2 class="mb-10 text-center text-xl leading-snug font-bold md:text-2xl" set:html={title} />
+    <div class="mx-auto grid max-w-2xl items-start gap-2 md:max-w-none md:grid-cols-2 md:gap-4">
+      {columns.map((column) => (
+        <div class="flex flex-col gap-2 md:gap-4">
+          {column.map((image) => (
+            <Image
+              src={image.src}
+              alt={image.alt}
+              widths={[480, 640, 960]}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              class="h-auto w-full"
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</Section>

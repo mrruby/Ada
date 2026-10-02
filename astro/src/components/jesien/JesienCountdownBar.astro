@@ -1,0 +1,49 @@
+---
+/**
+ * Sticky top bar of the Jesień landings: label + countdown tiles (+ optional
+ * CTA and subline). Slots: "label" (before the deadline), "expired" (after),
+ * "cta", "subline". Place it as a direct child of the page shell.
+ */
+import { TileCountdown } from "@/components/ui"
+
+type Props = {
+  target: Date
+  ariaLabel?: string
+}
+
+const { target, ariaLabel = "Odliczanie do końca dostępu" } = Astro.props
+
+// Built after the deadline: render the expired state right away.
+const expiredAtBuild = target.getTime() <= Date.now()
+const hasSubline = Astro.slots.has("subline")
+---
+
+<div
+  data-countdown-scope
+  data-expired={expiredAtBuild ? "" : undefined}
+  class="sticky top-0 z-50 bg-white shadow-lg shadow-jesien-ink/10"
+  role="region"
+  aria-label={ariaLabel}
+>
+  <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-3 gap-y-1 px-3 py-2 text-center sm:gap-x-4 sm:gap-y-2.5 sm:px-5">
+    <span class="text-xs font-semibold sm:text-sm">
+      <span data-when="active">
+        <slot name="label" />
+      </span>
+      <span data-when="expired">
+        <slot name="expired" />
+      </span>
+    </span>
+    <TileCountdown target={target} />
+    <slot name="cta" />
+  </div>
+  {hasSubline && (
+    <p class="px-5 pb-2 text-center text-xs leading-snug text-jesien-ink-soft [&_strong]:text-jesien-ink">
+      <slot name="subline" />
+    </p>
+  )}
+  <span
+    class="absolute inset-x-0 bottom-0 h-1 bg-linear-to-r from-jesien-orange via-jesien-pink to-jesien-purple"
+    aria-hidden="true"
+  ></span>
+</div>

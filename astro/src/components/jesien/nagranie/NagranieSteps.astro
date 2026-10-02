@@ -1,0 +1,28 @@
+---
+/** /jesien-nagranie: next steps after watching. */
+import { Container, Reveal } from "@/components/ui"
+import { jesienNagranieSteps } from "@/data/jesien"
+import EmojiItem from "../EmojiItem.astro"
+import JesienHeading from "../JesienHeading.astro"
+---
+
+<section class="bg-jesien-blush py-16 lg:py-20">
+  <Container width="content" class="px-5">
+    <Reveal class="mx-auto mb-8 max-w-2xl text-center">
+      <JesienHeading kicker="Po szkoleniu">Twoje najważniejsze kroki ✍️</JesienHeading>
+    </Reveal>
+
+    <ul class="mx-auto mb-8 grid max-w-3xl gap-3.5">
+      {jesienNagranieSteps.map((item, index) => (
+        <EmojiItem {...item} reveal tone={index % 3 === 1 ? "purple" : "pink"} class="py-4" />
+      ))}
+    </ul>
+
+    <Reveal>
+      <p class="text-center font-bold">
+        A jeśli przy którymkolwiek kroku pojawi się „ale jak to właściwie kliknąć?”, czytaj dalej.
+        👇
+      </p>
+    </Reveal>
+  </Container>
+</section>

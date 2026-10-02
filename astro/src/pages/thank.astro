@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets"
+import heroImage from "@/assets/images/magic_adsy.webp"
+import goodbyeImage from "@/assets/images/magic_adsy2.webp"
+import ThankStep from "@/components/thank/ThankStep.astro"
+import { Section } from "@/components/ui"
+import SiteLayout from "@/layouts/SiteLayout.astro"
+
+const mailboxes = [
+  [
+    { label: "Gmail", href: "https://mail.google.com" },
+    { label: "Onet", href: "https://poczta.onet.pl" },
+    { label: "WP.pl", href: "https://poczta.wp.pl" },
+    { label: "O2.pl", href: "https://poczta.o2.pl" },
+  ],
+  [
+    { label: "Interia.pl", href: "https://poczta.interia.pl" },
+    { label: "Gazeta.pl", href: "https://poczta.gazeta.pl" },
+    { label: "Yahoo.com", href: "https://mail.yahoo.com" },
+  ],
+]
+const sender = "adrianna@getbold.agency"
+const headline = "font-anton text-2xl leading-none tracking-wider text-tangerine md:text-7xl"
+---
+
+<SiteLayout title="Thank you page" noindex>
+  <Section bg="bg-cream">
+    <div class="mx-auto mt-20 flex max-w-7xl justify-between gap-8 px-2 md:pt-10 xl:px-6">
+      <div class="mb-3 flex max-w-xl flex-col justify-center gap-4 md:mt-8 xl:-mt-60">
+        <p class="text-xs text-black md:mb-8 md:pt-2 md:text-2xl">
+          <b>Dziękuję</b> za zapis!
+        </p>
+        <h1 class:list={[headline, "uppercase"]}>
+          Jeszcze <span class="text-rose">tylko</span> jedna sprawa!
+        </h1>
+      </div>
+      <Image
+        src={heroImage}
+        alt="Ada Promis z laptopem"
+        width={460}
+        height={600}
+        loading="eager"
+        class="-mt-10 max-w-40 md:-mt-6 md:max-w-md lg:max-w-none"
+      />
+    </div>
+  </Section>
+
+  <ThankStep step={1} bg="bg-mint" tabColor="text-white" class="uppercase">
+    <h2 class="mb-2">
+      <b>Sprawdź skrzynkę mailową</b>
+      <br />
+      podaną przy zapisie:
+    </h2>
+    <div class="mt-1 gap-12 md:flex">
+      {mailboxes.map((column) => (
+        <ul>
+          {column.map((box) => (
+            <li class="py-1">
+              <a href={box.href} class="underline">
+                {box.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ))}
+    </div>
+  </ThankStep>
+
+  <ThankStep step={2} bg="bg-lilac" tabColor="text-mint">
+    <div class="mb-2 lg:min-w-2xl">
+      <p class="mb-2 border border-black p-4 font-bold">Dodaj adres “{sender}”</p>
+      do listy zaufanych kontaktów – dzięki temu maile nie będą wpadać do folderu SPAM!
+    </div>
+  </ThankStep>
+
+  <ThankStep step={3} bg="bg-cream" tabColor="text-lilac" numberClass="text-black">
+    <div class="mb-2 lg:min-w-2xl">
+      <p class="mb-2 border border-black bg-white p-4 font-bold">Otwórz maila od {sender}</p>– mógł
+      trafić do folderu SPAM – koniecznie sprawdź, czy gdzieś się nie zapodział.
+    </div>
+  </ThankStep>
+
+  <ThankStep step={4} bg="bg-mint" tabColor="text-cream" class="font-bold">
+    Kliknij przycisk potwierdzający zapis w mailu.
+  </ThankStep>
+
+  <Section bg="bg-cream">
+    <div class="mx-auto flex max-w-4xl flex-col-reverse justify-center gap-8 px-2 lg:mt-20 lg:flex-row md:pt-10 xl:px-6">
+      <Image
+        src={goodbyeImage}
+        alt="Ada Promis macha na pożegnanie"
+        width={600}
+        height={782}
+        class="-mt-10 max-w-40 md:-mt-6 md:max-w-md lg:max-w-none xl:-ml-72"
+      />
+      <div class="flex max-w-xl flex-col items-center justify-center gap-4 rounded-4xl border border-black p-4 text-center lg:h-96 lg:p-12">
+        <h2 class={headline}>
+          <span class="text-rose">Widzimy</span>
+          <br />
+          się niedługo!
+        </h2>
+        <p class="text-xs text-black md:text-2xl">Ada Promis</p>
+      </div>
+    </div>
+  </Section>
+</SiteLayout>

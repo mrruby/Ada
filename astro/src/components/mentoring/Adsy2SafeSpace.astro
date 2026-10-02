@@ -1,0 +1,42 @@
+---
+/** /ogarnij-swoje-adsy-2: "To bezpieczna przestrzeń, w której:" list beside a photo + CTA. */
+import { Image } from "astro:assets"
+import adaPortrait from "@/assets/images/ada_mastermind1.webp"
+import { Button, Section } from "@/components/ui"
+import { adsy2SafeSpace } from "@/data/mentoring"
+import MarkList from "./MarkList.astro"
+---
+
+<Section
+  id="mastermind-info"
+  bg="bg-linear-to-b from-lavender to-white"
+  innerClass="flex flex-col items-center px-3"
+>
+  <div class="flex w-full flex-col items-center justify-center gap-15 md:flex-row xl:gap-24">
+    <div class="pt-5 lg:w-3xl lg:pt-10">
+      <p class="pt-10 leading-tight font-medium lg:text-xl">To bezpieczna przestrzeń, w której:</p>
+      <MarkList
+        mark="tick"
+        columns={[adsy2SafeSpace]}
+        columnClass="md:max-w-2xl lg:max-w-2xl"
+        itemClass="font-normal lg:text-xl"
+      />
+    </div>
+    <Image
+      src={adaPortrait}
+      alt="Ada Promis z telefonem na kanapie"
+      width={448}
+      class="h-auto w-full max-w-md md:-mr-32 md:w-md md:shrink-0"
+    />
+  </div>
+  <div class="flex flex-col items-center gap-10 pt-24 pb-10 text-center md:pb-28">
+    <p class="mx-auto max-w-5xl font-medium md:text-2xl">
+      Dołącz do programu „Ogarnij swoje adsy!” i zrób krok w stronę
+      <b> zdobywania nowych klientów</b>
+      dzięki kampaniom reklamowym.
+    </p>
+    <Button href="#zostaw-maila" class="border-b-4 border-rose font-bold md:w-xs md:text-2xl">
+      Chcę dołączyć!
+    </Button>
+  </div>
+</Section>

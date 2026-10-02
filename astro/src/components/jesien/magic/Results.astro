@@ -1,0 +1,38 @@
+---
+/** Members' results as Ads Manager-like stat cards. */
+import { magicResults } from "@/data/jesien"
+import MjButton from "./MjButton.astro"
+import MjCard from "./MjCard.astro"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+---
+
+<MjSection id="wyniki" tone="lavender" center>
+  <MjHeading
+    eyebrow="Wyniki członkiń"
+    title="Wyniki i opinie członkiń."
+    accent="Chcesz takich liczb u siebie?"
+  />
+  <div class="mt-8 grid gap-4 text-left md:grid-cols-3">
+    {magicResults.map((result) => (
+      <MjCard as="article" class="p-5">
+        <div class="mb-2.5 flex justify-between text-xs text-jesien-ink-soft">
+          <span>{result.campaign}</span>
+          <i class="rounded-full bg-lavender px-2 py-0.5 not-italic">Menedżer Reklam</i>
+        </div>
+        <b class="mb-3 block text-2xl leading-tight">
+          <span class="text-4xl text-marigold">{result.value}</span> {result.unit}
+        </b>
+        {result.rows.map(([label, value]) => (
+          <div class="flex justify-between gap-4 border-t border-dashed border-jesien-purple-soft/50 py-2 text-sm text-jesien-ink-soft">
+            <span>{label}</span>
+            <b class="font-semibold text-jesien-ink">{value}</b>
+          </div>
+        ))}
+      </MjCard>
+    ))}
+  </div>
+  <MjButton href="#pakiety" class="mt-5">
+    Dołączam
+  </MjButton>
+</MjSection>

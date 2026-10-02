@@ -1,0 +1,136 @@
+---
+import AdsyAbout from "@/components/mentoring/AdsyAbout.astro"
+import AdsyHero from "@/components/mentoring/AdsyHero.astro"
+import AdsyWhy from "@/components/mentoring/AdsyWhy.astro"
+import BandTitle from "@/components/mentoring/BandTitle.astro"
+import BonusGrid from "@/components/mentoring/BonusGrid.astro"
+import InterestSignup from "@/components/mentoring/InterestSignup.astro"
+import MarkList from "@/components/mentoring/MarkList.astro"
+import ProgramPerks from "@/components/mentoring/ProgramPerks.astro"
+import PurpleCta from "@/components/mentoring/PurpleCta.astro"
+import StepsGrid from "@/components/mentoring/StepsGrid.astro"
+import TeamList from "@/components/mentoring/TeamList.astro"
+import Timeline from "@/components/mentoring/Timeline.astro"
+import { FaqSection, VideoGrid } from "@/components/sections"
+import { Section } from "@/components/ui"
+import {
+  adsyAgenda,
+  adsyBonuses,
+  adsyFaq,
+  adsyForYou,
+  adsyNotForYou,
+  adsyPerks,
+  adsySteps,
+  opinionVideos,
+  teamGuests,
+} from "@/data/mentoring"
+import interestForm from "@/forms/ogarnij-swoje-adsy-zainteresowani.html?raw"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+const purpleHeading =
+  "animate-settle pb-10 text-center text-lg font-bold text-amethyst uppercase lg:text-5xl lg:leading-normal"
+const fitList = "py-0 text-xs leading-normal font-normal md:text-lg"
+---
+
+<BaseLayout title="Ogarnij swoje Adsy Mentoring">
+  <main>
+    <AdsyHero />
+    <AdsyWhy />
+
+    <Section>
+      <AdsyAbout />
+      <h2 class="pt-10 pb-4 text-center text-2xl font-bold text-purple-800 md:text-3xl">
+        A przecież Twoja nauka reklam może wyglądać tak:
+      </h2>
+    </Section>
+
+    <BandTitle>TAK mówią osoby, które uczestniczyły w programie:</BandTitle>
+
+    <Section innerClass="flex flex-col items-center gap-14 px-3 pt-4 pb-16 text-black md:pt-12">
+      <VideoGrid
+        videos={opinionVideos}
+        columns={6}
+        label="Wideo opinie uczestniczek"
+        class="w-full"
+      />
+      <h3 class="mx-auto max-w-2xl px-10 py-3 text-center font-bold md:text-2xl">
+        To jak, dołączasz do programu „Ogarnij swoje adsy!" i robisz krok w stronę zdobywania nowych
+        klientów dzięki kampaniom reklamowym?
+      </h3>
+      <PurpleCta href="#offert" size="lg">
+        Chcę dołączyć!
+      </PurpleCta>
+    </Section>
+
+    <Section innerClass="px-3 pb-16 text-black">
+      <h2 class="pb-8 text-center text-2xl font-bold uppercase lg:text-6xl">W programie</h2>
+      <Timeline items={adsyAgenda} titleStyle="accent" />
+    </Section>
+
+    <Section
+      id="steps"
+      bg="bg-linear-to-b from-lavender to-white"
+      innerClass="flex flex-col gap-10 px-3 pt-10 pb-20 text-center text-black"
+    >
+      <h2 class="mx-auto max-w-3xl bg-amethyst text-5xl leading-normal font-bold text-white uppercase lg:text-6xl lg:leading-normal">
+        Nad czym będziemy pracować?
+      </h2>
+      <StepsGrid steps={adsySteps} titleClass="max-w-xs" />
+      <BonusGrid
+        heading="Czekają też na Ciebie bonusy, które dostarczą Ci dodatkowych narzędzi do osiągnięcia sukcesu w reklamie online:"
+        rows={adsyBonuses}
+        gift="md"
+        class="pt-10"
+        headingClass="max-w-5xl bg-transparent md:text-2xl"
+      />
+    </Section>
+
+    <Section innerClass="flex flex-col items-center gap-10 px-3 pb-10 text-black">
+      <div class="w-full">
+        <h2 class={purpleHeading}>
+          Program jest <br /> dla Ciebie, jeśli…
+        </h2>
+        <MarkList
+          columns={adsyForYou}
+          mark="plus"
+          columnClass="gap-2.5 lg:max-w-xl"
+          itemClass={fitList}
+        />
+      </div>
+      <div class="w-full">
+        <h2 class={purpleHeading}>NIE jest dla Ciebie, jeśli…</h2>
+        <MarkList
+          columns={adsyNotForYou}
+          mark="minus"
+          columnClass="gap-2.5 lg:max-w-xl"
+          itemClass={fitList}
+        />
+      </div>
+      <div class="lg:pb-10">
+        <h2 class="animate-settle text-center text-lg font-bold text-purple-800 uppercase lg:text-5xl lg:leading-normal">
+          Co dostajesz <br /> w ramach programu?
+        </h2>
+        <ProgramPerks columns={adsyPerks} />
+      </div>
+    </Section>
+
+    <InterestSignup html={interestForm} />
+
+    <BandTitle>
+      Na spotkaniach będziesz <br /> miała okazję poznać też:
+    </BandTitle>
+
+    <Section>
+      <TeamList members={teamGuests} class="text-black" />
+    </Section>
+
+    <FaqSection
+      items={adsyFaq}
+      columns={1}
+      class="text-black"
+      titleClass="animate-settle lg:text-5xl"
+      listClass="max-w-xl"
+      itemClass="mb-4"
+    />
+  </main>
+</BaseLayout>
