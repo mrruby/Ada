@@ -16,7 +16,14 @@ import MagicCta from "./MagicCta.astro"
           <br />
           Girls Inside Club
         </h1>
-        <Image src={star} alt="" width={48} height={48} class="mt-2 hidden shrink-0 sm:block" />
+        <Image
+          src={star}
+          alt=""
+          width={48}
+          height={48}
+          densities={[1, 2]}
+          class="mt-2 hidden shrink-0 sm:block"
+        />
       </div>
 
       <p class="max-w-xs text-base text-black sm:max-w-lg md:text-xl md:leading-8">
@@ -31,7 +38,7 @@ import MagicCta from "./MagicCta.astro"
       </MagicCta>
 
       <p class="flex items-center gap-2 text-base leading-none font-bold text-marigold md:text-2xl">
-        <Image src={star} alt="" width={24} height={24} />
+        <Image src={star} alt="" width={24} height={24} densities={[1, 2]} />
         MAGIC
       </p>
     </div>
