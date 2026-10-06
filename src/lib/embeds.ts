@@ -12,6 +12,8 @@
  * Nothing from the provider loads until the visitor grants the `media`
  * consent category (here, or in the cookie settings).
  */
+import { track } from "./analytics"
+import { videoFromPlayerUrl } from "./analytics-events"
 import { grantConsent, hasConsent, onConsentChange } from "./consent"
 
 const SELECTOR = "[data-consent-embed]"
@@ -42,6 +44,14 @@ const mount = (root: HTMLElement, src: string) => {
   root.appendChild(iframe)
 }
 
+/** Mount on the visitor's click, and record it when it is a video player. */
+const play = (root: HTMLElement, src: string) => {
+  if (root.dataset.embedMounted) return
+  mount(root, src)
+  const video = videoFromPlayerUrl(src)
+  if (video) track("video_played", video)
+}
+
 const setup = (root: HTMLElement) => {
   if (root.dataset.embedReady) return
   root.dataset.embedReady = "true"
@@ -53,13 +63,13 @@ const setup = (root: HTMLElement) => {
     return
   }
 
-  const play = root.querySelector<HTMLElement>("[data-embed-play]")
+  const playButton = root.querySelector<HTMLElement>("[data-embed-play]")
   const prompt = root.querySelector<HTMLElement>("[data-embed-prompt]")
 
-  play?.addEventListener("pointerenter", () => preconnect(src), { once: true })
-  play?.addEventListener("click", () => {
+  playButton?.addEventListener("pointerenter", () => preconnect(src), { once: true })
+  playButton?.addEventListener("click", () => {
     if (hasConsent("media")) {
-      mount(root, src)
+      play(root, src)
     } else if (prompt) {
       prompt.hidden = false
       prompt.querySelector<HTMLElement>("[data-embed-accept]")?.focus()
@@ -67,7 +77,7 @@ const setup = (root: HTMLElement) => {
   })
   prompt?.querySelector("[data-embed-accept]")?.addEventListener("click", () => {
     grantConsent("media")
-    mount(root, src)
+    play(root, src)
   })
 }
 

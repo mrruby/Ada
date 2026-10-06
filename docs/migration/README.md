@@ -15,5 +15,5 @@ commerce code, assets. They are not updated as the Astro app changes.
 
 Since then: `/adseliksir`, `/eliksir`, `/magic-masterclass`, `/magic-nagranie`
 and `/magic-wyzwanie` were retired and now redirect to `/magic/`
-(`astro.config.mjs`), and Hotjar on `/adsy-chill` waits for statistics
-consent.
+(`astro.config.mjs`). Google Analytics, Google Tag Manager and Hotjar were
+replaced by PostHog (see the README, "Consent and analytics").

@@ -3,23 +3,19 @@
  * GDPR cookie consent: a banner until the visitor decides, a settings dialog
  * (optional categories unticked by default), and a small "cookie settings"
  * button so the choice can be changed at any time. Any element with
- * `data-consent-open` also opens the settings. Logic: lib/consent.ts.
+ * `data-consent-open` also opens the settings. Logic: lib/consent.ts; it also
+ * starts site-wide checkout/booking link tracking (lib/analytics.ts).
  */
 const categories = [
   {
     name: "statistics",
     title: "Statystyki",
-    text: "Pomaga nam zrozumieć, jak odwiedzający wchodzą w interakcję z witryną (Google Analytics, Hotjar).",
-  },
-  {
-    name: "preferences",
-    title: "Preferencje",
-    text: "Umożliwia stronie zapamiętanie informacji o Twoich preferencjach (Google Tag Manager).",
+    text: "Pokazuje nam, jak korzystasz ze strony: odsłony, kliknięcia, nagrania sesji i mapy kliknięć (PostHog, serwery w UE). Treść wpisywana w formularze jest ukryta. Bez tej zgody liczymy tylko anonimowe odsłony i konwersje (np. zapisy na listę), bez plików cookie.",
   },
   {
     name: "marketing",
     title: "Marketing",
-    text: "Służy do wyświetlania odpowiednich reklam (Meta Pixel).",
+    text: "Pozwala mierzyć skuteczność reklam i wyświetlać dopasowane reklamy (Meta Pixel).",
   },
   {
     name: "media",
@@ -56,7 +52,8 @@ const outline =
         <a href="/policy" class="font-bold hover:underline">
           Warunkach i Zasadach
         </a>
-        . Swój wybór możesz zmienić w każdej chwili.
+        . Jeśli odmówisz, liczymy tylko anonimowe odsłony i zapisy, bez plików cookie. Swój wybór
+        możesz zmienić w każdej chwili.
       </p>
     </div>
     <div class="flex min-w-44 flex-col gap-1">
@@ -136,6 +133,7 @@ const outline =
 </button>
 
 <script>
+  import { trackConversionLinks } from "@/lib/analytics"
   import {
     acceptAll,
     applyConsent,
@@ -156,10 +154,13 @@ const outline =
     if (reopen) reopen.hidden = false
   }
 
+  // Tracking starts only once the visitor has answered the banner.
   const state = getConsent()
-  applyConsent(state.choices)
-  if (state.decided) showDecided()
-  else if (banner) banner.hidden = false
+  if (state.decided) {
+    applyConsent(state.choices)
+    showDecided()
+  } else if (banner) banner.hidden = false
+  trackConversionLinks()
 
   // Any [data-consent-open] (banner button, floating button, footer links).
   document.addEventListener("click", (event) => {

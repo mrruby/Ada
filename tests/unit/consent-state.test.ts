@@ -4,8 +4,8 @@ import {
   consentCookieNames,
   consentCookieStrings,
   deniedChoices,
-  googleConsentMode,
   isWithdrawal,
+  legacyConsentCookies,
   parseCookieHeader,
   readConsentState,
 } from "@/lib/consent-state"
@@ -24,26 +24,43 @@ describe("readConsentState", () => {
     })
   })
 
-  it("keeps decisions made on the Gatsby site (legacy cookie names)", () => {
+  it("is decided only when every category cookie exists", () => {
+    const state = readConsentState(
+      header({
+        [consentCookieNames.statistics]: "true",
+        [consentCookieNames.marketing]: "false",
+        [consentCookieNames.media]: "true",
+      })
+    )
+    expect(state).toEqual({
+      choices: { statistics: true, marketing: false, media: true },
+      decided: true,
+    })
+    expect(readConsentState(header({ [consentCookieNames.media]: "true" })).decided).toBe(false)
+  })
+
+  it("asks again after a Gatsby-era decision (the tools behind the categories changed)", () => {
     const state = readConsentState(
       header({
         "gatsby-gdpr-google-analytics": "true",
-        "gatsby-gdpr-google-tagmanager": "false",
+        "gatsby-gdpr-google-tagmanager": "true",
         "gatsby-gdpr-facebook-pixel": "true",
+        [consentCookieNames.media]: "true",
       })
     )
-    expect(state.decided).toBe(true)
-    expect(state.choices).toEqual({
-      statistics: true,
-      preferences: false,
-      marketing: true,
-      // New category: not granted until the visitor allows it.
-      media: false,
-    })
+    expect(state.decided).toBe(false)
+    expect(state.choices.statistics).toBe(false)
+    expect(state.choices.marketing).toBe(false)
   })
 
   it("treats anything other than 'true' as denied", () => {
-    const state = readConsentState(header({ [consentCookieNames.media]: "yes" }))
+    const state = readConsentState(
+      header({
+        [consentCookieNames.statistics]: "yes",
+        [consentCookieNames.marketing]: "1",
+        [consentCookieNames.media]: "false",
+      })
+    )
     expect(state).toEqual({ choices: deniedChoices, decided: true })
   })
 })
@@ -72,29 +89,19 @@ describe("isWithdrawal", () => {
 describe("consentCookieStrings", () => {
   it("writes one year-long cookie per category, Secure only on https", () => {
     const plain = consentCookieStrings({ ...deniedChoices, statistics: true }, false)
-    expect(plain).toHaveLength(4)
-    expect(plain[0]).toBe(
-      "gatsby-gdpr-google-analytics=true; Path=/; Max-Age=31536000; SameSite=Lax"
-    )
+    expect(plain.slice(0, 3)).toEqual([
+      "ada-consent-statistics=true; Path=/; Max-Age=31536000; SameSite=Lax",
+      "ada-consent-marketing=false; Path=/; Max-Age=31536000; SameSite=Lax",
+      "ada-consent-media=false; Path=/; Max-Age=31536000; SameSite=Lax",
+    ])
     expect(plain.every((cookie) => !cookie.includes("Secure"))).toBe(true)
     expect(consentCookieStrings(allGranted, true).every((c) => c.endsWith("; Secure"))).toBe(true)
   })
-})
 
-describe("googleConsentMode", () => {
-  it("maps categories to Consent Mode v2 signals", () => {
-    expect(googleConsentMode(deniedChoices)).toEqual({
-      analytics_storage: "denied",
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-      functionality_storage: "denied",
-      personalization_storage: "denied",
-      security_storage: "granted",
-    })
-    const marketingOnly = googleConsentMode({ ...deniedChoices, marketing: true })
-    expect(marketingOnly.ad_storage).toBe("granted")
-    expect(marketingOnly.ad_user_data).toBe("granted")
-    expect(marketingOnly.analytics_storage).toBe("denied")
+  it("expires every legacy Gatsby consent cookie", () => {
+    const expired = consentCookieStrings(allGranted, false).slice(3)
+    expect(expired).toEqual(
+      legacyConsentCookies.map((name) => `${name}=; Path=/; Max-Age=0; SameSite=Lax`)
+    )
   })
 })

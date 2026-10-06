@@ -38,6 +38,9 @@ const markup = submit === "fetch" ? html.replace(/<script\b[\s\S]*?<\/script>/gi
 />
 
 <script>
+  import { track } from "@/lib/analytics"
+  import { mailerLiteFormId } from "@/lib/analytics-events"
+
   // Only acts on forms rendered in fetch mode.
   document.querySelectorAll<HTMLElement>("[data-mailerlite-fetch]").forEach((root) => {
     const form = root.querySelector<HTMLFormElement>("form.ml-block-form, form")
@@ -58,10 +61,19 @@ const markup = submit === "fetch" ? html.replace(/<script\b[\s\S]*?<\/script>/gi
     form.after(error)
     const submit = form.querySelector<HTMLButtonElement>("button[type=submit]")
 
-    const fail = () => {
+    const formId = mailerLiteFormId(form.action)
+
+    const fail = (reason: "rejected" | "network") => {
+      track("lead_form_failed", { form_id: formId, reason })
       error.textContent = "Nie udało się zapisać. Sprawdź adres e-mail i spróbuj ponownie."
       error.hidden = false
       if (submit) submit.disabled = false
+    }
+
+    const succeed = () => {
+      track("lead_form_submitted", { form_id: formId }, { beforeNavigation: true })
+      // A moment for the Meta Pixel request before the page changes.
+      window.setTimeout(() => window.location.assign(redirect), 300)
     }
 
     form.addEventListener("submit", (event) => {
@@ -70,8 +82,8 @@ const markup = submit === "fetch" ? html.replace(/<script\b[\s\S]*?<\/script>/gi
       if (submit) submit.disabled = true
       fetch(form.action, { method: "POST", body: new FormData(form), mode: "cors" })
         .then((response) => response.json())
-        .then((data) => (data.success ? window.location.assign(redirect) : fail()))
-        .catch(fail)
+        .then((data) => (data.success ? succeed() : fail("rejected")))
+        .catch(() => fail("network"))
     })
   })
 </script>

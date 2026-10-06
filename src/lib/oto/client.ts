@@ -18,9 +18,33 @@ export type OtoState = { active: false } | { active: true; endsAt: string; timeL
 const ZERO: OtoTimeLeft = { minutes: 0, seconds: 0 }
 const requests = new Map<string, Promise<OtoStatusResponse | null>>()
 
+let urlToken: string | null | undefined
+
+/**
+ * The `?oto=` token, read once from the landing URL and then removed from the
+ * address bar, so it doesn't end up in analytics, session replays or links
+ * the visitor shares. The OTO session cookie takes over from here.
+ */
+const takeUrlToken = () => {
+  if (urlToken !== undefined) return urlToken
+  const params = new URLSearchParams(window.location.search)
+  urlToken = params.get("oto")
+  if (urlToken && window.history) {
+    params.delete("oto")
+    const search = params.toString()
+    const { pathname, hash } = window.location
+    window.history.replaceState(
+      window.history.state,
+      "",
+      `${pathname}${search ? `?${search}` : ""}${hash}`
+    )
+  }
+  return urlToken
+}
+
 const getStartEndpoint = (campaignId: string) => {
   const params = new URLSearchParams({ campaign: campaignId })
-  const token = new URLSearchParams(window.location.search).get("oto")
+  const token = takeUrlToken()
   if (token) params.set("oto", token)
   return `/api/oto/start?${params.toString()}`
 }

@@ -138,6 +138,8 @@ const band = "px-4 md:px-8"
 </div>
 
 <script>
+  import { track } from "@/lib/analytics"
+
   const ANSWER_DELAY_MS = 100
 
   document.querySelectorAll<HTMLElement>("[data-quiz]").forEach((root) => {
@@ -178,6 +180,7 @@ const band = "px-4 md:px-8"
       progress.hidden = true
       result.hidden = false
       root.dataset.quizResult = match?.dataset.quizForm
+      track("quiz_completed", { result: match?.dataset.quizForm ?? "unknown" })
       // The answered question disappears — keep focus in the quiz, not <body>.
       resultIntro.focus()
     }

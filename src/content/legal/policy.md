@@ -3,7 +3,7 @@ title: "Polityka prywatności i plików cookies"
 seoTitle: "Polityka prywatności & plików cookies"
 ---
 
-**Data ostatniej aktualizacji: 25.09.2025**
+**Data ostatniej aktualizacji: 06.10.2026**
 
 Dzień dobry!
 
@@ -401,6 +401,8 @@ Z plików cookies korzystamy na podstawie Twojej zgody, z wyjątkiem sytuacji, g
 
 Pliki cookies, które nie są niezbędne do prawidłowego świadczenia usługi drogą elektroniczną, pozostają zablokowane do czasu wyrażenia przez Ciebie zgody na korzystanie z plików cookies. Podczas Twojej pierwszej wizyty na danej Stronie wyświetlamy Ci komunikat z pytaniem o Twoją zgodę wraz z możliwością zarządzania plikami cookies, tj. zdecydowania, na które pliki cookies się godzisz, a które chcesz blokować.
 
+Jeżeli nie wyrazisz zgody na pliki cookies w kategorii „Statystyki”, prowadzimy wyłącznie anonimowy pomiar odwiedzin opisany w załączniku (PostHog). Nie zapisuje on na Twoim urządzeniu plików cookies ani innych danych, poza informacją o dokonanym przez Ciebie wyborze, i opiera się na naszym prawnie uzasadnionym interesie (art. 6 ust. 1 lit. f RODO).
+
 - **15:<a name="_page12_x70.90_y56.70"></a> Czy możesz wyłączyć pliki cookies?**
 
 Tak, możesz zarządzać ustawieniami plików cookies w ramach swojej przeglądarki internetowej. Możesz blokować wszystkie lub wybrane pliki cookies. Możesz również blokować pliki cookies konkretnych witryn. W każdej chwili możesz również usunąć zapisane wcześniej pliki cookies oraz inne dane witryn i wtyczek.
@@ -440,7 +442,6 @@ Odpowiedź na to pytanie znajduje się w wielu miejscach niniejszej Polityki pry
 - ustawienia reklamy behawioralnej, np. youronlinechoices.com;
 - mechanizm zarządzania plikami cookies z poziomu naszej strony;
 - [Facebook Ads Settings](https://www.facebook.com/ads/settings);
-- [HotJar Opt-out](https://www.hotjar.com/legal/compliance/opt-out);
 
 - **21:<a name="_page13_x70.90_y353.70"></a> Czy jest jeszcze coś, o czym powinieneś wiedzieć?**
 
@@ -454,11 +455,15 @@ Tak, możemy modyfikować tę Politykę prywatności, w szczególności ze wzgl�
 
 **WYKAZ NARZĘDZI WYKORZYSTUJĄCYCH PLIKI COOKIES**
 
-1. **Google Tag Manager**
+1. **PostHog**
 
-Korzystamy z narzędzia Google Tag Manager zapewnianego przez amerykańską spółkę Google LLC, które to narzędzie służy do zarządzania tagami i ładowaniem skryptów w ramach strony.
+Korzystamy z narzędzia analitycznego PostHog zapewnianego przez amerykańską spółkę PostHog Inc. Dane zbierane przez PostHog przechowywane są na serwerach w Unii Europejskiej (PostHog EU Cloud). Dzięki PostHog wiemy, które strony są odwiedzane, skąd przychodzą odwiedzający i jak korzystają ze strony (np. kliknięcia, przewijanie, zapisy na newsletter, przejścia do płatności), co pozwala nam ulepszać stronę.
 
-Google Tag Manager jako narzędzie samo w sobie nie gromadzi żadnych informacji poza tymi, które niezbędne są do jego prawidłowego działania, ale odpowiada za ładowanie innych skryptów opisanych poniżej.
+Jeżeli wyrazisz zgodę na pliki cookies w kategorii „Statystyki”, PostHog zapisuje na Twoim urządzeniu pliki cookies (przechowywane maksymalnie przez 12 miesięcy) oraz dane w pamięci przeglądarki, które pozwalają rozpoznać kolejne wizyty jako wizyty tej samej, anonimowej osoby. W tym trybie PostHog może również nagrywać przebieg wizyty (ruchy kursora, kliknięcia, przewijanie) i tworzyć tzw. mapy cieplne. Treść wpisywana w pola formularzy jest ukrywana i nie trafia do nagrań. Nie łączymy tych informacji z Twoim imieniem, nazwiskiem ani adresem e-mail.
+
+Jeżeli nie wyrazisz zgody, PostHog nie zapisuje na Twoim urządzeniu plików cookies ani innych danych, poza informacją o dokonanym przez Ciebie wyborze. Liczymy wtedy wyłącznie anonimowe odsłony stron i konwersje (np. zapisy na listę mailingową, przejścia do płatności) z wykorzystaniem skrótu obliczanego na serwerach PostHog, który nie pozwala nam Cię zidentyfikować. Podstawą tego pomiaru jest nasz prawnie uzasadniony interes polegający na prowadzeniu statystyk strony (art. 6 ust. 1 lit. f RODO). Możesz się mu sprzeciwić, pisząc do nas albo włączając w przeglądarce sygnał Global Privacy Control lub Do Not Track – wtedy bez Twojej zgody PostHog w ogóle się nie uruchamia.
+
+Swoją zgodę możesz w każdej chwili zmienić w ustawieniach plików cookies dostępnych na naszej stronie. Szczegóły dotyczące przetwarzania danych przez PostHog znajdziesz w polityce prywatności PostHog.
 
 2. **Meta Pixel**
 
@@ -497,16 +502,4 @@ Gdy odtwarzasz nagranie, Vimeo zapisuje na Twoim urządzeniu pliki cookies i otr
 Informacje gromadzone w ramach plików cookies związanych z osadzonymi na naszych stronach filmami wykorzystywane są przez Vimeo w celu zapewnienia prawidłowego i bezpiecznego funkcjonowania widgetu, analizy i optymalizacji w zakresie świadczonych przez Vimeo usług, jak również w celach personalizacji i reklamy. Nie mamy dostępu do tych informacji. Dla nas ważne jest tylko to, żeby odtwarzacz działał prawidłowo.
 
 Pamiętaj, że odtwarzając nagrania dostępne na naszych stronach, korzystasz z usług świadczonych drogą elektroniczną przez Vimeo. Vimeo jest samodzielnym, niezależnym od nas podmiotem świadczącym na Twoją rzecz usługi drogą elektroniczną. Szczegółów w zakresie zasad korzystania z Vimeo, w tym ochrony prywatności, możesz szukać w dokumentach udostępnianych bezpośrednio przez Vimeo: regulamin i polityka prywatności.
-
-6. **Hotjar**
-
-Korzystamy z narzędzia Hotjar, żeby lepiej zrozumieć Twoje potrzeby oraz optymalizować naszą stronę pod kątem Twoich doświadczeń związanych z korzystaniem z niej. Narzędzie zapewniane jest przez spółkę Hotjar Limited.
-
-Hotjar rejestruje każdego odwiedzającego naszą stronę i umożliwia odtworzenie nagrania wideo z jego ruchu na naszej stronie, jak również wygenerowanie tzw. map cieplnych. W ramach narzędzia Hotjar nie mamy dostępu do informacji, które pozwalają nam na Twoją identyfikację, ponieważ Hotjar nie rejestruje procesu wypełnienia formularzy przeznaczonych do przekazywania danych osobowych.
-
-W celu korzystania z Hotjar zaimplementowaliśmy w kodzie naszej strony specjalny kod śledzący Hotjar. Kod śledzący wykorzystuje pliki cookies firmy Hotjar Limited. Zgromadzone w ramach plików cookies informacje przechowywane są przez Hotjar w ramach pseudonimowego profilu użytkownika. Ani Hotjar, ani my wykorzystujemy tych informacji do Twojej identyfikacji.
-
-Możesz sprzeciwić się tworzeniu przez Hotjar Twojego profilu użytkownika, przechowywania przez Hotjar informacji na temat Twojego korzystania z naszej strony oraz wykorzystywania plików cookies Hotjar tutaj.
-
-Jeżeli jesteś zainteresowany szczegółami związanymi z przetwarzaniem danych w ramach Hotjar, zachęcamy do zapoznania się z polityką prywatności Hotjar.
 16

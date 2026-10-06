@@ -44,8 +44,11 @@ jobs:
           key: astro-assets-${{ hashFiles('src/assets/**', 'astro.config.mjs', 'yarn.lock') }}
           restore-keys: astro-assets-
 
+      # A dummy PostHog key so the e2e suite can check analytics (requests are mocked).
       - name: Build
         run: yarn build
+        env:
+          PUBLIC_POSTHOG_KEY: phc_e2e
 
       - name: Cache Playwright browsers
         id: playwright-cache

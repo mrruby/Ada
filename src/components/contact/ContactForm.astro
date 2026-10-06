@@ -105,8 +105,14 @@ const label = "mb-2 block text-xs font-bold tracking-wide text-black uppercase"
 {siteKey && <script is:inline src="https://www.google.com/recaptcha/api.js" async defer></script>}
 
 <script>
+  import { track } from "@/lib/analytics"
+
   // Record which page/campaign sent the visitor here (?source=…).
   const source = new URLSearchParams(window.location.search).get("source")
   const field = document.querySelector<HTMLInputElement>("[data-contact-source]")
   if (source && field) field.value = source
+
+  field?.form?.addEventListener("submit", () =>
+    track("contact_form_submitted", { source: field.value }, { beforeNavigation: true })
+  )
 </script>

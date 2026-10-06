@@ -2,28 +2,69 @@
  * Shared Playwright fixtures for the e2e suite.
  *
  *  - `consent` (option): cookies set before every page loads. By default every
- *    consent cookie is "false", so the banner stays closed and no tracker
- *    loads. `test.use({ consent: null })` starts without a decision (banner
+ *    consent cookie is "false", so the banner stays closed, PostHog runs
+ *    cookieless and the Pixel stays off. `test.use({ consent: null })` starts without a decision (banner
  *    shown); override single values with `{ ...CONSENT_DECLINED, key: "true" }`.
  *  - Every request to another origin is answered locally (see
  *    `fulfillThirdParty`) and recorded in `thirdParty`, so tests never reach
  *    MailerLite, Vimeo, YouTube, Google, Meta…
+ *  - `/relay/*` (the PostHog proxy) is answered locally; captured events are
+ *    decoded into `posthog`.
  *  - `/api/*` (on-demand Netlify Functions, not part of dist/) is mocked:
  *    `/api/oto/*` answers an inactive OTO, anything else 204. Override it
  *    with `page.route` in a test (page routes win over context routes).
  *  - `errors` collects console errors, uncaught exceptions and failed
  *    same-origin requests of the test's page.
  */
+import { readdirSync, readFileSync } from "node:fs"
+import { gunzipSync } from "node:zlib"
 import { test as base, expect, type Page, type Request, type Route } from "@playwright/test"
 
 export { expect }
 
 export const CONSENT_DECLINED = {
-  "gatsby-gdpr-google-analytics": "false",
-  "gatsby-gdpr-google-tagmanager": "false",
-  "gatsby-gdpr-facebook-pixel": "false",
+  "ada-consent-statistics": "false",
+  "ada-consent-marketing": "false",
   "ada-consent-media": "false",
 } as const
+
+/** The key `test:e2e` / CI build with; PostHog tests skip without it. */
+export const POSTHOG_TEST_KEY = "phc_e2e"
+export const builtWithPostHog = () => {
+  const dir = new URL("../../dist/_astro/", import.meta.url)
+  try {
+    return readdirSync(dir)
+      .filter((file) => file.endsWith(".js"))
+      .some((file) => readFileSync(new URL(file, dir), "utf8").includes(POSTHOG_TEST_KEY))
+  } catch {
+    return false
+  }
+}
+
+/** An event PostHog sent to the /relay proxy (decoded from its batch). */
+export type PostHogEvent = { event: string; properties: Record<string, unknown> }
+
+/** Decodes a PostHog capture request body (gzip, base64 or plain JSON). */
+const decodePostHogBody = (request: Request): PostHogEvent[] => {
+  const body = request.postDataBuffer()
+  if (!body?.length) return []
+  const compression = new URL(request.url()).searchParams.get("compression")
+  let text =
+    compression === "gzip-js" || compression === "gzip"
+      ? gunzipSync(body).toString("utf8")
+      : body.toString("utf8")
+  if (text.startsWith("data=")) {
+    const data = decodeURIComponent(text.slice(5))
+    text = compression === "base64" ? Buffer.from(data, "base64").toString("utf8") : data
+  }
+  try {
+    const payload = JSON.parse(text)
+    const events = Array.isArray(payload) ? payload : (payload.batch ?? [payload])
+    return events.filter((event: PostHogEvent) => typeof event?.event === "string")
+  } catch {
+    return []
+  }
+}
 
 export type ConsentCookies = Record<string, string>
 
@@ -69,6 +110,7 @@ export const fulfillThirdParty = (route: Route, request: Request) => {
 type Fixtures = {
   consent: ConsentCookies | null
   thirdParty: ThirdPartyRequest[]
+  posthog: PostHogEvent[]
   errors: string[]
 }
 
@@ -79,7 +121,11 @@ export const test = base.extend<Fixtures>({
     await use([])
   },
 
-  context: async ({ context, baseURL, consent, thirdParty }, use) => {
+  posthog: async ({}, use) => {
+    await use([])
+  },
+
+  context: async ({ context, baseURL, consent, thirdParty, posthog }, use) => {
     const origin = new URL(baseURL!).origin
 
     if (consent) {
@@ -107,6 +153,28 @@ export const test = base.extend<Fixtures>({
         ? route.fulfill({ status: 200, json: OTO_INACTIVE })
         : route.fulfill({ status: 204, body: "" })
     )
+
+    // PostHog drops events from browsers that look automated; present the
+    // test browser as a regular one so analytics can be asserted.
+    await context.addInitScript(() => {
+      Object.defineProperty(Navigator.prototype, "webdriver", { get: () => false })
+      Object.defineProperty(Navigator.prototype, "userAgentData", { get: () => undefined })
+    })
+
+    // PostHog's /relay proxy lives in netlify.toml, not in dist/: answer it
+    // locally and record the captured events.
+    await context.route(`${origin}/relay/**`, (route, request) => {
+      const { pathname } = new URL(request.url())
+      if (request.resourceType() === "script") {
+        return route.fulfill({ status: 200, contentType: "text/javascript", body: "" })
+      }
+      if (pathname.startsWith("/relay/e") || pathname.startsWith("/relay/i/v0/e")) {
+        posthog.push(...decodePostHogBody(request))
+        return route.fulfill({ status: 200, json: { status: 1 } })
+      }
+      // Remote config / flags of a project with autocapture on, nothing else.
+      return route.fulfill({ status: 200, json: { autocapture_opt_out: false } })
+    })
 
     await use(context)
   },

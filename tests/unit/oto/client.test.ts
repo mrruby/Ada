@@ -38,6 +38,23 @@ describe("getOtoTimeLeft", () => {
 })
 
 describe("watchOto", () => {
+  it("removes the ?oto= token from the address bar once it is read", async () => {
+    vi.stubGlobal("fetch", respond({ active: false, endsAt: null, secondsLeft: 0 }))
+    vi.resetModules()
+    const replaceState = vi.fn()
+    vi.stubGlobal("window", {
+      location: { search: "?oto=signed.token&utm=x", pathname: "/wyzwanie/", hash: "#oferta" },
+      history: { state: null, replaceState },
+      setInterval: globalThis.setInterval,
+      clearInterval: globalThis.clearInterval,
+    })
+    const { watchOto } = await import("@/lib/oto/client")
+
+    await watchOto("wyzwanie", () => {})
+
+    expect(replaceState).toHaveBeenCalledWith(null, "", "/wyzwanie/?utm=x#oferta")
+  })
+
   it("asks /api/oto/start for the campaign, forwarding the ?oto= token", async () => {
     const fetchMock = respond({ active: false, endsAt: null, secondsLeft: 0 })
     vi.stubGlobal("fetch", fetchMock)
