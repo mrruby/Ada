@@ -1,0 +1,42 @@
+---
+/** Doubts heard during mentoring recruitment → what the workshop gives you. */
+import check from "@/assets/images/check.svg"
+import flower from "@/assets/images/flower-blue.svg"
+import { IconList, Section } from "@/components/ui"
+
+type Props = {
+  doubts: string[]
+  outcomes: string[]
+}
+
+const { doubts, outcomes } = Astro.props
+---
+
+<Section bg="bg-linear-to-t from-lavender to-white" class="relative overflow-hidden">
+  <slot name="decor" />
+  <div class="flex flex-col items-center gap-10 px-3 pb-20">
+    <h3 class="max-w-5xl text-center font-semibold md:text-3xl">
+      Gdy w zeszłym roku prowadziłam rekrutację do programu mentoringowego, słyszałam:{" "}
+    </h3>
+    <IconList
+      items={doubts}
+      icon={flower}
+      stacked
+      class="mx-auto max-w-7xl flex-row flex-wrap justify-center gap-2.5"
+      itemClass="max-w-md gap-0 px-2 md:min-w-md md:text-xl"
+      iconClass="size-20 animate-spin-slow"
+    />
+    <h3 class="max-w-4xl text-center md:text-3xl">
+      I własnie dla takich osób (kto wie, może wśród nich jesteś Ty?) przygotowałam{" "}
+      <b>2-godzinny warsztat strategiczno-reklamowy,</b> po którym wyjdziesz z:{" "}
+    </h3>
+    <IconList
+      items={outcomes}
+      icon={check}
+      class="max-w-3xl md:text-xl"
+      columnClass="gap-0"
+      itemClass="items-center gap-2 px-2"
+      iconClass="h-12 w-11"
+    />
+  </div>
+</Section>

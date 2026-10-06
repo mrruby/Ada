@@ -1,0 +1,17 @@
+---
+/** Pink checkered band with the section title resting on its bottom edge. */
+import { cn } from "@/lib/cn"
+
+type Props = { class?: string }
+
+const { class: className } = Astro.props
+---
+
+<div
+  class={cn(
+    "relative flex min-h-64 items-end justify-center bg-art-checker px-6 pb-9 md:min-h-96 md:pb-14",
+    className
+  )}
+>
+  <slot />
+</div>

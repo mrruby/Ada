@@ -1,0 +1,53 @@
+---
+/** "MAGIC to Twój zespół od reklam" — four ✅ benefits next to Ada's photo. */
+import { Image } from "astro:assets"
+import adaPhoto from "@/assets/images/magic_adsy2.webp"
+import { Heading, Reveal } from "@/components/ui"
+import { teamBenefits } from "@/data/magic"
+import { cn } from "@/lib/cn"
+import MagicCta from "./MagicCta.astro"
+import MagicSection from "./MagicSection.astro"
+---
+
+<MagicSection bg="bg-blush" class="overflow-hidden text-black">
+  <div class="mx-auto mb-8 max-w-4xl text-center md:mb-20">
+    <Heading class="uppercase">
+      <span class="text-periwinkle">MAGIC</span> to Twój zespół od reklam
+    </Heading>
+    <Heading as="p" size="sm" class="pt-4 font-medium">
+      bez etatu i bez faktur od agencji
+    </Heading>
+  </div>
+
+  <div class="flex items-center gap-12">
+    <Image
+      src={adaPhoto}
+      alt="Ada z telefonem"
+      width={364}
+      class="-mb-12 hidden h-auto w-96 shrink-0 self-end lg:block"
+    />
+    <div class="flex w-full flex-col items-center gap-8">
+      <ul class="grid w-full gap-4 md:grid-cols-2 md:gap-6">
+        {teamBenefits.map((benefit) => (
+          <Reveal as="li" class="relative">
+            <span
+              class="absolute -top-6 left-1/2 z-10 -translate-x-1/2 text-5xl"
+              aria-hidden="true"
+            >
+              ✅
+            </span>
+            <p
+              class={cn(
+                "flex h-full min-h-36 items-center justify-center rounded-2xl p-5 pt-10 text-center text-base leading-relaxed md:p-6 md:pt-10 md:text-lg",
+                benefit.tone
+              )}
+            >
+              {benefit.text}
+            </p>
+          </Reveal>
+        ))}
+      </ul>
+      <MagicCta class="min-h-12 bg-white text-2xl md:min-h-16 md:text-2xl">WYBIERAM!</MagicCta>
+    </div>
+  </div>
+</MagicSection>

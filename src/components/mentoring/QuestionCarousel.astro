@@ -1,0 +1,25 @@
+---
+/**
+ * Carousel of doubts with answers ("Pewnie teraz się zastanawiasz...").
+ */
+import { Carousel } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { QaItem } from "@/data/mentoring"
+
+type Props = {
+  items: QaItem[]
+  label?: string
+  class?: string
+}
+
+const { items, label = "Najczęstsze wątpliwości", class: className } = Astro.props
+---
+
+<Carousel label={label} perView="references" arrows="light" class={cn("mt-6", className)}>
+  {items.map((item) => (
+    <div class="flex flex-col justify-center px-6 text-center lg:mb-14">
+      <p class="pt-5 font-bold lg:text-lg">{item.question}</p>
+      {item.answer && <p class="mx-auto my-5 max-w-5xl lg:text-lg" set:html={item.answer} />}
+    </div>
+  ))}
+</Carousel>

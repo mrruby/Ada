@@ -1,0 +1,50 @@
+---
+/** "Dołącz do MAGIC:" — the single monthly package with its price sticker. */
+import { TypingText } from "@/components/ui"
+import { MAGIC_PACKAGE_ID, monthlyPackage } from "@/data/magic"
+import MagicCta from "./MagicCta.astro"
+import MagicSection from "./MagicSection.astro"
+
+type Props = {
+  /** Checkout URL. */
+  url: string
+  bg?: string
+}
+
+const { url, bg = "bg-marigold" } = Astro.props
+---
+
+<MagicSection
+  id={MAGIC_PACKAGE_ID}
+  bg={bg}
+  class="text-black"
+  innerClass="flex flex-col items-center text-center md:px-12"
+>
+  <TypingText as="h2" text="Dołącz do MAGIC:" class="text-5xl leading-normal font-bold" />
+
+  <div class="relative my-6 w-full lg:w-auto">
+    <span class="block -rotate-12 text-7xl md:absolute md:-top-16 md:-left-3" aria-hidden="true">
+      🗓️
+    </span>
+    <p class="rounded-3xl bg-periwinkle p-2 text-5xl leading-normal font-bold text-white uppercase lg:min-w-3xl">
+      {monthlyPackage.name}
+    </p>
+    <p class="absolute top-2 right-0 flex size-36 rotate-12 items-center justify-center rounded-full bg-lemon text-3xl leading-tight font-bold md:-right-3 lg:-top-16">
+      {monthlyPackage.price}
+    </p>
+  </div>
+
+  <div class="flex flex-col gap-x-8 rounded-3xl bg-neutral-100 p-12 text-left shadow-xl md:flex-row xl:text-lg">
+    {monthlyPackage.features.map((column) => (
+      <ul class="flex flex-col gap-4">
+        {column.map((feature) => (
+          <li set:html={feature} />
+        ))}
+      </ul>
+    ))}
+  </div>
+
+  <MagicCta href={url} class="mt-8 min-h-16 w-full text-base md:w-auto md:text-3xl">
+    {monthlyPackage.cta}
+  </MagicCta>
+</MagicSection>

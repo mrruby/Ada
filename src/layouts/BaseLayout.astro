@@ -1,0 +1,59 @@
+---
+/**
+ * Document shell for every page: <head>, fonts, SEO, cookie consent.
+ * Landing pages use it directly; regular pages use SiteLayout (adds the
+ * header and footer).
+ *
+ * Slots:
+ *  - default: page content
+ *  - "head": extra tags for <head> (page-specific scripts, preloads…)
+ */
+import { Font } from "astro:assets"
+import CookieConsent from "@/components/site/CookieConsent.astro"
+import Seo, { type SeoProps } from "@/components/site/Seo.astro"
+import { site } from "@/config/site"
+import { cn } from "@/lib/cn"
+import "@/styles/global.css"
+
+export interface Props extends SeoProps {
+  /** Classes for <body>, e.g. a page-wide text color or background. */
+  bodyClass?: string
+  /** Load Hotjar on this page (after statistics consent). */
+  hotjarId?: number
+}
+
+const { bodyClass, hotjarId, ...seo } = Astro.props
+---
+
+<!doctype html>
+<html lang={site.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content={site.themeColor} />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <Font
+      cssVariable="--ff-montserrat"
+      preload={[
+        { weight: 400, style: "normal" },
+        { weight: 700, style: "normal" },
+      ]}
+    />
+    <Font cssVariable="--ff-anton" preload />
+    <Font cssVariable="--ff-lemon" />
+    <Font cssVariable="--ff-courier" />
+    <Font cssVariable="--ff-annie" />
+    <Font cssVariable="--ff-caveat" />
+
+    <Seo {...seo} />
+    {hotjarId && <meta name="ada:hotjar" content={String(hotjarId)} />}
+    <slot name="head" />
+  </head>
+  <body class={cn("min-h-screen", bodyClass)}>
+    <slot />
+    <CookieConsent />
+  </body>
+</html>

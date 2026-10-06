@@ -1,0 +1,24 @@
+---
+/** /jesien-nagranie2 hero: the masterclass recording + call to join. */
+import { VideoEmbed } from "@/components/ui"
+import { MAGIC_JESIEN_NAGRANIE2_VIDEO_ID } from "@/data/jesien"
+---
+
+<header id="top" class="pt-8 md:pt-16">
+  <div class="mx-auto w-full max-w-4xl px-5 pb-8 text-center md:pb-16">
+    <p class="mx-auto mb-8 text-2xl leading-snug font-extrabold tracking-tight text-balance text-marigold md:text-3xl">
+      Nagranie masterclassu „Mały budżet, wysoki sezon” o reklamach na jesień i zimę tego roku –
+      zabierz zeszyt i rób notatki:
+    </p>
+    <VideoEmbed
+      provider="youtube"
+      id={MAGIC_JESIEN_NAGRANIE2_VIDEO_ID}
+      title="Nagranie szkolenia MAGIC"
+      eager
+      class="rounded-xl bg-jesien-ink"
+    />
+    <h1 class="mx-auto mt-8 text-3xl leading-tight font-extrabold tracking-tight text-balance text-marigold md:text-5xl">
+      Czas na działanie! Dołącz do Magic i odbierz swój Magic Plan
+    </h1>
+  </div>
+</header>

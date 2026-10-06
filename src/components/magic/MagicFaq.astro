@@ -1,0 +1,15 @@
+---
+/** Magic FAQ: one centered column of accordions on lavender. */
+import { FaqSection } from "@/components/sections"
+import { magicFaq } from "@/data/magic"
+---
+
+<FaqSection
+  items={magicFaq}
+  columns={1}
+  bg="bg-lavender"
+  class="text-black"
+  titleClass="mb-0 lg:mb-2"
+  listClass="max-w-xl text-xs md:text-base"
+  itemClass="mb-6"
+/>

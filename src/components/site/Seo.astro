@@ -1,0 +1,47 @@
+---
+import { site } from "@/config/site"
+
+export interface SeoProps {
+  /** Page title; rendered as "<title> | <site name>". */
+  title: string
+  description?: string
+  /** Absolute URL or a path under /public. */
+  image?: string
+  /** Canonical URL; defaults to the current page URL. */
+  canonical?: string
+  /** Hide the page from search engines (e.g. pages only linked from emails). */
+  noindex?: boolean
+}
+
+type Props = SeoProps
+
+const { title, description = site.description, image, canonical, noindex = false } = Astro.props
+
+const toAbsolute = (value: string) => new URL(value, site.url).toString()
+// Social platforms (Instagram in particular) reject image URLs with query strings.
+const ogImage = toAbsolute(image ?? site.defaultOgImage).replace(/\?.*$/, "")
+const canonicalUrl = canonical ?? toAbsolute(Astro.url.pathname)
+---
+
+<title>{`${title} | ${site.name}`}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:secure_url" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="adrianna.com.pl" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<meta name="facebook-domain-verification" content={site.facebookDomainVerification} />

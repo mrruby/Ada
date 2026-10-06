@@ -1,0 +1,20 @@
+---
+/** "Co dostaniesz w Adsy&Chill?" — heading over the bundle mockup (#pakiety). */
+import { Image } from "astro:assets"
+import bundle from "@/assets/images/magicAgenda.webp"
+import { Section } from "@/components/ui"
+---
+
+<Section bg="bg-cream" id="pakiety">
+  <div class="flex flex-col items-center px-3 pt-2 pb-7 md:pt-12">
+    <h2 class="pt-10 pb-1 text-center font-anton text-3xl text-tangerine lg:text-6xl">
+      Co dostaniesz <br /> w Adsy&Chill?
+    </h2>
+    <Image
+      src={bundle}
+      alt="Materiały Adsy&Chill: lekcje wideo, szablony reklam i lista kontrolna"
+      width={780}
+      class="h-auto max-w-full"
+    />
+  </div>
+</Section>

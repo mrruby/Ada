@@ -1,0 +1,35 @@
+---
+/** /ogarnij-swoje-adsy hero: title + intro + CTA beside a large photo bleeding off the right edge. */
+import { Image } from "astro:assets"
+import heroImage from "@/assets/images/autumn.webp"
+import PurpleCta from "./PurpleCta.astro"
+---
+
+<section class="overflow-hidden px-2 text-black xl:px-6">
+  <div class="mx-auto flex flex-col justify-between md:flex-row xl:max-w-7xl">
+    <div class="mb-3 flex max-w-4xl flex-col gap-4 md:mt-8">
+      <h1 class="text-2xl font-extrabold text-amethyst uppercase md:text-6xl">
+        Ogarnij swoje adsy!
+      </h1>
+      <p class="text-lg leading-none tracking-wider md:text-2xl">
+        Twoja mapa do realnych i skutecznych reklam
+      </p>
+      <div class="flex max-w-2xl flex-col gap-10 pt-6 pb-10 md:text-xl">
+        <p>Liczby + kreatywność = najlepszy kwartał w Twojej firmie</p>
+        <p>
+          Dołącz do programu mentoringowego &quot;Ogarnij Swoje Adsy&quot; i spędź następne 4
+          miesiące ze wsparciem strategicznym zespołu marketingowego.
+        </p>
+      </div>
+      <PurpleCta href="#offert">Sprawdzam, bo chcę zarabiać więcej dzięki reklamom!</PurpleCta>
+    </div>
+    <Image
+      src={heroImage}
+      alt="Ada Promis z laptopem na białym fotelu"
+      width={801}
+      loading="eager"
+      fetchpriority="high"
+      class="-mt-10 -mr-8 h-auto w-full md:-mt-6 md:max-w-md lg:w-3xl lg:max-w-none lg:shrink-0 xl:-mr-72"
+    />
+  </div>
+</section>

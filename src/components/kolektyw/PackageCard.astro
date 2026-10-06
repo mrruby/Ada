@@ -1,0 +1,56 @@
+---
+/**
+ * Offer package: what you get, who it is for, and a two-line booking CTA
+ * that overlaps the bottom edge of the card.
+ */
+import type { CollectivePackage } from "@/data/kolektyw/types"
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+const tones = {
+  green: "bg-mint",
+  pink: "bg-orchid",
+  lavender: "bg-lilac",
+  rose: "bg-petal",
+} as const
+
+type Props = {
+  item: CollectivePackage
+  cta: { label: string; note: string; href: string }
+  class?: string
+}
+
+const { item, cta, class: className } = Astro.props
+---
+
+<article
+  class={cn(
+    "flex flex-col rounded-3xl border border-tangerine p-4 text-left text-sm leading-relaxed md:p-8 md:text-base",
+    tones[item.tone],
+    className
+  )}
+>
+  <h3 class="mb-4 text-xl font-bold text-black md:text-2xl">{item.title}</h3>
+  <p class="mb-6 font-bold">{item.subtitle}</p>
+  <p class="mb-4 font-bold">Co otrzymujesz:</p>
+  <ul class="mb-6">
+    {item.benefits.map((benefit) => (
+      <li>{benefit}</li>
+    ))}
+  </ul>
+  <p class="mb-4 font-bold">Dla kogo:</p>
+  <ul class="mb-4">
+    {item.audience.map((entry) => (
+      <li>{entry}</li>
+    ))}
+  </ul>
+  <Button
+    href={cta.href}
+    variant="bare"
+    size="none"
+    class="mx-auto -mb-8 flex w-fit min-w-60 flex-col gap-0 rounded-full border border-tangerine bg-cream px-5 py-4 font-anton text-lg font-normal tracking-wide hover:opacity-90 md:-mb-16 md:min-w-md md:px-8 md:text-2xl"
+  >
+    <span class="text-tangerine">{cta.label}</span>
+    <span class="text-petal">{cta.note}</span>
+  </Button>
+</article>

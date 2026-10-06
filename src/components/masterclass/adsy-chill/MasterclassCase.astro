@@ -1,0 +1,316 @@
+---
+/**
+ * One Adsy&Chill masterclass as a two-sided slide: the pitch (title card,
+ * difficulty, effects, CTA, protip photo) and its case study (results,
+ * screenshots, stats). Desktop slides between the sides; mobile swaps them.
+ *
+ * Behavior (script below): arrow buttons toggle `data-open` on the root,
+ * `aria-expanded` on the arrows and `inert` on the side that is off-screen
+ * (or hidden), so its links aren't focusable. On desktop the slide also demos
+ * itself once — a fake cursor "clicks" the arrow
+ * shortly after the block scrolls into view — and flips back and forth while
+ * hovered, until the visitor uses the arrow.
+ */
+import { Image } from "astro:assets"
+import arrow from "@/assets/images/magicArrowLeft.svg"
+import pst from "@/assets/images/pst.svg"
+import { Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { MasterclassCase } from "@/data/masterclass"
+import CaseStats from "./CaseStats.astro"
+
+type Props = {
+  item: MasterclassCase
+  bg?: string
+  /** Target of the pitch CTA. */
+  ctaHref?: string
+}
+
+const { item, bg, ctaHref = "#pakiety" } = Astro.props
+const statsClass = "grid gap-x-4 text-xs md:text-base"
+const point = "flex text-xs md:text-base"
+const tick = "pr-2 lg:-ml-8"
+const caseId = `${item.id}-case`
+/** Shared by every arrow: they all show/hide the case study side. */
+const toggle = {
+  "aria-controls": caseId,
+  "aria-expanded": "false",
+  "data-case-toggle": true,
+} as const
+---
+
+<Section bg={bg} id={item.id} class="overflow-hidden">
+  <div class="group relative px-2 py-5 text-black md:py-10" data-case>
+    <div class="flex transition-transform duration-700 ease-in-out lg:group-data-open:-translate-x-full">
+      <div
+        class="relative flex w-full shrink-0 flex-col items-center group-data-open:hidden lg:group-data-open:flex"
+        data-case-pitch
+      >
+        <div class="relative z-10 mx-auto flex max-w-md flex-col items-center lg:pl-8">
+          <div class="mb-4 flex flex-col gap-2 text-center lg:rounded-3xl lg:border lg:border-tangerine lg:bg-cream lg:p-4 lg:shadow-xl">
+            <h2 class="font-anton text-2xl text-tangerine uppercase lg:text-4xl">{item.title}</h2>
+            <p class="font-bold uppercase md:text-lg" set:html={item.subtitle} />
+            <p class="pt-2" set:html={item.lead} />
+          </div>
+          <div class="flex w-full flex-col gap-5">
+            <div class="px-6 lg:px-0">
+              <h3 class="py-2 text-center font-bold md:text-lg lg:text-left">Poziom trudności:</h3>
+              <p class={point}>
+                <span class={tick}>✅</span>
+                {item.difficulty}
+              </p>
+            </div>
+            <div class="px-6 lg:px-0">
+              <h3 class="mt-2 pb-2 text-center font-bold md:text-lg lg:text-left">Efekty:</h3>
+              <ul class="flex flex-col gap-1 lg:gap-2.5">
+                {item.effects.map((effect) => (
+                  <li class={point}>
+                    <span class={tick}>✅</span>
+                    {effect}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <a
+            href={ctaHref}
+            class="my-6 flex min-h-15 items-center justify-center rounded-full border border-black bg-petal px-3 text-center font-bold text-black uppercase md:h-18 md:text-xl lg:w-md"
+          >
+            {item.cta}
+          </a>
+          <button
+            type="button"
+            class="mt-1 flex flex-col items-center lg:hidden"
+            aria-label="Pokaż case study"
+            {...toggle}
+          >
+            <Image
+              src={arrow}
+              alt=""
+              width={40}
+              height={40}
+              class="transition-transform hover:scale-110"
+            />
+            <Image src={pst} alt="Psst! Zajrzyj po wyniki!" width={100} class="mt-4" />
+          </button>
+        </div>
+        <Image
+          src={item.protip.mobile}
+          alt="Protip od Ady"
+          width={375}
+          class="mt-2 -mb-5 h-auto w-full lg:hidden"
+        />
+        <Image
+          src={item.protip.desktop}
+          alt="Protip od Ady"
+          width={380}
+          class="absolute bottom-0 -left-24 hidden lg:block"
+        />
+      </div>
+
+      <div
+        id={caseId}
+        class="hidden w-full shrink-0 flex-col items-center group-data-open:flex lg:flex"
+        inert
+        data-case-study
+      >
+        <div class="mx-auto flex w-full max-w-5xl flex-col items-center lg:block">
+          <p class="mb-4 w-full bg-petal py-2 text-center font-bold lg:text-2xl">
+            {item.caseTitle}
+          </p>
+          {item.story && (
+            <p class="mx-auto max-w-2xl py-4 pr-4 text-xs md:text-base" set:html={item.story} />
+          )}
+          <Image
+            src={item.campaign.desktop}
+            alt={`${item.caseTitle} — wyniki kampanii`}
+            width={980}
+            class="mx-auto mb-2 hidden lg:block"
+          />
+          <Image
+            src={item.campaign.mobile}
+            alt={`${item.caseTitle} — wyniki kampanii`}
+            width={340}
+            class="mx-auto mb-2 lg:hidden"
+          />
+          <div class={cn("mx-auto", item.sideStats ? "max-w-3xl" : "max-w-xl")}>
+            <CaseStats stats={item.stats} class={cn(statsClass, "md:grid-cols-2")} />
+            <div class={cn(item.sideStats && "flex flex-col lg:flex-row")}>
+              {item.sideStats && (
+                <CaseStats stats={item.sideStats} class={cn(statsClass, "lg:max-w-52")} />
+              )}
+              <div class="mx-auto lg:min-w-lg">
+                <Image
+                  src={item.result.desktop}
+                  alt="Statystyki kampanii z menedżera reklam"
+                  width={580}
+                  class="hidden lg:block"
+                />
+                <Image
+                  src={item.result.mobile}
+                  alt="Statystyki kampanii z menedżera reklam"
+                  width={375}
+                  class="h-auto w-full lg:hidden"
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="mt-6 flex justify-center lg:hidden"
+            aria-label="Wróć do opisu masterclassu"
+            {...toggle}
+          >
+            <Image
+              src={arrow}
+              alt=""
+              width={40}
+              height={40}
+              class="rotate-180 transition-transform hover:scale-110"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="absolute top-1/2 right-0 z-40 hidden -translate-y-1/2 transition-all duration-300 group-data-open:right-auto group-data-open:left-0 lg:block"
+      aria-label="Przełącz między opisem a case study"
+      {...toggle}
+    >
+      <Image
+        src={arrow}
+        alt=""
+        width={80}
+        height={80}
+        class="transition-transform group-data-open:rotate-180 hover:scale-110"
+      />
+      <Image
+        src={pst}
+        alt="Psst! Zajrzyj po wyniki!"
+        width={140}
+        class="mt-6 group-data-open:hidden"
+      />
+    </button>
+
+    <svg
+      viewBox="0 0 32 32"
+      fill="none"
+      aria-hidden="true"
+      class="pointer-events-none absolute top-1/2 right-0 z-50 hidden size-8 translate-y-12 opacity-0 drop-shadow-lg transition-all duration-1000 ease-in-out data-moved:right-11 data-moved:translate-y-2.5 data-pressed:scale-90 data-shown:opacity-100 lg:block"
+      data-case-cursor
+    >
+      <path
+        d="M7.5 28L7.5 4L23.5 19.5L14.5 19.5L19.5 28L16.5 29.5L11.5 21L7.5 28Z"
+        fill="black"
+        stroke="white"
+        stroke-width="2"
+      ></path>
+    </svg>
+  </div>
+</Section>
+
+<script>
+  const desktop = window.matchMedia("(min-width: 1024px)")
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  const HOVER_FLIP_MS = 7000
+  const MAX_HOVER_CYCLES = 5
+
+  document.querySelectorAll<HTMLElement>("[data-case]").forEach((root) => {
+    const cursor = root.querySelector<SVGElement>("[data-case-cursor]")
+    const pitch = root.querySelector<HTMLElement>("[data-case-pitch]")!
+    const study = root.querySelector<HTMLElement>("[data-case-study]")!
+    const toggles = [...root.querySelectorAll<HTMLButtonElement>("[data-case-toggle]")]
+    let manual = false
+    let hovering = false
+    let cycles = 0
+    let hoverTimer = 0
+
+    const isOpen = () => root.hasAttribute("data-open")
+    const setOpen = (open: boolean) => {
+      root.toggleAttribute("data-open", open)
+      pitch.inert = open
+      study.inert = !open
+      toggles.forEach((button) => button.setAttribute("aria-expanded", String(open)))
+    }
+    // Automatic flips never pull the side away from under keyboard focus.
+    const busy = () => manual || root.matches(":focus-within")
+    const setCursor = (state: "shown" | "moved" | "pressed", on: boolean) =>
+      cursor?.toggleAttribute(`data-${state}`, on)
+    const hideCursor = () =>
+      (["shown", "moved", "pressed"] as const).forEach((s) => setCursor(s, false))
+
+    toggles.forEach((button) =>
+      button.addEventListener("click", () => {
+        manual = true
+        window.clearTimeout(hoverTimer)
+        hideCursor()
+        setOpen(!isOpen())
+        // Mobile arrows live inside the sides: hand focus to the arrow now shown.
+        if (!button.closest("[inert]")) return
+        toggles
+          .find((other) => !other.closest("[inert]") && other.offsetParent !== null)
+          ?.focus({ preventScroll: true })
+      })
+    )
+
+    if (reducedMotion) return
+
+    // While hovered (desktop), flip to the case study and back a few times.
+    const cycle = () => {
+      if (!hovering || manual || cycles >= MAX_HOVER_CYCLES) return
+      hoverTimer = window.setTimeout(() => {
+        if (!hovering || busy()) return
+        setOpen(true)
+        hoverTimer = window.setTimeout(() => {
+          if (!hovering || busy()) return
+          setOpen(false)
+          cycles += 1
+          cycle()
+        }, HOVER_FLIP_MS)
+      }, HOVER_FLIP_MS)
+    }
+    root.addEventListener("mouseenter", () => {
+      if (!desktop.matches || hovering || manual) return
+      hovering = true
+      cycles = 0
+      cycle()
+    })
+    root.addEventListener("mouseleave", () => {
+      if (!desktop.matches) return
+      hovering = false
+      window.clearTimeout(hoverTimer)
+      if (!busy()) setOpen(false)
+    })
+
+    // Once in view (desktop), a fake cursor clicks the arrow to reveal the case.
+    if (!cursor) return
+    const steps: [number, () => void][] = [
+      [3000, () => setCursor("shown", true)],
+      [100, () => setCursor("moved", true)],
+      [1000, () => setCursor("pressed", true)],
+      [300, () => (setOpen(true), setCursor("pressed", false))],
+      [500, hideCursor],
+    ]
+    const play = (index = 0) => {
+      const step = steps[index]
+      if (!step) return
+      window.setTimeout(() => {
+        // The visitor got there first: drop the demo.
+        if (busy() || (isOpen() && index < 4)) return hideCursor()
+        step[1]()
+        play(index + 1)
+      }, step[0])
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || !desktop.matches) return
+        observer.disconnect()
+        if (!isOpen()) play()
+      },
+      { threshold: 0.3 }
+    )
+    observer.observe(root)
+  })
+</script>

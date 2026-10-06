@@ -1,0 +1,24 @@
+---
+/** Orange→pink gradient text with a slow shimmer (Jesień headlines). */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  /** Animate the gradient (default) or keep it static. */
+  shimmer?: boolean
+  class?: string
+}
+
+const { shimmer = true, class: className } = Astro.props
+---
+
+<span
+  class={cn(
+    "bg-clip-text text-transparent",
+    shimmer
+      ? "animate-shimmer bg-linear-to-r from-jesien-orange via-jesien-pink to-jesien-orange bg-size-[200%_100%] whitespace-nowrap motion-reduce:animate-none"
+      : "bg-linear-to-r from-jesien-orange to-jesien-pink",
+    className
+  )}
+>
+  <slot />
+</span>

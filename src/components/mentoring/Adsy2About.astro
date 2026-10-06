@@ -1,0 +1,62 @@
+---
+/** /ogarnij-swoje-adsy-2: "O mnie / Cześć" with a portrait, followed by the team. */
+import { Image } from "astro:assets"
+import adaPortrait from "@/assets/images/ada_about.webp"
+import { GhostHeading, MarkerHeading, Section } from "@/components/ui"
+import { teamMembers } from "@/data/mentoring"
+import TeamList from "./TeamList.astro"
+---
+
+<Section bg="bg-linear-to-b from-lavender to-white">
+  <div class="flex w-full flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+    <Image
+      src={adaPortrait}
+      alt="Ada Promis uśmiechnięta przy biurku"
+      width={521}
+      class="h-auto w-full max-w-lg lg:-mt-8 lg:w-md lg:shrink-0 xl:w-lg"
+    />
+    <div class="px-3 pt-2.5 xl:pr-24">
+      <GhostHeading
+        ghost="O mnie"
+        align="left"
+        bounce={false}
+        ghostClass="lg:text-7xl"
+        titleClass="-mt-6 md:-mt-8"
+      >
+        Cześć
+      </GhostHeading>
+      <div class="flex max-w-xl flex-col gap-8 pt-2 text-lg">
+        <p>
+          Z zawodu jestem tłumaczką j. francuskiego & angielskiego, a z zamiłowania kreatywną duszą.
+          Mam za sobą epizod pracy w audycie finansowym, ale moim powołaniem chyba od zawsze był
+          marketing!
+        </p>
+        <p>
+          I tak od stażu w agencji marketingowej do swojej działalności: dziś
+          <b>pod szyldem GetBold! </b>obsługuję klientów z Europy, w tym z Polski i na moim liczniku
+          wybiło już ponad 1 mln budżetów reklamowych wydanych w ramach Meta Ads. Pracuję z
+          biznesami, które dbają o<b> dobrostan psychiczny i fizyczny</b> : praktykuję
+          <b>slow marketing,</b> przemyślany, wartościowy, zbudowany na relacjach.
+        </p>
+        <p>
+          W programie <b>„Ogarnij swoje adsy!”</b> skupimy się Twoim koncie reklamowym! Zdradzę Ci
+          <b>moje tipy</b> i zaoszczędzę dobre kilka lat samodzielnego klikania w menedżerze reklam.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center gap-2 px-3 pt-16 text-center">
+    <MarkerHeading
+      as="h3"
+      marker="pink"
+      bounce={false}
+      class="text-base lg:text-4xl lg:leading-normal"
+    >
+      Na spotkaniach będziesz miała okazję
+      <br />
+      poznać też:
+    </MarkerHeading>
+  </div>
+  <TeamList members={teamMembers} />
+</Section>

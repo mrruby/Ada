@@ -1,0 +1,77 @@
+---
+/**
+ * Renders a MailerLite embedded form from an export in src/forms/:
+ *
+ *   import formHtml from "@/forms/form-jesien.html?raw"
+ *   <MailerLiteForm html={formHtml} id="zapisy" />
+ *
+ * `submit`:
+ *  - "fetch" (default): MailerLite's scripts are stripped (no third-party
+ *    script, no inline JS — CSP-friendly, works with several forms per page).
+ *    Required fields are enforced natively, the form posts with fetch and
+ *    redirects to `redirect` on success, or shows an error message below it.
+ *  - "embed": the export as-is — MailerLite's own scripts handle validation,
+ *    submission and the success redirect (only for forms that need features
+ *    such as reCAPTCHA; requires loosening the CSP).
+ */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  html: string
+  id?: string
+  class?: string
+  submit?: "embed" | "fetch"
+  /** Where "fetch" mode sends the visitor after a successful signup. */
+  redirect?: string
+}
+
+const { html, id, class: className, submit = "fetch", redirect = "/thank/" } = Astro.props
+
+const markup = submit === "fetch" ? html.replace(/<script\b[\s\S]*?<\/script>/gi, "") : html
+---
+
+<div
+  id={id}
+  class={cn("mailerlite-form", className)}
+  data-mailerlite-fetch={submit === "fetch" ? redirect : undefined}
+  set:html={markup}
+/>
+
+<script>
+  // Only acts on forms rendered in fetch mode.
+  document.querySelectorAll<HTMLElement>("[data-mailerlite-fetch]").forEach((root) => {
+    const form = root.querySelector<HTMLFormElement>("form.ml-block-form, form")
+    if (!form) return
+    const redirect = root.dataset.mailerliteFetch || "/thank/"
+
+    form.removeAttribute("target")
+    form
+      .querySelectorAll<HTMLInputElement>(
+        "input[aria-required=true], .ml-validate-required input[type=checkbox]"
+      )
+      .forEach((input) => (input.required = true))
+
+    const error = document.createElement("p")
+    error.setAttribute("role", "alert")
+    error.className = "mt-2 text-center text-sm font-bold"
+    error.hidden = true
+    form.after(error)
+    const submit = form.querySelector<HTMLButtonElement>("button[type=submit]")
+
+    const fail = () => {
+      error.textContent = "Nie udało się zapisać. Sprawdź adres e-mail i spróbuj ponownie."
+      error.hidden = false
+      if (submit) submit.disabled = false
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault()
+      error.hidden = true
+      if (submit) submit.disabled = true
+      fetch(form.action, { method: "POST", body: new FormData(form), mode: "cors" })
+        .then((response) => response.json())
+        .then((data) => (data.success ? window.location.assign(redirect) : fail()))
+        .catch(fail)
+    })
+  })
+</script>

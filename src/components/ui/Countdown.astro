@@ -1,0 +1,125 @@
+---
+/**
+ * Live countdown. Either to a fixed `target` date or an `evergreen` deadline
+ * that starts on the visitor's first visit (stored in localStorage).
+ *
+ * When time runs out the root — and the closest `[data-countdown-scope]`
+ * ancestor — get `data-expired`. Inside a scope, `[data-when="active"]` and
+ * `[data-when="expired"]` children are shown/hidden automatically, so pages
+ * can swap content without extra scripts.
+ */
+import { cn } from "@/lib/cn"
+import { getTimeLeft, pad2, type TimeLeft } from "@/lib/countdown"
+
+type Unit = keyof TimeLeft
+
+const defaultLabels: Record<Unit, string> = {
+  days: "DNI",
+  hours: "GODZIN",
+  minutes: "MINUT",
+  seconds: "SEKUND",
+}
+
+type Props = {
+  target?: Date | string
+  evergreen?: { storageKey: string; durationMs: number }
+  units?: Unit[]
+  labels?: Partial<Record<Unit, string>>
+  labelPosition?: "top" | "bottom"
+  /** Text rendered between tiles, e.g. ":". */
+  separator?: string
+  class?: string
+  tileClass?: string
+  valueClass?: string
+  labelClass?: string
+  separatorClass?: string
+  /** Accessible name, e.g. "Do końca promocji zostało". */
+  label?: string
+}
+
+const {
+  target,
+  evergreen,
+  units = ["days", "hours", "minutes", "seconds"],
+  labels: labelOverrides,
+  labelPosition = "top",
+  separator,
+  class: className,
+  tileClass,
+  valueClass,
+  labelClass,
+  separatorClass,
+  label,
+} = Astro.props
+
+const labels = { ...defaultLabels, ...labelOverrides }
+const targetIso = target ? new Date(target).toISOString() : undefined
+// Server render shows the value at build time for fixed targets, dashes otherwise.
+const initial = targetIso ? getTimeLeft(new Date(targetIso)) : null
+const initialValue = (unit: Unit) => (initial ? pad2(initial[unit]) : targetIso ? "00" : "--")
+---
+
+<div
+  class={cn("flex items-center justify-center gap-2", className)}
+  data-countdown
+  data-target={targetIso}
+  data-evergreen-key={evergreen?.storageKey}
+  data-evergreen-ms={evergreen?.durationMs}
+  role="timer"
+  aria-label={label}
+  aria-live="off"
+>
+  {units.map((unit, index) => (
+    <>
+      {separator && index > 0 && (
+        <span class={separatorClass} aria-hidden="true">
+          {separator}
+        </span>
+      )}
+      <span class={cn("flex flex-col items-center leading-none", tileClass)}>
+        {labelPosition === "top" && <span class={labelClass}>{labels[unit]}</span>}
+        <span class={cn("tabular-nums", valueClass)} data-unit={unit}>
+          {initialValue(unit)}
+        </span>
+        {labelPosition === "bottom" && <span class={labelClass}>{labels[unit]}</span>}
+      </span>
+    </>
+  ))}
+</div>
+
+<script>
+  import { getEvergreenDeadline, getTimeLeft, pad2 } from "@/lib/countdown"
+
+  document.querySelectorAll<HTMLElement>("[data-countdown]").forEach((root) => {
+    const { target, evergreenKey, evergreenMs } = root.dataset
+    const deadline = target
+      ? new Date(target)
+      : evergreenKey
+        ? getEvergreenDeadline(evergreenKey, Number(evergreenMs))
+        : null
+    if (!deadline) return
+
+    const scope = root.closest<HTMLElement>("[data-countdown-scope]")
+    const cells = root.querySelectorAll<HTMLElement>("[data-unit]")
+
+    const render = () => {
+      const left = getTimeLeft(deadline)
+      cells.forEach((cell) => {
+        const unit = cell.dataset.unit as keyof NonNullable<typeof left>
+        cell.textContent = pad2(left ? left[unit] : 0)
+      })
+      if (!left) {
+        root.setAttribute("data-expired", "")
+        scope?.setAttribute("data-expired", "")
+        root.dispatchEvent(new CustomEvent("countdown:expired", { bubbles: true }))
+      }
+      scope?.setAttribute("data-ready", "")
+      return Boolean(left)
+    }
+
+    if (!render()) return
+    const timer = window.setInterval(() => {
+      if (!render()) window.clearInterval(timer)
+    }, 1000)
+  })
+</script>

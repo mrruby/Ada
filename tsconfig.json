@@ -1,20 +1,11 @@
 {
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "test-results", "playwright-report"],
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "target": "esnext",
-    "jsx": "react",
-    "types": ["react", "react-dom", "gatsby", "node"],
-    "lib": ["dom", "esnext"],
-    "strict": true,
-    "noEmit": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "noUnusedLocals": false,
-    "skipLibCheck": true,
-    "baseUrl": "./src",
-    "resolveJsonModule": true,
-    "rootDir": "./src"
-  },
-  "exclude": ["node_modules", "public", ".cache"]
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }

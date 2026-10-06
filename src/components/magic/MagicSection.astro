@@ -1,0 +1,22 @@
+---
+/**
+ * Standard band of the Magic pages: full-bleed background with a centered
+ * column and the family's default padding (py-8 → py-12, px-6).
+ */
+import type { HTMLAttributes } from "astro/types"
+import { Section } from "@/components/ui"
+import type { SectionWidth } from "@/components/ui/Section.astro"
+import { cn } from "@/lib/cn"
+
+type Props = HTMLAttributes<"section"> & {
+  bg?: string
+  width?: SectionWidth
+  innerClass?: string
+}
+
+const { bg, width = "content", innerClass, ...attrs } = Astro.props
+---
+
+<Section bg={bg} width={width} innerClass={cn("px-6 py-8 md:py-12", innerClass)} {...attrs}>
+  <slot />
+</Section>

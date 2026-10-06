@@ -1,0 +1,29 @@
+---
+/**
+ * Big pink call-to-action over the swaying wave artwork.
+ *
+ * <WaveCta href="#offert">Przekonałaś mnie, chcę <br /> dołączyć do programu</WaveCta>
+ */
+import { Button, Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  href: string
+  class?: string
+}
+
+const { href, class: className } = Astro.props
+---
+
+<Section bg="bg-art-wave-band isolate" innerClass={cn("flex justify-center px-3 py-20", className)}>
+  <Button
+    href={href}
+    variant="soft"
+    size="none"
+    class="bg-blush px-5 py-1.5 font-bold uppercase md:h-40 md:w-3xl md:text-4xl"
+  >
+    <span>
+      <slot />
+    </span>
+  </Button>
+</Section>

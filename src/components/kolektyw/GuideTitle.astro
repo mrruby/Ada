@@ -1,0 +1,29 @@
+---
+/** Big rounded orange heading of the /kolektyw-na-start guide. */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  as?: "h1" | "h2"
+  /** Taller hero variant without the drop shadow. */
+  hero?: boolean
+  id?: string
+  class?: string
+}
+
+const { as: Tag = "h2", hero = false, id, class: className } = Astro.props
+---
+
+<div
+  class={cn(
+    "relative z-10 mx-auto flex w-full max-w-lg items-center justify-center rounded-full border-2 border-tangerine bg-cream px-6 py-5 text-center md:px-10",
+    hero ? "py-6 md:px-12" : "shadow-md",
+    className
+  )}
+>
+  <Tag
+    id={id}
+    class="font-anton text-2xl leading-tight font-normal text-tangerine uppercase sm:text-3xl md:text-4xl"
+  >
+    <slot />
+  </Tag>
+</div>

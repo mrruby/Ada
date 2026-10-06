@@ -1,0 +1,63 @@
+---
+/** Date of the live workshop, price and the reasons to join before it. */
+import check from "@/assets/images/check.svg"
+import { IconList, MarkerHeading, Section } from "@/components/ui"
+import type { RichText } from "@/lib/content"
+import WorkshopButton from "./WorkshopButton.astro"
+
+type Props = {
+  href: string
+  reasons: RichText[]
+}
+
+const { href, reasons } = Astro.props
+---
+
+<Section bg="bg-linear-to-t from-lavender to-white" class="relative overflow-hidden">
+  <slot name="decor" />
+  <div class="flex flex-col items-center px-3 pt-16 pb-20 text-center">
+    <MarkerHeading class="text-2xl font-extrabold uppercase md:text-6xl lg:text-6xl">
+      Spotykamy się
+    </MarkerHeading>
+    <p class="mt-20 animate-settle bg-blush px-12 py-8 text-2xl font-extrabold uppercase md:px-32 md:text-6xl">
+      25.01 o 18:00
+    </p>
+    <p class="max-w-3xl py-20 md:text-3xl">
+      Dołącz i sprawdź, czy strategiczne planowanie kampanii reklamowych jest dla Ciebie.
+      <b>Wystarczą 2 godziny.</b>
+    </p>
+    <div class="pt-20 pb-10 md:pb-28">
+      <WorkshopButton
+        href={href}
+        variant="lavender"
+        icon="lg"
+        class="font-extrabold md:w-2xl md:text-5xl"
+      >
+        Dołączam po wiedzę, która zarabia!
+      </WorkshopButton>
+    </div>
+    <div class="flex flex-col gap-6 md:pb-28 md:text-2xl">
+      <h3 class="font-bold">
+        Zastanawiasz się pewnie: no dobra, dobra. <br /> Ile to kosztuje? 💰
+      </h3>
+      <p>
+        Do <b>23 stycznia </b> możesz dołączyć do warsztatów w fajnej cenie:{" "}
+        <b class="bg-blush p-2">79 złotych</b> zamiast 129!
+      </p>
+    </div>
+    <p class="max-w-3xl pb-8 md:text-2xl">
+      Zapisz się na warsztaty o planowaniu kampanii reklamowych już teraz. Zaprojektuj ścieżkę
+      klientów. Spraw, aby trafiali do Ciebie szybciej i kupowali w pewnością.
+    </p>
+    <h3 class="max-w-4xl pb-10 font-bold md:text-3xl">Dołącz teraz, bo...</h3>
+    <IconList
+      items={reasons}
+      icon={check}
+      stacked
+      class="max-w-4xl text-left md:text-lg"
+      columnClass="gap-4"
+      itemClass="items-center gap-2"
+      iconClass="h-12 w-11"
+    />
+  </div>
+</Section>

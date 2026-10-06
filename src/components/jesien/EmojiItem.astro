@@ -1,0 +1,74 @@
+---
+/**
+ * Emoji + rich-text item of the Jesień landings, as a compact bordered row
+ * (`row`, lists of gains/tips) or a roomier card (`card`, 2-column grids).
+ * `html` is trusted HTML from src/data. `reveal` fades it in on scroll.
+ */
+import { Reveal } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { RichText } from "@/lib/content"
+
+const tones = {
+  purple: "border-jesien-purple-soft shadow-jesien-purple/10",
+  pink: "border-jesien-pink-soft shadow-jesien-pink/10",
+  orange: "border-jesien-orange-soft shadow-jesien-purple/10",
+} as const
+
+const variants = {
+  row: {
+    root: "gap-3 rounded-2xl px-4 py-3.5 shadow-md",
+    emoji: "text-xl leading-snug",
+  },
+  card: {
+    root: "gap-3.5 rounded-2xl px-6 py-6 shadow-xl",
+    emoji: "text-3xl leading-tight",
+  },
+} as const
+
+export type EmojiTone = keyof typeof tones
+
+type Props = {
+  emoji: string
+  html: RichText
+  tone?: EmojiTone
+  variant?: keyof typeof variants
+  as?: "li" | "div"
+  reveal?: boolean
+  /** Muted body copy with ink-colored <strong> (most lists). */
+  muted?: boolean
+  /** Lift on hover. */
+  lift?: boolean
+  class?: string
+}
+
+const {
+  emoji,
+  html,
+  tone = "purple",
+  variant = "row",
+  as = "li",
+  reveal = false,
+  muted = true,
+  lift = true,
+  class: className,
+} = Astro.props
+
+const styles = variants[variant]
+const Tag = reveal ? Reveal : as
+const tagProps = reveal ? { as } : {}
+---
+
+<Tag
+  {...tagProps}
+  class={cn(
+    "flex items-start border-2 bg-white text-left",
+    styles.root,
+    tones[tone],
+    lift &&
+      "transition duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-none",
+    className
+  )}
+>
+  <span class={styles.emoji}>{emoji}</span>
+  <span class={cn(muted && "text-jesien-ink-soft [&_strong]:text-jesien-ink")} set:html={html} />
+</Tag>

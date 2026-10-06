@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets"
+import facebookIcon from "@/assets/images/facebook.svg"
+import instagramIcon from "@/assets/images/instagram.svg"
+import ContactForm from "@/components/contact/ContactForm.astro"
+import { Card, Section } from "@/components/ui"
+import { social } from "@/config/site"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+const socialLinks = [
+  { href: social.instagram, icon: instagramIcon, label: "Instagram Adrianny Promis-Urbas" },
+  { href: social.facebook, icon: facebookIcon, label: "Facebook Adrianny Promis-Urbas" },
+]
+---
+
+<BaseLayout title="Kontakt">
+  <main>
+    <Section bg="bg-art-grid">
+      <div class="relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center text-black md:py-28">
+        <h1 class="font-anton text-5xl leading-none font-normal text-tangerine md:text-6xl">
+          Porozmawiajmy!
+        </h1>
+        <Card
+          tone="green"
+          pad="none"
+          class="mt-8 w-full max-w-md px-6 py-8 md:mt-16 md:px-10 rounded-4xl"
+        >
+          <h2 class="font-anton text-4xl leading-none font-normal md:text-5xl">Napisz do mnie!</h2>
+          <p class="mt-5 text-sm leading-snug font-medium">
+            Kampanie? Strategia? Szkolenia? Konsultacje? A może po prostu wirtualna kawka? Chętnie
+            spotkam się, aby obgadać wspólne plany, porozmawiać o marketingu i biznesach. Kto wie,
+            co z tego wyniknie… ;)
+          </p>
+        </Card>
+      </div>
+    </Section>
+    <Section bg="bg-mint">
+      <ContactForm />
+    </Section>
+  </main>
+  <footer class="flex items-center justify-center gap-4 bg-petal py-7">
+    {socialLinks.map((link) => (
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={link.label}
+        class="transition-opacity hover:opacity-70"
+      >
+        <Image src={link.icon} alt="" width={32} height={32} />
+      </a>
+    ))}
+  </footer>
+</BaseLayout>

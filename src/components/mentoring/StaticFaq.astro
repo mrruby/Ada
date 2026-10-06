@@ -1,0 +1,33 @@
+---
+/**
+ * Always-open FAQ: columns of bold questions with "✓"-prefixed answers.
+ * An item without an answer renders as a bold note.
+ */
+import { cn } from "@/lib/cn"
+import type { QaItem } from "@/data/mentoring"
+
+type Props = {
+  columns: QaItem[][]
+  class?: string
+}
+
+const { columns, class: className } = Astro.props
+---
+
+<div class={cn("flex flex-col pt-8 md:flex-row lg:gap-16", className)}>
+  {columns.map((items) => (
+    <dl class="lg:w-xl">
+      {items.map((item) => (
+        <div>
+          <dt class="pt-5 pb-2 font-bold lg:text-lg">{item.question}</dt>
+          {item.answer && (
+            <dd class="lg:text-lg">
+              <span aria-hidden="true">✓ </span>
+              <Fragment set:html={item.answer} />
+            </dd>
+          )}
+        </div>
+      ))}
+    </dl>
+  ))}
+</div>

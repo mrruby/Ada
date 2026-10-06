@@ -1,0 +1,29 @@
+---
+/** /ogarnij-swoje-adsy-2: "Czy to dla Ciebie?" — photo, limited seats note and CTA. */
+import { Image } from "astro:assets"
+import adaPortrait from "@/assets/images/ada_mastermind2.webp"
+import { Button, MarkerHeading } from "@/components/ui"
+---
+
+<div class="mx-3 flex flex-col items-center justify-center gap-15 pb-10 md:flex-row xl:gap-24">
+  <Image
+    src={adaPortrait}
+    alt="Ada Promis z laptopem na kanapie"
+    width={507}
+    class="h-auto w-full max-w-lg md:-ml-32 md:w-lg md:shrink-0"
+  />
+  <div class="flex flex-col items-start">
+    <MarkerHeading class="text-xl lg:text-5xl" bounce={false}>
+      Czy to dla Ciebie?
+    </MarkerHeading>
+    <p class="pt-10 pb-9 leading-tight font-medium lg:max-w-xl lg:text-lg">
+      W tej edycji jest tylko 5-7 miejsc.
+      <br /> Zanim zdecydujesz się dołączyć, zaproponuję Ci krótkie spotkanie, podczas którego
+      wspólnie porozmawiamy o Twoim udziale w programie mentoringowym. Chcę dowiedzieć się, jakie są
+      Twoje oczekiwania i poznać lepiej Twój biznes!
+    </p>
+    <Button href="#zostaw-maila" class="border-b-4 border-rose font-bold md:w-60 md:text-2xl">
+      Chcę dołączyć!
+    </Button>
+  </div>
+</div>

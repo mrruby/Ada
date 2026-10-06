@@ -1,0 +1,35 @@
+---
+/** Round portrait with name, role and short bio. */
+import { Image } from "astro:assets"
+import type { TeamMember } from "@/lib/content"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  member: TeamMember
+  /** Stack photo and text centered (instead of side by side on md+). */
+  centered?: boolean
+}
+
+const { member, centered = false } = Astro.props
+---
+
+<article
+  class={cn(
+    "flex w-full flex-col items-center justify-center gap-4 pt-4 text-black",
+    centered ? "text-center" : "text-left lg:flex-row"
+  )}
+>
+  <Image
+    src={member.photo}
+    alt=""
+    width={176}
+    height={176}
+    densities={[1, 2]}
+    class="size-44 shrink-0"
+  />
+  <div class={cn(!centered && "w-xs max-w-full")}>
+    <h3 class="font-bold text-plum">{member.name}</h3>
+    {member.role && <p class="leading-relaxed">{member.role}</p>}
+    {member.bio && <p class="mt-2 text-xs leading-relaxed" set:html={member.bio} />}
+  </div>
+</article>

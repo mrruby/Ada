@@ -1,0 +1,39 @@
+---
+/** Numbered "how to prepare" steps plus a note about the to-do list e-mail. */
+import { Image } from "astro:assets"
+import documentIcon from "@/assets/images/document.webp"
+import { Section } from "@/components/ui"
+
+type Props = { steps: string[] }
+
+const { steps } = Astro.props
+---
+
+<Section bg="bg-linear-to-b from-lavender to-white" class="relative overflow-hidden">
+  <slot name="decor" />
+  <div class="flex flex-col items-center px-3 pt-16 pb-12 md:pb-20">
+    <ol class="flex flex-col gap-8 pb-10 md:gap-12 md:pb-24">
+      {steps.map((step, index) => (
+        <li class="flex max-w-xl flex-col items-center gap-4 md:flex-row md:text-xl">
+          <span class="flex size-22 shrink-0 items-center justify-center rounded-full bg-white text-6xl font-bold">
+            {index + 1}
+          </span>
+          {step}
+        </li>
+      ))}
+    </ol>
+    <div class="flex flex-col items-center gap-9 md:flex-row">
+      <Image src={documentIcon} alt="" width={159} height={170} />
+      <div class="flex max-w-xl flex-col gap-8">
+        <p>
+          Trzy dni przed warsztatami dostaniesz na maila <b>listę to-do,</b> którą warto mieć ze
+          sobą na warsztatach, aby móc wycisnąć z nich jak najwięcej!
+        </p>
+        <p>
+          <b>Pamiętaj: </b>otrzymasz także link do nagrania, więc możesz do niego wrócić na
+          spokojnie, aby nadrobić to, czego nie zdążysz zrobić na żywo lub planować kolejne lejki!
+        </p>
+      </div>
+    </div>
+  </div>
+</Section>

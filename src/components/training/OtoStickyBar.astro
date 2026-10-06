@@ -1,0 +1,52 @@
+---
+/**
+ * Sticky top bar with the OTO countdown, visible only while the offer is
+ * active. Place it as a direct child of the `OtoScope` that wraps the page, so
+ * it sticks for the whole scroll and takes its real (wrapped) height in flow.
+ */
+import { Button } from "@/components/ui"
+import { OTO_PRICE } from "@/lib/oto/offer"
+
+type Props = {
+  /** In-page target of the CTA. */
+  href: string
+}
+
+const { href } = Astro.props
+const unit = "flex flex-col items-center"
+const digits = "text-lg md:text-2xl"
+const label = "text-xs uppercase"
+---
+
+<div data-oto-when="active" class="sticky top-0 z-50 bg-black px-4 py-2">
+  <div class="container mx-auto flex flex-wrap items-center justify-center gap-2 md:gap-4">
+    <span class="text-base font-semibold text-white md:text-xl lg:text-2xl">
+      Dostęp do wyzwania za {OTO_PRICE} - TYLKO przez 30 minut
+    </span>
+    <div class="flex items-center gap-1 font-bold text-white md:gap-3" role="timer">
+      <span class={unit}>
+        <span class={digits} data-oto-minutes>
+          00
+        </span>
+        <span class={label}>min</span>
+      </span>
+      <span class={digits} aria-hidden="true">
+        :
+      </span>
+      <span class={unit}>
+        <span class={digits} data-oto-seconds>
+          00
+        </span>
+        <span class={label}>sek</span>
+      </span>
+    </div>
+    <Button
+      href={href}
+      variant="pink"
+      size="none"
+      class="rounded-full px-4 py-1 font-anton text-sm uppercase shadow-md md:px-6 md:py-2 md:text-lg"
+    >
+      DOŁĄCZAM ZA {OTO_PRICE.toUpperCase()}
+    </Button>
+  </div>
+</div>

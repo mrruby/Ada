@@ -1,0 +1,12 @@
+---
+import TrainingLanding from "@/components/training/TrainingLanding.astro"
+import { andromeda } from "@/data/training/andromeda"
+import formHtml from "@/forms/form-marketerki.html?raw"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+const { seoTitle, ...landing } = andromeda
+---
+
+<BaseLayout title={seoTitle}>
+  <TrainingLanding {...landing} formHtml={formHtml} />
+</BaseLayout>

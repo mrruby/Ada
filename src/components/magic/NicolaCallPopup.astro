@@ -1,0 +1,59 @@
+---
+/**
+ * "Book a free call with Nicola" pop-up. Place it at the end of a section:
+ * the first time that spot scrolls into view the popover opens (once per
+ * page view); the × button closes it natively via `popovertarget`.
+ */
+import { Button } from "@/components/ui"
+import { magicLinks } from "@/data/magic"
+
+type Props = { id?: string }
+
+const { id = "nicola-call" } = Astro.props
+---
+
+<div aria-hidden="true" class="h-px w-full" data-popover-trigger={id}></div>
+
+<div
+  id={id}
+  popover="manual"
+  class="inset-x-4 top-auto bottom-4 mx-auto w-auto max-w-md rounded-3xl border-0 bg-bubblegum p-6 pt-8 text-center text-black shadow-2xl md:inset-x-auto md:right-6 md:bottom-6 md:mx-0"
+>
+  <button
+    type="button"
+    popovertarget={id}
+    popovertargetaction="hide"
+    aria-label="Zamknij"
+    class="absolute top-3 right-3 flex size-8 items-center justify-center rounded-full text-2xl leading-none transition hover:opacity-60"
+  >
+    &times;
+  </button>
+  <p class="text-2xl">
+    Nie wiesz, czy MAGIC jest dla Ciebie? Umów <b>bezpłatną 30-minutową rozmowę z Nicolą</b>
+  </p>
+  <Button
+    href={magicLinks.nicolaCalendar}
+    newTab
+    variant="black"
+    size="none"
+    class="mt-5 min-h-14 min-w-44 rounded-full px-6 font-extrabold tracking-wide shadow-xl hover:opacity-90"
+  >
+    umawiam się na rozmowę
+  </Button>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-popover-trigger]").forEach((sentinel) => {
+    const popover = document.getElementById(sentinel.dataset.popoverTrigger ?? "")
+    if (!popover || !("showPopover" in popover) || !("IntersectionObserver" in window)) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return
+        observer.disconnect()
+        popover.showPopover()
+      },
+      { threshold: 0.2 }
+    )
+    observer.observe(sentinel)
+  })
+</script>

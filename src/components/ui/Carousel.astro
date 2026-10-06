@@ -1,0 +1,198 @@
+---
+/**
+ * Horizontal carousel on native scroll-snap. Every direct child of the
+ * default slot is one slide; `perView` picks a responsive slide width.
+ *
+ * <Carousel perView="references" autoplay={2000} label="Opinie">
+ *   {items.map((item) => <div class="px-4">…</div>)}
+ * </Carousel>
+ */
+import { cn } from "@/lib/cn"
+
+const layouts = {
+  /** One slide at a time. */
+  single: "[&>*]:basis-full",
+  /** 1 / 2 (≥1024px) / 3 (≥1536px) — the classic testimonials layout. */
+  references: "[&>*]:basis-full lg:[&>*]:basis-1/2 2xl:[&>*]:basis-1/3",
+  /** 1 / 2 (≥768px) / 3 (≥1024px). */
+  thirds: "[&>*]:basis-full md:[&>*]:basis-1/2 lg:[&>*]:basis-1/3",
+  /** ~1.25 / 2.5 / 4 — peeking cards, good for vertical videos. */
+  peek: "[&>*]:basis-4/5 sm:[&>*]:basis-2/5 lg:[&>*]:basis-1/4",
+  /** Slides define their own width. */
+  auto: "[&>*]:basis-auto",
+} as const
+
+const arrowStyles = {
+  /** White chevrons over imagery. */
+  light: "text-white drop-shadow-md",
+  /** Grey chevrons on a translucent white disc. */
+  dark: "rounded-full bg-white/70 text-gray-800",
+  /** Black chevrons on light backgrounds. */
+  ink: "text-black",
+} as const
+
+type Props = {
+  perView?: keyof typeof layouts
+  /** Autoplay interval in ms (0 = off). Pauses on hover/focus/offscreen and
+   * renders a pause/play button (WCAG 2.2.2). */
+  autoplay?: number
+  /** Wrap around at the ends. */
+  loop?: boolean
+  arrows?: keyof typeof arrowStyles | false
+  /** Place arrows outside the track on wide screens. */
+  arrowsOutside?: boolean
+  /** Accessible name for the region, e.g. "Opinie klientek". */
+  label: string
+  class?: string
+  trackClass?: string
+}
+
+const {
+  perView = "references",
+  autoplay = 0,
+  loop = true,
+  arrows = "light",
+  arrowsOutside = false,
+  label,
+  class: className,
+  trackClass,
+} = Astro.props
+
+const arrowClass =
+  arrows &&
+  cn(
+    "absolute top-1/2 z-10 flex -translate-y-1/2 items-center justify-center p-2 transition-transform hover:scale-110",
+    arrowStyles[arrows]
+  )
+---
+
+<div
+  class={cn("relative", className)}
+  role="region"
+  aria-roledescription="karuzela"
+  aria-label={label}
+  data-carousel
+  data-autoplay={autoplay || undefined}
+  data-loop={loop ? "" : undefined}
+>
+  <div
+    class={cn(
+      "flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [&>*]:shrink-0 [&>*]:snap-start",
+      layouts[perView],
+      trackClass
+    )}
+    data-carousel-track
+    tabindex="0"
+  >
+    <slot />
+  </div>
+
+  {arrowClass && (
+    <>
+      <button
+        type="button"
+        class={cn(arrowClass, arrowsOutside ? "left-2 xl:-left-12" : "left-2")}
+        aria-label="Poprzedni slajd"
+        data-carousel-prev
+      >
+        <svg width="24" height="40" viewBox="0 0 15 25" fill="none" aria-hidden="true">
+          <path d="M13.5 23L3 12.5L13.5 2" stroke="currentColor" stroke-width="4" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        class={cn(arrowClass, arrowsOutside ? "right-2 xl:-right-12" : "right-2")}
+        aria-label="Następny slajd"
+        data-carousel-next
+      >
+        <svg width="24" height="40" viewBox="0 0 15 25" fill="none" aria-hidden="true">
+          <path d="M1.5 2L12 12.5L1.5 23" stroke="currentColor" stroke-width="4" />
+        </svg>
+      </button>
+    </>
+  )}
+  {autoplay > 0 && (
+    <button
+      type="button"
+      class="group absolute right-2 bottom-2 z-10 flex size-8 items-center justify-center rounded-full bg-white/80 text-gray-800 shadow-sm hover:bg-white motion-reduce:hidden"
+      aria-label="Zatrzymaj przewijanie"
+      aria-pressed="false"
+      data-carousel-toggle
+    >
+      <svg
+        viewBox="0 0 24 24"
+        class="size-4 fill-current group-aria-pressed:hidden"
+        aria-hidden="true"
+      >
+        <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
+      </svg>
+      <svg
+        viewBox="0 0 24 24"
+        class="hidden size-4 fill-current group-aria-pressed:block"
+        aria-hidden="true"
+      >
+        <path d="M8 5v14l11-7z" />
+      </svg>
+    </button>
+  )}
+</div>
+
+<script>
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+
+  document.querySelectorAll<HTMLElement>("[data-carousel]").forEach((root) => {
+    const track = root.querySelector<HTMLElement>("[data-carousel-track]")
+    if (!track) return
+    const loop = root.hasAttribute("data-loop")
+
+    const step = () => {
+      const first = track.firstElementChild as HTMLElement | null
+      return first ? first.getBoundingClientRect().width : track.clientWidth
+    }
+    const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 2
+    const atStart = () => track.scrollLeft <= 2
+
+    const go = (direction: 1 | -1) => {
+      if (direction === 1 && atEnd()) {
+        if (loop) track.scrollTo({ left: 0, behavior: "smooth" })
+        return
+      }
+      if (direction === -1 && atStart()) {
+        if (loop) track.scrollTo({ left: track.scrollWidth, behavior: "smooth" })
+        return
+      }
+      track.scrollBy({ left: direction * step(), behavior: "smooth" })
+    }
+
+    root.querySelector("[data-carousel-prev]")?.addEventListener("click", () => go(-1))
+    root.querySelector("[data-carousel-next]")?.addEventListener("click", () => go(1))
+    track.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") go(1)
+      if (event.key === "ArrowLeft") go(-1)
+    })
+
+    const interval = Number(root.dataset.autoplay)
+    if (!interval || reducedMotion.matches) return
+
+    let paused = false
+    let stopped = false
+    let visible = false
+    const toggle = root.querySelector<HTMLButtonElement>("[data-carousel-toggle]")
+    toggle?.addEventListener("click", () => {
+      stopped = !stopped
+      toggle.setAttribute("aria-pressed", String(stopped))
+      toggle.setAttribute("aria-label", stopped ? "Wznów przewijanie" : "Zatrzymaj przewijanie")
+    })
+    const pause = () => (paused = true)
+    const resume = () => (paused = false)
+    root.addEventListener("pointerenter", pause)
+    root.addEventListener("pointerleave", resume)
+    root.addEventListener("focusin", pause)
+    root.addEventListener("focusout", resume)
+    new IntersectionObserver(([entry]) => (visible = entry.isIntersecting)).observe(root)
+
+    window.setInterval(() => {
+      if (visible && !paused && !stopped && !document.hidden) go(1)
+    }, interval)
+  })
+</script>

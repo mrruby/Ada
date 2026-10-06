@@ -1,0 +1,21 @@
+---
+/**
+ * Floating "✦" sparkle of the Jesień landings. Position it with inset
+ * classes (`top-1/12 left-1/24`); the parent needs `relative`.
+ */
+import { cn } from "@/lib/cn"
+
+type Props = { class?: string }
+
+const { class: className } = Astro.props
+---
+
+<span
+  class={cn(
+    "pointer-events-none absolute animate-floaty text-2xl text-jesien-pink opacity-50 select-none motion-reduce:animate-none",
+    className
+  )}
+  aria-hidden="true"
+>
+  ✦
+</span>

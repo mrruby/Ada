@@ -1,0 +1,37 @@
+---
+/** Pitch written on a sheet of notebook paper, over the swaying purple swirl. */
+import { IconList, Section } from "@/components/ui"
+import type { IconItem } from "@/data/kolektyw/types"
+import type { LinkItem } from "@/lib/content"
+import KolektywButton from "./KolektywButton.astro"
+
+type Props = {
+  title: string
+  lead: string
+  points: IconItem[]
+  cta: LinkItem
+}
+
+const { title, lead, points, cta } = Astro.props
+---
+
+<Section bg="bg-lilac bg-art-swirl" width="full" class="py-20 text-black">
+  <div class="mx-auto flex justify-center overflow-hidden bg-art-notebook px-2 py-8 sm:max-w-sm md:max-w-lg md:px-12 lg:max-w-2xl">
+    <div class="max-w-sm pl-6 text-center">
+      <h2 class="mt-11 font-anton text-xl font-normal md:text-2xl">{title}</h2>
+      <p class="mt-6 mb-8 font-courier text-sm leading-loose md:text-base">{lead}</p>
+      <IconList
+        items={points}
+        inline
+        class="mb-8 gap-0 font-courier text-sm leading-loose md:text-base"
+      />
+      <KolektywButton
+        href={cta.href}
+        variant="outline"
+        class="min-w-32 text-xs md:px-6 md:py-4 md:text-sm"
+      >
+        {cta.label}
+      </KolektywButton>
+    </div>
+  </div>
+</Section>

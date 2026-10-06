@@ -1,0 +1,47 @@
+---
+/** Masterclass: "Sprawdź, czy to o Tobie" pain points + CTA. */
+import { Container, Reveal } from "@/components/ui"
+import {
+  JESIEN_MASTERCLASS_DAY,
+  JESIEN_MASTERCLASS_HERO_FORM_ID,
+  jesienMasterclassPains,
+} from "@/data/jesien"
+import EmojiItem from "../EmojiItem.astro"
+import JesienButton from "../JesienButton.astro"
+import JesienHeading from "../JesienHeading.astro"
+---
+
+<section class="bg-jesien-lavender py-16 lg:py-20">
+  <Container width="content" class="px-5">
+    <Reveal class="text-center">
+      <JesienHeading kicker="Rozpoznajesz to?">
+        Sprawdź, czy to <span class="text-jesien-pink">o Tobie</span> 👇
+      </JesienHeading>
+    </Reveal>
+
+    <div class="mt-8 grid gap-5 md:grid-cols-2">
+      {jesienMasterclassPains.map((item, index) => (
+        <EmojiItem
+          {...item}
+          as="div"
+          variant="card"
+          reveal
+          lift={false}
+          tone={index % 2 ? "pink" : "purple"}
+        />
+      ))}
+    </div>
+
+    <Reveal>
+      <p class="mx-auto mt-8 max-w-xl text-center text-lg font-bold">
+        Jeśli kiwasz głową przy chociaż jednym punkcie -
+        <strong>{JESIEN_MASTERCLASS_DAY} widzimy się na żywo. 💜</strong>
+      </p>
+    </Reveal>
+    <Reveal class="mt-9 text-center">
+      <JesienButton href={`#${JESIEN_MASTERCLASS_HERO_FORM_ID}`}>
+        ZAPISUJĘ SIĘ ZA 0 ZŁ 🔮
+      </JesienButton>
+    </Reveal>
+  </Container>
+</section>

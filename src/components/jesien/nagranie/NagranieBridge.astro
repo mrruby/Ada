@@ -1,0 +1,61 @@
+---
+/** /jesien-nagranie: bridge to MAGIC with a countdown to opening the doors. */
+import { Container, Reveal, TileCountdown } from "@/components/ui"
+import { JESIEN_DOORS_DATE_LABEL, JESIEN_DOORS_OPEN } from "@/data/jesien"
+import JesienHeading from "../JesienHeading.astro"
+
+const doorsOpenAtBuild = JESIEN_DOORS_OPEN.getTime() <= Date.now()
+---
+
+<section class="bg-jesien-lavender py-16 lg:py-20">
+  <Container width="narrow" class="px-5 text-center">
+    <Reveal>
+      <JesienHeading kicker="Co dalej?" class="mb-4">
+        Nie musisz wdrażać tego sama 💜
+      </JesienHeading>
+    </Reveal>
+
+    <Reveal class="grid gap-4 text-left text-jesien-ink-soft [&_strong]:text-jesien-ink">
+      <p>
+        Wiedza ze szkolenia to plan. Ale między planem a wynikami jest jeszcze
+        <strong>wdrożenie</strong>: ustawienia, teksty, grafiki, budżety, analityka… i te momenty,
+        kiedy kampania robi coś dziwnego o 23:00, a Ty już dawno chcesz mieć aktywne reklamy i
+        efekty.
+      </p>
+      <p>
+        Dokładnie od tego jest <strong>MAGIC</strong>, społeczność, w której przedsiębiorczynie
+        wdrażają reklamy pod okiem <strong>5 specjalistek</strong> (Meta Ads, copywriting, grafika,
+        koordynacja kampanii, AI i automatyzacje). Konsultujesz
+        <strong>SWOJE kampanie, teksty i grafiki</strong>, zanim wydasz budżet.
+      </p>
+      <p>
+        Jesteś na liście oczekujących, więc o otwarciu drzwi do Klubu
+        <strong>dowiesz się pierwsza</strong>.
+      </p>
+    </Reveal>
+
+    <Reveal>
+      <div
+        class="mt-6 flex flex-col items-center gap-2.5 rounded-3xl border-2 border-jesien-purple bg-white px-4 py-5 shadow-xl shadow-jesien-purple/15 sm:px-6"
+        data-countdown-scope
+        data-expired={doorsOpenAtBuild ? "" : undefined}
+      >
+        <p class="font-extrabold">
+          <span data-when="active">
+            🚪 Drzwi do <span class="text-jesien-purple">MAGIC</span> otwieramy za:
+          </span>
+          <span data-when="expired">
+            🚪 Drzwi do <span class="text-jesien-purple">MAGIC</span> są otwarte! 🎉
+          </span>
+        </p>
+        <div data-when="active">
+          <TileCountdown target={JESIEN_DOORS_OPEN} tone="bg-jesien-purple text-white" />
+        </div>
+        <p class="text-xs text-jesien-ink-soft">
+          <span data-when="active">{JESIEN_DOORS_DATE_LABEL}</span>
+          <span data-when="expired">Sprawdź skrzynkę. Czeka tam na Ciebie wiadomość 💌</span>
+        </p>
+      </div>
+    </Reveal>
+  </Container>
+</section>

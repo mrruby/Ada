@@ -1,0 +1,28 @@
+---
+/**
+ * Page frame of the Jesień funnel (/jesien, /jesien-nagranie,
+ * /jesien-masterclass): Montserrat on white in jesień ink, plus the dark
+ * footer with Instagram links.
+ */
+import { jesienInstagramLinks } from "@/data/jesien"
+import { newTabProps } from "@/lib/links"
+---
+
+<div class="w-full bg-white font-montserrat text-base leading-relaxed text-jesien-ink antialiased">
+  <main>
+    <slot />
+  </main>
+  <footer class="bg-jesien-ink py-8 text-sm text-jesien-purple-soft">
+    <div class="mx-auto flex max-w-5xl justify-end gap-5 px-5">
+      {jesienInstagramLinks.map(({ label, href }) => (
+        <a
+          href={href}
+          {...newTabProps}
+          class="font-semibold text-white transition-colors hover:text-jesien-pink-soft"
+        >
+          {label}
+        </a>
+      ))}
+    </div>
+  </footer>
+</div>

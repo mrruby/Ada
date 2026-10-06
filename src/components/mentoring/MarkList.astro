@@ -1,0 +1,44 @@
+---
+/**
+ * Mentoring bullet columns with a marker (preset over the shared IconList):
+ *  - "check" / "cross": large ✓ / ✗ glyph beside the text
+ *  - "tick":            small ✓ before the text
+ *  - "plus" / "minus":  round green / red icon beside the text
+ *
+ * <MarkList mark="check" columns={[leftItems, rightItems]} />
+ */
+import minusIcon from "@/assets/images/minus.svg"
+import plusIcon from "@/assets/images/plus.svg"
+import { IconList } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { RichText } from "@/lib/content"
+
+const marks = {
+  check: { icon: "✓", iconClass: "text-5xl font-extrabold", itemClass: "gap-4" },
+  cross: { icon: "✗", iconClass: "text-5xl font-extrabold", itemClass: "gap-4" },
+  tick: { icon: "✓", iconClass: "py-2 text-sm lg:text-lg", itemClass: "gap-1" },
+  plus: { icon: plusIcon, iconClass: "size-15", itemClass: "gap-4" },
+  minus: { icon: minusIcon, iconClass: "size-15", itemClass: "gap-4" },
+} as const
+
+type Props = {
+  columns: RichText[][]
+  mark?: keyof typeof marks
+  class?: string
+  columnClass?: string
+  itemClass?: string
+}
+
+const { columns, mark = "check", class: className, columnClass, itemClass } = Astro.props
+const preset = marks[mark]
+---
+
+<IconList
+  items={columns}
+  icon={preset.icon}
+  class={cn("gap-3 md:justify-between", className)}
+  columnClass={cn("gap-0 lg:max-w-lg", columnClass)}
+  itemClass={preset.itemClass}
+  iconClass={preset.iconClass}
+  textClass={cn("py-2 text-sm leading-tight font-medium lg:text-lg", itemClass)}
+/>

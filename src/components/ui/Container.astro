@@ -1,0 +1,24 @@
+---
+/** Centered, width-limited column without a background band. */
+import type { HTMLAttributes } from "astro/types"
+import { cn } from "@/lib/cn"
+
+/** Same keys as Section `width`. */
+const widths = {
+  narrow: "max-w-3xl",
+  content: "max-w-5xl",
+  wide: "max-w-6xl",
+  page: "max-w-7xl",
+} as const
+
+type Props = HTMLAttributes<"div"> & {
+  as?: "div" | "article" | "section" | "header" | "footer"
+  width?: keyof typeof widths
+}
+
+const { as: Tag = "div", width = "content", class: className, ...attrs } = Astro.props
+---
+
+<Tag class={cn("mx-auto w-full px-4", widths[width], className)} {...attrs}>
+  <slot />
+</Tag>

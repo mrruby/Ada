@@ -1,0 +1,27 @@
+---
+/**
+ * Inline "05 DNI 12 GODZ 30 MIN 10 SEK" countdown to the end of the MAGIC
+ * jesień promotion. Expiry flips the page's `[data-countdown-scope]`, so all
+ * `data-when` content on the page switches with it.
+ */
+import { Countdown } from "@/components/ui"
+import { MAGIC_JESIEN_PROMOTION_END } from "@/data/jesien"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  size?: "sm" | "lg"
+  class?: string
+}
+
+const { size = "sm", class: className } = Astro.props
+---
+
+<Countdown
+  target={MAGIC_JESIEN_PROMOTION_END}
+  labels={{ days: "dni", hours: "godz", minutes: "min", seconds: "sek" }}
+  labelPosition="bottom"
+  class={cn("inline-flex justify-start gap-0 font-semibold", size === "lg" && "text-xl", className)}
+  tileClass="flex-row items-baseline"
+  valueClass={size === "lg" ? "text-3xl" : "text-base"}
+  labelClass="mr-1.5 ml-0.5 text-xs tracking-wider uppercase opacity-70"
+/>

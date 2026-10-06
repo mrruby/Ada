@@ -1,0 +1,25 @@
+---
+/** Closing message card with a CTA, over the swaying orange wave. */
+import { Section } from "@/components/ui"
+import type { LinkItem, RichText } from "@/lib/content"
+import KolektywButton from "./KolektywButton.astro"
+
+type Props = {
+  title: string
+  text: RichText
+  cta: LinkItem
+  bg?: string
+}
+
+const { title, text, cta, bg = "bg-petal bg-art-magic-wave" } = Astro.props
+---
+
+<Section bg={bg} width="content" class="text-center text-black" innerClass="px-4 py-16 md:py-20">
+  <div class="mx-auto max-w-3xl rounded-3xl border border-tangerine bg-mint p-4 md:px-12 md:py-8">
+    <h2 class="p-2 font-anton text-2xl text-tangerine md:text-3xl">{title}</h2>
+    <p set:html={text} />
+  </div>
+  <KolektywButton href={cta.href} class="mt-4 max-w-60 py-2 text-sm md:min-w-72 md:text-sm">
+    {cta.label}
+  </KolektywButton>
+</Section>

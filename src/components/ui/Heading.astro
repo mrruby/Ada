@@ -1,0 +1,49 @@
+---
+/**
+ * Section heading with the two recurring type styles of the site:
+ *  - "anton":  condensed uppercase display type (Magic / campaign pages)
+ *  - "sans":   bold Montserrat (classic Ada pages)
+ * Use `size` for the responsive scale and `class` for one-off tweaks.
+ */
+import type { HTMLAttributes } from "astro/types"
+import { cn } from "@/lib/cn"
+
+const variants = {
+  anton: "font-anton font-normal uppercase leading-none",
+  sans: "font-montserrat font-bold leading-tight",
+  black: "font-montserrat font-black leading-tight",
+} as const
+
+const sizes = {
+  xs: "text-lg md:text-xl",
+  sm: "text-xl md:text-2xl",
+  md: "text-2xl md:text-3xl",
+  lg: "text-3xl md:text-5xl",
+  xl: "text-4xl md:text-6xl",
+  display: "text-5xl md:text-7xl",
+} as const
+
+const aligns = { left: "text-left", center: "text-center", right: "text-right" } as const
+
+type Props = HTMLAttributes<"h2"> & {
+  as?: "h1" | "h2" | "h3" | "h4" | "p" | "span"
+  variant?: keyof typeof variants
+  size?: keyof typeof sizes
+  align?: keyof typeof aligns
+}
+
+const {
+  as: Tag = "h2",
+  variant = "sans",
+  size = "md",
+  align,
+  class: className,
+  ...attrs
+} = Astro.props
+
+const alignClass = align && aligns[align]
+---
+
+<Tag class={cn(variants[variant], sizes[size], alignClass, className)} {...attrs}>
+  <slot />
+</Tag>

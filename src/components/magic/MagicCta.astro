@@ -1,0 +1,36 @@
+---
+/**
+ * Rounded uppercase CTA of the Magic pages (pink pill). Defaults to scrolling
+ * to the offer section; recolor it with a background class in `class`
+ * (`class="bg-blush"`). Other attributes (id, aria-*, data-*) reach the link.
+ */
+import type { ComponentProps } from "astro/types"
+import { Button } from "@/components/ui"
+import { MAGIC_PACKAGE_HREF } from "@/data/magic"
+import { cn } from "@/lib/cn"
+
+const sizes = {
+  /** Small on mobile, medium on desktop (case studies, results). */
+  sm: "text-xs md:text-xl",
+  /** Small on mobile, large on desktop (audience, Q&A). */
+  md: "text-xs md:text-3xl",
+  /** Prominent single CTA (hero, final CTA). */
+  lg: "min-h-16 px-8 text-lg md:min-h-20 md:px-12 md:text-2xl",
+} as const
+
+type Props = Omit<ComponentProps<typeof Button>, "variant" | "size"> & {
+  size?: keyof typeof sizes
+}
+
+const { href = MAGIC_PACKAGE_HREF, size = "sm", class: className, ...attrs } = Astro.props
+---
+
+<Button
+  href={href}
+  variant="pill"
+  size="none"
+  class={cn("min-h-14 min-w-32 px-6 font-extrabold uppercase", sizes[size], className)}
+  {...attrs}
+>
+  <slot />
+</Button>

@@ -1,0 +1,41 @@
+---
+/** "Rozpocznij współpracę z MAGIC" — what the call covers + Google Calendar booking embed. */
+import type { IconItem } from "@/data/kolektyw/types"
+import { ConsentFrame, IconList, Section } from "@/components/ui"
+import KolektywButton from "./KolektywButton.astro"
+import KolektywTitle from "./KolektywTitle.astro"
+
+type Props = {
+  id: string
+  title: string
+  lead: string
+  points: IconItem[]
+  cta: string
+  calendar: { id: string; src: string; title: string }
+  bg?: string
+}
+
+const { id, title, lead, points, cta, calendar, bg = "bg-cream" } = Astro.props
+---
+
+<Section bg={bg} id={id} class="text-black">
+  <div class="mx-auto max-w-6xl px-4 py-12">
+    <KolektywTitle class="mb-8 max-w-xl">{title}</KolektywTitle>
+    <p class="mb-6 text-center text-sm leading-relaxed font-bold md:text-base">{lead}</p>
+    <IconList items={points} class="mx-auto mb-8 max-w-2xl gap-0" itemClass="gap-2" />
+    <div class="mb-8 flex justify-center">
+      <KolektywButton href={`#${calendar.id}`} class="min-w-48">
+        {cta}
+      </KolektywButton>
+    </div>
+    <div id={calendar.id} class="mx-auto max-w-3xl bg-white p-2 md:p-3">
+      <ConsentFrame
+        src={calendar.src}
+        title={calendar.title}
+        provider="Google"
+        label="Pokaż kalendarz"
+        class="h-150"
+      />
+    </div>
+  </div>
+</Section>

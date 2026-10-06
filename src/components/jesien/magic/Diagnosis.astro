@@ -1,0 +1,129 @@
+---
+/**
+ * "Rozpoznajesz te zdania?" — Bez MAGIC / Z MAGIC toggle switching the list
+ * of statements and the phone notifications. The toggle sets `data-magic`
+ * on the `group` root; Tailwind `group-data-magic:` variants do the rest.
+ * `id` = section anchor, also the prefix of the toggled content's id.
+ */
+import { magicDiagnosis, magicPhoneWith, magicPhoneWithout } from "@/data/jesien"
+import { cn } from "@/lib/cn"
+import MjButton from "./MjButton.astro"
+import MjCard from "./MjCard.astro"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+
+type Props = { id?: string }
+const { id = "rozpoznajesz" } = Astro.props
+const contentId = `${id}-lista`
+
+const lists = [
+  { key: "without", class: "grid group-data-magic:hidden" },
+  { key: "with", class: "hidden group-data-magic:grid" },
+] as const
+const notifications = [
+  { items: magicPhoneWithout, class: "grid group-data-magic:hidden" },
+  { items: magicPhoneWith, class: "hidden group-data-magic:grid" },
+]
+const option =
+  "rounded-full px-4 py-2 font-semibold text-jesien-ink-soft transition-colors aria-pressed:bg-jesien-ink aria-pressed:text-white"
+---
+
+<MjSection id={id}>
+  <MjHeading
+    align="left"
+    title="Rozpoznajesz te zdania?"
+    accent="Zobacz, co możemy z nimi zrobić!"
+  />
+
+  <div class="group" data-diagnosis>
+    <div
+      class="mt-2.5 inline-flex gap-1 rounded-full border border-jesien-purple-soft/50 bg-lavender p-1"
+      role="group"
+      aria-label="Porównanie"
+    >
+      <button
+        type="button"
+        class={option}
+        aria-pressed="true"
+        aria-controls={contentId}
+        data-diagnosis-option="without"
+      >
+        Bez MAGIC
+      </button>
+      <button
+        type="button"
+        class={option}
+        aria-pressed="false"
+        aria-controls={contentId}
+        data-diagnosis-option="with"
+      >
+        Z MAGIC
+      </button>
+    </div>
+
+    <div id={contentId} class="mt-8 grid items-start gap-12 md:grid-cols-5">
+      <div class="min-w-0 md:col-span-3">
+        {lists.map((list) => (
+          <ul class={cn("gap-3", list.class)}>
+            {magicDiagnosis.map((item) => (
+              <MjCard as="li" class="flex items-start gap-3.5 p-4">
+                <span class="grid size-12 shrink-0 place-items-center rounded-xl bg-blush/50 text-xl group-data-magic:bg-periwinkle/30">
+                  {item.emoji}
+                </span>
+                <div>
+                  <b class="mb-0.5 block">{item[list.key].title}</b>
+                  <p class="text-sm text-jesien-ink-soft">{item[list.key].text}</p>
+                </div>
+              </MjCard>
+            ))}
+          </ul>
+        ))}
+        <div class="mt-6">
+          <MjButton href="#pakiety">Tak! Zwiększam sprzedaż dzięki reklamom</MjButton>
+        </div>
+      </div>
+
+      <div
+        class="mx-auto w-full max-w-xs rounded-4xl bg-jesien-ink p-3 shadow-xl shadow-jesien-ink/25 md:sticky md:top-6 md:col-span-2"
+        aria-label="Powiadomienia z tygodnia bez MAGIC i z MAGIC"
+        role="group"
+      >
+        <div class="min-h-128 overflow-hidden rounded-3xl bg-linear-160 from-lavender via-blush via-60% to-jesien-orange-soft px-3 py-5 text-jesien-ink">
+          <div class="mb-4 text-center">
+            <b class="block text-4xl leading-none font-medium">07:12</b>
+            <span class="text-xs opacity-80">poniedziałek, 28 września</span>
+          </div>
+          {notifications.map((set) => (
+            <div class={cn("gap-2", set.class)}>
+              {set.items.map((notification) => (
+                <div class="flex items-start gap-2 rounded-2xl bg-white/95 px-3 py-2.5 text-xs">
+                  <span class="grid size-8 shrink-0 place-items-center rounded-lg bg-blush text-base group-data-magic:bg-periwinkle/30">
+                    {notification.icon}
+                  </span>
+                  <div class="flex-1">
+                    <b class="block text-jesien-purple">{notification.app}</b>
+                    <p class="leading-snug">{notification.text}</p>
+                  </div>
+                  <small class="opacity-60">{notification.time}</small>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</MjSection>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-diagnosis]").forEach((root) => {
+    const options = root.querySelectorAll<HTMLButtonElement>("[data-diagnosis-option]")
+    options.forEach((button) =>
+      button.addEventListener("click", () => {
+        const withMagic = button.dataset.diagnosisOption === "with"
+        root.toggleAttribute("data-magic", withMagic)
+        options.forEach((other) => other.setAttribute("aria-pressed", String(other === button)))
+      })
+    )
+  })
+</script>

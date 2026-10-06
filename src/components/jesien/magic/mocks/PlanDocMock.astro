@@ -1,0 +1,35 @@
+---
+/** Illustrative "Twój MAGIC Plan" document. */
+import { magicPlanSteps } from "@/data/jesien"
+import { mockCard } from "./mockCard"
+---
+
+<div class:list={[mockCard, "max-w-md p-4"]} aria-label="Przykładowy MAGIC Plan" role="group">
+  <div class="mb-2.5 flex items-center gap-3 border-b border-jesien-lavender pb-3">
+    <span class="grid size-10 place-items-center rounded-xl bg-lemon/25 text-lg">🎯</span>
+    <div>
+      <b class="block">Twój MAGIC Plan</b>
+      <span class="text-xs text-jesien-ink-soft">przygotowany przez Nicolę po spotkaniu 1:1</span>
+    </div>
+  </div>
+  <ol class="grid gap-1.5">
+    {magicPlanSteps.map((step, index) => (
+      <li class="flex items-center gap-2.5 rounded-lg bg-jesien-lavender px-2.5 py-2 text-sm">
+        <i class="grid size-6 shrink-0 place-items-center rounded-full bg-marigold text-xs font-bold not-italic">
+          {index + 1}
+        </i>
+        <div class="flex-1">
+          <b class="block font-semibold">{step.title}</b>
+          <span class="text-xs text-jesien-ink-soft">{step.detail}</span>
+        </div>
+        <em class="text-xs font-semibold whitespace-nowrap text-jesien-purple not-italic">
+          {step.week}
+        </em>
+      </li>
+    ))}
+  </ol>
+  <div class="mt-3 flex justify-between rounded-lg bg-periwinkle/30 px-3 py-2.5 text-sm">
+    <span>Budżet na start</span>
+    <b>30–50 zł / dzień</b>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+---
+/** Hero of the Magic sales pages: "Meta Ads/AI Girls Inside Club". */
+import { Image } from "astro:assets"
+import heroImage from "@/assets/images/magic-landing-2026-hero.webp"
+import star from "@/assets/images/star-pink.webp"
+import { TypingText } from "@/components/ui"
+import MagicCta from "./MagicCta.astro"
+---
+
+<section class="bg-neutral-100 px-4 pt-8 pb-8 sm:px-6 sm:pt-10 md:px-12 md:pt-16">
+  <div class="mx-auto grid max-w-5xl items-center gap-6 lg:grid-cols-2 lg:gap-8">
+    <div class="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+      <div class="flex items-start gap-3">
+        <h1 class="max-w-xs text-3xl leading-none font-extrabold text-marigold sm:max-w-md sm:text-4xl md:max-w-none md:text-5xl lg:text-6xl">
+          Meta <TypingText mode="words" words={["Ads", "AI"]} speed={150} pause={2000} />
+          <br />
+          Girls Inside Club
+        </h1>
+        <Image
+          src={star}
+          alt=""
+          width={48}
+          height={48}
+          densities={[1, 2]}
+          class="mt-2 hidden shrink-0 sm:block"
+        />
+      </div>
+
+      <p class="max-w-xs text-base text-black sm:max-w-lg md:text-xl md:leading-8">
+        Skaluj swój biznes dzięki reklamom, AI i automatyzacjom: z konkretnym planem wdrożeniowym.
+      </p>
+
+      <MagicCta
+        size="lg"
+        class="min-h-0 bg-blush px-5 py-1.5 shadow-none hover:shadow-xl md:min-h-0 md:px-12 md:py-6"
+      >
+        DOŁĄCZAM
+      </MagicCta>
+
+      <p class="flex items-center gap-2 text-base leading-none font-bold text-marigold md:text-2xl">
+        <Image src={star} alt="" width={24} height={24} densities={[1, 2]} />
+        MAGIC
+      </p>
+    </div>
+
+    <Image
+      src={heroImage}
+      alt="Marketing Ads Girls Inside Club"
+      widths={[320, 480, 560, 1120]}
+      sizes="(min-width: 1024px) 560px, (min-width: 640px) 384px, 82vw"
+      loading="eager"
+      fetchpriority="high"
+      class="mx-auto h-auto w-full max-w-xs sm:max-w-sm md:max-w-lg lg:mx-0 lg:-mb-10 lg:max-w-xl"
+    />
+  </div>
+</section>

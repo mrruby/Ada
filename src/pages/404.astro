@@ -1,0 +1,13 @@
+---
+import { Button } from "@/components/ui"
+import SiteLayout from "@/layouts/SiteLayout.astro"
+---
+
+<SiteLayout title="404: Ta strona nie istnieje">
+  <section class="flex flex-col items-center justify-center px-4 py-40 text-center md:py-80">
+    <h1 class="pb-8 text-5xl font-bold">Ta strona nie istnieje, błąd 404.</h1>
+    <Button href="/" size="lg" class="w-full max-w-md lg:text-2xl">
+      Przejdź na stronę główną
+    </Button>
+  </section>
+</SiteLayout>

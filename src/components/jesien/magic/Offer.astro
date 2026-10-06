@@ -1,0 +1,149 @@
+---
+/**
+ * Subscription plans (sales currently paused: buttons are disabled), what
+ * every plan includes and the agency-vs-MAGIC calculator. Promo and regular
+ * prices are both rendered and swapped via `data-when`.
+ */
+import {
+  MAGIC_AGENCY_MONTHLY,
+  MAGIC_REGULAR_PRICE,
+  magicPlanIncludes,
+  magicPlans,
+} from "@/data/jesien"
+import { cn } from "@/lib/cn"
+import MjButton from "./MjButton.astro"
+import MjCard from "./MjCard.astro"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+
+const formatPrice = (value: number) => new Intl.NumberFormat("pl-PL").format(value)
+const zl = (value: number) => `${formatPrice(value)} zł`
+
+const calculator = magicPlans.map((plan) => ({
+  period: plan.months === 1 ? "1 miesiąc" : `${plan.months} ${plan.monthsLabel}`,
+  agency: plan.months === 1 ? "2 000 zł" : `${plan.months * 2} 000 zł`,
+  magic: [plan.promoPrice, MAGIC_REGULAR_PRICE].map((price) => zl(price * plan.months)),
+  saved: [plan.promoPrice, MAGIC_REGULAR_PRICE].map((price) =>
+    zl((MAGIC_AGENCY_MONTHLY - price) * plan.months)
+  ),
+}))
+const cell = "rounded-xl bg-jesien-lavender"
+---
+
+<MjSection id="pakiety">
+  <MjHeading
+    eyebrow="Twój zespół od reklam"
+    title="MAGIC to Twój zespół od reklam,"
+    accent="bez etatu i bez faktur od agencji"
+    lead='Zakres każdej subskrypcji MAGIC jest ten sam, różni się tylko długością i ceną za miesiąc.<span data-when="active"> Ceny promocyjne obowiązują do 28.09, do końca dnia.</span>'
+  />
+
+  <div class="mt-10 grid items-stretch gap-4 lg:grid-cols-3">
+    {magicPlans.map((plan) => (
+      <MjCard
+        as="article"
+        lift
+        class={cn(
+          "relative flex flex-col gap-1 px-6 pt-7 pb-6",
+          plan.featured && "order-first border-2 border-jesien-pink lg:order-none"
+        )}
+      >
+        {plan.badge && (
+          <span
+            class={cn(
+              "absolute -top-3.5 left-5 rounded-full px-3.5 py-1.5 text-xs font-bold tracking-widest whitespace-nowrap uppercase",
+              plan.badge.tone === "orange" ? "bg-marigold" : "bg-periwinkle"
+            )}
+          >
+            {plan.badge.text}
+          </span>
+        )}
+        <div class="text-sm font-semibold text-jesien-ink-soft">{plan.label}</div>
+        <div class="mt-1 mb-1.5 flex items-baseline gap-1.5 leading-none">
+          <b class="text-6xl font-extrabold tracking-tight text-marigold">{plan.months}</b>
+          <span class="text-xl font-semibold">{plan.monthsLabel}</span>
+        </div>
+        <div class="flex flex-wrap items-baseline gap-2">
+          <b class="text-4xl leading-none font-bold tracking-tight">
+            <span data-when="active">{plan.promoPrice} zł</span>
+            <span data-when="expired">{MAGIC_REGULAR_PRICE} zł</span>
+          </b>
+          <span class="text-jesien-ink-soft">/ miesiąc</span>
+        </div>
+        <div class="text-sm text-jesien-ink-soft" data-when="active">
+          cena regularna <s>{MAGIC_REGULAR_PRICE} zł</s>
+          {plan.wasSuffix}
+        </div>
+        {plan.save && (
+          <span
+            class="mt-2 mb-1 rounded-full bg-lemon px-3 py-1 text-sm leading-snug font-semibold"
+            data-when="active"
+          >
+            {plan.save}
+          </span>
+        )}
+        <p class="mt-4 mb-4 flex-1 text-sm text-jesien-ink-soft">{plan.when}</p>
+        {plan.renew && (
+          <p class="mb-4 rounded-lg bg-jesien-lavender px-3 py-2 text-sm">{plan.renew}</p>
+        )}
+        <MjButton disabled class="w-full px-4 py-3.5 text-sm">
+          Zapisy wstrzymane
+        </MjButton>
+      </MjCard>
+    ))}
+  </div>
+
+  <MjCard class="mx-auto mt-6 max-w-3xl px-6 py-5">
+    <b class="mb-3 block">W każdym pakiecie dostajesz to samo:</b>
+    <ul class="grid gap-2">
+      {magicPlanIncludes.map((html) => (
+        <li class="flex gap-2.5 text-sm text-jesien-ink-soft [&_strong]:font-semibold [&_strong]:text-jesien-ink">
+          <span class="font-bold text-jesien-purple" aria-hidden="true">
+            ✓
+          </span>
+          <span set:html={html} />
+        </li>
+      ))}
+    </ul>
+  </MjCard>
+
+  <MjCard class="mx-auto mt-6 max-w-3xl p-6">
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-4">
+      <b>Kalkulator: agencja czy MAGIC?</b>
+      <span class="text-sm text-jesien-ink-soft">
+        przy stawce 2 000 zł / miesiąc za prowadzenie reklam
+      </span>
+    </div>
+    <div class="grid gap-1.5 text-sm text-jesien-ink-soft">
+      <div class="hidden grid-cols-4 gap-2.5 px-3 pb-1 text-xs font-semibold tracking-wider uppercase sm:grid">
+        <span>okres</span>
+        <span>agencja lub freelancer</span>
+        <span>MAGIC</span>
+        <span>zostaje w Twoim budżecie</span>
+      </div>
+      {calculator.map((row) => (
+        <div class={cn("grid grid-cols-2 items-center gap-2.5 px-3 py-2.5 sm:grid-cols-4", cell)}>
+          <span class="col-span-2 font-bold text-jesien-ink sm:col-span-1 sm:font-normal sm:text-jesien-ink-soft">
+            {row.period}
+          </span>
+          <span>{row.agency}</span>
+          <span>
+            <span data-when="active">{row.magic[0]}</span>
+            <span data-when="expired">{row.magic[1]}</span>
+          </span>
+          <b class="justify-self-start rounded-full bg-lemon/25 px-3 py-1 font-bold text-jesien-ink">
+            <span data-when="active">{row.saved[0]}</span>
+            <span data-when="expired">{row.saved[1]}</span>
+          </b>
+        </div>
+      ))}
+    </div>
+  </MjCard>
+
+  <p class="mt-4 text-center text-sm text-jesien-ink-soft">
+    <span data-when="active">
+      Promocja trwa do 28.09.2026, do końca dnia, i jest otwarta dla wszystkich.
+    </span>
+    <span data-when="expired">Promocja zakończona. Sprawdź aktualną ofertę w koszyku.</span>
+  </p>
+</MjSection>

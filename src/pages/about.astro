@@ -1,0 +1,113 @@
+---
+import { Image } from "astro:assets"
+import aboutPortrait from "@/assets/images/ada_about.webp"
+import AboutHero from "@/components/about/AboutHero.astro"
+import AboutIntro from "@/components/about/AboutIntro.astro"
+import ResourceCard from "@/components/about/ResourceCard.astro"
+import ServiceCard from "@/components/about/ServiceCard.astro"
+import { FlowerFeature } from "@/components/sections"
+import { Button, Decor, GhostHeading, MarkerHeading, Section } from "@/components/ui"
+import { social } from "@/config/site"
+import { aboutMe, features, personalFacts, resources, services } from "@/data/about"
+import SiteLayout from "@/layouts/SiteLayout.astro"
+
+const listItem = "py-0.5 text-sm lg:text-xl"
+---
+
+<SiteLayout title="O mnie">
+  <AboutHero />
+  <AboutIntro />
+
+  <!-- Features: pink band with titles, descriptions spill into the white band -->
+  <Section class="relative overflow-hidden bg-lavender lg:bg-linear-to-b lg:from-lavender lg:from-50% lg:to-white lg:to-50%">
+    <Decor art="two-flowers" class="-top-10 -right-28 hidden lg:block" />
+    <ul class="flex flex-col items-center justify-center gap-1 pb-6 md:flex-row md:items-start lg:gap-2.5 lg:pb-36">
+      {features.map((feature) => (
+        <li>
+          <FlowerFeature title={feature.title} text={feature.text} textClass="lg:mt-16" />
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section bg="bg-linear-to-b from-petal-light via-white to-petal-light" id="uslugi">
+    <div class="flex flex-col items-center py-6 lg:pt-16 lg:pb-10">
+      <GhostHeading ghost="Czujesz, że nadajemy na tych" class="px-6">
+        samych falach?
+      </GhostHeading>
+      <p class="py-8 text-center text-xl">Zobacz, w jaki sposób możemy współpracować.</p>
+      <div class="flex flex-col gap-4 md:flex-row lg:gap-14">
+        {services.map((service) => (
+          <ServiceCard {...service} />
+        ))}
+      </div>
+    </div>
+    <div class="flex flex-col items-center px-2 pb-16 text-center lg:pl-28">
+      <p class="max-w-3xl pb-6 text-sm lg:text-2xl">
+        <strong>Gościnny występ w podcaście, wspólny live?</strong> Napisz do mnie, a razem
+        wymyślimy, co specjalnego możemy razem zrobić!
+      </p>
+      <Button href="/contact" variant="outline" class="lg:text-xl">
+        Piszę do Ciebie!
+      </Button>
+    </div>
+  </Section>
+
+  <Section class="relative">
+    <div class="relative flex flex-col px-2 pt-16 lg:flex-row xl:pl-28">
+      <div class="bg-art-meetme hidden h-56 w-md md:absolute md:-right-40 md:flex lg:right-0"></div>
+      <div class="pt-16 pb-16 lg:pt-2.5">
+        <MarkerHeading>Tu mnie spotkasz</MarkerHeading>
+        <ul class="max-w-xl pt-4">
+          <li class={listItem}>
+            Online: na Instagramie{" "}
+            <a href={social.instagram} class="font-bold hover:text-rose">
+              @adapromis
+            </a>
+          </li>
+          <li class={listItem}>
+            Face to face: <strong>z laptopem w ręce zwiedzam kameralne kawiarnie na Śląsku</strong>
+            (wtedy gdy nie podróżuję)
+          </li>
+        </ul>
+        <ul class="pt-16 lg:pt-24">
+          {personalFacts.map((fact) => (
+            <li class={listItem} set:html={fact} />
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <Section bg="bg-linear-to-b from-lavender to-white">
+    <div class="relative flex min-h-152 w-full flex-col justify-end lg:flex-row">
+      <Image
+        src={aboutPortrait}
+        alt="Ada Promis-Urbas"
+        width={521}
+        height={644}
+        class="-top-8 md:-left-32 lg:absolute xl:left-5"
+      />
+      <div class="px-3 pt-16 xl:pr-24">
+        <GhostHeading ghost="O mnie" size="lg" align="left" bounce={false}>
+          Cześć
+        </GhostHeading>
+        <ul class="max-w-xl list-disc pt-4 pl-5">
+          {aboutMe.map((item) => (
+            <li class="text-sm leading-tight lg:text-lg" set:html={item} />
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center gap-20 py-10 md:flex-row md:pb-44">
+      <MarkerHeading class="max-w-xl">
+        Przygotowałam <br class="hidden md:block" />
+        dla Ciebie
+      </MarkerHeading>
+      {resources.map((resource) => (
+        <ResourceCard {...resource} />
+      ))}
+    </div>
+  </Section>
+</SiteLayout>

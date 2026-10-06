@@ -1,0 +1,37 @@
+---
+import JesienCountdownBar from "@/components/jesien/JesienCountdownBar.astro"
+import JesienShell from "@/components/jesien/JesienShell.astro"
+import LandingAbout from "@/components/jesien/landing/LandingAbout.astro"
+import LandingFinale from "@/components/jesien/landing/LandingFinale.astro"
+import LandingHero from "@/components/jesien/landing/LandingHero.astro"
+import LandingMagic from "@/components/jesien/landing/LandingMagic.astro"
+import LandingReviews from "@/components/jesien/landing/LandingReviews.astro"
+import { OG_ADA_PURPLE } from "@/config/site"
+import {
+  JESIEN_DEADLINE,
+  JESIEN_DEADLINE_DAY,
+  JESIEN_PAGE_DESCRIPTION,
+  JESIEN_PAGE_TITLE,
+} from "@/data/jesien"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+---
+
+<BaseLayout title={JESIEN_PAGE_TITLE} description={JESIEN_PAGE_DESCRIPTION} image={OG_ADA_PURPLE}>
+  <JesienShell>
+    <JesienCountdownBar target={JESIEN_DEADLINE}>
+      <Fragment slot="label">
+        ⏳ Nagranie za 0 zł jest dostępne tylko do
+        <strong class="text-jesien-pink">{JESIEN_DEADLINE_DAY}, do końca dnia</strong>
+      </Fragment>
+      <Fragment slot="expired">
+        ⏳ Czas minął. Szkolenie jest już w
+        <strong class="text-jesien-pink">płatnej sprzedaży</strong>
+      </Fragment>
+    </JesienCountdownBar>
+    <LandingHero />
+    <LandingAbout />
+    <LandingMagic />
+    <LandingReviews />
+    <LandingFinale />
+  </JesienShell>
+</BaseLayout>

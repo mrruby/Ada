@@ -1,0 +1,17 @@
+import { fileURLToPath } from "node:url"
+import { defineConfig } from "vitest/config"
+
+export default defineConfig({
+  resolve: {
+    alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
+  },
+  test: {
+    include: ["tests/unit/**/*.test.ts"],
+    environment: "node",
+    setupFiles: ["tests/unit/setup.ts"],
+    // Every test starts from the env/globals/mocks defined in setup.ts.
+    unstubEnvs: true,
+    unstubGlobals: true,
+    restoreMocks: true,
+  },
+})

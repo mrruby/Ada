@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets"
+import advantageMockup from "@/assets/images/advantage-mockup.webp"
+import TrainingLanding from "@/components/training/TrainingLanding.astro"
+import { advantage } from "@/data/training/advantage"
+import formHtml from "@/forms/form-marketerki.html?raw"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+const { seoTitle, ...landing } = advantage
+---
+
+<BaseLayout title={seoTitle}>
+  <TrainingLanding {...landing} formHtml={formHtml}>
+    <div slot="mockup" class="overflow-hidden">
+      <Image
+        src={advantageMockup}
+        alt="Ściąga Advantage+ na telefonie i laptopie"
+        widths={[640, 1080]}
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        class="-mt-20 -mb-28 h-auto w-full lg:-mt-28 lg:-mb-36"
+      />
+    </div>
+  </TrainingLanding>
+</BaseLayout>

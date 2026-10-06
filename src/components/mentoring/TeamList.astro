@@ -1,0 +1,41 @@
+---
+/**
+ * Team specialists: round portrait + name + bio, alternating sides.
+ * Renders with id="team" (agenda items link to it).
+ *
+ * <TeamList members={teamGuests} />
+ */
+import { Image } from "astro:assets"
+import { cn } from "@/lib/cn"
+import type { TeamMember } from "@/lib/content"
+
+type Props = {
+  members: TeamMember[]
+  id?: string
+  class?: string
+}
+
+const { members, id = "team", class: className } = Astro.props
+---
+
+<ul id={id} class={cn("mx-auto flex flex-col gap-4 py-8", className)}>
+  {members.map((member, index) => (
+    <li
+      class={cn(
+        "mx-auto flex flex-col items-center gap-12",
+        index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+      )}
+    >
+      <Image
+        src={member.photo}
+        alt={member.alt ?? member.name}
+        width={290}
+        class="size-72 shrink-0 object-cover"
+      />
+      <div class="max-w-2xl px-3 tracking-widest">
+        <h4 class="font-bold md:text-3xl">{member.name}</h4>
+        {member.bio && <p class="md:text-lg" set:html={member.bio} />}
+      </div>
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,21 @@
+---
+/** Vertical video testimonials of Magic members (carousel). */
+import { VideoGrid } from "@/components/sections"
+import { magicVideoOpinions } from "@/data/jesien"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+---
+
+<MjSection id="opinie-wideo" center>
+  <MjHeading eyebrow="Opinie wideo" title="Klubowiczki o MAGIC" accent="własnymi słowami" />
+  <VideoGrid
+    layout="carousel"
+    perView="peek"
+    videos={magicVideoOpinions}
+    loop={false}
+    label="Pięć nagrań klubowiczek"
+    class="mx-auto mt-8 max-w-6xl"
+    videoClass="mx-auto max-w-72 rounded-3xl bg-periwinkle/30"
+    sizes="(max-width: 600px) 280px, 260px"
+  />
+</MjSection>

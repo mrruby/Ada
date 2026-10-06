@@ -1,0 +1,67 @@
+---
+/**
+ * Lavender band with "time left to join" countdown in a navy frame.
+ *  - layout "bar":   logo, title, countdown and CTA in one row (top of page)
+ *  - layout "stack": title above a wide countdown (closing reminder)
+ * Default slot renders below the row (e.g. the page claim).
+ */
+import { Image } from "astro:assets"
+import logo from "@/assets/images/logo.webp"
+import { Countdown, Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { LinkItem } from "@/lib/content"
+import WorkshopButton from "./WorkshopButton.astro"
+
+type Props = {
+  title: string
+  target: string | Date
+  layout?: "bar" | "stack"
+  cta?: LinkItem
+  class?: string
+}
+
+const { title, target, layout = "stack", cta, class: className } = Astro.props
+const bar = layout === "bar"
+---
+
+<Section
+  bg="bg-lavender"
+  width="full"
+  class={cn("relative overflow-hidden", className)}
+  innerClass={cn(
+    "flex flex-col items-center gap-10 px-2",
+    bar ? "py-5" : "animate-fadeIn py-20 md:pt-14"
+  )}
+>
+  <slot name="decor" />
+  <div class={cn("flex flex-col items-center gap-10", bar && "lg:flex-row")}>
+    {bar && (
+      <a href="/" aria-label="Strona główna">
+        <Image src={logo} alt="Ada Promis" width={35} height={35} loading="eager" />
+      </a>
+    )}
+    <h2
+      class={cn(
+        "animate-settle text-center text-xl font-bold",
+        !bar && "pt-5 leading-tight lg:text-4xl"
+      )}
+    >
+      {title}
+    </h2>
+    <div class={cn("flex justify-center border border-navy px-2 sm:px-4", !bar && "md:min-w-2xl")}>
+      <Countdown
+        target={target}
+        class="justify-around gap-2 px-2 py-2 sm:gap-4 sm:px-4 md:gap-8"
+        tileClass="text-sm font-bold sm:text-base md:text-xl"
+        labelClass="font-medium"
+        valueClass="text-xl sm:text-2xl"
+      />
+    </div>
+    {cta && (
+      <WorkshopButton href={cta.href} class="md:w-sm md:px-2 md:text-2xl">
+        {cta.label}
+      </WorkshopButton>
+    )}
+  </div>
+  <slot />
+</Section>

@@ -1,0 +1,34 @@
+---
+/**
+ * Rounded CTA of the Magic collective pages, built on the shared Button.
+ *  - "orange":  solid orange, bold uppercase label (booking CTAs)
+ *  - "outline": cream with orange outline and Anton label
+ *  - "mint":    mint with orange outline and Anton label (hero)
+ * Other attributes (id, aria-*, data-*, newTab) are passed to Button.
+ */
+import type { ComponentProps } from "astro/types"
+import { Button } from "@/components/ui"
+import { cn } from "@/lib/cn"
+
+const variants = {
+  orange: "bg-tangerine px-6 py-3 text-sm font-bold uppercase text-white md:text-base",
+  outline: "border border-tangerine bg-cream px-6 py-3 font-anton font-normal text-tangerine",
+  mint: "border border-tangerine bg-mint px-6 py-3 font-anton font-normal text-tangerine",
+} as const
+
+type Props = Omit<ComponentProps<typeof Button>, "variant" | "size"> & {
+  href: string
+  variant?: keyof typeof variants
+}
+
+const { variant = "orange", class: className, ...attrs } = Astro.props
+---
+
+<Button
+  variant="bare"
+  size="none"
+  class={cn("rounded-full tracking-wide hover:opacity-90", variants[variant], className)}
+  {...attrs}
+>
+  <slot />
+</Button>

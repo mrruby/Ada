@@ -1,0 +1,203 @@
+---
+/**
+ * Magda's case study told in four tabs (ARIA tabs), plus her testimonial.
+ * Without JS all four panels are shown one under another; the script hides
+ * the inactive ones. `id` = section anchor, also the prefix of tab/panel ids.
+ */
+import { Image } from "astro:assets"
+import magdaOpinion from "@/assets/images/magic-jesien/op01.webp"
+import { magdaRoles, magdaValues } from "@/data/jesien"
+import { cn } from "@/lib/cn"
+import MjButton from "./MjButton.astro"
+import MjCard from "./MjCard.astro"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+
+type Props = { id?: string }
+const { id = "case" } = Astro.props
+const tabId = (index: number) => `${id}-tab-${index}`
+const panelId = (index: number) => `${id}-panel-${index}`
+
+const tabs = ["✅ Kim jest Magda?", "✅ Z czym przyszła?", "✅ Co ceni w MAGIC?", "✅ Komu poleca?"]
+const roleTone = (index: number) =>
+  (index + 1) % 3 === 0 ? "bg-lemon/25" : (index + 1) % 2 === 0 ? "bg-blush" : "bg-lavender"
+const panelHeading = "mb-2.5 text-xl font-semibold"
+---
+
+<MjSection id={id}>
+  <MjHeading
+    eyebrow="💼 Case study przedsiębiorczyni"
+    title="Jak Magda uporządkowała chaos reklamowy w swoim biznesie"
+    accent="(i przestała bać się Menedżera Reklam)?"
+  />
+
+  <MjCard class="mx-auto mt-9 max-w-4xl overflow-hidden px-6 pt-5 pb-6" data-story>
+    <div class="mb-4 grid grid-cols-4 gap-1.5" aria-hidden="true">
+      {tabs.map((_, index) => (
+        <i
+          class="relative block h-1.5 overflow-hidden rounded-full bg-jesien-purple-soft/50 after:absolute after:inset-y-0 after:left-0 after:w-0 after:rounded-full after:bg-marigold data-done:after:w-full"
+          data-story-bar
+          data-done={index === 0 ? "" : undefined}
+        ></i>
+      ))}
+    </div>
+
+    <div class="mb-5 flex flex-wrap gap-1.5" role="tablist" aria-label="Historia Magdy">
+      {tabs.map((label, index) => (
+        <button
+          type="button"
+          role="tab"
+          id={tabId(index)}
+          aria-controls={panelId(index)}
+          aria-selected={index === 0 ? "true" : "false"}
+          tabindex={index === 0 ? 0 : -1}
+          class="rounded-full border border-jesien-purple-soft/50 bg-white px-3.5 py-2 text-sm font-semibold text-jesien-ink-soft transition-colors aria-selected:border-transparent aria-selected:bg-blush aria-selected:text-jesien-ink"
+          data-story-tab
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid gap-8">
+      <div
+        role="tabpanel"
+        id={panelId(0)}
+        aria-labelledby={tabId(0)}
+        tabindex="0"
+        class="animate-fadeInUp"
+      >
+        <div class="grid items-center gap-8 md:grid-cols-5">
+          <div class="md:col-span-3">
+            <h3 class={panelHeading}>Soloprzedsiębiorczyni i świeżo upieczona mama</h3>
+            <p class="text-jesien-ink-soft">
+              Magda pełni w swoim biznesie wiele ról jednocześnie: od obsługi klienta przez
+              marketing po finanse. W natłoku obowiązków szukała sposobu, by ogarnąć reklamową część
+              biznesu.
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-2 md:col-span-2" aria-hidden="true">
+            {magdaRoles.map((role, index) => (
+              <span
+                class={cn(
+                  "rounded-full px-3.5 py-2 text-sm font-semibold",
+                  index % 2 ? "rotate-2" : "-rotate-2",
+                  roleTone(index)
+                )}
+              >
+                {role}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div
+        role="tabpanel"
+        id={panelId(1)}
+        aria-labelledby={tabId(1)}
+        tabindex="0"
+        class="animate-fadeInUp"
+      >
+        <p class="mj-serif mt-1.5 mb-4 text-2xl text-jesien-ink md:text-4xl">
+          „<span>Jak ustawić reklamy i nie zwariować?</span>
+          <i class="ml-0.5 inline-block h-7 w-0.5 animate-blink bg-marigold align-middle md:h-9"></i>
+          ”
+        </p>
+        <p class="text-jesien-ink-soft">
+          Chociaż w sieci jest mnóstwo porad o reklamach, zebranie ich w spójną całość to nie lada
+          wyzwanie. Magda miała podstawową wiedzę i pewność, że Menedżer Reklam „nie gryzie”, ale
+          wiedza teoretyczna to jedno, a samodzielne ustawianie reklam to drugie. Szukała wsparcia i
+          przestrzeni do ulepszania pomysłów.
+        </p>
+      </div>
+
+      <div
+        role="tabpanel"
+        id={panelId(2)}
+        aria-labelledby={tabId(2)}
+        tabindex="0"
+        class="animate-fadeInUp"
+      >
+        <p class="mb-4 text-jesien-ink-soft">Dla Magdy MAGIC to przede wszystkim:</p>
+        <div class="grid gap-3.5 md:grid-cols-2">
+          {magdaValues.map((value) => (
+            <div class="rounded-2xl border border-lavender bg-jesien-lavender p-4">
+              <span class="mb-1.5 block text-2xl">{value.emoji}</span>
+              <b class="mb-1 block">{value.title}</b>
+              <p class="text-sm text-jesien-ink-soft">{value.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div
+        role="tabpanel"
+        id={panelId(3)}
+        aria-labelledby={tabId(3)}
+        tabindex="0"
+        class="animate-fadeInUp"
+      >
+        <div class="md:w-3/5">
+          <h3 class={panelHeading}>
+            Soloprzedsiębiorczyniom, które pełnią w swoim biznesie pięć różnych ról na raz.
+          </h3>
+          <p class="mb-4 text-jesien-ink-soft">
+            Jeśli też jesteś obsługą klienta, marketingiem, finansami i sprzedażą w jednej osobie,
+            MAGIC jest miejscem, gdzie reklamową część zdejmujesz z „listy wstydu”.
+          </p>
+          <MjButton href="#pakiety">Ja też tak chcę!</MjButton>
+        </div>
+      </div>
+    </div>
+  </MjCard>
+
+  <div class="mt-10 text-center">
+    <h3 class="text-2xl font-semibold">Zobacz, co mówi Magda 👇</h3>
+    <Image
+      src={magdaOpinion}
+      alt="Opinia Magdy Sikorskiej o MAGIC: na MAGIC nikt nie zostaje bez odpowiedzi"
+      widths={[560, 640]}
+      sizes="(min-width: 640px) 560px, 100vw"
+      class="mx-auto mt-5 h-auto w-full max-w-xl -rotate-1 rounded-3xl shadow-xl shadow-jesien-ink/20"
+    />
+  </div>
+</MjSection>
+
+<script>
+  // ARIA tabs: click or ←/→/Home/End to switch; progress bars fill up to the
+  // active tab. Panels are visible in the HTML and hidden here on init.
+  document.querySelectorAll<HTMLElement>("[data-story]").forEach((story) => {
+    const tabs = [...story.querySelectorAll<HTMLButtonElement>("[data-story-tab]")]
+    const bars = [...story.querySelectorAll<HTMLElement>("[data-story-bar]")]
+    const panels = tabs.map((tab) => document.getElementById(tab.getAttribute("aria-controls")!))
+
+    const select = (active: number, focus = false) => {
+      tabs.forEach((tab, index) => {
+        const selected = index === active
+        tab.setAttribute("aria-selected", String(selected))
+        tab.tabIndex = selected ? 0 : -1
+        panels[index]?.toggleAttribute("hidden", !selected)
+        bars[index]?.toggleAttribute("data-done", index <= active)
+      })
+      if (focus) tabs[active].focus()
+    }
+
+    select(0)
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => select(index))
+      tab.addEventListener("keydown", (event) => {
+        const keys: Record<string, number> = {
+          ArrowRight: (index + 1) % tabs.length,
+          ArrowLeft: (index + tabs.length - 1) % tabs.length,
+          Home: 0,
+          End: tabs.length - 1,
+        }
+        const next = keys[event.key]
+        if (next === undefined) return
+        event.preventDefault()
+        select(next, true)
+      })
+    })
+  })
+</script>

@@ -1,0 +1,21 @@
+---
+/** Long-form legal document page (policy, terms) from the `legal` collection. */
+import { getEntry, render } from "astro:content"
+import { Prose } from "@/components/ui"
+import SiteLayout from "./SiteLayout.astro"
+
+type Props = { entry: "policy" | "terms" }
+
+const doc = await getEntry("legal", Astro.props.entry)
+if (!doc) throw new Error(`Missing legal document: ${Astro.props.entry}`)
+const { Content } = await render(doc)
+---
+
+<SiteLayout title={doc.data.seoTitle ?? doc.data.title}>
+  <article class="mx-auto max-w-4xl px-3 pt-16 pb-10 lg:px-5">
+    <h1 class="pb-4 font-bold">{doc.data.title}</h1>
+    <Prose>
+      <Content />
+    </Prose>
+  </article>
+</SiteLayout>

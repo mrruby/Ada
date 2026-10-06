@@ -1,0 +1,21 @@
+---
+/**
+ * Carousel of the vertical Magic case-study videos (1 / 2 / 3 per view).
+ * Used on /magic, /magic-special and the Jesień recording page.
+ */
+import { caseStudyVideos } from "@/data/shared/caseStudyVideos"
+import VideoGrid from "./VideoGrid.astro"
+
+type Props = { class?: string }
+const { class: className } = Astro.props
+---
+
+<VideoGrid
+  layout="carousel"
+  perView="thirds"
+  videos={caseStudyVideos}
+  label="Case studies klubowiczek MAGIC"
+  class={className}
+  videoClass="mx-auto max-w-xs rounded-lg bg-neutral-400"
+  sizes="(min-width: 1024px) 320px, (min-width: 768px) 50vw, 100vw"
+/>

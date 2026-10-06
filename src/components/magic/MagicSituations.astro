@@ -1,0 +1,51 @@
+---
+/**
+ * "Rozpoznajesz te sytuacje?" — pain-point cards, then "Rozumiemy to." and a
+ * CTA. Cards fill the left column first, then the right one.
+ */
+import { Heading, Reveal } from "@/components/ui"
+import { situations } from "@/data/magic"
+import { cn } from "@/lib/cn"
+import MagicCta from "./MagicCta.astro"
+import MagicSection from "./MagicSection.astro"
+---
+
+<MagicSection bg="bg-neutral-100" class="text-black" innerClass="flex flex-col items-center gap-8">
+  <Heading align="center" class="leading-snug">
+    Rozpoznajesz te sytuacje?
+  </Heading>
+
+  <ul class="grid w-full max-w-sm gap-8 md:max-w-none md:grid-flow-col md:grid-cols-2 md:grid-rows-3 md:gap-6">
+    {situations.map((item) => (
+      <Reveal
+        as="li"
+        class={cn(
+          "flex flex-col items-center justify-center gap-1 rounded-3xl p-4 text-center text-sm leading-relaxed shadow-lg md:p-6 md:text-base",
+          item.tone
+        )}
+      >
+        <span class="text-3xl" aria-hidden="true">
+          {item.emoji}
+        </span>
+        <h3 class="font-bold uppercase">{item.title}</h3>
+        <p set:html={item.text} />
+      </Reveal>
+    ))}
+  </ul>
+
+  <Heading align="center">Rozumiemy to.</Heading>
+  <p class="max-w-xl text-center text-sm leading-relaxed md:text-base">
+    Dlatego stworzyłyśmy MAGIC - miejsce, w którym nie zostajesz z reklamami sama. Zaczynasz od{" "}
+    <b>spotkania 1:1</b>, a do 5 dni po spotkaniu masz w ręku swój <b>MAGIC Plan</b>: co ustawić, w
+    jakiej kolejności i z jakim budżetem. Potem wdrażasz go krok po kroku - a o każdy ruch możesz
+    dopytać specjalistki na pisemnych konsultacjach. Bez zgadywania i poczucia, że jesteś ze
+    wszystkim sama.
+  </p>
+
+  <MagicCta class="min-w-80 flex-col gap-0 py-4 text-sm font-semibold normal-case md:text-base">
+    <span class="text-3xl font-extrabold uppercase">TAK!</span>
+    <span>
+      Zwiększam sprzedaż <br /> dzięki reklamom!
+    </span>
+  </MagicCta>
+</MagicSection>

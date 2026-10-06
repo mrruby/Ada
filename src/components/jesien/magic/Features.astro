@@ -1,0 +1,47 @@
+---
+/** "Co sprawia, że MAGIC jest wyjątkowy?" — alternating copy + UI mock-up rows. */
+import { magicFeatures } from "@/data/jesien"
+import { cn } from "@/lib/cn"
+import AssistantMock from "./mocks/AssistantMock.astro"
+import PlanDocMock from "./mocks/PlanDocMock.astro"
+import ScheduleMock from "./mocks/ScheduleMock.astro"
+import ThreadMock from "./mocks/ThreadMock.astro"
+import MjHeading from "./MjHeading.astro"
+import MjPanel from "./MjPanel.astro"
+import MjSection from "./MjSection.astro"
+
+const mocks = {
+  plan: PlanDocMock,
+  thread: ThreadMock,
+  schedule: ScheduleMock,
+  assistant: AssistantMock,
+}
+---
+
+<MjSection id="dlaczego">
+  <MjHeading
+    eyebrow="Czemu MAGIC"
+    title="Co sprawia, że MAGIC jest wyjątkowy?"
+    accent="Tutaj „klikanie” reklam to tylko mały element wspólnej pracy!"
+    lead="Grafika, tekst, strona www, ścieżka: to wszystko wpływa na sukces Twojego biznesu. To tutaj 5 ekspertów wspiera Ciebie w osiągnięciu celów finansowych."
+  />
+  <div class="mt-12 grid gap-10 md:gap-20">
+    {magicFeatures.map((feature, index) => {
+      const Mock = mocks[feature.mock]
+      return (
+        <div class="grid items-center gap-6 md:grid-cols-2 lg:gap-14">
+          <div class={cn("min-w-0", index % 2 && "md:order-2")}>
+            <p class="mb-3.5 font-semibold tracking-widest text-jesien-ink-soft uppercase">
+              {feature.eyebrow}
+            </p>
+            <h3 class="mb-3 text-2xl font-semibold tracking-tight lg:text-3xl">{feature.title}</h3>
+            {feature.text && <p class="text-jesien-ink-soft" set:html={feature.text} />}
+          </div>
+          <MjPanel tone={feature.panel} class="grid min-w-0 place-items-center">
+            <Mock />
+          </MjPanel>
+        </div>
+      )
+    })}
+  </div>
+</MjSection>

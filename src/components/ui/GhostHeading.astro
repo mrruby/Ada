@@ -1,0 +1,53 @@
+---
+/**
+ * Classic Ada heading pair: a large faded "ghost" line with the real title
+ * overlapping it from below. `size` scales both lines and their overlap.
+ *
+ * <GhostHeading ghost="Czujesz, że nadajemy na tych">samych falach?</GhostHeading>
+ */
+import { cn } from "@/lib/cn"
+
+const sizes = {
+  sm: { ghost: "text-3xl lg:text-4xl", title: "-mt-3 text-2xl lg:text-3xl" },
+  md: { ghost: "text-5xl lg:text-6xl", title: "-mt-8 text-5xl md:-mt-12" },
+  lg: { ghost: "text-5xl lg:text-7xl", title: "-mt-10 text-5xl lg:-mt-16" },
+} as const
+
+type Props = {
+  ghost: string
+  as?: "h1" | "h2" | "h3"
+  size?: keyof typeof sizes
+  align?: "left" | "center"
+  bounce?: boolean
+  class?: string
+  ghostClass?: string
+  titleClass?: string
+}
+
+const {
+  ghost,
+  as: Tag = "h2",
+  size = "md",
+  align = "center",
+  bounce = true,
+  class: className,
+  ghostClass,
+  titleClass,
+} = Astro.props
+---
+
+<div
+  class={cn(
+    "flex flex-col",
+    align === "center" ? "items-center text-center" : "items-start",
+    className
+  )}
+>
+  <p aria-hidden="true" class={cn("font-bold text-navy/20", sizes[size].ghost, ghostClass)}>
+    {ghost}
+  </p>
+  <Tag class={cn("font-bold", sizes[size].title, bounce && "animate-settle", titleClass)}>
+    <span class="sr-only">{ghost} </span>
+    <slot />
+  </Tag>
+</div>

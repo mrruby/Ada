@@ -1,0 +1,55 @@
+---
+/**
+ * Workshop hero: portrait with the date sticker, title over a marker stripe,
+ * pitch and two "who are you?" buttons jumping to the audience sections.
+ */
+import { Image } from "astro:assets"
+import heroImage from "@/assets/images/masterclass.webp"
+import { Button, Decor, MarkerHeading, Section } from "@/components/ui"
+
+const audienceButton = "px-5 py-1.5 text-lg md:w-xs"
+---
+
+<Section class="relative overflow-hidden">
+  <Decor art="sun" class="top-80 -left-40 hidden xl:block" />
+  <Decor art="waves-1" class="bottom-0 -left-24 hidden lg:block" />
+  <div class="mx-auto flex flex-col-reverse items-center gap-8 px-2 md:py-20 lg:flex-row xl:px-6">
+    <Image
+      src={heroImage}
+      alt="Ada Promis na krześle obok daty warsztatów 25.01"
+      width={479}
+      height={672}
+      loading="eager"
+      fetchpriority="high"
+      class="relative"
+    />
+    <div class="pt-10 md:pt-36">
+      <MarkerHeading as="h1" class="text-2xl font-extrabold md:text-8xl lg:text-8xl">
+        MASTERCLASS
+      </MarkerHeading>
+      <div class="mt-10 flex flex-col gap-4 pb-20 md:text-2xl xl:max-w-3xl">
+        <p>
+          <b>Kevin sam w menedżerze reklam:</b> stwórz lejek reklamowy na 2024 rok! Zaplanuj ścieżkę
+          klientów: od pierwszego kontaktu do zakupu.
+        </p>
+        <p>
+          Zastanawiasz się, czy to dla Ciebie? Zaznacz, czym się zajmujesz i{" "}
+          <b>dowiedz się, co zyskasz dzięki warsztatom.</b>
+        </p>
+      </div>
+      <div class="flex flex-col gap-4 md:flex-row md:gap-20">
+        <Button
+          href="#prowadze-wlasny-biznes"
+          variant="outline"
+          size="none"
+          class={`${audienceButton} py-24`}
+        >
+          PROWADZĘ WŁASNY BIZNES
+        </Button>
+        <Button href="#pracuje-w-marketingu" variant="outline" size="none" class={audienceButton}>
+          PRACUJĘ W MARKETINGU/ JAKO FREELANCERKA
+        </Button>
+      </div>
+    </div>
+  </div>
+</Section>

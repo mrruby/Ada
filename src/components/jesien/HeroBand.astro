@@ -1,0 +1,26 @@
+---
+/**
+ * White hero band of the Jesień landings with soft orange/pink glows in the
+ * corners. Slots: default = content, "decor" = FloatStars.
+ */
+import { cn } from "@/lib/cn"
+
+type Props = { class?: string }
+
+const { class: className } = Astro.props
+---
+
+<header
+  class={cn("relative isolate overflow-hidden bg-white pt-10 pb-14 lg:pt-14 lg:pb-20", className)}
+>
+  <span
+    class="absolute -top-48 -left-40 -z-10 h-96 w-160 bg-radial from-jesien-orange/10 to-transparent to-70%"
+    aria-hidden="true"
+  ></span>
+  <span
+    class="absolute -top-40 -right-72 -z-10 h-96 w-176 bg-radial from-jesien-pink/10 to-transparent to-70%"
+    aria-hidden="true"
+  ></span>
+  <slot name="decor" />
+  <slot />
+</header>

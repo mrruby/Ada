@@ -1,0 +1,30 @@
+---
+/**
+ * "kolektyw MAGIC" wordmark; a link when `href` is given. Size it with `class`.
+ * `heading` renders it as the page's <h1> (pages whose wordmark is the title).
+ */
+import { Image } from "astro:assets"
+import logo from "@/assets/images/magic-kolektyw.png"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  href?: string
+  eager?: boolean
+  heading?: boolean
+  class?: string
+}
+
+const { href, eager = false, heading = false, class: className } = Astro.props
+const Tag = href ? "a" : heading ? "h1" : "div"
+---
+
+<Tag href={href} class={cn("block w-64", className)}>
+  <Image
+    src={logo}
+    alt="Kolektyw MAGIC"
+    width={320}
+    densities={[1, 2]}
+    loading={eager ? "eager" : "lazy"}
+    class="h-auto w-full"
+  />
+</Tag>

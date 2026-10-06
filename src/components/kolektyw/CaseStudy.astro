@@ -1,0 +1,55 @@
+---
+/** Client case study: ads report, fact sheet (2/3 + 1/3 columns) and a detail screenshot. */
+import { Image } from "astro:assets"
+import type { CaseStudy, CaseStudyFact } from "@/data/kolektyw/types"
+import { Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import KolektywTitle from "./KolektywTitle.astro"
+
+type Props = {
+  study: CaseStudy
+}
+
+const { study } = Astro.props
+const bg = study.tone === "green" ? "bg-mint" : "bg-petal"
+const columns: { facts: CaseStudyFact[]; class: string }[] = [
+  { facts: study.main, class: "md:col-span-2" },
+  { facts: study.side, class: "" },
+]
+---
+
+<Section bg={bg} class="text-black">
+  <div class="mx-auto max-w-6xl px-4 py-16 md:py-12">
+    <KolektywTitle as="h3" size="md" stars class="mb-8">
+      {study.title}
+    </KolektywTitle>
+    <div class="mx-auto max-w-4xl">
+      <Image
+        src={study.report.src}
+        alt={study.report.alt}
+        widths={[640, 896, 1792]}
+        sizes="(min-width: 896px) 896px, 100vw"
+        class="mb-8 h-auto w-full rounded-lg shadow-lg"
+      />
+      <div class="grid gap-x-8 gap-y-4 pl-4 md:grid-cols-3">
+        {columns.map((column) => (
+          <dl class={cn("flex flex-col gap-1", column.class)}>
+            {column.facts.map((fact) => (
+              <div>
+                <dt class="mb-2 w-fit bg-lilac font-bold text-white">{fact.label}</dt>
+                <dd class="text-sm" set:html={fact.value} />
+              </div>
+            ))}
+          </dl>
+        ))}
+      </div>
+    </div>
+    <Image
+      src={study.detail.src}
+      alt={study.detail.alt}
+      widths={[640, 768, 1536]}
+      sizes="(min-width: 768px) 768px, 100vw"
+      class="mx-auto mt-4 mb-8 h-auto w-full max-w-3xl"
+    />
+  </div>
+</Section>

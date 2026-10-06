@@ -1,0 +1,21 @@
+---
+/** Emoji-led title + paragraphs: the basic text block of the onboarding guide. */
+import type { GuideTopic } from "@/data/kolektyw/guide"
+
+type Props = {
+  topic: GuideTopic
+  class?: string
+}
+
+const { topic, class: className } = Astro.props
+---
+
+<article class={className}>
+  {topic.icon && (
+    <span class="mb-2.5 block text-3xl" aria-hidden="true">
+      {topic.icon}
+    </span>
+  )}
+  <h3 class="mb-1 text-lg leading-tight font-bold md:text-xl" set:html={topic.title} />
+  <div class="flex flex-col gap-5" set:html={topic.body} />
+</article>

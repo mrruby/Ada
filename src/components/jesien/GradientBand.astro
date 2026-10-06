@@ -1,0 +1,27 @@
+---
+/**
+ * Purple→pink gradient band with an orange glow (finales of the Jesień
+ * landings). Slots: default = content, "decor" = FloatStars.
+ */
+import type { HTMLAttributes } from "astro/types"
+import { cn } from "@/lib/cn"
+
+type Props = HTMLAttributes<"section">
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<section
+  class={cn(
+    "relative isolate overflow-hidden bg-linear-135 from-jesien-purple to-jesien-pink pt-20 pb-24 text-white",
+    className
+  )}
+  {...attrs}
+>
+  <span
+    class="absolute inset-0 -z-10 bg-radial-[at_12%_0%] from-jesien-orange/25 to-transparent to-50%"
+    aria-hidden="true"
+  ></span>
+  <slot name="decor" />
+  <slot />
+</section>

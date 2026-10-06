@@ -1,0 +1,66 @@
+---
+/**
+ * One day of a challenge programme: full-width colour band with a pill label,
+ * bold lead + description and a round portrait. Slides in from its side when
+ * scrolled into view.
+ */
+import { Image } from "astro:assets"
+import { Reveal, Section } from "@/components/ui"
+import type { ChallengeDayItem } from "@/data/training/wyzwanie"
+import { cn } from "@/lib/cn"
+
+type Props = ChallengeDayItem
+
+const { label, side, tone, title, text, portrait } = Astro.props
+
+const palettes = {
+  purple: { band: "bg-periwinkle", pill: "bg-lemon" },
+  yellow: { band: "bg-lemon", pill: "bg-periwinkle" },
+} as const
+const { band, pill } = palettes[tone]
+const isRight = side === "right"
+---
+
+<Section bg={band}>
+  <div class="overflow-hidden px-4 py-10 lg:py-12">
+    <Reveal
+      from={side}
+      class="relative mx-auto flex max-w-5xl flex-col items-center gap-8 lg:block lg:min-h-64"
+    >
+      <div class="w-full">
+        <p
+          class={cn(
+            "flex w-full rounded-full px-4 py-3 font-anton text-2xl leading-none text-black uppercase shadow-xl lg:px-6 lg:py-4 lg:text-5xl",
+            pill,
+            isRight ? "justify-end lg:pl-56" : "lg:pr-56"
+          )}
+        >
+          {label}
+        </p>
+        <p
+          class={cn(
+            "mt-6 leading-tight text-black lg:text-lg",
+            isRight ? "lg:pl-64 lg:text-right" : "lg:pr-64"
+          )}
+        >
+          <span class="block font-bold" set:html={title} />
+          <span class="mt-1 block">{text}</span>
+        </p>
+      </div>
+      <div
+        class={cn(
+          "size-44 shrink-0 overflow-hidden rounded-full shadow-2xl lg:absolute lg:top-10 lg:size-56",
+          isRight ? "lg:left-0" : "lg:right-0"
+        )}
+      >
+        <Image
+          src={portrait.src}
+          alt={portrait.alt}
+          widths={[224, 448]}
+          sizes="(min-width: 1024px) 224px, 176px"
+          class={cn("size-full object-cover", portrait.zoom && "scale-110")}
+        />
+      </div>
+    </Reveal>
+  </div>
+</Section>

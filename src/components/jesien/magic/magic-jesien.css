@@ -1,0 +1,22 @@
+/*
+ * MAGIC jesień pages (/magic-jesien, /jesien-nagranie2): only what Tailwind
+ * can't express — the serif-italic accent used by every heading's <em>.
+ * Fonts (Outfit, Playfair Display) come from the Fonts API (astro.config.mjs,
+ * `--ff-outfit` / `--ff-playfair`); everything else is Tailwind utilities.
+ */
+.magic-jesien {
+  color-scheme: light only;
+  font-family: var(--ff-outfit);
+}
+
+/* Serif italic accent: heading <em>s and `.mj-serif` quotes. */
+.magic-jesien :is(h1, h2, h3) em,
+.magic-jesien .mj-serif {
+  font-family: var(--ff-playfair);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.magic-jesien :is(h1, h2, h3) em {
+  color: var(--color-marigold);
+}

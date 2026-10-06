@@ -1,0 +1,123 @@
+---
+import { Image } from "astro:assets"
+import homeImage from "@/assets/images/homeImage.webp"
+import collectiveLogo from "@/assets/images/magic-kolektyw.png"
+import clubImage from "@/assets/images/magic-landing-2026-hero.webp"
+import chillImage from "@/assets/images/hompage3.webp"
+import quizImage from "@/assets/images/hompage4.webp"
+import shopImage from "@/assets/images/hompage5.webp"
+import advantageMockup from "@/assets/images/advantage-mockup.webp"
+import PromoCard from "@/components/sections/PromoCard.astro"
+import { Card, CircleArrow, Heading, Section } from "@/components/ui"
+import { shopUrl } from "@/config/site"
+import { team } from "@/data/kolektyw/team"
+import SiteLayout from "@/layouts/SiteLayout.astro"
+
+const cardTitle = "mb-6 font-anton text-3xl font-normal lg:text-5xl"
+---
+
+<SiteLayout title="Home" hideHeader>
+  <Section bg="bg-art-grid">
+    <div class="relative px-2 pt-20 pb-0 lg:pb-10">
+      <Card pad="none" class="mx-auto max-w-xl p-8 text-center text-black rounded-4xl">
+        <h1 class="mb-6 font-anton text-4xl leading-snug font-normal text-tangerine lg:text-9xl">
+          CZEŚĆ!
+        </h1>
+        <p class="lg:text-2xl">
+          Tutaj <b>Ada Promis-Urbas.</b>
+          <br />
+          Zajmuję się strategią marketingową, mediami społecznościowymi i płatnymi reklamami.
+          Podpowiem Ci, jak prowadzić świadomy, kreatywny marketing dla Twojego biznesu.
+        </p>
+      </Card>
+      <Image
+        src={homeImage}
+        alt="Ada Promis-Urbas z telefonem w dłoni"
+        width={500}
+        densities={[1, 2]}
+        loading="eager"
+        fetchpriority="high"
+        class="mx-auto lg:absolute lg:-right-12 lg:bottom-0"
+      />
+      <CircleArrow
+        href="#content"
+        size="lg"
+        circleClass="fill-plum"
+        arrowClass="stroke-petal-light"
+        shape="chevron"
+        label="Przejdź do oferty"
+        class="absolute left-1/2 z-10 -translate-x-1/2 -translate-y-2"
+      />
+    </div>
+  </Section>
+
+  <Section bg="bg-mint" id="content" innerClass="px-2 py-20">
+    <Heading as="h2" size="md" align="center" class="mb-6 pt-10 text-black md:text-4xl">
+      <span class="text-tangerine">Sprawdź,</span> jak możemy współpracować!
+    </Heading>
+
+    <PromoCard cta={{ label: "WYBIERAM!", href: "/magic-kolektyw" }}>
+      <Image src={collectiveLogo} alt="Kolektyw MAGIC" width={250} />
+      <p class="mt-4">
+        Marketing Ads Girls Inside Collective. Dla przedsiębiorczyń prowadzących kursy online,
+        mentoringi, usługi cyfrowe
+      </p>
+      <ul slot="media" class="grid max-w-md grid-cols-2 gap-6" aria-label="Zespół Kolektywu MAGIC">
+        {team.map((member) => (
+          <li>
+            <Image src={member.photo} alt={member.name} width={220} densities={[1, 2]} />
+          </li>
+        ))}
+      </ul>
+    </PromoCard>
+
+    <PromoCard
+      cta={{ label: "Dołączam!", href: "/magic" }}
+      mediaClass="lg:absolute lg:-right-10 lg:bottom-0"
+    >
+      <h3 class="mb-6 max-w-sm text-2xl leading-snug font-bold text-marigold md:text-3xl lg:text-4xl">
+        Marketing Ads Girls Inside Club
+      </h3>
+      <p class="max-w-sm">
+        Społeczność kobiet, które skalują swoje biznesy z pomocą reklam pod czujnym okiem
+        profesjonalistek
+      </p>
+      <Image slot="media" src={clubImage} alt="Ada Promis i platforma klubu MAGIC" width={472} />
+    </PromoCard>
+
+    <PromoCard
+      cta={{ label: "WYBIERAM!", href: "/adsy-chill" }}
+      mediaClass="lg:absolute lg:-right-10 lg:bottom-16"
+    >
+      <h3 class={`${cardTitle} text-tangerine`}>Adsy&Chill</h3>
+      <p class="max-w-sm">
+        Ustaw reklamy samodzielnie, skorzystaj z gotowych, sprawdzonych instrukcji i skaluj swój
+        biznes bez dodatkowej pracy!
+      </p>
+      <Image slot="media" src={chillImage} alt="Materiały kursu Adsy&Chill" width={488} />
+    </PromoCard>
+
+    <PromoCard cta={{ label: "SPRAWDZAM!", href: "/quiz" }} mediaClass="lg:ml-8">
+      <h3 class={cardTitle}>QUIZ</h3>
+      <p>Jaka jest Twoja adsowa osobowość?</p>
+      <Image slot="media" src={quizImage} alt="Quiz w telefonie" width={400} />
+    </PromoCard>
+
+    <PromoCard cta={{ label: "POBIERAM PDF", href: "/advantage/" }} mediaClass="lg:ml-8">
+      <h3 class={`${cardTitle} text-periwinkle`}>ADVANTAGE+</h3>
+      <p>Kiedy może pomóc Twoim kampaniom, a kiedy może zaszkodzić?</p>
+      <Image slot="media" src={advantageMockup} alt="Advantage+ PDF" width={460} />
+    </PromoCard>
+
+    <PromoCard cta={{ label: "SPRAWDZAM!", href: shopUrl }}>
+      <h3 class={cardTitle}>SKLEP</h3>
+      <p>Sprawdź moje produkty cyfrowe!</p>
+      <Image slot="media" src={shopImage} alt="Produkty cyfrowe w sklepie" width={738} />
+    </PromoCard>
+
+    <PromoCard cta={{ label: "WYŚLIJ WIADOMOŚĆ!", href: "/contact" }}>
+      <h3 class={cardTitle}>KONTAKT</h3>
+      <p>Chcesz pogadać o współpracy, zaprosić na ciekawą rozmowę lub zapytać o reklamy?</p>
+    </PromoCard>
+  </Section>
+</SiteLayout>

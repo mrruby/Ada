@@ -1,0 +1,20 @@
+---
+/** Slim header with the Magic logo (landing pages without site navigation). */
+import { cn } from "@/lib/cn"
+
+const variants = {
+  pink: { bg: "bg-petal-light", logo: "/assets/magic-2.svg" },
+  purple: { bg: "bg-plum", logo: "/assets/magic.svg" },
+} as const
+
+type Props = { variant?: keyof typeof variants }
+
+const { variant = "pink" } = Astro.props
+const { bg, logo } = variants[variant]
+---
+
+<header class={cn("px-6 py-4 md:px-12", bg)}>
+  <div class="container mx-auto">
+    <img src={logo} alt="Magic" width="192" height="48" decoding="async" class="h-12 w-auto" />
+  </div>
+</header>

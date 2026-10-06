@@ -1,0 +1,30 @@
+---
+import { magicProfiles } from "@/data/jesien"
+import MjButton from "./MjButton.astro"
+import MjCard from "./MjCard.astro"
+import MjHeading from "./MjHeading.astro"
+import MjSection from "./MjSection.astro"
+---
+
+<MjSection id="dla-kogo">
+  <MjHeading
+    eyebrow="Dla kogo"
+    title="Przedsiębiorczynie, które realnie działają w MAGIC."
+    accent="Który profil jest Twój?"
+    lead="MAGIC jest dla przedsiębiorczyń, które same ogarniają marketing swojego biznesu, i dla tych, które robią to dla klientek. Są u nas numerolożki, dietetyczki, nauczycielki języków, prawniczki, rękodzielniczki, właścicielki sklepów, social media managerki, wirtualne asystentki, a nawet hodowla owiec z manufakturą serów."
+    leadClass="max-w-2xl"
+  />
+  <div class="mt-8 mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {magicProfiles.map((profile) => (
+      <MjCard as="article" lift class="p-6">
+        <div class="mb-3 grid size-11 place-items-center rounded-xl bg-lavender text-xl">
+          {profile.emoji}
+        </div>
+        <b class="mb-2 block text-lg">{profile.title}</b>
+        <p class="mj-serif mb-2 text-lg text-jesien-pink">{profile.pain}</p>
+        <p class="text-sm text-jesien-ink-soft">{profile.text}</p>
+      </MjCard>
+    ))}
+  </div>
+  <MjButton href="#pakiety">To o mnie, wchodzę w to!</MjButton>
+</MjSection>

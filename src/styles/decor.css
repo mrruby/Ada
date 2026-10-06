@@ -1,0 +1,175 @@
+/*
+ * Decorative background artwork, as Tailwind utilities.
+ *
+ * Every utility here is named `bg-art-*`: they set background *images*, so
+ * they combine with a background color (`bg-mint bg-art-grid`). `cn()` knows
+ * the prefix and never treats them as colors. Gradients don't belong here —
+ * use Tailwind's `bg-linear-to-* from-* to-*` utilities.
+ *
+ * Artwork files live in /public/assets.
+ */
+
+/* Corner illustration (about page) */
+@utility bg-art-meetme {
+  background: url("/assets/meetmeicons.svg") no-repeat top right;
+}
+
+/* Swaying wave strips (classic pages). `-band` paints a 400px strip behind
+   the section content instead of covering the whole box. */
+@utility bg-art-wave {
+  background: url("/assets/wave.webp") center / contain no-repeat;
+  animation: var(--animate-sway);
+  @variant md {
+    background-size: cover;
+  }
+}
+@utility bg-art-wave-2 {
+  background: url("/assets/wave2.webp") center / contain no-repeat;
+  animation: var(--animate-sway);
+  @variant md {
+    background-size: cover;
+  }
+}
+@utility bg-art-wave-band {
+  position: relative;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 400px;
+    background: url("/assets/wave.webp") center / contain no-repeat;
+    z-index: -1;
+    animation: var(--animate-sway);
+    @variant md {
+      background-size: cover;
+    }
+  }
+}
+
+/* Magic visual language */
+@utility bg-art-grid {
+  position: relative;
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/assets/magic-grid.webp") center / 40%;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+@utility bg-art-green {
+  background: url("/assets/green-bg.webp") center / cover;
+}
+@utility bg-art-pink {
+  background: url("/assets/pink-bg.webp") center / 70%;
+}
+/* Pink texture on the right half of a hero (desktop only). */
+@utility bg-art-pink-half {
+  @variant lg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 860px;
+    background: url("/assets/pink-bg.webp") center right / 150%;
+    z-index: 0;
+  }
+}
+@utility bg-art-magic-photo {
+  background:
+    linear-gradient(to bottom, rgb(255 255 255 / 0.5), rgb(255 255 255 / 0)),
+    url("/assets/background-magic.webp") center / cover no-repeat;
+}
+@utility bg-art-notebook {
+  background: url("/assets/magic-banner2.webp") center / cover no-repeat;
+}
+/* Browser-window frame; portrait artwork on mobile, landscape from md. */
+@utility bg-art-window {
+  background: url("/assets/magic-banner-mobile.webp") center / contain no-repeat;
+  @variant md {
+    background-image: url("/assets/magic-banner.webp");
+  }
+}
+@utility bg-art-swirl {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/assets/magic-banner2a.webp") center / cover no-repeat;
+    animation: var(--animate-sway);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+@utility bg-art-magic-wave {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/assets/magicwave.webp") center / cover no-repeat;
+    animation: var(--animate-sway);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+@utility bg-art-checker {
+  background-color: var(--color-cream);
+  background-image: conic-gradient(
+    var(--color-petal) 25%,
+    var(--color-cream) 0 50%,
+    var(--color-petal) 0 75%,
+    var(--color-cream) 0
+  );
+  background-size: 56px 56px;
+}
+@utility bg-art-paper-grid {
+  background-color: var(--color-cream);
+  background-image:
+    linear-gradient(rgb(178 168 219 / 0.32) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(178 168 219 / 0.32) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Animated highlighter underline. Color via `highlight-<color>`. */
+@utility highlight-sweep {
+  position: relative;
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    z-index: -1;
+    background-color: var(--highlight-color, var(--color-lavender));
+    animation: highlightSweep 16s infinite;
+    @variant lg {
+      height: 30px;
+    }
+  }
+}
+@utility highlight-* {
+  --highlight-color: --value(--color-*);
+}
+
+@keyframes highlightSweep {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}

@@ -1,0 +1,41 @@
+---
+/** "Adsy&chill to świetny wybór, bo..." — two columns of black checks. */
+import { Image } from "astro:assets"
+import check from "@/assets/images/checkBlack.svg"
+import { CircleArrow, Section } from "@/components/ui"
+
+type Props = { reasons: string[] }
+
+const { reasons } = Astro.props
+const half = Math.ceil(reasons.length / 2)
+const columns = [reasons.slice(0, half), reasons.slice(half)]
+---
+
+<Section bg="bg-cream" id="time" class="relative">
+  <div class="flex flex-col items-center px-3 pt-2 pb-7 md:pt-12">
+    <h2 class="py-10 text-center font-anton text-3xl text-tangerine">
+      Adsy&chill to świetny wybór, bo...
+    </h2>
+    <div class="mx-auto mb-10 flex max-w-5xl flex-col gap-2.5 text-black md:flex-row xl:min-w-4xl">
+      {columns.map((column) => (
+        <ul class="flex flex-col gap-6">
+          {column.map((reason) => (
+            <li class="flex items-center gap-4 text-sm md:text-lg">
+              <Image src={check} alt="" width={44} height={46} class="w-11 shrink-0 lg:mr-5" />
+              {reason}
+            </li>
+          ))}
+        </ul>
+      ))}
+    </div>
+  </div>
+  <CircleArrow
+    href="#faq"
+    size="lg"
+    circleClass="fill-plum"
+    arrowClass="stroke-petal"
+    shape="chevron"
+    label="Przejdź do FAQ"
+    class="absolute bottom-0 left-1/2 z-10 -translate-x-1/2 translate-y-1/2"
+  />
+</Section>

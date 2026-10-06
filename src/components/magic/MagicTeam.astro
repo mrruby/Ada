@@ -1,0 +1,53 @@
+---
+/** "Kogo spotkasz w MAGIC?" — the five specialists (carousel on mobile). */
+import { Image } from "astro:assets"
+import scrollArrow from "@/assets/images/magicArrowLeft.svg"
+import { Carousel, Heading } from "@/components/ui"
+import { MAGIC_PACKAGE_HREF, team } from "@/data/magic"
+import MagicSection from "./MagicSection.astro"
+import MagicTeamMember from "./MagicTeamMember.astro"
+---
+
+<MagicSection
+  bg="bg-neutral-100"
+  class="text-black"
+  innerClass="flex flex-col items-center text-center"
+>
+  <Heading class="text-bubblegum">
+    <span class="text-black">Kogo spotkasz</span> w MAGIC?
+  </Heading>
+  <Heading as="h3" size="sm" class="mt-8 mb-4 text-bubblegum">
+    5 specjalistów pod jednym dachem:
+  </Heading>
+  <Heading as="h3" size="sm" class="mb-8">
+    Meta Ads | Copywriting | Grafika | Koordynacja kampanii | AI i automatyzacje
+  </Heading>
+
+  <Carousel label="Zespół MAGIC" perView="single" arrows="ink" class="w-full pt-8 md:hidden">
+    {team.map((member) => (
+      <div class="flex justify-center px-2">
+        <MagicTeamMember member={member} />
+      </div>
+    ))}
+  </Carousel>
+  <div class="hidden max-w-3xl flex-wrap items-start justify-center gap-8 pt-8 md:flex">
+    {team.map((member) => (
+      <MagicTeamMember member={member} />
+    ))}
+  </div>
+
+  <Heading as="p" size="sm" class="mt-12 max-w-3xl">
+    <span class="text-bubblegum">Dołącz do społeczności kobiet, </span>
+    <br />
+    <span class="font-normal">
+      które wspólnie rozwijają swoje biznesy i wspierają się w drodze do sukcesu w reklamach Meta.
+    </span>
+  </Heading>
+  <a
+    href={MAGIC_PACKAGE_HREF}
+    class="mt-7 rotate-90 transition-opacity hover:opacity-80"
+    aria-label="Przejdź do pakietu"
+  >
+    <Image src={scrollArrow} alt="" class="size-16" />
+  </a>
+</MagicSection>

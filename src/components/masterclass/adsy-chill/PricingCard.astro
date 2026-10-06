@@ -1,0 +1,42 @@
+---
+/** Single package card with price, strikethrough old price, CTA and contents. */
+import { Button, Section } from "@/components/ui"
+import type { LinkItem, RichText } from "@/lib/content"
+
+type Props = {
+  title: string
+  price: string
+  oldPrice: string
+  cta: LinkItem
+  items: RichText[]
+}
+
+const { title, price, oldPrice, cta, items } = Astro.props
+---
+
+<Section bg="bg-art-grid" class="isolate" id="pricing">
+  <div class="flex flex-col items-center px-3 pb-20">
+    <div class="flex max-w-xl flex-col rounded-2xl border border-tangerine bg-white py-8 text-black shadow-lg">
+      <h3 class="py-5 text-center text-3xl font-bold lg:text-6xl">{title}</h3>
+      <div class="flex flex-col items-center border-y border-tangerine px-8 lg:items-start">
+        <p class="mt-4">cena</p>
+        <p class="text-3xl leading-none font-bold lg:text-6xl">{price}</p>
+        <p class="line-through lg:text-3xl">{oldPrice}</p>
+        <Button
+          href={cta.href}
+          newTab
+          variant="bare"
+          size="none"
+          class="mt-6 mb-10 w-72 rounded-full border border-black bg-tangerine px-6 py-4 text-xl font-extrabold text-white uppercase"
+        >
+          {cta.label}
+        </Button>
+      </div>
+      <ul class="list-disc px-4 py-4">
+        {items.map((item) => (
+          <li class="mx-5 pb-4" set:html={item} />
+        ))}
+      </ul>
+    </div>
+  </div>
+</Section>

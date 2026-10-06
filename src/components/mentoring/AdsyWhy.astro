@@ -1,0 +1,115 @@
+---
+/**
+ * /ogarnij-swoje-adsy: "Dzięki reklamom w programie mentoringowym" →
+ * "Dla kogo jest ten program?" → "Pewnie wiesz, że..." → "Dlatego...".
+ */
+import { Image } from "astro:assets"
+import adaSofa from "@/assets/images/ada-a.webp"
+import adaChair from "@/assets/images/ada-a2.webp"
+import adaWhy from "@/assets/images/ada-why.webp"
+import { IconList, Section } from "@/components/ui"
+import { adsyAudience } from "@/data/mentoring"
+import PurpleCta from "./PurpleCta.astro"
+---
+
+<Section
+  class="relative isolate"
+  bg="bg-linear-to-t from-lavender to-white"
+  innerClass="flex flex-col gap-10 text-black"
+>
+  <div class="flex flex-col md:flex-row md:gap-20">
+    <Image
+      src={adaWhy}
+      alt="Ada Promis z kubkiem i dymkiem „Dlaczego warto?”"
+      width={557}
+      class="h-auto w-full max-w-sm md:-mt-44 md:-ml-32 md:w-md md:max-w-none md:shrink-0"
+    />
+    <div class="mr-4 flex max-w-4xl flex-col gap-6 px-2 text-xs text-black md:text-lg">
+      <h2 class="flex w-screen items-center bg-amethyst py-4 pr-10 pl-4 text-base font-bold text-white uppercase md:mt-40 md:h-20 lg:text-3xl">
+        Dzięki reklamom w programie mentoringowym:
+      </h2>
+      <p>
+        🧭 Otrzymasz kompas do działania na następne 4 miesiące: poprowadzę Cię przez rękę przez
+        świat kont reklamowych, wskaźników i kreacji
+      </p>
+      <p>💸 Zbudujesz stabilność swojej firmy dzięki lepszym wynikom reklamowym</p>
+      <p>
+        🚀 Nauczysz się tworzyć skuteczne kampanie reklamowe bez potrzeby zatrudniania agencji i
+        zobowiązujących umów
+      </p>
+      <p class="font-bold md:text-xl">
+        W programie mentoringowym nauczysz się tworzyć kampanie reklamowe od zera.
+      </p>
+    </div>
+  </div>
+
+  <div class="relative md:pb-10">
+    <h2 class="animate-settle pb-10 text-center text-lg leading-normal font-bold text-amethyst uppercase lg:text-5xl lg:leading-normal">
+      Dla kogo jest <br />
+      ten program?
+    </h2>
+    <h3 class="px-10 text-center text-base font-bold lg:text-3xl">
+      Ten program jest idealny dla Ciebie, jeśli:
+    </h3>
+    <div
+      class="absolute bottom-10 left-1/2 -z-10 hidden h-50 w-screen -translate-x-1/2 bg-art-wave-2 lg:block"
+      aria-hidden="true"
+    ></div>
+    <IconList
+      items={adsyAudience}
+      class="pt-8"
+      columnClass="gap-4"
+      itemClass="max-w-xl gap-4 px-3"
+      iconClass="text-xs md:text-2xl"
+      textClass="text-xs md:text-base"
+    />
+  </div>
+
+  <div class="mx-auto mt-4 flex flex-col px-3 py-2 font-medium lg:text-xl">
+    <div class="flex w-full flex-col justify-between gap-6 md:flex-row">
+      <Image
+        src={adaSofa}
+        alt="Ada Promis leżąca na pufie z laptopem"
+        width={814}
+        class="mx-auto h-auto w-full max-w-sm md:w-2/5 md:max-w-none"
+      />
+      <div class="flex max-w-3xl flex-col gap-6 pb-10 leading-tight">
+        <h2 class="animate-settle text-xl font-bold lg:text-5xl">Pewnie wiesz, że...</h2>
+        <p>
+          Działania organiczne są ograniczone. Oczywiście możesz tworzyć posty, projektować
+          karuzele, nagrywać rolki i patrzeć, jak po kilku godzinach zostają przykryte przez inne
+          materiały.
+        </p>
+        <p>
+          W ten sposób pozyskasz jednego klienta, drugiego, trzeciego, ale jeśli chcesz iść w
+          dziesiątki czy setki… <br />
+          ❌ zamiast przeznaczać wiele czasu na tworzenie kolejnych postów <br />✅ zbuduj
+          przemyślany lejek marketingowy i wdrażaj płatne promocje przemyślanych treści.
+        </p>
+        <p>
+          Chyba nie muszę Ci mówić, która opcja jest przyszłościowa, można ją skalować i
+          optymalizować jej potencjał? 😉
+        </p>
+      </div>
+    </div>
+    <div class="flex w-full flex-col justify-between gap-6 md:flex-row">
+      <div class="flex max-w-3xl flex-col gap-6 pb-10 leading-tight md:ml-20">
+        <h2 class="animate-settle text-xl font-bold lg:text-5xl">Dlatego...</h2>
+        <p>
+          przygotowałam dla Ciebie program mentoringowy <b>„Ogarnij swoje adsy!”</b> w którym
+          nauczysz się tworzyć od podstaw skuteczne kampanie reklamowe i osiągać rezultaty, o jakich
+          dotąd tylko marzyłaś!
+        </p>
+        <PurpleCta href="#offert" size="lg">
+          Wchodzę w to!
+        </PurpleCta>
+      </div>
+      <Image
+        src={adaChair}
+        alt="Ada Promis z laptopem w fotelu"
+        width={320}
+        class="h-auto w-full max-w-xs self-end lg:-mr-48 lg:-mb-2"
+      />
+    </div>
+  </div>
+</Section>

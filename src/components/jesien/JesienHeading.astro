@@ -1,0 +1,36 @@
+---
+/**
+ * Section heading of the Jesień landings: small spaced kicker above a
+ * condensed uppercase Anton heading. Heading content goes in the slot.
+ */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  kicker?: string
+  /** "pink" on light bands, "soft" on the purple gradient. */
+  kickerTone?: "pink" | "soft"
+  as?: "h1" | "h2"
+  class?: string
+}
+
+const { kicker, kickerTone = "pink", as: Tag = "h2", class: className } = Astro.props
+---
+
+{kicker && (
+  <p
+    class={cn(
+      "mb-3 font-anton text-sm tracking-widest uppercase",
+      kickerTone === "pink" ? "text-jesien-pink" : "text-jesien-pink-soft"
+    )}
+  >
+    {kicker}
+  </p>
+)}
+<Tag
+  class={cn(
+    "font-anton text-3xl leading-tight font-normal tracking-wide uppercase md:text-4xl xl:text-5xl",
+    className
+  )}
+>
+  <slot />
+</Tag>

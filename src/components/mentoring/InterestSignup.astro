@@ -1,0 +1,24 @@
+---
+/**
+ * "Zapisz się na listę zainteresowanych" — waiting-list MailerLite form.
+ * The section is the target of every "#offert" CTA on the page.
+ *
+ * <InterestSignup html={formHtml} text="Zostaw swój email…" />
+ */
+import { MailerLiteForm } from "@/components/ui"
+
+type Props = {
+  html: string
+  title?: string
+  text?: string
+  id?: string
+}
+
+const { html, title = "Zapisz się na listę zainteresowanych", text, id = "offert" } = Astro.props
+---
+
+<section id={id} class="mx-auto flex max-w-6xl flex-col items-center gap-8 px-4 py-10 text-center">
+  <h2 class="text-2xl font-bold md:text-5xl">{title}</h2>
+  {text && <p class="md:text-2xl">{text}</p>}
+  <MailerLiteForm html={html} class="mt-2 w-full max-w-xl" />
+</section>

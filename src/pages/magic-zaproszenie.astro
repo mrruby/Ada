@@ -1,0 +1,58 @@
+---
+/** /magic-zaproszenie — two-step invitation to work with the Magic collective. */
+import { Image } from "astro:assets"
+import instagramIcon from "@/assets/images/instagramBtn.svg"
+import { CircleArrow, Section } from "@/components/ui"
+import { CheckeredPanel, CollectiveForm, CollectiveLogo, StepBlock } from "@/components/kolektyw"
+import { OG_ADA_PURPLE, social } from "@/config/site"
+import { firstStep, secondStep, SURVEY_URL, videoPlaceholder } from "@/data/kolektyw"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import { newTabProps } from "@/lib/links"
+
+/** Round arrows on this page open the survey in a new tab. */
+const survey = {
+  href: SURVEY_URL,
+  label: "Wypełnij ankietę (otwiera się w nowej karcie)",
+}
+const arrow = {
+  size: "lg",
+  circleClass: "fill-plum",
+  arrowClass: "stroke-cream",
+  shape: "chevron",
+} as const
+---
+
+<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+  <main>
+    <Section bg="bg-cream" innerClass="flex justify-center">
+      <CollectiveLogo eager heading class="w-80 py-4" />
+    </Section>
+
+    <CheckeredPanel width="narrow">
+      <StepBlock step={firstStep} class="pt-12">
+        <CircleArrow {...arrow} {...survey} newTab class="mx-auto mt-4 block" />
+      </StepBlock>
+    </CheckeredPanel>
+
+    <Section bg="bg-art-grid" innerClass="px-4 pt-20">
+      <div class="mx-auto h-48 max-w-sm rounded-3xl border border-tangerine bg-mint p-2 text-center">
+        <h2 class="font-anton text-2xl text-black md:text-3xl">{videoPlaceholder}</h2>
+      </div>
+      <CircleArrow {...arrow} {...survey} newTab class="mx-auto mt-4 block" />
+    </Section>
+
+    <Section bg="bg-mint" width="content" innerClass="pt-8 pb-12">
+      <StepBlock step={secondStep} class="px-4">
+        <section id="ankieta" class="my-8 flex justify-center">
+          <CollectiveForm />
+        </section>
+      </StepBlock>
+    </Section>
+
+    <Section bg="bg-petal" innerClass="flex justify-center py-8">
+      <a href={social.instagram} {...newTabProps} aria-label="Instagram Ady Promis">
+        <Image src={instagramIcon} alt="" width={48} height={48} />
+      </a>
+    </Section>
+  </main>
+</BaseLayout>

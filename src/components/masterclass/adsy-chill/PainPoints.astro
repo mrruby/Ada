@@ -1,0 +1,76 @@
+---
+/**
+ * "Czy Ty też..." — two columns of emoji cards that slide in from the sides
+ * the first time the pointer enters (md+), then the "kurcze, no tak!" pitch.
+ */
+import { Card, CircleArrow, Section } from "@/components/ui"
+import { cn } from "@/lib/cn"
+import type { IconPoint } from "@/data/masterclass"
+
+type Props = { points: IconPoint[] }
+
+const { points } = Astro.props
+const half = Math.ceil(points.length / 2)
+const columns = [
+  { items: points.slice(0, half), slide: "md:group-data-hovered:animate-slideInFromLeft" },
+  { items: points.slice(half), slide: "md:group-data-hovered:animate-slideInFromRight" },
+]
+const delays = ["", "animation-delay-200", "animation-delay-400"]
+---
+
+<Section bg="bg-mint">
+  <div class="group mx-auto mt-4 px-2 md:mt-10 md:pb-10" data-hover-once>
+    <h2 class="px-10 py-4 text-center font-anton text-3xl text-tangerine md:text-4xl">
+      Czy Ty też...
+    </h2>
+    <div class="flex flex-col justify-center pt-8 md:flex-row md:gap-4">
+      {columns.map((column) => (
+        <ul class="flex flex-col gap-6 pb-6 text-black">
+          {column.items.map((point, index) => (
+            <Card
+              as="li"
+              pad="none"
+              class={cn(
+                "relative flex min-h-30 max-w-lg items-center gap-4 px-6 py-8 text-center shadow-xl lg:text-left",
+                column.slide,
+                delays[index]
+              )}
+            >
+              <span
+                class="absolute top-1 left-1/2 -translate-1/2 text-4xl md:static md:translate-0"
+                aria-hidden="true"
+              >
+                {point.icon}
+              </span>
+              <span class="text-sm md:text-base">{point.text}</span>
+            </Card>
+          ))}
+        </ul>
+      ))}
+    </div>
+    <div class="mt-2 mb-2 flex justify-center">
+      <CircleArrow
+        href="#pakiety"
+        size="lg"
+        circleClass="fill-plum"
+        arrowClass="stroke-petal"
+        shape="chevron"
+        label="Przejdź do sekcji pakiety"
+      />
+    </div>
+    <div class="mx-auto max-w-md py-12 text-center">
+      <h3 class="pb-10 font-anton text-3xl text-tangerine">
+        W TWOJEJ GŁOWIE POJAWIŁA SIĘ MYŚL: <span class="text-petal">„KURCZE, NO TAK!”?</span>
+      </h3>
+      <p class="text-lg text-black">
+        Świetnie! Dzięki <b>ADSY&CHILL</b> przybliżysz się do życia w biznesie, który działa nie
+        tylko wtedy gdy pracujesz i publikujesz treści na Instagramie{" "}
+        <b>- możesz zarabiać więcej dzięki reklamom!</b>
+      </p>
+    </div>
+  </div>
+</Section>
+
+<script>
+  import "./hover-once"
+</script>

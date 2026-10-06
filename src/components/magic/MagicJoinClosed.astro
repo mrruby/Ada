@@ -1,0 +1,36 @@
+---
+/**
+ * Waiting-list sign-up shown while the club is closed. The MailerLite export
+ * ships its own scripts (AJAX submit + redirect to /thank on success).
+ */
+import { Heading, MailerLiteForm } from "@/components/ui"
+import formHtml from "@/forms/magic-zainteresowani-new.html?raw"
+import MagicSection from "./MagicSection.astro"
+
+type Props = {
+  title?: string
+  id?: string
+  class?: string
+}
+
+const {
+  title = "Zapisz się na listę: otwieramy już niedługo! 👇",
+  id,
+  class: className,
+} = Astro.props
+---
+
+<MagicSection
+  id={id}
+  bg="bg-marigold"
+  class={className}
+  width="narrow"
+  innerClass="px-4 py-12 text-center md:py-12"
+>
+  <Heading align="center" class="mb-4 leading-snug text-black">
+    {title}
+  </Heading>
+  <div class="rounded-2xl border-t-4 border-magenta bg-white p-6 shadow-xl md:p-8">
+    <MailerLiteForm html={formHtml} />
+  </div>
+</MagicSection>

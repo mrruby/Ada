@@ -1,0 +1,44 @@
+---
+/** Guide header: centered collective logo and in-page navigation. */
+import { Image } from "astro:assets"
+import logo from "@/assets/images/kolektyw-logo.webp"
+import type { LinkItem } from "@/lib/content"
+
+type Props = {
+  nav: LinkItem[]
+  /** Anchor the logo jumps to. */
+  home: string
+}
+
+const { nav, home } = Astro.props
+---
+
+<header class="relative z-10 flex min-h-36 flex-col items-center justify-center gap-4 border-b border-black/10 bg-cream px-5 py-6 md:grid md:grid-cols-2 md:px-9 lg:min-h-48 lg:grid-cols-3 lg:px-24">
+  <a
+    href={home}
+    class="block w-44 transition-opacity duration-200 hover:opacity-80 lg:col-start-2 lg:w-56 lg:justify-self-center"
+    aria-label="Kolektyw MAGIC, początek strony"
+  >
+    <Image
+      src={logo}
+      alt="Kolektyw MAGIC"
+      width={224}
+      densities={[1, 2]}
+      loading="eager"
+      class="h-auto w-full"
+    />
+  </a>
+  <nav
+    class="flex items-center gap-8 text-xs leading-tight font-medium uppercase md:justify-self-end md:gap-6 lg:col-start-3 lg:gap-12"
+    aria-label="Nawigacja po zasadach współpracy"
+  >
+    {nav.map((link) => (
+      <a
+        href={link.href}
+        class="decoration-tangerine underline-offset-4 hover:underline focus-visible:underline"
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+</header>

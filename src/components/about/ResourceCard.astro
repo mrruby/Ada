@@ -1,0 +1,18 @@
+---
+/** White card with a puzzle piece on top (about → "Przygotowałam dla Ciebie"). */
+import { Image } from "astro:assets"
+import puzzle from "@/assets/images/puzzle.png"
+import { Button } from "@/components/ui"
+import type { LinkItem } from "@/lib/content"
+
+type Props = { text: string; cta: LinkItem }
+const { text, cta } = Astro.props
+---
+
+<article class="relative mt-8 flex flex-col items-center bg-white px-4 pt-20 pb-6 transition-shadow hover:shadow-xl md:mt-20 lg:min-w-60">
+  <Image src={puzzle} alt="" width={180} height={125} class="absolute -top-16" />
+  <h3 class="max-w-60 pb-8 text-center leading-snug font-bold lg:text-lg">{text}</h3>
+  <Button href={cta.href} variant="outline" class="md:w-48 lg:text-xl">
+    {cta.label}
+  </Button>
+</article>

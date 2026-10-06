@@ -1,0 +1,32 @@
+---
+/** Closing CTA with links to the club's and Ada's Instagram. */
+import { Image } from "astro:assets"
+import instagram from "@/assets/images/instagram.svg"
+import { magicLinks } from "@/data/magic"
+import { newTabProps } from "@/lib/links"
+import MagicCta from "./MagicCta.astro"
+import MagicSection from "./MagicSection.astro"
+
+const accounts = [
+  { handle: "@klub.magic", href: magicLinks.instagramClub, alt: "Klub MAGIC Instagram" },
+  { handle: "@adapromis", href: magicLinks.instagramAda, alt: "Ada Promis Instagram" },
+]
+---
+
+<MagicSection bg="bg-neutral-100" innerClass="flex flex-col items-center gap-8 py-20 md:py-24">
+  <MagicCta size="lg" class="text-lg md:text-xl">
+    Dołączam do Magic!
+  </MagicCta>
+  <div class="flex items-center gap-6">
+    {accounts.map((account) => (
+      <a
+        href={account.href}
+        {...newTabProps}
+        class="flex flex-col items-center gap-2 hover:opacity-80"
+      >
+        <Image src={instagram} alt={account.alt} class="size-10" />
+        <span class="text-sm text-gray-600">{account.handle}</span>
+      </a>
+    ))}
+  </div>
+</MagicSection>

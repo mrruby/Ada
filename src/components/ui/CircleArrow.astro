@@ -1,0 +1,58 @@
+---
+/**
+ * Round "scroll down" marker; becomes a link when `href` is given.
+ * Size via `size` or responsive `class` (e.g. "size-12 md:size-20").
+ */
+import { cn } from "@/lib/cn"
+import { isExternal, newTabProps } from "@/lib/links"
+
+const sizes = { sm: "size-12", md: "size-16", lg: "size-20" } as const
+
+type Props = {
+  href?: string
+  size?: keyof typeof sizes
+  /** Circle color as a fill class, e.g. "fill-plum". */
+  circleClass?: string
+  /** Arrow color as a stroke class, e.g. "stroke-cream". */
+  arrowClass?: string
+  /** "thin" = stroked arrow, "chevron" = thick V. */
+  shape?: "thin" | "chevron"
+  label?: string
+  /** Open an external `href` in a new tab. */
+  newTab?: boolean
+  class?: string
+}
+
+const {
+  href,
+  size = "md",
+  circleClass = "fill-lemon",
+  arrowClass = "stroke-plum",
+  shape = "thin",
+  label = "Przewiń dalej",
+  newTab = false,
+  class: className,
+} = Astro.props
+
+const Tag = href ? "a" : "span"
+const linkProps = href
+  ? { href, "aria-label": label, ...(newTab && isExternal(href) ? newTabProps : {}) }
+  : { "aria-hidden": "true" as const }
+---
+
+<Tag {...linkProps} class={cn("inline-block shrink-0", sizes[size], className)}>
+  <svg viewBox="0 0 60 60" width="100%" height="100%" fill="none">
+    <circle cx="30" cy="30" r="30" class={circleClass}></circle>
+    {shape === "thin" ? (
+      <path
+        d="M30 45L18 33M30 45L42 33M30 45V15"
+        class={arrowClass}
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    ) : (
+      <path d="M18 24L30 36L42 24" class={arrowClass} stroke-width="4" stroke-linecap="round" />
+    )}
+  </svg>
+</Tag>

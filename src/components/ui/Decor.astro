@@ -1,0 +1,91 @@
+---
+/**
+ * Decorative artwork (flowers, suns, waves…) from /public/assets.
+ * Position it relative to the section it decorates — the parent needs
+ * `relative` (and usually `overflow-hidden`):
+ *
+ *   <Section bg="bg-lavender" class="relative overflow-hidden">
+ *     <Decor art="flower-left-blue" class="top-10 -left-16 hidden md:block" />
+ *     …
+ *   </Section>
+ */
+import { cn } from "@/lib/cn"
+
+const art = {
+  arrow: "/assets/arrow.svg",
+  "arrow-masterclass": "/assets/arrowMasterclass.svg",
+  "arrow-webinar": "/assets/arrowWebinar.svg",
+  "ball-1": "/assets/ball1.svg",
+  "ball-2": "/assets/ball2.svg",
+  coffee: "/assets/coffee.svg",
+  drinks: "/assets/drinks.svg",
+  flaming: "/assets/flaming.svg",
+  flaps: "/assets/flaps.svg",
+  "flower-blue": "/assets/flower-blue.svg",
+  "flower-bottom": "/assets/flower-bottom.svg",
+  "flower-left-blue": "/assets/flower-left-blue.svg",
+  "flower-right-white": "/assets/flower-right-white.svg",
+  "leaves-1": "/assets/leaves1.svg",
+  "leaves-2": "/assets/leaves2.svg",
+  "leaves-3": "/assets/leaves3.svg",
+  "leaves-4": "/assets/leaves4.svg",
+  "leaves-5": "/assets/leaves5.svg",
+  magic: "/assets/magic.svg",
+  "magic-2": "/assets/magic-2.svg",
+  "magic-sun": "/assets/magic-sun.svg",
+  "magic-sun-dark": "/assets/magic-sun-dark.svg",
+  "magic-sun-pink": "/assets/magic-sun-pink.svg",
+  "magic-sun-pink-new": "/assets/magic-sun-pink-new.svg",
+  "magic-sun-yellow": "/assets/magic-sun-yellow.svg",
+  "magic-union": "/assets/magic-union.svg",
+  "magic-union-2": "/assets/magic-union-2.svg",
+  "magic-union-2-pink": "/assets/magic-union-2-pink.svg",
+  "magic-union-dark": "/assets/magic-union-dark.svg",
+  "magic-union-pink": "/assets/magic-union-pink.svg",
+  puzzle: "/assets/puzzle.svg",
+  "puzzle-1": "/assets/puzzle-1.svg",
+  "puzzle-2": "/assets/puzzle-2.svg",
+  "puzzle-3": "/assets/puzzle-3.svg",
+  "puzzle-4": "/assets/puzzle-4.svg",
+  "puzzle-5": "/assets/puzzle-5.svg",
+  "puzzle-blue": "/assets/puzzle-blue.svg",
+  "puzzle-pink": "/assets/puzzle-pink.svg",
+  "puzzle-small": "/assets/small-puzzle.svg",
+  "star-right-pink": "/assets/star-right-pink.svg",
+  sun: "/assets/sun.svg",
+  "sun-2": "/assets/sun2.svg",
+  sunglasses: "/assets/sunglasses.svg",
+  "two-flowers": "/assets/two-flowers.svg",
+  vector: "/assets/vector.svg",
+  "vector-pink": "/assets/vector-pink.svg",
+  wave: "/assets/wave.svg",
+  "waves-1": "/assets/waves1.svg",
+  "waves-2": "/assets/waves2.svg",
+  "waves-3": "/assets/waves3.svg",
+  "waves-4": "/assets/waves4.svg",
+  "waves-5": "/assets/waves5.svg",
+  "waves-6": "/assets/waves6.svg",
+} as const
+
+export type DecorArt = keyof typeof art
+
+type Props = {
+  art: DecorArt
+  class?: string
+  width?: number
+  height?: number
+}
+
+const { art: name, class: className, width, height } = Astro.props
+---
+
+<img
+  src={art[name]}
+  alt=""
+  aria-hidden="true"
+  loading="lazy"
+  decoding="async"
+  width={width}
+  height={height}
+  class={cn("pointer-events-none absolute select-none", className)}
+/>

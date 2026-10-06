@@ -1,0 +1,29 @@
+---
+/** Endless horizontal ticker. Slot content is duplicated for a seamless loop. */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  /** Seconds per full loop. */
+  duration?: number
+  reverse?: boolean
+  class?: string
+  trackClass?: string
+}
+
+const { duration = 60, reverse = false, class: className, trackClass } = Astro.props
+const content = await Astro.slots.render("default")
+---
+
+<div class={cn("flex overflow-hidden", className)}>
+  {[0, 1].map((copy) => (
+    <div
+      class={cn("flex shrink-0 animate-marquee items-center", trackClass)}
+      style={{
+        animationDuration: `${duration}s`,
+        animationDirection: reverse ? "reverse" : "normal",
+      }}
+      aria-hidden={copy === 1 ? "true" : undefined}
+      set:html={content}
+    />
+  ))}
+</div>

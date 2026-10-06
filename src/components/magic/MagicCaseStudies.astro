@@ -1,0 +1,14 @@
+---
+/** Magic band with the shared case-study video carousel. */
+import { CaseStudyVideos } from "@/components/sections"
+import MagicSection from "./MagicSection.astro"
+
+type Props = { heading?: string }
+
+const { heading } = Astro.props
+---
+
+<MagicSection bg="bg-blush" width="page" innerClass="py-12">
+  {heading && <h2 class="mb-8 px-4 text-center text-2xl font-bold">{heading}</h2>}
+  <CaseStudyVideos class="px-12" />
+</MagicSection>

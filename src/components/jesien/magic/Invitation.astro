@@ -1,0 +1,20 @@
+---
+import { VideoEmbed } from "@/components/ui"
+import { MAGIC_JESIEN_INVITATION_VIDEO_ID } from "@/data/jesien"
+import MjHeading from "./MjHeading.astro"
+import MjPanel from "./MjPanel.astro"
+import MjSection from "./MjSection.astro"
+---
+
+<MjSection id="wideo" tone="lavender" class="pt-10 md:pt-10 lg:pt-10">
+  <MjHeading title="O co chodzi w MAGIC?" accent="Sprawdź w skrócie" />
+  <MjPanel class="mt-8">
+    <div class="mx-auto max-w-4xl overflow-hidden rounded-3xl bg-periwinkle/30">
+      <VideoEmbed
+        id={MAGIC_JESIEN_INVITATION_VIDEO_ID}
+        title="Twoje zaproszenie do MAGIC"
+        sizes="(max-width: 900px) 100vw, 860px"
+      />
+    </div>
+  </MjPanel>
+</MjSection>

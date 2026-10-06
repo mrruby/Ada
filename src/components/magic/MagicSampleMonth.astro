@@ -1,0 +1,32 @@
+---
+/** "Jak wygląda przykładowy miesiąc w MAGIC?" — calendar over the laptop photo. */
+import { Image } from "astro:assets"
+import calendar from "@/assets/images/magic_kalendarz.webp"
+import { Heading } from "@/components/ui"
+import MagicSection from "./MagicSection.astro"
+---
+
+<MagicSection
+  bg="bg-art-magic-photo"
+  class="text-black"
+  innerClass="flex flex-col items-center gap-8"
+>
+  <Heading align="center" class="md:text-4xl">
+    Jak wygląda przykładowy miesiąc w<span class="text-magenta"> MAGIC </span>?
+  </Heading>
+  <Image
+    src={calendar}
+    alt="Przykładowy kalendarz spotkań w MAGIC"
+    widths={[480, 1000, 1499]}
+    sizes="(min-width: 1024px) 1000px, 100vw"
+    class="h-auto w-full max-w-5xl"
+  />
+  <Heading
+    as="p"
+    align="center"
+    class="max-w-3xl rounded-xl border-2 border-periwinkle bg-neutral-100 px-6 py-4 shadow-md"
+  >
+    Twój <span class="text-magenta">MAGIC Plan</span> podpowie, które z tych spotkań są dla Ciebie
+    najważniejsze w pierwszym miesiącu.
+  </Heading>
+</MagicSection>

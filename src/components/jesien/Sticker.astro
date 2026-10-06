@@ -1,0 +1,26 @@
+---
+/**
+ * Tilted, wiggling handwritten label pinned to a card corner (Jesień
+ * landings). The parent needs `relative`. `<em>` inside is pink.
+ */
+import { cn } from "@/lib/cn"
+
+type Props = {
+  side?: "right" | "left"
+  class?: string
+}
+
+const { side = "right", class: className } = Astro.props
+---
+
+<span
+  class={cn(
+    "absolute -top-5 z-10 rounded-lg bg-white px-3.5 py-1.5 font-caveat text-lg font-bold text-jesien-ink shadow-lg shadow-jesien-ink/20 motion-reduce:animate-none sm:-top-6 sm:text-xl [&_em]:text-jesien-pink [&_em]:not-italic",
+    side === "right"
+      ? "right-1.5 rotate-6 animate-wiggle sm:-right-2.5"
+      : "left-1.5 -rotate-6 animate-wiggleNeg sm:-left-2.5",
+    className
+  )}
+>
+  <slot />
+</span>

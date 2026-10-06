@@ -1,0 +1,43 @@
+---
+/**
+ * Bordered benefit cards in a 1 / 2 / 3 column grid. With `centerLastRow`
+ * an incomplete last row is centered on large screens.
+ */
+import type { TrainingBenefit, TrainingTone } from "@/data/training/types"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  items: TrainingBenefit[]
+  centerLastRow?: boolean
+  class?: string
+}
+
+const { items, centerLastRow = false, class: className } = Astro.props
+
+const tones: Record<TrainingTone, string> = {
+  pink: "bg-petal-light",
+  yellow: "bg-lemon",
+  purple: "bg-periwinkle",
+}
+
+// Large screens use a 6-track grid (each card spans 2), so a lone or paired
+// last card can start in the middle track.
+const orphans = centerLastRow ? items.length % 3 : 0
+const firstOrphan = items.length - orphans
+const orphanStart = orphans === 1 ? "lg:col-start-3" : orphans === 2 ? "lg:col-start-2" : ""
+---
+
+<ul class={cn("grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6", className)}>
+  {items.map((item, index) => (
+    <li
+      class={cn(
+        "rounded-lg border border-black p-6 text-center text-black lg:col-span-2",
+        tones[item.tone],
+        orphans > 0 && index === firstOrphan && orphanStart
+      )}
+    >
+      <h3 class="mb-2 font-bold whitespace-pre-line uppercase">{item.title}</h3>
+      <p class="whitespace-pre-line">{item.description}</p>
+    </li>
+  ))}
+</ul>

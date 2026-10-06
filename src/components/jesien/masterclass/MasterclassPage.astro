@@ -1,0 +1,53 @@
+---
+/**
+ * The whole live-masterclass landing. Rendered by both /masterclass-jesien
+ * and its alias /jesien-masterclass.
+ */
+import { OG_ADA_PURPLE } from "@/config/site"
+import {
+  JESIEN_MASTERCLASS_DESCRIPTION,
+  JESIEN_MASTERCLASS_HERO_FORM_ID,
+  JESIEN_MASTERCLASS_START,
+  JESIEN_MASTERCLASS_TITLE,
+} from "@/data/jesien"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import JesienButton from "../JesienButton.astro"
+import JesienCountdownBar from "../JesienCountdownBar.astro"
+import JesienShell from "../JesienShell.astro"
+import MasterclassGains from "./MasterclassGains.astro"
+import MasterclassHero from "./MasterclassHero.astro"
+import MasterclassHosts from "./MasterclassHosts.astro"
+import MasterclassPains from "./MasterclassPains.astro"
+import MasterclassWho from "./MasterclassWho.astro"
+
+type Props = {
+  /** Canonical URL; the alias points it at /masterclass-jesien/. */
+  canonical?: string
+}
+
+const { canonical } = Astro.props
+---
+
+<BaseLayout
+  title={JESIEN_MASTERCLASS_TITLE}
+  description={JESIEN_MASTERCLASS_DESCRIPTION}
+  image={OG_ADA_PURPLE}
+  canonical={canonical}
+>
+  <JesienShell>
+    <JesienCountdownBar target={JESIEN_MASTERCLASS_START} ariaLabel="Odliczanie do masterclassu">
+      <Fragment slot="label">⏳ Do masterclassu zostało:</Fragment>
+      <Fragment slot="expired">
+        🔴 <strong class="text-jesien-pink">Zaczynamy!</strong> Link do spotkania masz w mailu
+      </Fragment>
+      <JesienButton slot="cta" href={`#${JESIEN_MASTERCLASS_HERO_FORM_ID}`} variant="small">
+        ZAPISUJĘ SIĘ ZA 0 ZŁ 🔮
+      </JesienButton>
+    </JesienCountdownBar>
+    <MasterclassHero />
+    <MasterclassPains />
+    <MasterclassGains />
+    <MasterclassHosts />
+    <MasterclassWho />
+  </JesienShell>
+</BaseLayout>

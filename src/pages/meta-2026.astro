@@ -1,0 +1,12 @@
+---
+import TrainingLanding from "@/components/training/TrainingLanding.astro"
+import { meta2026 } from "@/data/training/meta2026"
+import formHtml from "@/forms/form-przedsiebiorczynie.html?raw"
+import BaseLayout from "@/layouts/BaseLayout.astro"
+
+const { seoTitle, ...landing } = meta2026
+---
+
+<BaseLayout title={seoTitle}>
+  <TrainingLanding {...landing} formHtml={formHtml} />
+</BaseLayout>

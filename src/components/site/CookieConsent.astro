@@ -1,0 +1,193 @@
+---
+/**
+ * GDPR cookie consent: a banner until the visitor decides, a settings dialog
+ * (optional categories unticked by default), and a small "cookie settings"
+ * button so the choice can be changed at any time. Any element with
+ * `data-consent-open` also opens the settings. Logic: lib/consent.ts.
+ */
+const categories = [
+  {
+    name: "statistics",
+    title: "Statystyki",
+    text: "Pomaga nam zrozumieć, jak odwiedzający wchodzą w interakcję z witryną (Google Analytics, Hotjar).",
+  },
+  {
+    name: "preferences",
+    title: "Preferencje",
+    text: "Umożliwia stronie zapamiętanie informacji o Twoich preferencjach (Google Tag Manager).",
+  },
+  {
+    name: "marketing",
+    title: "Marketing",
+    text: "Służy do wyświetlania odpowiednich reklam (Meta Pixel).",
+  },
+  {
+    name: "media",
+    title: "Multimedia",
+    text: "Pozwala odtwarzać filmy z YouTube i Vimeo oraz wyświetlać kalendarz Google na stronie.",
+  },
+]
+
+const primary =
+  "w-full rounded bg-navy px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-navy/90"
+const outline =
+  "w-full rounded border-2 border-navy px-4 py-2 text-sm font-bold text-navy transition-colors hover:bg-lavender"
+---
+
+<div
+  data-consent-banner
+  hidden
+  class="fixed inset-x-0 bottom-0 z-100 bg-white text-navy shadow-lg"
+  role="region"
+  aria-labelledby="cookie-title"
+>
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 p-4 md:flex-row md:items-end md:justify-between">
+    <div>
+      <h2 id="cookie-title" class="mb-2 text-lg font-medium">
+        Ta strona używa plików cookie
+      </h2>
+      <p class="text-sm font-medium">
+        Używamy plików cookie do personalizacji treści i reklam, udostępniania funkcji mediów
+        społecznościowych i analizowania ruchu. Udostępniamy również informacje o korzystaniu z
+        naszej witryny naszym partnerom z mediów społecznościowych, reklamy i analityki.
+      </p>
+      <p class="mt-2 text-sm font-medium">
+        Szczegółową listę plików cookie dla każdego z naszych produktów znajdziesz w{" "}
+        <a href="/policy" class="font-bold hover:underline">
+          Warunkach i Zasadach
+        </a>
+        . Swój wybór możesz zmienić w każdej chwili.
+      </p>
+    </div>
+    <div class="flex min-w-44 flex-col gap-1">
+      <button type="button" data-consent="all" class={primary}>
+        Zaakceptuj wszystko
+      </button>
+      <button type="button" data-consent="none" class={outline}>
+        Nie zezwalaj
+      </button>
+      <button type="button" data-consent-open class={outline}>
+        Ustawienia
+      </button>
+    </div>
+  </div>
+</div>
+
+<dialog
+  data-consent-dialog
+  aria-labelledby="cookie-settings-title"
+  class="m-auto w-full max-w-xl rounded-2xl bg-white p-0 text-navy shadow-xl backdrop:bg-black/50"
+>
+  <form method="dialog" class="flex flex-col gap-5 p-6">
+    <div class="flex items-start justify-between gap-4">
+      <h2 id="cookie-settings-title" class="text-xl font-bold">
+        Ustawienia plików cookie
+      </h2>
+      <button
+        type="submit"
+        value="cancel"
+        class="rounded-full px-2 text-2xl leading-none hover:bg-lavender"
+        aria-label="Zamknij"
+      >
+        ×
+      </button>
+    </div>
+    <p class="text-sm">
+      Niezbędne pliki cookie są zawsze aktywne, bez nich strona nie działa. Pozostałe kategorie
+      włączysz tylko za swoją zgodą.
+    </p>
+    <ul class="flex flex-col gap-3">
+      {categories.map((category) => (
+        <li>
+          <label class="flex cursor-pointer items-start gap-3">
+            <input type="checkbox" name={category.name} class="peer sr-only" data-consent-toggle />
+            <span
+              aria-hidden="true"
+              class="relative mt-0.5 h-5 w-10 shrink-0 rounded-full bg-navy/20 transition-colors peer-checked:bg-navy peer-focus-visible:ring-2 peer-focus-visible:ring-navy peer-focus-visible:ring-offset-2 after:absolute after:top-0.5 after:left-0.5 after:size-4 after:rounded-full after:bg-white after:transition-all peer-checked:after:translate-x-5"
+            />
+            <span>
+              <span class="block text-sm font-bold">{category.title}</span>
+              <span class="block text-xs font-medium">{category.text}</span>
+            </span>
+          </label>
+        </li>
+      ))}
+    </ul>
+    <div class="flex flex-col gap-2 sm:flex-row">
+      <button type="submit" value="selected" class={outline}>
+        Zaakceptuj wybrane
+      </button>
+      <button type="submit" value="all" class={primary}>
+        Zaakceptuj wszystko
+      </button>
+    </div>
+  </form>
+</dialog>
+
+<button
+  type="button"
+  data-consent-open
+  data-consent-reopen
+  hidden
+  class="fixed bottom-3 left-3 z-90 flex size-10 items-center justify-center rounded-full bg-white text-xl shadow-lg ring-1 ring-navy/10 transition-transform hover:scale-105"
+  aria-label="Ustawienia plików cookie"
+>
+  <span aria-hidden="true">🍪</span>
+</button>
+
+<script>
+  import {
+    acceptAll,
+    applyConsent,
+    type ConsentCategory,
+    type ConsentChoices,
+    getConsent,
+    rejectOptional,
+    saveConsent,
+  } from "@/lib/consent"
+
+  const banner = document.querySelector<HTMLElement>("[data-consent-banner]")
+  const dialog = document.querySelector<HTMLDialogElement>("[data-consent-dialog]")
+  const reopen = document.querySelector<HTMLElement>("[data-consent-reopen]")
+  const toggles = [...document.querySelectorAll<HTMLInputElement>("[data-consent-toggle]")]
+
+  const showDecided = () => {
+    if (banner) banner.hidden = true
+    if (reopen) reopen.hidden = false
+  }
+
+  const state = getConsent()
+  applyConsent(state.choices)
+  if (state.decided) showDecided()
+  else if (banner) banner.hidden = false
+
+  // Any [data-consent-open] (banner button, floating button, footer links).
+  document.addEventListener("click", (event) => {
+    const opener = (event.target as Element).closest("[data-consent-open]")
+    if (!opener || !dialog) return
+    const { choices } = getConsent()
+    toggles.forEach((toggle) => (toggle.checked = choices[toggle.name as ConsentCategory]))
+    dialog.returnValue = ""
+    dialog.showModal()
+  })
+
+  banner?.querySelector("[data-consent=all]")?.addEventListener("click", () => {
+    acceptAll()
+    showDecided()
+  })
+  banner?.querySelector("[data-consent=none]")?.addEventListener("click", () => {
+    rejectOptional()
+    showDecided()
+  })
+
+  dialog?.addEventListener("close", () => {
+    if (dialog.returnValue === "all") acceptAll()
+    else if (dialog.returnValue === "selected") {
+      const choices = Object.fromEntries(
+        toggles.map((toggle) => [toggle.name, toggle.checked])
+      ) as ConsentChoices
+      saveConsent(choices)
+    } else return
+    showDecided()
+  })
+</script>

@@ -1,0 +1,77 @@
+---
+/**
+ * "Dołącz do MAGIC:" — subscription plans side by side, all leading to the
+ * same checkout. Ends with the Nicola call pop-up trigger.
+ */
+import { StarBadge, TypingText } from "@/components/ui"
+import { MAGIC_PACKAGE_ID, planFeatures, type MagicPlan } from "@/data/magic"
+import { cn } from "@/lib/cn"
+import MagicCta from "./MagicCta.astro"
+import MagicSection from "./MagicSection.astro"
+import NicolaCallPopup from "./NicolaCallPopup.astro"
+
+type Props = {
+  plans: MagicPlan[]
+  /** Checkout URL for every plan. */
+  url: string
+  bg?: string
+}
+
+const { plans, url, bg = "bg-neutral-100" } = Astro.props
+
+const badgePlacement = {
+  yellow: "top-0 right-0 translate-x-1/3 -translate-y-1/2 rotate-12",
+  pink: "top-0 right-0 translate-x-1/3 -translate-y-1/3 -rotate-12",
+} as const
+---
+
+<MagicSection
+  id={MAGIC_PACKAGE_ID}
+  bg={bg}
+  width="wide"
+  class="text-black"
+  innerClass="flex flex-col items-center md:px-12"
+>
+  <TypingText as="h2" text="Dołącz do MAGIC:" class="text-5xl leading-normal font-bold" />
+
+  <ul class="mt-10 grid w-full gap-x-6 gap-y-14 md:gap-y-16 lg:grid-cols-3 lg:gap-y-6">
+    {plans.map((plan) => (
+      <li class="relative flex">
+        {plan.badge && (
+          <StarBadge
+            label={plan.badge.label}
+            variant={plan.badge.variant}
+            class={badgePlacement[plan.badge.variant]}
+            sizeClass={plan.badge.variant === "yellow" ? "size-28" : "size-24"}
+            labelClass="max-w-20 -translate-x-2 text-base md:text-lg"
+          />
+        )}
+        <article
+          class={cn(
+            "flex w-full flex-col overflow-hidden rounded-3xl border border-black p-8 text-left shadow-xl",
+            plan.tone
+          )}
+        >
+          <p class="text-lg">{plan.period}</p>
+          <h3 class="text-4xl leading-normal font-bold">{plan.name}</h3>
+          <p class="text-lg">cena</p>
+          <p>
+            <span class="text-4xl leading-normal font-bold">{plan.price}</span>{" "}
+            <span class="text-lg font-bold">ZŁ/MIESIĄC</span>
+          </p>
+          <MagicCta href={url} class="mx-auto mt-4 mb-6 min-w-44 text-base md:text-3xl">
+            DOŁĄCZAM!
+          </MagicCta>
+          <ul class="-mx-8 flex flex-col gap-4 border-t border-black px-8 pt-4 text-sm">
+            {planFeatures.map((feature) => (
+              <li set:html={feature} />
+            ))}
+          </ul>
+          <p class="mt-3 text-center text-sm text-black/70">{plan.note}</p>
+        </article>
+      </li>
+    ))}
+  </ul>
+
+  <NicolaCallPopup />
+</MagicSection>

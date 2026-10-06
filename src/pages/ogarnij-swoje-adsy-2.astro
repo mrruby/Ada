@@ -1,0 +1,206 @@
+---
+import { Image } from "astro:assets"
+import heroBg from "@/assets/images/bg-mastermind.png"
+import calendarIcon from "@/assets/images/calendar.svg"
+import Adsy2About from "@/components/mentoring/Adsy2About.astro"
+import Adsy2Fit from "@/components/mentoring/Adsy2Fit.astro"
+import Adsy2Intro from "@/components/mentoring/Adsy2Intro.astro"
+import Adsy2SafeSpace from "@/components/mentoring/Adsy2SafeSpace.astro"
+import BackdropHero from "@/components/mentoring/BackdropHero.astro"
+import BonusGrid from "@/components/mentoring/BonusGrid.astro"
+import MarkList from "@/components/mentoring/MarkList.astro"
+import QuestionCarousel from "@/components/mentoring/QuestionCarousel.astro"
+import ReferenceMarquee from "@/components/mentoring/ReferenceMarquee.astro"
+import StaticFaq from "@/components/mentoring/StaticFaq.astro"
+import StepsGrid from "@/components/mentoring/StepsGrid.astro"
+import Timeline from "@/components/mentoring/Timeline.astro"
+import {
+  Button,
+  Decor,
+  GhostHeading,
+  MailerLiteForm,
+  MarkerHeading,
+  Section,
+} from "@/components/ui"
+import {
+  adsy2Agenda,
+  adsy2Bonuses,
+  adsy2Doubts,
+  adsy2Faq,
+  adsy2ForYou,
+  adsy2NotForYou,
+  adsy2Program,
+  adsy2Steps,
+  referenceSnippets,
+} from "@/data/mentoring"
+import signupForm from "@/forms/form-ogarnij-swoje-adsy.html?raw"
+import SiteLayout from "@/layouts/SiteLayout.astro"
+
+const joinButton = "border-b-4 border-rose font-bold md:text-2xl"
+---
+
+<SiteLayout title="Ogarnij swoje Adsy Mentoring">
+  <BackdropHero image={heroBg} innerClass="max-w-5xl items-center text-center md:pt-40 md:pb-16">
+    <h1 class="animate-settle pb-8 text-xl leading-tight font-bold lg:text-5xl">
+      Chcesz, aby więcej osób kupowało Twoje produkty i korzystało z Twoich usług?
+    </h1>
+    <p class="mx-auto max-w-4xl text-sm leading-tight font-medium md:text-2xl">
+      Dołącz do programu mentoringowego „Ogarnij swoje adsy!” i osiągaj w kampaniach reklamowych
+      wyniki, na widok których aż przetrzesz oczy! Dobrze zaplanowane kampanie reklamowe pracują
+      „same”. Przyciągną do Ciebie nowych klientów nawet wtedy, gdy śpisz, jesteś na urlopie czy gdy
+      spędzasz czas z rodziną.
+    </p>
+    <p class="mx-auto max-w-4xl p-7.5 text-sm leading-tight font-medium md:text-2xl">
+      Świetne wyniki reklamowe = lepsze pieniądze = lepsze życie, prawda? ;)
+    </p>
+    <Button href="#mastermind-info" class="mb-8 md:w-md md:text-2xl">
+      <span>
+        Chcę <b>ulepszyć</b> moje kampanie!
+      </span>
+    </Button>
+  </BackdropHero>
+
+  <Adsy2Intro />
+
+  <ReferenceMarquee images={referenceSnippets}>
+    <MarkerHeading
+      slot="title"
+      marker="pink"
+      bounce={false}
+      class="mx-auto max-w-3xl px-2 text-xl lg:text-3xl"
+    >
+      Dzięki niemu docieranie do nowych klientów
+      <br />
+      może wyglądać tak:
+    </MarkerHeading>
+  </ReferenceMarquee>
+
+  <Adsy2SafeSpace />
+
+  <Section
+    class="relative overflow-hidden"
+    bg="bg-linear-to-b from-lavender to-white"
+    innerClass="px-3 pb-16"
+  >
+    <Decor art="flower-right-white" class="top-3/5 right-0 hidden md:block" />
+    <h2 class="pb-8 text-center text-2xl font-bold text-white/40 lg:text-7xl">W programie</h2>
+    <Timeline items={adsy2Agenda} />
+  </Section>
+
+  <Section class="relative overflow-hidden" bg="bg-linear-to-b from-lavender to-white">
+    <Decor art="flower-right-white" class="right-0 bottom-1/4 hidden md:block" />
+    <div id="steps" class="flex flex-col gap-10 px-3 pt-10 pb-4 text-center">
+      <GhostHeading ghost="Nad czym będziemy" titleClass="-mt-3 md:-mt-3">
+        pracować?
+      </GhostHeading>
+      <StepsGrid steps={adsy2Steps} flower="blue" titleClass="font-medium" />
+      <BonusGrid heading="Czekają też na Ciebie bonusy:" rows={adsy2Bonuses} />
+    </div>
+    <Adsy2Fit />
+    <div class="flex flex-col items-center gap-2 px-3 pt-10 pb-16 text-center">
+      <MarkerHeading
+        as="h3"
+        marker="pink"
+        class="text-xl leading-normal tracking-widest uppercase lg:text-3xl lg:leading-normal"
+      >
+        TAK mówią osoby, które uczyłam
+        <br />
+        prowadzenia reklam:
+      </MarkerHeading>
+    </div>
+  </Section>
+
+  <Section bg="bg-linear-to-t from-lavender to-white" innerClass="flex flex-col items-center px-3">
+    <div class="pt-15 lg:pt-19">
+      <MarkerHeading bounce={false} class="text-xl lg:text-5xl">
+        Program jest dla Ciebie, jeśli…
+      </MarkerHeading>
+      <MarkList
+        mark="tick"
+        columns={[adsy2ForYou]}
+        class="pt-6"
+        columnClass="md:max-w-5xl lg:max-w-5xl"
+      />
+    </div>
+    <div class="flex pt-15 lg:pt-19">
+      <img
+        src="/assets/puzzles.svg"
+        alt=""
+        aria-hidden="true"
+        width="309"
+        height="480"
+        loading="lazy"
+        class="mr-10 hidden shrink-0 lg:block"
+      />
+      <div>
+        <MarkerHeading bounce={false} class="text-xl lg:text-5xl">
+          Nie jest dla Ciebie, jeśli…
+        </MarkerHeading>
+        <MarkList
+          mark="tick"
+          columns={[adsy2NotForYou]}
+          class="pt-6"
+          columnClass="md:max-w-3xl lg:max-w-3xl"
+        />
+      </div>
+    </div>
+    <div class="w-full px-4 pt-30 pb-10 text-center">
+      <GhostHeading
+        ghost="Pewnie teraz się"
+        bounce={false}
+        ghostClass="text-2xl lg:text-6xl"
+        titleClass="-mt-1 text-2xl md:-mt-3 lg:text-5xl"
+      >
+        zastanawiasz...
+      </GhostHeading>
+      <QuestionCarousel items={adsy2Doubts} />
+    </div>
+  </Section>
+
+  <Adsy2About />
+
+  <Section bg="bg-linear-to-t from-lavender to-white" innerClass="flex flex-col items-center px-3">
+    <div class="pt-15 lg:pt-0">
+      <MarkerHeading class="text-lg lg:text-5xl">Co dostajesz w ramach programu?</MarkerHeading>
+      <MarkList mark="tick" columns={[adsy2Program]} class="pt-6" columnClass="lg:max-w-5xl" />
+    </div>
+  </Section>
+
+  <Section
+    bg="bg-linear-to-b from-lavender to-white"
+    innerClass="flex justify-center px-3 pt-20 pb-8"
+  >
+    <Button href="#zostaw-maila" class={`${joinButton} md:w-72`}>
+      Chcę dołączyć!
+    </Button>
+  </Section>
+
+  <Section bg="bg-linear-to-t from-lavender to-white" innerClass="flex flex-col items-center px-3">
+    <div class="w-full pt-15 lg:pt-19">
+      <img
+        src="/assets/faq.svg"
+        alt=""
+        aria-hidden="true"
+        width="265"
+        height="247"
+        loading="lazy"
+        class="ml-auto hidden h-50 w-auto md:block"
+      />
+      <MarkerHeading>FAQ</MarkerHeading>
+      <StaticFaq columns={adsy2Faq} />
+    </div>
+    <div class="flex flex-col items-center gap-10 pt-24 pb-10 text-center md:pb-28">
+      <p class="mx-auto max-w-5xl font-medium md:text-2xl">
+        To jak, chcesz podkręcić swój biznes jeszcze przed wakacjami dzięki reklamom?
+      </p>
+      <Button href="#zostaw-maila" class={`${joinButton} bg-white uppercase md:w-xl`}>
+        <span>Zapisuję się na listę osób zainteresowanych programem</span>
+        <Image src={calendarIcon} alt="" width={24} height={24} class="ml-1 md:ml-4" />
+      </Button>
+    </div>
+  </Section>
+
+  <div id="zostaw-maila" class="mt-16 mb-10 px-2 pt-10 pb-30 md:pt-20 xl:px-6">
+    <MailerLiteForm id="webinar-form" html={signupForm} class="md:scale-125" />
+  </div>
+</SiteLayout>

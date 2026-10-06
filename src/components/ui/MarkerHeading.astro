@@ -1,0 +1,50 @@
+---
+/**
+ * Classic Ada heading: bold text over a thick highlighter stripe that
+ * follows the text across line breaks (replaces the old fixed-height
+ * border-bottom trick).
+ *
+ * <MarkerHeading>Kim jestem?</MarkerHeading>
+ */
+import type { HTMLAttributes } from "astro/types"
+import { cn } from "@/lib/cn"
+
+const markers = {
+  lavender: "to-lavender",
+  pink: "to-blush",
+  yellow: "to-lemon",
+} as const
+
+type Props = HTMLAttributes<"h2"> & {
+  as?: "h1" | "h2" | "h3" | "p"
+  marker?: keyof typeof markers
+  /** Gentle bounce on load (the classic pages' signature). */
+  bounce?: boolean
+  /** Extra classes on the highlighted text span. */
+  textClass?: string
+}
+
+const {
+  as: Tag = "h2",
+  marker = "lavender",
+  bounce = true,
+  class: className,
+  textClass,
+  ...attrs
+} = Astro.props
+---
+
+<Tag
+  class={cn("text-xl leading-tight font-bold lg:text-5xl", bounce && "animate-settle", className)}
+  {...attrs}
+>
+  <span
+    class={cn(
+      "box-decoration-clone bg-linear-to-b from-transparent from-55% to-55% px-1",
+      markers[marker],
+      textClass
+    )}
+  >
+    <slot />
+  </span>
+</Tag>

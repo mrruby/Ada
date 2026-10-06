@@ -1,0 +1,270 @@
+---
+/**
+ * Application form of the Magic collective. Answers go to a Google Form
+ * (see data/kolektyw/form.ts for the endpoint and entry ids); Tak/Nie and
+ * budget choices are native radio buttons styled as pills. Validation runs in
+ * the script so the custom Polish messages show instead of browser bubbles.
+ * Success is announced in a popover that closes itself after 5 s.
+ */
+import { collectiveForm } from "@/data/kolektyw/form"
+import { cn } from "@/lib/cn"
+
+type Props = {
+  /** Prefix for element ids (one form per page by default). */
+  id?: string
+}
+
+const { id = "kolektyw-form" } = Astro.props
+
+const label = "mb-3 block text-sm font-bold tracking-wider text-white uppercase"
+const field =
+  "w-full rounded-full border border-tangerine bg-cream p-4 text-gray-800 placeholder-gray-500 transition-all duration-200 focus:border-tangerine focus:ring-2 focus:ring-tangerine/50 focus:outline-none"
+const area = cn(field, "resize-none rounded-3xl")
+const legend = cn(label, "w-full text-center")
+const choice =
+  "block cursor-pointer rounded-full border border-tangerine bg-cream px-4 py-3 text-center font-bold text-tangerine transition-all duration-200 peer-checked:bg-peach peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-tangerine/50 hover:bg-peach hover:text-white"
+
+const textFields = [
+  { name: "name", label: "Imię", type: "text", autocomplete: "given-name" },
+  { name: "email", label: "Email:", type: "email", autocomplete: "email" },
+  { name: "phone", label: "Telefon:", type: "tel", autocomplete: "tel" },
+  {
+    name: "howToContact",
+    label: "Jak najlepiej się do ciebie zwracać?",
+    type: "text",
+    autocomplete: "off",
+  },
+] as const
+
+const yesNo = [
+  { name: "metaAdsExperience", legend: "Czy korzystałaś już z reklam w systemie Meta?" },
+  { name: "selfSetup", legend: "Czy ustawiałaś je samodzielnie?" },
+] as const
+---
+
+<div class="w-full bg-mint px-4 py-12" data-collective-form>
+  <form class="mx-auto w-full max-w-md" novalidate>
+    <div class="flex flex-col gap-2 rounded-3xl bg-plum p-8 shadow-2xl">
+      {textFields.map((input) => (
+        <div>
+          <label for={`${id}-${input.name}`} class={label}>
+            {input.label}
+          </label>
+          <input
+            id={`${id}-${input.name}`}
+            name={input.name}
+            type={input.type}
+            autocomplete={input.autocomplete}
+            required
+            class={field}
+          />
+        </div>
+      ))}
+
+      {yesNo.map((group) => (
+        <fieldset>
+          <legend class={legend}>{group.legend}</legend>
+          <div class="flex justify-center gap-3">
+            {["Tak", "Nie"].map((value) => (
+              <label class="flex-1">
+                <input type="radio" name={group.name} value={value} required class="peer sr-only" />
+                <span class={cn(choice, "px-8 tracking-wider uppercase")}>{value}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      ))}
+
+      <div>
+        <label for={`${id}-results`} class={label}>
+          Jak oceniasz wyniki?
+        </label>
+        <textarea id={`${id}-results`} name="results" rows="2" required class={area}></textarea>
+      </div>
+
+      <div>
+        <label for={`${id}-instagram`} class={label}>
+          Podaj swój nick na IG
+        </label>
+        <input id={`${id}-instagram`} name="instagram" type="text" required class={field} />
+      </div>
+
+      <div>
+        <label for={`${id}-emailList`} class={label}>
+          Czy posiadasz bazę mailową? Jeśli tak - ilu odbiorców liczy?
+        </label>
+        <textarea id={`${id}-emailList`} name="emailList" rows="3" required class={area}></textarea>
+      </div>
+
+      <fieldset>
+        <legend class={legend}>
+          Wybierz swój budżet na marketing (obsługa, budżet reklamowy i inne)
+        </legend>
+        <div class="grid grid-cols-2 gap-3">
+          {collectiveForm.budgetOptions.map((option) => (
+            <label>
+              <input
+                type="radio"
+                name="budget"
+                value={option.value}
+                required
+                class="peer sr-only"
+              />
+              <span class={choice}>{option.label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      <div
+        class="flex animate-pulse items-center gap-2 rounded-lg bg-red-100 p-4 text-red-700"
+        role="alert"
+        hidden
+        data-form-error
+      >
+        <svg
+          class="size-5 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+        <span data-form-error-text></span>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="mt-6 w-full rounded-full bg-tangerine px-6 py-4 text-lg font-bold text-white transition-all duration-200 hover:bg-peach disabled:cursor-not-allowed disabled:opacity-50"
+      data-form-submit
+    >
+      WYŚLIJ ZGŁOSZENIE
+    </button>
+  </form>
+
+  <div
+    id={`${id}-sukces`}
+    popover="manual"
+    class="m-auto w-11/12 max-w-md animate-settle rounded-2xl border-0 bg-white p-8 text-center shadow-2xl backdrop:bg-black/50"
+    role="status"
+    data-form-success
+  >
+    <div class="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-green-100">
+      <svg
+        class="size-8 text-green-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 13l4 4L19 7"
+        ></path>
+      </svg>
+    </div>
+    <h3 class="mb-2 text-2xl font-bold text-plum">Sukces!</h3>
+    <p class="mb-4 text-gray-600">
+      Twoja ankieta została wysłana pomyślnie. Skontaktujemy się z Tobą wkrótce!
+    </p>
+    <button
+      type="button"
+      popovertarget={`${id}-sukces`}
+      popovertargetaction="hide"
+      class="rounded-lg bg-plum px-6 py-2 text-white transition-all hover:bg-plum"
+    >
+      Zamknij
+    </button>
+  </div>
+</div>
+
+<script>
+  import { collectiveForm, leadSegment } from "@/data/kolektyw/form"
+
+  const RESET_AFTER_MS = 5000
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+  document.querySelectorAll<HTMLElement>("[data-collective-form]").forEach((root) => {
+    const form = root.querySelector("form")!
+    const submit = root.querySelector<HTMLButtonElement>("[data-form-submit]")!
+    const error = root.querySelector<HTMLElement>("[data-form-error]")!
+    const errorText = root.querySelector<HTMLElement>("[data-form-error-text]")!
+    const success = root.querySelector<HTMLElement>("[data-form-success]")!
+    const submitLabel = submit.textContent?.trim() ?? ""
+
+    const showError = (message: string) => {
+      errorText.textContent = message
+      error.hidden = false
+    }
+    const hideError = () => {
+      error.hidden = true
+    }
+
+    const values = () => {
+      const data = new FormData(form)
+      const read = (name: string) => String(data.get(name) ?? "").trim()
+      return Object.fromEntries(
+        Object.keys(collectiveForm.entries).map((name) => [name, read(name)])
+      ) as Record<keyof typeof collectiveForm.entries, string>
+    }
+
+    const validate = (answers: ReturnType<typeof values>): string | null => {
+      const missing = collectiveForm.required.find(({ field }) => !answers[field])
+      if (missing) return `Uzupełnij pole: ${missing.label}.`
+      if (!emailPattern.test(answers.email)) return collectiveForm.messages.invalidEmail
+      return null
+    }
+
+    // Any edit clears a previous validation/network error.
+    form.addEventListener("input", hideError)
+    form.addEventListener("change", hideError)
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault()
+      hideError()
+
+      const answers = values()
+      const problem = validate(answers)
+      if (problem) return showError(problem)
+
+      const payload = new URLSearchParams()
+      for (const [name, entry] of Object.entries(collectiveForm.entries)) {
+        payload.append(entry, answers[name as keyof typeof answers])
+      }
+      payload.append("formSource", collectiveForm.source)
+      if (answers.budget) payload.append("segmentHint", leadSegment(answers.budget))
+
+      submit.disabled = true
+      submit.textContent = "Wysyłanie..."
+      try {
+        await fetch(collectiveForm.endpoint, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: payload.toString(),
+        })
+        success.showPopover?.()
+        window.setTimeout(() => {
+          form.reset()
+          hideError()
+          if (success.matches(":popover-open")) success.hidePopover()
+        }, RESET_AFTER_MS)
+      } catch {
+        showError(collectiveForm.messages.network)
+        window.setTimeout(hideError, RESET_AFTER_MS)
+      } finally {
+        submit.disabled = false
+        submit.textContent = submitLabel
+      }
+    })
+  })
+</script>

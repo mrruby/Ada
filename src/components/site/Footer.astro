@@ -1,0 +1,28 @@
+---
+import { footerNav } from "@/config/site"
+---
+
+<footer class="relative z-30 w-full bg-lavender text-navy">
+  <div class="mx-auto flex max-w-7xl flex-col items-center px-4 py-6 lg:flex-row lg:pl-16">
+    <a href="/" class="text-5xl font-bold lg:border-r lg:border-navy lg:pr-7">
+      Ada Promis
+    </a>
+    <nav
+      class="flex flex-wrap justify-center gap-5 px-12 py-9 lg:justify-between lg:gap-12"
+      aria-label="Stopka"
+    >
+      {footerNav.map((item) => (
+        <a href={item.href} class="text-sm font-bold uppercase transition-colors hover:text-white">
+          {item.label}
+        </a>
+      ))}
+      <button
+        type="button"
+        data-consent-open
+        class="text-sm font-bold uppercase transition-colors hover:text-white"
+      >
+        cookies
+      </button>
+    </nav>
+  </div>
+</footer>
