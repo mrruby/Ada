@@ -242,7 +242,7 @@ are typed in `lib/analytics-events.ts` and sent with `track(event, props)`:
 | `lead_form_submitted`    | MailerLite accepted a sign-up (→ Meta `Lead`)          |
 | `lead_form_failed`       | MailerLite rejected it or the request failed          |
 | `contact_form_submitted` | the Netlify contact form was sent                     |
-| `checkout_started`       | click to easy.tools / easycart / mailingr / OTO checkout (→ Meta `InitiateCheckout`) |
+| `checkout_started`       | click to easy.tools / easycart / mailingr / OTO checkout (→ Meta `InitiateCheckout`, except cart.easy.tools, which sends it through its own Conversions API) |
 | `booking_opened`         | click to a Google Calendar / Koalendar booking page   |
 | `quiz_completed`         | the quiz showed its result                            |
 | `video_played`           | the visitor started a YouTube/Vimeo player            |

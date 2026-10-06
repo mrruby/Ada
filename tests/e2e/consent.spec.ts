@@ -230,7 +230,7 @@ test.describe("PostHog", () => {
         .toEqual({ cookies: [], localStorage: [], sessionStorage: [] })
     })
 
-    test("checkout links send checkout_started and a Meta InitiateCheckout", async ({
+    test("Easytools checkout links send checkout_started without a duplicate Meta event", async ({
       page,
       posthog,
     }) => {
@@ -257,7 +257,7 @@ test.describe("PostHog", () => {
           .filter((args) => args[0] === "track")
           .map((args) => args[1])
       )
-      expect(pixelCalls).toEqual(["PageView", "InitiateCheckout"])
+      expect(pixelCalls).toEqual(["PageView"])
     })
 
     test("a successful MailerLite sign-up sends lead_form_submitted", async ({ page, posthog }) => {

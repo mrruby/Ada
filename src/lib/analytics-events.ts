@@ -96,10 +96,10 @@ export const metaEventFor = <E extends AnalyticsEvent>(
     ]
   }
   if (event === "checkout_started") {
-    return [
-      "InitiateCheckout",
-      { content_name: (properties as AnalyticsEvents["checkout_started"]).product },
-    ]
+    const checkout = properties as AnalyticsEvents["checkout_started"]
+    // Easytools sends InitiateCheckout from the checkout through its Conversions API.
+    if (checkout.destination === "cart.easy.tools") return null
+    return ["InitiateCheckout", { content_name: checkout.product }]
   }
   return null
 }

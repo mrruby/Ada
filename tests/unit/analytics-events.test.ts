@@ -63,14 +63,20 @@ describe("classifyLink", () => {
 })
 
 describe("metaEventFor", () => {
-  it("mirrors leads and checkouts as Meta standard events", () => {
+  it("mirrors leads and checkouts without an Easytools event as Meta standard events", () => {
     expect(metaEventFor("lead_form_submitted", { form_id: "1966" })).toEqual([
       "Lead",
       { content_name: "1966" },
     ])
     expect(
+      metaEventFor("checkout_started", { product: "wyzwanie-oto", destination: "adrianna.com.pl" })
+    ).toEqual(["InitiateCheckout", { content_name: "wyzwanie-oto" }])
+  })
+
+  it("leaves Easytools checkout events to its Conversions API", () => {
+    expect(
       metaEventFor("checkout_started", { product: "klub-magic", destination: "cart.easy.tools" })
-    ).toEqual(["InitiateCheckout", { content_name: "klub-magic" }])
+    ).toBeNull()
   })
 
   it("sends nothing to Meta for other events", () => {
