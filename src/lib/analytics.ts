@@ -44,6 +44,25 @@ const hasStatisticsConsent = () => readConsentState(document.cookie).choices.sta
 const objectsToCounting = () =>
   (navigator as PrivacyNavigator).globalPrivacyControl === true || navigator.doNotTrack === "1"
 
+const isPostHogKey = (key: string) => key.startsWith("ph_") || key.startsWith("__ph_")
+const removeKeys = (storage: Storage, keep: (key: string) => boolean = () => false) =>
+  Object.keys(storage)
+    .filter((key) => isPostHogKey(key) && !keep(key))
+    .forEach((key) => storage.removeItem(key))
+
+/**
+ * Remove what PostHog stored under an earlier consent, for visitors who now
+ * object and for whom PostHog therefore never starts (and can't clean up).
+ */
+const clearPostHogStorage = () => {
+  for (const part of document.cookie.split(";")) {
+    const name = part.split("=")[0].trim()
+    if (name.startsWith("ph_")) document.cookie = `${name}=; Path=/; Max-Age=0`
+  }
+  removeKeys(window.localStorage)
+  removeKeys(window.sessionStorage)
+}
+
 const load = () =>
   (loading ||= import("posthog-js").then(({ default: ph }) => {
     ph.init(key!, {
@@ -65,6 +84,10 @@ const load = () =>
         recordBody: false,
         recordHeaders: false,
         captureJsonLd: false,
+        maskCapturedNetworkRequestFn: (request) => ({
+          ...request,
+          name: request.name.replace(/([?&]oto=)[^&#]*/, "$1[masked]"),
+        }),
       },
       // Without statistics consent only page views and catalog events leave.
       before_send: (event) =>
@@ -79,11 +102,17 @@ const load = () =>
  */
 export const startAnalytics = async (statistics: boolean) => {
   if (!key) return
-  if (!statistics && !loading && objectsToCounting()) return
+  if (!statistics && !loading && objectsToCounting()) {
+    clearPostHogStorage()
+    return
+  }
   const ph = await load()
   const status = ph.get_explicit_consent_status()
   if (statistics && status !== "granted") ph.opt_in_capturing({ captureEventName: false })
   if (!statistics && status !== "denied") ph.opt_out_capturing()
+  // Opting out keeps PostHog's tab-session ids; without consent only the
+  // record of the choice (localStorage `__ph_opt_in_out_*`) may stay.
+  if (!statistics) removeKeys(window.sessionStorage)
   if (!pageviewSent) {
     pageviewSent = true
     ph.capture("$pageview", { title: document.title })
