@@ -1,20 +1,20 @@
 /**
- * Cookie consent runtime (browser only): stores the visitor's choices,
- * forwards them to Google Consent Mode v2 / Meta, and loads each third party
- * only after its category is granted. The consent model itself lives in
- * consent-state.ts (pure, unit-tested).
+ * Cookie consent runtime (browser only): stores the visitor's choices, keeps
+ * PostHog in line with them (full tracking or cookieless, see analytics.ts)
+ * and loads the Meta Pixel only after `marketing` is granted. The consent
+ * model itself lives in consent-state.ts (pure, unit-tested).
  *
  * Embeds (YouTube, Vimeo, Google Calendar) ask for the `media` category via
  * `hasConsent("media")` / `grantConsent("media")` / `onConsentChange`.
  */
 import { analytics } from "@/config/site"
+import { startAnalytics } from "./analytics"
 import {
   allGranted,
   type ConsentCategory,
   type ConsentChoices,
   consentCookieStrings,
   deniedChoices,
-  googleConsentMode,
   isWithdrawal,
   readConsentState,
 } from "./consent-state"
@@ -25,17 +25,10 @@ export type { ConsentCategory, ConsentChoices } from "./consent-state"
 const CHANGE_EVENT = "consent:change"
 
 type Queue = ((...args: unknown[]) => void) & Record<string, unknown>
-type AnalyticsWindow = Window & {
-  dataLayer?: unknown[]
-  gtag?: (...args: unknown[]) => void
-  fbq?: Queue
-  _fbq?: unknown
-  hj?: Queue
-  _hjSettings?: { hjid: number; hjsv: number }
-}
+type MetaWindow = Window & { fbq?: Queue; _fbq?: unknown }
 
-const w = window as AnalyticsWindow
-const loaded = new Set<string>()
+const w = window as MetaWindow
+let pixelLoaded = false
 
 export const getConsent = () => readConsentState(document.cookie)
 export const hasConsent = (category: ConsentCategory) => getConsent().choices[category]
@@ -50,44 +43,6 @@ const injectScript = (src: string) => {
   script.async = true
   script.src = src
   document.head.appendChild(script)
-}
-
-/** gtag() must push the `arguments` object itself, not an array. */
-const gtag = (...args: unknown[]) => {
-  w.dataLayer = w.dataLayer || []
-  if (!w.gtag) {
-    w.gtag = function () {
-      // eslint-disable-next-line prefer-rest-params
-      w.dataLayer!.push(arguments)
-    }
-  }
-  w.gtag(...args)
-}
-
-let consentModeReady = false
-const applyGoogleConsentMode = (choices: ConsentChoices) => {
-  if (!consentModeReady) {
-    gtag("consent", "default", googleConsentMode(deniedChoices))
-    consentModeReady = true
-  }
-  gtag("consent", "update", googleConsentMode(choices))
-}
-
-const loadGoogleAnalytics = () => {
-  const { id } = analytics.googleAnalytics
-  injectScript(`https://www.googletagmanager.com/gtag/js?id=${id}`)
-  gtag("js", new Date())
-  gtag("config", id, { anonymize_ip: true })
-}
-
-const loadTagManager = () => {
-  const { id, dataLayerName } = analytics.googleTagManager
-  const layer = ((w as unknown as Record<string, unknown[]>)[dataLayerName] ||= [])
-  layer.push({ "gtm.start": Date.now(), event: "gtm.js" })
-  injectScript(`https://www.googletagmanager.com/gtm.js?id=${id}`)
-  // The previous site pushed this event on every page view; GTM triggers may
-  // still depend on it.
-  layer.push({ event: "gatsby-route-change" })
 }
 
 /** Meta's official stub: calls queue as `arguments` until fbevents.js loads. */
@@ -117,37 +72,16 @@ const loadFacebookPixel = () => {
   fbq("track", "PageView")
 }
 
-/** Pages opt into Hotjar with BaseLayout's `hotjarId` prop. */
-const loadHotjar = () => {
-  const id = Number(document.querySelector<HTMLMetaElement>('meta[name="ada:hotjar"]')?.content)
-  if (!id) return
-  const { snippetVersion } = analytics.hotjar
-  w.hj =
-    w.hj ||
-    (function () {
-      // eslint-disable-next-line prefer-rest-params
-      ;((w.hj!.q as unknown[]) ||= []).push(arguments)
-    } as unknown as Queue)
-  w._hjSettings = { hjid: id, hjsv: snippetVersion }
-  injectScript(`https://static.hotjar.com/c/hotjar-${id}.js?sv=${snippetVersion}`)
-}
-
-const trackers: { key: string; category: ConsentCategory; load: () => void }[] = [
-  { key: "ga", category: "statistics", load: loadGoogleAnalytics },
-  { key: "hotjar", category: "statistics", load: loadHotjar },
-  { key: "gtm", category: "preferences", load: loadTagManager },
-  { key: "pixel", category: "marketing", load: loadFacebookPixel },
-]
-
-/** Sync Consent Mode and load every tracker the choices allow (idempotent). */
+/**
+ * Apply the choices of a visitor who has decided (idempotent): PostHog with
+ * or without cookies, the Meta Pixel once marketing is granted.
+ */
 export const applyConsent = (choices: ConsentChoices) => {
-  applyGoogleConsentMode(choices)
+  void startAnalytics(choices.statistics)
   if (!choices.marketing && w.fbq) w.fbq("consent", "revoke")
-  for (const tracker of trackers) {
-    if (choices[tracker.category] && !loaded.has(tracker.key)) {
-      loaded.add(tracker.key)
-      tracker.load()
-    }
+  if (choices.marketing && !pixelLoaded) {
+    pixelLoaded = true
+    loadFacebookPixel()
   }
 }
 

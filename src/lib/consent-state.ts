@@ -2,34 +2,41 @@
  * Consent model — pure functions only (no DOM), so it is unit-testable.
  *
  * Each optional category is stored in its own cookie holding "true"/"false".
- * The first three cookie names come from the Gatsby site, so returning
- * visitors keep the decision they already made; `media` is new.
+ * The visitor has decided once every category cookie exists; anything less
+ * (first visit, or choices made for an older set of tools) shows the banner.
  */
 
-export const consentCategories = ["statistics", "preferences", "marketing", "media"] as const
+export const consentCategories = ["statistics", "marketing", "media"] as const
 export type ConsentCategory = (typeof consentCategories)[number]
 export type ConsentChoices = Record<ConsentCategory, boolean>
 
 export const consentCookieNames: Record<ConsentCategory, string> = {
-  statistics: "gatsby-gdpr-google-analytics",
-  preferences: "gatsby-gdpr-google-tagmanager",
-  marketing: "gatsby-gdpr-facebook-pixel",
+  statistics: "ada-consent-statistics",
+  marketing: "ada-consent-marketing",
   media: "ada-consent-media",
 }
+
+/**
+ * Cookies of earlier consent versions (Gatsby-era GA / GTM / Pixel choices).
+ * They no longer count as a decision and are removed on the next save.
+ */
+export const legacyConsentCookies = [
+  "gatsby-gdpr-google-analytics",
+  "gatsby-gdpr-google-tagmanager",
+  "gatsby-gdpr-facebook-pixel",
+] as const
 
 export const CONSENT_MAX_AGE_SECONDS = 365 * 24 * 60 * 60
 
 /** Nothing optional is allowed until the visitor says so. */
 export const deniedChoices: ConsentChoices = {
   statistics: false,
-  preferences: false,
   marketing: false,
   media: false,
 }
 
 export const allGranted: ConsentChoices = {
   statistics: true,
-  preferences: true,
   marketing: true,
   media: true,
 }
@@ -52,7 +59,7 @@ export const parseCookieHeader = (header: string): Record<string, string> => {
 
 export type ConsentState = {
   choices: ConsentChoices
-  /** The visitor answered the banner (any category cookie is present). */
+  /** The visitor answered the current banner (every category cookie is set). */
   decided: boolean
 }
 
@@ -60,11 +67,10 @@ export type ConsentState = {
 export const readConsentState = (cookieHeader: string): ConsentState => {
   const cookies = parseCookieHeader(cookieHeader)
   const choices = { ...deniedChoices }
-  let decided = false
+  let decided = true
   for (const category of consentCategories) {
     const value = cookies[consentCookieNames[category]]
-    if (value === undefined) continue
-    decided = true
+    if (value === undefined) decided = false
     choices[category] = value === "true"
   }
   return { choices, decided }
@@ -74,28 +80,18 @@ export const readConsentState = (cookieHeader: string): ConsentState => {
 export const isWithdrawal = (previous: ConsentChoices, next: ConsentChoices): boolean =>
   consentCategories.some((category) => previous[category] && !next[category])
 
-/** `Set-Cookie`-style strings for `document.cookie`, one per category. */
-export const consentCookieStrings = (choices: ConsentChoices, secure: boolean): string[] =>
-  consentCategories.map((category) =>
-    [
-      `${consentCookieNames[category]}=${choices[category] ? "true" : "false"}`,
-      "Path=/",
-      `Max-Age=${CONSENT_MAX_AGE_SECONDS}`,
-      "SameSite=Lax",
-      ...(secure ? ["Secure"] : []),
-    ].join("; ")
-  )
-
-type GoogleConsent = "granted" | "denied"
-const flag = (value: boolean): GoogleConsent => (value ? "granted" : "denied")
-
-/** Google Consent Mode v2 signals for the given choices. */
-export const googleConsentMode = (choices: ConsentChoices) => ({
-  analytics_storage: flag(choices.statistics),
-  ad_storage: flag(choices.marketing),
-  ad_user_data: flag(choices.marketing),
-  ad_personalization: flag(choices.marketing),
-  functionality_storage: flag(choices.preferences),
-  personalization_storage: flag(choices.preferences),
-  security_storage: "granted" as const,
-})
+/**
+ * `document.cookie` strings for the given choices: one per category, plus an
+ * expiry for every legacy cookie.
+ */
+export const consentCookieStrings = (choices: ConsentChoices, secure: boolean): string[] => {
+  const attributes = (maxAge: number) =>
+    ["Path=/", `Max-Age=${maxAge}`, "SameSite=Lax", ...(secure ? ["Secure"] : [])].join("; ")
+  return [
+    ...consentCategories.map(
+      (category) =>
+        `${consentCookieNames[category]}=${choices[category] ? "true" : "false"}; ${attributes(CONSENT_MAX_AGE_SECONDS)}`
+    ),
+    ...legacyConsentCookies.map((name) => `${name}=; ${attributes(0)}`),
+  ]
+}

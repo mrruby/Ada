@@ -47,13 +47,16 @@ export const social = {
 } as const
 
 /**
- * Third parties and the consent category each one needs (see lib/consent.ts).
- * Nothing here loads before the visitor opts into that category.
+ * Tracking (see lib/analytics.ts and lib/consent.ts). Nothing loads before the
+ * visitor answers the cookie banner.
+ *
+ *  - PostHog (EU Cloud) — `statistics`; cookieless counting when denied. The
+ *    project key comes from the PUBLIC_POSTHOG_KEY env var (set for the
+ *    production context only, so deploy previews send nothing). Requests go
+ *    through the /relay proxy in netlify.toml.
+ *  - Meta Pixel — `marketing`.
  */
 export const analytics = {
-  googleAnalytics: { id: "G-8LX78J4XMN" },
-  googleTagManager: { id: "GTM-TC7CLB2", dataLayerName: "dataLayer" },
+  posthog: { apiHost: "/relay", uiHost: "https://eu.posthog.com" },
   facebookPixel: { id: "187660469934129" },
-  /** Hotjar loads only on pages that pass `hotjarId` to BaseLayout. */
-  hotjar: { snippetVersion: 6 },
 } as const

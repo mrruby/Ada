@@ -207,24 +207,50 @@ default to "declined"; `test.use({ consent: null })` starts with the banner.
 One-time setup: `yarn playwright install chromium`. CI:
 `.github/workflows/astro.yml` (check, unit, build, e2e on every PR).
 
-## Consent
+## Consent and analytics
 
 `lib/consent-state.ts` (pure, unit-tested) + `lib/consent.ts` (browser) +
 `components/site/CookieConsent.astro` (banner, settings `<dialog>`, floating
 🍪 button; any `[data-consent-open]` element opens the settings).
 
-| Category      | Cookie                          | Loads                                  |
-| ------------- | ------------------------------- | -------------------------------------- |
-| `statistics`  | `gatsby-gdpr-google-analytics`  | Google Analytics, Hotjar (`hotjarId` page prop) |
-| `preferences` | `gatsby-gdpr-google-tagmanager` | Google Tag Manager                     |
-| `marketing`   | `gatsby-gdpr-facebook-pixel`    | Meta Pixel                             |
-| `media`       | `ada-consent-media`             | YouTube / Vimeo / Google Calendar embeds |
+| Category     | Cookie                   | Granted                                  | Denied                     |
+| ------------ | ------------------------ | ---------------------------------------- | -------------------------- |
+| `statistics` | `ada-consent-statistics` | PostHog with cookies, replay, heatmaps   | PostHog cookieless counts  |
+| `marketing`  | `ada-consent-marketing`  | Meta Pixel (+ `Lead`, `InitiateCheckout`) | nothing                    |
+| `media`      | `ada-consent-media`      | YouTube / Vimeo / Google Calendar embeds | click-to-load placeholders |
 
-Everything optional is off until the visitor opts in; legacy cookie names
-mean decisions made on the previous (Gatsby) site still apply. Google Consent Mode v2
-starts denied and follows the choices; Meta gets `consent grant/revoke`.
-Withdrawing a category reloads the page. To add a tracker: register it in
-`trackers` in `lib/consent.ts` with its category — never in a page.
+Nothing loads until the visitor answers the banner. The visitor has decided
+once all three cookies exist; Gatsby-era `gatsby-gdpr-*` cookies don't count
+(they are deleted on the next save), so earlier visitors are asked again.
+Withdrawing a category reloads the page.
+
+**PostHog** (`lib/analytics.ts`, EU Cloud) loads with `cookieless_mode:
+"on_reject"`: with statistics consent it uses cookies, session replay (inputs
+masked) and heatmaps; without it, PostHog stores nothing and counts visits
+with a server-side hash. Requests go through `/relay/*`, a Netlify proxy in
+`netlify.toml`. The project key comes from `PUBLIC_POSTHOG_KEY` (production
+context only — previews and local builds send nothing). Replay, heatmaps and
+web vitals are switched on or off in the PostHog project settings, and the
+project needs "Cookieless server hash mode" enabled.
+
+Autocapture covers page views, page leaves (time on page, scroll depth),
+clicks, rage clicks, outbound links and UTM/referrer data. Business events
+are typed in `lib/analytics-events.ts` and sent with `track(event, props)`:
+
+| Event                    | When                                                  |
+| ------------------------ | ----------------------------------------------------- |
+| `lead_form_submitted`    | MailerLite accepted a sign-up (→ Meta `Lead`)          |
+| `lead_form_failed`       | MailerLite rejected it or the request failed          |
+| `contact_form_submitted` | the Netlify contact form was sent                     |
+| `checkout_started`       | click to easy.tools / easycart / mailingr / OTO checkout (→ Meta `InitiateCheckout`) |
+| `booking_opened`         | click to a Google Calendar / Koalendar booking page   |
+| `quiz_completed`         | the quiz showed its result                            |
+| `video_played`           | the visitor started a YouTube/Vimeo player            |
+| `oto_offer_shown`        | the /wyzwanie one-time offer countdown appeared       |
+
+Checkout and booking links are detected by URL (`classifyLink`), so new
+links to those hosts are tracked without extra markup. Don't call
+`posthog.identify()` — visitors stay anonymous.
 
 ## Security
 

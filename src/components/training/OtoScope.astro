@@ -29,20 +29,30 @@ const { campaign, class: className } = Astro.props
 </style>
 
 <script>
+  import { track } from "@/lib/analytics"
   import { watchOto } from "@/lib/oto/client"
 
   const pad2 = (value: number) => value.toString().padStart(2, "0")
+  // A page can have several scopes; the offer counts as shown once per campaign.
+  const shownCampaigns = new Set<string>()
 
   document.querySelectorAll<HTMLElement>("[data-oto-scope]").forEach((scope) => {
-    const minutes = scope.querySelectorAll("[data-oto-minutes]")
-    const seconds = scope.querySelectorAll("[data-oto-seconds]")
+    const minuteNodes = scope.querySelectorAll("[data-oto-minutes]")
+    const secondNodes = scope.querySelectorAll("[data-oto-seconds]")
     scope.dataset.otoState = "loading"
 
-    watchOto(scope.dataset.otoCampaign ?? "", (state) => {
+    const campaign = scope.dataset.otoCampaign ?? ""
+
+    watchOto(campaign, (state) => {
       scope.dataset.otoState = state.active ? "active" : "inactive"
       if (!state.active) return
-      minutes.forEach((node) => (node.textContent = pad2(state.timeLeft.minutes)))
-      seconds.forEach((node) => (node.textContent = pad2(state.timeLeft.seconds)))
+      if (!shownCampaigns.has(campaign)) {
+        shownCampaigns.add(campaign)
+        const { minutes, seconds } = state.timeLeft
+        track("oto_offer_shown", { campaign, seconds_left: minutes * 60 + seconds })
+      }
+      minuteNodes.forEach((node) => (node.textContent = pad2(state.timeLeft.minutes)))
+      secondNodes.forEach((node) => (node.textContent = pad2(state.timeLeft.seconds)))
     })
   })
 </script>
