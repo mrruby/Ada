@@ -1,465 +1,51 @@
-@config "../../tailwind.config.js";
 @import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@import "./theme.css";
+@import "./decor.css";
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
-}
-
-.bg-meetme {
-  background-image: url("../../static/assets/meetmeicons.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-.bg-mails {
-  background-image: url("../../static/assets/mails.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-
-.bg-puzzles {
-  background-image: url("../../static/assets/puzzles.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-
-.bg-faq {
-  background-image: url("../../static/assets/faq.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-
-.bg-wave {
-  background-image: url("../../static/assets/wave.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: rotate 6s infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(4deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.bg-wave-element {
-  position: relative;
-}
-.bg-wave-element::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 400px;
-  background-image: url("../../static/assets/wave.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-  animation: rotate 6s infinite;
-}
-
-@media (max-width: 768px) {
-  .bg-wave,
-  .bg-wave-element::before {
-    background-size: contain;
-  }
-}
-
-.bg-wave2 {
-  background-image: url("../../static/assets/wave2.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: rotate 6s infinite;
-}
-
-.bg-wave2-element {
-  position: relative;
-}
-.bg-wave2-element::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 400px;
-  background-image: url("../../static/assets/wave2.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-  animation: rotate 6s infinite;
-}
-
-@media (max-width: 768px) {
-  .bg-wave2,
-  .bg-wave2-element::before {
-    background-size: contain;
-  }
-}
-
-.bg-wave3 {
-  background-image: url("../../static/assets/wave3.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: rotate 6s infinite;
-}
-
-.bg-wave3-element {
-  position: relative;
-}
-.bg-wave3-element::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 400px;
-  background-image: url("../../static/assets/wave3.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-  animation: rotate 6s infinite;
-}
-
-@media (max-width: 768px) {
-  .bg-wave3,
-  .bg-wave3-element::before {
-    background-size: contain;
-  }
-}
-
-.bg-leaves {
-  background-image: url("../../static/assets/leaves.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: rotate 6s infinite;
-}
-
-.bg-leaves-element {
-  position: relative;
-}
-.bg-leaves-element::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 400px;
-  background-image: url("../../static/assets/leaves.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-  animation: rotate 6s infinite;
-}
-
-@media (max-width: 768px) {
-  .bg-leaves,
-  .bg-leaves-element::before {
-    background-size: contain;
-  }
-}
-
-.vertical-timeline::before {
-  background-color: #000000 !important;
-}
-
-.vertical-timeline-element {
-  margin: 0em 0px !important;
-  margin-bottom: -40px !important;
-}
-@media (max-width: 1170px) {
-  .vertical-timeline-element {
-    margin-bottom: 0em !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .vertical-timeline-element-content {
-    text-align: left !important;
-  }
-}
-
-@media (min-width: 1170px) {
-  .vertical-timeline-element-content {
-    padding-inline: 0px !important;
-    margin-inline: 0px !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .form-scale {
-    scale: 1.2;
-  }
-}
-
-.bg-blue {
-  background-color: #283977 !important;
-}
-
-@keyframes underlineAnimation {
-  0% {
-    width: 0;
-  }
-  50% {
+@layer base {
+  /* `clip` (not `hidden`): hidden would turn <body> into a scroll container
+     and break every `position: sticky` element. */
+  html,
+  body {
     width: 100%;
+    overflow-x: clip;
+    scroll-behavior: smooth;
   }
-  100% {
-    width: 0;
+
+  body {
+    @apply bg-white font-sans text-navy antialiased;
   }
-}
 
-.animated-border {
-  position: relative;
-}
+  /* Buttons and links without explicit cursor styles (Tailwind v4 default) */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 
-.animated-border::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  width: 0;
-  left: 0;
-  z-index: 1;
-  height: 30px;
-  background-color: #eedcf6;
-  animation: underlineAnimation 16s infinite;
-}
-@media (max-width: 1170px) {
-  .animated-border::after {
-    height: 10px;
+  :target {
+    scroll-margin-top: 4rem;
   }
 }
 
-.animated-border2 {
-  position: relative;
-}
-
-.animated-border2::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  width: 0;
-  left: 0;
-  z-index: 1;
-  height: 30px;
-  background-color: #ffd3eb;
-  animation: underlineAnimation 16s infinite;
-}
-@media (max-width: 1170px) {
-  .animated-border2::after {
-    height: 10px;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
 
-.font-lemon {
-  font-family: "Lemon", serif;
-}
-
-.font-courier {
-  font-family: "Courier Prime", monospace;
-}
-
-.font-anton {
-  font-family: "Anton", sans-serif;
-}
-
-.font-anie {
-  font-family: "Annie Use Your Telescope", cursive;
-}
-
-.font-caveat {
-  font-family: "Caveat", cursive;
-}
-
-.bg-magic-banner1a {
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.bg-magic-banner1a:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../../static/assets/magic-banner2a.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: rotate 6s linear infinite;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.bg-magic-banner1 {
-  background-image: url("../../static/assets/magic-banner2.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-}
-
-.bg-magic-banner2 {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-  background-image: url("../../static/assets/magic-banner-mobile.webp");
-}
-
-@media (min-width: 769px) {
-  .bg-magic-banner2 {
-    background-image: url("../../static/assets/magic-banner.webp");
+/* Countdown scopes (see components/ui/Countdown.astro) */
+@layer base {
+  [data-countdown-scope][data-expired] [data-when="active"],
+  [data-countdown-scope]:not([data-expired]) [data-when="expired"] {
+    display: none !important;
+  }
+  /* Hide both states until the client knows which one applies. */
+  [data-countdown-scope][data-gate]:not([data-ready]) [data-when] {
+    visibility: hidden;
   }
 }
-
-.bg-magic-green {
-  background-image: url("../../static/assets/green-bg.webp");
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
-.bg-magic-pink {
-  background-image: url("../../static/assets/pink-bg.webp");
-  background-size: calc(100% * 0.7);
-  background-position: center;
-  z-index: -1;
-}
-
-@media (min-width: 1170px) {
-  .bg-magic-pink2 {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 50vw;
-    height: 860px;
-    background-image: url("../../static/assets/pink-bg.webp");
-    background-size: calc(100% * 1.5);
-    background-position: center right;
-    z-index: 0;
-  }
-}
-
-.bg-magic-grid::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 100vw;
-  background-image: url("../../static/assets/magic-grid.webp");
-  background-size: calc(100% * 0.4);
-  background-position: center;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.bg-magicWave {
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.bg-magicWave::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../../static/assets/magicwave.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: rotate 6s linear infinite;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.bg-magic {
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0)
-    ),
-    url("../../static/assets/background-magic.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media (min-width: 1024px) {
-  .magic-unique-poster {
-    width: 1024px;
-    height: 1830px;
-    max-width: none;
-  }
-
-  .magic-unique-poster-inner {
-    width: 800px;
-    height: 1430px;
-    scale: 1.28;
-  }
-}
-
-@media (min-width: 1280px) {
-  .magic-unique-poster {
-    width: 1280px;
-    height: 2288px;
-  }
-
-  .magic-unique-poster-inner {
-    scale: 1.6;
-  }
-}
-
-@media (min-width: 1536px) {
-  .magic-unique-poster {
-    width: 1440px;
-    height: max(2574px, calc(100vw / 2.7 + 1980px));
-  }
-
-  .magic-unique-poster-inner {
-    scale: 1.8;
-  }
-}
-
-/* purgecss start ignore */
-/* /kolektyw-rozmowa: force CTA interactivity above decorative layers */
-.kolektyw-rozmowa-page [data-aos] {
-  pointer-events: auto !important;
-}
-
-.kolektyw-rozmowa-page .kolektyw-cta {
-  pointer-events: auto !important;
-  position: relative;
-  z-index: 60;
-}
-
-.kolektyw-rozmowa-page .kolektyw-cta * {
-  pointer-events: auto !important;
-}
-/* purgecss end ignore */

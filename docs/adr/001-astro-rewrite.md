@@ -2,6 +2,8 @@
 
 - Status: Accepted
 - Date: 2026-10-02
+- Update 2026-10-06: the Astro app replaced Gatsby at the repo root and went
+  live on adrianna.com.pl; the Gatsby code was removed.
 
 ## Context
 

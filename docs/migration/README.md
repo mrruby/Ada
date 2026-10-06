@@ -1,7 +1,7 @@
 # Migration audits
 
-Snapshots of the **Gatsby site** taken on 2026-07-11, before the Astro
-rewrite (they come from the first migration attempt). Use them as a
+Snapshots of the **Gatsby site** (removed from the repo on 2026-10-06) taken
+on 2026-07-11, before the Astro rewrite (they come from the first migration attempt). Use them as a
 reference for what the old site did — routes, SEO tags, forms and scripts,
 commerce code, assets. They are not updated as the Astro app changes.
 
@@ -15,5 +15,5 @@ commerce code, assets. They are not updated as the Astro app changes.
 
 Since then: `/adseliksir`, `/eliksir`, `/magic-masterclass`, `/magic-nagranie`
 and `/magic-wyzwanie` were retired and now redirect to `/magic`
-(`astro/astro.config.mjs`), and Hotjar on `/adsy-chill` waits for statistics
+(`astro.config.mjs`), and Hotjar on `/adsy-chill` waits for statistics
 consent.

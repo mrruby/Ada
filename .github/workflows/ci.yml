@@ -1,19 +1,13 @@
-name: Astro site
+name: CI
 
 on:
   pull_request:
-    paths:
-      - "astro/**"
-      - ".github/workflows/astro.yml"
   push:
-    branches: [master, migration/astro]
-    paths:
-      - "astro/**"
-      - ".github/workflows/astro.yml"
+    branches: [master]
   workflow_dispatch:
 
 concurrency:
-  group: astro-${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -24,9 +18,6 @@ jobs:
     name: Check, unit, build, e2e + a11y
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    defaults:
-      run:
-        working-directory: astro
 
     steps:
       - uses: actions/checkout@v7
@@ -35,7 +26,6 @@ jobs:
         with:
           node-version: 22
           cache: yarn
-          cache-dependency-path: astro/yarn.lock
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -50,8 +40,8 @@ jobs:
       - name: Cache optimized images
         uses: actions/cache@v6
         with:
-          path: astro/node_modules/.astro
-          key: astro-assets-${{ hashFiles('astro/src/assets/**', 'astro/astro.config.mjs', 'astro/yarn.lock') }}
+          path: node_modules/.astro
+          key: astro-assets-${{ hashFiles('src/assets/**', 'astro.config.mjs', 'yarn.lock') }}
           restore-keys: astro-assets-
 
       - name: Build
@@ -62,7 +52,7 @@ jobs:
         uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('astro/yarn.lock') }}
+          key: playwright-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
 
       - name: Install Playwright Chromium
         if: steps.playwright-cache.outputs.cache-hit != 'true'
@@ -81,8 +71,8 @@ jobs:
         with:
           name: playwright-report
           path: |
-            astro/playwright-report/
-            astro/test-results/
+            playwright-report/
+            test-results/
           retention-days: 14
 
       - name: Upload accessibility report
@@ -90,6 +80,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: a11y-report
-          path: astro/test-results/a11y-report.json
+          path: test-results/a11y-report.json
           if-no-files-found: ignore
           retention-days: 30
