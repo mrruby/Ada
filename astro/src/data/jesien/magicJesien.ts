@@ -226,7 +226,7 @@ export const magicFeatures: MagicFeature[] = [
   {
     eyebrow: "Konsultacje pisemne na Circle",
     title: "Zadajesz pytanie o SWOJĄ reklamę, kiedy Ci wygodnie",
-    text: "Dwa kanały, o których klubowiczki mówią najczęściej: <strong>„Zadaj pytanie”</strong>, gdzie wrzucasz screen wyników i dostajesz analizę swojego konta, oraz <strong>„Skonsultuj materiały”</strong>, gdzie Justyna sprawdza copy, a Dorota grafiki i identyfikację wizualną, zanim wydasz budżet. Do tego dwie 1,5-godzinne sesje konsultacji grupowych miesięcznie, na których możesz pokazać swój ekran i zadać pytanie!",
+    text: "Dwa kanały, o których klubowiczki mówią najczęściej: <strong>„Zadaj pytanie”</strong>, gdzie wrzucasz screen wyników i dostajesz analizę swojego konta, oraz <strong>„Skonsultuj materiały”</strong>, gdzie Justyna sprawdza copy, a Karolina grafiki i identyfikację wizualną, zanim wydasz budżet. Do tego dwie 1,5-godzinne sesje konsultacji grupowych miesięcznie, na których możesz pokazać swój ekran i zadać pytanie!",
     mock: "thread",
     panel: "pink",
   },
@@ -254,7 +254,7 @@ export const magicPlanSteps = [
   },
   {
     title: "Landing i tekst do konsultacji",
-    detail: "Justyna i Dorota sprawdzają przed startem",
+    detail: "Justyna i Karolina sprawdzają przed startem",
     week: "tydzień 3",
   },
   {

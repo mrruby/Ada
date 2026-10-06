@@ -2,8 +2,7 @@
 import { Image } from "astro:assets"
 import homeImage from "@/assets/images/homeImage.webp"
 import collectiveLogo from "@/assets/images/magic-kolektyw.png"
-import collectivePhotos from "@/assets/images/hompage1.webp"
-import clubImage from "@/assets/images/hompage2.webp"
+import clubImage from "@/assets/images/magic-landing-2026-hero.webp"
 import chillImage from "@/assets/images/hompage3.webp"
 import quizImage from "@/assets/images/hompage4.webp"
 import shopImage from "@/assets/images/hompage5.webp"
@@ -11,6 +10,7 @@ import advantageMockup from "@/assets/images/advantage-mockup.webp"
 import PromoCard from "@/components/sections/PromoCard.astro"
 import { Card, CircleArrow, Heading, Section } from "@/components/ui"
 import { shopUrl } from "@/config/site"
+import { team } from "@/data/kolektyw/team"
 import SiteLayout from "@/layouts/SiteLayout.astro"
 
 const cardTitle = "mb-6 font-anton text-3xl font-normal lg:text-5xl"
@@ -62,13 +62,13 @@ const cardTitle = "mb-6 font-anton text-3xl font-normal lg:text-5xl"
         Marketing Ads Girls Inside Collective. Dla przedsiębiorczyń prowadzących kursy online,
         mentoringi, usługi cyfrowe
       </p>
-      <Image
-        slot="media"
-        src={collectivePhotos}
-        alt="Ekspertki Kolektywu MAGIC"
-        width={500}
-        height={500}
-      />
+      <ul slot="media" class="grid max-w-md grid-cols-2 gap-6" aria-label="Zespół Kolektywu MAGIC">
+        {team.map((member) => (
+          <li>
+            <Image src={member.photo} alt={member.name} width={220} densities={[1, 2]} />
+          </li>
+        ))}
+      </ul>
     </PromoCard>
 
     <PromoCard
