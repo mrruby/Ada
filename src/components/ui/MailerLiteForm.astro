@@ -9,7 +9,7 @@
  *  - "fetch" (default): MailerLite's scripts are stripped (no third-party
  *    script, no inline JS — CSP-friendly, works with several forms per page).
  *    Required fields are enforced natively, the form posts with fetch and
- *    redirects to `redirect` on success.
+ *    redirects to `redirect` on success, or shows an error message below it.
  *  - "embed": the export as-is — MailerLite's own scripts handle validation,
  *    submission and the success redirect (only for forms that need features
  *    such as reCAPTCHA; requires loosening the CSP).
@@ -51,14 +51,27 @@ const markup = submit === "fetch" ? html.replace(/<script\b[\s\S]*?<\/script>/gi
       )
       .forEach((input) => (input.required = true))
 
+    const error = document.createElement("p")
+    error.setAttribute("role", "alert")
+    error.className = "mt-2 text-center text-sm font-bold"
+    error.hidden = true
+    form.after(error)
+    const submit = form.querySelector<HTMLButtonElement>("button[type=submit]")
+
+    const fail = () => {
+      error.textContent = "Nie udało się zapisać. Sprawdź adres e-mail i spróbuj ponownie."
+      error.hidden = false
+      if (submit) submit.disabled = false
+    }
+
     form.addEventListener("submit", (event) => {
       event.preventDefault()
+      error.hidden = true
+      if (submit) submit.disabled = true
       fetch(form.action, { method: "POST", body: new FormData(form), mode: "cors" })
         .then((response) => response.json())
-        .then((data) => {
-          if (data.success) window.location.href = redirect
-        })
-        .catch(() => {})
+        .then((data) => (data.success ? window.location.assign(redirect) : fail()))
+        .catch(fail)
     })
   })
 </script>

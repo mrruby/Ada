@@ -21,11 +21,11 @@ export default defineConfig({
   build: { format: "directory" },
   // Retired campaign pages: send old links and ads to the current offer.
   redirects: {
-    "/adseliksir": "/magic",
-    "/eliksir": "/magic",
-    "/magic-masterclass": "/magic",
-    "/magic-nagranie": "/magic",
-    "/magic-wyzwanie": "/magic",
+    "/adseliksir": "/magic/",
+    "/eliksir": "/magic/",
+    "/magic-masterclass": "/magic/",
+    "/magic-nagranie": "/magic/",
+    "/magic-wyzwanie": "/magic/",
   },
   image: {
     responsiveStyles: true,

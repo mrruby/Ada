@@ -75,7 +75,7 @@ test("fetch-mode forms load no MailerLite scripts", async ({ page, thirdParty })
   expect(thirdParty.filter((request) => /mailerlite/.test(request.url))).toEqual([])
 })
 
-test("a MailerLite failure keeps the visitor on the page", async ({ page }) => {
+test("a MailerLite failure keeps the visitor on the page and says why", async ({ page }) => {
   await page.route("https://assets.mailerlite.com/**", (route) =>
     route.fulfill({
       status: 200,
@@ -89,8 +89,11 @@ test("a MailerLite failure keeps the visitor on the page", async ({ page }) => {
   const response = page.waitForResponse(/assets\.mailerlite\.com/)
   await form.locator("button[type=submit]").click()
   await response
-  await page.waitForTimeout(300)
+  await expect(page.locator("[data-mailerlite-fetch] [role=alert]").first()).toHaveText(
+    /Nie udało się zapisać/
+  )
   await expect(page).toHaveURL(/\/advantage\/$/)
+  await expect(form.locator("button[type=submit]")).toBeEnabled()
 })
 
 test.describe("Netlify contact form", () => {

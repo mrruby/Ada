@@ -14,6 +14,6 @@ commerce code, assets. They are not updated as the Astro app changes.
 | `asset-audit.md` | images and static files |
 
 Since then: `/adseliksir`, `/eliksir`, `/magic-masterclass`, `/magic-nagranie`
-and `/magic-wyzwanie` were retired and now redirect to `/magic`
+and `/magic-wyzwanie` were retired and now redirect to `/magic/`
 (`astro.config.mjs`), and Hotjar on `/adsy-chill` waits for statistics
 consent.
