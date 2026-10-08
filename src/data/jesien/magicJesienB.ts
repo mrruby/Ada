@@ -23,6 +23,8 @@ export const magicBoldHero = {
     { value: "24/7", label: "Kapibara Barbara, asystentka AI zasilana wiedzą z MAGIC" },
   ],
   sticker: "Wyniki członkiń, nie obietnice",
+  imageAlt:
+    "Ada z laptopem, wokół niej wiadomości z Circle: Kapibara Barbara, konsultacje materiałów, warsztat z AI, poziomy nauki w aplikacji",
 } as const
 
 /** Ticker under the hero: "68 zakupów w witrynie · wydana kwota 236,99 zł". */

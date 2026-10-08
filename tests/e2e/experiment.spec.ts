@@ -69,6 +69,19 @@ test.describe("magic-jesien A/B", () => {
         .toContain("pakiety")
     })
 
+    test("withdrawing statistics consent removes the sticky cookie", async ({ page, context }) => {
+      const stored = async () => (await context.cookies()).some((cookie) => cookie.name === COOKIE)
+      await page.goto("/magic-jesien/")
+      await expect.poll(stored).toBe(true)
+      await page.locator("[data-consent-reopen]").click()
+      await page.locator('[data-consent-toggle][name="statistics"]').uncheck({ force: true })
+      await Promise.all([
+        page.waitForEvent("load"),
+        page.locator('[data-consent-dialog] button[value="selected"]').click(),
+      ])
+      await expect.poll(stored).toBe(false)
+    })
+
     test("variant B: bold page tagged as B", async ({ page, context, posthog }) => {
       await page.goto("/magic-jesien-b/")
       await expect(page.locator("h1")).toContainText("Twój zespół od reklam.")

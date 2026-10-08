@@ -4,9 +4,10 @@
  * unit-tested. The edge bundle runs on Deno: relative `.ts` imports only.
  *
  * Assignment is sticky (a first-party cookie holding just "a" or "b") only
- * for visitors who granted the `statistics` consent; everyone else is drawn
- * again on each page load and nothing is stored on their device, as the
- * privacy policy promises. Known bots always get variant A.
+ * for visitors who granted the `statistics` consent; for everyone else the
+ * draw is derived from IP + browser + day (see seededRandom) and nothing is
+ * stored on their device, as the privacy policy promises. Known bots always
+ * get variant A.
  */
 import { parseCookieHeader, readConsentState } from "./consent-state.ts"
 
@@ -33,7 +34,7 @@ export const MAGIC_JESIEN_EXPERIMENT: Experiment = {
 /** Running experiments, looked up by the `data-experiment` of a page. */
 export const experiments: Experiment[] = [MAGIC_JESIEN_EXPERIMENT]
 
-/** `?wariant=a|b` forces a variant (QA, previews, shared links). */
+/** `?wariant=a|b` forces a variant (QA, previews) without storing it. */
 export const EXPERIMENT_OVERRIDE_PARAM = "wariant"
 export const EXPERIMENT_COOKIE_MAX_AGE_SECONDS = 60 * 24 * 60 * 60
 
@@ -48,6 +49,19 @@ export const isVariant = (value: unknown): value is ExperimentVariant =>
 /** Draw a variant from a random number in [0, 1). */
 export const drawVariant = (experiment: Experiment, random: number): ExperimentVariant =>
   random < experiment.shareB ? "b" : "a"
+
+/**
+ * A number in [0, 1) derived from a seed (SHA-256). Seeded with IP + browser
+ * + UTC day, a visitor without the cookie keeps one variant for the day,
+ * in step with PostHog's cookieless daily identity; nothing is stored.
+ */
+export const seededRandom = async (seed: string) => {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(seed))
+  return new DataView(digest).getUint32(0) / 2 ** 32
+}
+
+export const dailySeed = (experiment: Experiment, ip: string, userAgent: string, now: Date) =>
+  [experiment.name, now.toISOString().slice(0, 10), ip, userAgent].join("|")
 
 export type Assignment = {
   variant: ExperimentVariant
@@ -65,11 +79,11 @@ export const assignVariant = (
 
   const sticky = readConsentState(request.cookieHeader).choices.statistics
   const forced = new URLSearchParams(request.search).get(EXPERIMENT_OVERRIDE_PARAM)
-  const variant = isVariant(forced)
-    ? forced
-    : sticky && isVariant(stored)
-      ? stored
-      : drawVariant(experiment, request.random)
+  // A forced variant (shared QA link) is shown, never stored.
+  if (isVariant(forced)) {
+    return { variant: forced, cookie: sticky || stored === undefined ? "keep" : "delete" }
+  }
+  const variant = sticky && isVariant(stored) ? stored : drawVariant(experiment, request.random)
 
   if (sticky) return { variant, cookie: stored === variant ? "keep" : "set" }
   return { variant, cookie: stored === undefined ? "keep" : "delete" }

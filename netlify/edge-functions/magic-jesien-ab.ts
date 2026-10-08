@@ -6,12 +6,15 @@
  */
 import {
   assignVariant,
+  dailySeed,
   EXPERIMENT_COOKIE_MAX_AGE_SECONDS,
   MAGIC_JESIEN_EXPERIMENT as experiment,
+  seededRandom,
 } from "../../src/lib/experiments.ts"
 
 /** The part of Netlify's edge `Context` this function uses. */
 export type EdgeContext = {
+  ip?: string
   cookies: {
     set: (cookie: {
       name: string
@@ -28,11 +31,20 @@ export type EdgeContext = {
 
 export default async (request: Request, context: EdgeContext) => {
   const url = new URL(request.url)
+  // One URL for both variants (B would otherwise stay on the slashless one).
+  if (!url.pathname.endsWith("/")) {
+    url.pathname += "/"
+    return Response.redirect(url, 301)
+  }
+
+  const userAgent = request.headers.get("user-agent") ?? ""
   const { variant, cookie } = assignVariant(experiment, {
     cookieHeader: request.headers.get("cookie") ?? "",
     search: url.search,
-    userAgent: request.headers.get("user-agent") ?? "",
-    random: Math.random(),
+    userAgent,
+    random: context.ip
+      ? await seededRandom(dailySeed(experiment, context.ip, userAgent, new Date()))
+      : Math.random(),
   })
 
   if (cookie === "set") {

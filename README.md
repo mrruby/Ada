@@ -261,10 +261,10 @@ links to those hosts are tracked without extra markup. Don't call
 Edge Function `netlify/edge-functions/magic-jesien-ab.ts` serves variant A
 (`magic-jesien.astro`) to 80% and rewrites 20% to variant B
 (`magic-jesien-b.astro`, canonical = A) under the same URL. Bots always get
-A; `?wariant=a|b` forces a variant. The assignment cookie
+A; `?wariant=a|b` forces a variant without storing it. The assignment cookie
 `ada-ab-magic-jesien` (`a`/`b`, 60 days) is stored only with `statistics`
-consent; without it visitors are drawn again on every load and nothing is
-stored. Pages tagged with `experiment` on `MagicJesienPage` stamp
+consent; without it the draw is a hash of IP + browser + UTC day (stable for
+the day, like PostHog's cookieless identity) and nothing is stored. Pages tagged with `experiment` on `MagicJesienPage` stamp
 `experiment`, `experiment_variant` and `$feature/magic-jesien-ab`
 (control/test) on every PostHog event. Locally and in e2e (no edge runtime)
 open `/magic-jesien-b/` directly.

@@ -2,11 +2,13 @@ import { afterEach, describe, expect, it, vi } from "vitest"
 import split, { config, type EdgeContext } from "../../netlify/edge-functions/magic-jesien-ab.ts"
 import {
   assignVariant,
+  dailySeed,
   drawVariant,
   experimentCookieString,
   experimentProperties,
   isBot,
   MAGIC_JESIEN_EXPERIMENT as experiment,
+  seededRandom,
 } from "@/lib/experiments"
 
 const BROWSER =
@@ -60,13 +62,14 @@ describe("assignVariant", () => {
     )
   })
 
-  it("honours ?wariant= over the cookie and the draw", () => {
+  it("shows ?wariant= over the cookie and the draw, without storing it", () => {
     const cookieHeader = `${STATS_GRANTED}; ada-ab-magic-jesien=a`
     expect(assign({ cookieHeader, search: "?wariant=b&utm_source=fb" })).toEqual({
       variant: "b",
-      cookie: "set",
+      cookie: "keep",
     })
-    expect(assign({ search: "?wariant=a", random: 0 }).variant).toBe("a")
+    expect(assign({ cookieHeader: STATS_GRANTED, search: "?wariant=b" }).cookie).toBe("keep")
+    expect(assign({ search: "?wariant=a", random: 0 })).toEqual({ variant: "a", cookie: "keep" })
     expect(assign({ search: "?wariant=zzz", random: 0 }).variant).toBe("b")
   })
 
@@ -86,6 +89,27 @@ describe("assignVariant", () => {
       expect(assign({ userAgent, random: 0 })).toEqual({ variant: "a", cookie: "keep" })
     }
     expect(isBot(BROWSER)).toBe(false)
+  })
+})
+
+describe("seededRandom", () => {
+  it("is stable for a visitor within a day and spreads visitors 80/20", async () => {
+    const day = new Date("2026-10-08T12:00:00Z")
+    const seed = dailySeed(experiment, "203.0.113.7", BROWSER, day)
+    expect(seed).toBe(`magic-jesien-ab|2026-10-08|203.0.113.7|${BROWSER}`)
+    const value = await seededRandom(seed)
+    expect(value).toBeGreaterThanOrEqual(0)
+    expect(value).toBeLessThan(1)
+    expect(await seededRandom(seed)).toBe(value)
+
+    const draws = await Promise.all(
+      Array.from({ length: 2000 }, (_, i) =>
+        seededRandom(dailySeed(experiment, `10.0.${i >> 8}.${i & 255}`, BROWSER, day))
+      )
+    )
+    const shareB = draws.filter((draw) => drawVariant(experiment, draw) === "b").length / 2000
+    expect(shareB).toBeGreaterThan(0.17)
+    expect(shareB).toBeLessThan(0.23)
   })
 })
 
@@ -114,10 +138,11 @@ describe("experimentProperties", () => {
 describe("magic-jesien-ab edge function", () => {
   afterEach(() => vi.restoreAllMocks())
 
-  const run = async (url: string, headers: Record<string, string>, random: number) => {
+  const run = async (url: string, headers: Record<string, string>, random: number, ip?: string) => {
     vi.spyOn(Math, "random").mockReturnValue(random)
     const passThrough = new Response("A")
     const context = {
+      ip,
       cookies: { set: vi.fn(), delete: vi.fn() },
       next: vi.fn(async () => passThrough),
     } satisfies EdgeContext
@@ -148,9 +173,34 @@ describe("magic-jesien-ab edge function", () => {
     })
   })
 
+  it("redirects the slashless URL before drawing", async () => {
+    const { result, context } = await run(
+      "https://adrianna.com.pl/magic-jesien?utm_source=fb",
+      { "user-agent": BROWSER, cookie: STATS_GRANTED },
+      0.05
+    )
+    expect(result).toBeInstanceOf(Response)
+    expect((result as Response).status).toBe(301)
+    expect((result as Response).headers.get("location")).toBe(
+      "https://adrianna.com.pl/magic-jesien/?utm_source=fb"
+    )
+    expect(context.cookies.set).not.toHaveBeenCalled()
+  })
+
+  it("draws from IP + browser + day when the IP is known", async () => {
+    const headers = { "user-agent": BROWSER }
+    const url = "https://adrianna.com.pl/magic-jesien/"
+    const variants = new Set<string>()
+    for (const random of [0, 0.99]) {
+      const { result } = await run(url, headers, random, "203.0.113.7")
+      variants.add(result instanceof URL ? "b" : "a")
+    }
+    expect(variants.size).toBe(1)
+  })
+
   it("passes A through, setting no cookie without consent", async () => {
     const { result, passThrough, context } = await run(
-      "https://adrianna.com.pl/magic-jesien",
+      "https://adrianna.com.pl/magic-jesien/",
       { "user-agent": BROWSER },
       0.7
     )
