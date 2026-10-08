@@ -516,10 +516,10 @@ export const magicTeam: TeamMember[] = [
   },
   {
     photo: dorotaPortrait,
-    alt: "Dorota",
-    name: "Dorota Woźniak",
+    alt: "Karolina",
+    name: "Karolina Mijalska",
     role: "Grafika",
-    bio: "Architektka z pasją do projektowania. Dorota powie, co poprawić w grafikach i pokaże, jakie materiały ustawić w reklamie.",
+    bio: "Projektantka komunikacji, która łączy grafikę, marketing i UX. Karolina podpowie, co poprawić w kreacjach reklamowych i pokaże, jak tworzyć materiały, które realizują swój cel.",
   },
   {
     photo: dawidPortrait,
