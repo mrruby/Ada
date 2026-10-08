@@ -112,13 +112,27 @@ describe("mailerLiteFormId", () => {
 
 describe("isCookielessEvent", () => {
   it("lets page views and catalog events through without consent", () => {
-    for (const name of ["$pageview", "$pageleave", "lead_form_submitted", "checkout_started"]) {
+    for (const name of [
+      "$pageview",
+      "$pageleave",
+      "lead_form_submitted",
+      "checkout_started",
+      "experiment_viewed",
+    ]) {
       expect(isCookielessEvent(name)).toBe(true)
     }
   })
 
-  it("holds back autocapture, heatmaps and the rest", () => {
-    for (const name of ["$autocapture", "$$heatmap", "$rageclick", "$web_vitals", "toString"]) {
+  it("holds back autocapture, heatmaps, experiment clicks/scrolls and the rest", () => {
+    for (const name of [
+      "$autocapture",
+      "$$heatmap",
+      "$rageclick",
+      "$web_vitals",
+      "toString",
+      "cta_clicked",
+      "section_viewed",
+    ]) {
       expect(isCookielessEvent(name)).toBe(false)
     }
   })

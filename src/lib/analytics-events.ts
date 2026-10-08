@@ -24,11 +24,18 @@ export type AnalyticsEvents = {
   video_played: { provider: string; video_id: string }
   /** The one-time offer countdown was shown (once per page view). */
   oto_offer_shown: { campaign: string; seconds_left: number }
+  /** An A/B experiment page was shown (once per page view: the exposure). */
+  experiment_viewed: { experiment: string; variant: string }
+  /** A click on an in-page call to action (link or button) of an experiment page. */
+  cta_clicked: { cta: string; section: string; target: string }
+  /** A section of an experiment page scrolled into view (once per page view). */
+  section_viewed: { section: string; position: number }
 }
 
 export type AnalyticsEvent = keyof AnalyticsEvents
 
-const catalog: Record<AnalyticsEvent, true> = {
+/** Every event, and whether it is also sent without statistics consent. */
+const catalog: Record<AnalyticsEvent, boolean> = {
   lead_form_submitted: true,
   lead_form_failed: true,
   contact_form_submitted: true,
@@ -37,15 +44,21 @@ const catalog: Record<AnalyticsEvent, true> = {
   quiz_completed: true,
   video_played: true,
   oto_offer_shown: true,
+  experiment_viewed: true,
+  // Clicks and scrolling, like autocapture, need consent.
+  cta_clicked: false,
+  section_viewed: false,
 }
 
 /**
  * Events sent for visitors without statistics consent (cookieless mode):
- * page views/leaves and the catalog above. Autocaptured clicks, heatmaps,
- * rage clicks, web vitals and errors need consent.
+ * page views/leaves and the cookieless part of the catalog above.
+ * Autocaptured clicks, heatmaps, rage clicks, web vitals and errors need consent.
  */
 export const isCookielessEvent = (name: string) =>
-  name === "$pageview" || name === "$pageleave" || Object.hasOwn(catalog, name)
+  name === "$pageview" ||
+  name === "$pageleave" ||
+  (Object.hasOwn(catalog, name) && catalog[name as AnalyticsEvent])
 
 type LinkEvent =
   | { event: "checkout_started"; properties: AnalyticsEvents["checkout_started"] }

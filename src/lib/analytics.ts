@@ -23,6 +23,7 @@ import {
   metaEventFor,
 } from "./analytics-events"
 import { readConsentState } from "./consent-state"
+import { experimentProperties, isVariant } from "./experiments"
 
 const key: string | undefined = import.meta.env.PUBLIC_POSTHOG_KEY
 
@@ -39,6 +40,23 @@ let pageviewSent = false
 let queue: Array<{ at: number; send: (ph: PostHog) => void }> = []
 
 const hasStatisticsConsent = () => readConsentState(document.cookie).choices.statistics
+
+let experimentProps: Record<string, string> | undefined
+/**
+ * Experiment and variant of an A/B page (`[data-experiment]` root), stamped
+ * on every event of the page. Read once: before_send also sees every replay
+ * snapshot.
+ */
+const pageExperiment = () => {
+  if (experimentProps) return experimentProps
+  const root = document.querySelector<HTMLElement>("[data-experiment]")
+  const variant = root?.dataset.experimentVariant
+  experimentProps =
+    root?.dataset.experiment && isVariant(variant)
+      ? experimentProperties(root.dataset.experiment, variant)
+      : {}
+  return experimentProps
+}
 
 /** Global Privacy Control / Do Not Track: an objection to anonymous counting. */
 const objectsToCounting = () =>
@@ -90,8 +108,11 @@ const load = () =>
         }),
       },
       // Without statistics consent only page views and catalog events leave.
-      before_send: (event) =>
-        !event || hasStatisticsConsent() || isCookielessEvent(event.event) ? event : null,
+      before_send: (event) => {
+        if (!event || !(hasStatisticsConsent() || isCookielessEvent(event.event))) return null
+        Object.assign((event.properties ??= {}), pageExperiment())
+        return event
+      },
     })
     return ph
   }))
