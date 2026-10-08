@@ -6,6 +6,9 @@
  * The root is a `[data-countdown-scope]`: until the promotion ends
  * `[data-when="active"]` content shows, afterwards `[data-when="expired"]`.
  * Built after the end, the expired state is rendered right away.
+ *
+ * The default slot replaces the section stack below the hero (A/B variants);
+ * `experiment` tags the page for PostHog (see ExperimentTracking).
  */
 import { Font } from "astro:assets"
 import {
@@ -14,7 +17,9 @@ import {
   MAGIC_JESIEN_TITLE,
 } from "@/data/jesien"
 import { OG_ADA_PURPLE } from "@/config/site"
+import ExperimentTracking from "@/components/site/ExperimentTracking.astro"
 import BaseLayout from "@/layouts/BaseLayout.astro"
+import type { ExperimentVariant } from "@/lib/experiments"
 import Audience from "./Audience.astro"
 import Calendar from "./Calendar.astro"
 import Checklist from "./Checklist.astro"
@@ -40,9 +45,10 @@ type Props = {
   noindex?: boolean
   /** Promotion strip above the logo. */
   topBar?: boolean
+  experiment?: { name: string; variant: ExperimentVariant }
 }
 
-const { canonical, noindex = false, topBar = false } = Astro.props
+const { canonical, noindex = false, topBar = false, experiment } = Astro.props
 const promotionEnded = MAGIC_JESIEN_PROMOTION_END.getTime() <= Date.now()
 ---
 
@@ -61,27 +67,32 @@ const promotionEnded = MAGIC_JESIEN_PROMOTION_END.getTime() <= Date.now()
     class="magic-jesien overflow-x-clip bg-white text-base leading-relaxed text-jesien-ink antialiased"
     data-countdown-scope
     data-expired={promotionEnded ? "" : undefined}
+    data-experiment={experiment?.name}
+    data-experiment-variant={experiment?.variant}
   >
     {topBar && <PromoTopBar />}
     <LogoBar />
     <main>
       <slot name="hero" />
-      <Invitation />
-      <Diagnosis />
-      <Audience />
-      <Features />
-      <Checklist />
-      <Offer />
-      <Progress />
-      <Story />
-      <VideoOpinions />
-      <Calendar />
-      <Team />
-      <Results />
-      <Opinions />
-      <Faq />
-      <Final />
+      <slot>
+        <Invitation />
+        <Diagnosis />
+        <Audience />
+        <Features />
+        <Checklist />
+        <Offer />
+        <Progress />
+        <Story />
+        <VideoOpinions />
+        <Calendar />
+        <Team />
+        <Results />
+        <Opinions />
+        <Faq />
+        <Final />
+      </slot>
     </main>
     <MagicFooter />
   </div>
+  {experiment && <ExperimentTracking />}
 </BaseLayout>

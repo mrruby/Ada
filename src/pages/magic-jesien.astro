@@ -1,8 +1,13 @@
 ---
+/** /magic-jesien variant A (A/B test, 80%); variant B is magic-jesien-b.astro. */
 import MagicHero from "@/components/jesien/magic/MagicHero.astro"
 import MagicJesienPage from "@/components/jesien/magic/MagicJesienPage.astro"
+import { MAGIC_JESIEN_EXPERIMENT } from "@/lib/experiments"
 ---
 
-<MagicJesienPage canonical="https://adrianna.com.pl/magic-jesien/">
+<MagicJesienPage
+  canonical="https://adrianna.com.pl/magic-jesien/"
+  experiment={{ name: MAGIC_JESIEN_EXPERIMENT.name, variant: "a" }}
+>
   <MagicHero slot="hero" />
 </MagicJesienPage>

@@ -1,0 +1,42 @@
+---
+/**
+ * /magic-jesien variant B (A/B test). Visitors don't open this URL: the edge
+ * function netlify/edge-functions/magic-jesien-ab.ts serves it at
+ * /magic-jesien/ to 20% of them. Bolder hero, proof first, the plans moved
+ * up, a shorter stack and a sticky mobile CTA.
+ */
+import BoldHero from "@/components/jesien/magic/BoldHero.astro"
+import Diagnosis from "@/components/jesien/magic/Diagnosis.astro"
+import Faq from "@/components/jesien/magic/Faq.astro"
+import Features from "@/components/jesien/magic/Features.astro"
+import Final from "@/components/jesien/magic/Final.astro"
+import Invitation from "@/components/jesien/magic/Invitation.astro"
+import MagicJesienPage from "@/components/jesien/magic/MagicJesienPage.astro"
+import Offer from "@/components/jesien/magic/Offer.astro"
+import Opinions from "@/components/jesien/magic/Opinions.astro"
+import Results from "@/components/jesien/magic/Results.astro"
+import StickyCta from "@/components/jesien/magic/StickyCta.astro"
+import Story from "@/components/jesien/magic/Story.astro"
+import Team from "@/components/jesien/magic/Team.astro"
+import VideoOpinions from "@/components/jesien/magic/VideoOpinions.astro"
+import { MAGIC_JESIEN_EXPERIMENT } from "@/lib/experiments"
+---
+
+<MagicJesienPage
+  canonical="https://adrianna.com.pl/magic-jesien/"
+  experiment={{ name: MAGIC_JESIEN_EXPERIMENT.name, variant: "b" }}
+>
+  <BoldHero slot="hero" />
+  <Results />
+  <Invitation />
+  <Diagnosis />
+  <Offer />
+  <Features />
+  <Team />
+  <Story />
+  <VideoOpinions />
+  <Opinions />
+  <Faq />
+  <Final />
+  <StickyCta />
+</MagicJesienPage>
