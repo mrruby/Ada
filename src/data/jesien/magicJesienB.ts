@@ -32,6 +32,6 @@ export const magicResultsTicker = magicResults.map(
 )
 
 export const magicStickyCta = {
-  text: "MAGIC: Twój zespół od reklam",
+  text: "Twój zespół od reklam",
   button: "Pakiety",
 } as const

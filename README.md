@@ -64,7 +64,7 @@ Page families (component folder + data folder with the same name):
 | `masterclass` | `/warsztat-lejek`, `/adsy-chill`                                        |
 | `magic`       | `/magic`, `/magic-special`, `/kurs-meta-2026`, `/kurs-andromeda-2026`    |
 | `kolektyw`    | `/magic-kolektyw`, `/magic-zaproszenie`, `/kolektyw-rozmowa`, `/kolektyw-na-start` |
-| `jesien`      | `/jesien`, `/jesien-masterclass` (= `/masterclass-jesien`), `/jesien-nagranie`, `/jesien-nagranie2`, `/magic-jesien` |
+| `jesien`      | `/jesien`, `/jesien-masterclass` (= `/masterclass-jesien`), `/jesien-nagranie`, `/jesien-nagranie2`, `/magic-jesien` (+ A/B variant `/magic-jesien-b`) |
 | `training`    | `/advantage`, `/andromeda-2026`, `/meta-2026`, `/wyzwanie` (+ `/api/oto/*`) |
 | `quiz`        | `/quiz`                                                                 |
 
@@ -247,10 +247,27 @@ are typed in `lib/analytics-events.ts` and sent with `track(event, props)`:
 | `quiz_completed`         | the quiz showed its result                            |
 | `video_played`           | the visitor started a YouTube/Vimeo player            |
 | `oto_offer_shown`        | the /wyzwanie one-time offer countdown appeared       |
+| `experiment_viewed`      | an A/B experiment page was shown (exposure)           |
+| `cta_clicked`            | in-page CTA click on an experiment page (consent only) |
+| `section_viewed`         | a section of an experiment page came into view (consent only) |
 
 Checkout and booking links are detected by URL (`classifyLink`), so new
 links to those hosts are tracked without extra markup. Don't call
 `posthog.identify()` — visitors stay anonymous.
+
+### A/B tests
+
+`/magic-jesien/` runs `magic-jesien-ab` (`lib/experiments.ts`): the Netlify
+Edge Function `netlify/edge-functions/magic-jesien-ab.ts` serves variant A
+(`magic-jesien.astro`) to 80% and rewrites 20% to variant B
+(`magic-jesien-b.astro`, canonical = A) under the same URL. Bots always get
+A; `?wariant=a|b` forces a variant. The assignment cookie
+`ada-ab-magic-jesien` (`a`/`b`, 60 days) is stored only with `statistics`
+consent; without it visitors are drawn again on every load and nothing is
+stored. Pages tagged with `experiment` on `MagicJesienPage` stamp
+`experiment`, `experiment_variant` and `$feature/magic-jesien-ab`
+(control/test) on every PostHog event. Locally and in e2e (no edge runtime)
+open `/magic-jesien-b/` directly.
 
 ## Security
 
