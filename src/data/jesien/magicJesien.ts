@@ -8,8 +8,8 @@
  */
 import adaPortrait from "@/assets/images/ada_portrait.webp"
 import dawidPortrait from "@/assets/images/dawid_portrait.webp"
-import dorotaPortrait from "@/assets/images/dorota_portrait.webp"
 import justynaPortrait from "@/assets/images/justyna_portrait.webp"
+import karolinaPortrait from "@/assets/images/karolina_portrait.webp"
 import op02 from "@/assets/images/magic-jesien/op02.webp"
 import op03 from "@/assets/images/magic-jesien/op03.webp"
 import op04 from "@/assets/images/magic-jesien/op04.webp"
@@ -515,11 +515,11 @@ export const magicTeam: TeamMember[] = [
     bio: "Socjolożka i zaklinaczka słów. Justynie wyślesz tekst reklamy do sprawdzenia, zanim odpalisz reklamę.",
   },
   {
-    photo: dorotaPortrait,
-    alt: "Dorota",
-    name: "Dorota Woźniak",
+    photo: karolinaPortrait,
+    alt: "Karolina Mijalska",
+    name: "Karolina Mijalska",
     role: "Grafika",
-    bio: "Architektka z pasją do projektowania. Dorota powie, co poprawić w grafikach i pokaże, jakie materiały ustawić w reklamie.",
+    bio: "Projektantka komunikacji, która łączy grafikę, marketing i UX. Karolina podpowie, co poprawić w kreacjach reklamowych i pokaże, jak tworzyć materiały, które realizują swój cel.",
   },
   {
     photo: dawidPortrait,
