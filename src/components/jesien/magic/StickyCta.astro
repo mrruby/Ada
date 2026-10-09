@@ -1,0 +1,37 @@
+---
+/**
+ * Mobile bar pinned to the bottom with a jump to the plans (/magic-jesien
+ * variant B). Shown once the hero is scrolled past, hidden again while the
+ * plans or the closing section are on screen. Leaves room for the 🍪 button.
+ */
+import { magicStickyCta as copy } from "@/data/jesien"
+import MjButton from "./MjButton.astro"
+---
+
+<div
+  class="invisible fixed right-3 bottom-3 left-16 z-80 flex translate-y-4 items-center justify-between gap-3 rounded-full bg-jesien-ink py-1.5 pr-1.5 pl-5 text-sm font-semibold text-white opacity-0 shadow-xl shadow-jesien-ink/30 transition duration-300 data-show:visible data-show:translate-y-0 data-show:opacity-100 md:hidden"
+  data-sticky-cta
+  data-section="sticky-cta"
+>
+  <span class="truncate">{copy.text}</span>
+  <MjButton href="#pakiety" size="sm" class="shrink-0">
+    {copy.button} →
+  </MjButton>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-sticky-cta]").forEach((bar) => {
+    const onScreen = new Set<Element>()
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) onScreen.add(entry.target)
+        else onScreen.delete(entry.target)
+      }
+      bar.toggleAttribute("data-show", onScreen.size === 0)
+    })
+    for (const id of ["top", "pakiety", "dolacz"]) {
+      const section = document.getElementById(id)
+      if (section) observer.observe(section)
+    }
+  })
+</script>

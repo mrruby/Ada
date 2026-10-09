@@ -1,0 +1,80 @@
+---
+/**
+ * A/B experiment runtime for a page whose root carries `data-experiment`
+ * (name) and `data-experiment-variant` (a/b). Sends `experiment_viewed`, the
+ * page's in-page CTA clicks (`a[href]`, `[data-cta]`) as `cta_clicked` and the
+ * first sight of every `section[id]` / `header[id]` as `section_viewed`.
+ * Elements can name their section with `data-section`.
+ *
+ * At the experiment's own URL it also keeps the sticky assignment cookie in
+ * line with the `statistics` consent: stored once granted, removed otherwise.
+ */
+---
+
+<script>
+  import { track } from "@/lib/analytics"
+  import { getConsent, onConsentChange } from "@/lib/consent"
+  import { parseCookieHeader } from "@/lib/consent-state"
+  import { experimentCookieString, experiments, isVariant } from "@/lib/experiments"
+
+  const root = document.querySelector<HTMLElement>("[data-experiment]")
+  const experiment = experiments.find(({ name }) => name === root?.dataset.experiment)
+  const variant = root?.dataset.experimentVariant
+
+  if (root && experiment && isVariant(variant)) {
+    const path = window.location.pathname.replace(/\/?$/, "/")
+    const syncCookie = (statistics: boolean) => {
+      if (path !== experiment.pages.a) return
+      const stored = parseCookieHeader(document.cookie)[experiment.cookie]
+      const secure = window.location.protocol === "https:"
+      if (statistics && stored !== variant) {
+        document.cookie = experimentCookieString(experiment, variant, secure)
+      }
+      if (!statistics && stored !== undefined) {
+        document.cookie = experimentCookieString(experiment, null, secure)
+      }
+    }
+    syncCookie(getConsent().choices.statistics)
+    onConsentChange((choices) => syncCookie(choices.statistics))
+
+    track("experiment_viewed", { experiment: experiment.name, variant })
+
+    const sectionOf = (element: Element) => {
+      const section = element.closest<HTMLElement>("[data-section], section[id], header[id]")
+      return section?.dataset.section ?? section?.id ?? (element.closest("footer") ? "footer" : "")
+    }
+
+    root.addEventListener("click", (event) => {
+      const cta = (event.target as Element | null)?.closest<HTMLElement>("a[href], [data-cta]")
+      if (!cta || !root.contains(cta)) return
+      const target = cta.getAttribute("href") ?? ""
+      track(
+        "cta_clicked",
+        {
+          cta: cta.dataset.cta ?? (cta.textContent ?? "").replace(/\s+/g, " ").trim().slice(0, 80),
+          section: sectionOf(cta),
+          target,
+        },
+        { beforeNavigation: target !== "" && !target.startsWith("#") }
+      )
+    })
+
+    const sections = [...root.querySelectorAll<HTMLElement>("main :is(section[id], header[id])")]
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue
+          observer.unobserve(entry.target)
+          const section = entry.target as HTMLElement
+          track("section_viewed", {
+            section: section.id,
+            position: sections.indexOf(section) + 1,
+          })
+        }
+      },
+      // A section counts once its top reaches the middle of the viewport.
+      { rootMargin: "0px 0px -50% 0px" }
+    )
+    sections.forEach((section) => observer.observe(section))
+  }
+</script>

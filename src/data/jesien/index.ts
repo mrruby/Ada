@@ -2,3 +2,4 @@
 export * from "./landing"
 export * from "./masterclass"
 export * from "./magicJesien"
+export * from "./magicJesienB"
