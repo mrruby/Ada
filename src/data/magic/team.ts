@@ -1,8 +1,7 @@
 import ada from "@/assets/images/ada_portrait.webp"
 import dawid from "@/assets/images/dawid_portrait.webp"
-// TODO: placeholder — swap to Karolina's photo (WebP, ~1200 px long side) once it arrives.
-import karolina from "@/assets/images/dorota_portrait.webp"
 import justyna from "@/assets/images/justyna_portrait.webp"
+import karolina from "@/assets/images/karolina_portrait.webp"
 import nicola from "@/assets/images/nicola_portrait.webp"
 import type { TeamMember } from "@/lib/content"
 
