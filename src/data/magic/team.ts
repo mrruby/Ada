@@ -1,7 +1,7 @@
 import ada from "@/assets/images/ada_portrait.webp"
 import dawid from "@/assets/images/dawid_portrait.webp"
-import dorota from "@/assets/images/dorota_portrait.webp"
 import justyna from "@/assets/images/justyna_portrait.webp"
+import karolina from "@/assets/images/karolina_portrait.webp"
 import nicola from "@/assets/images/nicola_portrait.webp"
 import type { TeamMember } from "@/lib/content"
 
@@ -18,9 +18,9 @@ export const team: TeamMember[] = [
     photo: justyna,
   },
   {
-    name: "Dorota Woźniak",
-    bio: "Architektka z pasją do projektowania. Zamienia nudne reklamy w przyciągające wzrok kreacje graficzne. Dorota powie, co poprawić w grafikach i pokaże, jakie materiały ustawić w reklamie.",
-    photo: dorota,
+    name: "Karolina Mijalska",
+    bio: "Projektantka komunikacji, która łączy grafikę, marketing i UX. Karolina podpowie, co poprawić w kreacjach reklamowych i pokaże, jak tworzyć materiały, które realizują swój cel.",
+    photo: karolina,
   },
   {
     name: "Nicola Kut",
