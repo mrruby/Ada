@@ -78,10 +78,16 @@
     z-index: 0;
   }
 }
+/* Phones get a 1170 px copy (3x a 390 px screen) instead of the 1920 px photo. */
 @utility bg-art-magic-photo {
   background:
     linear-gradient(to bottom, rgb(255 255 255 / 0.5), rgb(255 255 255 / 0)),
-    url("/assets/background-magic.webp") center / cover no-repeat;
+    url("/assets/background-magic-mobile.webp") center / cover no-repeat;
+  @variant md {
+    background-image:
+      linear-gradient(to bottom, rgb(255 255 255 / 0.5), rgb(255 255 255 / 0)),
+      url("/assets/background-magic.webp");
+  }
 }
 @utility bg-art-notebook {
   background: url("/assets/magic-banner2.webp") center / cover no-repeat;
