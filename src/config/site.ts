@@ -51,7 +51,7 @@ export const social = {
  * Tracking (see lib/analytics.ts and lib/consent.ts). Nothing loads before the
  * visitor answers the cookie banner.
  *
- *  - PostHog (EU Cloud) — `statistics`; not loaded at all when denied. The
+ *  - PostHog (EU Cloud) — `statistics`; cookieless counting when denied. The
  *    project key comes from the PUBLIC_POSTHOG_KEY env var (set for the
  *    production context only, so deploy previews send nothing). Requests go
  *    through the /relay proxy in netlify.toml.

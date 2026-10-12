@@ -1,7 +1,7 @@
 /**
- * Cookie consent runtime (browser only): stores the visitor's choices, loads
- * PostHog only after `statistics` is granted (see analytics.ts) and the Meta
- * Pixel only after `marketing` is granted. The consent
+ * Cookie consent runtime (browser only): stores the visitor's choices, keeps
+ * PostHog in line with them (full tracking or cookieless, see analytics.ts)
+ * and loads the Meta Pixel only after `marketing` is granted. The consent
  * model itself lives in consent-state.ts (pure, unit-tested).
  *
  * Embeds (YouTube, Vimeo, Google Calendar) ask for the `media` category via
@@ -73,8 +73,8 @@ const loadFacebookPixel = () => {
 }
 
 /**
- * Apply the choices of a visitor who has decided (idempotent): PostHog once
- * statistics is granted, the Meta Pixel once marketing is granted.
+ * Apply the choices of a visitor who has decided (idempotent): PostHog with
+ * or without cookies, the Meta Pixel once marketing is granted.
  */
 export const applyConsent = (choices: ConsentChoices) => {
   void startAnalytics(choices.statistics)

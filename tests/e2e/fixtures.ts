@@ -2,8 +2,8 @@
  * Shared Playwright fixtures for the e2e suite.
  *
  *  - `consent` (option): cookies set before every page loads. By default every
- *    consent cookie is "false", so the banner stays closed and neither PostHog
- *    nor the Pixel loads. `test.use({ consent: null })` starts without a decision (banner
+ *    consent cookie is "false", so the banner stays closed, PostHog runs
+ *    cookieless and the Pixel stays off. `test.use({ consent: null })` starts without a decision (banner
  *    shown); override single values with `{ ...CONSENT_DECLINED, key: "true" }`.
  *  - Every request to another origin is answered locally (see
  *    `fulfillThirdParty`) and recorded in `thirdParty`, so tests never reach

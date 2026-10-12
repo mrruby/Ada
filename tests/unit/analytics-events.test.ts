@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest"
 import {
   classifyLink,
+  isCookielessEvent,
   mailerLiteFormId,
   metaEventFor,
   videoFromPlayerUrl,
@@ -106,5 +107,19 @@ describe("mailerLiteFormId", () => {
       )
     ).toBe("196678376972354872")
     expect(mailerLiteFormId("https://example.com/")).toBe("unknown")
+  })
+})
+
+describe("isCookielessEvent", () => {
+  it("lets page views and catalog events through without consent", () => {
+    for (const name of ["$pageview", "$pageleave", "lead_form_submitted", "checkout_started"]) {
+      expect(isCookielessEvent(name)).toBe(true)
+    }
+  })
+
+  it("holds back autocapture, heatmaps and the rest", () => {
+    for (const name of ["$autocapture", "$$heatmap", "$rageclick", "$web_vitals", "toString"]) {
+      expect(isCookielessEvent(name)).toBe(false)
+    }
   })
 })

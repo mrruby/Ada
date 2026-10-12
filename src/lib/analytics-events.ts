@@ -28,6 +28,25 @@ export type AnalyticsEvents = {
 
 export type AnalyticsEvent = keyof AnalyticsEvents
 
+const catalog: Record<AnalyticsEvent, true> = {
+  lead_form_submitted: true,
+  lead_form_failed: true,
+  contact_form_submitted: true,
+  checkout_started: true,
+  booking_opened: true,
+  quiz_completed: true,
+  video_played: true,
+  oto_offer_shown: true,
+}
+
+/**
+ * Events sent for visitors without statistics consent (cookieless mode):
+ * page views/leaves and the catalog above. Autocaptured clicks, heatmaps,
+ * rage clicks, web vitals and errors need consent.
+ */
+export const isCookielessEvent = (name: string) =>
+  name === "$pageview" || name === "$pageleave" || Object.hasOwn(catalog, name)
+
 type LinkEvent =
   | { event: "checkout_started"; properties: AnalyticsEvents["checkout_started"] }
   | { event: "booking_opened"; properties: AnalyticsEvents["booking_opened"] }

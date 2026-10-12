@@ -10,7 +10,7 @@ const categories = [
   {
     name: "statistics",
     title: "Statystyki",
-    text: "Pokazuje nam, jak korzystasz ze strony: odsłony, kliknięcia, nagrania sesji i mapy kliknięć (PostHog, serwery w UE). Treść wpisywana w formularze jest ukryta. Bez tej zgody PostHog w ogóle się nie uruchamia.",
+    text: "Pokazuje nam, jak korzystasz ze strony: odsłony, kliknięcia, nagrania sesji i mapy kliknięć (PostHog, serwery w UE). Treść wpisywana w formularze jest ukryta. Bez tej zgody liczymy tylko anonimowe odsłony i konwersje (np. zapisy na listę), bez plików cookie.",
   },
   {
     name: "marketing",
@@ -52,8 +52,8 @@ const outline =
         <a href="/policy" class="font-bold hover:underline">
           Warunkach i Zasadach
         </a>
-        . Jeśli odmówisz, nie uruchamiamy statystyk ani reklam. Swój wybór możesz zmienić w każdej
-        chwili.
+        . Jeśli odmówisz, liczymy tylko anonimowe odsłony i zapisy, bez plików cookie. Swój wybór
+        możesz zmienić w każdej chwili.
       </p>
     </div>
     <div class="flex min-w-44 flex-col gap-1">

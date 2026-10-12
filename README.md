@@ -226,7 +226,7 @@ One-time setup: `yarn playwright install chromium`. CI:
 
 | Category     | Cookie                   | Granted                                  | Denied                     |
 | ------------ | ------------------------ | ---------------------------------------- | -------------------------- |
-| `statistics` | `ada-consent-statistics` | PostHog with cookies, replay, heatmaps   | nothing (PostHog not loaded) |
+| `statistics` | `ada-consent-statistics` | PostHog with cookies, replay, heatmaps   | PostHog cookieless counts  |
 | `marketing`  | `ada-consent-marketing`  | Meta Pixel (+ `Lead`, `InitiateCheckout`) | nothing                    |
 | `media`      | `ada-consent-media`      | YouTube / Vimeo / Google Calendar embeds | click-to-load placeholders |
 
@@ -235,15 +235,14 @@ once all three cookies exist; Gatsby-era `gatsby-gdpr-*` cookies don't count
 (they are deleted on the next save), so earlier visitors are asked again.
 Withdrawing a category reloads the page.
 
-**PostHog** (`lib/analytics.ts`, EU Cloud) is a separate chunk, imported
-only once statistics consent is granted (on the banner or on an earlier
-visit): then it uses cookies, session replay (inputs masked) and heatmaps.
-Without that consent no PostHog code loads, nothing is sent, and PostHog
-cookies/storage left by an earlier consent are removed. Requests go through
-`/relay/*`, a Netlify proxy in `netlify.toml`. The project key comes from
-`PUBLIC_POSTHOG_KEY` (production context only — previews and local builds
-send nothing). Replay, heatmaps and web vitals are switched on or off in the
-PostHog project settings.
+**PostHog** (`lib/analytics.ts`, EU Cloud) loads with `cookieless_mode:
+"on_reject"`: with statistics consent it uses cookies, session replay (inputs
+masked) and heatmaps; without it, PostHog stores nothing and counts visits
+with a server-side hash. Requests go through `/relay/*`, a Netlify proxy in
+`netlify.toml`. The project key comes from `PUBLIC_POSTHOG_KEY` (production
+context only — previews and local builds send nothing). Replay, heatmaps and
+web vitals are switched on or off in the PostHog project settings, and the
+project needs "Cookieless server hash mode" enabled.
 
 Autocapture covers page views, page leaves (time on page, scroll depth),
 clicks, rage clicks, outbound links and UTM/referrer data. Business events
