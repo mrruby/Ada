@@ -103,7 +103,7 @@ const anton = "font-anton font-normal uppercase leading-none text-black"
               alt="Adrianna Promis-Urbas z telefonem w dłoni"
               widths={[512, 1024]}
               sizes="512px"
-              loading="eager"
+              loading={figureOnMobile ? "eager" : "lazy"}
               class="h-auto w-full"
             />
             <Image
