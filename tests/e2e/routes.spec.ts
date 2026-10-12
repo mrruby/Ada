@@ -51,6 +51,19 @@ test.describe("built files", () => {
     expect(svgsWithBitmaps, "SVGs embedding non-WebP bitmaps").toEqual([])
   })
 
+  // The Netlify Lighthouse plugin's axe-core can't parse oklch(); see theme.css.
+  test("CSS has no oklch() colors", () => {
+    const files = readdirSync(distDir, { recursive: true, encoding: "utf8" })
+    const offenders = files
+      .filter((file) => file.endsWith(".css"))
+      .flatMap((file) =>
+        (readFileSync(join(distDir, file), "utf8").match(/[\w-]+:\s*oklch\([^)]*\)/g) ?? []).map(
+          (match) => `${file}: ${match}`
+        )
+      )
+    expect(offenders, "define these Tailwind shades as hex in theme.css").toEqual([])
+  })
+
   for (const route of ["/", "/magic/"]) {
     test(`${route} social meta: no hardcoded og:image size, twitter:domain by name`, async ({
       page,
