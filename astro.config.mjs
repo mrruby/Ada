@@ -56,14 +56,6 @@ export default defineConfig({
     },
     {
       provider: google,
-      name: "Lemon",
-      cssVariable: "--ff-lemon",
-      weights: [400],
-      subsets: ["latin", "latin-ext"],
-      fallbacks: ["serif"],
-    },
-    {
-      provider: google,
       name: "Courier Prime",
       cssVariable: "--ff-courier",
       weights: [400, 700],
