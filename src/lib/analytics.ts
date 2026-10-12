@@ -91,6 +91,8 @@ const load = () =>
       // Sent once by startAnalytics, after the consent sync (avoids doubles).
       capture_pageview: false,
       capture_pageleave: true,
+      // Uncaught errors for Error tracking; before_send drops them without consent.
+      capture_exceptions: true,
       person_profiles: "identified_only",
       // The cookie stays on adrianna.com.pl (not shared with sklep.*).
       cross_subdomain_cookie: false,
