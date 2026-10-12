@@ -74,6 +74,15 @@ const relayRequests = (page: Page) => {
 const fetchedPostHogChunk = (requests: string[]) =>
   requests.some((path) => path.startsWith("/_astro/"))
 
+/** What full-mode PostHog leaves behind: a cookie plus local and session storage. */
+const plantPostHogLeftovers = async (page: Page, context: BrowserContext, origin: string) => {
+  await context.addCookies([{ name: `ph_${POSTHOG_TEST_KEY}_posthog`, value: "{}", url: origin }])
+  await page.addInitScript((key) => {
+    window.localStorage.setItem(`ph_${key}_posthog`, "{}")
+    window.sessionStorage.setItem(`ph_${key}_window_id`, "earlier")
+  }, POSTHOG_TEST_KEY)
+}
+
 test.describe("first visit", () => {
   test.use({ consent: null })
 
@@ -188,8 +197,35 @@ test.describe("PostHog", () => {
     })
   })
 
+  test.describe("visitor whose decision lapsed", () => {
+    test.use({ consent: null })
+
+    test("sees the banner, PostHog doesn't load, and its leftovers are removed", async ({
+      page,
+      context,
+      baseURL,
+      posthogRequests,
+    }) => {
+      await plantPostHogLeftovers(page, context, new URL(baseURL!).origin)
+      await page.goto("/about/")
+      await expect(page.locator("[data-consent-banner]")).toBeVisible()
+      await page.waitForLoadState("networkidle")
+      expect(posthogRequests).toEqual([])
+      await expect
+        .poll(() => posthogStorage(page, context))
+        .toEqual({ cookies: [], localStorage: [], sessionStorage: [] })
+    })
+  })
+
   test.describe("returning visitor who rejected", () => {
-    test("is counted cookieless, without click autocapture", async ({ page, context, posthog }) => {
+    test("is counted cookieless, without click autocapture", async ({
+      page,
+      context,
+      baseURL,
+      posthog,
+    }) => {
+      // Leftovers of an earlier full-mode visit must not survive the refusal.
+      await plantPostHogLeftovers(page, context, new URL(baseURL!).origin)
       await page.goto("/magic/")
       await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
       expect(events(posthog, "$pageview")[0].properties.distinct_id).toBe("$posthog_cookieless")
