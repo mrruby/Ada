@@ -88,11 +88,11 @@ export default defineConfig({
       fallbacks: ["system-ui", "sans-serif"],
       options: {
         variants: [
-          { weight: 400, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-400.ttf"] },
-          { weight: 500, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-500.ttf"] },
-          { weight: 600, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-600.ttf"] },
-          { weight: 700, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-700.ttf"] },
-          { weight: 800, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-800.ttf"] },
+          { weight: 400, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-400.woff2"] },
+          { weight: 500, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-500.woff2"] },
+          { weight: 600, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-600.woff2"] },
+          { weight: 700, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-700.woff2"] },
+          { weight: 800, style: "normal", src: ["./src/assets/fonts/magic-jesien/outfit-800.woff2"] },
         ],
       },
     },
@@ -106,12 +106,12 @@ export default defineConfig({
           {
             weight: 400,
             style: "italic",
-            src: ["./src/assets/fonts/magic-jesien/playfair-display-400.ttf"],
+            src: ["./src/assets/fonts/magic-jesien/playfair-display-400.woff2"],
           },
           {
             weight: 500,
             style: "italic",
-            src: ["./src/assets/fonts/magic-jesien/playfair-display-500.ttf"],
+            src: ["./src/assets/fonts/magic-jesien/playfair-display-500.woff2"],
           },
         ],
       },
