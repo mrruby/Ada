@@ -2,6 +2,8 @@
 import { Image } from "astro:assets"
 import heroBg from "@/assets/images/bg-mastermind.webp"
 import calendarIcon from "@/assets/images/calendar.svg"
+import faqArt from "@/assets/images/decor/faq.svg"
+import puzzlesArt from "@/assets/images/decor/puzzles.svg"
 import Adsy2About from "@/components/mentoring/Adsy2About.astro"
 import Adsy2Fit from "@/components/mentoring/Adsy2Fit.astro"
 import Adsy2Intro from "@/components/mentoring/Adsy2Intro.astro"
@@ -124,7 +126,7 @@ const joinButton = "border-b-4 border-rose font-bold md:text-2xl"
     </div>
     <div class="flex pt-15 lg:pt-19">
       <img
-        src="/assets/puzzles.svg"
+        src={puzzlesArt.src}
         alt=""
         aria-hidden="true"
         width="309"
@@ -178,7 +180,7 @@ const joinButton = "border-b-4 border-rose font-bold md:text-2xl"
   <Section bg="bg-linear-to-t from-lavender to-white" innerClass="flex flex-col items-center px-3">
     <div class="w-full pt-15 lg:pt-19">
       <img
-        src="/assets/faq.svg"
+        src={faqArt.src}
         alt=""
         aria-hidden="true"
         width="265"

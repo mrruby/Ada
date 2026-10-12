@@ -49,7 +49,7 @@ src/
   forms/                 MailerLite form exports (raw HTML, imported ?raw)
   lib/                   cn, consent, countdown, content types, oto/ (API)
   pages/                 routes; `pages/api/` = on-demand endpoints
-public/                  files served as-is (/assets artwork, /img OG images)
+public/                  served as-is: favicons, manifest, /img OG images (stable URLs)
 tests/                   unit/ (Vitest) and e2e/ (Playwright + axe)
 scripts/                 serve-dist.mjs — static server for e2e against dist/
 docs/                    ADRs and the Gatsby → Astro migration audits

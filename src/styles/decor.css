@@ -6,25 +6,25 @@
  * the prefix and never treats them as colors. Gradients don't belong here —
  * use Tailwind's `bg-linear-to-* from-* to-*` utilities.
  *
- * Artwork files live in /public/assets.
+ * Artwork files live in src/assets/images/decor (hashed by the build).
  */
 
 /* Corner illustration (about page) */
 @utility bg-art-meetme {
-  background: url("/assets/meetmeicons.svg") no-repeat top right;
+  background: url("../assets/images/decor/meetmeicons.svg") no-repeat top right;
 }
 
 /* Swaying wave strips (classic pages). `-band` paints a 400px strip behind
    the section content instead of covering the whole box. */
 @utility bg-art-wave {
-  background: url("/assets/wave.webp") center / contain no-repeat;
+  background: url("../assets/images/decor/wave.webp") center / contain no-repeat;
   animation: var(--animate-sway);
   @variant md {
     background-size: cover;
   }
 }
 @utility bg-art-wave-2 {
-  background: url("/assets/wave2.webp") center / contain no-repeat;
+  background: url("../assets/images/decor/wave2.webp") center / contain no-repeat;
   animation: var(--animate-sway);
   @variant md {
     background-size: cover;
@@ -38,13 +38,18 @@
     position: absolute;
     inset: 0 0 auto 0;
     height: 400px;
-    background: url("/assets/wave.webp") center / contain no-repeat;
+    background: url("../assets/images/decor/wave.webp") center / contain no-repeat;
     z-index: -1;
     animation: var(--animate-sway);
     @variant md {
       background-size: cover;
     }
   }
+}
+
+/* Star-shaped mask (StarBadge); color it with a background utility. */
+@utility mask-art-star {
+  mask: url("../assets/images/decor/magic-special-star.svg") center / contain no-repeat;
 }
 
 /* Magic visual language */
@@ -55,16 +60,16 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("/assets/magic-grid.webp") center / 40%;
+    background: url("../assets/images/decor/magic-grid.webp") center / 40%;
     z-index: -1;
     pointer-events: none;
   }
 }
 @utility bg-art-green {
-  background: url("/assets/green-bg.webp") center / cover;
+  background: url("../assets/images/decor/green-bg.webp") center / cover;
 }
 @utility bg-art-pink {
-  background: url("/assets/pink-bg.webp") center / 70%;
+  background: url("../assets/images/decor/pink-bg.webp") center / 70%;
 }
 /* Pink texture on the right half of a hero (desktop only). */
 @utility bg-art-pink-half {
@@ -74,7 +79,7 @@
     right: 0;
     width: 50vw;
     height: 860px;
-    background: url("/assets/pink-bg.webp") center right / 150%;
+    background: url("../assets/images/decor/pink-bg.webp") center right / 150%;
     z-index: 0;
   }
 }
@@ -82,21 +87,21 @@
 @utility bg-art-magic-photo {
   background:
     linear-gradient(to bottom, rgb(255 255 255 / 0.5), rgb(255 255 255 / 0)),
-    url("/assets/background-magic-mobile.webp") center / cover no-repeat;
+    url("../assets/images/decor/background-magic-mobile.webp") center / cover no-repeat;
   @variant md {
     background-image:
       linear-gradient(to bottom, rgb(255 255 255 / 0.5), rgb(255 255 255 / 0)),
-      url("/assets/background-magic.webp");
+      url("../assets/images/decor/background-magic.webp");
   }
 }
 @utility bg-art-notebook {
-  background: url("/assets/magic-banner2.webp") center / cover no-repeat;
+  background: url("../assets/images/decor/magic-banner2.webp") center / cover no-repeat;
 }
 /* Browser-window frame; portrait artwork on mobile, landscape from md. */
 @utility bg-art-window {
-  background: url("/assets/magic-banner-mobile.webp") center / contain no-repeat;
+  background: url("../assets/images/decor/magic-banner-mobile.webp") center / contain no-repeat;
   @variant md {
-    background-image: url("/assets/magic-banner.webp");
+    background-image: url("../assets/images/decor/magic-banner.webp");
   }
 }
 @utility bg-art-swirl {
@@ -107,7 +112,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("/assets/magic-banner2a.webp") center / cover no-repeat;
+    background: url("../assets/images/decor/magic-banner2a.webp") center / cover no-repeat;
     animation: var(--animate-sway);
     z-index: -1;
     pointer-events: none;
@@ -121,7 +126,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("/assets/magicwave.webp") center / cover no-repeat;
+    background: url("../assets/images/decor/magicwave.webp") center / cover no-repeat;
     animation: var(--animate-sway);
     z-index: -1;
     pointer-events: none;
