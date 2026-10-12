@@ -6,10 +6,10 @@ import { advantage } from "@/data/training/advantage"
 import formHtml from "@/forms/form-marketerki.html?raw"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
-const { seoTitle, ...landing } = advantage
+const { seoTitle, seoDescription, ...landing } = advantage
 ---
 
-<BaseLayout title={seoTitle}>
+<BaseLayout title={seoTitle} description={seoDescription}>
   <TrainingLanding {...landing} formHtml={formHtml}>
     <div slot="mockup" class="overflow-hidden">
       <Image

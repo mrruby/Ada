@@ -1,7 +1,9 @@
 import type { TrainingLandingData } from "./types"
 
 export const andromeda: TrainingLandingData = {
-  seoTitle: "Andromeda 2026 - Mini-kurs",
+  seoTitle: "Andromeda 2026: mini-kurs Meta Ads za 0 zł",
+  seoDescription:
+    "W 45 minut pokażę Ci, jak prowadzić kampanie Meta dla klientek w 2026 roku, bez przepalania budżetów i nerwowego testowania. Mini-kurs za 0 zł.",
   heroTone: "yellow",
   eyebrow: "Mini-kurs za 0zł:",
   headline:

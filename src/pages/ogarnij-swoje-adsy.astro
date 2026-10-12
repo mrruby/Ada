@@ -25,6 +25,7 @@ import {
   teamGuests,
 } from "@/data/mentoring"
 import interestForm from "@/forms/ogarnij-swoje-adsy-zainteresowani.html?raw"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
 const purpleHeading =
@@ -32,7 +33,7 @@ const purpleHeading =
 const fitList = "py-0 text-xs leading-normal font-normal md:text-lg"
 ---
 
-<BaseLayout title="Ogarnij swoje Adsy Mentoring">
+<BaseLayout {...pageSeo.ogarnijSwojeAdsy}>
   <main>
     <AdsyHero />
     <AdsyWhy />

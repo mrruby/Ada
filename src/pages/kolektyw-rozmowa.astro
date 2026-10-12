@@ -23,13 +23,14 @@ import {
   talkHero,
   team,
 } from "@/data/kolektyw"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
 /** Result bands alternate cream / mint / cream. */
 const resultBackgrounds = ["bg-cream", "bg-mint", "bg-cream"]
 ---
 
-<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+<BaseLayout {...pageSeo.kolektywRozmowa} image={OG_ADA_PURPLE}>
   <main>
     <TalkHero {...talkHero} />
 

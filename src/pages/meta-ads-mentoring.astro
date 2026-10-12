@@ -33,13 +33,14 @@ import {
   teamGuests,
 } from "@/data/mentoring"
 import interestForm from "@/forms/meta-ads-zainteresowani.html?raw"
+import { pageSeo } from "@/data/shared/seo"
 import SiteLayout from "@/layouts/SiteLayout.astro"
 
 const listHeading = "text-center text-lg uppercase lg:text-5xl"
 const footnote = "py-2 text-sm leading-tight font-medium lg:text-lg"
 ---
 
-<SiteLayout title="Meta Ads Masters Mentoring">
+<SiteLayout {...pageSeo.metaAdsMentoring}>
   <BackdropHero image={heroBg} innerClass="max-w-4xl items-start tracking-wider md:pb-14">
     <Decor art="flower-left-blue" class="top-75 left-0 hidden w-35 md:block" />
     <h1 class="max-w-4xl animate-settle pb-6 text-xl leading-tight font-bold lg:text-5xl">

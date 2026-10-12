@@ -2,9 +2,10 @@
 import { site } from "@/config/site"
 
 export interface SeoProps {
-  /** Page title; rendered as "<title> | <site name>". */
+  /** Page title; rendered as "<title> | <site name>". Unique per page. */
   title: string
-  description?: string
+  /** Meta description, unique per page (about 120–160 characters). */
+  description: string
   /** Absolute URL or a path under /public. */
   image?: string
   /** Canonical URL; defaults to the current page URL. */
@@ -15,7 +16,7 @@ export interface SeoProps {
 
 type Props = SeoProps
 
-const { title, description = site.description, image, canonical, noindex = false } = Astro.props
+const { title, description, image, canonical, noindex = false } = Astro.props
 
 const toAbsolute = (value: string) => new URL(value, site.url).toString()
 // Social platforms (Instagram in particular) reject image URLs with query strings.

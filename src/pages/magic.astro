@@ -15,10 +15,11 @@ import MagicUnique from "@/components/magic/MagicUnique.astro"
 import MagicVideo from "@/components/magic/MagicVideo.astro"
 import { OG_ADA_PURPLE } from "@/config/site"
 import { caseStudies, magicLinks } from "@/data/magic"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 ---
 
-<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+<BaseLayout {...pageSeo.magic} image={OG_ADA_PURPLE}>
   <main>
     <MagicHero />
     <MagicCaseStudies />

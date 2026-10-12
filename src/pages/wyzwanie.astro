@@ -21,6 +21,7 @@ import {
   offer,
   salesResults,
   testimonials,
+  WYZWANIE_PAGE_DESCRIPTION,
   WYZWANIE_PAGE_TITLE,
 } from "@/data/training/wyzwanie"
 import BaseLayout from "@/layouts/BaseLayout.astro"
@@ -30,7 +31,7 @@ const offerHref = `#${OFFER_SECTION_ID}`
 const whiteLabel = "bg-white px-4 py-2 text-lg leading-snug text-black lg:text-xl"
 ---
 
-<BaseLayout title={WYZWANIE_PAGE_TITLE}>
+<BaseLayout title={WYZWANIE_PAGE_TITLE} description={WYZWANIE_PAGE_DESCRIPTION}>
   <OtoScope campaign={OTO_CAMPAIGN_ID}>
     <OtoStickyBar href={offerHref} />
 

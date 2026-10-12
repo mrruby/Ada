@@ -4,9 +4,9 @@ import { andromeda } from "@/data/training/andromeda"
 import formHtml from "@/forms/form-marketerki.html?raw"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
-const { seoTitle, ...landing } = andromeda
+const { seoTitle, seoDescription, ...landing } = andromeda
 ---
 
-<BaseLayout title={seoTitle}>
+<BaseLayout title={seoTitle} description={seoDescription}>
   <TrainingLanding {...landing} formHtml={formHtml} />
 </BaseLayout>

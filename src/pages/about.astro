@@ -9,12 +9,13 @@ import { FlowerFeature } from "@/components/sections"
 import { Button, Decor, GhostHeading, MarkerHeading, Section } from "@/components/ui"
 import { social } from "@/config/site"
 import { aboutMe, features, personalFacts, resources, services } from "@/data/about"
+import { pageSeo } from "@/data/shared/seo"
 import SiteLayout from "@/layouts/SiteLayout.astro"
 
 const listItem = "py-0.5 text-sm lg:text-xl"
 ---
 
-<SiteLayout title="O mnie">
+<SiteLayout {...pageSeo.about}>
   <AboutHero />
   <AboutIntro />
 

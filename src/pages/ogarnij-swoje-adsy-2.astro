@@ -36,12 +36,13 @@ import {
   referenceSnippets,
 } from "@/data/mentoring"
 import signupForm from "@/forms/form-ogarnij-swoje-adsy.html?raw"
+import { pageSeo } from "@/data/shared/seo"
 import SiteLayout from "@/layouts/SiteLayout.astro"
 
 const joinButton = "border-b-4 border-rose font-bold md:text-2xl"
 ---
 
-<SiteLayout title="Ogarnij swoje Adsy Mentoring">
+<SiteLayout {...pageSeo.ogarnijSwojeAdsy2}>
   <BackdropHero image={heroBg} innerClass="max-w-5xl items-center text-center md:pt-40 md:pb-16">
     <h1 class="animate-settle pb-8 text-xl leading-tight font-bold lg:text-5xl">
       Chcesz, aby więcej osób kupowało Twoje produkty i korzystało z Twoich usług?

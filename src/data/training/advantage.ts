@@ -1,7 +1,9 @@
 import type { TrainingLandingData } from "./types"
 
 export const advantage: TrainingLandingData = {
-  seoTitle: "Advantage+ - Mini-kurs",
+  seoTitle: "Advantage+: ściąga PDF za 0 zł",
+  seoDescription:
+    "Pobierz ściągę PDF za 0 zł i sprawdź, kiedy kampanie Advantage+ w systemie Meta pomagają Twoim wynikom, a kiedy mogą im zaszkodzić.",
   heroTone: "yellow",
   eyebrow: "ODBIERZ ŚCIĄGĘ ZA 0ZŁ:",
   headline:
