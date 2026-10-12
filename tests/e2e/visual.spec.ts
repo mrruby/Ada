@@ -2,7 +2,7 @@
  * Full-page screenshots of every built route at 390 and 1440 px, compared
  * with baselines in baselines/visual/ (gitignored). Opt-in, not part of CI:
  *
- *   git switch master && yarn build && yarn test:visual --update-snapshots
+ *   git switch master && yarn build && yarn test:visual --update-snapshots=all
  *   git switch <branch> && yarn build && yarn test:visual
  *
  * The clock is paused, lazy images are loaded up front, remote media
