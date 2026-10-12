@@ -2,14 +2,15 @@
  * Shared Playwright fixtures for the e2e suite.
  *
  *  - `consent` (option): cookies set before every page loads. By default every
- *    consent cookie is "false", so the banner stays closed, PostHog runs
- *    cookieless and the Pixel stays off. `test.use({ consent: null })` starts without a decision (banner
+ *    consent cookie is "false", so the banner stays closed and neither PostHog
+ *    nor the Pixel loads. `test.use({ consent: null })` starts without a decision (banner
  *    shown); override single values with `{ ...CONSENT_DECLINED, key: "true" }`.
  *  - Every request to another origin is answered locally (see
  *    `fulfillThirdParty`) and recorded in `thirdParty`, so tests never reach
  *    MailerLite, Vimeo, YouTube, Google, Meta…
  *  - `/relay/*` (the PostHog proxy) is answered locally; captured events are
- *    decoded into `posthog`.
+ *    decoded into `posthog`. `posthogRequests` lists every request of the
+ *    page for the posthog-js chunk or the proxy.
  *  - `/api/*` (on-demand Netlify Functions, not part of dist/) is mocked:
  *    `/api/oto/*` answers an inactive OTO, anything else 204. Override it
  *    with `page.route` in a test (page routes win over context routes).
@@ -38,6 +39,19 @@ export const builtWithPostHog = () => {
       .some((file) => readFileSync(new URL(file, dir), "utf8").includes(POSTHOG_TEST_KEY))
   } catch {
     return false
+  }
+}
+
+/** Paths of the built chunks holding posthog-js ("/_astro/module.….js"). */
+export const posthogChunks = () => {
+  const dir = new URL("../../dist/_astro/", import.meta.url)
+  try {
+    return readdirSync(dir)
+      .filter((file) => file.endsWith(".js"))
+      .filter((file) => readFileSync(new URL(file, dir), "utf8").includes("[PostHog.js]"))
+      .map((file) => `/_astro/${file}`)
+  } catch {
+    return []
   }
 }
 
@@ -111,6 +125,7 @@ type Fixtures = {
   consent: ConsentCookies | null
   thirdParty: ThirdPartyRequest[]
   posthog: PostHogEvent[]
+  posthogRequests: string[]
   errors: string[]
 }
 
@@ -123,6 +138,16 @@ export const test = base.extend<Fixtures>({
 
   posthog: async ({}, use) => {
     await use([])
+  },
+
+  posthogRequests: async ({ page }, use) => {
+    const chunks = posthogChunks()
+    const paths: string[] = []
+    page.on("request", (request) => {
+      const { pathname } = new URL(request.url())
+      if (pathname.startsWith("/relay/") || chunks.includes(pathname)) paths.push(pathname)
+    })
+    await use(paths)
   },
 
   context: async ({ context, baseURL, consent, thirdParty, posthog }, use) => {

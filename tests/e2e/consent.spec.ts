@@ -1,16 +1,16 @@
 /**
  * Cookie consent + analytics (src/lib/consent.ts, src/lib/analytics.ts,
  * components/site/CookieConsent.astro): nothing loads before the visitor
- * answers, statistics consent switches PostHog between full and cookieless
- * tracking, the Meta Pixel needs marketing, withdrawal reloads, and media
- * embeds ask before loading the player.
+ * answers, posthog-js is fetched only after statistics consent, the Meta
+ * Pixel needs marketing, withdrawal reloads, and media embeds ask before
+ * loading the player.
  */
 import type { BrowserContext, Page } from "@playwright/test"
 import {
   builtWithPostHog,
   CONSENT_DECLINED,
   expect,
-  POSTHOG_TEST_KEY,
+  posthogChunks,
   type PostHogEvent,
   test,
   type ThirdPartyRequest,
@@ -33,7 +33,7 @@ const GRANTED = {
 const events = (posthog: PostHogEvent[], name: string) =>
   posthog.filter((event) => event.event === name)
 
-/** PostHog's cookies and storage keys (`__ph_opt_in_out_*` records the choice). */
+/** PostHog's cookies and storage keys. */
 const posthogStorage = async (page: Page, context: BrowserContext) => ({
   cookies: (await context.cookies()).filter((c) => c.name.includes("ph_")).map((c) => c.name),
   ...(await page.evaluate(() => ({
@@ -42,11 +42,7 @@ const posthogStorage = async (page: Page, context: BrowserContext) => ({
   }))),
 })
 
-const ONLY_THE_CHOICE = {
-  cookies: [],
-  localStorage: [`__ph_opt_in_out_${POSTHOG_TEST_KEY}`],
-  sessionStorage: [],
-}
+const NOTHING_STORED = { cookies: [], localStorage: [], sessionStorage: [] }
 
 const withdrawStatistics = async (page: Page) => {
   await page.locator("[data-consent-reopen]").click()
@@ -56,18 +52,8 @@ const withdrawStatistics = async (page: Page) => {
   await reloaded
 }
 
-const enableGlobalPrivacyControl = (page: Page) =>
-  page.addInitScript(() =>
-    Object.defineProperty(Navigator.prototype, "globalPrivacyControl", { get: () => true })
-  )
-
-const relayRequests = (page: Page) => {
-  const urls: string[] = []
-  page.on("request", (request) => {
-    if (new URL(request.url()).pathname.startsWith("/relay/")) urls.push(request.url())
-  })
-  return urls
-}
+const fetchedPostHogChunk = (requests: string[]) =>
+  requests.some((path) => path.startsWith("/_astro/"))
 
 test.describe("first visit", () => {
   test.use({ consent: null })
@@ -75,13 +61,13 @@ test.describe("first visit", () => {
   test("shows the banner and loads nothing: no trackers, no PostHog", async ({
     page,
     thirdParty,
+    posthogRequests,
   }) => {
-    const relay = relayRequests(page)
     await page.goto("/about/")
     await expect(page.locator("[data-consent-banner]")).toBeVisible()
     await page.waitForLoadState("networkidle")
     expect(thirdParty.filter((request) => TRACKERS.test(request.url))).toEqual([])
-    expect(relay).toEqual([])
+    expect(posthogRequests).toEqual([])
   })
 
   test("'Nie zezwalaj' stores three denials and keeps the Pixel off", async ({
@@ -117,16 +103,36 @@ test.describe("PostHog", () => {
     "build with PUBLIC_POSTHOG_KEY=phc_e2e (yarn test:e2e)"
   )
 
+  test("the build has a separate posthog-js chunk to watch for", () => {
+    expect(posthogChunks()).toHaveLength(1)
+  })
+
   test.describe("before a decision", () => {
     test.use({ consent: null })
 
-    test("accepting statistics sends one page view with cookies", async ({
+    test("no PostHog request before consent", async ({ page, context, posthogRequests }) => {
+      await page.goto("/about/")
+      await expect(page.locator("[data-consent-banner]")).toBeVisible()
+      await page.waitForLoadState("networkidle")
+      await page.mouse.wheel(0, 800)
+      await page.waitForTimeout(500)
+      expect(posthogRequests).toEqual([])
+      expect(await posthogStorage(page, context)).toEqual(NOTHING_STORED)
+      expect(await page.evaluate(() => "posthog" in window)).toBe(false)
+    })
+
+    test("accepting loads PostHog and sends one page view with cookies", async ({
       page,
       context,
       posthog,
+      posthogRequests,
     }) => {
       await page.goto("/about/")
+      await page.waitForLoadState("networkidle")
+      expect(posthogRequests).toEqual([])
+
       await page.locator('[data-consent-banner] [data-consent="all"]').click()
+      await expect.poll(() => fetchedPostHogChunk(posthogRequests)).toBe(true)
       await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
       expect(events(posthog, "$pageview")[0].properties.$pathname).toBe("/about/")
       await expect
@@ -134,64 +140,78 @@ test.describe("PostHog", () => {
         .toBeGreaterThan(0)
     })
 
-    test("rejecting sends one cookieless page view and stores nothing", async ({
+    test("rejecting loads nothing from PostHog and stores nothing", async ({
       page,
       context,
-      posthog,
+      posthogRequests,
     }) => {
       await page.goto("/about/")
       await page.locator('[data-consent-banner] [data-consent="none"]').click()
-      await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
-      expect(events(posthog, "$pageview")[0].properties.distinct_id).toBe("$posthog_cookieless")
-      expect(await posthogStorage(page, context)).toEqual(ONLY_THE_CHOICE)
+      await expect(page.locator("[data-consent-reopen]")).toBeVisible()
+      await page.waitForLoadState("networkidle")
+      await page.waitForTimeout(500)
+      expect(posthogRequests).toEqual([])
+      expect(await posthogStorage(page, context)).toEqual(NOTHING_STORED)
     })
   })
 
   test.describe("returning visitor who rejected", () => {
-    test("is counted cookieless, without click autocapture", async ({ page, context, posthog }) => {
-      await page.goto("/magic/")
-      await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
-      expect(events(posthog, "$pageview")[0].properties.distinct_id).toBe("$posthog_cookieless")
-      await page.locator("main button, main a[href^='#']").first().click()
-      await page.waitForTimeout(500)
-      expect(events(posthog, "$autocapture")).toEqual([])
-      expect(await posthogStorage(page, context)).toEqual(ONLY_THE_CHOICE)
-    })
-
-    test("with Global Privacy Control, PostHog doesn't start at all", async ({ page }) => {
-      await enableGlobalPrivacyControl(page)
-      const relay = relayRequests(page)
+    test("PostHog never loads; leftovers of an earlier consent are removed", async ({
+      page,
+      context,
+      baseURL,
+      posthogRequests,
+    }) => {
+      await context.addCookies([
+        { name: "ph_phc_e2e_posthog", value: "{}", url: new URL(baseURL!).origin },
+      ])
       await page.goto("/magic/")
       await page.waitForLoadState("networkidle")
-      expect(relay).toEqual([])
+      await page.locator("main button, main a[href^='#']").first().click()
+      await page.waitForTimeout(500)
+      expect(posthogRequests).toEqual([])
+      await expect.poll(() => posthogStorage(page, context)).toEqual(NOTHING_STORED)
     })
   })
 
   test.describe("returning visitor who rejected, then accepts statistics", () => {
-    test("switches the running page to full tracking", async ({ page, context, posthog }) => {
+    test("loads PostHog on the running page with full tracking", async ({
+      page,
+      context,
+      posthog,
+      posthogRequests,
+    }) => {
       await page.goto("/magic/")
-      await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
+      await page.waitForLoadState("networkidle")
+      expect(posthogRequests).toEqual([])
+
       await page.locator("[data-consent-reopen]").click()
       await page.locator('[data-consent-toggle][name="statistics"]').check({ force: true })
       await page.locator('[data-consent-dialog] button[value="selected"]').click()
+      await expect.poll(() => fetchedPostHogChunk(posthogRequests)).toBe(true)
+      await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
       await expect
         .poll(async () => (await posthogStorage(page, context)).cookies.length)
         .toBeGreaterThan(0)
 
       await page.locator("main button, main a[href^='#']").first().click()
-      await expect
-        .poll(
-          () =>
-            events(posthog, "$autocapture").filter(
-              (event) => event.properties.distinct_id !== "$posthog_cookieless"
-            ).length
-        )
-        .toBeGreaterThan(0)
+      await expect.poll(() => events(posthog, "$autocapture").length).toBeGreaterThan(0)
     })
   })
 
   test.describe("returning visitor who accepted", () => {
     test.use({ consent: GRANTED })
+
+    test("PostHog loads on arrival, without the banner", async ({
+      page,
+      posthog,
+      posthogRequests,
+    }) => {
+      await page.goto("/about/")
+      await expect(page.locator("[data-consent-banner]")).toBeHidden()
+      await expect.poll(() => fetchedPostHogChunk(posthogRequests)).toBe(true)
+      await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
+    })
 
     test("the OTO token leaves the URL before PostHog sees it", async ({ page, posthog }) => {
       const start = page.waitForRequest((request) => request.url().includes("/api/oto/start"))
@@ -202,10 +222,11 @@ test.describe("PostHog", () => {
       expect(JSON.stringify(events(posthog, "$pageview"))).not.toContain("secret-token")
     })
 
-    test("withdrawing statistics removes PostHog's cookies and storage", async ({
+    test("withdrawing statistics removes PostHog's cookies and storage, and stops loading it", async ({
       page,
       context,
       posthog,
+      posthogRequests,
     }) => {
       await page.goto("/about/")
       await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
@@ -213,21 +234,11 @@ test.describe("PostHog", () => {
         .poll(async () => (await posthogStorage(page, context)).cookies.length)
         .toBeGreaterThan(0)
       await withdrawStatistics(page)
-      await expect.poll(() => posthogStorage(page, context)).toEqual(ONLY_THE_CHOICE)
-    })
-
-    test("…also when the browser sends Global Privacy Control", async ({
-      page,
-      context,
-      posthog,
-    }) => {
-      await enableGlobalPrivacyControl(page)
-      await page.goto("/about/")
-      await expect.poll(() => events(posthog, "$pageview").length).toBe(1)
-      await withdrawStatistics(page)
-      await expect
-        .poll(() => posthogStorage(page, context))
-        .toEqual({ cookies: [], localStorage: [], sessionStorage: [] })
+      const beforeReload = posthogRequests.length
+      await expect.poll(() => posthogStorage(page, context)).toEqual(NOTHING_STORED)
+      await page.waitForLoadState("networkidle")
+      await page.reload({ waitUntil: "networkidle" })
+      expect(posthogRequests.slice(beforeReload)).toEqual([])
     })
 
     test("Easytools checkout links send checkout_started without a duplicate Meta event", async ({
@@ -349,6 +360,9 @@ test.describe("Gatsby-era visitor", () => {
 })
 
 test.describe("media embeds", () => {
+  // video_played needs PostHog, which needs statistics consent.
+  test.use({ consent: { ...CONSENT_DECLINED, "ada-consent-statistics": "true" } })
+
   test("ask before loading Vimeo; accepting stores consent and plays (dnt=1)", async ({
     page,
     context,

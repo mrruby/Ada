@@ -2,16 +2,14 @@
  * Analytics runtime (browser only): PostHog for product analytics, session
  * replay and heatmaps; Meta Pixel standard events mirrored for ad conversions.
  *
- * PostHog loads only after the visitor answers the cookie banner:
- *  - statistics granted → full tracking (cookies, replay, heatmaps);
- *  - statistics denied  → cookieless mode: anonymous page views and catalog
- *    events, nothing stored but PostHog's record of the choice — and nothing
- *    at all when the browser sends Global Privacy Control / Do Not Track.
- * Never call identify(): visitors stay anonymous.
+ * posthog-js is imported (a separate chunk) only once the visitor has granted
+ * `statistics`, now or on an earlier visit. Without that consent no PostHog
+ * code runs and nothing is sent; what an earlier consent left in cookies or
+ * storage is removed. Never call identify(): visitors stay anonymous.
  *
  * Events are typed in analytics-events.ts; call `track(event, properties)`.
- * Events tracked before PostHog is ready are queued; events of undecided
- * visitors are dropped with the page.
+ * Events tracked before PostHog is ready are queued; events of visitors
+ * without statistics consent are dropped with the page.
  */
 import type { PostHog } from "posthog-js"
 import { analytics as config } from "@/config/site"
@@ -19,7 +17,6 @@ import {
   type AnalyticsEvent,
   type AnalyticsEvents,
   classifyLink,
-  isCookielessEvent,
   metaEventFor,
 } from "./analytics-events"
 import { readConsentState } from "./consent-state"
@@ -27,7 +24,6 @@ import { readConsentState } from "./consent-state"
 const key: string | undefined = import.meta.env.PUBLIC_POSTHOG_KEY
 
 type MetaWindow = Window & { fbq?: (...args: unknown[]) => void }
-type PrivacyNavigator = Navigator & { globalPrivacyControl?: boolean }
 
 /** Queued events older than this are dropped instead of sent late. */
 const QUEUE_MAX_AGE_MS = 30_000
@@ -40,19 +36,15 @@ let queue: Array<{ at: number; send: (ph: PostHog) => void }> = []
 
 const hasStatisticsConsent = () => readConsentState(document.cookie).choices.statistics
 
-/** Global Privacy Control / Do Not Track: an objection to anonymous counting. */
-const objectsToCounting = () =>
-  (navigator as PrivacyNavigator).globalPrivacyControl === true || navigator.doNotTrack === "1"
-
 const isPostHogKey = (key: string) => key.startsWith("ph_") || key.startsWith("__ph_")
-const removeKeys = (storage: Storage, keep: (key: string) => boolean = () => false) =>
+const removeKeys = (storage: Storage) =>
   Object.keys(storage)
-    .filter((key) => isPostHogKey(key) && !keep(key))
+    .filter(isPostHogKey)
     .forEach((key) => storage.removeItem(key))
 
 /**
- * Remove what PostHog stored under an earlier consent, for visitors who now
- * object and for whom PostHog therefore never starts (and can't clean up).
+ * Remove what PostHog stored under an earlier consent: without statistics
+ * consent PostHog never starts, so it can't clean up after itself.
  */
 const clearPostHogStorage = () => {
   for (const part of document.cookie.split(";")) {
@@ -69,7 +61,6 @@ const load = () =>
       api_host: config.posthog.apiHost,
       ui_host: config.posthog.uiHost,
       defaults: "2026-08-30",
-      cookieless_mode: "on_reject",
       // Sent once by startAnalytics, after the consent sync (avoids doubles).
       capture_pageview: false,
       capture_pageleave: true,
@@ -91,30 +82,28 @@ const load = () =>
           name: request.name.replace(/([?&]oto=)[^&#]*/, "$1[masked]"),
         }),
       },
-      // Without statistics consent only page views and catalog events leave.
-      before_send: (event) =>
-        !event || hasStatisticsConsent() || isCookielessEvent(event.event) ? event : null,
+      // Withdrawing consent reloads the page; until then nothing more leaves.
+      before_send: (event) => (event && hasStatisticsConsent() ? event : null),
     })
     return ph
   }))
 
 /**
- * Start PostHog for a visitor who has decided, and keep its consent state in
- * line with the cookie banner (idempotent; call again after every change).
+ * Apply the visitor's statistics choice (idempotent; call again after every
+ * change): import and start PostHog once it is granted, otherwise make sure
+ * nothing of PostHog's is left on the device.
  */
 export const startAnalytics = async (statistics: boolean) => {
   if (!key) return
-  if (!statistics && !loading && objectsToCounting()) {
+  if (!statistics) {
+    if (loading) (await loading).opt_out_capturing()
     clearPostHogStorage()
     return
   }
   const ph = await load()
-  const status = ph.get_explicit_consent_status()
-  if (statistics && status !== "granted") ph.opt_in_capturing({ captureEventName: false })
-  if (!statistics && status !== "denied") ph.opt_out_capturing()
-  // Opting out keeps PostHog's tab-session ids; without consent only the
-  // record of the choice (localStorage `__ph_opt_in_out_*`) may stay.
-  if (!statistics) removeKeys(window.sessionStorage)
+  if (ph.get_explicit_consent_status() !== "granted") {
+    ph.opt_in_capturing({ captureEventName: false })
+  }
   if (!pageviewSent) {
     pageviewSent = true
     ph.capture("$pageview", { title: document.title })
