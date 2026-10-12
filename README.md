@@ -49,7 +49,7 @@ src/
   forms/                 MailerLite form exports (raw HTML, imported ?raw)
   lib/                   cn, consent, countdown, content types, oto/ (API)
   pages/                 routes; `pages/api/` = on-demand endpoints
-public/                  files served as-is (/assets artwork, /img OG images)
+public/                  served as-is: favicons, manifest, /img OG images (stable URLs)
 tests/                   unit/ (Vitest) and e2e/ (Playwright + axe)
 scripts/                 serve-dist.mjs — static server for e2e against dist/
 docs/                    ADRs and the Gatsby → Astro migration audits
@@ -173,7 +173,9 @@ copying it.
   section with props, or a distinct named component.
 - **Images:** import from `@/assets/images/...` and render with `<Image>` /
   `<Picture>` from `astro:assets`, with meaningful Polish `alt` (or `alt=""`
-  for decoration). Above-the-fold hero: `loading="eager"`.
+  for decoration). Above-the-fold hero: `loading="eager"`. Raster sources
+  are WebP (PNG only for favicons and manifest icons); SVG is for vectors —
+  if an exported SVG wraps a bitmap, embed it as WebP at the size it is drawn.
 - **Links:** plain `<a href>`; in-page jumps use `href="#id"` (smooth scroll
   is global). External links that should open a tab: `newTab`.
 - **Scripts:** one `<script>` per component, initializing every instance via
@@ -197,7 +199,16 @@ yarn test            # unit tests (Vitest, tests/unit: lib/, consent, OTO with m
 yarn test:e2e        # astro build + Playwright (tests/e2e) at 375 & 1440 px, incl. axe scan
 yarn test:e2e:dist   # Playwright against the existing dist/ (what CI runs after `yarn build`)
 yarn test:a11y       # build + axe only → test-results/a11y-report.json (fails on critical)
+yarn test:visual     # full-page screenshots of every route at 390 & 1440 px vs baselines/visual/
 yarn run check       # astro check
+```
+
+Visual baselines are local (gitignored, ~100 MB). Capture them from the
+branch you compare against, then diff your change:
+
+```bash
+git switch master && yarn build && yarn test:visual --update-snapshots=all
+git switch my-branch && yarn build && yarn test:visual   # diffs in test-results/
 ```
 
 E2E serves `dist/` with `scripts/serve-dist.mjs`. Every third-party request

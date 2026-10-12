@@ -13,7 +13,7 @@
  *  - "before-benefits": bands between the intro and the benefits
  *  - default:           bands at the end of the page
  */
-import { Image } from "astro:assets"
+import { getImage, Image } from "astro:assets"
 import adaShow from "@/assets/images/ada-show.webp"
 import springArrow from "@/assets/images/arrow-right-spirng.webp"
 import ads2026 from "@/assets/images/Reklamy w 2026.webp"
@@ -60,6 +60,10 @@ const {
 } = Astro.props
 
 const heroBg = { yellow: "bg-lemon", orange: "bg-marigold" }[heroTone]
+const heroImage = { src: adaShow, widths: [512, 1024], sizes: "512px" }
+// The figure is hidden below lg, so it stays lazy there and only lg+ preloads it.
+const heroPreload =
+  !figureOnMobile && !Astro.slots.has("figure") ? await getImage(heroImage) : undefined
 const hasForm = Boolean(formHtml)
 const anton = "font-anton font-normal uppercase leading-none text-black"
 ---
@@ -98,12 +102,20 @@ const anton = "font-anton font-normal uppercase leading-none text-black"
           <slot name="figure" />
         ) : (
           <div class="relative">
+            {heroPreload && (
+              <link
+                rel="preload"
+                as="image"
+                imagesrcset={heroPreload.srcSet.attribute}
+                imagesizes={heroImage.sizes}
+                media="(min-width: 1024px)"
+                fetchpriority="high"
+              />
+            )}
             <Image
-              src={adaShow}
+              {...heroImage}
               alt="Adrianna Promis-Urbas z telefonem w dłoni"
-              widths={[512, 1024]}
-              sizes="512px"
-              loading="eager"
+              loading={figureOnMobile ? "eager" : "lazy"}
               class="h-auto w-full"
             />
             <Image
