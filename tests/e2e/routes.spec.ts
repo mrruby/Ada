@@ -1,6 +1,8 @@
 /** Smoke test of every built page: status, landmarks, errors, layout width. */
+import { readdirSync, readFileSync } from "node:fs"
+import { join } from "node:path"
 import { expect, horizontalOverflow, overflowingElements, test } from "./fixtures"
-import { getSourceRoutes, routes } from "./routes"
+import { distDir, getSourceRoutes, routes } from "./routes"
 
 test("every page in src/pages is built", () => {
   expect(routes).toEqual(expect.arrayContaining(getSourceRoutes()))
@@ -30,6 +32,19 @@ for (const route of routes) {
     expect(errors, "console errors, page errors or failed requests").toEqual([])
   })
 }
+
+test("raster images ship as WebP (PNG only for favicons and manifest icons)", () => {
+  const icons = ["apple-touch-icon.png", "favicon-32.png", "icon-192.png", "icon-512.png"]
+  const files = readdirSync(distDir, { recursive: true, encoding: "utf8" })
+  const rasters = files.filter((file) => /\.(png|jpe?g|gif|avif|bmp|tiff?)$/i.test(file))
+  expect(rasters.filter((file) => !icons.includes(file))).toEqual([])
+  const svgsWithBitmaps = files.filter(
+    (file) =>
+      file.endsWith(".svg") &&
+      /data:image\/(png|jpe?g|gif)/.test(readFileSync(join(distDir, file), "utf8"))
+  )
+  expect(svgsWithBitmaps, "SVGs embedding non-WebP bitmaps").toEqual([])
+})
 
 test("unknown URLs get the 404 page with status 404", async ({ page }) => {
   const response = await page.goto("/to-nie-istnieje/")
