@@ -17,6 +17,7 @@
     "test:watch": "vitest",
     "test:e2e": "PUBLIC_POSTHOG_KEY=phc_e2e astro build && playwright test",
     "test:e2e:dist": "playwright test",
+    "test:visual": "VISUAL=1 playwright test",
     "test:a11y": "PUBLIC_POSTHOG_KEY=phc_e2e astro build && playwright test tests/e2e/a11y.spec.ts"
   },
   "dependencies": {

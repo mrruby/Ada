@@ -8,10 +8,17 @@ import { defineConfig, devices } from "@playwright/test"
 const PORT = Number(process.env.E2E_PORT ?? 4322)
 const baseURL = `http://127.0.0.1:${PORT}`
 const CI = Boolean(process.env.CI)
+const VISUAL = Boolean(process.env.VISUAL)
+
+const viewport = (width: number, height: number) => ({
+  ...devices["Desktop Chrome"],
+  viewport: { width, height },
+})
 
 export default defineConfig({
   testDir: "tests/e2e",
   outputDir: "test-results/playwright",
+  snapshotPathTemplate: "baselines/visual/{arg}{ext}",
   globalSetup: "./tests/e2e/a11y-report.ts",
   fullyParallel: true,
   forbidOnly: CI,
@@ -27,16 +34,15 @@ export default defineConfig({
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
   },
-  projects: [
-    {
-      name: "mobile",
-      use: { ...devices["Desktop Chrome"], viewport: { width: 375, height: 812 } },
-    },
-    {
-      name: "desktop",
-      use: { ...devices["Desktop Chrome"], viewport: { width: 1440, height: 900 } },
-    },
-  ],
+  projects: VISUAL
+    ? [
+        { name: "visual-390", testMatch: "visual.spec.ts", use: viewport(390, 844) },
+        { name: "visual-1440", testMatch: "visual.spec.ts", use: viewport(1440, 900) },
+      ]
+    : [
+        { name: "mobile", testIgnore: "visual.spec.ts", use: viewport(375, 812) },
+        { name: "desktop", testIgnore: "visual.spec.ts", use: viewport(1440, 900) },
+      ],
   webServer: {
     command: "node scripts/serve-dist.mjs",
     url: `${baseURL}/`,
