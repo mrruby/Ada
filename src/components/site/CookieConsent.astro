@@ -133,7 +133,7 @@ const outline =
 </button>
 
 <script>
-  import { trackConversionLinks } from "@/lib/analytics"
+  import { clearPostHogStorage, trackConversionLinks } from "@/lib/analytics"
   import {
     acceptAll,
     applyConsent,
@@ -154,12 +154,16 @@ const outline =
     if (reopen) reopen.hidden = false
   }
 
-  // Tracking starts only once the visitor has answered the banner.
+  // Tracking starts only once the visitor has answered the banner. Until then
+  // nothing PostHog stored under a lapsed or outdated decision may stay.
   const state = getConsent()
   if (state.decided) {
     applyConsent(state.choices)
     showDecided()
-  } else if (banner) banner.hidden = false
+  } else {
+    clearPostHogStorage()
+    if (banner) banner.hidden = false
+  }
   trackConversionLinks()
 
   // Any [data-consent-open] (banner button, floating button, footer links).

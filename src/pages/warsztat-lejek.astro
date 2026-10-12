@@ -28,6 +28,7 @@ import {
   workshopFaq,
   workshopOutcomes,
 } from "@/data/masterclass"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
 const countdownTitle = "Na dołączenie do warsztatów zostało: "
@@ -35,7 +36,7 @@ const flower = "z-20 hidden md:block"
 const pitchButton = "tracking-widest md:w-4xl md:text-2xl"
 ---
 
-<BaseLayout title="Masterclass - Kevin sam w menedżerze reklam">
+<BaseLayout {...pageSeo.warsztatLejek}>
   <main>
     <CountdownBand
       layout="bar"

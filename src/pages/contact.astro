@@ -5,6 +5,7 @@ import instagramIcon from "@/assets/images/instagram.svg"
 import ContactForm from "@/components/contact/ContactForm.astro"
 import { Card, Section } from "@/components/ui"
 import { social } from "@/config/site"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
 const socialLinks = [
@@ -13,7 +14,7 @@ const socialLinks = [
 ]
 ---
 
-<BaseLayout title="Kontakt">
+<BaseLayout {...pageSeo.contact}>
   <main>
     <Section bg="bg-art-grid">
       <div class="relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center text-black md:py-28">

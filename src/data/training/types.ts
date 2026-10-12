@@ -13,6 +13,8 @@ export type TrainingBenefit = {
 export type TrainingLandingData = {
   /** Page title passed to the layout's SEO. */
   seoTitle: string
+  /** Meta description passed to the layout's SEO. */
+  seoDescription: string
   heroTone: "yellow" | "orange"
   /** Small bold line above the headline. */
   eyebrow: string

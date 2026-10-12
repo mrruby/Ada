@@ -7,8 +7,7 @@ import photoNicola from "@/assets/images/m4.webp"
 import type { RichText, TeamMember } from "@/lib/content"
 import type { EmojiItem } from "./landing"
 
-export const JESIEN_MASTERCLASS_TITLE =
-  "Mały budżet, wysoki sezon - masterclass o reklamach na jesień i zimę 2026"
+export const JESIEN_MASTERCLASS_TITLE = "Mały budżet, wysoki sezon: masterclass reklam na jesień"
 
 export const JESIEN_MASTERCLASS_DESCRIPTION =
   "17 września, 18:00, na żywo. Reklamy od 30 zł dziennie, które dowiozą sprzedaż jesienią i zimą. Zapisz się za 0 zł."

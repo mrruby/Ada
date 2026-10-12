@@ -1,7 +1,9 @@
 import type { TrainingLandingData } from "./types"
 
 export const meta2026: TrainingLandingData = {
-  seoTitle: "Meta 2026 - Mini-kurs",
+  seoTitle: "Meta 2026: mini-kurs o reklamach za 0 zł",
+  seoDescription:
+    "W 45 minut pokażę Ci, jak zrozumieć reklamy Meta w 2026 roku bez przepalania budżetu i nerwowego testowania. Zapisz się na mini-kurs za 0 zł.",
   heroTone: "orange",
   eyebrow: "Mini-kurs za 0zł:",
   headline:

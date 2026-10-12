@@ -11,7 +11,7 @@ if (!doc) throw new Error(`Missing legal document: ${Astro.props.entry}`)
 const { Content } = await render(doc)
 ---
 
-<SiteLayout title={doc.data.seoTitle ?? doc.data.title}>
+<SiteLayout title={doc.data.seoTitle ?? doc.data.title} description={doc.data.description}>
   <article class="mx-auto max-w-4xl px-3 pt-16 pb-10 lg:px-5">
     <h1 class="pb-4 font-bold">{doc.data.title}</h1>
     <Prose>

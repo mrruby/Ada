@@ -16,7 +16,9 @@ import salesResult3 from "@/assets/images/wyzwanie-sales-result-3.webp"
 import type { FaqItem, ImageItem, RichText } from "@/lib/content"
 import type { TrainingBenefit } from "./types"
 
-export const WYZWANIE_PAGE_TITLE = "Kampania sprzedażowa w pigułce - Wyzwanie"
+export const WYZWANIE_PAGE_TITLE = "Wyzwanie: kampania sprzedażowa w pigułce"
+export const WYZWANIE_PAGE_DESCRIPTION =
+  "14 dni krok po kroku: tekst i grafika, piksel i zdarzenia, a na koniec kampania sprzedażowa w Menedżerze Reklam. Z nagraniami, wytycznymi i asystentką AI."
 
 /** Id of the offer card every "Sprawdzam / Dołącz" button jumps to. */
 export const OFFER_SECTION_ID = "oferta"

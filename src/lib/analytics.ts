@@ -51,10 +51,11 @@ const removeKeys = (storage: Storage, keep: (key: string) => boolean = () => fal
     .forEach((key) => storage.removeItem(key))
 
 /**
- * Remove what PostHog stored under an earlier consent, for visitors who now
- * object and for whom PostHog therefore never starts (and can't clean up).
+ * Remove what PostHog stored under an earlier consent, for visitors for whom
+ * PostHog doesn't start (and so can't clean up): those who object to
+ * counting, and those whose decision lapsed or predates the current banner.
  */
-const clearPostHogStorage = () => {
+export const clearPostHogStorage = () => {
   for (const part of document.cookie.split(";")) {
     const name = part.split("=")[0].trim()
     if (name.startsWith("ph_")) document.cookie = `${name}=; Path=/; Max-Age=0`
@@ -103,11 +104,11 @@ const load = () =>
  * line with the cookie banner (idempotent; call again after every change).
  */
 export const startAnalytics = async (statistics: boolean) => {
-  if (!key) return
   if (!statistics && !loading && objectsToCounting()) {
     clearPostHogStorage()
     return
   }
+  if (!key) return
   const ph = await load()
   const status = ph.get_explicit_consent_status()
   if (statistics && status !== "granted") ph.opt_in_capturing({ captureEventName: false })

@@ -37,18 +37,27 @@ import "./magic-jesien.css"
 
 type Props = {
   canonical: string
+  /** SEO title and description; default to the /magic-jesien ones. */
+  title?: string
+  description?: string
   noindex?: boolean
   /** Promotion strip above the logo. */
   topBar?: boolean
 }
 
-const { canonical, noindex = false, topBar = false } = Astro.props
+const {
+  canonical,
+  title = MAGIC_JESIEN_TITLE,
+  description = MAGIC_JESIEN_DESCRIPTION,
+  noindex = false,
+  topBar = false,
+} = Astro.props
 const promotionEnded = MAGIC_JESIEN_PROMOTION_END.getTime() <= Date.now()
 ---
 
 <BaseLayout
-  title={MAGIC_JESIEN_TITLE}
-  description={MAGIC_JESIEN_DESCRIPTION}
+  title={title}
+  description={description}
   image={OG_ADA_PURPLE}
   canonical={canonical}
   noindex={noindex}

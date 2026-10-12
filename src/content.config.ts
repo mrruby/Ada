@@ -10,6 +10,8 @@ const legal = defineCollection({
     title: z.string(),
     /** <title> when it differs from the heading. */
     seoTitle: z.string().optional(),
+    /** Meta description. */
+    description: z.string(),
   }),
 })
 

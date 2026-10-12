@@ -37,6 +37,7 @@ import {
   TypingText,
   VideoEmbed,
 } from "@/components/ui"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
 const swatches = [
@@ -90,7 +91,7 @@ const opinions = [op1, op2, op3, op4].map((src, index) => ({
 const sectionTitle = "mb-4 border-b border-black/10 pb-2 font-anton text-3xl uppercase"
 ---
 
-<BaseLayout title="Styleguide" noindex bodyClass="bg-white text-black">
+<BaseLayout {...pageSeo.styleguide} noindex bodyClass="bg-white text-black">
   <main>
     <Container width="page" class="py-12">
       <Heading as="h1" variant="anton" size="xl">

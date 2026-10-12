@@ -4,6 +4,7 @@ import heroImage from "@/assets/images/magic_adsy.webp"
 import goodbyeImage from "@/assets/images/magic_adsy2.webp"
 import ThankStep from "@/components/thank/ThankStep.astro"
 import { Section } from "@/components/ui"
+import { pageSeo } from "@/data/shared/seo"
 import SiteLayout from "@/layouts/SiteLayout.astro"
 
 const mailboxes = [
@@ -23,7 +24,7 @@ const sender = "adrianna@getbold.agency"
 const headline = "font-anton text-2xl leading-none tracking-wider text-tangerine md:text-7xl"
 ---
 
-<SiteLayout title="Thank you page" noindex>
+<SiteLayout {...pageSeo.thank} noindex>
   <Section bg="bg-cream">
     <div class="mx-auto mt-20 flex max-w-7xl justify-between gap-8 px-2 md:pt-10 xl:px-6">
       <div class="mb-3 flex max-w-xl flex-col justify-center gap-4 md:mt-8 xl:-mt-60">

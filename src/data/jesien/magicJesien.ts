@@ -33,6 +33,10 @@ export const MAGIC_JESIEN_TITLE = "MAGIC. Subskrypcja dla przedsiębiorczyń"
 export const MAGIC_JESIEN_DESCRIPTION =
   "Skaluj swój biznes dzięki reklamom, AI i automatyzacjom. Dołącz do MAGIC: konsultuj reklamy, teksty i grafiki z całym zespołem. Wybierz 1, 3 lub 6 miesięcy."
 
+export const MAGIC_JESIEN_NAGRANIE2_TITLE = "Nagranie szkolenia MAGIC i zaproszenie do subskrypcji"
+export const MAGIC_JESIEN_NAGRANIE2_DESCRIPTION =
+  "Obejrzyj nagranie masterclassu i sprawdź, jak w MAGIC skalować biznes dzięki reklamom, AI i automatyzacjom, z konsultacjami całego zespołu."
+
 export const MAGIC_JESIEN_INVITATION_VIDEO_ID = "1117395484"
 /** Nagranie masterclassu na /jesien-nagranie2 (YouTube). */
 export const MAGIC_JESIEN_NAGRANIE2_VIDEO_ID = "zD1wvQRif-Q"

@@ -6,6 +6,7 @@ import { CircleArrow, Section } from "@/components/ui"
 import { CheckeredPanel, CollectiveForm, CollectiveLogo, StepBlock } from "@/components/kolektyw"
 import { OG_ADA_PURPLE, social } from "@/config/site"
 import { firstStep, secondStep, SURVEY_URL, videoPlaceholder } from "@/data/kolektyw"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 import { newTabProps } from "@/lib/links"
 
@@ -22,7 +23,7 @@ const arrow = {
 } as const
 ---
 
-<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+<BaseLayout {...pageSeo.magicZaproszenie} image={OG_ADA_PURPLE}>
   <main>
     <Section bg="bg-cream" innerClass="flex justify-center">
       <CollectiveLogo eager heading class="w-80 py-4" />

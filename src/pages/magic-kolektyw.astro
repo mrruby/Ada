@@ -39,10 +39,11 @@ import {
   testimonialsTitle,
   whyMagic,
 } from "@/data/kolektyw"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 ---
 
-<BaseLayout title="Magic: Marketing Ads Girls Inside Collective" image={OG_ADA_PURPLE}>
+<BaseLayout {...pageSeo.magicKolektyw} image={OG_ADA_PURPLE}>
   <main>
     <CollectiveHero {...hero} />
     <NotebookPitch {...pitch} />

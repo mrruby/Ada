@@ -1,9 +1,8 @@
 /** Site-wide settings shared by layouts, SEO and navigation. */
 export const site = {
   url: "https://adrianna.com.pl",
-  name: "Adrianna Promis Urbas - zbuduj ze mną dochodowe kampanie reklamowe",
-  description:
-    "Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny: praktykuję slow marketing, przemyślany, wartościowy, zbudowany na relacjach",
+  /** Appended to every <title> ("<page> | <name>"), so keep it short. */
+  name: "Adrianna Promis-Urbas",
   author: "Adrianna Promis",
   locale: "pl-PL",
   themeColor: "#EEDCF6",

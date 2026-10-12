@@ -24,12 +24,13 @@ import {
   masterclassCases,
   painPoints,
 } from "@/data/masterclass"
+import { pageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 
 const caseBackgrounds = ["bg-mint", "bg-cream", "bg-mint"]
 ---
 
-<BaseLayout title="Adsy&chill 2025">
+<BaseLayout {...pageSeo.adsyChill}>
   <main>
     <AdsyHero />
     <PainPoints points={painPoints} />

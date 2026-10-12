@@ -2,8 +2,15 @@
 // Strona dostępna tylko z linku — nie indeksujemy.
 import MagicJesienPage from "@/components/jesien/magic/MagicJesienPage.astro"
 import RecordingHero from "@/components/jesien/magic/RecordingHero.astro"
+import { MAGIC_JESIEN_NAGRANIE2_DESCRIPTION, MAGIC_JESIEN_NAGRANIE2_TITLE } from "@/data/jesien"
 ---
 
-<MagicJesienPage canonical="https://adrianna.com.pl/jesien-nagranie2/" noindex topBar>
+<MagicJesienPage
+  canonical="https://adrianna.com.pl/jesien-nagranie2/"
+  title={MAGIC_JESIEN_NAGRANIE2_TITLE}
+  description={MAGIC_JESIEN_NAGRANIE2_DESCRIPTION}
+  noindex
+  topBar
+>
   <RecordingHero slot="hero" />
 </MagicJesienPage>

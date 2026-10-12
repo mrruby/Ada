@@ -1,6 +1,6 @@
 ---
 title: "Polityka prywatności i plików cookies"
-seoTitle: "Polityka prywatności & plików cookies"
+description: "Kto administruje Twoimi danymi na adrianna.com.pl, w jakich celach je przetwarzamy, jakich plików cookies i narzędzi używamy oraz jakie masz prawa."
 ---
 
 **Data ostatniej aktualizacji: 06.10.2026**

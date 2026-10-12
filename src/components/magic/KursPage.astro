@@ -1,6 +1,7 @@
 ---
 /**
- * Evergreen course landing (/kurs-*): every visitor gets 24 h of access to
+ * Evergreen course landing (/kurs-*, link-only: noindex, not in the
+ * sitemap): every visitor gets 24 h of access to
  * the training video, counted from their first visit (stored in
  * localStorage under `storageKey`). Afterwards the page switches to the
  * "access expired" variant: a notice and the waiting-list form at the top.
@@ -12,6 +13,7 @@
  */
 import { Countdown, Heading, Section, VideoEmbed } from "@/components/ui"
 import { MAGIC_PACKAGE_ID } from "@/data/magic"
+import type { PageSeo } from "@/data/shared/seo"
 import BaseLayout from "@/layouts/BaseLayout.astro"
 import MagicAudience from "./MagicAudience.astro"
 import MagicFinalCta from "./MagicFinalCta.astro"
@@ -24,18 +26,20 @@ import MagicTeam from "./MagicTeam.astro"
 import MagicTeamBenefits from "./MagicTeamBenefits.astro"
 
 type Props = {
+  /** Course name, the page's (visually hidden) heading. */
   title: string
+  seo: PageSeo
   /** localStorage key holding this visitor's access deadline. */
   storageKey: string
   /** Vimeo id of the training; a placeholder is shown when missing. */
   videoId?: string
 }
 
-const { title, storageKey, videoId } = Astro.props
+const { title, seo, storageKey, videoId } = Astro.props
 const ACCESS_MS = 24 * 60 * 60 * 1000
 ---
 
-<BaseLayout title={title}>
+<BaseLayout {...seo} noindex>
   <main>
     <h1 class="sr-only">{title}</h1>
     <div class="group/kurs flex flex-col" data-countdown-scope data-gate>

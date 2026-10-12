@@ -1,5 +1,6 @@
 ---
 title: "Regulamin sprzedaży internetowej"
+description: "Regulamin sklepu Slow Marketing Adrianna Promis-Urbas: zamówienia, płatności, dostarczanie treści cyfrowych, odstąpienie od umowy i reklamacje."
 ---
 
 **Data ostatniej aktualizacji: 25.09.2025**

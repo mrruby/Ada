@@ -24,7 +24,7 @@ export type EmojiItem = { emoji: string; html: RichText }
 export const JESIEN_PAGE_TITLE = "Przygotuj swoje reklamy na jesień – szkolenie za 0 zł"
 
 export const JESIEN_PAGE_DESCRIPTION =
-  "Nagranie szkolenia, w którym zdradzam, co ustawić w reklamach już teraz, żeby wrzesień, Black Friday i święta pracowały na Twoją sprzedaż. Dostępne za 0 zł do 31 sierpnia."
+  "Nagranie szkolenia, w którym zdradzam, co ustawić w reklamach już teraz, żeby wrzesień, Black Friday i święta pracowały na Twoją sprzedaż."
 
 // Koniec dostępu za 0 zł: 31.08.2026, 23:59:59 czasu polskiego (CEST, UTC+2).
 // Przy zmianie terminu zaktualizuj też poniższe frazy używane w copy strony.
@@ -103,7 +103,7 @@ export const jesienReviewColumns: ImageItem[][] = [
 export const JESIEN_NAGRANIE_TITLE = "Twoje szkolenie: Przygotuj swój lejek na jesień 🎬"
 
 export const JESIEN_NAGRANIE_DESCRIPTION =
-  "Nagranie szkolenia dostępne za 0 zł do 31 sierpnia. Potem trafia do płatnej sprzedaży."
+  "Twoje nagranie szkolenia „Przygotuj swój lejek na jesień”: najważniejsze kroki, żeby jesienne kampanie, Black Friday i święta pracowały na sprzedaż."
 
 // Nagranie szkolenia (YouTube niepubliczny) — id z linku od Ady.
 export const JESIEN_NAGRANIE_VIDEO_ID = "rL5folXvisQ"
