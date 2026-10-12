@@ -3,8 +3,6 @@ export const site = {
   url: "https://adrianna.com.pl",
   /** Appended to every <title> ("<page> | <name>"), so keep it short. */
   name: "Adrianna Promis-Urbas",
-  description:
-    "Pracuję z biznesami, które dbają o dobrostan psychiczny i fizyczny: praktykuję slow marketing, przemyślany, wartościowy, zbudowany na relacjach",
   author: "Adrianna Promis",
   locale: "pl-PL",
   themeColor: "#EEDCF6",

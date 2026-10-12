@@ -11,6 +11,16 @@ import { distDir, routes } from "./routes"
 
 const SITE = "https://adrianna.com.pl"
 const SUFFIX = " | Adrianna Promis-Urbas"
+/** Thank-you and link-only pages: noindex and not in the sitemap. */
+const LINK_ONLY = [
+  "/thank/",
+  "/styleguide/",
+  "/jesien-nagranie/",
+  "/jesien-nagranie2/",
+  "/kurs-meta-2026/",
+  "/kurs-andromeda-2026/",
+  "/kolektyw-na-start/",
+]
 
 const decode = (text: string) =>
   text
@@ -64,7 +74,7 @@ test.describe("titles and descriptions", () => {
       expect(name.length, `"${name}" is too short to describe the page`).toBeGreaterThanOrEqual(15)
       expect(name, "generic English title").not.toMatch(/\b(home|thank you|page|untitled)\b/i)
       expect(page.description.length, `description: "${page.description}"`).toBeGreaterThanOrEqual(80)
-      expect(page.description.length, `description: "${page.description}"`).toBeLessThanOrEqual(180)
+      expect(page.description.length, `description: "${page.description}"`).toBeLessThanOrEqual(160)
     })
   }
 
@@ -75,6 +85,19 @@ test.describe("titles and descriptions", () => {
     expect(home.title).toMatch(/Meta Ads/)
     expect(thank.title).toMatch(/^Dziękuję za zapis/)
     expect(thank.noindex).toBe(true)
+  })
+
+  test("link-only pages and the 404 page are noindex", () => {
+    for (const route of [...LINK_ONLY, "/404"]) {
+      expect(pages.find((page) => page.route === route)?.noindex, route).toBe(true)
+    }
+    expect(pages.find((page) => page.route === "/magic-zaproszenie/")?.noindex).toBe(false)
+  })
+
+  test("descriptions carry no dated 'free until' claims", () => {
+    for (const page of pages) {
+      expect(page.description, page.route).not.toMatch(/\bdo \d{1,2} (sierpnia|września)\b/)
+    }
   })
 
   test("no two pages share a title or a description (aliases excluded)", () => {
@@ -128,9 +151,7 @@ test.describe("robots.txt and sitemap", () => {
     request,
   }) => {
     const paths = (await sitemapUrls(request)).map((url) => new URL(url).pathname)
-    for (const route of ["/thank/", "/styleguide/", "/jesien-nagranie/", "/jesien-nagranie2/"]) {
-      expect(paths).not.toContain(route)
-    }
+    for (const route of LINK_ONLY) expect(paths).not.toContain(route)
     expect(paths).not.toContain("/jesien-masterclass/")
     expect(paths.filter((path) => path.startsWith("/404"))).toEqual([])
     for (const page of pages.filter((page) => page.noindex || isAlias(page))) {

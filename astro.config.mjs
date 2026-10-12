@@ -14,6 +14,9 @@ const notInSitemap = new Set([
   "/styleguide/",
   "/jesien-nagranie/",
   "/jesien-nagranie2/",
+  "/kurs-meta-2026/",
+  "/kurs-andromeda-2026/",
+  "/kolektyw-na-start/",
   "/jesien-masterclass/",
 ])
 

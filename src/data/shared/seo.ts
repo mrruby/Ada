@@ -2,7 +2,7 @@
  * <title> and meta description of pages whose family has no SEO copy of its
  * own (jesień, training and legal pages keep theirs next to their content).
  * Seo.astro appends " | <site name>" to every title, so keep titles short;
- * descriptions aim at 120–160 characters. Every route needs its own pair
+ * descriptions 80–160 characters (120–160 ideally). Every route needs its own pair
  * (enforced by tests/e2e/seo.spec.ts).
  */
 export type PageSeo = { title: string; description: string }
@@ -41,7 +41,7 @@ export const pageSeo = {
   metaAdsMentoring: {
     title: "Meta Ads Masters Mentoring dla specjalistek",
     description:
-      "Mentoring dla specjalistek i freelancerek marketingu: naucz się samodzielnie prowadzić skuteczne kampanie Meta Ads dla klientek i zarabiaj więcej, pracując mądrzej.",
+      "Mentoring dla specjalistek i freelancerek: naucz się samodzielnie prowadzić skuteczne kampanie Meta Ads dla klientek i zarabiaj więcej, pracując mądrzej.",
   },
   ogarnijSwojeAdsy: {
     title: "Ogarnij swoje adsy: mentoring Meta Ads dla biznesu",
@@ -76,12 +76,12 @@ export const pageSeo = {
   magicKolektyw: {
     title: "Kolektyw MAGIC: zespół od reklam Meta Ads",
     description:
-      "Zyskaj stały przypływ klientów bez zatrudniania zespołu in-house. Kolektyw MAGIC prowadzi kampanie Meta Ads dla twórczyń kursów online, mentoringów i usług cyfrowych.",
+      "Stały przypływ klientów bez zespołu in-house: kolektyw MAGIC prowadzi kampanie Meta Ads dla twórczyń kursów online, mentoringów i usług cyfrowych.",
   },
   magicZaproszenie: {
     title: "Zaproszenie do współpracy z kolektywem MAGIC",
     description:
-      "Dwa kroki do współpracy z kolektywem MAGIC: sprawdź, jak mądrze inwestować w marketing do 5 tys. zł miesięcznie, i zostaw dane, a umówimy niezobowiązującą rozmowę.",
+      "Dwa kroki do współpracy z kolektywem MAGIC: sprawdź, jak mądrze inwestować w marketing do 5 tys. zł miesięcznie, i umów niezobowiązującą rozmowę.",
   },
   kolektywRozmowa: {
     title: "Bezpłatna konsultacja z kolektywem MAGIC",

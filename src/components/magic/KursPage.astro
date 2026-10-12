@@ -1,6 +1,7 @@
 ---
 /**
- * Evergreen course landing (/kurs-*): every visitor gets 24 h of access to
+ * Evergreen course landing (/kurs-*, link-only: noindex, not in the
+ * sitemap): every visitor gets 24 h of access to
  * the training video, counted from their first visit (stored in
  * localStorage under `storageKey`). Afterwards the page switches to the
  * "access expired" variant: a notice and the waiting-list form at the top.
@@ -38,7 +39,7 @@ const { title, seo, storageKey, videoId } = Astro.props
 const ACCESS_MS = 24 * 60 * 60 * 1000
 ---
 
-<BaseLayout {...seo}>
+<BaseLayout {...seo} noindex>
   <main>
     <h1 class="sr-only">{title}</h1>
     <div class="group/kurs flex flex-col" data-countdown-scope data-gate>
