@@ -1,9 +1,21 @@
 // @ts-check
 import netlify from "@astrojs/netlify"
+import sitemap from "@astrojs/sitemap"
 import tailwindcss from "@tailwindcss/vite"
 import { defineConfig, fontProviders } from "astro/config"
 
 const google = fontProviders.google()
+
+// Kept out of sitemap-index.xml: thank-you and link-only (noindex) pages, and
+// aliases whose canonical URL is another page. tests/e2e/seo.spec.ts checks
+// this list against the built pages.
+const notInSitemap = new Set([
+  "/thank/",
+  "/styleguide/",
+  "/jesien-nagranie/",
+  "/jesien-nagranie2/",
+  "/jesien-masterclass/",
+])
 
 export default defineConfig({
   site: "https://adrianna.com.pl",
@@ -15,6 +27,7 @@ export default defineConfig({
   adapter: netlify({ imageCDN: false }),
   trailingSlash: "ignore",
   devToolbar: { enabled: false },
+  integrations: [sitemap({ filter: (page) => !notInSitemap.has(new URL(page).pathname) })],
   // Keep classic HTML whitespace rules: lots of copy relies on spaces
   // between inline elements (<strong>…</strong> text).
   compressHTML: true,
