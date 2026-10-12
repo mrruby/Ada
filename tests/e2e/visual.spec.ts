@@ -5,10 +5,11 @@
  *   git switch master && yarn build && yarn test:visual --update-snapshots
  *   git switch <branch> && yarn build && yarn test:visual
  *
- * The clock is frozen, lazy images are loaded up front, remote media
+ * The clock is paused, lazy images are loaded up front, remote media
  * (stubbed third-party images, iframes) and countdowns are masked, and the
  * cookie button is hidden, so only real rendering changes show up.
  */
+import { fileURLToPath } from "node:url"
 import { expect, test } from "./fixtures"
 import { routes } from "./routes"
 
@@ -19,7 +20,9 @@ test.describe.configure({ timeout: 120_000 })
 
 for (const route of routes) {
   test(`visual ${route}`, async ({ page }) => {
-    await page.clock.setFixedTime(FROZEN_NOW)
+    // Paused, not just fixed: rotating words, carousels and countdowns run on timers.
+    await page.clock.install({ time: FROZEN_NOW })
+    await page.clock.pauseAt(FROZEN_NOW)
     await page.goto(route, { waitUntil: "load" })
     await page.evaluate(async () => {
       for (const img of document.images) img.loading = "eager"
@@ -36,7 +39,7 @@ for (const route of routes) {
       caret: "hide",
       maxDiffPixelRatio: 0.001,
       timeout: 30_000,
-      style: "[data-consent-reopen], :popover-open { display: none !important; }",
+      stylePath: fileURLToPath(new URL("visual.css", import.meta.url)),
       mask: [
         page.locator("[data-countdown]"),
         page.locator("iframe"),

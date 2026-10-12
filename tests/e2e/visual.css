@@ -1,0 +1,5 @@
+/* Applied while taking visual screenshots (visual.spec.ts). */
+[data-consent-reopen],
+:popover-open {
+  display: none !important;
+}
