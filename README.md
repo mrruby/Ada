@@ -207,7 +207,7 @@ Visual baselines are local (gitignored, ~100 MB). Capture them from the
 branch you compare against, then diff your change:
 
 ```bash
-git switch master && yarn build && yarn test:visual --update-snapshots
+git switch master && yarn build && yarn test:visual --update-snapshots=all
 git switch my-branch && yarn build && yarn test:visual   # diffs in test-results/
 ```
 
